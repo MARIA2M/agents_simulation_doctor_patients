@@ -1,8 +1,5 @@
 # tests/test_corpus.py
-# ─────────────────────────────────────────────
-# The 10 patient profiles are the same ones the Ruby arm ran (0.3), and each
-# carries the ground truth that 4.1 restricts evaluation to.
-# ─────────────────────────────────────────────
+# The 10 patients are the ones the Ruby arm ran (0.3), with their ground truth.
 
 import json
 

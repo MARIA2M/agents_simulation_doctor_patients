@@ -14,7 +14,14 @@ models:
   embed: nomic-embed-text
 
 sampling:
-  temperature: 0.7              # always sent explicitly, never left to the server (§12)
+  # One per role, always sent explicitly and never left to the server (§12).
+  # The doctor both asks and infers, and must vary: pinned at 0 it asks the
+  # same script in all ten consultations. Writing the report is a separate
+  # step, where variation buys nothing.
+  temperature:
+    doctor: 0.7     # questions and score inference
+    patient: 0.7
+    report: 0.0     # writing the report
   seed: null
   context_length: 32768
   num_parallel: 1

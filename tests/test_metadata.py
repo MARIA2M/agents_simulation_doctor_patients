@@ -1,10 +1,6 @@
-# tests/test_run_meta.py
-# ─────────────────────────────────────────────
-# Provenance is collected and serialises complete (0.4).
-#
-# build_run_meta shells out to git, which on GPFS costs ~25 s, so the whole
-# module shares one collected RunMeta.
-# ─────────────────────────────────────────────
+# tests/test_metadata.py
+# The run metadata is collected and saved complete (0.4).
+# build_metadata shells out to git (~25 s on GPFS), so the module shares one.
 
 import dataclasses
 import json
@@ -12,19 +8,24 @@ import re
 
 import pytest
 
-from ahead_agent.run_meta import build_run_meta, hash_text, new_run_id, write_run_meta
+from ahead_agent.metadata import build_metadata, hash_text, new_run_id, write_metadata
 
 PROFILE = {
     "profile": "local",
     "models": {"doctor": "llama3.2", "patient": "dolphin-llama3", "embed": "nomic-embed-text"},
-    "sampling": {"temperature": 0.7, "seed": None, "context_length": 32768, "num_parallel": 1},
+    "sampling": {
+        "temperature": {"doctor": 0.7, "patient": 0.7, "report": 0.0},
+        "seed": None,
+        "context_length": 32768,
+        "num_parallel": 1,
+    },
     "server": {"ollama_url": "http://127.0.0.1:11434", "request_timeout": 300},
 }
 
 
 @pytest.fixture(scope="module")
 def meta():
-    return build_run_meta(
+    return build_metadata(
         PROFILE,
         prompt_hashes={"doctor": hash_text("# DOCTOR")},
         patient_ids=["CLL-001", "HIV-001"],
@@ -48,12 +49,11 @@ def test_models_and_sampling_are_copied_verbatim(meta):
     """What is recorded is what will be sent, not what the defaults are (§12)."""
     assert meta.models == PROFILE["models"]
     assert meta.sampling == PROFILE["sampling"]
-    assert meta.sampling["temperature"] == 0.7
 
 
-def test_temperature_is_always_recorded(meta):
+def test_every_role_temperature_is_recorded(meta):
     """A server applying its own default is invisible unless this is explicit."""
-    assert "temperature" in meta.sampling
+    assert meta.sampling["temperature"] == {"doctor": 0.7, "patient": 0.7, "report": 0.0}
 
 
 def test_code_provenance_answers_both_questions(meta):
@@ -98,9 +98,9 @@ def test_serialises_completely(meta):
 
 
 def test_write_creates_the_run_directory(tmp_path, meta):
-    path = write_run_meta(meta, tmp_path)
+    path = write_metadata(meta, tmp_path)
 
-    assert path == tmp_path / meta.run_id / "run_meta.json"
+    assert path == tmp_path / meta.run_id / "metadata.json"
     assert json.loads(path.read_text())["run_id"] == meta.run_id
 
 

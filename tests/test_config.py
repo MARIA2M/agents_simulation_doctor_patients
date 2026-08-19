@@ -1,8 +1,5 @@
 # tests/test_config.py
-# ─────────────────────────────────────────────
-# Run profiles load, and a profile that would change results silently is
-# rejected rather than defaulted (§12).
-# ─────────────────────────────────────────────
+# Profiles load, and one that would leave a setting to the server is rejected.
 
 import glob
 import json
@@ -15,6 +12,7 @@ from ahead_agent.config import (
     CAUSES_DIMENSION,
     CONFIG,
     REPO_ROOT,
+    SAMPLING_ROLES,
     load_config,
 )
 
@@ -31,7 +29,8 @@ def test_shipped_profile_loads(profile):
     assert config["models"]["doctor"] != config["models"]["patient"], (
         "doctor and patient must not be the same model (§6.2)"
     )
-    assert isinstance(config["sampling"]["temperature"], (int, float))
+    for role in SAMPLING_ROLES:
+        assert isinstance(config["sampling"]["temperature"][role], (int, float)), role
 
 
 @pytest.mark.parametrize("profile", ["local", "hpc"])
@@ -52,41 +51,57 @@ def test_config_is_filled_in_place():
 # ── Rejections ───────────────────────────────
 
 
-def test_missing_temperature_is_rejected(make_profile):
-    path = make_profile("sinT", sampling={"seed": None})
+def test_missing_temperature_is_rejected(make_run_profile):
+    path = make_run_profile("sinT", sampling={"seed": None})
     with pytest.raises(KeyError, match="sampling.temperature"):
         load_config(str(path))
 
 
-def test_zero_temperature_is_accepted(make_profile):
+def test_temperature_is_required_for_every_role(make_run_profile):
+    """A role left out would sample at whatever the server decides (§12)."""
+    path = make_run_profile("sinrol", sampling={"temperature": {"doctor": 0.7, "patient": 0.7}})
+    with pytest.raises(KeyError, match="sampling.temperature.report"):
+        load_config(str(path))
+
+
+def test_a_single_temperature_is_rejected(make_run_profile):
+    """The old shape: one scalar cannot say what each role sampled at."""
+    path = make_run_profile("escalar", sampling={"temperature": 0.7})
+    with pytest.raises(KeyError, match="one per role"):
+        load_config(str(path))
+
+
+def test_zero_temperature_is_accepted(make_run_profile):
     """0.0 is a temperature, not a missing setting: a falsy check would drop it."""
-    path = make_profile("cero", sampling={"temperature": 0.0, "seed": None})
-    assert load_config(str(path))["sampling"]["temperature"] == 0.0
+    path = make_run_profile(
+        "cero", sampling={"temperature": {"doctor": 0.0, "patient": 0.0, "report": 0.0}}
+    )
+    assert load_config(str(path))["sampling"]["temperature"]["report"] == 0.0
 
 
-def test_missing_model_is_rejected(make_profile):
-    path = make_profile("sinmodelo", models={"doctor": "doc", "embed": "emb"})
+def test_missing_model_is_rejected(make_run_profile):
+    path = make_run_profile("sinmodelo", models={"doctor": "doc", "embed": "emb"})
     with pytest.raises(KeyError, match="models.patient"):
         load_config(str(path))
 
 
-def test_missing_turn_limit_is_rejected(make_profile):
+def test_missing_turn_limit_is_rejected(make_run_profile):
     """Without max_turns nothing stops a doctor who never closes (1.5)."""
-    path = make_profile("sinlimite", limits={"report_retries": 2})
+    path = make_run_profile("sinlimite", limits={"report_retries": 2})
     with pytest.raises(KeyError, match="limits.max_turns"):
         load_config(str(path))
 
 
-def test_missing_paths_are_rejected(make_profile):
+def test_missing_paths_are_rejected(make_run_profile):
     """Caught here rather than as a bare KeyError inside path_for()."""
-    path = make_profile("sinrutas", paths={"patients": "patients"})
+    path = make_run_profile("sinrutas", paths={"patients": "patients"})
     with pytest.raises(KeyError, match="paths.runs"):
         load_config(str(path))
 
 
-def test_declared_profile_must_match_filename(make_profile):
-    """The declared name goes verbatim into run_meta; a mismatch mislabels runs."""
-    path = make_profile("otro", profile="local")
+def test_declared_profile_must_match_filename(make_run_profile):
+    """The declared name is stored in the metadata; a mismatch mislabels runs."""
+    path = make_run_profile("otro", profile="local")
     with pytest.raises(ValueError, match="does not match its filename"):
         load_config(str(path))
 

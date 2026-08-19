@@ -1,7 +1,5 @@
 # ahead_agent/config.py
-# ─────────────────────────────────────────────
-# Run profiles and the dimension schema.
-# ─────────────────────────────────────────────
+# Run profiles (config/*.yaml) and the names of the scored dimensions.
 
 from __future__ import annotations
 
@@ -18,10 +16,7 @@ PROFILES_DIR = REPO_ROOT / "config"
 # Empty until load_config() runs.
 CONFIG: Dict[str, Any] = {}
 
-# ── Dimension schema ─────────────────────────
-# Ids only, matching the keys of belief_profile in patients/*.json. If these
-# drift apart, the ground truth of 4.1 stops lining up with the report.
-
+# Same names as the keys of belief_profile in patients/*.json.
 BIPQ_DIMENSIONS: List[str] = [
     "consequences",
     "timeline",
@@ -40,20 +35,15 @@ BMQ_SUBSCALES: List[str] = [
     "general_overuse",
 ]
 
-# `causes` is scored, but not on a scale: it is open-ended, matched by
-# semantic similarity and kept out of the MAE (4.3)
+# Open-ended and matched by similarity, so it is kept out of the MAE (4.3).
 CAUSES_DIMENSION = "causes"
 
-
-# ── Loading ──────────────────────────────────
+# The doctor asks and infers the scores; writing the report is a separate step.
+SAMPLING_ROLES = ("doctor", "patient", "report")
 
 
 def load_config(profile: str = "local") -> Dict[str, Any]:
-    """Read config/<profile>.yaml, validate it and fill CONFIG in place.
-
-    CONFIG is mutated rather than rebound so that modules which imported it
-    at start-up see the loaded values.
-    """
+    """Read config/<profile>.yaml and fill CONFIG with it."""
     path = profile_path(profile)
     if not path.exists():
         raise FileNotFoundError(f"Run profile not found: {path}")
@@ -63,12 +53,11 @@ def load_config(profile: str = "local") -> Dict[str, Any]:
 
     _validate(data, path)
 
-    # The endpoint may be redirected per machine — an Ollama on a compute node
-    # answers on a different host than the one on a laptop. Everything else
-    # comes from the profile so that it stays reproducible from the file alone.
+    # Only the address moves between machines; the rest comes from the file.
     if os.getenv("OLLAMA_URL"):
         data["server"]["ollama_url"] = os.environ["OLLAMA_URL"]
 
+    # Filled rather than replaced, so `from .config import CONFIG` still works.
     CONFIG.clear()
     CONFIG.update(data)
     return CONFIG
@@ -82,53 +71,46 @@ def profile_path(profile: str) -> Path:
 
 
 def path_for(key: str) -> Path:
-    """Resolve one of the `paths:` entries against the repository root."""
+    """Turn one of the `paths:` entries into a full path."""
     return REPO_ROOT / CONFIG["paths"][key]
 
 
-# ── Validation ───────────────────────────────
-
-
 def _validate(data: Dict[str, Any], path: Path) -> None:
-    """A profile missing any of these is rejected rather than defaulted."""
+    """Reject a profile that would leave a setting up to the server (§12)."""
     models = data.get("models") or {}
     sampling = data.get("sampling") or {}
     server = data.get("server") or {}
     limits = data.get("limits") or {}
     paths = data.get("paths") or {}
 
-    missing = []
-    if not data.get("profile"):
-        missing.append("profile")
-    if not models.get("doctor"):
-        missing.append("models.doctor")
-    if not models.get("patient"):
-        missing.append("models.patient")
-    if not models.get("embed"):
-        missing.append("models.embed")
-    if sampling.get("temperature") is None:   # 0.0 is a valid temperature
-        missing.append("sampling.temperature")
-    if not server.get("ollama_url"):
-        missing.append("server.ollama_url")
-    # max_turns is the only thing that stops a doctor who never closes the
-    # consultation (1.5); a default here would be a silent infinite loop.
-    if limits.get("max_turns") is None:
-        missing.append("limits.max_turns")
-    if limits.get("report_retries") is None:
-        missing.append("limits.report_retries")
-    # Validated here rather than where path_for() uses them, which would raise
-    # a bare KeyError far from the profile that caused it.
-    for key in ("patients", "runs"):
-        if not paths.get(key):
-            missing.append(f"paths.{key}")
+    required = {
+        "profile": data.get("profile"),
+        "models.doctor": models.get("doctor"),
+        "models.patient": models.get("patient"),
+        "models.embed": models.get("embed"),
+        "server.ollama_url": server.get("ollama_url"),
+        # Without max_turns nothing stops a doctor who never closes (1.5).
+        "limits.max_turns": limits.get("max_turns"),
+        "limits.report_retries": limits.get("report_retries"),
+        "paths.patients": paths.get("patients"),
+        "paths.runs": paths.get("runs"),
+    }
+    missing = [key for key, value in required.items() if value is None]
+
+    temperatures = sampling.get("temperature")
+    if not isinstance(temperatures, dict):
+        missing.append("sampling.temperature (one per role)")
+    else:
+        for role in SAMPLING_ROLES:
+            if temperatures.get(role) is None:   # 0.0 is a temperature
+                missing.append(f"sampling.temperature.{role}")
 
     if missing:
         raise KeyError(f"{path.name} is missing required settings: {', '.join(missing)}")
 
-    # The profile name is copied verbatim into run_meta (0.4). If the file
-    # disagrees with its own name, every run it produces is mislabelled.
-    declared = data["profile"]
-    if path.stem != declared:
+    # The name is stored in the run metadata; a mismatch mislabels every run.
+    if path.stem != data["profile"]:
         raise ValueError(
-            f"{path.name} declares profile {declared!r}, which does not match its filename"
+            f"{path.name} declares profile {data['profile']!r}, "
+            "which does not match its filename"
         )

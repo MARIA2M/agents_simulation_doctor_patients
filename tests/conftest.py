@@ -1,7 +1,5 @@
 # tests/conftest.py
-# ─────────────────────────────────────────────
-# Makes the package importable when pytest is run from anywhere.
-# ─────────────────────────────────────────────
+# Makes the package importable when pytest runs from anywhere.
 
 import sys
 from pathlib import Path
@@ -14,14 +12,17 @@ sys.path.insert(0, str(REPO_ROOT))
 
 
 @pytest.fixture
-def make_profile(tmp_path):
+def make_run_profile(tmp_path):
     """Write a minimal valid run profile, with fields overridden per test."""
 
     def _make(name: str, **overrides) -> Path:
         data = {
             "profile": name,
             "models": {"doctor": "doc", "patient": "pat", "embed": "emb"},
-            "sampling": {"temperature": 0.7, "seed": None},
+            "sampling": {
+                "temperature": {"doctor": 0.7, "patient": 0.7, "report": 0.0},
+                "seed": None,
+            },
             "server": {"ollama_url": "http://127.0.0.1:11434", "request_timeout": 300},
             "limits": {"max_turns": 30, "report_retries": 2},
             "paths": {"patients": "patients", "runs": "runs"},
