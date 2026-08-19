@@ -94,6 +94,8 @@ def _validate(data: Dict[str, Any], path: Path) -> None:
     models = data.get("models") or {}
     sampling = data.get("sampling") or {}
     server = data.get("server") or {}
+    limits = data.get("limits") or {}
+    paths = data.get("paths") or {}
 
     missing = []
     if not data.get("profile"):
@@ -108,6 +110,17 @@ def _validate(data: Dict[str, Any], path: Path) -> None:
         missing.append("sampling.temperature")
     if not server.get("ollama_url"):
         missing.append("server.ollama_url")
+    # max_turns is the only thing that stops a doctor who never closes the
+    # consultation (1.5); a default here would be a silent infinite loop.
+    if limits.get("max_turns") is None:
+        missing.append("limits.max_turns")
+    if limits.get("report_retries") is None:
+        missing.append("limits.report_retries")
+    # Validated here rather than where path_for() uses them, which would raise
+    # a bare KeyError far from the profile that caused it.
+    for key in ("patients", "runs"):
+        if not paths.get(key):
+            missing.append(f"paths.{key}")
 
     if missing:
         raise KeyError(f"{path.name} is missing required settings: {', '.join(missing)}")

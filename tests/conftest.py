@@ -22,7 +22,8 @@ def make_profile(tmp_path):
             "profile": name,
             "models": {"doctor": "doc", "patient": "pat", "embed": "emb"},
             "sampling": {"temperature": 0.7, "seed": None},
-            "server": {"ollama_url": "http://127.0.0.1:11434"},
+            "server": {"ollama_url": "http://127.0.0.1:11434", "request_timeout": 300},
+            "limits": {"max_turns": 30, "report_retries": 2},
             "paths": {"patients": "patients", "runs": "runs"},
         }
         data.update(overrides)

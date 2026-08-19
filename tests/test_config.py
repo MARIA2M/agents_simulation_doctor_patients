@@ -70,6 +70,20 @@ def test_missing_model_is_rejected(make_profile):
         load_config(str(path))
 
 
+def test_missing_turn_limit_is_rejected(make_profile):
+    """Without max_turns nothing stops a doctor who never closes (1.5)."""
+    path = make_profile("sinlimite", limits={"report_retries": 2})
+    with pytest.raises(KeyError, match="limits.max_turns"):
+        load_config(str(path))
+
+
+def test_missing_paths_are_rejected(make_profile):
+    """Caught here rather than as a bare KeyError inside path_for()."""
+    path = make_profile("sinrutas", paths={"patients": "patients"})
+    with pytest.raises(KeyError, match="paths.runs"):
+        load_config(str(path))
+
+
 def test_declared_profile_must_match_filename(make_profile):
     """The declared name goes verbatim into run_meta; a mismatch mislabels runs."""
     path = make_profile("otro", profile="local")

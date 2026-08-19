@@ -18,6 +18,7 @@ PROFILE = {
     "profile": "local",
     "models": {"doctor": "llama3.2", "patient": "dolphin-llama3", "embed": "nomic-embed-text"},
     "sampling": {"temperature": 0.7, "seed": None, "context_length": 32768, "num_parallel": 1},
+    "server": {"ollama_url": "http://127.0.0.1:11434", "request_timeout": 300},
 }
 
 
@@ -34,8 +35,13 @@ def meta():
 
 
 def test_every_provenance_block_is_present(meta):
-    for block in ("models", "sampling", "prompts", "code", "compute", "corpus"):
+    for block in ("models", "sampling", "server", "prompts", "code", "compute", "corpus"):
         assert getattr(meta, block), f"{block} is empty"
+
+
+def test_endpoint_is_recorded(meta):
+    """Invariant 8 — everything runs locally — is only auditable if this is kept."""
+    assert meta.server["ollama_url"] == PROFILE["server"]["ollama_url"]
 
 
 def test_models_and_sampling_are_copied_verbatim(meta):
@@ -86,7 +92,7 @@ def test_serialises_completely(meta):
     restored = json.loads(json.dumps(dataclasses.asdict(meta)))
     assert restored == dataclasses.asdict(meta)
     assert set(restored) == {
-        "run_id", "started_at", "profile", "models", "sampling",
+        "run_id", "started_at", "profile", "models", "sampling", "server",
         "prompts", "code", "compute", "corpus",
     }
 

@@ -48,6 +48,7 @@ class RunMeta:
     profile: str
     models: Dict[str, Any] = field(default_factory=dict)
     sampling: Dict[str, Any] = field(default_factory=dict)
+    server: Dict[str, Any] = field(default_factory=dict)
     prompts: Dict[str, Any] = field(default_factory=dict)
     code: Dict[str, Any] = field(default_factory=dict)
     compute: Dict[str, Any] = field(default_factory=dict)
@@ -80,6 +81,9 @@ def build_run_meta(
         profile=config.get("profile", "unknown"),
         models=dict(config.get("models", {})),
         sampling=dict(config.get("sampling", {})),
+        # Which endpoint was actually talked to. Beyond §3.2, but without it
+        # "no remote endpoints" (invariant 8) cannot be audited from an old run.
+        server=dict(config.get("server", {})),
         prompts=dict(prompt_hashes or {}),
         code=_code_provenance(),
         compute=_compute_provenance(),
