@@ -8,13 +8,17 @@ profile: hpc
 
 models:
   doctor: "glm-4.7-flash:q8_0"  # 10/10 well-formed tool calls at T=0 (tools/probe_tools.py)
-  patient: dolphin-llama3       # llama family, distinct from the doctor's (§6.2)
+  # PROVISIONAL — chosen because it is the only unaligned patient already in
+  # the Ollama store, not because it was verified. §6.2 asks for a probe
+  # before choosing: does it stay in character, does it volunteer its belief
+  # profile unasked, does it fold under leading questions. A larger patient
+  # (gemma-4-12B via vLLM) has the capacity for the personas of 7.1, but
+  # instruct models are servile enough to inflate the doctor's apparent
+  # performance. Freeze the pair before the stage-7 baseline, not after.
+  patient: dolphin-llama3
   embed: jina-embeddings-v4
 
 sampling:
-  # Above zero on purpose: GLM is word-for-word deterministic at T=0, which is
-  # useful for regression tests but leaves 2.4 nothing to measure — the spread
-  # across N runs of the same patient is the empirical confidence.
   temperature: 0.7
   seed: null
   context_length: 32768

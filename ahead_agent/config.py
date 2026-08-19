@@ -1,17 +1,6 @@
 # ahead_agent/config.py
 # ─────────────────────────────────────────────
-# Run profiles (§6) and the dimension schema.
-#
-# A profile is a file, not a code branch: config/local.yaml for smoke runs,
-# config/hpc.yaml for batches. Same code either way — what changes is the
-# models, the scale and the machine.
-#
-# What is deliberately NOT here: the questionnaire. The old config carried
-# the B-IPQ and BMQ item wording, and the graph walked that list — that is
-# elicitation, and it is the paradigm being replaced. What survives are the
-# dimension ids, because they are the schema of the report, not a script:
-# report.py validates against them, coverage.py builds its map from them and
-# evaluation.py keys its ground truth by them.
+# Run profiles and the dimension schema.
 # ─────────────────────────────────────────────
 
 from __future__ import annotations
@@ -26,23 +15,8 @@ PACKAGE_ROOT = Path(__file__).resolve().parent
 REPO_ROOT = PACKAGE_ROOT.parent
 PROFILES_DIR = REPO_ROOT / "config"
 
-# Empty until load_config() runs. There are no module-level constants derived
-# from it on purpose: they would be evaluated at import time, before --profile
-# has chosen anything, and would silently freeze another profile's values.
+# Empty until load_config() runs.
 CONFIG: Dict[str, Any] = {}
-
-# Settings whose absence would change results silently. A profile missing any
-# of these is rejected rather than defaulted: a server applying its own
-# temperature is the known way to compare two runs that were never comparable
-# (§12).
-REQUIRED_KEYS = (
-    "profile",
-    "models.doctor",
-    "models.patient",
-    "models.embed",
-    "sampling.temperature",
-    "server.ollama_url",
-)
 
 # ── Dimension schema ─────────────────────────
 # Ids only, matching the keys of belief_profile in patients/*.json. If these
@@ -67,8 +41,7 @@ BMQ_SUBSCALES: List[str] = [
 ]
 
 # `causes` is scored, but not on a scale: it is open-ended, matched by
-# semantic similarity and kept out of the MAE (4.3). Listing it alongside the
-# numeric dimensions is what would make evaluation.py try to average it.
+# semantic similarity and kept out of the MAE (4.3)
 CAUSES_DIMENSION = "causes"
 
 
@@ -117,7 +90,25 @@ def path_for(key: str) -> Path:
 
 
 def _validate(data: Dict[str, Any], path: Path) -> None:
-    missing = [key for key in REQUIRED_KEYS if _lookup(data, key) is None]
+    """A profile missing any of these is rejected rather than defaulted."""
+    models = data.get("models") or {}
+    sampling = data.get("sampling") or {}
+    server = data.get("server") or {}
+
+    missing = []
+    if not data.get("profile"):
+        missing.append("profile")
+    if not models.get("doctor"):
+        missing.append("models.doctor")
+    if not models.get("patient"):
+        missing.append("models.patient")
+    if not models.get("embed"):
+        missing.append("models.embed")
+    if sampling.get("temperature") is None:   # 0.0 is a valid temperature
+        missing.append("sampling.temperature")
+    if not server.get("ollama_url"):
+        missing.append("server.ollama_url")
+
     if missing:
         raise KeyError(f"{path.name} is missing required settings: {', '.join(missing)}")
 
@@ -128,12 +119,3 @@ def _validate(data: Dict[str, Any], path: Path) -> None:
         raise ValueError(
             f"{path.name} declares profile {declared!r}, which does not match its filename"
         )
-
-
-def _lookup(data: Dict[str, Any], dotted: str) -> Any:
-    value: Any = data
-    for part in dotted.split("."):
-        if not isinstance(value, dict) or part not in value:
-            return None
-        value = value[part]
-    return value
