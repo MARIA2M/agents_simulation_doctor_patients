@@ -1,0 +1,51 @@
+{
+  "patient_id": "CLL-001",
+  "disease_profile": {
+    "diagnosis": "Chronic Lymphocytic Leukemia (CLL)",
+    "stage": "Rai Stage 0 (early stage), diagnosed 4 months ago",
+    "treatment_regimen": "Watch and wait (active surveillance) -- no current medication. Monthly blood draws for monitoring. Informed that treatment may not be needed for years, if at all.",
+    "key_symptoms": [
+      "Mild fatigue",
+      "Occasional night sweats",
+      "Palpable but non-enlarged lymph nodes in the neck"
+    ],
+    "trajectory": "Slow-progressing. Physician has indicated it may be years before treatment is needed. Stable white blood cell count over the past two draws.",
+    "lab_values": {
+      "WBC": "18,500 /uL (elevated)",
+      "Hemoglobin": "13.2 g/dL (normal range)",
+      "Platelets": "185,000 /uL (normal range)",
+      "Lymphocyte count": "14,200 /uL (elevated)",
+      "Beta-2 microglobulin": "2.8 mg/L (slightly elevated)"
+    },
+    "demographics": {
+      "age": 58,
+      "gender": "male",
+      "occupation": "High school math teacher",
+      "marital_status": "Married, two adult children",
+      "education": "Master's in Education"
+    }
+  },
+  "belief_profile": {
+    "b_ipq": {
+      "consequences": 7,
+      "timeline": 9,
+      "personal_control": 3,
+      "treatment_control": 6,
+      "identity": 5,
+      "concern": 8,
+      "coherence": 4,
+      "emotional_response": 8,
+      "causes": [
+        "Genetics / family history",
+        "Stress from work over the years",
+        "Environmental exposures (taught near an old industrial site)"
+      ]
+    },
+    "bmq": {
+      "specific_necessity": 3.4,
+      "specific_concerns": 2.8,
+      "general_harm": 3.0,
+      "general_overuse": 2.5
+    }
+  }
+}

@@ -1,0 +1,23 @@
+# AHEAD — Doctor/Patient inference agent — Dependencies
+# Install with: pip install -r requirements.txt
+
+# LangGraph / LangChain (agentic loop — stage 2)
+langgraph>=0.2.0
+langchain>=0.3.0
+langchain-core>=0.3.0
+langchain-ollama>=0.2.0
+
+# FastAPI server
+fastapi>=0.111.0
+uvicorn[standard]>=0.30.0
+httpx>=0.27.0          # async HTTP client for Ollama calls
+pydantic>=2.0.0
+
+# HTTP (causes scoring embeddings)
+requests>=2.32.0
+
+# Run profiles (config/local.yaml, config/hpc.yaml — §6)
+PyYAML>=6.0
+
+# Tests
+pytest>=8.0.0

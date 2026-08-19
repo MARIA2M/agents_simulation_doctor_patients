@@ -1,0 +1,58 @@
+{
+  "patient_id": "HIV-003",
+  "disease_profile": {
+    "diagnosis": "Human Immunodeficiency Virus (HIV) infection, Chronic (Stage 3 / AIDS)",
+    "stage": "Longstanding HIV. Diagnosed 14 years ago. CD4 nadir was 90 cells/uL with history of esophageal candidiasis and cryptococcal meningitis. Has been on multiple ART regimens over the years due to side effects and one episode of resistance.",
+    "treatment_regimen": "Tivicay (dolutegravir) 50 mg + Descovy (emtricitabine/tenofovir alafenamide) once daily. Current regimen for 2 years. Previously tried Atripla (discontinued due to vivid dreams and depression), Kaletra (discontinued due to severe GI side effects), and Reyataz (developed resistance).",
+    "key_symptoms": [
+      "Chronic fatigue",
+      "Lipodystrophy -- facial wasting and abdominal fat accumulation (legacy of older medications)",
+      "Persistent peripheral neuropathy in both feet (burning, tingling)",
+      "Occasional diarrhea",
+      "Joint pain",
+      "Difficulty concentrating ('brain fog')"
+    ],
+    "trajectory": "Virally suppressed for the past 2 years. CD4 has recovered to 385 cells/uL but remains below normal. Has lived through multiple health crises. Has multiple comorbidities managed by other specialists. Overall trajectory is stable but complex.",
+    "lab_values": {
+      "HIV viral load": "Undetectable (<20 copies/mL)",
+      "CD4 count": "385 cells/uL",
+      "CD4/CD8 ratio": "0.55 (below normal)",
+      "Hemoglobin": "12.0 g/dL (mildly low)",
+      "Fasting glucose": "118 mg/dL (pre-diabetic)",
+      "Total cholesterol": "242 mg/dL (elevated)",
+      "Triglycerides": "290 mg/dL (elevated)",
+      "eGFR": "72 mL/min (mildly decreased)"
+    },
+    "demographics": {
+      "age": 49,
+      "gender": "male",
+      "occupation": "Peer support counselor at a community health center",
+      "marital_status": "Divorced (ex-wife left after diagnosis), currently single",
+      "education": "Some college",
+      "mode_of_transmission": "Injection drug use (clean for 12 years)"
+    }
+  },
+  "belief_profile": {
+    "b_ipq": {
+      "consequences": 9,
+      "timeline": 10,
+      "personal_control": 5,
+      "treatment_control": 6,
+      "identity": 8,
+      "concern": 7,
+      "coherence": 7,
+      "emotional_response": 7,
+      "causes": [
+        "Injection drug use in his twenties",
+        "His own behavior and choices",
+        "Poverty and difficult upbringing that led to drug use"
+      ]
+    },
+    "bmq": {
+      "specific_necessity": 4.8,
+      "specific_concerns": 3.6,
+      "general_harm": 3.8,
+      "general_overuse": 3.0
+    }
+  }
+}
