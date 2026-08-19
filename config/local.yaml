@@ -1,0 +1,52 @@
+# config/local.yaml — development, smoke runs and tests (§6)
+#
+# Nothing measured with this profile goes into published metrics: it tells
+# you the code works, not how well the doctor infers.
+
+profile: local
+
+# Different families for doctor and patient, not two sizes of one model:
+# same-family pairs share expression conventions learned in training, and
+# the doctor may be decoding those instead of inferring (§6.2).
+models:
+  doctor: llama3.2              # tool calling verified 5/5 at T=0
+  patient: dolphin-llama3       # unaligned — less agreeable than an assistant
+  embed: nomic-embed-text
+
+sampling:
+  temperature: 0.7              # always sent explicitly, never left to the server (§12)
+  seed: null
+  context_length: 32768
+  num_parallel: 1
+
+server:
+  ollama_url: "http://127.0.0.1:11434"
+  # First load off GPFS can take over two minutes, and Ollama aborts if the
+  # client gives up first (§6.1).
+  request_timeout: 300
+
+limits:
+  max_turns: 30                 # safety net only — the doctor decides when to stop (1.5)
+  report_retries: 2             # after this, what is still missing stays NA (§4)
+
+# Deterministic composition, decided by the code and not by the model (§5.1).
+# Paths are relative to prompts/ and skills/.
+prompts:
+  doctor: DOCTOR.md
+  patient: PATIENT.md
+  rubric:
+    - rubric/bipq.md
+    - rubric/bmq.md
+
+skills:
+  doctor: []
+  patient: []
+
+resources: []
+
+paths:
+  patients: patients
+  runs: runs
+  prompts: prompts
+  skills: skills
+  resources: resources

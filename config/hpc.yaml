@@ -1,0 +1,49 @@
+# config/hpc.yaml — baselines, arms and full batches (§6)
+#
+# Runs on a compute node, through the queue. The model store is not in
+# ~/.ollama: export OLLAMA_MODELS=/gpfs/projects/bsc02/llm_models/ollama
+# before starting the server, or only the home directory is visible (§6.1).
+
+profile: hpc
+
+models:
+  doctor: "glm-4.7-flash:q8_0"  # 10/10 well-formed tool calls at T=0 (tools/probe_tools.py)
+  patient: dolphin-llama3       # llama family, distinct from the doctor's (§6.2)
+  embed: jina-embeddings-v4
+
+sampling:
+  # Above zero on purpose: GLM is word-for-word deterministic at T=0, which is
+  # useful for regression tests but leaves 2.4 nothing to measure — the spread
+  # across N runs of the same patient is the empirical confidence.
+  temperature: 0.7
+  seed: null
+  context_length: 32768
+  num_parallel: 1
+
+server:
+  ollama_url: "http://127.0.0.1:11434"
+  request_timeout: 300
+
+limits:
+  max_turns: 30
+  report_retries: 2
+
+prompts:
+  doctor: DOCTOR.md
+  patient: PATIENT.md
+  rubric:
+    - rubric/bipq.md
+    - rubric/bmq.md
+
+skills:
+  doctor: []
+  patient: []
+
+resources: []
+
+paths:
+  patients: patients
+  runs: runs
+  prompts: prompts
+  skills: skills
+  resources: resources
