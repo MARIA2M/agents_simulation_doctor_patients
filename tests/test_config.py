@@ -102,7 +102,7 @@ def test_missing_paths_are_rejected(make_run_profile):
 def test_declared_profile_must_match_filename(make_run_profile):
     """The declared name is stored in the metadata; a mismatch mislabels runs."""
     path = make_run_profile("otro", profile="local")
-    with pytest.raises(ValueError, match="does not match its filename"):
+    with pytest.raises(ValueError, match="must declare"):
         load_config(str(path))
 
 
