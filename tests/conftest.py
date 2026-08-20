@@ -20,10 +20,13 @@ def make_run_profile(tmp_path):
             "profile": name,
             "models": {"doctor": "doc", "patient": "pat", "embed": "emb"},
             "sampling": {
-                "temperature": {"doctor": 0.7, "patient": 0.7, "report": 0.0},
+                "doctor_temperature": 0.7,
+                "patient_temperature": 0.7,
+                "report_temperature": 0.0,
                 "seed": None,
+                "context_length": 32768,
             },
-            "server": {"ollama_url": "http://127.0.0.1:11434", "request_timeout": 300},
+            "server": {"ollama_url": "http://127.0.0.1:11434", "request_timeout": 300, "keep_alive": "1h"},
             "limits": {"max_turns": 30, "report_retries": 2},
             "paths": {"patients": "patients", "runs": "runs"},
         }

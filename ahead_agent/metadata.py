@@ -38,71 +38,6 @@ def new_run_id() -> str:
     return datetime.now().strftime("%Y%m%d-%H%M%S")
 
 
-def build_metadata(
-    config: Dict[str, Any],
-    run_id: Optional[str] = None,
-    prompt_hashes: Optional[Dict[str, Any]] = None,
-    patient_ids: Optional[List[str]] = None,
-) -> RunMetadata:
-    """Describe a run about to start, from its loaded profile."""
-    changes = _command_output("git", "-C", str(REPO_ROOT), "status", "--porcelain")
-
-    return RunMetadata(
-        run_id=run_id or new_run_id(),
-        started_at=datetime.now().astimezone().isoformat(timespec="seconds"),
-        profile=config.get("profile", "unknown"),
-        # Copied whole, so what is stored is what will be sent (§12).
-        models=dict(config.get("models", {})),
-        sampling=dict(config.get("sampling", {})),
-        server=dict(config.get("server", {})),
-        prompts=dict(prompt_hashes or {}),
-        code={
-            "git_commit": _command_output(
-                "git", "-C", str(REPO_ROOT), "rev-parse", "--short", "HEAD"
-            ),
-            # With uncommitted changes, git_commit names other code.
-            "dirty": None if changes is None else bool(changes),
-        },
-        compute={
-            # These two disagree when salloc ran without srun (§6.3).
-            "hostname": socket.gethostname(),
-            "slurm_nodelist": os.getenv("SLURM_NODELIST"),
-            "slurm_job": os.getenv("SLURM_JOB_ID"),
-            "gpus": _gpu_count(),
-        },
-        corpus={
-            "patients": len(patient_ids) if patient_ids is not None else None,
-            "patient_ids": list(patient_ids) if patient_ids is not None else None,
-            "ground_truth_source": "patients/*.json",
-        },
-    )
-
-
-def write_metadata(meta: RunMetadata, runs_dir: Path | str) -> Path:
-    """Write runs/<run_id>/metadata.json and return its path."""
-    outdir = Path(runs_dir) / meta.run_id
-    outdir.mkdir(parents=True, exist_ok=True)
-    path = outdir / "metadata.json"
-    path.write_text(json.dumps(dataclasses.asdict(meta), indent=2) + "\n")
-    return path
-
-
-def hash_text(text: str) -> str:
-    """Fingerprint of a composed prompt, so results can be traced to it."""
-    return "sha256:" + hashlib.sha256(text.encode("utf-8")).hexdigest()
-
-
-def _gpu_count() -> Optional[int]:
-    # Ask SLURM first: on a login node nvidia-smi lists the machine's GPUs,
-    # not the ones this job was given (§6.3).
-    allocated = os.getenv("SLURM_GPUS_ON_NODE")
-    if allocated and allocated.isdigit():
-        return int(allocated)
-
-    listing = _command_output("nvidia-smi", "-L")
-    return listing.count("GPU ") if listing else None
-
-
 def _command_output(*command: str) -> Optional[str]:
     """Output of a command, or None if it fails or takes too long."""
     try:
@@ -112,3 +47,74 @@ def _command_output(*command: str) -> Optional[str]:
     except (OSError, subprocess.SubprocessError):
         return None
     return result.stdout.strip() if result.returncode == 0 else None
+
+
+def _gpu_count() -> Optional[int]:
+    """ """
+    allocated = os.getenv("SLURM_GPUS_ON_NODE")
+    if allocated and allocated.isdigit():
+        return int(allocated)
+
+    listing = _command_output("nvidia-smi", "-L")
+    return listing.count("GPU ") if listing else None
+
+
+def hash_text(text: str) -> str:
+    """Fingerprint of a composed prompt, so results can be traced to it."""
+    return "sha256:" + hashlib.sha256(text.encode("utf-8")).hexdigest()
+
+
+def build_metadata(
+    config: Dict[str, Any],
+    run_id: Optional[str] = None,
+    prompt_hashes: Optional[Dict[str, Any]] = None,
+    patient_ids: Optional[List[str]] = None,
+) -> RunMetadata:
+    """Describe a run about to start, from its loaded profile."""
+    changes = _command_output("git", "-C", str(REPO_ROOT), "status", "--porcelain")
+
+    code = {
+        "git_commit": _command_output("git", "-C", str(REPO_ROOT), "rev-parse", "--short", "HEAD"),
+        # With uncommitted changes, git_commit names other code.
+        "dirty": None if changes is None else bool(changes),
+    }
+
+    compute = {
+        # These two disagree when salloc ran without srun (§6.3).
+        "hostname": socket.gethostname(),
+        "slurm_nodelist": os.getenv("SLURM_NODELIST"),
+        "slurm_job": os.getenv("SLURM_JOB_ID"),
+        "gpus": _gpu_count(),
+    }
+
+    corpus = {
+        "patients": len(patient_ids) if patient_ids is not None else None,
+        "patient_ids": list(patient_ids) if patient_ids is not None else None,
+        "ground_truth_source": "patients/*.json",
+    }
+
+    metadata = RunMetadata(
+        run_id=run_id or new_run_id(),
+        started_at=datetime.now().astimezone().isoformat(timespec="seconds"),
+        profile=config.get("profile", "unknown"),
+        models=dict(config.get("models", {})),
+        sampling=dict(config.get("sampling", {})),
+        server=dict(config.get("server", {})),
+        prompts=dict(prompt_hashes or {}),
+        code=code,
+        compute=compute,
+        corpus=corpus,
+    )
+
+    return metadata
+
+    
+
+def write_metadata(meta: RunMetadata, runs_dir: Path | str) -> Path:
+    """Write runs/<run_id>/metadata.json and return its path."""
+    outdir = Path(runs_dir) / meta.run_id
+    outdir.mkdir(parents=True, exist_ok=True)
+    path = outdir / "metadata.json"
+    path.write_text(json.dumps(dataclasses.asdict(meta), indent=2) + "\n")
+    return path
+

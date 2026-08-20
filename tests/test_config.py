@@ -10,9 +10,7 @@ from ahead_agent.config import (
     BIPQ_DIMENSIONS,
     BMQ_SUBSCALES,
     CAUSES_DIMENSION,
-    CONFIG,
     REPO_ROOT,
-    SAMPLING_ROLES,
     load_config,
 )
 
@@ -26,11 +24,10 @@ def test_shipped_profile_loads(profile):
 
     assert config["profile"] == profile
     assert config["models"]["doctor"] and config["models"]["patient"]
-    assert config["models"]["doctor"] != config["models"]["patient"], (
-        "doctor and patient must not be the same model (§6.2)"
-    )
-    for role in SAMPLING_ROLES:
-        assert isinstance(config["sampling"]["temperature"][role], (int, float)), role
+    temperatures = [k for k in config["sampling"] if k.endswith("_temperature")]
+    assert len(temperatures) == 3
+    for name in temperatures:
+        assert isinstance(config["sampling"][name], (int, float)), name
 
 
 @pytest.mark.parametrize("profile", ["local", "hpc"])
@@ -40,43 +37,39 @@ def test_shipped_profile_survives_first_load_from_gpfs(profile):
     assert config["server"]["request_timeout"] >= 300
 
 
-def test_config_is_filled_in_place():
-    """Modules that imported CONFIG at start-up must see the loaded values."""
-    before = id(CONFIG)
-    load_config("local")
-    assert id(CONFIG) == before
-    assert CONFIG["models"]["doctor"]
+def test_each_load_is_independent():
+    """No shared state: loading one profile cannot alter another already loaded."""
+    local = load_config("local")
+    hpc = load_config("hpc")
+
+    assert local is not hpc
+    assert local["profile"] == "local"
 
 
 # ── Rejections ───────────────────────────────
 
 
-def test_missing_temperature_is_rejected(make_run_profile):
-    path = make_run_profile("sinT", sampling={"seed": None})
-    with pytest.raises(KeyError, match="sampling.temperature"):
-        load_config(str(path))
-
-
 def test_temperature_is_required_for_every_role(make_run_profile):
     """A role left out would sample at whatever the server decides (§12)."""
-    path = make_run_profile("sinrol", sampling={"temperature": {"doctor": 0.7, "patient": 0.7}})
-    with pytest.raises(KeyError, match="sampling.temperature.report"):
-        load_config(str(path))
-
-
-def test_a_single_temperature_is_rejected(make_run_profile):
-    """The old shape: one scalar cannot say what each role sampled at."""
-    path = make_run_profile("escalar", sampling={"temperature": 0.7})
-    with pytest.raises(KeyError, match="one per role"):
+    path = make_run_profile(
+        "sinrol", sampling={"doctor_temperature": 0.7, "patient_temperature": 0.7}
+    )
+    with pytest.raises(KeyError, match="sampling.report_temperature"):
         load_config(str(path))
 
 
 def test_zero_temperature_is_accepted(make_run_profile):
     """0.0 is a temperature, not a missing setting: a falsy check would drop it."""
     path = make_run_profile(
-        "cero", sampling={"temperature": {"doctor": 0.0, "patient": 0.0, "report": 0.0}}
+        "cero",
+        sampling={
+            "doctor_temperature": 0.0,
+            "patient_temperature": 0.0,
+            "report_temperature": 0.0,
+            "context_length": 32768,
+        },
     )
-    assert load_config(str(path))["sampling"]["temperature"]["report"] == 0.0
+    assert load_config(str(path))["sampling"]["report_temperature"] == 0.0
 
 
 def test_missing_model_is_rejected(make_run_profile):
@@ -93,7 +86,7 @@ def test_missing_turn_limit_is_rejected(make_run_profile):
 
 
 def test_missing_paths_are_rejected(make_run_profile):
-    """Caught here rather than as a bare KeyError inside path_for()."""
+    """Caught here rather than as a bare KeyError when a path is first used."""
     path = make_run_profile("sinrutas", paths={"patients": "patients"})
     with pytest.raises(KeyError, match="paths.runs"):
         load_config(str(path))

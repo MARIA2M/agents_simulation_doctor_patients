@@ -232,7 +232,7 @@ class Report:
     patient_id: str
     clinical_summary: str
     bipq: Dict[str, DimensionScore]    # 8 dimensiones
-    bmq:  Dict[str, DimensionScore]    # 4 subescalas
+    bmq:  Dict[str, DimensionScore]    # en ve subescalas
     causes: List[str]                  # abierto, ranked
     causes_evidence: List[Evidence]
 ```
