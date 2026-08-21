@@ -210,8 +210,9 @@ def _with_report(raw, attempts):
     )
 
 
-def test_a_complete_report_ends_it():
-    complete = json.dumps(
+def _complete_report():
+    """Every dimension accounted for, so nothing sends it back (1.13)."""
+    return json.dumps(
         {
             "bipq": {n: {"score": 4, "reasoning": "said so", "evidence": []}
                      for n in BIPQ_DIMENSIONS},
@@ -220,7 +221,9 @@ def test_a_complete_report_ends_it():
         }
     )
 
-    assert routing.route_after_report(_with_report(complete, 1)) == "end"
+
+def test_a_complete_report_ends_it():
+    assert routing.route_after_report(_with_report(_complete_report(), 1)) == "end"
 
 
 def test_gaps_send_it_back_while_attempts_remain():
@@ -333,13 +336,41 @@ def test_a_consultation_ends_in_the_report(scripted, state):
     replies, seen = scripted
     replies["doctor"] += [speaks("How have you been?"), {"content": "I have what I need."}]
     replies["patient"].append({"content": "Tired, mostly."})
-    replies["report"].append({"content": '{"clinical_summary": "stable"}'})
+    replies["report"].append({"content": _complete_report()})
 
     final = State(**build_graph(state.config).invoke(state))
 
     assert final.stop_reason == "doctor"
-    assert final.report_raw == '{"clinical_summary": "stable"}'
     assert final.report_attempts == 1
+    assert final.report.bipq["coherence"].score == 4.0
+
+
+@pytest.mark.skipif(
+    os.getenv("AHEAD_GRAPH_TESTS") != "1", reason="imports langgraph (~3 min off GPFS)"
+)
+def test_a_thin_report_is_asked_for_again_and_then_given_up_on(scripted, state):
+    """A summary and nothing else accounts for no dimension, so all 12 are gaps.
+
+    The retry has never fired in a live run (N8), so this is the only place the
+    whole path is exercised: it goes back, it is told what is missing, and what
+    is still missing when the attempts run out stays NA rather than looping (4.4).
+    """
+    from ahead_agent.graph import build_graph
+
+    replies, seen = scripted
+    replies["doctor"] += [speaks("How have you been?"), {"content": "I have what I need."}]
+    replies["patient"].append({"content": "Tired, mostly."})
+    replies["report"] += [{"content": '{"clinical_summary": "stable"}'}] * 3
+
+    final = State(**build_graph(state.config).invoke(state))
+
+    assert final.report_attempts == 3     # report_retries: 2, so three asks
+    assert all(scored.score is None for scored in final.report.bipq.values())
+    assert [event["event"] for event in final.events].count("report_gaps") == 3
+
+    # What the last one left out goes at the end, where it is the most recent
+    # thing said — the second ask is where that first shows up.
+    assert "did not account for" in seen["report"][1][-1]["content"]
 
 
 # ── What is left on disk ─────────────────────
