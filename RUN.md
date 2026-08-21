@@ -60,6 +60,13 @@ ls runs/s3-1/
 python3 -c "import json; t=json.load(open('runs/s3-1/transcript.json')); print(t['turns'], t['stop_reason'], len(t['events']))"
 ```
 
+**Tanda en HPC** (mismo nodo, mismos pasos 1–4, y en vez de `main.py`):
+
+```bash
+git status --short                          # tiene que estar vacío
+./venv-hpc/bin/python run_batch.py --profile hpc --repeats 2 --run-id e4-1
+```
+
 ---
 
 ## Tests
@@ -208,6 +215,75 @@ Tres cosas que mirar en `transcript.json`:
 Y en `metadata.json`, `prompts.doctor`: el hash identifica qué versión del
 prompt produjo esto. Es lo que permite atribuir un cambio de resultado a un
 cambio de prompt y no a otra cosa.
+
+---
+
+## Tandas: `run_batch.py`
+
+`main.py` es una consulta. Una consulta no mide nada: la dispersión entre
+corridas idénticas es de 1.25 de MAE (N2), así que cualquier número de n=1 está
+por debajo del ruido. `run_batch.py` corre **N repeticiones × M pacientes** con
+una sola configuración, que es la unidad con la que se calculan la confianza
+empírica (2.4) y la discriminación entre pacientes (2.5).
+
+```bash
+./venv-hpc/bin/python run_batch.py --profile hpc --repeats 2 --run-id e4-1
+```
+
+| Opción | Qué hace |
+|---|---|
+| `--repeats N` | Consultas por paciente. Por defecto 1 |
+| `--patients ...` | Perfiles concretos. Por defecto los 10 de `paths.patients` |
+| `--profile` | `local` o `hpc`, igual que `main.py` |
+| `--run-id` | Nombre de la tanda. Por defecto, marca de tiempo |
+| `--allow-dirty` | Correr con cambios sin commitear. Sin esto, **se niega a arrancar** |
+
+Escalas de §8: la Etapa 4 son `--repeats 2` sobre los 10, la 6 son 5 y la línea
+base de la 7 son 10.
+
+### Qué hace, en orden
+
+1. **Comprueba el árbol.** Si `git status` no está limpio, aborta. Es el fallo de
+   las cuatro corridas `s3-*`: salieron con `dirty: true` y no se pueden atribuir
+   a ningún commit. Para humo, `--allow-dirty`.
+2. **Avisa si las dos temperaturas son 0.** A T=0 las repeticiones son idénticas
+   y 2.4 no tiene nada que medir.
+3. **Escribe la metadata una vez**, en `runs/<tanda>/metadata.json`: es la misma
+   configuración para toda la tanda, y duplicarla por consulta solo daría 20
+   copias del mismo fichero.
+4. **Calienta los dos modelos** con una llamada trivial (§6.1), para que la carga
+   desde GPFS no la pague el primer turno.
+5. **Corre las consultas en serie**, un barrido completo del corpus y luego el
+   siguiente. Si la cola corta la tanda, quedan los 10 pacientes una vez en vez
+   de dos pacientes diez veces.
+6. **Una consulta que revienta no tumba la tanda**: se anota como `failed` y
+   sigue. El índice se reescribe después de cada consulta.
+
+### Qué deja
+
+```
+runs/e4-1/
+├── metadata.json         # la configuración de toda la tanda (0.4)
+├── batch.json            # el índice: una línea por consulta
+├── CLL-001-r1/           # transcript.json + report.json
+├── CLL-002-r1/
+│   …
+└── HIV-005-r2/
+```
+
+`batch.json` es lo que se lee antes de analizar nada:
+
+```bash
+python3 -c "
+import json; b=json.load(open('runs/e4-1/batch.json'))
+for c in b['consultations']:
+    print(c['run'], c['status'], c.get('stop_reason'), 'events', c.get('events'), 'NA', len(c.get('na',[])))"
+```
+
+`status: failed`, `report_parsed: false` o `events` distinto de 0 en cualquier
+consulta significa que la tanda todavía no es un corpus analizable (3.4). Se
+arregla y se relanza: **relanzar con el mismo `--run-id` reanuda**, salta las
+consultas que ya tienen `transcript.json` y solo paga las que faltan.
 
 ---
 

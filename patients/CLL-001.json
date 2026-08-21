@@ -42,8 +42,8 @@
       ]
     },
     "bmq": {
-      "specific_necessity": 3.4,
-      "specific_concerns": 2.8,
+      "specific_necessity": null,
+      "specific_concerns": null,
       "general_harm": 3.0,
       "general_overuse": 2.5
     }
