@@ -10,6 +10,11 @@ export OLLAMA_MODELS=/gpfs/projects/bsc02/llm_models/ollama
 export OLLAMA_HOST=127.0.0.1:$PORT
 export PATH=/gpfs/projects/bsc02/llm_models/ollama-bin/bin:$PATH
 
+# A server setting, not a request option, so llm.py cannot send it. Left to the
+# server it splits num_ctx between slots and truncates in silence, while
+# metadata.sampling.num_parallel still claims 1.
+export OLLAMA_NUM_PARALLEL=${OLLAMA_NUM_PARALLEL:-1}
+
 # Read by load_config, and recorded in metadata.server.ollama_url.
 export OLLAMA_URL=http://127.0.0.1:$PORT
 

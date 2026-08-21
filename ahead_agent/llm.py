@@ -1,6 +1,8 @@
 # ahead_agent/llm.py
+# ─────────────────────────────────────────────
 # One call to the local Ollama server, with the settings the profile declares.
 # Transport failures and empty replies are retried; nothing else is (3.1).
+# ─────────────────────────────────────────────
 
 from __future__ import annotations
 
@@ -28,48 +30,18 @@ def chat(
     usage: Optional[List[Dict[str, Any]]] = None,
 ) -> Dict[str, Any]:
     """One /api/chat call. Returns the reply, which may carry tool_calls."""
-    payload = {
-        "model": config["models"][MODEL_FOR_ROLE[role]],
-        "messages": messages,
-        "stream": False,
-        "options": sampling_options(config, role),
-        # How long the model stays resident. Left to the server it is five
-        # minutes, and reloading costs ~10 s locally, minutes off GPFS (§6.1).
-        "keep_alive": config["server"]["keep_alive"],
-    }
-    if tools:
-        payload["tools"] = tools
-
+    payload = _payload(config, role, messages, tools)
     url = config["server"]["ollama_url"].rstrip("/") + "/api/chat"
     timeout = config["server"]["request_timeout"]
 
     for attempt in range(1, MAX_ATTEMPTS + 1):
-        try:
-            response = _post(url, payload, timeout)
-            reply = response["message"]
-        except (httpx.HTTPError, KeyError, ValueError) as error:
-            failure = f"{type(error).__name__}: {error}"
-        else:
-            if reply.get("tool_calls") or (reply.get("content") or "").strip():
-                if usage is not None:
-                    # What the call actually cost, to size context_length from
-                    # measurements instead of from a number copied over.
-                    usage.append(
-                        {
-                            "role": role,
-                            "prompt_tokens": response.get("prompt_eval_count"),
-                            "eval_tokens": response.get("eval_count"),
-                        }
-                    )
-                return reply
-            # An empty turn is a failure to retry now, not a turn to keep: the
-            # previous corpus was 19% of them (3.1).
-            failure = "empty reply"
+        response, failure = _attempt(url, payload, timeout)
 
-        if events is not None:
-            events.append(
-                {"event": "llm_retry", "role": role, "attempt": attempt, "failure": failure}
-            )
+        if failure is None:
+            _record_usage(usage, role, response)
+            return response["message"]
+
+        _record_retry(events, role, attempt, failure)
         if attempt < MAX_ATTEMPTS:
             time.sleep(2 * attempt)
 
@@ -88,7 +60,67 @@ def sampling_options(config: Dict[str, Any], role: str) -> Dict[str, Any]:
     return options
 
 
+# ── One attempt ──────────────────────────────
+
+def _attempt(url: str, payload: Dict[str, Any], timeout: float):
+    """One request. Returns (response, None), or (None, why it failed)."""
+    try:
+        response = _post(url, payload, timeout)
+        reply = response["message"]
+    except (httpx.HTTPError, KeyError, ValueError) as error:
+        return None, f"{type(error).__name__}: {error}"
+
+    # An empty turn is a failure to retry now, not a turn to keep: the previous
+    # corpus was 19% of them (3.1).
+    if reply.get("tool_calls") or (reply.get("content") or "").strip():
+        return response, None
+    return None, "empty reply"
+
+
 def _post(url: str, payload: Dict[str, Any], timeout: float) -> Dict[str, Any]:
     response = httpx.post(url, json=payload, timeout=timeout)
     response.raise_for_status()
     return response.json()
+
+
+# ── What travels, and what is written down ───
+
+def _payload(
+    config: Dict[str, Any],
+    role: str,
+    messages: List[Dict[str, Any]],
+    tools: Optional[List[Dict[str, Any]]],
+) -> Dict[str, Any]:
+    payload = {
+        "model": config["models"][MODEL_FOR_ROLE[role]],
+        "messages": messages,
+        "stream": False,
+        "options": sampling_options(config, role),
+        # How long the model stays resident. Left to the server it is five
+        # minutes, and reloading costs ~10 s locally, minutes off GPFS (§6.1).
+        "keep_alive": config["server"]["keep_alive"],
+    }
+    if tools:
+        payload["tools"] = tools
+    return payload
+
+
+def _record_usage(usage: Optional[List[Dict[str, Any]]], role: str, response: Dict[str, Any]) -> None:
+    """What the call cost, to size context_length from measurements (§6.1)."""
+    if usage is None:
+        return
+    usage.append(
+        {
+            "role": role,
+            "prompt_tokens": response.get("prompt_eval_count"),
+            "eval_tokens": response.get("eval_count"),
+        }
+    )
+
+
+def _record_retry(
+    events: Optional[List[Dict[str, Any]]], role: str, attempt: int, failure: str
+) -> None:
+    if events is None:
+        return
+    events.append({"event": "llm_retry", "role": role, "attempt": attempt, "failure": failure})

@@ -14,7 +14,7 @@ from ahead_agent import prompts
 from ahead_agent.config import load_config
 from ahead_agent.graph import build_graph
 from ahead_agent.metadata import build_metadata, write_metadata
-from ahead_agent.report import write_transcript
+from ahead_agent.report import write_report, write_transcript
 from ahead_agent.state import State
 
 
@@ -105,11 +105,10 @@ def main() -> None:
     print(f"  metadata       : {metadata}")
 
     app = build_graph(config)
-    # invoke gives back the channels as a plain dict; rebuilt here so that
-    # everything downstream keeps working on the State it was written for.
     final_state = State(**app.invoke(State(config, patient)))
 
     transcript = write_transcript(final_state, runs_dir / meta.run_id)
+    write_report(final_state, runs_dir / meta.run_id)
     #print_summary(final_state, transcript)
 
 

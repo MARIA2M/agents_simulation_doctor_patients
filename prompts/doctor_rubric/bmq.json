@@ -1,0 +1,61 @@
+{
+  "instrument": "BMQ",
+  "title": "beliefs about medicines",
+  "range": [1.0, 5.0],
+  "guidance": "Score what the medication has actually done to this person's conduct, not the strength of what they said about it. A belief that has changed nothing sits lower than one that has changed a dose, a routine, or a decision.",
+  "rules": [
+    "The two specific sub-scales are about their own prescribed medication. A patient with no prescription has no specific belief to hold: score both null, not a middle value.",
+    "The two general sub-scales are about medicines as a class, and rarely come up unasked. If you never raised them, they are null, not 3.",
+    "A concern that has produced no behaviour is a lower score than one that has."
+  ],
+  "dimensions": {
+    "specific_necessity": {
+      "label": "that their own medication is needed",
+      "low": "strongly disagree it is needed",
+      "high": "strongly agree it is needed",
+      "anchors": [
+        [2.0, "Takes it, but doubts they would be much worse off without it."],
+        [3.0, "Accepts it is needed without much conviction either way."],
+        [4.0, "Treats it as important and organises around it: routines, travel, supplies."],
+        [5.0, "Non-negotiable. Stopping is not something they would consider."]
+      ],
+      "note": "Adherence is evidence but not proof. Someone can take a medicine faithfully while doubting it is necessary, and say so."
+    },
+    "specific_concerns": {
+      "label": "worries about their own medication",
+      "low": "no concerns at all",
+      "high": "strong and active concerns",
+      "anchors": [
+        [2.0, "Raises no concerns, prompted or unprompted."],
+        [3.0, "Concerns only when asked, and nothing has been done about them."],
+        [4.0, "Concerns recur unprompted; they have raised them, or thought about reducing the dose."],
+        [5.0, "Concerns have changed their behaviour: doses altered, delayed, or stopped."]
+      ],
+      "note": "Side effects experienced are not concerns held. What counts is worry about what the drug is doing to them, not the symptom itself."
+    },
+    "general_harm": {
+      "label": "that medicines as a class are harmful",
+      "low": "medicines are not inherently harmful",
+      "high": "medicines are fundamentally harmful",
+      "anchors": [
+        [2.0, "No general view; judges each medicine on its own terms."],
+        [3.0, "Mild generalised caution about taking things long-term."],
+        [4.0, "Holds that medicines generally do harm alongside good, and is wary of them as a group."],
+        [5.0, "Avoids medicines as a class, and prefers alternatives to them."]
+      ],
+      "note": "This is about medicines in general, not theirs. A patient can be devoted to their own treatment and still hold that medicines as a class are overused and harmful."
+    },
+    "general_overuse": {
+      "label": "that doctors prescribe too readily",
+      "low": "trusts prescribing decisions",
+      "high": "believes prescribing is routinely excessive",
+      "anchors": [
+        [2.0, "No view offered; takes prescribing decisions as given."],
+        [3.0, "Occasional doubt about one particular prescription."],
+        [4.0, "Holds that doctors reach for medication too quickly, as a general pattern."],
+        [5.0, "Distrusts prescribing as a practice, and treats any new prescription with suspicion."]
+      ],
+      "note": "Directed at prescribing as a practice, not at their own clinician. Frustration with one doctor is not this belief."
+    }
+  }
+}

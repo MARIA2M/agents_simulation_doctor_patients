@@ -36,6 +36,26 @@ BMQ_SUBSCALES: List[str] = [
 CAUSES_DIMENSION = "causes"
 
 
+# How much the doctor is involved in its own coverage (§4.1). Three arms, and
+# none of them makes it cover anything: a dimension left untouched is a result.
+#
+#   off      it is never asked and never told. The cleanest baseline — coverage
+#            is reconstructed from the transcript afterwards, by 3.2.
+#   declare  it names what it considers settled, and hears nothing back. Buys
+#            declared coverage against audited coverage: does it know what it
+#            actually explored? Being asked at all is a mild nudge.
+#   show     it is also handed what is still open, with each reply. An
+#            intervention for stage 8, not a baseline: the list of dimensions
+#            is the questionnaire 1.3 took out of the code, and walking it
+#            would read as better coverage while being the thing this arm
+#            exists to avoid.
+COVERAGE_MODES = ("off", "declare", "show")
+
+
+def coverage_mode(config: Dict[str, Any]) -> str:
+    return (config.get("features") or {}).get("coverage_hint", "off")
+
+
 # Leaving any of these out means the server decides it instead (§12).
 REQUIRED = {
     "models": ("doctor", "patient", "embed"),
@@ -48,6 +68,9 @@ REQUIRED = {
     "server": ("ollama_url", "request_timeout", "keep_alive"),
     # Without max_turns nothing stops a doctor who never closes (1.5).
     "limits": ("max_turns", "report_retries"),
+    # Declared, never defaulted: each one changes what the doctor is shown, so
+    # a run whose profile is silent about it cannot be interpreted afterwards.
+    "features": ("coverage_hint",),
     "paths": ("patients", "runs"),
 }
 
@@ -95,3 +118,10 @@ def _validate_yaml(data: Dict[str, Any], path: Path) -> None:
     # The name is stored in the run metadata; a mismatch mislabels every run.
     if data.get("profile") != path.stem:
         raise ValueError(f"{path.name} must declare `profile: {path.stem}`")
+
+    mode = coverage_mode(data)
+    if mode not in COVERAGE_MODES:
+        raise ValueError(
+            f"{path.name}: features.coverage_hint is {mode!r}, not one of "
+            f"{', '.join(COVERAGE_MODES)}. Quote it — bare `off` is a YAML boolean."
+        )

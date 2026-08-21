@@ -28,6 +28,7 @@ def make_run_profile(tmp_path):
             },
             "server": {"ollama_url": "http://127.0.0.1:11434", "request_timeout": 300, "keep_alive": "1h"},
             "limits": {"max_turns": 30, "report_retries": 2},
+            "features": {"coverage_hint": "off"},
             "paths": {"patients": "patients", "runs": "runs"},
         }
         data.update(overrides)

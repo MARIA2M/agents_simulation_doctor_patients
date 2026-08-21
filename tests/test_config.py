@@ -104,6 +104,22 @@ def test_unknown_profile_is_rejected():
         load_config("no_existe")
 
 
+@pytest.mark.parametrize("mode", ["off", "declare", "show"])
+def test_the_three_coverage_arms_are_accepted(make_run_profile, mode):
+    path = make_run_profile("brazo", features={"coverage_hint": mode})
+
+    assert load_config(str(path))["features"]["coverage_hint"] == mode
+
+
+def test_an_unquoted_off_is_caught_and_named(make_run_profile):
+    """Bare `off` is False in YAML, and False would read as "no coverage" while
+    meaning "nobody chose" — the §12 failure, in a new place."""
+    path = make_run_profile("booleano", features={"coverage_hint": False})
+
+    with pytest.raises(ValueError, match="YAML boolean"):
+        load_config(str(path))
+
+
 def test_ollama_url_can_be_redirected(monkeypatch):
     """Only the endpoint moves per machine; everything else comes from the file."""
     monkeypatch.setenv("OLLAMA_URL", "http://as01r1b18:11434")

@@ -103,68 +103,57 @@ BMQ_BANDS: Dict[str, Bands] = {
 def describe(patient: Dict[str, Any]) -> str:
     """The facts and beliefs of one patient, as instructions to play them.
 
-    Composed on top of PATIENT.md, which carries the role itself.
+    Composed on top of PATIENT.md, which carries the role itself — so nothing
+    here repeats how to speak, only who is speaking.
     """
     disease = patient["disease_profile"]
     demographics = disease["demographics"]
     beliefs = patient["belief_profile"]
 
-    sections = [
-        f"You are a {demographics['age']}-year-old {demographics['gender']} patient.",
-        "CLINICAL FACTS (true about you — refer to them naturally if asked):\n"
-        f"  Diagnosis : {disease['diagnosis']}\n"
-        f"  Treatment : {disease['treatment_regimen']}\n"
-        f"  Symptoms  : {', '.join(disease.get('key_symptoms', []))}\n"
-        f"  Situation : {disease['trajectory']}",
-        "HOW YOU SEE YOUR ILLNESS (express it, never state it as a number):\n"
-        + _cues(BIPQ_BANDS, beliefs.get("b_ipq", {})),
-        "WHAT YOU BELIEVE CAUSED IT:\n" + _causes(beliefs.get("b_ipq", {})),
-    ]
+    symptoms = ", ".join(disease.get("key_symptoms", []))
+    illness = _behaviour_lines(BIPQ_BANDS, beliefs.get("b_ipq", {}))
+    causes = _causes(beliefs.get("b_ipq", {}))
 
-    medication = _cues(BMQ_BANDS, beliefs.get("bmq", {}))
-    if medication:
-        sections.append("HOW YOU SEE YOUR MEDICATION:\n" + medication)
+    # Omitted rather than filled in: a patient on watch-and-wait has no
+    # prescription to hold beliefs about (C1).
+    medication = _behaviour_lines(BMQ_BANDS, beliefs.get("bmq", {}))
+    medication_block = f"\n\nHOW YOU SEE YOUR MEDICATION:\n{medication}" if medication else ""
 
-    persona = _persona(patient.get("persona") or {})
-    if persona:
-        sections.append("WHO YOU ARE:\n" + persona)
+    return f"""You are a {demographics['age']}-year-old {demographics['gender']} patient.
 
-    return "\n\n".join(sections)
+CLINICAL FACTS (true about you — refer to them naturally if asked):
+  Diagnosis : {disease['diagnosis']}
+  Treatment : {disease['treatment_regimen']}
+  Symptoms  : {symptoms}
+  Situation : {disease['trajectory']}
+
+HOW YOU SEE YOUR ILLNESS (express it, never state it as a number):
+{illness}
+
+WHAT YOU BELIEVE CAUSED IT:
+{causes}{medication_block}"""
 
 
-def _cues(bands: Dict[str, Bands], scores: Dict[str, Any]) -> str:
-    """One line per dimension present. A missing one is left out, never guessed."""
-    lines = [
-        f"  - {_band(bands[dimension], scores[dimension])}"
-        for dimension in bands
-        if isinstance(scores.get(dimension), (int, float))
-    ]
+def _behaviour_lines(all_bands: Dict[str, Bands], scores: Dict[str, Any]) -> str:
+    """One line per dimension scored. A missing one is left out, never guessed (P9)."""
+    lines = []
+
+    for dimension, bands in all_bands.items():
+        score = scores.get(dimension)
+        if isinstance(score, (int, float)):
+            lines.append(f"  - {_band_for(bands, score)}")
+
     return "\n".join(lines)
 
 
-def _band(bands: Bands, score: float) -> str:
-    for upper, description in bands:
+def _band_for(bands: Bands, score: float) -> str:
+    """The first band the score falls into."""
+    for upper, behaviour in bands:
         if score <= upper:
-            return description
+            return behaviour
     return bands[-1][1]
 
 
 def _causes(b_ipq: Dict[str, Any]) -> str:
     causes = [cause for cause in b_ipq.get("causes", []) if cause]
     return "\n".join(f"  - {cause}" for cause in causes) if causes else "  - you are not sure"
-
-
-def _persona(persona: Dict[str, Any]) -> str:
-    """Optional block (§5.2): what makes you harder or easier to read.
-
-    Kept apart from the beliefs, because beliefs are what the doctor has to
-    infer and persona is what makes inferring them hard. Mixed together, the
-    two effects could not be measured separately.
-    """
-    lines = []
-    for key in ("communication_style", "emotional_expression", "health_literacy"):
-        if persona.get(key):
-            lines.append(f"  - {key.replace('_', ' ')}: {persona[key]}")
-    if persona.get("traits"):
-        lines.append(f"  - traits: {', '.join(persona['traits'])}")
-    return "\n".join(lines)

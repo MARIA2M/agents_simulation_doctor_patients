@@ -1,0 +1,111 @@
+{
+  "instrument": "B-IPQ",
+  "title": "beliefs about the illness",
+  "range": [0, 10],
+  "guidance": "Score what this person's life shows, not how they phrased it. Two patients can describe the same situation in opposite registers, one minimising and one catastrophising, and belong at the same point of the scale. What places them is what they do, what they have given up, what they can explain, and what they have changed.",
+  "rules": [
+    "Where words and conduct disagree, weigh the conduct. Someone who says the illness is nothing but has stopped working is not a 2.",
+    "A dimension you never explored is null, not 0. A 0 is a finding, and it needs evidence like any other number.",
+    "Between two adjacent anchors, pick one and lower your confidence. Do not drift to the middle of the scale to avoid choosing."
+  ],
+  "dimensions": {
+    "consequences": {
+      "label": "impact on their life",
+      "low": "no effect at all",
+      "high": "depends on others for daily functioning",
+      "anchors": [
+        [2, "Keeps every usual role and activity, with no adaptation."],
+        [4, "Keeps their roles but has changed how they do them: pacing, hours, help with the heavy parts."],
+        [6, "Has given up specific activities, or scaled back a role, while the rest stands."],
+        [8, "A major role is lost or substantially reduced: work, caring, running the household."]
+      ]
+    },
+    "timeline": {
+      "label": "how long they expect it to last",
+      "low": "a very short time",
+      "high": "forever",
+      "anchors": [
+        [2, "Expects it to be over within weeks or months, and plans accordingly."],
+        [4, "Expects it to end but cannot say when; treats the present as temporary."],
+        [6, "Genuinely uncertain: holds both endings open and plans for neither."],
+        [8, "Plans on the assumption it stays. Arrangements are built around it continuing."]
+      ],
+      "note": "Judge the horizon they plan against, not the word \"chronic\" — patients repeat the term without having accepted what it means."
+    },
+    "personal_control": {
+      "label": "what their own actions can do",
+      "low": "no control at all",
+      "high": "a great deal of control",
+      "anchors": [
+        [2, "Takes no action of their own; the outcome belongs to luck, fate or the doctors."],
+        [4, "Does what is asked but doubts it changes the course of anything."],
+        [6, "Acts, and credits their actions with some effect alongside the treatment."],
+        [8, "Manages actively, and attributes their current state substantially to their own doing."]
+      ],
+      "note": "Adherence alone does not settle this: taking the tablets because you were told to is a different belief from taking them because you think it works."
+    },
+    "treatment_control": {
+      "label": "what the treatment can do",
+      "low": "does not help at all",
+      "high": "helps enormously",
+      "anchors": [
+        [2, "Continues the treatment without expecting benefit from it."],
+        [4, "Allows that it does something, but not enough to matter much."],
+        [6, "Sees a clear benefit that is nonetheless partial."],
+        [8, "Attributes their present condition to the treatment working."]
+      ],
+      "note": "Separate this from satisfaction with their care. Liking the clinician is not a belief about efficacy."
+    },
+    "identity": {
+      "label": "the symptoms they carry",
+      "low": "no symptoms",
+      "high": "many severe symptoms",
+      "anchors": [
+        [2, "Recalls symptoms only when asked, and reports them as minor."],
+        [4, "One or two symptoms, intermittent, not limiting."],
+        [6, "Several symptoms present most days, noticed but worked around."],
+        [8, "Symptoms daily and intrusive: they interrupt what the person is doing."]
+      ],
+      "note": "Count what they attribute to the illness, whether or not it is medically attributable. This is their identity of the illness, not yours."
+    },
+    "concern": {
+      "label": "how much it worries them",
+      "low": "not at all concerned",
+      "high": "extremely concerned",
+      "anchors": [
+        [2, "Worry appears only when you raise it, and passes."],
+        [4, "Worry tied to specific moments: results, appointments, a new symptom."],
+        [6, "Worry recurs unprompted and shapes some decisions."],
+        [8, "Worry is frequent and intrudes into matters unrelated to the illness."]
+      ],
+      "note": "Intrusiveness, not intensity of language. A composed person describing constant preoccupation belongs above an expressive one describing an occasional wobble."
+    },
+    "coherence": {
+      "label": "how well they understand it",
+      "low": "does not understand it at all",
+      "high": "understands it very clearly",
+      "anchors": [
+        [2, "Cannot say what the condition is beyond repeating its name."],
+        [4, "Knows the label and the treatment, but not what either is for."],
+        [6, "Gives a rough account of what is happening and why, with gaps."],
+        [8, "Explains the mechanism, the monitoring and the reason for the plan, accurately."]
+      ],
+      "note": "Accuracy, not fluency. A patient who explains their illness confidently and wrongly is low on this dimension, not high."
+    },
+    "emotional_response": {
+      "label": "how much it affects them emotionally",
+      "low": "not affected emotionally",
+      "high": "extremely affected",
+      "anchors": [
+        [2, "Discusses the illness without emotional content, and does not steer away from it."],
+        [4, "Emotion acknowledged when the subject arises, and contained."],
+        [6, "Emotion recurrent: it affects mood, sleep, or how they speak about the future."],
+        [8, "Emotion is prominent and affects what they do."]
+      ],
+      "note": "Absence of expressed feeling is not evidence of a low score. Distinguish someone for whom the subject is genuinely neutral from someone who changes it, answers narrowly, or declines to go further — avoidance belongs at the top of this scale, not the bottom."
+    }
+  },
+  "unscored": {
+    "causes": "Record what they believe caused it, in their own terms, most important first, and quote them. If they never said, the list is empty — do not supply the medically likely cause in place of their belief."
+  }
+}

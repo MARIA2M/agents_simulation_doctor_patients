@@ -10,6 +10,8 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from typing import Optional
 
+from .report import Report
+
 
 @dataclass
 class State:
@@ -23,6 +25,19 @@ class State:
     turn_count: int = 0
     finished: bool = False      # the doctor stopped calling the tool (1.5)
     stop_reason: Optional[str] = None  # "doctor", "turn_cap" or "malformed_call"
+
+    # dimension → "cubierto" once the doctor says so, otherwise "sin sondear".
+    # Its own bookkeeping, declared through the tool, read back to it each turn
+    # (§4.1). A criterion of sufficiency, not a counter of turns.
+    coverage_hint: dict = field(default_factory=dict)
+
+    # ── Report (§4) ──
+    # Written once the loop exits, whatever ended it (1.13). The raw text is
+    # kept beside the parsed one so a report that failed to parse is still
+    # readable, and report_attempts is what the retry limit counts.
+    report_raw: Optional[str] = None
+    report: Optional[Report] = None
+    report_attempts: int = 0
 
     events: list = field(default_factory=list)  # retries, empty turns, broken calls
     usage: list = field(default_factory=list)   # tokens per call, to size context_length

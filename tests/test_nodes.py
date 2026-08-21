@@ -48,8 +48,8 @@ def speaks(message):
 @pytest.fixture
 def scripted(monkeypatch):
     """Queue replies per role, and record every message sent to each model."""
-    replies = {"doctor": [], "patient": []}
-    seen = {"doctor": [], "patient": []}
+    replies = {"doctor": [], "patient": [], "report": []}
+    seen = {"doctor": [], "patient": [], "report": []}
 
     def fake_chat(config, role, messages, tools=None, events=None, usage=None):
         seen[role].append(messages)
@@ -92,7 +92,7 @@ def test_the_doctor_closes_by_not_calling_the_tool(scripted, state):
 
     assert update["finished"] is True
     assert update["stop_reason"] == "doctor"
-    assert routing.route_after_doctor(replace(state, **update)) == "end"
+    assert routing.route_after_doctor(replace(state, **update)) == "report"
 
 
 def test_the_turn_cap_stops_the_loop_and_says_so(scripted, state):
@@ -129,11 +129,11 @@ def test_the_patient_answer_comes_back_as_the_tool_result(scripted, state):
     state = replace(state, **nodes.doctor_node(state))
     update = nodes.patient_node(state)
 
-    assert update["doctor_messages"][-1] == {
-        "role": "tool",
-        "name": "hand_off_to_patient",
-        "content": "Tired, mostly.",
-    }
+    handed_back = update["doctor_messages"][-1]
+    assert handed_back["role"] == "tool"
+    assert handed_back["name"] == "hand_off_to_patient"
+    # The answer, then the coverage note of §4.1 — see test_coverage.py.
+    assert handed_back["content"].startswith("Tired, mostly.")
     assert update["conversation"][-1]["role"] == "patient"
 
 
