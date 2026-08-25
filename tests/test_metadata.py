@@ -8,13 +8,21 @@ import re
 
 import pytest
 
+from ahead_agent.llm import sampling_options
 from ahead_agent.metadata import build_metadata, hash_text, new_run_id, write_metadata
 
 PROFILE = {
     "profile": "local",
     "models": {"doctor": "llama3.2", "patient": "dolphin-llama3", "embed": "nomic-embed-text"},
+    # Flat keys per role, as config/*.yaml has them and `llm.sampling_options`
+    # reads them. This was once nested as `temperature: {doctor: …}`, which is
+    # no real profile's shape: the test passed either way because
+    # `build_metadata` copies the block verbatim, so it could not fail for the
+    # reason it was written.
     "sampling": {
-        "temperature": {"doctor": 0.7, "patient": 0.7, "report": 0.0},
+        "doctor_temperature": 0.7,
+        "patient_temperature": 0.7,
+        "report_temperature": 0.0,
         "seed": None,
         "context_length": 32768,
         "num_parallel": 1,
@@ -51,9 +59,15 @@ def test_models_and_sampling_are_copied_verbatim(meta):
     assert meta.sampling == PROFILE["sampling"]
 
 
-def test_every_role_temperature_is_recorded(meta):
-    """A server applying its own default is invisible unless this is explicit."""
-    assert meta.sampling["temperature"] == {"doctor": 0.7, "patient": 0.7, "report": 0.0}
+@pytest.mark.parametrize("role", ["doctor", "patient", "report"])
+def test_the_temperature_recorded_is_the_one_that_will_be_sent(meta, role):
+    """A server applying its own default is invisible unless this is explicit.
+
+    Compared against `llm.sampling_options`, which is what puts it in the
+    request: metadata recording one number is worthless if another travels, and
+    these are two separate reads of the same block (§12).
+    """
+    assert meta.sampling[f"{role}_temperature"] == sampling_options(PROFILE, role)["temperature"]
 
 
 def test_code_provenance_answers_both_questions(meta):

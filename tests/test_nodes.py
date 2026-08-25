@@ -4,66 +4,9 @@
 import json
 from dataclasses import replace
 
-import pytest
+from ahead_agent import nodes, routing
 
-from ahead_agent import llm, nodes, routing
-from ahead_agent.config import load_config
-from ahead_agent.state import State
-
-PATIENT = {
-    "patient_id": "TEST-001",
-    "disease_profile": {
-        "diagnosis": "Chronic Lymphocytic Leukemia (CLL)",
-        "treatment_regimen": "Watch and wait",
-        "key_symptoms": ["Mild fatigue"],
-        "trajectory": "Slow-progressing",
-        "demographics": {"age": 58, "gender": "male"},
-    },
-    "belief_profile": {
-        "b_ipq": {
-            "consequences": 7,
-            "timeline": 9,
-            "personal_control": 3,
-            "treatment_control": 6,
-            "identity": 5,
-            "concern": 8,
-            "coherence": 4,
-            "emotional_response": 8,
-            "causes": ["Genetics / family history"],
-        },
-        "bmq": {"specific_necessity": 3.4},
-    },
-}
-
-
-def speaks(message):
-    return {
-        "content": "",
-        "tool_calls": [
-            {"function": {"name": "hand_off_to_patient", "arguments": {"message": message}}}
-        ],
-    }
-
-
-@pytest.fixture
-def scripted(monkeypatch):
-    """Queue replies per role, and record every message sent to each model."""
-    replies = {"doctor": [], "patient": [], "report": []}
-    seen = {"doctor": [], "patient": [], "report": []}
-
-    def fake_chat(config, role, messages, tools=None, events=None, usage=None):
-        seen[role].append(messages)
-        if usage is not None:
-            usage.append({"role": role, "prompt_tokens": 100, "eval_tokens": 20})
-        return replies[role].pop(0)
-
-    monkeypatch.setattr(nodes.llm, "chat", fake_chat)
-    return replies, seen
-
-
-@pytest.fixture
-def state():
-    return State(load_config("local"), PATIENT)
+from conftest import PATIENT, speaks
 
 
 # ── The doctor drives ────────────────────────
@@ -129,11 +72,11 @@ def test_the_patient_answer_comes_back_as_the_tool_result(scripted, state):
     state = replace(state, **nodes.doctor_node(state))
     update = nodes.patient_node(state)
 
-    handed_back = update["doctor_messages"][-1]
-    assert handed_back["role"] == "tool"
-    assert handed_back["name"] == "hand_off_to_patient"
-    # The answer, then the coverage note of §4.1 — see test_coverage.py.
-    assert handed_back["content"].startswith("Tired, mostly.")
+    assert update["doctor_messages"][-1] == {
+        "role": "tool",
+        "name": "hand_off_to_patient",
+        "content": "Tired, mostly.",
+    }
     assert update["conversation"][-1]["role"] == "patient"
 
 

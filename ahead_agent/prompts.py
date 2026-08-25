@@ -3,103 +3,156 @@
 # Builds a system prompt from files on disk: base role + skills + resources,
 # and for the report, the doctor's scoring rubric.
 # The profile decides what is loaded, not the model (1.6, 1.7).
+# Also fingerprints all of it for run_meta, tool descriptions included (0.4).
 # ─────────────────────────────────────────────
 
 from __future__ import annotations
 
 import json
 from pathlib import Path
-from typing import Any, Dict, List
+from typing import Any, Dict
 
 from .metadata import hash_text
+from .patient_profile import BIPQ_BANDS, BMQ_BANDS
+from .tools import doctor_tools
 
-SEPARATOR = "\n\n---\n\n"
+SEPARATOR = "\n\n---\n\n"   # between fragments
 
 
-def compose(config: Dict[str, Any], role: str) -> str:
+# ── Composing a prompt (1.6, 1.7) ────────────
+
+
+def compose_prompt(config: Dict[str, Any], role: str) -> str:
     """The whole prompt for `doctor`, `patient` or `report`."""
-    parts = [_read(config["paths"]["prompts"] / config["prompts"][role])]
+    prompts_dir = config["paths"]["prompts"]
 
-    # Only the report scores anything, so only the report carries the scale.
-    if role == "report":
-        parts += [
-            render_rubric(_load_json(config["paths"]["prompts"] / name))
-            for name in _doctor_rubric(config)
-        ]
+    role_prompt = _read_prompts(prompts_dir / config["prompts"][role])
 
-    parts += [
-        _read(config["paths"]["skills"] / f"{name}.md")
-        for name in _listed(config, "skills", role)
+    # only the report scores, so only the report carries the scale
+    rubrics = [
+        _rubric_as_markdown(json.loads(_read_prompts(prompts_dir / name)))
+        for name in _listed_files(config, "prompts", "doctor_rubric")
+    ] if role == "report" else []
+
+    skills = [
+        _read_prompts(config["paths"]["skills"] / f"{name}.md")
+        for name in _listed_files(config, "skills", role)
     ]
-    parts += [
-        _read(config["paths"]["resources"] / f"{name}.md")
-        for name in _listed(config, "resources", role)
+
+    resources = [
+        _read_prompts(config["paths"]["resources"] / f"{name}.md")
+        for name in _listed_files(config, "resources", role)
     ]
-    return SEPARATOR.join(parts)
+
+    return SEPARATOR.join([role_prompt, *rubrics, *skills, *resources])
+
+
+# ── Fingerprints (0.4) ───────────────────────
 
 
 def hashes(config: Dict[str, Any]) -> Dict[str, Any]:
-    """Fingerprints of the composed prompts, for the run metadata (0.4)."""
+    """Fingerprints of the composed prompts, for the run metadata."""
+    rubric_files = _listed_files(config, "prompts", "doctor_rubric")
+
     return {
-        "doctor": hash_text(compose(config, "doctor")),
-        "patient": hash_text(compose(config, "patient")),
-        "report": hash_text(compose(config, "report")),
-        # Separately from the report it is part of, so a change of anchors can
-        # be told apart from a change of instructions.
+        "doctor": hash_text(compose_prompt(config, "doctor")),
+        "patient": hash_text(compose_prompt(config, "patient")),
+        "report": hash_text(compose_prompt(config, "report")),
+        # apart from the report, so moving an anchor is not read as a
+        # change of instructions
         "doctor_rubric": hash_text(
             SEPARATOR.join(
-                json.dumps(_load_json(config["paths"]["prompts"] / name), sort_keys=True)
-                for name in _doctor_rubric(config)
+                json.dumps(
+                    json.loads(_read_prompts(config["paths"]["prompts"] / name)), sort_keys=True
+                )
+                for name in rubric_files
             )
         ),
-        "skills": {role: _listed(config, "skills", role) for role in ("doctor", "patient")},
+        # the tool descriptions are instructions too, and the arms change them
+        "tools": hash_text(json.dumps(doctor_tools(config), sort_keys=True)),
+        # reaches the patient through describe_patient, not through PATIENT.md
+        "patient_bands": hash_text(json.dumps([BIPQ_BANDS, BMQ_BANDS], sort_keys=True)),
+        "skills": {role: _listed_files(config, "skills", role) for role in ("doctor", "patient")},
     }
 
 
-# ── The doctor's scale ───────────────────────
-# Held as JSON, in the same shape as the bands of patient_profile.py, so the
-# two ladders can be compared. They must not be each other's inverse: that is
-# what would make part of the accuracy a decoding of our own code (5.5).
+# ── The doctor's scale (2.2, 5.5) ────────────
+
+#     # Scale — beliefs about the illness (0–10)
+#
+#     Score what this person's life shows, not how they phrased it.
+#
+#     - Where words and conduct disagree, weigh the conduct.
+RUBRIC_HEADER = """# Scale — {title} ({low}–{high})
+
+{guidance}
+
+{rules}"""
+
+#     ## consequences — impact on their life
+#     *0 = no effect at all · 10 = depends on others for daily functioning*
+#
+#       - 2 · Keeps every usual role and activity, with no adaptation.
+#       - 8 · A major role is lost or substantially reduced.
+#
+#     Not the words they use.
+RUBRIC_DIMENSION = """## {name} — {label}
+*{low} = {low_text} · {high} = {high_text}*
+
+{anchors}{note}"""
+
+#     ## causes
+#
+#     Not scored. Record what they believe caused it, in their own terms.
+RUBRIC_UNSCORED = """## {name}
+
+Not scored. {text}"""
 
 
-def render_rubric(rubric: Dict[str, Any]) -> str:
+def _rubric_as_markdown(rubric: Dict[str, Any]) -> str:
     """One instrument's anchors, as the doctor reads them."""
     low, high = rubric["range"]
-    lines = [f"# Scale — {rubric['title']} ({low}–{high})", "", rubric["guidance"], ""]
-    lines += [f"- {rule}" for rule in rubric.get("rules", [])]
+
+    blocks = [
+        RUBRIC_HEADER.format(
+            title=rubric["title"],
+            low=low,
+            high=high,
+            guidance=rubric["guidance"],
+            rules="\n".join(f"- {rule}" for rule in rubric.get("rules", [])),
+        )
+    ]
 
     for name, dimension in rubric["dimensions"].items():
-        lines += [
-            "",
-            f"## {name} — {dimension['label']}",
-            f"*{low} = {dimension['low']} · {high} = {dimension['high']}*",
-            "",
-        ]
-        lines += [f"  - {score} · {text}" for score, text in dimension["anchors"]]
-        if dimension.get("note"):
-            lines += ["", dimension["note"]]
+        note = dimension.get("note")
+        blocks.append(
+            RUBRIC_DIMENSION.format(
+                name=name,
+                label=dimension["label"],
+                low=low,
+                high=high,
+                low_text=dimension["low"],
+                high_text=dimension["high"],
+                anchors="\n".join(f"  - {score} · {text}" for score, text in dimension["anchors"]),
+                note=f"\n\n{note}" if note else "",
+            )
+        )
 
     for name, text in (rubric.get("unscored") or {}).items():
-        lines += ["", f"## {name}", "", f"Not scored. {text}"]
+        blocks.append(RUBRIC_UNSCORED.format(name=name, text=text))
 
-    return "\n".join(lines)
-
-
-def _doctor_rubric(config: Dict[str, Any]) -> List[str]:
-    return list((config.get("prompts") or {}).get("doctor_rubric") or [])
+    return "\n\n".join(blocks)
 
 
-def _listed(config: Dict[str, Any], block: str, role: str) -> list:
+# ── Reading from disk ────────────────────────
+
+
+def _listed_files(config: Dict[str, Any], block: str, role: str) -> list:
+    """The file names the profile lists under `block` for this role."""
     return list((config.get(block) or {}).get(role) or [])
 
 
-def _load_json(path: Path) -> Dict[str, Any]:
-    if not path.exists():
-        raise FileNotFoundError(f"Rubric file not found: {path}")
-    return json.loads(path.read_text())
-
-
-def _read(path: Path) -> str:
+def _read_prompts(path: Path) -> str:
     if not path.exists():
         raise FileNotFoundError(f"Prompt file not found: {path}")
     return path.read_text().strip()

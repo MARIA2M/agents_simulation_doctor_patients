@@ -5,6 +5,8 @@ import pytest
 
 from ahead_agent import tools
 
+from conftest import profile
+
 
 def call(**function):
     return {"content": "", "tool_calls": [{"function": function}]}
@@ -47,8 +49,33 @@ def test_a_broken_call_raises_rather_than_ending_the_consultation(function):
 
 
 def test_the_patient_reply_goes_back_as_the_tool_result():
+    """The patient's channel carries only the patient.
+
+    In a tool result the doctor cannot tell our words from theirs, and
+    `Evidence.quote` has to be a literal line of the patient's — which is why
+    the `coverage_hint: show` reminder travels apart, as `role: user` (§4.1).
+    """
     assert tools.tool_result("Not great, honestly.") == {
         "role": "tool",
         "name": "hand_off_to_patient",
         "content": "Not great, honestly.",
     }
+
+
+# ── Building the tools for a run ─────────────
+
+
+@pytest.mark.parametrize(
+    ("mode", "notes"),
+    [("off", False), ("off", True), ("show", False), ("show", True)],
+    ids=["baseline", "notes only", "coverage only", "both"],
+)
+def test_building_the_tools_never_touches_the_one_the_module_ships(mode, notes):
+    """`doctor_tools` copies before adding arguments. Mutating the constant would
+    leave the first arm contaminating the next inside one process — and a batch
+    runs the arms in one process."""
+    tools.doctor_tools(profile(mode, notes))
+
+    properties = tools.HAND_OFF_TO_PATIENT["function"]["parameters"]["properties"]
+    assert "covered" not in properties
+    assert "notes" not in properties

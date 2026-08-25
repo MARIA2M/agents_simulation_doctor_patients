@@ -35,21 +35,14 @@ server:
 
 limits:
   max_turns: 30
-  report_retries: 2
+  report_attempts: 3
 
-# Brazos, no fontanería: cambian lo que ve el médico, así que van explícitos y
-# acaban en run_meta. Uno por corrida (§8).
+# Arms, not plumbing: they change what the doctor sees, so they are explicit
+# and end up in run_meta. One per run. Explained in ARCHITECTURE.md §4.1.
 features:
-  # off | declare | show  — §4.1, y `coverage_mode` en config.py.
-  #   off      ni se le pregunta ni se le dice. Es la línea base limpia: la
-  #            cobertura la reconstruye coverage.py del transcript (3.2).
-  #   declare  declara qué da por cubierto y no recibe nada. Permite cruzar lo
-  #            que cree haber explorado con lo que exploró de verdad.
-  #   show     además se le devuelve lo que queda abierto. Intervención de la
-  #            etapa 8: enseñarle la lista entera puede convertir la consulta
-  #            en un recorrido por ella, que es el cuestionario que 1.3 sacó.
-  # Entrecomillado a propósito: `off` a secas es el booleano False en YAML.
+  # off | show. Quoted on purpose: bare `off` is the YAML boolean False.
   coverage_hint: "off"
+  working_notes: false
 
 prompts:
   doctor: DOCTOR.md

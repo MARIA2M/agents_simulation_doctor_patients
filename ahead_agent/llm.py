@@ -11,14 +11,17 @@ from typing import Any, Dict, List, Optional
 
 import httpx
 
-MAX_ATTEMPTS = 3
+MAX_ATTEMPTS = 3   # tries per call
 
-# The report is written by the doctor's model, at its own temperature.
+# role → which model answers
 MODEL_FOR_ROLE = {"doctor": "doctor", "patient": "patient", "report": "doctor"}
 
 
 class TransportError(RuntimeError):
     """The server never gave a usable answer. Says nothing about the model."""
+
+
+# ── One call ─────────────────────────────────
 
 
 def chat(
@@ -30,26 +33,33 @@ def chat(
     usage: Optional[List[Dict[str, Any]]] = None,
 ) -> Dict[str, Any]:
     """One /api/chat call. Returns the reply, which may carry tool_calls."""
-    payload = _payload(config, role, messages, tools)
     url = config["server"]["ollama_url"].rstrip("/") + "/api/chat"
+    body = _request_body(config, role, messages, tools)
     timeout = config["server"]["request_timeout"]
 
     for attempt in range(1, MAX_ATTEMPTS + 1):
-        response, failure = _attempt(url, payload, timeout)
+        response, failure = _try_once(url, body, timeout)
 
         if failure is None:
-            _record_usage(usage, role, response)
+            if usage is not None:                                        # §6.1
+                usage.append({"role": role, "eval_tokens": response.get("eval_count"),
+                              "prompt_tokens": response.get("prompt_eval_count")})
             return response["message"]
 
-        _record_retry(events, role, attempt, failure)
+        if events is not None:
+            events.append({"event": "llm_retry", "role": role,
+                           "attempt": attempt, "failure": failure})
         if attempt < MAX_ATTEMPTS:
             time.sleep(2 * attempt)
 
     raise TransportError(f"{role}: {MAX_ATTEMPTS} attempts, last failure was {failure}")
 
 
+# ── What we send (§12) ───────────────────────
+
+
 def sampling_options(config: Dict[str, Any], role: str) -> Dict[str, Any]:
-    """Sent on every call, so the server never gets to choose (§12)."""
+    """Sent on every call, so the server never gets to choose."""
     sampling = config["sampling"]
     options = {
         "temperature": sampling[role + "_temperature"],
@@ -60,67 +70,42 @@ def sampling_options(config: Dict[str, Any], role: str) -> Dict[str, Any]:
     return options
 
 
-# ── One attempt ──────────────────────────────
-
-def _attempt(url: str, payload: Dict[str, Any], timeout: float):
-    """One request. Returns (response, None), or (None, why it failed)."""
-    try:
-        response = _post(url, payload, timeout)
-        reply = response["message"]
-    except (httpx.HTTPError, KeyError, ValueError) as error:
-        return None, f"{type(error).__name__}: {error}"
-
-    # An empty turn is a failure to retry now, not a turn to keep: the previous
-    # corpus was 19% of them (3.1).
-    if reply.get("tool_calls") or (reply.get("content") or "").strip():
-        return response, None
-    return None, "empty reply"
-
-
-def _post(url: str, payload: Dict[str, Any], timeout: float) -> Dict[str, Any]:
-    response = httpx.post(url, json=payload, timeout=timeout)
-    response.raise_for_status()
-    return response.json()
-
-
-# ── What travels, and what is written down ───
-
-def _payload(
+def _request_body(
     config: Dict[str, Any],
     role: str,
     messages: List[Dict[str, Any]],
     tools: Optional[List[Dict[str, Any]]],
 ) -> Dict[str, Any]:
-    payload = {
+    body = {
         "model": config["models"][MODEL_FOR_ROLE[role]],
         "messages": messages,
         "stream": False,
         "options": sampling_options(config, role),
-        # How long the model stays resident. Left to the server it is five
-        # minutes, and reloading costs ~10 s locally, minutes off GPFS (§6.1).
-        "keep_alive": config["server"]["keep_alive"],
+        "keep_alive": config["server"]["keep_alive"],   # §6.1
     }
     if tools:
-        payload["tools"] = tools
-    return payload
+        body["tools"] = tools
+    return body
 
 
-def _record_usage(usage: Optional[List[Dict[str, Any]]], role: str, response: Dict[str, Any]) -> None:
-    """What the call cost, to size context_length from measurements (§6.1)."""
-    if usage is None:
-        return
-    usage.append(
-        {
-            "role": role,
-            "prompt_tokens": response.get("prompt_eval_count"),
-            "eval_tokens": response.get("eval_count"),
-        }
-    )
+# ── One try (3.1) ────────────────────────────
 
 
-def _record_retry(
-    events: Optional[List[Dict[str, Any]]], role: str, attempt: int, failure: str
-) -> None:
-    if events is None:
-        return
-    events.append({"event": "llm_retry", "role": role, "attempt": attempt, "failure": failure})
+def _try_once(url: str, body: Dict[str, Any], timeout: float):
+    """One request. Returns (response, None), or (None, why it failed)."""
+    try:
+        response = _post(url, body, timeout)
+        reply = response["message"]
+    except (httpx.HTTPError, KeyError, ValueError) as error:
+        return None, f"{type(error).__name__}: {error}"
+
+    if reply.get("tool_calls") or (reply.get("content") or "").strip():
+        return response, None
+    return None, "empty reply"
+
+
+# the seam test_llm.py monkeypatches
+def _post(url: str, body: Dict[str, Any], timeout: float) -> Dict[str, Any]:
+    response = httpx.post(url, json=body, timeout=timeout)
+    response.raise_for_status()
+    return response.json()

@@ -1,16 +1,12 @@
 # tests/test_config.py
 # Profiles load, and one that would leave a setting to the server is rejected.
 
-import glob
-import json
-
 import pytest
 
 from ahead_agent.config import (
     BIPQ_DIMENSIONS,
     BMQ_SUBSCALES,
     CAUSES_DIMENSION,
-    REPO_ROOT,
     load_config,
 )
 
@@ -80,7 +76,7 @@ def test_missing_model_is_rejected(make_run_profile):
 
 def test_missing_turn_limit_is_rejected(make_run_profile):
     """Without max_turns nothing stops a doctor who never closes (1.5)."""
-    path = make_run_profile("sinlimite", limits={"report_retries": 2})
+    path = make_run_profile("sinlimite", limits={"report_attempts": 2})
     with pytest.raises(KeyError, match="limits.max_turns"):
         load_config(str(path))
 
@@ -104,19 +100,42 @@ def test_unknown_profile_is_rejected():
         load_config("no_existe")
 
 
-@pytest.mark.parametrize("mode", ["off", "declare", "show"])
-def test_the_three_coverage_arms_are_accepted(make_run_profile, mode):
-    path = make_run_profile("brazo", features={"coverage_hint": mode})
+@pytest.mark.parametrize("mode", ["off", "show"])
+def test_the_coverage_arms_are_accepted(make_run_profile, mode):
+    path = make_run_profile("brazo", features={"coverage_hint": mode, "working_notes": False})
 
     assert load_config(str(path))["features"]["coverage_hint"] == mode
+
+
+def test_a_retired_mode_is_rejected(make_run_profile):
+    """`declare` existed and was retired: an old profile must fail, not run on."""
+    path = make_run_profile(
+        "viejo", features={"coverage_hint": "declare", "working_notes": False}
+    )
+
+    with pytest.raises(ValueError, match="not one of"):
+        load_config(str(path))
 
 
 def test_an_unquoted_off_is_caught_and_named(make_run_profile):
     """Bare `off` is False in YAML, and False would read as "no coverage" while
     meaning "nobody chose" — the §12 failure, in a new place."""
-    path = make_run_profile("booleano", features={"coverage_hint": False})
+    path = make_run_profile(
+        "booleano", features={"coverage_hint": False, "working_notes": False}
+    )
 
     with pytest.raises(ValueError, match="YAML boolean"):
+        load_config(str(path))
+
+
+@pytest.mark.parametrize("value", ["off", "false", "no", "0"])
+def test_a_quoted_working_notes_is_caught_and_named(make_run_profile, value):
+    """The mirror of the trap above: quoting it is what turns the arm on."""
+    path = make_run_profile(
+        "comillas", features={"coverage_hint": "off", "working_notes": value}
+    )
+
+    with pytest.raises(ValueError, match="not true or false"):
         load_config(str(path))
 
 
@@ -129,14 +148,9 @@ def test_ollama_url_can_be_redirected(monkeypatch):
 # ── Dimension schema vs the corpus ───────────
 
 
-def test_dimension_ids_match_every_patient():
-    """The report schema and the ground truth must be keyed the same way (4.1)."""
-    for path in sorted(glob.glob(str(REPO_ROOT / "patients" / "*.json"))):
-        with open(path) as f:
-            beliefs = json.load(f)["belief_profile"]
-
-        assert set(BIPQ_DIMENSIONS) <= set(beliefs["b_ipq"]), path
-        assert set(BMQ_SUBSCALES) <= set(beliefs["bmq"]), path
+# That every patient carries the keys of all dimensions is checked by
+# `test_corpus.py::test_profile_carries_ground_truth`, which also requires them
+# to be numbers: you cannot read the value of a key that is missing.
 
 
 def test_causes_is_not_a_numeric_dimension():

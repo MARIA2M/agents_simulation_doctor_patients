@@ -69,7 +69,7 @@ def library(tmp_path):
 
 
 def test_the_base_role_comes_from_the_file_the_profile_names(library):
-    assert prompts.compose(library(), "doctor") == "You are a doctor."
+    assert prompts.compose_prompt(library(), "doctor") == "You are a doctor."
 
 
 def test_a_missing_file_is_an_error_not_an_empty_prompt(library):
@@ -78,7 +78,7 @@ def test_a_missing_file_is_an_error_not_an_empty_prompt(library):
     config["prompts"]["doctor"] = "NOPE.md"
 
     with pytest.raises(FileNotFoundError):
-        prompts.compose(config, "doctor")
+        prompts.compose_prompt(config, "doctor")
 
 
 def test_no_skills_or_resources_block_composes_the_role_alone(library):
@@ -87,7 +87,7 @@ def test_no_skills_or_resources_block_composes_the_role_alone(library):
     config.pop("skills", None)
     config.pop("resources", None)
 
-    assert prompts.compose(config, "doctor") == "You are a doctor."
+    assert prompts.compose_prompt(config, "doctor") == "You are a doctor."
 
 
 # ── Composing skills and resources ───────────
@@ -97,7 +97,7 @@ def test_skills_are_appended_in_the_order_the_profile_lists_them(library):
     """The code decides what is loaded and when, not the model (§5.1)."""
     config = library(skills={"doctor": ["styles/terse", "styles/empathic"], "patient": []})
 
-    composed = prompts.compose(config, "doctor")
+    composed = prompts.compose_prompt(config, "doctor")
 
     assert composed.index("Be brief.") < composed.index("Be warm.")
     assert composed.startswith("You are a doctor.")
@@ -109,7 +109,7 @@ def test_resources_come_after_skills(library):
         resources={"doctor": ["csm"], "patient": []},
     )
 
-    composed = prompts.compose(config, "doctor")
+    composed = prompts.compose_prompt(config, "doctor")
 
     assert composed.index("Be warm.") < composed.index("The Common-Sense Model.")
 
@@ -117,16 +117,16 @@ def test_resources_come_after_skills(library):
 def test_each_role_gets_only_its_own_skills(library):
     config = library(skills={"doctor": ["styles/empathic"], "patient": ["styles/terse"]})
 
-    assert "Be warm." in prompts.compose(config, "doctor")
-    assert "Be warm." not in prompts.compose(config, "patient")
-    assert "Be brief." in prompts.compose(config, "patient")
+    assert "Be warm." in prompts.compose_prompt(config, "doctor")
+    assert "Be warm." not in prompts.compose_prompt(config, "patient")
+    assert "Be brief." in prompts.compose_prompt(config, "patient")
 
 
 def test_fragments_are_separated_so_they_cannot_run_together(library):
     """A skill that reads as the last paragraph of the role is a different prompt."""
     config = library(skills={"doctor": ["styles/empathic"], "patient": []})
 
-    assert prompts.SEPARATOR in prompts.compose(config, "doctor")
+    assert prompts.SEPARATOR in prompts.compose_prompt(config, "doctor")
 
 
 # ── Hashes ───────────────────────────────────
@@ -148,6 +148,15 @@ def test_the_same_composition_always_hashes_the_same(library):
     assert prompts.hashes(config) == prompts.hashes(config)
 
 
+def test_an_arm_that_adds_a_tool_argument_changes_the_tool_hash(library):
+    """The descriptions are instructions, so two arms are not the same run (0.4)."""
+    bare, arm = library(), library()
+    arm["features"] = {"coverage_hint": "show", "working_notes": True}
+
+    assert prompts.hashes(bare)["tools"] != prompts.hashes(arm)["tools"]
+    assert prompts.hashes(bare)["doctor"] == prompts.hashes(arm)["doctor"]
+
+
 def test_the_hashes_name_which_skills_were_loaded(library):
     """The hash says a prompt changed; this says what changed it."""
     config = library(skills={"doctor": ["styles/empathic"], "patient": []})
@@ -159,7 +168,7 @@ def test_the_hashes_name_which_skills_were_loaded(library):
 
 
 def test_the_anchors_reach_the_report(library):
-    composed = prompts.compose(library(), "report")
+    composed = prompts.compose_prompt(library(), "report")
 
     assert "  - 2 · Keeps every role." in composed
     assert "  - 8 · A major role is lost." in composed
@@ -169,8 +178,8 @@ def test_the_anchors_reach_the_report(library):
 def test_the_doctor_never_sees_the_scale_during_the_consultation(library):
     """Only the report scores. A doctor holding the anchors would be scoring
     while it talks, which is the elicitation arm by another route."""
-    assert "A major role is lost." not in prompts.compose(library(), "doctor")
-    assert "A major role is lost." not in prompts.compose(library(), "patient")
+    assert "A major role is lost." not in prompts.compose_prompt(library(), "doctor")
+    assert "A major role is lost." not in prompts.compose_prompt(library(), "patient")
 
 
 def test_changing_an_anchor_changes_the_rubric_hash(library, tmp_path):
@@ -191,7 +200,7 @@ def test_a_missing_rubric_file_is_an_error(library):
     config = library(prompts={"doctor_rubric": ["doctor_rubric/nope.json"]})
 
     with pytest.raises(FileNotFoundError):
-        prompts.compose(config, "report")
+        prompts.compose_prompt(config, "report")
 
 
 # ── The real files ───────────────────────────
@@ -204,4 +213,4 @@ def test_the_profiles_on_disk_compose():
     for path in sorted(RUN_PROFILES_DIR.glob("*.yaml")):
         config = load_config(path.stem)
         for role in ("doctor", "patient"):
-            assert prompts.compose(config, role).strip(), f"{path.name}: empty {role} prompt"
+            assert prompts.compose_prompt(config, role).strip(), f"{path.name}: empty {role} prompt"

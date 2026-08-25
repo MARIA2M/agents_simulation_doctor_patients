@@ -1,5 +1,7 @@
 # ahead_agent/metadata.py
+# ─────────────────────────────────────────────
 # What a run was made of: models, sampling, prompts, code, machine (0.4).
+# ─────────────────────────────────────────────
 
 from __future__ import annotations
 
@@ -14,10 +16,13 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
-REPO_ROOT = Path(__file__).resolve().parents[1]
+REPO_ROOT = Path(__file__).resolve().parents[1]   # the repo
 
 # `git status` has to stat the whole tree: 24.7 s on GPFS with 20 files.
 _COMMAND_TIMEOUT = 60
+
+
+# ── What a run records ───────────────────────
 
 
 @dataclass
@@ -34,34 +39,11 @@ class RunMetadata:
     corpus: Dict[str, Any] = field(default_factory=dict)
 
 
+# ── Building it (0.4) ────────────────────────
+
+
 def new_run_id() -> str:
     return datetime.now().strftime("%Y%m%d-%H%M%S")
-
-
-def _command_output(*command: str) -> Optional[str]:
-    """Output of a command, or None if it fails or takes too long."""
-    try:
-        result = subprocess.run(
-            command, capture_output=True, text=True, timeout=_COMMAND_TIMEOUT
-        )
-    except (OSError, subprocess.SubprocessError):
-        return None
-    return result.stdout.strip() if result.returncode == 0 else None
-
-
-def _gpu_count() -> Optional[int]:
-    """How many GPUs this run really had.
-
-    SLURM is asked first because it knows what was allocated. `nvidia-smi` is
-    the fallback and it counts what the machine has, which on a login node is
-    four instead of the one that was reserved — the tell of §6.3.
-    """
-    allocated = os.getenv("SLURM_GPUS_ON_NODE")
-    if allocated and allocated.isdigit():
-        return int(allocated)
-
-    listing = _command_output("nvidia-smi", "-L")
-    return listing.count("GPU ") if listing else None
 
 
 def hash_text(text: str) -> str:
@@ -80,12 +62,12 @@ def build_metadata(
 
     code = {
         "git_commit": _command_output("git", "-C", str(REPO_ROOT), "rev-parse", "--short", "HEAD"),
-        # With uncommitted changes, git_commit names other code.
+        # with uncommitted changes, git_commit names other code
         "dirty": None if changes is None else bool(changes),
     }
 
+    # §6.3
     compute = {
-        # These two disagree when salloc ran without srun (§6.3).
         "hostname": socket.gethostname(),
         "slurm_nodelist": os.getenv("SLURM_NODELIST"),
         "slurm_job": os.getenv("SLURM_JOB_ID"),
@@ -98,7 +80,7 @@ def build_metadata(
         "ground_truth_source": "patients/*.json",
     }
 
-    metadata = RunMetadata(
+    return RunMetadata(
         run_id=run_id or new_run_id(),
         started_at=datetime.now().astimezone().isoformat(timespec="seconds"),
         profile=config.get("profile", "unknown"),
@@ -111,7 +93,8 @@ def build_metadata(
         corpus=corpus,
     )
 
-    return metadata
+
+# ── Writing it out ───────────────────────────
 
 
 def write_metadata(meta: RunMetadata, runs_dir: Path | str) -> Path:
@@ -122,3 +105,26 @@ def write_metadata(meta: RunMetadata, runs_dir: Path | str) -> Path:
     path.write_text(json.dumps(dataclasses.asdict(meta), indent=2) + "\n")
     return path
 
+
+# ── Probing the machine (§6.3) ───────────────
+
+
+def _command_output(*command: str) -> Optional[str]:
+    """Output of a command, or None if it fails or takes too long."""
+    try:
+        result = subprocess.run(
+            command, capture_output=True, text=True, timeout=_COMMAND_TIMEOUT
+        )
+    except (OSError, subprocess.SubprocessError):
+        return None
+    return result.stdout.strip() if result.returncode == 0 else None
+
+
+def _gpu_count() -> Optional[int]:
+    """How many GPUs this run really had."""
+    allocated = os.getenv("SLURM_GPUS_ON_NODE")
+    if allocated and allocated.isdigit():
+        return int(allocated)
+
+    listing = _command_output("nvidia-smi", "-L")
+    return listing.count("GPU ") if listing else None

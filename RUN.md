@@ -77,8 +77,8 @@ Sin servidor: el LLM está sustituido por respuestas guionizadas.
 ./venv-local/bin/python -m pytest tests/ -q
 ```
 
-Uno queda fuera por defecto, el de la consulta entera de punta a punta. Es el
-único que construye el grafo, y construirlo importa `langgraph`:
+Dos quedan fuera por defecto, los de la consulta entera de punta a punta. Son los
+únicos que construyen el grafo, y construirlo importa `langgraph`:
 
 ```bash
 AHEAD_GRAPH_TESTS=1 ./venv-local/bin/python -m pytest tests/ -q
@@ -290,13 +290,10 @@ consultas que ya tienen `transcript.json` y solo paga las que faltan.
 ## Variantes de prompt
 
 No hay un perfil por prompt. Se cambia la línea `prompts.doctor` de
-`config/hpc.yaml` y el hash de `metadata.json` registra cuál se usó:
+`config/hpc.yaml` y el hash de `metadata.json` registra cuál se usó.
 
-| Fichero | Qué es |
-|---|---|
-| `DOCTOR.md` | El de por defecto |
-| `DOCTOR-plain.md` | Versión corta, sin estructura de sesión |
-| `DOCTOR-cues.md` | Con la columna de señales conductuales — mide el espejo de 5.5 |
-| `DOCTOR-ruby.md` | El del brazo Ruby, sin su sección 5 (el informe llega aparte) |
+Hoy solo hay uno, `DOCTOR.md`. Las variantes de la Etapa 3 se retiraron al
+cerrarla; `prompts/reference/` conserva los prompts del brazo Ruby como
+referencia, pero no están cableados a ningún perfil.
 
 Una variable por corrida: cambia el prompt o cambia el modelo, no las dos cosas.

@@ -12,7 +12,7 @@ from ahead_agent import nodes, report, routing
 from ahead_agent.config import BIPQ_DIMENSIONS, BMQ_SUBSCALES, load_config
 from ahead_agent.state import State
 
-from test_nodes import PATIENT, scripted, speaks, state  # noqa: F401
+from conftest import PATIENT, speaks
 
 
 # ── The schema is the specification (2.1) ────
@@ -233,7 +233,7 @@ def test_gaps_send_it_back_while_attempts_remain():
 
 def test_it_gives_up_after_the_configured_retries():
     """What is still missing stays NA. An endless retry is only an endless bill."""
-    exhausted = _with_report(_scored(), 3)   # report_retries: 2, so 3 attempts
+    exhausted = _with_report(_scored(), 3)   # report_attempts: 3 attempts in total
 
     assert routing.route_after_report(exhausted) == "end"
     assert exhausted.report.bipq["coherence"].score is None
@@ -364,7 +364,7 @@ def test_a_thin_report_is_asked_for_again_and_then_given_up_on(scripted, state):
 
     final = State(**build_graph(state.config).invoke(state))
 
-    assert final.report_attempts == 3     # report_retries: 2, so three asks
+    assert final.report_attempts == 3     # report_attempts: 3, so three asks
     assert all(scored.score is None for scored in final.report.bipq.values())
     assert [event["event"] for event in final.events].count("report_gaps") == 3
 

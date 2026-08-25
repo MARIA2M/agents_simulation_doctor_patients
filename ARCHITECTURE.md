@@ -69,7 +69,7 @@ ahead_agent_v2/
 ├── run_batch.py             # PORTAR — N corridas × M pacientes
 │
 ├── ahead_agent/
-│   ├── __init__.py          # reexporta build_graph, run_consultation
+│   ├── __init__.py          # reexporta State y build_graph (este último, perezoso)
 │   ├── config.py            # CONFIG, modelos, rutas. SIN lista de preguntas
 │   ├── state.py             # State TypedDict (§3)
 │   ├── graph.py             # build_graph() — único sitio que toca StateGraph
@@ -109,6 +109,12 @@ ahead_agent_v2/
 └── runs/                    # salidas por corrida
 ```
 
+`build_graph` se resuelve al pedirlo, no al importar el paquete: `graph.py` trae
+langgraph, que desde GPFS tarda unos tres minutos, y un reexport normal se lo
+cobraría a cualquier import — incluidos los de post-proceso, que no tocan el
+grafo. Es también lo que permite que los dos tests de punta a punta sigan detrás
+de `AHEAD_GRAPH_TESTS=1` sin arrastrar al resto de la suite.
+
 **Estructura plana, como hoy.** El paquete actual tiene 9 módulos de primer nivel
 y solo dos subpaquetes (`api/`, `causes/`). Se mantiene igual: `report.py`,
 `coverage.py`, `reproducibility.py` y `artifacts.py` son módulos sueltos, no
@@ -130,7 +136,8 @@ class State(TypedDict):
     doctor_messages: List[Dict]   # historial del LLM médico, con tool_calls
     turn_count: int
     finished: bool                # el médico cerró la consulta (1.5)
-    coverage_hint: Dict[str, str] # dimensión → sin_sondear|ambiguo|cubierto (§4.1)
+    coverage_hint: Dict[str, str] # dimensión → "covered"; ausente = sin sondear (§4.1)
+    working_notes: List[Dict]     # [{turn, dimension, observation}] (§4.1)
 
     # ── Paciente ──
     profile: Dict                 # JSON completo. SOLO lo lee patient_tool_node
@@ -251,27 +258,100 @@ dimensión, o el JSON no parsea. Nunca un valor por defecto. Un NA:
 
 **Validación y reintento** (1.13). `report.py` comprueba las 12 dimensiones +
 causas. Si falta algo, reintento con el mismo transcript y un prompt que señale
-explícitamente qué falta. Máximo 2 reintentos; lo que siga faltando queda NA y se
+explícitamente qué falta. Máximo 3 intentos (`limits.report_attempts`); lo que siga faltando queda NA y se
 registra en `events`.
 
-### 4.1 Sondeo dirigido por ambigüedad (1.12)
+### 4.1 Sondeo dirigido por ambigüedad (1.12) — decidido
 
 El médico repregunta cuando la **evidencia es insuficiente**, no cuando la
-respuesta es corta. El routing actual de Python dispara con
-`len(respuesta) < 10 palabras`, así que una respuesta larga y vaga pasa directa a
-puntuación — es el origen del problema de los perfiles intermedios.
+respuesta es corta. El routing viejo de Python disparaba con
+`len(respuesta) < 10 palabras`, así que una respuesta larga y vaga pasaba directa
+a puntuación. Esa regla no existe aquí y no vuelve.
 
-Como el bucle es agéntico, esto no es una arista del grafo sino una instrucción
-del prompt del médico, sostenida por un estado ligero:
+Lo que sí se decidió, al cerrar la Etapa 3, es **cómo se sostiene**. La primera
+versión de esta sección daba por hecho que el médico llevaría su propia lista y
+la consultaría antes de cerrar. Eso es un brazo, no la línea base: una lista de
+dimensiones que el médico recorre es el cuestionario que 1.3 sacó del código,
+entrando otra vez por la puerta de atrás, y fuerza una cobertura que después
+infla el resultado.
 
-```python
-coverage_hint: Dict[str, str]   # dimensión → "sin sondear" | "ambiguo" | "cubierto"
+Se implementa como **dos interruptores independientes**, declarados en el bloque
+`features` del perfil y por tanto registrados en `run_meta`:
+
+```yaml
+features:
+  coverage_hint: "off"     # off | show
+  working_notes: false
 ```
 
-El médico lo actualiza a medida que conversa y lo consulta antes de decidir si
-cierra (1.5). Es la versión en vivo de la checklist de 3.2, que después audita
-lo mismo desde fuera. Deja de ser un contador de turnos y pasa a ser un criterio
-de suficiencia.
+Independientes a propósito: recordarle lo que le falta y pedirle que anote lo
+que concluye son intervenciones distintas, y en un solo valor no se sabría cuál
+produjo el efecto.
+
+| `coverage_hint` | `working_notes` | Qué es |
+|---|---|---|
+| `off` | `false` | **Línea base.** Ni se le pregunta ni se le dice. |
+| `show` | `false` | Se le devuelve lo que queda abierto, en cada respuesta. |
+| `off` | `true` | Anota lo que concluye, sin que se le diga nada. |
+| `show` | `true` | Las dos cosas. Es el modo de la demo. |
+
+**La línea base es `off` / `false`**, y con ella 1.12 se queda deliberadamente
+**sin mecanismo**: el médico sondea lo que quiere y la cobertura se reconstruye
+después desde el transcript (3.2). No preguntar por una dimensión es un
+resultado, no un fallo que haya que evitar en vivo.
+
+El estado que sostiene la cobertura es mínimo — una dimensión pasa a
+`"covered"` cuando el médico lo declara, y no hay estado intermedio:
+
+```python
+coverage_hint: Dict[str, str]   # dimensión → "covered"; ausente = sin sondear
+```
+
+#### `working_notes` — lo único que puede enseñar si el médico revisa
+
+El médico anota, en la misma llamada a la herramienta y sin llamadas extra, lo
+que cada respuesta le dice sobre una dimensión. No hay campo de puntuación: eso
+sigue siendo del final y con el transcript entero (1.11).
+
+```python
+working_notes: List[Dict]   # [{"turn", "dimension", "observation"}]
+```
+
+**Se añaden, nunca se sustituyen.** Dos entradas de la misma dimensión en turnos
+distintos son un cambio de opinión fechado:
+
+```python
+{"turn": 2, "dimension": "consequences",
+ "observation": "Ha dejado el paseo de después de cenar. Suena a renuncia."}
+{"turn": 6, "dimension": "consequences",
+ "observation": "Antes lo leí como renuncia, pero aclara que puede y no le
+                 apetece. Es menos limitación de lo que parecía."}
+```
+
+Toda la arquitectura del informe al final se apoya en que información tardía
+pueda corregir una impresión temprana, y **no hay ni una observación de que eso
+ocurra**. Este es el único brazo que la produce.
+
+Lo que cuesta: adelanta parte del juicio. Al puntuar, el médico llega con sus
+impresiones ya escritas, así que **sus resultados no son comparables con la
+línea base** y hay que decirlo al reportarlos.
+
+Hubo un tercer modo de `coverage_hint`, `declare` —declarar sin recibir nada—,
+pensado para cruzar lo que el médico cree haber explorado contra lo que exploró.
+**Retirado**: sus propias declaraciones vuelven en el historial dentro de los
+`tool_calls`, así que podía releerse y el brazo no aislaba lo que decía aislar.
+
+Y una nota de forma que resultó no ser menor: el recordatorio de `show` viaja
+como mensaje aparte con `role: user` —el mismo canal que el `OPENING`—, nunca
+dentro del resultado de la herramienta. En ese canal el médico no puede
+distinguir nuestras palabras de las del paciente, y `Evidence.quote` tiene que
+ser una cita literal suya.
+
+**Lo que se ve con `off`** (tanda `e4-1`, 10 pacientes × 2): `general_overuse`
+queda NA en 5 de 10 pacientes y lleva número en los otros 5; las dos subescalas
+`specific_*` reciben número en los 3 pacientes sin receta. Es exactamente lo que
+esta sección predice y lo que 3.2 tiene que hacer visible: la cobertura no se
+fuerza, se mide.
 
 ---
 

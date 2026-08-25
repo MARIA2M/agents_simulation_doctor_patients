@@ -1,18 +1,19 @@
 # ahead_agent/patient_profile.py
-# Turns a patient's ground truth into behaviour, so the patient LLM expresses
-# the scores instead of reciting them (1.9).
-#
-# This is the only place where a score becomes a behavioural cue. The doctor's
-# prompt has no matching table on purpose: two mirrored tables would make part
-# of the accuracy a decoding of our own code rather than inference (5.5).
+# ─────────────────────────────────────────────
+# A patient's ground truth as behaviour, so the patient LLM expresses the scores
+# instead of reciting them (1.9). The doctor has no matching table, on purpose (5.5).
+# ─────────────────────────────────────────────
 
 from __future__ import annotations
 
 from typing import Any, Dict, List, Tuple
 
-Bands = List[Tuple[float, str]]
+Bands = List[Tuple[float, str]]   # (upper bound, what it sounds like)
 
-# (upper bound, what it sounds like). The last entry catches everything above.
+
+# ── Illness bands (1.9) ──────────────────────
+
+# 8 dimensions, bands at 2/4/6/8/10
 BIPQ_BANDS: Dict[str, Bands] = {
     "consequences": [
         (2, "Your illness barely affects daily life — you work, socialise, and function almost normally. You rarely bring it up unprompted."),
@@ -72,6 +73,9 @@ BIPQ_BANDS: Dict[str, Bands] = {
     ],
 }
 
+# ── Medication bands ─────────────────────────
+
+# 4 subscales, bands at 2/3/4/5
 BMQ_BANDS: Dict[str, Bands] = {
     "specific_necessity": [
         (2.0, "You question whether your medication is truly necessary — you take it, but aren't convinced you'd be much worse off without it."),
@@ -100,12 +104,11 @@ BMQ_BANDS: Dict[str, Bands] = {
 }
 
 
-def describe(patient: Dict[str, Any]) -> str:
-    """The facts and beliefs of one patient, as instructions to play them.
+# ── Building the description ─────────────────
 
-    Composed on top of PATIENT.md, which carries the role itself — so nothing
-    here repeats how to speak, only who is speaking.
-    """
+
+def describe_patient(patient: Dict[str, Any]) -> str:
+    """The facts and beliefs of one patient, as instructions to play them."""
     disease = patient["disease_profile"]
     demographics = disease["demographics"]
     beliefs = patient["belief_profile"]

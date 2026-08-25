@@ -21,18 +21,17 @@ def build_graph(config: dict):
     graph.add_node("report", report_node)
 
     graph.add_edge(START, "doctor")
-    # The loop has one exit and it goes through the report: it runs whatever
-    # ended the consultation, including the turn cap and a broken call (1.13).
+    # 1.13
     graph.add_conditional_edges(
         "doctor", route_after_doctor, {"patient": "patient", "report": "report"}
     )
     graph.add_edge("patient", "doctor")
-    # The report loops back on itself while dimensions are missing (1.13).
     graph.add_conditional_edges(
         "report", route_after_report, {"report": "report", "end": END}
     )
 
-    # Two node visits per turn, plus room for the report and the retries.
-    node_visits = 2 * config["limits"]["max_turns"] + 10
+    limits = config["limits"]
+    # Two visits per turn, one per report attempt, and margin.
+    node_visits = 2 * limits["max_turns"] + limits["report_attempts"] + 5
 
     return graph.compile().with_config({"recursion_limit": node_visits})

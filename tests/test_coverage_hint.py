@@ -1,4 +1,4 @@
-# tests/test_coverage.py
+# tests/test_coverage_hint.py
 # coverage_hint (§4.1): the doctor's own bookkeeping, declared through the tool
 # it already calls and read back to it with the patient's reply.
 
@@ -7,30 +7,8 @@ from dataclasses import replace
 import pytest
 
 from ahead_agent import nodes, tools
-from ahead_agent.config import load_config
-from ahead_agent.state import State
 
-from test_nodes import PATIENT, scripted, state  # noqa: F401
-
-
-def speaks(message, **arguments):
-    return {
-        "content": "",
-        "tool_calls": [
-            {"function": {"name": "hand_off_to_patient",
-                          "arguments": {"message": message, **arguments}}}
-        ],
-    }
-
-
-def profile(mode):
-    config = load_config("local")
-    config["features"] = {"coverage_hint": mode}
-    return config
-
-
-def in_mode(mode):
-    return State(profile(mode), PATIENT)
+from conftest import in_mode, profile, speaks
 
 
 # ── The three arms (§4.1) ────────────────────
@@ -43,28 +21,15 @@ def test_off_never_asks_the_doctor_anything():
     assert "covered" not in properties
 
 
-@pytest.mark.parametrize("mode", ["declare", "show"])
-def test_declare_and_show_both_ask(mode):
-    properties = tools.doctor_tools(profile(mode))[0]["function"]["parameters"]["properties"]
+def test_show_asks_and_promises_what_comes_back():
+    tool = tools.doctor_tools(profile("show"))[0]
+    covered = tool["function"]["parameters"]["properties"]["covered"]
 
-    assert "covered" in properties
-
-
-def test_only_show_promises_anything_back():
-    """A promise the mode does not keep would be a lie in the prompt."""
-    def described(mode):
-        tool = tools.doctor_tools(profile(mode))[0]
-        return tool["function"]["parameters"]["properties"]["covered"]["description"]
-
-    assert "comes back" not in described("declare")
-    assert "comes back" in described("show")
+    assert "comes back" in covered["description"]
 
 
-def test_asking_the_doctor_does_not_disturb_the_tool_it_already_had():
-    """doctor_tools copies; the module constant must survive every mode."""
-    tools.doctor_tools(profile("show"))
-
-    assert "covered" not in tools.HAND_OFF_TO_PATIENT["function"]["parameters"]["properties"]
+# The module constant is untouched in every mode: `test_tools.py`, next to the
+# rest of what `doctor_tools` does.
 
 
 # ── Reading what the doctor declared ─────────
@@ -93,49 +58,38 @@ def test_a_reply_with_no_call_declares_nothing():
 # ── Handing it back ──────────────────────────
 
 
-def test_what_is_still_open_rides_back_with_the_answer():
-    result = tools.tool_result("Tired, mostly.", ["causes", "general_harm"])
-
-    assert result["content"] == "Tired, mostly.\n\n[not yet explored: causes, general_harm]"
+# That the patient's channel carries only the patient is checked by
+# `test_tools.py::test_the_patient_reply_goes_back_as_the_tool_result`.
 
 
-def test_nothing_is_appended_once_there_is_nothing_left():
-    assert tools.tool_result("Tired, mostly.", [])["content"] == "Tired, mostly."
-    assert tools.tool_result("Tired, mostly.")["content"] == "Tired, mostly."
+def test_the_note_is_a_separate_message_in_our_own_voice():
+    note = tools.coverage_note(["causes", "general_harm"])
+
+    assert note["role"] == "user"          # the OPENING channel, not the patient's
+    assert note["content"] == "Not yet explored: causes, general_harm."
+
+
+def test_there_is_no_note_when_nothing_is_open():
+    assert tools.coverage_note([]) is None
+    assert tools.coverage_note(None) is None
 
 
 # ── Through the loop ─────────────────────────
 
 
-@pytest.mark.parametrize("mode", ["declare", "show"])
-def test_the_map_accumulates_across_turns(scripted, mode):
+def test_the_map_accumulates_across_turns(scripted):
     replies, _ = scripted
     replies["doctor"] += [speaks("How is work?", covered=["consequences"]),
                           speaks("And the tablets?", covered=["specific_necessity"])]
     replies["patient"] += [{"content": "Fine."}, {"content": "I take them."}]
 
-    state = in_mode(mode)
+    state = in_mode("show")
     for _ in range(2):
         state = replace(state, **nodes.doctor_node(state))
         state = replace(state, **nodes.patient_node(state))
 
-    assert state.coverage_hint == {"consequences": "cubierto",
-                                   "specific_necessity": "cubierto"}
-
-
-def test_declare_records_the_map_and_tells_the_doctor_nothing(scripted):
-    """The point of the arm: what it believed it covered, uncontaminated by
-    being told the answer first."""
-    replies, _ = scripted
-    replies["doctor"].append(speaks("How is work?", covered=["consequences"]))
-    replies["patient"].append({"content": "Fine."})
-
-    state = replace(in_mode("declare"), **{})
-    state = replace(state, **nodes.doctor_node(state))
-    update = nodes.patient_node(state)
-
-    assert state.coverage_hint == {"consequences": "cubierto"}
-    assert update["doctor_messages"][-1]["content"] == "Fine."
+    assert state.coverage_hint == {"consequences": "covered",
+                                   "specific_necessity": "covered"}
 
 
 def test_show_hands_back_what_is_still_open(scripted):
@@ -147,10 +101,12 @@ def test_show_hands_back_what_is_still_open(scripted):
     state = replace(state, **nodes.doctor_node(state))
     update = nodes.patient_node(state)
 
-    handed_back = update["doctor_messages"][-1]["content"]
-    assert "not yet explored" in handed_back
-    assert "consequences" not in handed_back
-    assert "general_overuse" in handed_back
+    patient_turn, note = update["doctor_messages"][-2:]
+
+    assert patient_turn == {"role": "tool", "name": "hand_off_to_patient", "content": "Fine."}
+    assert note["role"] == "user"
+    assert "consequences" not in note["content"]
+    assert "general_overuse" in note["content"]
 
 
 def test_the_patient_never_sees_the_coverage_note(scripted):
@@ -164,21 +120,25 @@ def test_the_patient_never_sees_the_coverage_note(scripted):
     state = replace(state, **nodes.doctor_node(state))
     nodes.patient_node(state)
 
-    assert not any("not yet explored" in str(message) for message in seen["patient"][0])
+    assert not any("Not yet explored" in str(message) for message in seen["patient"][0])
 
 
 # ── The invariant ────────────────────────────
 
 
-@pytest.mark.parametrize("mode", ["off", "declare", "show"])
-def test_the_doctor_can_always_close_with_dimensions_open(scripted, mode):
+@pytest.mark.parametrize(
+    ("mode", "notes"),
+    [("off", False), ("off", True), ("show", False), ("show", True)],
+    ids=["baseline", "notes only", "coverage only", "both"],
+)
+def test_the_doctor_can_always_close_with_dimensions_open(scripted, mode, notes):
     """No mode makes it cover anything. A dimension left untouched is a result,
     and forcing another turn would put the questionnaire back in charge of when
     the consultation ends (1.5)."""
     replies, _ = scripted
     replies["doctor"].append({"content": "I have what I need."})
 
-    update = nodes.doctor_node(in_mode(mode))
+    update = nodes.doctor_node(in_mode(mode, notes))
 
     assert update["finished"] is True
     assert update["stop_reason"] == "doctor"
@@ -186,5 +146,4 @@ def test_the_doctor_can_always_close_with_dimensions_open(scripted, mode):
 
 def test_off_hands_back_nothing_at_all():
     assert nodes._outstanding(profile("off"), {}) == []
-    assert nodes._outstanding(profile("declare"), {}) == []
     assert nodes._outstanding(profile("show"), {}) == nodes.DIMENSIONS

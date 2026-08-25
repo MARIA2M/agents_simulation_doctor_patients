@@ -1,7 +1,12 @@
 # ahead_agent/nodes.py
 # ─────────────────────────────────────────────
-# One function per graph node.
-# Each function takes State → returns the channels it changed.
+# One function per graph node. Each takes State → returns the channels it changed.
+#
+#                 ┌──────────────────────────────┐
+#                 ▼                              │
+#  START ──► doctor ──(speaks)──► patient ───────┘
+#                 │
+#                 └──(stops)──► report ──► END
 # ─────────────────────────────────────────────
 
 from __future__ import annotations
@@ -9,17 +14,19 @@ from __future__ import annotations
 from typing import Any, Dict
 
 from . import llm, patient_profile, prompts, report, tools
-from .config import BIPQ_DIMENSIONS, BMQ_SUBSCALES, CAUSES_DIMENSION, coverage_mode
+from .config import (
+    BIPQ_DIMENSIONS,
+    BMQ_SUBSCALES,
+    CAUSES_DIMENSION,
+    coverage_mode,
+    takes_notes,
+)
 from .state import State
 
-# What the doctor is asked to end up with a view on, and so what coverage is
-# measured against. Causes included: it is reported even though it is not scored.
+# what coverage is measured against; causes is reported but not scored
 DIMENSIONS = list(BIPQ_DIMENSIONS) + list(BMQ_SUBSCALES) + [CAUSES_DIMENSION]
 
-# The mechanics of talking, kept next to the tool they name: the doctor's role
-# is in DOCTOR.md, but how it reaches the patient is code, and the tool can be
-# renamed without silently breaking a markdown file (this is Scout's
-# `doctor.user` message).
+# how the doctor is told to reach the patient (Scout's `doctor.user`)
 OPENING = (
     f"Converse with the patient using the {tools.TOOL_NAME} tool to ask a question. "
     "Go back and forth this way like in a real session."
@@ -28,15 +35,18 @@ OPENING = (
 
 # ── Doctor ───────────────────────────────────
 
+
+# 1.5
 def doctor_node(state: State) -> Dict[str, Any]:
-    """One doctor turn: it speaks through the tool, or it stops (1.5)."""
+    """One doctor turn: it speaks through the tool, or it stops."""
     config = state.config
     events = list(state.events)
     usage = list(state.usage)
 
-    # The first turn builds the context; after that it is carried in the state.
+    # ── What it is sent ──
+    # the first turn builds the context; after that the state carries it
     messages = state.doctor_messages or [
-        {"role": "system", "content": prompts.compose(config, "doctor")},
+        {"role": "system", "content": prompts.compose_prompt(config, "doctor")},
         {"role": "user", "content": OPENING},
     ]
 
@@ -45,8 +55,7 @@ def doctor_node(state: State) -> Dict[str, Any]:
     )
     messages = messages + [reply]
 
-    # Three ways a turn can end: the doctor spoke, it chose to stop, or its call
-    # was broken. Only the first one continues the loop.
+    # ── What it did: spoke, stopped, or broke ──
     try:
         said = tools.hand_off_message(reply)   # None = it stopped calling the tool
     except tools.MalformedToolCall as error:
@@ -55,8 +64,7 @@ def doctor_node(state: State) -> Dict[str, Any]:
     else:
         stop_reason = "doctor" if said is None else None
 
-    # ── It stopped: nothing was said, so there is no turn to record ──
-
+    # ── It stopped: nothing said, so there is no turn to record ──
     if said is None:
         return {
             "doctor_messages": messages,
@@ -66,19 +74,23 @@ def doctor_node(state: State) -> Dict[str, Any]:
             "stop_reason": stop_reason,
         }
 
-    # ── It spoke ──
-
+    # ── It spoke: record the turn ──
     print(f"\n🩺  Doctor  : {said}")
     turn = state.turn_count + 1
     conversation = state.conversation + [{"role": "doctor", "content": said, "turn": turn}]
 
-    # Whatever it declared settled this turn, added to what it declared before.
+    # §4.1
     coverage = dict(state.coverage_hint)
-    for name in tools.declared_covered(reply, DIMENSIONS):
-        coverage[name] = "cubierto"
+    if coverage_mode(config) == "show":
+        for name in tools.declared_covered(reply, DIMENSIONS):
+            coverage[name] = "covered"
 
-    # A safety net, not a criterion: reaching it is recorded as an incident so a
-    # capped consultation is never mistaken for one the doctor closed.
+    declared = tools.declared_notes(reply, DIMENSIONS) if takes_notes(config) else []
+    notes = state.working_notes + [{"turn": turn, **note} for note in declared]
+    for note in notes[len(state.working_notes):]:
+        print(f"    📝 {note['dimension']}: {note['observation']}")
+
+    # 1.5 — a safety net, recorded as an incident so it is never read as a close
     at_cap = turn >= config["limits"]["max_turns"]
     if at_cap:
         events.append({"event": "turn_cap", "turns": turn})
@@ -88,6 +100,7 @@ def doctor_node(state: State) -> Dict[str, Any]:
         "conversation": conversation,
         "turn_count": turn,
         "coverage_hint": coverage,
+        "working_notes": notes,
         "events": events,
         "usage": usage,
         "finished": at_cap,
@@ -97,15 +110,17 @@ def doctor_node(state: State) -> Dict[str, Any]:
 
 # ── Patient ──────────────────────────────────
 
+
 def patient_node(state: State) -> Dict[str, Any]:
     """The tool call itself: the patient answers what the doctor just said."""
     config = state.config
     events = list(state.events)
     usage = list(state.usage)
 
-    # The first turn builds the context: the role, then who this patient is.
+    # ── What it is sent ──
+    # the first turn builds the context: the role, then who this patient is
     messages = state.patient_messages or [
-        {"role": "system", "content": _patient_system(config, state.patient)}
+        {"role": "system", "content": _patient_system_prompt(config, state.patient)}
     ]
 
     question = state.conversation[-1]["content"]
@@ -115,19 +130,20 @@ def patient_node(state: State) -> Dict[str, Any]:
     messages = messages + [reply]
 
     # ── It answered ──
-    # The only outcome: the patient cannot end the consultation (1.5), and an
-    # empty reply was already retried in llm.chat.
-
+    # the only outcome: the patient cannot end the consultation (1.5), and an
+    # empty reply was already retried in llm.chat
     answer = (reply.get("content") or "").strip()
     print(f"🧑  Patient : {answer}")
 
+    # §3.1 — the answer alone comes back as the tool result; ours goes after it
+    handed_back = [tools.tool_result(answer)]
+    note = tools.coverage_note(_outstanding(config, state.coverage_hint))
+    if note:
+        handed_back.append(note)
+
     return {
         "patient_messages": messages,
-        # The doctor gets the answer as the result of its call, and what it has
-        # not covered yet — nothing about the patient beyond what was said:
-        # this is where the isolation of §3.1 is either kept or broken.
-        "doctor_messages": state.doctor_messages
-        + [tools.tool_result(answer, _outstanding(config, state.coverage_hint))],
+        "doctor_messages": state.doctor_messages + handed_back,
         "conversation": state.conversation
         + [{"role": "patient", "content": answer, "turn": state.turn_count}],
         "events": events,
@@ -135,43 +151,41 @@ def patient_node(state: State) -> Dict[str, Any]:
     }
 
 
+# §4.1
 def _outstanding(config: Dict[str, Any], coverage: Dict[str, str]) -> list:
-    """What is still open — handed back only in `show` (§4.1).
-
-    In `declare` the map is kept and the doctor hears nothing: what it believed
-    it covered is then comparable against what 3.2 finds it actually covered,
-    without the answer having been given to it first.
-    """
+    """What is still open — handed back only in `show`."""
     if coverage_mode(config) != "show":
         return []
-    return [name for name in DIMENSIONS if coverage.get(name) != "cubierto"]
+    return [name for name in DIMENSIONS if coverage.get(name) != "covered"]
 
 
-def _patient_system(config: Dict[str, Any], patient: Dict[str, Any]) -> str:
+def _patient_system_prompt(config: Dict[str, Any], patient: Dict[str, Any]) -> str:
     """PATIENT.md carries the role; patient_profile carries who this one is."""
-    return prompts.compose(config, "patient") + prompts.SEPARATOR + patient_profile.describe(patient)
+    return (
+        prompts.compose_prompt(config, "patient")
+        + prompts.SEPARATOR
+        + patient_profile.describe_patient(patient)
+    )
 
 
 # ── Report ───────────────────────────────────
 
+
+# 1.13, D9
 def report_node(state: State) -> Dict[str, Any]:
-    """The one exit from the loop: it runs whatever ended the consultation (1.13)."""
+    """The one exit from the loop: it runs whatever ended the consultation."""
     config = state.config
     events = list(state.events)
     usage = list(state.usage)
 
-    # The doctor writes its own report, continuing the consultation it just had
-    # (§4). A fresh model reading the transcript would score just as well and
-    # mean something else entirely — that is the artifact arm of 5.4.
-    #
-    # The numbered transcript still travels: the doctor remembers the
-    # conversation but never saw turn numbers, and Evidence.turn needs them.
+    # ── What it is shown ──
+    # the doctor continues its own consultation; the transcript travels anyway
+    # because it never saw turn numbers and Evidence.turn needs them
     parts = [
-        prompts.compose(config, "report"),
+        prompts.compose_prompt(config, "report"),
         report.transcript_text(state.conversation),
     ]
-    # On a second pass, what the last one left out goes at the end, where it is
-    # the most recent thing said (1.13).
+    # on a second pass the gaps go last, where they are the most recent thing said
     if state.report_attempts:
         parts.append(report.retry_note(report.gaps(state.report)))
 
@@ -179,7 +193,8 @@ def report_node(state: State) -> Dict[str, Any]:
         {"role": "user", "content": prompts.SEPARATOR.join(parts)}
     ]
 
-    # No tools: there is nothing left to ask, only to write.
+    # ── What came back ──
+    # no tools: there is nothing left to ask, only to write
     reply = llm.chat(config, "report", messages, events=events, usage=usage)
     raw = (reply.get("content") or "").strip()
 

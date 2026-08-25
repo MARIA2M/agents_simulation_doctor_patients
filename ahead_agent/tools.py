@@ -10,63 +10,97 @@ import json
 from copy import deepcopy
 from typing import Any, Dict, List, Optional
 
-from .config import coverage_mode
+from .config import coverage_mode, takes_notes
 
+
+# ── What the doctor reads ────────────────────
+# Prompt text, so it is hashed into run_meta by prompts.hashes (0.4). The rest
+# of this file is JSON Schema, which is the shape Ollama requires.
+
+# the tool itself
+ASK = "Say something to the patient and get their reply."
+
+MESSAGE = "What to say to the patient, in your own words"
+
+# the `covered` argument
+COVERED = (
+    "Dimensions you now have enough on to judge — not merely touched on. "
+    "Optional. What you leave out comes back with the patient's reply, as a "
+    "note of what is still open. It is yours to use or ignore."
+)
+
+# the `notes` argument
+NOTES = (
+    "What this reply told you, dimension by dimension. Optional, and only "
+    "for what actually moved: nothing to add is a normal turn. Revisit an "
+    "earlier note whenever the conversation has since changed its meaning."
+)
+
+NOTE_DIMENSION = "Which one this bears on"
+
+NOTE_OBSERVATION = (
+    "What you now understand about it, and what they said that shows it. If it "
+    "changes what you thought before, say so and say why — 'earlier they gave "
+    "the impression that…, but…'."
+)
+
+
+# ── The tool ─────────────────────────────────
+
+# the only tool the doctor has
 HAND_OFF_TO_PATIENT = {
     "type": "function",
     "function": {
         "name": "hand_off_to_patient",
-        "description": "Say something to the patient and get their reply.",
+        "description": ASK,
         "parameters": {
             "type": "object",
-            "properties": {
-                "message": {
-                    "type": "string",
-                    "description": "What to say to the patient, in your own words",
-                },
-            },
+            "properties": {"message": {"type": "string", "description": MESSAGE}},
             "required": ["message"],
         },
     },
 }
 
-# Optional on purpose (§4.1). The doctor is already calling the tool every turn,
-# so its own bookkeeping costs no extra call, and a model that ignores the field
-# still holds a real consultation.
-#
-# It lives here rather than in DOCTOR.md so there is one source of truth: with
-# the feature off the argument does not exist, and neither does the promise that
-# anything comes back.
-COVERED_ARGUMENT = {
+DOCTOR_TOOLS: List[Dict[str, Any]] = [HAND_OFF_TO_PATIENT]   # the baseline set
+TOOL_NAME = HAND_OFF_TO_PATIENT["function"]["name"]          # what a call must name
+
+
+# ── Optional arguments (§4.1) ────────────────
+
+# added by `coverage_hint: show`
+COVERED_ARGUMENT = {"type": "array", "items": {"type": "string"}, "description": COVERED}
+
+# added by `working_notes`
+NOTES_ARGUMENT = {
     "type": "array",
-    "items": {"type": "string"},
-    "description": (
-        "Dimensions you now have enough on to judge — not merely touched on. "
-        "Optional, and nothing depends on it."
-    ),
+    "items": {
+        "type": "object",
+        "properties": {
+            "dimension": {"type": "string", "description": NOTE_DIMENSION},
+            "observation": {"type": "string", "description": NOTE_OBSERVATION},
+        },
+        "required": ["dimension", "observation"],
+    },
+    "description": NOTES,
 }
 
-DOCTOR_TOOLS: List[Dict[str, Any]] = [HAND_OFF_TO_PATIENT]
 
-TOOL_NAME = HAND_OFF_TO_PATIENT["function"]["name"]
+# ── Building the tools ───────────────────────
 
 
 def doctor_tools(config: Dict[str, Any]) -> List[Dict[str, Any]]:
-    """The doctor's tools for this run. `covered` exists in declare and show."""
-    mode = coverage_mode(config)
-    if mode == "off":
+    """The doctor's tools for this run, with whatever arguments the arms add."""
+    wants_covered = coverage_mode(config) == "show"
+    wants_notes = takes_notes(config)
+    if not (wants_covered or wants_notes):
         return DOCTOR_TOOLS
 
-    argument = deepcopy(COVERED_ARGUMENT)
-    # Only in `show` does anything come back, so only there is it promised.
-    if mode == "show":
-        argument["description"] += (
-            " What you leave out comes back with the patient's reply, as a note "
-            "of what is still open. It is yours to use or ignore."
-        )
-
     tool = deepcopy(HAND_OFF_TO_PATIENT)
-    tool["function"]["parameters"]["properties"]["covered"] = argument
+    properties = tool["function"]["parameters"]["properties"]
+    if wants_covered:
+        properties["covered"] = deepcopy(COVERED_ARGUMENT)
+    if wants_notes:
+        properties["notes"] = deepcopy(NOTES_ARGUMENT)
     return [tool]
 
 
@@ -76,13 +110,10 @@ class MalformedToolCall(ValueError):
 
 # ── Reading the call ─────────────────────────
 
-def hand_off_message(reply: Dict[str, Any]) -> Optional[str]:
-    """What the doctor wants said, or None if it stopped calling the tool.
 
-    None is how the doctor closes the consultation (1.5), so a broken call must
-    raise instead: ending the consultation on a parsing failure would look like
-    a decision it never made.
-    """
+# 1.5
+def hand_off_message(reply: Dict[str, Any]) -> Optional[str]:
+    """What the doctor wants said, or None if it stopped calling the tool."""
     calls = reply.get("tool_calls") or []
     if not calls:
         return None
@@ -98,6 +129,29 @@ def hand_off_message(reply: Dict[str, Any]) -> Optional[str]:
     return message.strip()
 
 
+# §4.1
+def declared_covered(reply: Dict[str, Any], known: List[str]) -> List[str]:
+    """Dimensions the doctor says it has settled."""
+    covered = _optional_arguments(reply).get("covered")
+    if not isinstance(covered, list):
+        return []
+    return [name for name in covered if name in known]
+
+
+# §4.1
+def declared_notes(reply: Dict[str, Any], known: List[str]) -> List[Dict[str, str]]:
+    """What the doctor says this turn told it."""
+    notes = []
+    for entry in _optional_arguments(reply).get("notes") or []:
+        if not isinstance(entry, dict):
+            continue
+        dimension = entry.get("dimension")
+        observation = entry.get("observation")
+        if dimension in known and isinstance(observation, str) and observation.strip():
+            notes.append({"dimension": dimension, "observation": observation.strip()})
+    return notes
+
+
 def _arguments(function: Dict[str, Any]) -> Dict[str, Any]:
     """The call's arguments. Ollama sends them parsed or as JSON text."""
     arguments = function.get("arguments")
@@ -111,38 +165,32 @@ def _arguments(function: Dict[str, Any]) -> Dict[str, Any]:
     return arguments if isinstance(arguments, dict) else {}
 
 
-def declared_covered(reply: Dict[str, Any], known: List[str]) -> List[str]:
-    """Dimensions the doctor says it has settled (§4.1).
-
-    Forgiving by design: a missing field, the wrong shape, or a name we do not
-    recognise all come back empty rather than raising. Nothing about coverage
-    may cost a consultation its tool call.
-    """
+def _optional_arguments(reply: Dict[str, Any]) -> Dict[str, Any]:
+    """The arguments, or {} — nothing optional may cost a consultation its call."""
     calls = reply.get("tool_calls") or []
     if not calls:
-        return []
-
+        return {}
     try:
-        arguments = _arguments(calls[0].get("function") or {})
+        return _arguments(calls[0].get("function") or {})
     except MalformedToolCall:
-        return []
-
-    covered = arguments.get("covered")
-    if not isinstance(covered, list):
-        return []
-    return [name for name in covered if name in known]
+        return {}
 
 
 # ── Answering it ─────────────────────────────
 
-def tool_result(text: str, outstanding: Optional[List[str]] = None) -> Dict[str, Any]:
-    """What the patient said, given back to the doctor as the call's result.
 
-    The dimensions still open ride back with it (§4.1): the doctor reads them
-    at the moment it is choosing what to ask next. It informs and never blocks
-    — the doctor is still the one who decides to stop (1.5), and closing with
-    holes left in is a finding, not a failure to prevent.
-    """
-    if outstanding:
-        text = f"{text}\n\n[not yet explored: {', '.join(outstanding)}]"
+# §3.1
+def tool_result(text: str) -> Dict[str, Any]:
+    """What the patient said, and only that."""
     return {"role": "tool", "name": TOOL_NAME, "content": text}
+
+
+# §4.1
+def coverage_note(outstanding: Optional[List[str]]) -> Optional[Dict[str, Any]]:
+    """The dimensions still open, in our own voice and never the patient's."""
+    if not outstanding:
+        return None
+    return {
+        "role": "user",
+        "content": "Not yet explored: " + ", ".join(outstanding) + ".",
+    }
