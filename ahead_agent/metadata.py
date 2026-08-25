@@ -50,7 +50,12 @@ def _command_output(*command: str) -> Optional[str]:
 
 
 def _gpu_count() -> Optional[int]:
-    """ """
+    """How many GPUs this run really had.
+
+    SLURM is asked first because it knows what was allocated. `nvidia-smi` is
+    the fallback and it counts what the machine has, which on a login node is
+    four instead of the one that was reserved — the tell of §6.3.
+    """
     allocated = os.getenv("SLURM_GPUS_ON_NODE")
     if allocated and allocated.isdigit():
         return int(allocated)
@@ -108,7 +113,6 @@ def build_metadata(
 
     return metadata
 
-    
 
 def write_metadata(meta: RunMetadata, runs_dir: Path | str) -> Path:
     """Write runs/<run_id>/metadata.json and return its path."""

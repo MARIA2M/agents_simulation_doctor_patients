@@ -28,7 +28,7 @@ def load_patient(path: str) -> dict:
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description=" "
+        description="One consultation: doctor and patient until the doctor closes it"
     )
     parser.add_argument(
         "--patient",
@@ -77,16 +77,6 @@ def print_header(config: dict, patient: dict, meta) -> None:
         print("  ! working tree is dirty — this run cannot be traced to its commit")
 
 
-# def print_summary(final_state, transcript: Path) -> None:
-#     turns = final_state.turn_count
-#     events = final_state.events
-
-#     print(f"  turns          : {turns}  (ended by {final_state.stop_reason})")
-#     print(f"  transcript     : {transcript}")
-#     if events:
-#         print(f"  ! {len(events)} events — this run is not clean, see the transcript")
-
-
 def main() -> None:
     args = parse_args()
     config = load_config(args.profile)
@@ -107,9 +97,8 @@ def main() -> None:
     app = build_graph(config)
     final_state = State(**app.invoke(State(config, patient)))
 
-    transcript = write_transcript(final_state, runs_dir / meta.run_id)
+    write_transcript(final_state, runs_dir / meta.run_id)
     write_report(final_state, runs_dir / meta.run_id)
-    #print_summary(final_state, transcript)
 
 
 if __name__ == "__main__":
