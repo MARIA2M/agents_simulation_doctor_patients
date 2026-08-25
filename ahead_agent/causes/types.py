@@ -29,7 +29,7 @@ class ClassifiedCause:
     """A cause as it was written, and the bucket it was sorted into."""
 
     text: str
-    # NUEVO: None when the classifier's reply could not be read. The old module
+    # None when the classifier's reply could not be read. The old module
     # returned "unknown", which is a real category, so a parsing failure ended
     # up counting as "the patient does not know" (4.4).
     category: Optional[str]
@@ -64,7 +64,7 @@ class CausesScore:
     mean_similarity: Optional[float] = None
     unmatched_inferred: List[ClassifiedCause] = field(default_factory=list)
 
-    # NUEVO. `coverage_score` can be computed by semantic similarity or by
+    # `coverage_score` can be computed by semantic similarity or by
     # category overlap — two different metrics under one name. The old module
     # switched between them silently when embeddings failed, so a batch's
     # number could be half one and half the other.

@@ -210,6 +210,33 @@ evaluación del brazo Python.
       `mean_similarity`. `causes` es abierto y no entra en el MAE.
       Nada de limpieza de texto con regex improvisado — el parser viejo borraba
       toda `b` y `r` del texto ("Stress" → "St ess").
+
+      **El umbral de 0.72 no está justificado en ninguna parte.** Aparece igual
+      en las cuatro copias del código —`MATCH_THRESHOLD = 0.72  # cosine
+      similarity required to count as a genuine match`— y en ningún sitio hay
+      experimento, conjunto de calibración ni cita. `coverage_score` **es** la
+      fracción de causas verdaderas que llegan a 0.72, así que hoy la métrica de
+      causas descansa entera sobre una constante heredada sin explicar. No es
+      incorrecta; es indefendible tal cual.
+      El README del brazo original añade dos números más con la misma ausencia
+      de derivación —«genuine (≥ 0.72), partial (0.45–0.72), miss (< 0.45)»— y
+      dice contra qué modelo se eligieron: `nomic-embed-text`. El umbral y el
+      modelo van juntos, porque la distribución de cosenos cambia con el modelo.
+      **El barrido sale gratis.** En cuanto `--causes` corra una vez con
+      embeddings de verdad, las similitudes quedan guardadas en
+      `evaluation.json`: mover el corte no cuesta ni una llamada más. Sale o un
+      valor defendible, o el hallazgo de que la cobertura es muy sensible al
+      umbral, que también es resultado.
+      Dos cosas que el port dejó por el camino y conviene decidir aquí: la banda
+      «partial» de 0.45 desapareció —no se pierde nada, la similitud cruda se
+      guarda y las bandas se recalculan— y `models.embed` no se valida contra lo
+      que hay en el almacén de Ollama. `hpc.yaml` pide `jina-embeddings-v4`, que
+      es un modelo de HuggingFace que este código **no puede alcanzar**:
+      `causes/embeddings.py` solo habla con Ollama. `score_causes` no distingue
+      «modelo ausente» de «modelo inalcanzable por diseño»: los dos salen como
+      `embeddings_unavailable` y degradan la métrica a solapamiento de
+      categorías en silencio. Debería fallar al cargar el perfil, no a mitad de
+      una tanda.
 - [ ] **4.4** **NA en vez de fallback.** Cuando no se puede extraer una puntuación
       (JSON ilegible, dimensión no sondeada, informe incompleto), el valor es
       **NA**: se registra como ausente, se excluye del MAE y se reporta aparte
