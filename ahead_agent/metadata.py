@@ -33,6 +33,10 @@ class RunMetadata:
     models: Dict[str, Any] = field(default_factory=dict)
     sampling: Dict[str, Any] = field(default_factory=dict)
     server: Dict[str, Any] = field(default_factory=dict)
+    # Which arm this run belongs to (§4.1). Since config/base.yaml holds the
+    # shared blocks, the profile on disk no longer shows it: this is the only
+    # place a finished run says whether the doctor was hinted or took notes.
+    features: Dict[str, Any] = field(default_factory=dict)
     prompts: Dict[str, Any] = field(default_factory=dict)
     code: Dict[str, Any] = field(default_factory=dict)
     compute: Dict[str, Any] = field(default_factory=dict)
@@ -87,6 +91,7 @@ def build_metadata(
         models=dict(config.get("models", {})),
         sampling=dict(config.get("sampling", {})),
         server=dict(config.get("server", {})),
+        features=dict(config.get("features", {})),
         prompts=dict(prompt_hashes or {}),
         code=code,
         compute=compute,

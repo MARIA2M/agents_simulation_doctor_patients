@@ -71,7 +71,8 @@ prompts/PATIENT.md   el rol del paciente
 prompts/REPORT.md    cómo se pide el informe
 prompts/doctor_rubric/{bipq,bmq}.json   anclas 2/4/6/8, lado médico
 prompts/reference/   los prompts del brazo Ruby, congelados como referencia
-config/{local,hpc}.yaml    perfiles de ejecución
+config/base.yaml           lo que comparten los perfiles; no carga solo
+config/{local,hpc}.yaml    perfiles: `extends: base` más modelos y keep_alive
 runs/<corrida>/      metadata.json + transcript.json + report.json
 runs/<tanda>/batch.json    el índice de una tanda
 ```

@@ -67,6 +67,17 @@ evaluación del brazo Python.
       el resultado fundido y al que RUN.md ya manda mirar, pero es un cambio, no
       una mejora gratis.
 
+      **Cerrado, con dos cambios sobre lo propuesto:**
+      - La herencia es **explícita y encadenable** (`extends: base`), no un
+        `base.yaml` cableado debajo de todo. Un perfil sin `extends` carga solo,
+        y un brazo de la Fase 6 pasa a ser `extends: hpc` más el interruptor
+        que mueve —que es lo que pide "una variable por corrida"—.
+      - `metadata.json` **no guardaba `features`**, así que el argumento del
+        párrafo anterior no se sostenía justo para el bloque que define el
+        experimento: una corrida con `coverage_hint: show` era indistinguible de
+        la línea base. Ya se copia. Las 24 corridas anteriores no lo tienen,
+        aunque todas son `off`/`false`.
+
 ---
 
 ## Fase 1 — Arquitectura de agentes

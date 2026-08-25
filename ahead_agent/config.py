@@ -73,14 +73,12 @@ REQUIRED = {
 
 
 def load_config(profile: str = "local") -> Dict[str, Any]:
-    """Read a run profile and resolve its paths."""
+    """Read a run profile with whatever it extends, and resolve its paths."""
     path = _profile_path(profile)
     if not path.exists():
         raise FileNotFoundError(f"Run profile not found: {path}")
 
-    with open(path) as f:
-        data = yaml.safe_load(f) or {}
-
+    data = _inherited(path, [])
     _validate_yaml(data, path)
 
     # 0.4 — the address belongs to the machine, not to the profile
@@ -90,6 +88,57 @@ def load_config(profile: str = "local") -> Dict[str, Any]:
     data["paths"] = {key: REPO_ROOT / value for key, value in data["paths"].items()}
 
     return data
+
+
+# ── Inheritance (0.5) ────────────────────────
+
+# What a profile declares to inherit from. Explicit rather than an implicit
+# base underneath everything: a profile with no `extends` loads on its own,
+# which is what lets a test leave a key out and see it rejected.
+INHERITS_KEY = "extends"
+
+
+def _inherited(path: Path, seen: List[Path]) -> Dict[str, Any]:
+    """A profile merged over what it extends, block by block, child last.
+
+    Not a shallow update: `models: {doctor: …}` in a profile must complete the
+    inherited block, not replace it and lose `embed`.
+    """
+    resolved = path.resolve()
+    if resolved in seen:
+        chain = " → ".join(p.name for p in seen + [resolved])
+        raise ValueError(f"Run profiles inherit in a cycle: {chain}")
+
+    with open(path) as f:
+        data = yaml.safe_load(f) or {}
+
+    parent = data.get(INHERITS_KEY)
+    if parent is None:
+        return data
+
+    parent_path = _parent_path(str(parent), path)
+    if not parent_path.exists():
+        raise FileNotFoundError(
+            f"{path.name} extends '{parent}', which is not at {parent_path}"
+        )
+
+    merged = _inherited(parent_path, seen + [resolved])
+    for block, value in data.items():
+        if isinstance(value, dict) and isinstance(merged.get(block), dict):
+            merged[block] = {**merged[block], **value}
+        else:
+            merged[block] = value
+    return merged
+
+
+def _parent_path(parent: str, child: Path) -> Path:
+    """A name resolves next to the child first, then in config/; a path as given."""
+    if parent.endswith((".yaml", ".yml")):
+        candidate = Path(parent)
+        return candidate if candidate.is_absolute() else child.parent / candidate
+
+    sibling = child.parent / f"{parent}.yaml"
+    return sibling if sibling.exists() else RUN_PROFILES_DIR / f"{parent}.yaml"
 
 
 def _profile_path(profile: str) -> Path:

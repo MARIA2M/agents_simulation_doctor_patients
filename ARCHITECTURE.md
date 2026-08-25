@@ -94,6 +94,7 @@ ahead_agent_v2/
 │   └── causes/              # PORTAR sin cambios — embeddings, similitud, scorer
 │
 ├── config/                  # perfiles de ejecución (§6)
+│   ├── base.yaml            # 0.5 — lo compartido; no es un perfil, no carga solo
 │   ├── local.yaml           # modelos pequeños, escala de humo
 │   └── hpc.yaml             # modelos grandes, tandas completas
 ├── prompts/
@@ -190,6 +191,9 @@ Precedente a copiar: el `manifest.json` de `run_config.rb` en el brazo Ruby.
                 "context_length": 32768,
                 "num_parallel": 1 },
 
+  "features": { "coverage_hint": "off",    // el brazo de la corrida (§4.1)
+                "working_notes": false },
+
   "prompts":  { "doctor": "sha256:a1b2…",  // hash del prompt YA compuesto (§5.1)
                 "patient": "sha256:c3d4…",
                 "rubric": "sha256:e5f6…",
@@ -213,6 +217,10 @@ otra cosa. Tres campos que parecen menores y no lo son:
   servidor con su propio valor por defecto cambia los resultados en silencio.
 - **hashes de prompts** — son lo que hace medible la fase 6: atribuyen un cambio
   de resultado a un cambio de prompt concreto.
+- **`features`** — el brazo (§4.1). Los valores compartidos viven en `base.yaml`
+  desde 0.5, así que el fichero de perfil ya no los enseña: si no se copian
+  aquí, una corrida con `coverage_hint: show` es indistinguible de la línea base
+  al leerla meses después.
 
 ---
 
@@ -276,7 +284,8 @@ entrando otra vez por la puerta de atrás, y fuerza una cobertura que después
 infla el resultado.
 
 Se implementa como **dos interruptores independientes**, declarados en el bloque
-`features` del perfil y por tanto registrados en `run_meta`:
+`features` —en `base.yaml`, o sobrescrito por el perfil— y copiados a `run_meta`
+tal como quedan al fundirse (0.4):
 
 ```yaml
 features:
@@ -450,10 +459,41 @@ arquitectura y mismo código: cambian el modelo, la escala y el sitio.
 | Embeddings | `nomic-embed-text` | `jina-embeddings-v4` |
 | Escala | 1–2 pacientes × 1 corrida | hasta 10 × 10 |
 
-El perfil es **un fichero de config**, no una rama de código: `config/local.yaml`
-y `config/hpc.yaml`, seleccionados con `--profile`. El perfil elegido se copia
-íntegro a `run_meta` (0.4). Ningún resultado de perfil local entra en las métricas
-publicadas: sirve para saber que el código funciona, no cuánto acierta.
+El perfil es **config, no una rama de código**, y se elige con `--profile`.
+`config/base.yaml` tiene todo lo compartido; `config/local.yaml` y
+`config/hpc.yaml` declaran de quién heredan y solo lo que cambia —los modelos y
+`keep_alive`—:
+
+```yaml
+profile: hpc
+extends: base
+```
+
+Se funde **bloque a bloque** al cargar (0.5): una fusión superficial borraría un
+bloque entero en vez de completarlo, así que `models: {doctor: …}` en el perfil
+se quedaría sin `embed`.
+
+**La herencia es explícita y encadenable.** Un perfil sin `extends` carga solo
+—es lo que permite que un test deje fuera una clave y la vea rechazada— y una
+cadena puede tener los eslabones que haga falta:
+
+```
+base.yaml ◄── hpc.yaml ◄── hpc-show.yaml   # `features.coverage_hint: show`, nada más
+```
+
+Es la forma que pide "una variable por corrida": un brazo de la Fase 6 es un
+fichero de tres líneas que nombra su padre y el interruptor que mueve, en vez de
+una copia de `hpc.yaml` que vuelve a derivar. Un ciclo se detecta y se nombra;
+heredar de algo que no existe también, porque si no un perfil huérfano parecería
+un perfil al que simplemente le faltan ajustes.
+
+`base.yaml` no es un perfil y no carga solo: no tiene clave `profile:`. Lo que se
+copia a `run_meta` (0.4) es **el resultado ya fundido** —incluido `features`, que
+es el brazo—, así que una corrida se sigue leyendo desde un único fichero aunque
+su configuración venga de varios.
+
+Ningún resultado de perfil local entra en las métricas publicadas: sirve para
+saber que el código funciona, no cuánto acierta.
 
 ### 6.1 Almacén de modelos
 

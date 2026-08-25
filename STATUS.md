@@ -18,7 +18,8 @@ empezado · **⛔** decidido no hacerlo ahora.
 | 0.1 | Paquete nuevo | ✅ `agents_simulations/` |
 | 0.2 | Git | ✅ |
 | 0.3 | Mismos 10 perfiles en los dos brazos | ✅ `test_corpus.py` compara bytes contra `modified_versions/ruby_version/patients` |
-| 0.4 | Provenance por corrida | ✅ `metadata.py`, verificado en 24 corridas |
+| 0.4 | Provenance por corrida | ✅ `metadata.py`, verificado en 24 corridas. `features` se añadió después de 0.5: las 24 corridas anteriores **no registran su brazo**, aunque todas son `off`/`false` |
+| 0.5 | `config/base.yaml` | ✅ herencia por `extends:`, encadenable, con ciclo y padre ausente detectados. Fusión bloque a bloque, validación sobre el resultado fundido, `base.yaml` fuera del glob de perfiles. Un brazo de Fase 6 es ya un fichero de tres líneas |
 
 ## Fase 1 — Arquitectura de agentes
 

@@ -3,8 +3,10 @@
 # Runs on a compute node, through the queue. The model store is not in
 # ~/.ollama: export OLLAMA_MODELS=/gpfs/projects/bsc02/llm_models/ollama
 # before starting the server, or only the home directory is visible (§6.1).
+# Everything not named here comes from base.yaml.
 
 profile: hpc
+extends: base
 
 models:
   doctor: "glm-4.7-flash:q8_0"  # 10/10 well-formed tool calls at T=0 (tools/probe_tools.py)
@@ -16,53 +18,9 @@ models:
   # instruct models are servile enough to inflate the doctor's apparent
   # performance. Freeze the pair before the stage-7 baseline, not after.
   patient: dolphin-llama3
+  # UNREACHABLE — a HuggingFace model, and causes/embeddings.py only speaks to
+  # Ollama, so score_causes falls back to category overlap. See TASKS 4.3.
   embed: jina-embeddings-v4
 
-sampling:
-  # See local.yaml. Above zero for the doctor on purpose: GLM is word-for-word
-  # deterministic at T=0, and 2.4 needs a spread to measure.
-  doctor_temperature: 0.7     # questions and score inference
-  patient_temperature: 0.7
-  report_temperature: 0.0     # writing the report
-  seed: null
-  context_length: 32768
-  num_parallel: 1
-
 server:
-  ollama_url: "http://127.0.0.1:11434"
-  request_timeout: 300
   keep_alive: "4h"
-
-limits:
-  max_turns: 30
-  report_attempts: 3
-
-# Arms, not plumbing: they change what the doctor sees, so they are explicit
-# and end up in run_meta. One per run. Explained in ARCHITECTURE.md §4.1.
-features:
-  # off | show. Quoted on purpose: bare `off` is the YAML boolean False.
-  coverage_hint: "off"
-  working_notes: false
-
-prompts:
-  doctor: DOCTOR.md
-  patient: PATIENT.md
-  report: REPORT.md
-  doctor_rubric:
-    - doctor_rubric/bipq.json
-    - doctor_rubric/bmq.json
-
-skills:
-  doctor: []
-  patient: []
-
-resources:
-  doctor: []
-  patient: []
-
-paths:
-  patients: patients
-  runs: runs
-  prompts: prompts
-  skills: skills
-  resources: resources

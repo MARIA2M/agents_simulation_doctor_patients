@@ -28,6 +28,7 @@ PROFILE = {
         "num_parallel": 1,
     },
     "server": {"ollama_url": "http://127.0.0.1:11434", "request_timeout": 300},
+    "features": {"coverage_hint": "show", "working_notes": True},
 }
 
 
@@ -44,7 +45,7 @@ def meta():
 
 
 def test_every_provenance_block_is_present(meta):
-    for block in ("models", "sampling", "server", "prompts", "code", "compute", "corpus"):
+    for block in ("models", "sampling", "server", "features", "prompts", "code", "compute", "corpus"):
         assert getattr(meta, block), f"{block} is empty"
 
 
@@ -68,6 +69,13 @@ def test_the_temperature_recorded_is_the_one_that_will_be_sent(meta, role):
     these are two separate reads of the same block (§12).
     """
     assert meta.sampling[f"{role}_temperature"] == sampling_options(PROFILE, role)["temperature"]
+
+
+def test_the_arm_is_recorded(meta):
+    """Which arm a run belongs to (§4.1). With base.yaml holding the shared
+    blocks, `features` is no longer in the profile file, so a run that is not
+    the baseline is indistinguishable from one that is unless it lands here."""
+    assert meta.features == PROFILE["features"]
 
 
 def test_code_provenance_answers_both_questions(meta):
@@ -107,7 +115,7 @@ def test_serialises_completely(meta):
     assert restored == dataclasses.asdict(meta)
     assert set(restored) == {
         "run_id", "started_at", "profile", "models", "sampling", "server",
-        "prompts", "code", "compute", "corpus",
+        "features", "prompts", "code", "compute", "corpus",
     }
 
 

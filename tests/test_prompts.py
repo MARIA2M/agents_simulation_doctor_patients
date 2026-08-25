@@ -210,7 +210,12 @@ def test_the_profiles_on_disk_compose():
     """Every shipped profile must name prompt files that exist."""
     from ahead_agent.config import RUN_PROFILES_DIR, load_config
 
+    import yaml
+
     for path in sorted(RUN_PROFILES_DIR.glob("*.yaml")):
+        # base.yaml and anything else shared: no `profile:` key, never loads alone
+        if "profile" not in (yaml.safe_load(path.read_text()) or {}):
+            continue
         config = load_config(path.stem)
         for role in ("doctor", "patient"):
             assert prompts.compose_prompt(config, role).strip(), f"{path.name}: empty {role} prompt"

@@ -2,8 +2,10 @@
 #
 # Nothing measured with this profile goes into published metrics: it tells
 # you the code works, not how well the doctor infers.
+# Everything not named here comes from base.yaml.
 
 profile: local
+extends: base
 
 # Different families for doctor and patient, not two sizes of one model:
 # same-family pairs share expression conventions learned in training, and
@@ -13,57 +15,5 @@ models:
   patient: dolphin-llama3       # unaligned — less agreeable than an assistant
   embed: nomic-embed-text
 
-sampling:
-  # One per role, always sent explicitly and never left to the server (§12).
-  # The doctor both asks and infers, and must vary: pinned at 0 it asks the
-  # same script in all ten consultations. Writing the report is a separate
-  # step, where variation buys nothing.
-  doctor_temperature: 0.7     # questions and score inference
-  patient_temperature: 0.7
-  report_temperature: 0.0     # writing the report
-  seed: null
-  context_length: 32768
-  num_parallel: 1
-
 server:
-  ollama_url: "http://127.0.0.1:11434"
-  # First load off GPFS can take over two minutes, and Ollama aborts if the
-  # client gives up first (§6.1).
-  request_timeout: 300
   keep_alive: "1h"
-
-limits:
-  max_turns: 30        # safety net, not a criterion (1.5)
-  report_attempts: 3   # what is still missing stays NA (§4)
-
-# Arms, not plumbing: they change what the doctor sees, so they are explicit
-# and end up in run_meta. One per run. Explained in ARCHITECTURE.md §4.1.
-features:
-  # off | show. Quoted on purpose: bare `off` is the YAML boolean False.
-  coverage_hint: "off"
-  working_notes: false
-
-# Deterministic composition, decided by the code and not by the model (§5.1).
-# Paths are relative to prompts/ and skills/.
-prompts:
-  doctor: DOCTOR.md
-  patient: PATIENT.md
-  report: REPORT.md
-  doctor_rubric:
-    - doctor_rubric/bipq.json
-    - doctor_rubric/bmq.json
-
-skills:
-  doctor: []
-  patient: []
-
-resources:
-  doctor: []
-  patient: []
-
-paths:
-  patients: patients
-  runs: runs
-  prompts: prompts
-  skills: skills
-  resources: resources
