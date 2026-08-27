@@ -7,23 +7,15 @@
 #   python main.py --patient patients/CLL-003.json --profile hpc
 
 import argparse
-import json
 from pathlib import Path
 
 from ahead_agent import prompts
 from ahead_agent.config import load_config
+from ahead_agent.corpus import load_patient
 from ahead_agent.graph import build_graph
 from ahead_agent.metadata import build_metadata, write_metadata
 from ahead_agent.report import write_report, write_transcript
 from ahead_agent.state import State
-
-
-def load_patient(path: str) -> dict:
-    p = Path(path)
-    if not p.exists():
-        raise FileNotFoundError(f"Patient profile not found: {path}")
-    with open(p) as f:
-        return json.load(f)
 
 
 def parse_args() -> argparse.Namespace:

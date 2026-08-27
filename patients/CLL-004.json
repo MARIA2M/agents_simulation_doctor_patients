@@ -34,12 +34,12 @@
     "b_ipq": {
       "consequences": 9,
       "timeline": 10,
-      "personal_control": 2,
-      "treatment_control": 4,
+      "personal_control": 3,
+      "treatment_control": 6,
       "identity": 9,
-      "concern": 10,
-      "coherence": 3,
-      "emotional_response": 10,
+      "concern": 9,
+      "coherence": 7,
+      "emotional_response": 9,
       "causes": [
         "Agent Orange exposure during military service in Vietnam",
         "Bad luck",
@@ -47,10 +47,10 @@
       ]
     },
     "bmq": {
-      "specific_necessity": 4.4,
-      "specific_concerns": 4.2,
-      "general_harm": 4.0,
-      "general_overuse": 3.5
+      "specific_necessity": "24/25",
+      "specific_concerns": "21/25",
+      "general_harm": "10/20",
+      "general_overuse": "7/20"
     }
   }
 }

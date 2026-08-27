@@ -11,7 +11,7 @@ import dataclasses
 import json
 from pathlib import Path
 
-from ahead_agent import report
+from ahead_agent import corpus, report
 from ahead_agent.causes import score_causes
 from ahead_agent.config import load_config
 from ahead_agent.evaluation import evaluate_batch
@@ -36,12 +36,11 @@ def parse_args() -> argparse.Namespace:
 
 # 4.1
 def load_truth(patients_dir: Path) -> dict:
-    """patient_id → belief_profile, from patients/*.json and nowhere else."""
-    truth = {}
-    for path in sorted(patients_dir.glob("*.json")):
-        profile = json.loads(path.read_text())
-        truth[profile["patient_id"]] = profile["belief_profile"]
-    return truth
+    """patient_id → belief_profile, from patients/*.json and nowhere else.
+    Through corpus.load_corpus, so the BMQ arrives on the same 1-5 scale the
+    reports are written on (0.6)."""
+    return {patient_id: profile["belief_profile"]
+            for patient_id, profile in corpus.load_corpus(patients_dir).items()}
 
 
 def load_reports(batch: Path):

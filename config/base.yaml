@@ -24,7 +24,10 @@ server:
   request_timeout: 300
 
 limits:
-  max_turns: 30        # safety net, not a criterion (1.5)
+  # Safety net, not a criterion (1.5). Lowered from 30: a restrictive style and
+  # DOCTOR.md §6 pull against each other, and whichever gives way first, the
+  # consultation has to end. Observed range is 3–15 turns over e4-1 and s51.
+  max_turns: 20
   report_attempts: 3   # what is still missing stays NA (§4)
 
 # Arms, not plumbing: they change what the doctor sees, so they are explicit

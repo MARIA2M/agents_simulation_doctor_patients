@@ -1,0 +1,52 @@
+{
+  "patient_id": "HIV-002",
+  "disease_profile": {
+    "diagnosis": "Human Immunodeficiency Virus (HIV) infection, Chronic (Stage 2)",
+    "stage": "CD4 nadir 310 cells/uL. Diagnosed 8 months ago during routine STI screening. Never had an AIDS-defining illness.",
+    "treatment_regimen": "Dovato (dolutegravir/lamivudine) -- one tablet daily. Started 5 months ago. Still adjusting to the routine.",
+    "key_symptoms": [
+      "Minimal physical symptoms currently",
+      "Occasional vivid dreams (side effect of medication)",
+      "Mild anxiety-related insomnia"
+    ],
+    "trajectory": "Responding well to ART. Viral load dropped from 45,000 copies/mL at diagnosis to 120 copies/mL at last draw -- not yet undetectable but trending down. CD4 stable at 480 cells/uL. Physician expects undetectable status within 2-3 months.",
+    "lab_values": {
+      "HIV viral load": "120 copies/mL (trending down)",
+      "CD4 count": "480 cells/uL",
+      "CD4/CD8 ratio": "0.92",
+      "Hemoglobin": "14.0 g/dL (normal)",
+      "Liver enzymes": "Normal"
+    },
+    "demographics": {
+      "age": 27,
+      "gender": "female",
+      "occupation": "Nursing student (second year)",
+      "marital_status": "Single, not currently in a relationship",
+      "education": "In progress -- Associate's degree completed, pursuing BSN",
+      "mode_of_transmission": "Sexual contact, diagnosed during routine screening"
+    }
+  },
+  "belief_profile": {
+    "b_ipq": {
+      "consequences": 7,
+      "timeline": 10,
+      "personal_control": 7,
+      "treatment_control": 8,
+      "identity": 2,
+      "concern": 8,
+      "coherence": 7,
+      "emotional_response": 9,
+      "causes": [
+        "Her own behavior (unprotected sex)",
+        "Being too trusting of a partner",
+        "Not getting tested sooner"
+      ]
+    },
+    "bmq": {
+      "specific_necessity": 22/25,
+      "specific_concerns": 17/25,
+      "general_harm": 8/20,
+      "general_overuse": 6/20
+    }
+  }
+}

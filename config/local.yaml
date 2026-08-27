@@ -15,5 +15,11 @@ models:
   patient: dolphin-llama3       # unaligned — less agreeable than an assistant
   embed: nomic-embed-text
 
+# The style the doctor prompt used to carry inline (1.14). Naming it here is
+# what makes an arm one line instead of an edit to DOCTOR.md.
+skills:
+  doctor:
+    - styles/good_doctor
+
 server:
   keep_alive: "1h"

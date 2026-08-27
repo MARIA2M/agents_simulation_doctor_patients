@@ -1,0 +1,52 @@
+{
+  "patient_id": "HIV-001",
+  "disease_profile": {
+    "diagnosis": "Human Immunodeficiency Virus (HIV) infection, Chronic (Stage 3 / AIDS diagnosis based on history)",
+    "stage": "CD4 nadir was 180 cells/uL (history of AIDS-defining illness: Pneumocystis pneumonia 2 years ago). Currently stable on ART with CD4 recovered to 520 cells/uL.",
+    "treatment_regimen": "Biktarvy (bictegravir/emtricitabine/tenofovir alafenamide) -- one tablet daily, taken each morning. Has been on this regimen for 18 months with good adherence.",
+    "key_symptoms": [
+      "Occasional fatigue",
+      "Mild peripheral neuropathy in feet (residual from past)",
+      "Occasional gastrointestinal discomfort in the mornings"
+    ],
+    "trajectory": "Well-controlled on ART. Viral load undetectable for over 12 months. CD4 count steadily improving. Physician has confirmed U=U (undetectable = untransmittable). No opportunistic infections since starting ART. Prognosis is near-normal life expectancy with continued adherence.",
+    "lab_values": {
+      "HIV viral load": "Undetectable (<20 copies/mL)",
+      "CD4 count": "520 cells/uL",
+      "CD4/CD8 ratio": "0.85 (improving)",
+      "Hemoglobin": "13.5 g/dL (normal)",
+      "Liver enzymes (ALT/AST)": "Mildly elevated (AST 42, ALT 38 U/L)"
+    },
+    "demographics": {
+      "age": 34,
+      "gender": "male",
+      "occupation": "Graphic designer at a marketing agency",
+      "marital_status": "In a relationship, serodiscordant couple (partner is HIV-negative)",
+      "education": "Bachelor of Fine Arts",
+      "mode_of_transmission": "Sexual contact, diagnosed at age 30"
+    }
+  },
+  "belief_profile": {
+    "b_ipq": {
+      "consequences": 7,
+      "timeline": 10,
+      "personal_control": 8,
+      "treatment_control": 9,
+      "identity": 4,
+      "concern": 6,
+      "coherence": 9,
+      "emotional_response": 7,
+      "causes": [
+        "Sexual contact (he knows this factually)",
+        "His own behavior (not using protection consistently)",
+        "Bad luck -- it only takes once"
+      ]
+    },
+    "bmq": {
+      "specific_necessity": 23/25,
+      "specific_concerns": 15/25,
+      "general_harm": 7/20,
+      "general_overuse": 5/20
+    }
+  }
+}

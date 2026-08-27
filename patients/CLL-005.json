@@ -28,14 +28,14 @@
   },
   "belief_profile": {
     "b_ipq": {
-      "consequences": 4,
-      "timeline": 7,
-      "personal_control": 6,
-      "treatment_control": 7,
-      "identity": 3,
-      "concern": 5,
-      "coherence": 7,
-      "emotional_response": 4,
+      "consequences": 6,
+      "timeline": 9,
+      "personal_control": 4,
+      "treatment_control": 6,
+      "identity": 5,
+      "concern": 8,
+      "coherence": 6,
+      "emotional_response": 7,
       "causes": [
         "Stress (very high-pressure job)",
         "Genetics (mother had breast cancer, not CLL but cancer runs in the family)",
@@ -43,10 +43,10 @@
       ]
     },
     "bmq": {
-      "specific_necessity": null,
-      "specific_concerns": null,
-      "general_harm": 2.8,
-      "general_overuse": 3.2
+      "specific_necessity": "20/25",
+      "specific_concerns": "16/25",
+      "general_harm": "8/20",
+      "general_overuse": "8/20"
     }
   }
 }

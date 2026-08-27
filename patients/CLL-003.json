@@ -26,14 +26,14 @@
   },
   "belief_profile": {
     "b_ipq": {
-      "consequences": 2,
-      "timeline": 3,
-      "personal_control": 8,
-      "treatment_control": 5,
-      "identity": 2,
-      "concern": 2,
-      "coherence": 9,
-      "emotional_response": 1,
+      "consequences": 5,
+      "timeline": 9,
+      "personal_control": 6,
+      "treatment_control": 7,
+      "identity": 3,
+      "concern": 6,
+      "coherence": 8,
+      "emotional_response": 6,
       "causes": [
         "Genetics (father had CLL)",
         "Getting older",
@@ -41,10 +41,10 @@
       ]
     },
     "bmq": {
-      "specific_necessity": null,
-      "specific_concerns": null,
-      "general_harm": 1.8,
-      "general_overuse": 2.0
+      "specific_necessity": "18/25",
+      "specific_concerns": "14/25",
+      "general_harm": "7/20",
+      "general_overuse": "7/20"
     }
   }
 }

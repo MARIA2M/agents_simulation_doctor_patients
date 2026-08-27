@@ -1,0 +1,17 @@
+# config/style-narrowly_biomedical.yaml — one half of the §5.1 contrast (1.14, 6.5)
+#
+# Identical to hpc in every respect except the style file the doctor is given.
+# That is the point: if two batches under this and its opposite come out alike,
+# the skill mechanism does not work on this model, however correct the code is.
+#
+#   python run_batch.py --profile style-narrowly_biomedical --repeats 2
+#
+# A profile name matching `style-<id>` must name a style in
+# skills/styles/styles.yaml; test_styles.py holds that.
+
+profile: style-narrowly_biomedical
+extends: hpc
+
+skills:
+  doctor:
+    - styles/narrowly_biomedical

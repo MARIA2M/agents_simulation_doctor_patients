@@ -10,17 +10,23 @@ extends: base
 
 models:
   doctor: "glm-4.7-flash:q8_0"  # 10/10 well-formed tool calls at T=0 (tools/probe_tools.py)
-  # PROVISIONAL — chosen because it is the only unaligned patient already in
-  # the Ollama store, not because it was verified. §6.2 asks for a probe
-  # before choosing: does it stay in character, does it volunteer its belief
-  # profile unasked, does it fold under leading questions. A larger patient
-  # (gemma-4-12B via vLLM) has the capacity for the personas of 7.1, but
-  # instruct models are servile enough to inflate the doctor's apparent
-  # performance. Freeze the pair before the stage-7 baseline, not after.
-  patient: dolphin-llama3
-  # UNREACHABLE — a HuggingFace model, and causes/embeddings.py only speaks to
-  # Ollama, so score_causes falls back to category overlap. See TASKS 4.3.
-  embed: jina-embeddings-v4
+  # PROVISIONAL — pinned to an explicit tag so the arm is reproducible, not
+  # because the model was verified. §6.2 asks for a probe before choosing: does
+  # it stay in character, does it volunteer its belief profile unasked, does it
+  # fold under leading questions. A larger patient (gemma-4-12B via vLLM) has
+  # the capacity for the personas of 7.1, but instruct models are servile enough
+  # to inflate the doctor's apparent performance. Freeze the pair before the
+  # stage-7 baseline, not after.
+  # Runs up to and including e4-1 and s51 used the untagged `dolphin-llama3`,
+  # which resolves to the Q4 build — not this one.
+  patient: "dolphin-llama3:8b-v2.9-q8_0"
+  # In the Ollama store, so causes/embeddings.py can reach it and score_causes
+  # runs on embeddings rather than the category-overlap fallback. Not exercised
+  # yet: no batch has been evaluated with --causes. See TASKS 4.3.
+  embed: nomic-embed-text
+skills:
+  doctor:
+    - styles/good_doctor   # see local.yaml — the pre-1.14 style, now a file
 
 server:
   keep_alive: "4h"

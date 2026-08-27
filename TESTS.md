@@ -5,8 +5,23 @@ concreto, y si hace falta. **Se actualiza al añadir, quitar o cambiar un test.*
 Se contrasta con [TASKS.md](TASKS.md) y con los ocho invariantes de
 [ARCHITECTURE.md](ARCHITECTURE.md) §9.
 
-**167 funciones `test_`, 236 casos con parametrización.** Ninguna toca la red: el
-LLM está sustituido por respuestas guionizadas.
+**202 funciones `test_`; los casos con parametrización están sin recontar desde
+el 2026-08-26** —eran 346 con 198 funciones—. Ninguna toca la red: el LLM está
+sustituido por respuestas guionizadas.
+
+El recuento de funciones sale de `grep -c '^def test_' tests/test_*.py`; el de
+casos exige pytest, y `test_corpus.py` acaba de pasar de 21 a 40. Recontar antes
+de fiarse del número.
+
+Los casos **no dependen solo de los tests**: `test_config.py`, `test_metadata.py`
+y `test_prompts.py` se parametrizan sobre `config/*.yaml`, así que **cada brazo
+nuevo añade casos a tests que nadie ha tocado**. Los dos perfiles de estilo de
+1.14 sumaron 7 por sí solos. Un número que sube sin que se haya escrito un test
+no es una regresión: son perfiles nuevos. Para recontar:
+
+```bash
+./venv-hpc/bin/python -m pytest tests/ --collect-only -q | sed 's/::.*//' | sort | uniq -c
+```
 
 ```bash
 AHEAD_GRAPH_TESTS=1 ./venv-local/bin/python -m pytest tests/ -q
@@ -24,11 +39,12 @@ Leyenda: **✅** hace falta · **📄** documenta más que verifica.
 | Fichero | Funciones | Casos | Qué guarda | Etapa |
 |---|---|---|---|---|
 | `conftest.py` | — | — | Andamio compartido: `PATIENT`, `speaks`, `note`, `profile`, `in_mode`, y las fixtures `scripted`, `state`, `make_run_profile` | — |
-| `test_config.py` | 16 | 22 | Los perfiles cargan; ninguno deja un ajuste al servidor | 1 |
-| `test_corpus.py` | 3 | 21 | Los 10 pacientes y su ground truth, idénticos al brazo Ruby | 1 |
-| `test_metadata.py` | 12 | 14 | La provenance se recoge entera y sobrevive al disco | 1 |
+| `test_config.py` | 22 | 28 | Los perfiles cargan; ninguno deja un ajuste al servidor | 1 |
+| `test_corpus.py` | 7 | 40 | Los 10 pacientes, su ground truth, y de dónde salió cada número | 1 |
+| `test_metadata.py` | 13 | 15 | La provenance se recoge entera y sobrevive al disco | 1 |
 | `test_llm.py` | 11 | 11 | Qué viaja en cada llamada y qué se reintenta | 2/4 |
 | `test_prompts.py` | 16 | 16 | Composición determinista desde disco, y sus hashes | 2 |
+| `test_styles.py` | 16 | 95 | Los nueve estilos del médico: registro, forma, contenido y brazos | 2 |
 | `test_tools.py` | 6 | 12 | Leer la llamada, y armar las tools de cada brazo | 2 |
 | `test_nodes.py` | 7 | 7 | El bucle, y el aislamiento del perfil | 2 |
 | `test_patient_profile.py` | 12 | 28 | Puntuación → conducta, y el hueco que se deja sin puntuación | 2 |
@@ -37,6 +53,7 @@ Leyenda: **✅** hace falta · **📄** documenta más que verifica.
 | `test_report.py` | 32 | 42 | Esquema, parseo, huecos, reintento, salida a disco | 3 |
 | `test_evaluation.py` | 14 | 14 | MAE, sesgo, bandas, las dos correlaciones | 5 |
 | `test_causes.py` | 17 | 17 | Coseno, emparejamiento, taxonomía, método registrado | 5 |
+| `test_evaluate.py` | 8 | 8 | El punto de entrada de 4.7 — nunca estuvo en esta tabla | 5 |
 
 ### `conftest.py`
 
@@ -54,7 +71,7 @@ el test de aislamiento busca en el contexto del médico.
 
 ## Fase 1 — Base
 
-### `test_config.py` — 16 funciones, 22 casos
+### `test_config.py` — 22 funciones, 28 casos
 
 Todos ✅. El bloque de rechazos existe porque **un ajuste que falta no da error:
 lo decide el servidor** (§12), y entonces la metadata miente.
@@ -82,15 +99,23 @@ Los rechazos dependen de que `make_run_profile` **sustituya** el bloque en vez d
 fusionarlo: omitir una clave es cómo se comprueba que es obligatoria. Fusionar
 volvería verdes cuatro tests sin que nada los sostenga.
 
-### `test_corpus.py` — 3 funciones, 21 casos
+### `test_corpus.py` — 7 funciones, 40 casos
+
+Reescrito el 2026-08-26, cuando `patients/` pasó a ser el corpus de CK
+normalizado. Lo que cambió de fondo: el corpus ya **no** es el del brazo Ruby, y
+**C1 se retiró** — CK puntúa las `specific_*` también sin receta.
 
 | Test | Necesidad |
 |---|---|
 | `test_corpus_has_ten_patients` | ✅ |
-| `test_profile_carries_ground_truth` | ✅ incluye C1: sin receta, las subescalas `specific_*` son NA en la verdad. Exige que cada dimensión sea un número, lo que cubre también que la clave exista |
-| `test_profile_is_identical_to_the_ruby_arm` | ✅ compara bytes. Es 0.3, y sin él los dos brazos no son comparables |
+| `test_profile_carries_ground_truth` | ✅ cada dimensión es un número, lo que cubre también que la clave exista, y ahora dentro de rango: B-IPQ 0–10, BMQ 1–5. Ya no exige NA sin receta |
+| `test_patients_is_the_normalised_ck_corpus` | ✅ el que sustituye a 0.3. Reejecuta la normalización sobre `patientsCK/` y exige que reproduzca el fichero byte a byte. Sin él, `patients/` es un directorio editado a mano y la procedencia del ground truth se pierde |
+| `test_the_ruby_corpus_is_frozen` | ✅ lo que 0.3 protegía, movido a `sintetic_patients/patients_version1/`. Las tandas de `runs/historic/` se puntuaron contra ese corpus, así que reanalizarlas exige que siga intacto |
+| `test_the_item_mean_returns_the_one_to_five_scale` | ✅ 5 casos. El denominador es el número de ítems por 5, no un divisor: `21/25` es una suma de 21 sobre 5 ítems, o sea 4.2, y nunca la proporción 0.84. Incluye suelo y techo |
+| `test_an_unexpected_maximum_is_refused` | ✅ el importante de los dos. Un máximo que no cuadra significa otro número de ítems, y normalizarlo igual mete un valor en otra escala sin que se note. Es el caso del `7/10` de CLL-003 |
+| `test_the_normaliser_leaves_the_beliefs_alone` | ✅ solo el BMQ cambia de forma. Si el script tocara `b_ipq`, el ground truth de ocho dimensiones dependería de él sin que nadie lo hubiera decidido |
 
-### `test_metadata.py` — 12 funciones, 14 casos ✅
+### `test_metadata.py` — 13 funciones, 15 casos ✅
 
 `test_the_temperature_recorded_is_the_one_that_will_be_sent` se compara contra
 `llm.sampling_options`, que es quien mete la temperatura en la petición: que la
@@ -136,6 +161,50 @@ puntuando mientras habla, que es el brazo de elicitación por otra puerta.
 de provenance: las descripciones de las tools son instrucciones, y hasta ahora no
 las hasheaba nadie. Se podía reescribir la del argumento `notes` —cambiando lo
 que el médico anota— y `metadata.json` salía idéntico.
+
+### `test_styles.py` — 16 funciones, 95 casos ✅
+
+Los nueve estilos de comunicación del médico (1.14): ocho portados de
+`ahead_agent_ckakalou` y `good_doctor`, que es lo que `DOCTOR.md` llevaba dentro.
+Ninguno toca la red — si el estilo *cambia* el transcript no se puede preguntar
+aquí, y esa es la mitad viva del test de §5.1.
+
+Cuatro bloques, y cada uno guarda un fallo distinto:
+
+**El registro contra el directorio.** `test_every_style_has_a_file_and_every_file_a_style`
+es la corrección del bug del origen: `prompt_builder.py:20` escribía
+`high_psysician_control_paternalistic` y el fichero decía `physician`, así que ese
+estilo era inalcanzable por los dos lados. La ortografía nunca fue el arreglo.
+
+**Qué puede decir un estilo.** `test_no_style_names_the_instrument_or_the_scale`
+y `test_no_style_tells_the_doctor_which_dimensions_will_stay_empty`. El segundo es
+el que importa: la sección 9 del origen le decía al médico qué construcciones
+quedarían visibles y cuáles vacías, y es el mismo agente que después puntúa esas
+construcciones y puede devolver NA. Nombrar una dimensión no es el problema
+—`DOCTOR.md` §5 las lista todas—; predecírselas sí. Viven en `styles.yaml`, y
+`test_the_hypotheses_stayed_out_of_the_prompt` comprueba que se quedaron ahí.
+
+**Composición y hashes.** `test_each_style_gives_the_doctor_prompt_its_own_hash`:
+nueve estilos, nueve hashes distintos, o dos brazos son una sola corrida en la
+provenance. `test_the_anchors_still_do_not_reach_a_doctor_with_a_style` repite con
+skill cargada el invariante de `test_prompts`: un estilo es una vía nueva para
+que la escala llegue a la consulta.
+
+**Los perfiles del disco.** `test_every_profile_names_exactly_one_style` es una
+regla nueva del proyecto, no una comprobación de código: después de 1.14 el
+estilo del médico es siempre un fichero que alguien eligió. Un perfil sin estilo
+corre el brazo sin nombre que esta tarea existe para eliminar.
+`test_the_style_left_the_base_prompt_and_is_in_good_doctor` guarda las dos
+mitades del traslado: si la frase sigue en `DOCTOR.md`, todos los estilos la
+contradicen; si no está en `good_doctor.md`, el brazo bajo el que se midió todo
+lo anterior ha cambiado sin que nadie lo decida.
+
+**La forma del fichero.** `test_every_style_has_the_same_three_sections` y
+`test_a_style_constrains_about_as_much_as_it_prescribes`. El segundo sale de un
+fallo real: `good_doctor` se escribió con cinco instrucciones y **una** sola
+prohibición, contra cuatro en los ocho portados. Presión de restricción desigual
+es una diferencia entre brazos que no ha elegido nadie, y cae justo sobre el eje
+que los estilos quieren variar.
 
 ### `test_tools.py` — 6 funciones, 12 casos ✅
 
@@ -290,7 +359,7 @@ porque un test borrado se mira meses después, y el sitio donde se mira es este.
 | `test_coverage.py::test_asking_the_doctor_does_not_disturb_the_tool_it_already_had` | Fusionado en `test_tools.py::test_building_the_tools_never_touches_the_one_the_module_ships`, ahora sobre los cuatro modos |
 | `test_notes.py::test_the_tool_the_module_ships_is_never_touched` | El mismo invariante, mismo destino |
 | `test_notes.py::test_the_doctor_still_closes_when_it_wants` | `test_coverage_hint.py::test_the_doctor_can_always_close_with_dimensions_open`, que pasó de 2 modos a las 4 combinaciones |
-| `test_config.py::test_dimension_ids_match_every_patient` | `test_corpus.py::test_profile_carries_ground_truth` exige que cada dimensión sea un número, y no se lee el valor de una clave que falta |
+| `test_config.py::test_dimension_ids_match_every_patient` | `test_corpus.py::test_profile_carries_ground_truth` exige que cada dimensión sea un número dentro de rango, y no se lee el valor de una clave que falta |
 
 `test_coverage.py` pasó a llamarse **`test_coverage_hint.py`**. "Coverage"
 significaba tres cosas a la vez: `causes.similarity.coverage_score` (portado), el

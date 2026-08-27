@@ -1,0 +1,256 @@
+# skills/styles/styles.yaml — the registry of doctor communication styles (1.14, 6.5)
+#
+# Not loaded into any prompt. `prompts.compose_prompt` only ever reads the .md
+# files a profile names; this file is what the *analysis* reads, and what the
+# suite checks the .md files against.
+#
+# The split is deliberate: a style file says how the doctor talks, this file
+# says what we expect to see and how we would recognise it. Putting the markers
+# in the prompt would measure whether the model can copy a checklist; putting
+# the hypotheses in the prompt would tell the doctor which dimensions are meant
+# to stay empty, and 1.10 and 3.2 read exactly that.
+
+source:
+  repo: ahead_agent_ckakalou            # Christine Kakalou's arm, own git
+  path: ahead_agent/prompts/doctor_styles/
+  ported: 2026-08-25
+  # Elicitation arm: there the doctor asks the questionnaire, composed per
+  # phase (doctor_bipq.md / doctor_bmq.md). The phases did not come across —
+  # 1.3 took them out of the code — so `compatible_phases` was dropped: all
+  # eight declared both, so the field discriminated nothing anyway.
+
+# `turn_budget` is a DIRECTIONAL signal, not a compliance requirement.
+# Measured on s51-nb-1 / s51-bps-1 (glm-4.7-flash:q8_0, CLL-001, 2 repeats
+# each): narrowly_biomedical declares 1-2 sentences and delivered 2.9;
+# biopsychosocial declares 2-3 and delivered 3.8. Both overshoot, and both
+# stack several questions into a turn that says "one question at a time". The
+# ordering held with no overlap across the four runs — 40.9 against 66.5 words
+# per doctor turn. So compare styles against each other on turn length; never
+# against the number in their own file, which every style fails.
+
+# Opposed by construction: the §5.1 test is that the same patient, same seed,
+# same everything, gives observably different transcripts under each.
+#
+# First pair exercised 2026-08-25 and the gate passed: the separation is in
+# topic selection, not tone. narrowly_biomedical opened no psychosocial ground
+# unprompted in either run and never mentioned emotion at all; biopsychosocial
+# opened family at turn 3 and emotion at turn 2. That is the prohibition list
+# working.
+contrast_pairs:
+  - [narrowly_biomedical, biopsychosocial]
+  - [high_physician_control_paternalistic, shared_decision_making]
+
+styles:
+
+  good_doctor:
+    label: "Good doctor"
+    role: reference condition
+    turn_budget: none
+    # NOT a port, and NOT a verified best. The name is a label for the arm the
+    # project ran under before styles were files; no run has shown it to be the
+    # best of the nine, and asking that is what 6.5 is for. Read it as the
+    # reference the other eight are measured against, nothing more.
+    #
+    # It began as prompts/DOCTOR.md §2-§4 moved out word for word. It is no
+    # longer verbatim: the four literal example questions DOCTOR.md carried were
+    # dropped, because a reference condition that scripts the doctor's exact
+    # phrasing is a stronger steer than any of the eight ports it is meant to be
+    # compared with. Dropped before any batch ran under it.
+    #
+    # Three of its four prohibitions are restatements of its own instructions —
+    # the negative of "adapt your style", of "listen actively" and of "validate
+    # concerns" — written out because the file had one prohibition against four
+    # in every port, and constraint pressure is not a thing to leave uneven by
+    # accident. Only "do not be directive or judgmental" was in DOCTOR.md as a
+    # prohibition. No new constraint was introduced.
+    #
+    # The one style with no turn budget, because it never had one. It is also
+    # the only one that names dimensions outright (emotional response, sense of
+    # control); that is inherited from DOCTOR.md word for word.
+    markers:
+      - Warm, empathic, patient-centred.
+      - Open questions first, targeted ones after.
+      - Reflects back what the patient said.
+      - Adapts to how talkative or guarded the patient is.
+      - Neither directive nor judgmental.
+    hypotheses: null   # no source, so nothing was predicted about it
+
+  narrowly_biomedical:
+    label: "Narrowly biomedical"
+    role: contrast
+    turn_budget: short              # 1-2 sentences, declared in the .md
+    markers:
+      - Stays on symptoms, diagnosis, medication use and biomedical fact.
+      - Rarely asks about emotion, social context, identity or meaning.
+      - Clarifies in brief factual terms.
+      - Does not follow disagreement or ambivalence far.
+      - Professional, minimally relational tone.
+    hypotheses:                     # inherited as questions, never as results
+      illness: >
+        May improve the technical grasp of the disease label while leaving
+        causal beliefs, emotional meaning, perceived consequences, disagreement
+        and the patient's own account unexplored.
+      treatment: >
+        May clarify what to take while leaving harm, dependence, necessity,
+        cost, feasibility, identity and non-adherence hidden. Apparent
+        agreement is not evidence that there is no worry.
+
+  expanded_biomedical:
+    label: "Expanded biomedical"
+    role: explanation
+    turn_budget: medium             # 2-3 sentences
+    markers:
+      - Explains beyond the label — mechanism, prognosis, rationale.
+      - Checks that the patient has followed.
+      - Links the treatment to a mechanism or an expected benefit.
+      - Explanatory rather than relational or deliberative.
+      - Does not answer a stated worry with reassurance alone.
+    hypotheses:
+      illness: >
+        May improve coherence and the grasp of cause, timeline and prognosis
+        when understanding is checked rather than assumed. Stays biomedical,
+        so emotional, social and identity meaning may stay out.
+      treatment: >
+        May strengthen perceived necessity by explaining mechanism and
+        benefit. One-way explanation may not move a worry that was never
+        invited.
+
+  biopsychosocial:
+    label: "Biopsychosocial"
+    role: broad elicitation
+    turn_budget: medium
+    markers:
+      - Asks about daily life, work, family, relationships, mood or behaviour.
+      - Joins the biomedical and the personal in one thread.
+      - Asks what gets in the way of treatment.
+      - Does not abandon clinical structure.
+      - Reduces the patient neither to biology nor to psychology.
+    hypotheses:
+      illness: >
+        More likely to bring out a complete account: symptoms, causes,
+        timeline, consequences, emotional impact, control, family, work and
+        social meaning.
+      treatment: >
+        More likely to surface practical barriers and what the treatment does
+        to identity, relationships, work and quality of life.
+    notes: >
+      Richer transcripts also mean more constructs per patient turn, which is
+      harder to attribute. 3.2 should expect it.
+
+  psychosocial_relational:
+    label: "Psychosocial / relational"
+    role: emotional safety
+    turn_budget: medium
+    markers:
+      - Names or reflects the emotion, briefly.
+      - Validates worry without over-reassuring.
+      - Asks after fears and sensitive worries.
+      - Returns to clinical focus after the empathy.
+      - Does not answer a specific worry with a generic reassurance.
+    hypotheses:
+      illness: >
+        Validation may lower the threat enough to disclose fears and
+        stigmatising causal beliefs. Empathy without explanation does not
+        correct a misconception.
+      treatment: >
+        Trust may make a worry easier to say out loud. Reassurance alone is
+        not enough against a concrete safety or efficacy worry.
+    notes: >
+      Read an increase in expressed distress carefully: the style can make
+      distress visible without changing how much there is. That is a threat to
+      the `emotional_response` and `concern` dimensions specifically.
+
+  consumerist:
+    label: "Consumerist"
+    role: patient-request-led contrast
+    turn_budget: medium
+    markers:
+      - Asks what the patient wants or expects.
+      - Follows the patient's requests as the agenda.
+      - Asks where a preference came from.
+      - Does not impose the medical agenda unless safety requires it.
+      - Does not reinforce an inaccurate belief uncritically.
+    hypotheses:
+      illness: >
+        The patient's existing account may run the encounter, including
+        requests for tests, diagnoses or treatments, and may never be examined
+        for accuracy.
+      treatment: >
+        Preferences may come from prior belief, advertising, the internet or
+        past experience. Supplying what was asked for without deliberation can
+        harden an inaccurate belief.
+    notes: >
+      May be inert in this corpus. Our patients are built from a
+      `belief_profile`, not from a shopping list, and a patient who requests
+      nothing gives this style nothing to follow. Check that before reading a
+      null result as a finding.
+
+  person_focused_patient_centered:
+    label: "Person-focused / patient-centred"
+    role: core elicitation
+    turn_budget: medium
+    markers:
+      - Asks for the patient's own account or understanding.
+      - Asks about worries and expectations.
+      - Follows perceived control and consequences.
+      - Keeps necessity and worry as two separate questions.
+      - Non-blaming language about doubts and missed treatment.
+    hypotheses:
+      illness: >
+        The style most compatible with drawing out ideas, worries,
+        expectations, perceived causes, consequences and sense of control, and
+        with reconciling the patient's account and the medical one.
+      treatment: >
+        Lets necessity and worry be discussed apart and folded into a plan.
+        More likely to surface intentional non-adherence without blame.
+    notes: >
+      Closest to `good_doctor`, which is what the doctor prompt did before styles
+      existed. Whether the two are the same style under two names is the first
+      thing 6.5 can settle, and it is nearly free.
+
+  high_physician_control_paternalistic:
+    label: "High physician control / paternalistic"
+    role: high-control contrast
+    turn_budget: short
+    markers:
+      - Controls the agenda.
+      - Gives clear recommendations.
+      - Directive rather than collaborative language.
+      - Asks less about preferences, values and the patient's own account.
+      - Stays clinically safe and professional.
+    hypotheses:
+      illness: >
+        The physician's account may be imposed and the patient's may go
+        unspoken. May produce superficial agreement and discourage questions.
+      treatment: >
+        May raise short-term compliance in urgent situations, and weaken
+        autonomy, trust and durable ownership of the treatment in long-term or
+        preference-sensitive care.
+    notes: >
+      The style that collides hardest with the base doctor prompt: DOCTOR.md
+      §4 tells the doctor to be empathic, patient-centred and not directive.
+      Whatever is decided about that collision, this style is the one that
+      shows whether it was decided correctly.
+
+  shared_decision_making:
+    label: "Shared decision-making"
+    role: treatment-belief deliberation
+    turn_budget: medium
+    markers:
+      - Frames a decision.
+      - Explains why the decision matters.
+      - Asks about values, goals or preferences.
+      - Weighs benefit, harm, burden or uncertainty.
+      - Avoids both paternalism and uncritical consumerism.
+    hypotheses:
+      illness: >
+        Needs enough coherence for the patient to see why a decision exists.
+        The discussion itself can revise beliefs about consequences, control
+        and uncertainty.
+      treatment: >
+        Examines anticipated benefit, harm, burden and necessity directly
+        against the patient's values.
+    notes: >
+      The one style that can change the belief it is measuring: deliberation is
+      an intervention, so a run under it is a Phase 6 arm, not a measurement of
+      the same patient.

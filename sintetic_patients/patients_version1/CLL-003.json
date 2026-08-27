@@ -1,0 +1,50 @@
+{
+  "patient_id": "CLL-003",
+  "disease_profile": {
+    "diagnosis": "Chronic Lymphocytic Leukemia (CLL)",
+    "stage": "Rai Stage I, diagnosed 6 months ago",
+    "treatment_regimen": "Watch and wait. No medication. Follow-up appointments every 3 months with complete blood count.",
+    "key_symptoms": [
+      "Occasionally feels more tired than usual after work",
+      "Small lump in the neck noticed by wife"
+    ],
+    "trajectory": "Very early stage with minimal symptoms. Hematologist has reassured the patient that many people with CLL live normal lifespans and never need treatment. Counts are only mildly abnormal.",
+    "lab_values": {
+      "WBC": "15,800 /uL (mildly elevated)",
+      "Hemoglobin": "14.1 g/dL (normal)",
+      "Platelets": "210,000 /uL (normal)",
+      "Lymphocyte count": "11,400 /uL (elevated)",
+      "LDH": "Within normal limits"
+    },
+    "demographics": {
+      "age": 52,
+      "gender": "male",
+      "occupation": "Software engineer",
+      "marital_status": "Married, one teenage daughter",
+      "education": "Bachelor's in Computer Science"
+    }
+  },
+  "belief_profile": {
+    "b_ipq": {
+      "consequences": 2,
+      "timeline": 3,
+      "personal_control": 8,
+      "treatment_control": 5,
+      "identity": 2,
+      "concern": 2,
+      "coherence": 9,
+      "emotional_response": 1,
+      "causes": [
+        "Genetics (father had CLL)",
+        "Getting older",
+        "Nothing in particular -- just one of those things"
+      ]
+    },
+    "bmq": {
+      "specific_necessity": null,
+      "specific_concerns": null,
+      "general_harm": 1.8,
+      "general_overuse": 2.0
+    }
+  }
+}

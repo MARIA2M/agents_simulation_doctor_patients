@@ -262,7 +262,7 @@ base de la 7 son 10.
 ### Qué deja
 
 ```
-runs/e4-1/
+runs/<tanda>/
 ├── metadata.json         # la configuración de toda la tanda (0.4)
 ├── batch.json            # el índice: una línea por consulta
 ├── CLL-001-r1/           # transcript.json + report.json
@@ -275,7 +275,7 @@ runs/e4-1/
 
 ```bash
 python3 -c "
-import json; b=json.load(open('runs/e4-1/batch.json'))
+import json; b=json.load(open('runs/historic/e4-1/batch.json'))
 for c in b['consultations']:
     print(c['run'], c['status'], c.get('stop_reason'), 'events', c.get('events'), 'NA', len(c.get('na',[])))"
 ```

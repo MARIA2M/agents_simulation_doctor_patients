@@ -29,13 +29,13 @@
   "belief_profile": {
     "b_ipq": {
       "consequences": 8,
-      "timeline": 10,
-      "personal_control": 2,
-      "treatment_control": 9,
+      "timeline": 9,
+      "personal_control": 5,
+      "treatment_control": 8,
       "identity": 7,
-      "concern": 9,
+      "concern": 7,
       "coherence": 6,
-      "emotional_response": 9,
+      "emotional_response": 8,
       "causes": [
         "Bad luck / chance",
         "Weakened immune system as she got older",
@@ -43,10 +43,10 @@
       ]
     },
     "bmq": {
-      "specific_necessity": 4.8,
-      "specific_concerns": 3.2,
-      "general_harm": 2.0,
-      "general_overuse": 1.8
+      "specific_necessity": "23/25",
+      "specific_concerns": "18/25",
+      "general_harm": "7/20",
+      "general_overuse": "6/20"
     }
   }
 }

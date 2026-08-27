@@ -28,14 +28,14 @@
   },
   "belief_profile": {
     "b_ipq": {
-      "consequences": 6,
-      "timeline": 8,
-      "personal_control": 4,
-      "treatment_control": 7,
-      "identity": 3,
-      "concern": 7,
-      "coherence": 5,
-      "emotional_response": 8,
+      "consequences": 7,
+      "timeline": 10,
+      "personal_control": 7,
+      "treatment_control": 8,
+      "identity": 2,
+      "concern": 8,
+      "coherence": 7,
+      "emotional_response": 9,
       "causes": [
         "Her own behavior (unprotected sex)",
         "Being too trusting of a partner",
@@ -43,10 +43,10 @@
       ]
     },
     "bmq": {
-      "specific_necessity": 4.0,
-      "specific_concerns": 3.8,
-      "general_harm": 3.5,
-      "general_overuse": 2.5
+      "specific_necessity": "22/25",
+      "specific_concerns": "17/25",
+      "general_harm": "8/20",
+      "general_overuse": "6/20"
     }
   }
 }

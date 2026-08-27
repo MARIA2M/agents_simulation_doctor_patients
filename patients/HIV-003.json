@@ -36,12 +36,12 @@
     "b_ipq": {
       "consequences": 9,
       "timeline": 10,
-      "personal_control": 5,
-      "treatment_control": 6,
-      "identity": 8,
-      "concern": 7,
-      "coherence": 7,
-      "emotional_response": 7,
+      "personal_control": 7,
+      "treatment_control": 8,
+      "identity": 9,
+      "concern": 8,
+      "coherence": 9,
+      "emotional_response": 9,
       "causes": [
         "Injection drug use in his twenties",
         "His own behavior and choices",
@@ -49,10 +49,10 @@
       ]
     },
     "bmq": {
-      "specific_necessity": 4.8,
-      "specific_concerns": 3.6,
-      "general_harm": 3.8,
-      "general_overuse": 3.0
+      "specific_necessity": "24/25",
+      "specific_concerns": "23/25",
+      "general_harm": "11/20",
+      "general_overuse": "8/20"
     }
   }
 }

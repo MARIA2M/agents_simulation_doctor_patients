@@ -30,9 +30,9 @@
       "consequences": 7,
       "timeline": 9,
       "personal_control": 3,
-      "treatment_control": 6,
+      "treatment_control": 4,
       "identity": 5,
-      "concern": 8,
+      "concern": 9,
       "coherence": 4,
       "emotional_response": 8,
       "causes": [
@@ -42,10 +42,10 @@
       ]
     },
     "bmq": {
-      "specific_necessity": null,
-      "specific_concerns": null,
-      "general_harm": 3.0,
-      "general_overuse": 2.5
+      "specific_necessity": "21/25",
+      "specific_concerns": "13/25",
+      "general_harm": "7/20",
+      "general_overuse": "6/20"
     }
   }
 }

@@ -1,0 +1,52 @@
+{
+  "patient_id": "CLL-005",
+  "disease_profile": {
+    "diagnosis": "Chronic Lymphocytic Leukemia (CLL)",
+    "stage": "Rai Stage I, diagnosed 18 months ago",
+    "treatment_regimen": "Watch and wait with 4-month blood draws. Physician discussed that treatment may begin if counts double within 6 months or symptoms worsen.",
+    "key_symptoms": [
+      "Mild fatigue that comes and goes",
+      "Two small lymph nodes palpable in the neck",
+      "Occasionally wakes up with mild night sweats"
+    ],
+    "trajectory": "Stable. Counts have been slowly rising but not dramatically. No infections. Physician is monitoring but has not yet recommended treatment. Patient has been told prognosis is favorable given the slow progression.",
+    "lab_values": {
+      "WBC": "21,000 /uL (elevated)",
+      "Hemoglobin": "13.8 g/dL (normal)",
+      "Platelets": "195,000 /uL (normal)",
+      "Lymphocyte count": "16,200 /uL (elevated)",
+      "Beta-2 microglobulin": "3.0 mg/L (mildly elevated)",
+      "IgG": "820 mg/dL (low-normal)"
+    },
+    "demographics": {
+      "age": 63,
+      "gender": "female",
+      "occupation": "Real estate agent",
+      "marital_status": "Married, no children",
+      "education": "Bachelor's in Business Administration"
+    }
+  },
+  "belief_profile": {
+    "b_ipq": {
+      "consequences": 6,
+      "timeline": 9,
+      "personal_control": 4,
+      "treatment_control": 6,
+      "identity": 5,
+      "concern": 8,
+      "coherence": 6,
+      "emotional_response": 7,
+      "causes": [
+        "Stress (very high-pressure job)",
+        "Genetics (mother had breast cancer, not CLL but cancer runs in the family)",
+        "Aging"
+      ]
+    },
+    "bmq": {
+      "specific_necessity": 20/25,
+      "specific_concerns": 16/25,
+      "general_harm": 8/20,
+      "general_overuse": 8/20
+    }
+  }
+}

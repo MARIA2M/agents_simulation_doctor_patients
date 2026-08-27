@@ -18,7 +18,7 @@ import argparse
 import json
 from pathlib import Path
 
-from ahead_agent import llm, prompts
+from ahead_agent import corpus, llm, prompts
 from ahead_agent.config import load_config
 from ahead_agent.graph import build_graph
 from ahead_agent.metadata import build_metadata, write_metadata
@@ -53,7 +53,7 @@ def load_patients(config: dict, given) -> list:
     if missing:
         raise SystemExit("Not found: " + ", ".join(str(p) for p in missing))
 
-    return [json.loads(p.read_text()) for p in paths]
+    return corpus.load_patients(paths)
 
 
 def warm_up(config: dict) -> None:

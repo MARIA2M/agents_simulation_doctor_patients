@@ -28,14 +28,14 @@
   },
   "belief_profile": {
     "b_ipq": {
-      "consequences": 3,
-      "timeline": 8,
-      "personal_control": 7,
+      "consequences": 7,
+      "timeline": 10,
+      "personal_control": 8,
       "treatment_control": 9,
-      "identity": 2,
-      "concern": 4,
-      "coherence": 8,
-      "emotional_response": 3,
+      "identity": 4,
+      "concern": 6,
+      "coherence": 9,
+      "emotional_response": 7,
       "causes": [
         "Sexual contact (he knows this factually)",
         "His own behavior (not using protection consistently)",
@@ -43,10 +43,10 @@
       ]
     },
     "bmq": {
-      "specific_necessity": 4.6,
-      "specific_concerns": 2.4,
-      "general_harm": 2.2,
-      "general_overuse": 2.0
+      "specific_necessity": "23/25",
+      "specific_concerns": "15/25",
+      "general_harm": "7/20",
+      "general_overuse": "5/20"
     }
   }
 }

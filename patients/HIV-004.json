@@ -28,13 +28,13 @@
   },
   "belief_profile": {
     "b_ipq": {
-      "consequences": 5,
-      "timeline": 6,
-      "personal_control": 3,
-      "treatment_control": 5,
-      "identity": 4,
+      "consequences": 8,
+      "timeline": 10,
+      "personal_control": 6,
+      "treatment_control": 7,
+      "identity": 3,
       "concern": 9,
-      "coherence": 3,
+      "coherence": 6,
       "emotional_response": 10,
       "causes": [
         "His own behavior (partying, not using protection)",
@@ -43,10 +43,10 @@
       ]
     },
     "bmq": {
-      "specific_necessity": 3.8,
-      "specific_concerns": 4.0,
-      "general_harm": 3.2,
-      "general_overuse": 2.8
+      "specific_necessity": "21/25",
+      "specific_concerns": "19/25",
+      "general_harm": "9/20",
+      "general_overuse": "6/20"
     }
   }
 }

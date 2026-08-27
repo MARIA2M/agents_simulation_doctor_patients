@@ -29,14 +29,14 @@
   },
   "belief_profile": {
     "b_ipq": {
-      "consequences": 4,
-      "timeline": 6,
-      "personal_control": 5,
-      "treatment_control": 4,
+      "consequences": 7,
+      "timeline": 9,
+      "personal_control": 7,
+      "treatment_control": 6,
       "identity": 3,
-      "concern": 3,
+      "concern": 5,
       "coherence": 4,
-      "emotional_response": 5,
+      "emotional_response": 7,
       "causes": [
         "A previous partner who did not disclose his status",
         "Bad luck",
@@ -44,10 +44,10 @@
       ]
     },
     "bmq": {
-      "specific_necessity": 2.8,
-      "specific_concerns": 4.4,
-      "general_harm": 4.2,
-      "general_overuse": 4.0
+      "specific_necessity": "14/25",
+      "specific_concerns": "17/25",
+      "general_harm": "10/20",
+      "general_overuse": "10/20"
     }
   }
 }

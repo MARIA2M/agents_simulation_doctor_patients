@@ -1,0 +1,12 @@
+# config/hint-show.yaml — the `show` half of the coverage_hint pair (§4.1)
+#
+# Identical to hpc except the hint. hpc is the `off` half, so the two profiles
+# together are the arm: same models, same style, same temperatures.
+#
+#   python run_batch.py --profile hint-show --repeats 10 --run-id m1-cll001-show
+
+profile: hint-show
+extends: hpc
+
+features:
+  coverage_hint: "show"

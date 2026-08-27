@@ -1,0 +1,52 @@
+{
+  "patient_id": "CLL-002",
+  "disease_profile": {
+    "diagnosis": "Chronic Lymphocytic Leukemia (CLL)",
+    "stage": "Rai Stage II, diagnosed 2 years ago, started treatment 8 months ago",
+    "treatment_regimen": "Ibrutinib 420 mg once daily (BTK inhibitor). Ongoing therapy with quarterly check-ups.",
+    "key_symptoms": [
+      "Persistent fatigue",
+      "Frequent infections (2-3 sinus infections per year since diagnosis)",
+      "Swollen lymph nodes in the neck and armpits",
+      "Occasional bruising on arms and legs"
+    ],
+    "trajectory": "Responding well to treatment. Lymphocyte count has decreased significantly. Physician reports partial remission. Some side effects from ibrutinib (mild diarrhea, joint aches).",
+    "lab_values": {
+      "WBC": "11,200 /uL (slightly elevated, improved from 42,000 at diagnosis)",
+      "Hemoglobin": "12.8 g/dL (mildly low)",
+      "Platelets": "152,000 /uL (low-normal)",
+      "Lymphocyte count": "6,800 /uL (improved, was 35,000)",
+      "IgG": "650 mg/dL (low, immunoglobulin deficiency)"
+    },
+    "demographics": {
+      "age": 67,
+      "gender": "female",
+      "occupation": "Retired administrative assistant",
+      "marital_status": "Widowed, lives alone",
+      "education": "High school diploma"
+    }
+  },
+  "belief_profile": {
+    "b_ipq": {
+      "consequences": 8,
+      "timeline": 9,
+      "personal_control": 5,
+      "treatment_control": 8,
+      "identity": 7,
+      "concern": 7,
+      "coherence": 6,
+      "emotional_response": 8,
+      "causes": [
+        "Bad luck / chance",
+        "Weakened immune system as she got older",
+        "Stress from losing her husband three years ago"
+      ]
+    },
+    "bmq": {
+      "specific_necessity": 23/25,
+      "specific_concerns": 18/25,
+      "general_harm": 7/20,
+      "general_overuse": 6/20
+    }
+  }
+}

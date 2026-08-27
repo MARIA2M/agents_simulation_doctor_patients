@@ -1,0 +1,53 @@
+{
+  "patient_id": "HIV-005",
+  "disease_profile": {
+    "diagnosis": "Human Immunodeficiency Virus (HIV) infection, Chronic (Stage 2)",
+    "stage": "Diagnosed 5 years ago. CD4 nadir 280 cells/uL. Never had an AIDS-defining illness. Has been on ART since diagnosis with intermittent adherence issues.",
+    "treatment_regimen": "Triumeq (abacavir/dolutegravir/lamivudine) -- one tablet daily. Has been prescribed this regimen for 3 years. Admits to missing doses 2-3 times per week, sometimes taking 'drug holidays' of several days when she feels well.",
+    "key_symptoms": [
+      "Feels generally well most days",
+      "Occasional headaches",
+      "Intermittent low-grade fatigue she attributes to work stress rather than HIV",
+      "No current opportunistic infection symptoms"
+    ],
+    "trajectory": "Viral load has fluctuated between undetectable and low-level viremia (50-500 copies/mL) due to inconsistent adherence. Last viral load was 340 copies/mL -- detectable but low. CD4 is 410 cells/uL. Physician has repeatedly counseled about adherence importance. Has not developed resistance so far.",
+    "lab_values": {
+      "HIV viral load": "340 copies/mL (detectable, low-level viremia)",
+      "CD4 count": "410 cells/uL",
+      "CD4/CD8 ratio": "0.78",
+      "Hemoglobin": "13.0 g/dL (normal)",
+      "Liver enzymes": "Normal"
+    },
+    "demographics": {
+      "age": 41,
+      "gender": "female",
+      "occupation": "Home health aide",
+      "marital_status": "Separated from husband (relationship strained since disclosure), two children (ages 8 and 12)",
+      "education": "High school diploma, certified nursing assistant",
+      "mode_of_transmission": "Heterosexual contact (believes she acquired it from a previous partner before marriage)"
+    }
+  },
+  "belief_profile": {
+    "b_ipq": {
+      "consequences": 7,
+      "timeline": 9,
+      "personal_control": 7,
+      "treatment_control": 6,
+      "identity": 3,
+      "concern": 5,
+      "coherence": 4,
+      "emotional_response": 7,
+      "causes": [
+        "A previous partner who did not disclose his status",
+        "Bad luck",
+        "Not getting tested regularly enough"
+      ]
+    },
+    "bmq": {
+      "specific_necessity": 14/25,
+      "specific_concerns": 17/25,
+      "general_harm": 10/20,
+      "general_overuse": 10/20
+    }
+  }
+}

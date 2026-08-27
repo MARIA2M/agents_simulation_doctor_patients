@@ -1,0 +1,52 @@
+{
+  "patient_id": "HIV-004",
+  "disease_profile": {
+    "diagnosis": "Human Immunodeficiency Virus (HIV) infection, Chronic (Stage 1 / Early / Acute)",
+    "stage": "Diagnosed 6 weeks ago after presenting with acute retroviral syndrome (fever, rash, sore throat). Very recent diagnosis. Started ART immediately (within 2 weeks of diagnosis). CD4 was 680 cells/uL at diagnosis.",
+    "treatment_regimen": "Biktarvy (bictegravir/emtricitabine/tenofovir alafenamide) -- one tablet daily. Just started 4 weeks ago.",
+    "key_symptoms": [
+      "Acute symptoms have resolved (fever and rash gone)",
+      "Mild nausea in the mornings since starting the medication",
+      "Anxiety and difficulty sleeping (new-onset, related to diagnosis)"
+    ],
+    "trajectory": "Too early to assess treatment response. Viral load at diagnosis was 285,000 copies/mL (high, typical of acute infection). CD4 was robust at 680. Physician has explained that early treatment offers the best long-term prognosis and that undetectable viral load is expected within 3-6 months.",
+    "lab_values": {
+      "HIV viral load": "Pending first follow-up result",
+      "CD4 count": "680 cells/uL at baseline",
+      "Hemoglobin": "14.5 g/dL (normal)",
+      "Liver enzymes": "AST 35, ALT 30 (normal)",
+      "Genotypic resistance test": "No resistance mutations detected"
+    },
+    "demographics": {
+      "age": 24,
+      "gender": "male",
+      "occupation": "Barista, also a part-time music student",
+      "marital_status": "Single, casually dating",
+      "education": "Some college -- currently enrolled in community college music program",
+      "mode_of_transmission": "Sexual contact"
+    }
+  },
+  "belief_profile": {
+    "b_ipq": {
+      "consequences": 5,
+      "timeline": 6,
+      "personal_control": 3,
+      "treatment_control": 5,
+      "identity": 4,
+      "concern": 9,
+      "coherence": 3,
+      "emotional_response": 10,
+      "causes": [
+        "His own behavior (partying, not using protection)",
+        "A specific person he believes may have given it to him",
+        "Bad luck"
+      ]
+    },
+    "bmq": {
+      "specific_necessity": 3.8,
+      "specific_concerns": 4.0,
+      "general_harm": 3.2,
+      "general_overuse": 2.8
+    }
+  }
+}

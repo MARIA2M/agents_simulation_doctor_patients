@@ -45,7 +45,9 @@ Qué hay, dónde está y qué documento leer para qué. Describe lo que **existe
 |---|---|
 | `report.py` | ¿Qué entrega el médico, y cómo se lee? Esquema, parseo, NA, huecos |
 | `metadata.py` | ¿Con qué se hizo esta corrida? Modelos, temperatura, hashes, commit, nodo |
-| `reproducibility.py` | ¿Cuánto se mueve entre corridas, y separa a los pacientes? |
+| `evaluation.py` | ¿Cuánto se aleja lo informado de la verdad? MAE, sesgo, bandas, correlaciones |
+| `causes/` | ¿Acertó las causas? Taxonomía, coseno, emparejamiento. Portado, sin correr |
+| `reproducibility.py` | ¿Cuánto se mueve entre corridas, y separa a los pacientes? **Borrador**: sin tests y sin quien lo llame, así que sus números no valen todavía (2.4) |
 
 **Puntos de entrada**
 
@@ -54,11 +56,15 @@ Qué hay, dónde está y qué documento leer para qué. Describe lo que **existe
 | `main.py` | Una consulta |
 | `run_batch.py` | N repeticiones × M pacientes |
 | `serve_ollama.sh` | Levantar el servidor con el almacén de modelos correcto |
-| `python -m ahead_agent.reproducibility runs/<tanda>` | Analizar una tanda |
+| `evaluate.py runs/<tanda>` | Evaluar una tanda contra el ground truth (4.7). Con `--causes` puntúa también las causas, y entonces sí necesita servidor |
+| `normalize_ck.py` | Regenerar `patients/` desde `patientsCK/`. Sin `--write` solo enseña lo que haría |
+| `sbatch submit_matrix.sh` | La matriz en HPC: pacientes × 4 brazos × N repeticiones |
 
-**Regla de dependencias.** `nodes` → `llm`. El post-proceso —hoy solo
-`reproducibility.py`— no importa de `nodes` ni de `graph`, para que pueda correr
-sobre corridas de cualquier brazo.
+`reproducibility.py` no tiene punto de entrada: es un borrador que nadie llama.
+
+**Regla de dependencias.** `nodes` → `llm`. El post-proceso —`evaluation.py`,
+`causes/`, `reproducibility.py` y el `evaluate.py` que los llama— no importa de
+`nodes` ni de `graph`, para que pueda correr sobre corridas de cualquier brazo.
 
 ---
 
@@ -66,6 +72,9 @@ sobre corridas de cualquier brazo.
 
 ```
 patients/*.json      10 perfiles. disease_profile (hechos) + belief_profile (ground truth)
+                     Generado: es sintetic_patients/patientsCK/ pasado por normalize_ck.py
+sintetic_patients/patientsCK/       el origen. BMQ como suma cruda: "21/25"
+sintetic_patients/patients_version1/ el corpus anterior, congelado (era el del brazo Ruby)
 prompts/DOCTOR.md    el rol del médico
 prompts/PATIENT.md   el rol del paciente
 prompts/REPORT.md    cómo se pide el informe
@@ -81,10 +90,14 @@ runs/<tanda>/batch.json    el índice de una tanda
 
 ## Lo que todavía no existe
 
-Para que no lo busques: `evaluation.py` (4.2), `coverage.py` (3.2), `causes/`
-(4.3), `artifacts.py` (5.4) y `api_server.py` (§7). Los directorios
-`ahead_agent/api/`, `ahead_agent/causes/`, `skills/styles/` y `resources/` están
-vacíos a propósito — el mecanismo existe, el contenido no.
+Para que no lo busques: `coverage.py` (3.2), `artifacts.py` (5.4) y
+`api_server.py` (§7). Los directorios `ahead_agent/api/` y `resources/` siguen
+vacíos a propósito — el mecanismo existe, el contenido no (1.8).
+
+Ya **sí** existen, y ARCHITECTURE los sigue listando como pendientes:
+`evaluation.py` (4.2), `causes/` (4.3), `evaluate.py` (4.7) y los nueve ficheros
+de `skills/styles/` (1.14). `causes/` está portado pero sin ejercitar: ninguna
+tanda se ha evaluado con `--causes` todavía.
 
 `ARCHITECTURE.md` §2 los lista porque describe el destino, no el presente.
 
@@ -117,8 +130,9 @@ describe en **§3.2**.
 
 ## Fuera de este directorio
 
-- `../modified_versions/ruby_version/` — el brazo Ruby. Los `patients/` de los dos
-  brazos deben ser byte-idénticos (0.3), y hay un test que lo comprueba
+- `../modified_versions/ruby_version/` — el brazo Ruby. **Ya no comparte corpus**:
+  0.3 se retiró el 2026-08-26 y `patients/` es el de CK normalizado. Lo que sigue
+  congelado contra el brazo Ruby es `sintetic_patients/patients_version1/`
 - `../tools/probe_tools.py` y `probe_hpc.sh` — sondas de tool calling (§6.2).
   **Están fuera del repo git**
 - `/gpfs/projects/bsc02/llm_models/ollama` — los modelos. No están en `~/.ollama`

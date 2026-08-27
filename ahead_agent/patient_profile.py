@@ -50,12 +50,14 @@ BIPQ_BANDS: Dict[str, Bands] = {
         (8, "You experience significant symptoms that are frequently present and hard to ignore."),
         (10, "You experience many severe symptoms daily. They are a constant presence that affects almost everything you do."),
     ],
+    # concern is worry about what the illness will do; emotional_response is how
+    # it makes you feel now. Kept disjoint on purpose — see emotional_response.
     "concern": [
-        (2, "You are not particularly worried about your illness. You accept it and mostly move on."),
-        (4, "You have mild concerns but do not dwell on them. You are largely at ease."),
-        (6, "You carry moderate concern about your illness and future — it surfaces in conversation."),
-        (8, "You are quite concerned. Worries about the illness come up often and affect your mood."),
-        (10, "You are extremely concerned — worry about your illness is almost constant and difficult to contain."),
+        (2, "You are not particularly worried about what your illness might do. You accept it and mostly move on."),
+        (4, "You have mild worries about what could happen but do not dwell on them. You are largely at ease about the future."),
+        (6, "You carry moderate worry about what the illness may do to you — it surfaces when the future comes up."),
+        (8, "You worry often about where the illness is heading. Thoughts about what might happen come up unprompted."),
+        (10, "You worry about the illness almost constantly. Fears about what it will do to you are difficult to contain and you keep returning to them."),
     ],
     "coherence": [
         (2, "You have very little understanding of your illness — what it is, why it happened, or what it means."),
@@ -64,12 +66,14 @@ BIPQ_BANDS: Dict[str, Bands] = {
         (8, "You understand your illness well — the science, the treatment, and what to expect."),
         (10, "You have a clear, confident understanding of your illness, its mechanisms, and how to manage it."),
     ],
+    # No worry, anxiety or fear here: those belong to concern, and a patient
+    # given both plays one behaviour the doctor cannot attribute to a dimension.
     "emotional_response": [
-        (2, "Your illness has very little emotional impact. You feel largely stable and unaffected."),
-        (4, "Your illness causes mild emotional discomfort at times — occasional worry or frustration."),
-        (6, "Your illness has a moderate emotional impact. Sadness, anxiety, or frustration surface from time to time."),
-        (8, "Your illness affects you emotionally in a significant way — it is a source of real distress, fear, or grief."),
-        (10, "Your illness is emotionally overwhelming. Intense feelings — fear, anger, sadness, despair — are close to the surface."),
+        (2, "Your illness stirs very little feeling in you. You are largely steady when it comes up."),
+        (4, "Your illness causes mild emotional discomfort at times — occasional frustration or a flat mood."),
+        (6, "Your illness has a moderate emotional impact. Sadness, anger, or frustration surface from time to time."),
+        (8, "Your illness affects you emotionally in a significant way — it is a source of real distress, grief, or anger."),
+        (10, "Your illness is emotionally overwhelming. Intense feelings — anger, sadness, despair — are close to the surface."),
     ],
 }
 

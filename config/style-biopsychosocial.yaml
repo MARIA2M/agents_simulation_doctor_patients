@@ -1,0 +1,14 @@
+# config/style-biopsychosocial.yaml — the other half of the §5.1 contrast (1.14, 6.5)
+#
+# See style-narrowly_biomedical.yaml. The pair is opposed by construction: one
+# style forbids following psychosocial material the patient has not raised, the
+# other is built out of it.
+#
+#   python run_batch.py --profile style-biopsychosocial --repeats 2
+
+profile: style-biopsychosocial
+extends: hpc
+
+skills:
+  doctor:
+    - styles/biopsychosocial
