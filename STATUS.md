@@ -70,18 +70,18 @@ Casi nada anterior a esa fecha es comparable con lo de después:
 | 2.1 | Evidencia antes que número | ✅ en el esquema y en el prompt. El experimento que lo pondría a prueba es 5.4, sin hacer |
 | 2.2 | Anclas intermedias | ✅ desde criterio clínico, sin invertir las bandas del paciente |
 | 2.3 | Confianza declarada | ✅ se emite y se parsea. **No calibra** |
-| 2.4 | Confianza empírica | ◐ medida a mano, sin herramienta. `reproducibility.py` se borró el 2026-08-27. **Pasa a cobertura** |
-| 2.5 | Discriminación entre pacientes | ◐ ordena bien y comprime el rango. No es un scorer degenerado |
-| 2.6 | Validar la confianza declarada contra la empírica | ❌ **pasa a cobertura** |
+| 2.4 | Confianza empírica | ⚠️ **la herramienta ya existe** en `coverage.py`, agrupando por paciente y no por informe. No da número: ninguna tanda tiene N≥3 repeticiones, y por debajo de eso devuelve nulo en vez de un cero engañoso |
+| 2.5 | Discriminación entre pacientes | ◐ ordena bien y comprime el rango. No es un scorer degenerado. Ver D12: la correlación que hoy la mide cuenta cada repetición como un paciente |
+| 2.6 | Validar la confianza declarada contra la empírica | ❌ fuera del V1 de cobertura a propósito. La confianza se lee y se guarda, no se cruza con nada. Depende de que 2.4 dé número |
 
 ## Fase 3 — Integridad del corpus
 
 | | | |
 |---|---|---|
 | 3.1 | Reintentos de transporte | ✅ y disparado en vivo, todos recuperados |
-| 3.2 | Módulo de cobertura | ⚠️ la verificación de citas corrió como script suelto. Sin módulo. **Es el módulo que absorbe 2.4 y 2.6** |
-| 3.3 | Reproducibilidad | ◐ ver 2.4. Sin herramienta |
-| 3.4 | Puerta de corpus utilizable | ❌ |
+| 3.2 | Módulo de cobertura | ✅ **V1**: `ahead_agent/coverage.py` + `cover.py`, determinista, sin modelo y ciego a la verdad. Verifica cada cita en tres comprobaciones separadas —literal, turno declarado, línea del paciente—, cruza puntuación contra evidencia verificada en cuatro estados, y marca los turnos citados por varias dimensiones. **Lo que no hace es decir si el médico preguntó**: eso exige un juicio sobre lenguaje y queda fuera a propósito, así que 1.10 sigue sin cerrarse |
+| 3.3 | Reproducibilidad | ⚠️ ver 2.4: el código está, faltan repeticiones |
+| 3.4 | Puerta de corpus utilizable | ❌ **ya se puede escribir**, que era lo que faltaba: 3.2 existe y `batch.json` da `stop_reason` |
 | 3.5 | Fidelidad del paciente | ❌ tarea nueva, aún sin escribir en TASKS.md |
 
 ## Fase 4 — Evaluación
@@ -112,8 +112,25 @@ y los únicos incidentes fueron reintentos de transporte recuperados.
 **Es el primer corpus del proyecto sin huecos** — el brazo Ruby perdía una parte
 importante de los turnos del paciente y de los informes.
 
-Lo que todavía **no** lo hace utilizable es 3.2 y 3.5: no sabemos si el médico
-preguntó por lo que puntuó, ni si el paciente jugó su perfil.
+**Cobertura corrió sobre ella el 2026-08-27** y es la primera lectura de 3.2
+sobre datos reales. Las cifras están en su `coverage.json`, que es donde se
+pueden volver a comprobar. Tres cosas que sí son estado y no medida:
+
+- La tasa de citas verificadas **coincide con la que se había medido a mano**,
+  así que dos métodos independientes dan lo mismo.
+- **De 2.4 no sale nada**: `e4-1` tiene dos repeticiones y hacen falta tres.
+- Verde en el mapa significa que la cita es real y está bien localizada, **no
+  que sea de esa dimensión**. La clasificación errónea es invisible por
+  construcción, y es lo que mediría E2. `general_overuse` sale NA en la mitad
+  de las consultas, que hasta ahora solo constaba por el documento.
+
+**Vive en `runs/historic/`**, cuyo README dice que nada de ahí es comparable con
+lo posterior al 2026-08-26. O eso o esta sección está desactualizada: es la
+contradicción de 8.11, aplazada a propósito. Hasta resolverla, toda cifra de
+`e4-1` se reporta con la nota de que mide una configuración superada.
+
+Lo que todavía **no** la hace utilizable es 3.5: no sabemos si el paciente jugó
+su perfil. 3.2 ya no está en esa lista.
 
 ---
 
@@ -148,6 +165,23 @@ varias dimensiones traen otro valor, y las dos `general_*` no coinciden en
 ningún paciente. Con ello cae C1, porque CK puntúa las `specific_*` también en
 los pacientes sin receta, y eso se aceptó a sabiendas. `INHERITED_ISSUES.md`
 sigue describiendo C1 como vigente.
+
+**D12 — `between_patient_r` es hoy entre *informes*, no entre pacientes.**
+`evaluate_batch` construye un `PatientMetrics` por `report.json`, así que en una
+tanda de 10 × 2 la correlación corre sobre 20 puntos con cada paciente contado
+dos veces. No invalida el número, pero no es 2.5: esa pide la varianza de las
+medias *por paciente*. `coverage.py` agrupa por `patient_id` justamente para no
+heredar esto. Encontrado al escribir cobertura, sin tocar.
+
+**D13 — Un turno es un intercambio, no una intervención.** `nodes.py` da a la
+pregunta del médico y a la respuesta del paciente **el mismo número**, porque la
+unidad heredada del paradigma de tools es el par `function_call` /
+`function_call_output`. Ruby no numeraba nada, así que no hay desviación
+respecto a él; la numeración es del brazo Python y existe para 2.1 y 8.8.
+Consecuencia: `Evidence.turn` **no identifica al hablante**, hay que cruzar
+turno y rol. Costó un bug en cobertura, y afecta a 8.8, donde la cita llevaría
+al intercambio y no a la frase del paciente. Sin decidir si se numeran líneas:
+cambiarlo obliga a tocar `REPORT.md` y rompe la comparabilidad por hash.
 
 ### De forma
 

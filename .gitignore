@@ -25,3 +25,5 @@ dist/
 
 # Los logs de SLURM: un fichero por trabajo, ninguno reproducible.
 logs/
+__pycache__/
+*.pyc
