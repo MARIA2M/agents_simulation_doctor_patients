@@ -27,7 +27,7 @@ from pathlib import Path
 from typing import Dict, List, Optional
 
 from ahead_agent import coverage
-from ahead_agent.coverage import GROUNDED, SILENT, UNGROUNDED
+from ahead_agent.coverage import CITED_UNSCORED, GROUNDED, SILENT, UNGROUNDED
 
 
 # ── One arm ──────────────────────────────────
@@ -132,44 +132,53 @@ def _gate_b(arms: List[Arm]) -> str:
         and _mean(arms[0].doctor_words.get(patient, [])) is not None
         and _mean(arms[1].doctor_words[patient]) > _mean(arms[0].doctor_words[patient])
     )
-    return (f"  {arms[1].name} has the longer doctor turn in {wins} of {len(shared)} patients "
-            f"(gate B asks for 8 of 10)")
+    # Gate B was fixed for the style pair. Between a baseline and a feature arm
+    # it is just a count, and calling it a gate would borrow authority it has
+    # not got here.
+    return (f"  {arms[1].name} has the longer doctor turn in {wins} of {len(shared)} patients"
+            f"{'   (gate B asks for 8 of 10)' if len(shared) >= 10 else ''}")
 
 
 # ── What each arm reached ────────────────────
 
 
 def coverage_text(arms: List[Arm]) -> str:
+    header = f"{'scored':>7}{'ungr':>6}{'cited':>7}{'silent':>7}"
     lines = [
         "what each arm reached",
         "",
-        f"  {'dimension':22}{'scored':>8}{'ungr':>6}{'silent':>8}"
-        f"{'  ':4}{'scored':>8}{'ungr':>6}{'silent':>8}{'Δscored':>9}",
-        f"  {'':22}{arms[0].name:>22}{'  ':4}{arms[1].name:>22}",
+        f"  {'dimension':22}{header}{'  ':3}{header}{'Δreached':>10}",
+        f"  {'':22}{arms[0].name:>27}{'  ':3}{arms[1].name:>27}",
     ]
 
     for name in coverage.DIMENSIONS:
         counts = [_states(arm, name) for arm in arms]
-        delta = counts[1]["scored"] - counts[0]["scored"]
+        # `causes` is never scored, so counting only scores would call an arm
+        # that cited it five times identical to one that never mentioned it.
+        delta = counts[1]["reached"] - counts[0]["reached"]
         lines.append(
             f"  {name:22}"
-            + "".join(f"{c['scored']:>8}{c['ungrounded']:>6}{c['silent']:>8}{'  ':4}"
+            + "".join(f"{c['scored']:>7}{c['ungrounded']:>6}{c['cited']:>7}{c['silent']:>7}{'  ':3}"
                       for c in counts).rstrip()
-            + f"{delta:>+9}"
+            + f"{delta:>+10}"
         )
 
     lines += ["", "  scored = a number came out.  ungr = a number with no verified quote.",
-              "  silent = never scored and nothing cited. Δ is arm 2 minus arm 1."]
+              "  cited = quoted but not scored.  silent = neither.",
+              "  Δreached = (scored + cited), arm 2 minus arm 1."]
     return "\n".join(lines)
 
 
 def _states(arm: Arm, name: str) -> Dict[str, int]:
     states = [c.dimensions[name].state for c in arm.batch.consultations]
-    return {
+    counts = {
         "scored": sum(1 for s in states if s in (GROUNDED, UNGROUNDED)),
         "ungrounded": sum(1 for s in states if s == UNGROUNDED),
+        "cited": sum(1 for s in states if s == CITED_UNSCORED),
         "silent": sum(1 for s in states if s == SILENT),
     }
+    counts["reached"] = counts["scored"] + counts["cited"]
+    return counts
 
 
 # ── What each arm got right, when evaluated ──

@@ -50,6 +50,10 @@ set -euo pipefail
 # el directorio desde el que se envió; el fallback sirve para ejecutarlo a mano.
 cd "${SLURM_SUBMIT_DIR:-$(dirname "${BASH_SOURCE[0]}")}"
 
+# Sin esto Python escribe stdout por bloques cuando va a fichero, y el log de
+# sbatch avanza a saltos de varios KB: una tanda en marcha parece colgada.
+export PYTHONUNBUFFERED=1
+
 REPEATS="${REPEATS:-5}"
 PREFIX="${PREFIX:-m1}"
 PATIENTS="${PATIENTS:-CLL-001 HIV-003}"

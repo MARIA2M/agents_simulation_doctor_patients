@@ -122,8 +122,17 @@ def report_text(batch_id: str, metrics, reports: int, patients: int, unparsed: l
         "",
         f"{'overall MAE':22}{_cell(metrics.mae):>8}",
         f"{'coverage':22}{metrics.coverage_rate:>8.0%}",
-        f"{'between-patient r':22}{_cell(metrics.between_patient_r):>8}",
     ]
+
+    # 2.5 needs patients to discriminate between. On a single-patient batch the
+    # correlation runs over that patient's repeats, and what moves it is which
+    # dimensions happened to come back NA — so it flips sign between arms of the
+    # same patient. The number is real arithmetic on the wrong thing (D12).
+    if patients < 2:
+        lines.append(f"{'between-patient r':22}{'-':>8}   ({patients} patient: nothing to "
+                     f"discriminate between)")
+    else:
+        lines.append(f"{'between-patient r':22}{_cell(metrics.between_patient_r):>8}")
     if unparsed:
         lines += ["", f"! {len(unparsed)} without a usable report: {', '.join(unparsed)}"]
     return "\n".join(lines)
