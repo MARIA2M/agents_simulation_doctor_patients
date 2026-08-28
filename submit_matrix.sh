@@ -44,7 +44,11 @@
 # ────────────────────────────────────────────────────────────────────────
 set -euo pipefail
 
-cd "$(dirname "${BASH_SOURCE[0]}")"
+# Bajo sbatch, SLURM copia el script a su directorio de spool, así que
+# BASH_SOURCE apunta allí y no al repositorio: `cd $(dirname ...)` dejaba el
+# trabajo en el spool y moría en la comprobación del venv. SLURM_SUBMIT_DIR es
+# el directorio desde el que se envió; el fallback sirve para ejecutarlo a mano.
+cd "${SLURM_SUBMIT_DIR:-$(dirname "${BASH_SOURCE[0]}")}"
 
 REPEATS="${REPEATS:-5}"
 PREFIX="${PREFIX:-m1}"
