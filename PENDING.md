@@ -71,6 +71,40 @@ Lo que falta, por orden de coste:
   puntuaciones sin fundamento obligaría a construir ese juez. Sin declararlo
   antes, se racionaliza cualquier resultado.
 
+### Si algún día se automatiza el juicio: NLI, no prompting
+
+Restricción de método, no preferencia. Sale de **AttributionBench** (arXiv
+2402.15089, en `papers/`), que convierte la evaluación de atribución en
+clasificación binaria sobre siete datasets y mide de `roberta-large-mnli` a
+GPT-4:
+
+- GPT-4 zero-shot con CoT se queda en **73.3%** de macro-F1 y GPT-3.5 afinado en
+  **~80%**. En preguntas de dominio especializado, **por debajo del 60%** — y un
+  diálogo clínico es dominio especializado.
+- **Los LLM grandes rinden por debajo de modelos NLI pequeños afinados.** FLAN-T5
+  de 3B, y en algún conjunto el de 770M, superan a GPT-4. *"Simply switching
+  stronger models cannot significantly improve the performance."*
+- **La ingeniería de prompt no es la palanca.** Cuatro prompts cada vez más
+  elaborados movieron el F1 de 73.2 a 74.0: lo que cambia es el reparto entre
+  falsos positivos y negativos, no el acierto.
+- **Añadir contexto empeora.** Meter la pregunta y la respuesta completas no
+  mejoró y a veces perjudicó, porque el modelo acaba juzgando si la respuesta es
+  útil en vez de si está sostenida.
+- El **11.2%** de sus casos de error resultaron ser fallos de la etiqueta humana,
+  no del modelo. Etiquetar un gold set mal es un riesgo medido, no teórico.
+
+Consecuencias para el diseño, si se llega ahí:
+
+1. **Separar dos tareas que no son la misma.** Decir *si se preguntó* es tipo
+   checklist, y ahí el OSCE francés mide ICC 0.85. Decir *si una cita sostiene
+   una dimensión* es atribución, y ahí el techo es ese 60-80%. No van
+   encadenadas y no merecen la misma confianza.
+2. Para la segunda, **un modelo NLI** —`t5_xxl_true_nli_mixture` es el que usan
+   ALCE y este paper— y no el modelo del médico con un prompt cuidado.
+3. **Entrada mínima**: la cita y la definición de la dimensión, sin el transcript
+   alrededor.
+4. No invertir tiempo en refinar el prompt esperando que suba el acierto.
+
 `reproducibility.py` **se borró el 2026-08-27**: era un borrador de 211 líneas
 sin tests, sin caller y sin revisar. Lo que 2.4 necesitaba se escribió dentro de
 cobertura, desde cero.

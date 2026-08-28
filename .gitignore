@@ -25,5 +25,16 @@ dist/
 
 # Los logs de SLURM: un fichero por trabajo, ninguno reproducible.
 logs/
-__pycache__/
-*.pyc
+
+# Código de terceros que se lee como referencia, no se versiona aquí.
+reference_projects/
+
+# Salidas de GREASY, todas bajo el mismo techo: las listas de tareas y los
+# ficheros de reinicio que escribe él al lado de cada una. El generador sí se
+# versiona (make_greasy_tasks.sh); lo generado no, porque se rehace solo y
+# porque si no cada tanda deja el árbol sucio — y así run_batch aborta.
+greasy_tasks/
+# GREASY escribe el fichero de reinicio en el directorio de trabajo y con el
+# basename de la lista, no al lado de ella, así que se escapa del directorio
+# de arriba.
+*.rst

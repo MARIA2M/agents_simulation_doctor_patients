@@ -12,7 +12,7 @@
 # La matriz de repeticiones: 2 pacientes × 2 brazos × N repeticiones.
 #
 #   mkdir -p logs && sbatch submit_matrix.sh          # 2 pacientes, N=5
-#   REPEATS=3 PREFIX=m2 sbatch submit_matrix.sh
+#   REPEATS=3 RUN=2 sbatch submit_matrix.sh          # segundo intento, no pisa el primero
 #   PATIENTS="$(cd patients && ls *.json | sed 's/.json//')" sbatch submit_matrix.sh
 #
 # Para depurar a mano, la asignación interactiva equivalente (RUN.md §1):
@@ -55,9 +55,18 @@ cd "${SLURM_SUBMIT_DIR:-$(dirname "${BASH_SOURCE[0]}")}"
 export PYTHONUNBUFFERED=1
 
 REPEATS="${REPEATS:-5}"
-PREFIX="${PREFIX:-m1}"
+RUN="${RUN:-1}"
 PATIENTS="${PATIENTS:-CLL-001 HIV-003}"
 PY=./venv-hpc/bin/python
+
+# El nombre de la tanda se lee solo, sin abrir run_meta.json:
+#     CLL-001x5-off-narrowly_biomedical-run1
+#     quién · repeticiones · modo · estilo · intento
+# Las repeticiones van dentro del nombre porque deciden qué métricas admite la
+# tanda: con x5 hay dispersión (2.4) y con x2 no. Modo y estilo son
+# interruptores independientes (§4.1), así que van los dos: la línea base es
+# off + good_doctor y cada brazo mueve uno solo. `run1` es el intento; las
+# repeticiones viven dentro como CLL-001-r1, -r2…
 
 # ── Dónde estamos ───────────────────────────────────────────────────────
 # Las dos señales de §6.3. En sbatch deberían cuadrar siempre; si no cuadran,
@@ -98,11 +107,11 @@ time curl -s "$OLLAMA_URL/api/chat" -d '{
 # ── La matriz ───────────────────────────────────────────────────────────
 # Sin --allow-dirty a propósito: run_batch aborta con el árbol sucio, porque
 # entonces git_commit nombra otro código y la tanda no se podría reproducir.
-run () {   # run <perfil> <paciente> <etiqueta>
-  local profile="$1" patient="$2" tag="$3"
-  local id="${PREFIX}-${tag}"
+run () {   # run <perfil> <paciente> <modo> <estilo>
+  local profile="$1" patient="$2" mode="$3" style="$4"
+  local id="${patient}x${REPEATS}-${mode}-${style}-run${RUN}"
   echo
-  echo "═══ $id — perfil $profile, $REPEATS repeticiones de $patient"
+  echo "═══ $id — perfil $profile, $REPEATS repeticiones"
   "$PY" run_batch.py \
     --profile "$profile" \
     --patients "patients/${patient}.json" \
@@ -111,12 +120,11 @@ run () {   # run <perfil> <paciente> <etiqueta>
 }
 
 for patient in $PATIENTS; do
-  tag="$(echo "$patient" | tr 'A-Z' 'a-z' | tr -d '-')"
-  run hpc                       "$patient" "${tag}-off"
-  run hint-show                 "$patient" "${tag}-show"
-  run style-narrowly_biomedical "$patient" "${tag}-nb"
-  run style-biopsychosocial     "$patient" "${tag}-bps"
+  run hpc                       "$patient" off  good_doctor
+  run hint-show                 "$patient" show good_doctor
+  run style-narrowly_biomedical "$patient" off  narrowly_biomedical
+  run style-biopsychosocial     "$patient" off  biopsychosocial
 done
 
 echo
-echo "listo. las cuatro tandas están en runs/${PREFIX}-*"
+echo "listo. las tandas están en runs/*-run${RUN}"
