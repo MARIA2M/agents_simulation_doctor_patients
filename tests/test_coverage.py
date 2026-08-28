@@ -235,27 +235,31 @@ def _spread_of(batch, dimension):
     return next(s for s in batch.spreads if s.dimension == dimension)
 
 
-def test_spread_is_none_below_three_repeats(tmp_path):
-    """Two points is not a spread, and 0.0 would read as perfect agreement."""
-    spread = _spread_of(batch_with(tmp_path, 4, 8), "consequences")
+def test_spread_is_none_below_the_projects_floor(tmp_path):
+    """Arithmetic allows a sd from three points; TASKS 2.4 says that below five
+    repeats the spread means nothing. The stricter of the two wins, because a
+    number the design calls unreadable will be read anyway once it is printed."""
+    spread = _spread_of(batch_with(tmp_path, 4, 2, 5, 3), "consequences")
 
-    assert spread.n == 2
+    assert spread.n == 4
     assert spread.sd is None
 
 
 def test_spread_by_hand(tmp_path):
-    """4, 2, 5, 3 — sample sd is 1.291."""
-    spread = _spread_of(batch_with(tmp_path, 4, 2, 5, 3), "consequences")
+    """4, 2, 5, 3, 6 — mean 4, sample sd 1.581."""
+    spread = _spread_of(batch_with(tmp_path, 4, 2, 5, 3, 6), "consequences")
 
-    assert spread.n == 4
-    assert spread.sd == 1.291
+    assert spread.n == 5
+    assert spread.sd == 1.581
 
 
 def test_an_na_is_counted_apart_and_never_averaged_in(tmp_path):
-    """An NA is not a value (4.4): it is excluded from the sd and reported."""
-    spread = _spread_of(batch_with(tmp_path, 4, None, 5, 3), "consequences")
+    """An NA is not a value (4.4): it is excluded from the sd and reported.
+    It also costs a repeat — four present values are below the floor."""
+    spread = _spread_of(batch_with(tmp_path, 4, None, 5, 3, 6), "consequences")
 
-    assert (spread.n, spread.na) == (3, 1)
+    assert (spread.n, spread.na) == (4, 1)
+    assert spread.sd is None
 
 
 def test_repeats_of_one_patient_are_not_four_patients(tmp_path):

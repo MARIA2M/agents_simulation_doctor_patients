@@ -35,9 +35,12 @@ SILENT = "SILENT"                    # neither
 # `causes` is never scored (4.3), so it can only ever land in the bottom row.
 UNSCORED_DIMENSIONS = frozenset({CAUSES_DIMENSION})
 
-# Below three present values a spread is noise, so it is None rather than a
-# number nobody should read (2.4).
-MIN_REPEATS = 3
+# TASKS 2.4 sets the budget: N=10 for the baseline, N=5 to screen an
+# intervention, and "por debajo de N=5 la dispersión no significa nada". Three
+# is the arithmetic minimum for a standard deviation and five is the project's,
+# so five it is — emitting a number the design has already declared unreadable
+# is an invitation to read it. Below it the spread is None, never zero.
+MIN_REPEATS = 5
 
 
 # ── Reading a quote back (objective 3) ───────
