@@ -9,13 +9,17 @@ import pytest
 from ahead_agent import evaluation, report
 
 
-def scored(**dimensions):
-    """A Report with only the dimensions named; the rest come back NA."""
+def scored(patient_id="TEST-001", **dimensions):
+    """A Report with only the dimensions named; the rest come back NA.
+
+    The id is a parameter because 2.5 counts people: a batch built out of one
+    id is one patient however many reports it holds (D12).
+    """
     body = {"bipq": {}, "bmq": {}}
     for name, value in dimensions.items():
         block = "bipq" if name in evaluation.BIPQ_DIMENSIONS else "bmq"
         body[block][name] = {"evidence": [], "reasoning": "said so", "score": value}
-    return report.parse(json.dumps(body), "TEST-001")
+    return report.parse(json.dumps(body), patient_id)
 
 
 def truth(**values):
@@ -114,11 +118,10 @@ def test_between_patient_has_nothing_to_say_when_everyone_gets_the_same_report()
     """The failure 2.5 exists to catch: a scorer that repeats one patient can
     still post a respectable MAE. With no spread of its own there is no
     correlation to compute, and None says that — 0.0 would read as a finding."""
-    same = scored(consequences=5, timeline=5)
     batch = [
-        (same, truth(consequences=2, timeline=2)),
-        (same, truth(consequences=5, timeline=5)),
-        (same, truth(consequences=8, timeline=8)),
+        (scored("A", consequences=5, timeline=5), truth(consequences=2, timeline=2)),
+        (scored("B", consequences=5, timeline=5), truth(consequences=5, timeline=5)),
+        (scored("C", consequences=5, timeline=5), truth(consequences=8, timeline=8)),
     ]
 
     assert evaluation.evaluate_batch(batch).between_patient_r is None
@@ -126,9 +129,9 @@ def test_between_patient_has_nothing_to_say_when_everyone_gets_the_same_report()
 
 def test_between_patient_is_one_when_it_ranks_them_perfectly():
     batch = [
-        (scored(consequences=2), truth(consequences=2)),
-        (scored(consequences=5), truth(consequences=5)),
-        (scored(consequences=8), truth(consequences=8)),
+        (scored("A", consequences=2), truth(consequences=2)),
+        (scored("B", consequences=5), truth(consequences=5)),
+        (scored("C", consequences=8), truth(consequences=8)),
     ]
 
     assert evaluation.evaluate_batch(batch).between_patient_r == 1.0
@@ -138,12 +141,60 @@ def test_ranking_survives_a_compressed_scale():
     """What e4-1 shows: the order is right and the range is halved. The
     correlation stays high, which is why it is reported next to the bias."""
     batch = [
-        (scored(consequences=4), truth(consequences=2)),
-        (scored(consequences=5), truth(consequences=5)),
-        (scored(consequences=6), truth(consequences=8)),
+        (scored("A", consequences=4), truth(consequences=2)),
+        (scored("B", consequences=5), truth(consequences=5)),
+        (scored("C", consequences=6), truth(consequences=8)),
     ]
 
     assert evaluation.evaluate_batch(batch).between_patient_r == 1.0
+
+
+# ── D12: 2.5 counts people, not reports ──────
+
+
+def test_repeats_of_one_patient_are_one_point_not_many():
+    """The bug this replaces: evaluate_batch built a PatientMetrics per report,
+    so a 3 × 2 batch correlated six points with each person counted twice, and
+    repeat-to-repeat noise read as agreement between patients."""
+    batch = [
+        (scored("A", consequences=2), truth(consequences=2)),
+        (scored("A", consequences=8), truth(consequences=2)),   # same person, wild repeat
+        (scored("B", consequences=5), truth(consequences=5)),
+        (scored("B", consequences=5), truth(consequences=5)),
+        (scored("C", consequences=8), truth(consequences=8)),
+        (scored("C", consequences=8), truth(consequences=8)),
+    ]
+
+    metrics = evaluation.evaluate_batch(batch)
+
+    # Six reports, three people. A's two repeats average to 5 against a truth of
+    # 2, so the ranking flattens honestly: 0.866. Counting the reports instead
+    # gives 0.548 — a different number, from noise inside one person.
+    assert len(metrics.patients) == 6
+    assert metrics.between_patient_r == 0.866
+
+
+def test_two_patients_are_not_enough_to_rank_anyone():
+    """Two points always correlate at ±1. Reporting that as discrimination is
+    how a demo-sized batch would claim a result it cannot hold."""
+    batch = [
+        (scored("A", consequences=2), truth(consequences=2)),
+        (scored("B", consequences=8), truth(consequences=8)),
+    ]
+
+    assert evaluation.evaluate_batch(batch).between_patient_r is None
+
+
+def test_the_per_dimension_correlation_counts_people_too():
+    """by_dimension carried the same bug as the batch-level number."""
+    batch = [
+        (scored("A", identity=2), truth(identity=2)),
+        (scored("A", identity=2), truth(identity=2)),
+        (scored("B", identity=5), truth(identity=5)),
+        (scored("B", identity=5), truth(identity=5)),
+    ]
+
+    assert evaluation.evaluate_batch(batch).by_dimension["identity"].between_patient_r is None
 
 
 # ── NUEVO: aggregate per dimension, not per patient (4.5) ──

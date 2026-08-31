@@ -70,8 +70,8 @@ Casi nada anterior a esa fecha es comparable con lo de después:
 | 2.1 | Evidencia antes que número | ✅ en el esquema y en el prompt. El experimento que lo pondría a prueba es 5.4, sin hacer |
 | 2.2 | Anclas intermedias | ✅ desde criterio clínico, sin invertir las bandas del paciente |
 | 2.3 | Confianza declarada | ✅ se emite y se parsea. **No calibra** |
-| 2.4 | Confianza empírica | ⚠️ **la herramienta ya existe** en `coverage.py`, agrupando por paciente y no por informe. No da número: ninguna tanda tiene N≥3 repeticiones, y por debajo de eso devuelve nulo en vez de un cero engañoso |
-| 2.5 | Discriminación entre pacientes | ◐ ordena bien y comprime el rango. No es un scorer degenerado. Ver D12: la correlación que hoy la mide cuenta cada repetición como un paciente |
+| 2.4 | Confianza empírica | ⚠️ **la herramienta está completa** en `coverage.py`: `mean` y `sd` por (paciente, dimensión), `mean_within_patient_sd` como medida global y el desglose por dimensión. No da número porque ninguna tanda tiene N≥**5** repeticiones —el suelo del código, no 3— y por debajo devuelve nulo en vez de un cero engañoso |
+| 2.5 | Discriminación entre pacientes | ◐ ordena bien y comprime el rango. No es un scorer degenerado. **D12 arreglado el 2026-08-31**: la correlación agrupa por `patient_id` y exige 3 pacientes distintos, así que ya no cuenta cada repetición como una persona |
 | 2.6 | Validar la confianza declarada contra la empírica | ❌ fuera del V1 de cobertura a propósito. La confianza se lee y se guarda, no se cruza con nada. Depende de que 2.4 dé número |
 
 ## Fase 3 — Integridad del corpus
@@ -81,8 +81,8 @@ Casi nada anterior a esa fecha es comparable con lo de después:
 | 3.1 | Reintentos de transporte | ✅ y disparado en vivo, todos recuperados |
 | 3.2 | Módulo de cobertura | ✅ **V1**: `ahead_agent/coverage.py` + `cover.py`, determinista, sin modelo y ciego a la verdad. Verifica cada cita en tres comprobaciones separadas —literal, turno declarado, línea del paciente—, cruza puntuación contra evidencia verificada en cuatro estados, y marca los turnos citados por varias dimensiones. **Lo que no hace es decir si el médico preguntó**: eso exige un juicio sobre lenguaje y queda fuera a propósito, así que 1.10 sigue sin cerrarse |
 | 3.3 | Reproducibilidad | ⚠️ ver 2.4: el código está, faltan repeticiones |
-| 3.4 | Puerta de corpus utilizable | ❌ **ya se puede escribir**, que era lo que faltaba: 3.2 existe y `batch.json` da `stop_reason` |
-| 3.5 | Fidelidad del paciente | ❌ tarea nueva, aún sin escribir en TASKS.md |
+| 3.4 | Puerta de corpus utilizable | ❌ **ya se puede escribir**, que era lo que faltaba: 3.2 existe, 3.5 existe y `batch.json` da `stop_reason` |
+| 3.5 | Fidelidad del paciente | ✅ `ahead_agent/fidelity.py` + `fidel.py`, 2026-08-31. Determinista, sin modelo, y **lee `patients/*.json`** —lo contrario que cobertura, y por eso van en ficheros separados—. Dos severidades: contradicción contra el régimen o la edad, y mención no sostenida de fármaco o síntoma. No toca ninguna puntuación. **Su tasa es una cota superior, no una medida**: lee entidades nombradas, así que toda fuga cae del lado del aprobado |
 
 ## Fase 4 — Evaluación
 
@@ -98,8 +98,12 @@ Casi nada anterior a esa fecha es comparable con lo de después:
 
 ## Fases 5, 6 y 7
 
-❌ enteras, que es lo previsto. Los dos brazos de `coverage_hint` existen y son
-material de la Etapa 8.
+Casi enteras sin empezar, que es lo previsto. Los dos brazos de `coverage_hint`
+existen y son material de la Etapa 8. Una excepción:
+
+| | | |
+|---|---|---|
+| 5.4 | Tests de artefacto — ablación de evidencia | ⚠️ **escrito y sin correr nunca** (2026-08-28). `ahead_agent/ablation.py` + `rescore.py`: quitan las frases que el médico citó y repuntúan en dos condiciones, `intact` (el control, leído en frío) y `ablate`. Post-proceso sobre una tanda ya escrita, dos llamadas por consulta. Falta el transcript cruzado, que es la otra mitad de 5.4 |
 
 ---
 
@@ -129,8 +133,10 @@ lo posterior al 2026-08-26. O eso o esta sección está desactualizada: es la
 contradicción de 8.11, aplazada a propósito. Hasta resolverla, toda cifra de
 `e4-1` se reporta con la nota de que mide una configuración superada.
 
-Lo que todavía **no** la hace utilizable es 3.5: no sabemos si el paciente jugó
-su perfil. 3.2 ya no está en esa lista.
+Lo que todavía **no** la hace utilizable era 3.5 —no sabíamos si el paciente
+jugó su perfil—. Desde el 2026-08-31 hay herramienta (`fidel.py`) y **no se ha
+pasado sobre `e4-1`**: la pregunta sigue sin respuesta, pero ya no por falta de
+código. Ni 3.2 ni 3.5 están ya en la lista de lo que falta escribir.
 
 ---
 
@@ -166,12 +172,23 @@ ningún paciente. Con ello cae C1, porque CK puntúa las `specific_*` también e
 los pacientes sin receta, y eso se aceptó a sabiendas. `INHERITED_ISSUES.md`
 sigue describiendo C1 como vigente.
 
-**D12 — `between_patient_r` es hoy entre *informes*, no entre pacientes.**
-`evaluate_batch` construye un `PatientMetrics` por `report.json`, así que en una
-tanda de 10 × 2 la correlación corre sobre 20 puntos con cada paciente contado
-dos veces. No invalida el número, pero no es 2.5: esa pide la varianza de las
-medias *por paciente*. `coverage.py` agrupa por `patient_id` justamente para no
-heredar esto. Encontrado al escribir cobertura, sin tocar.
+**D12 — `between_patient_r` contaba informes, no pacientes.** ✅ **Resuelto el
+2026-08-31.** `evaluate_batch` construía un `PatientMetrics` por `report.json`,
+así que en una tanda de 10 × 5 la correlación corría sobre 50 puntos con cada
+persona contada cinco veces, y el ruido de una persona consigo misma se leía
+como acuerdo entre personas.
+
+Ahora `_per_patient_pairs` agrupa por `patient_id`, promedia las repeticiones de
+cada paciente y deja **un punto por persona**; se aplica igual al número global
+y a cada entrada de `by_dimension`, que arrastraba el mismo fallo. Y
+`MIN_PATIENTS = 3`: por debajo devuelve `None`, porque **dos puntos siempre
+correlacionan a ±1** y publicar ese 1.0 sería afirmar una discriminación que la
+tanda no puede sostener.
+
+Cómo se escondió: los tres tests que decían «tres pacientes» construían sus
+informes con el mismo `patient_id`, `TEST-001`. Ahora usan ids distintos, y hay
+un test que fija la diferencia — 0.866 agrupando bien contra 0.548 agrupando
+informes.
 
 **D13 — Un turno es un intercambio, no una intervención.** `nodes.py` da a la
 pregunta del médico y a la respuesta del paciente **el mismo número**, porque la

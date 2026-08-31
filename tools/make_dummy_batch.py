@@ -4,8 +4,13 @@
 # A batch with a known answer, for exercising cover.py without a model.
 #
 # Every cell of the coverage map is planted on purpose, so what comes out can be
-# checked against what went in. Two patients × three repeats — three because
-# below that there is no spread to compute (coverage.MIN_REPEATS).
+# checked against what went in. Two patients × five repeats — five because below
+# that there is no spread to compute (coverage.MIN_REPEATS).
+#
+# It was three until 2026-08-31, from when the floor was three. Against a floor
+# of five that produced a batch whose every SD was null, while the text below
+# promised numbers: the generator quietly stopped exercising the thing it exists
+# to exercise.
 #
 #   python tools/make_dummy_batch.py
 #   python cover.py /tmp/ahead-dummy-batch --sample 6
@@ -113,12 +118,17 @@ def clean(consequences, identity, necessity, concern, timeline) -> dict:
     )
 
 
-# Scores chosen so the spread is a number worth reading, not zero.
+# Scores chosen so the spread is a number worth reading, not zero. Five repeats
+# each: MIN_REPEATS is the floor, so four would put every cell back to null.
 PATIENTS = {
     "DUMMY-001": [PLANTED,
                   clean(5, 6, 4.0, 6, 4),
-                  clean(6, 7, 4.5, 6, 5)],
+                  clean(6, 7, 4.5, 6, 5),
+                  clean(6, 6, 4.0, 7, 5),
+                  clean(5, 7, 4.5, 6, 4)],
     "DUMMY-002": [clean(4, 3, 2.0, 3, 8),
+                  clean(4, 3, 2.5, 3, 8),
+                  clean(5, 4, 2.0, 4, 7),
                   clean(4, 3, 2.5, 3, 8),
                   clean(5, 4, 2.0, 4, 7)],
 }
@@ -128,7 +138,7 @@ PATIENTS = {
 
 
 def write_batch(out: Path) -> None:
-    index = {"batch_id": out.name, "repeats": 3, "consultations": []}
+    index = {"batch_id": out.name, "repeats": 5, "consultations": []}
 
     for patient_id, reports in PATIENTS.items():
         for repeat, report in enumerate(reports, start=1):
@@ -163,7 +173,7 @@ def write_batch(out: Path) -> None:
 EXPECTED = """
 What went in, so you can check what comes out:
 
-  DUMMY-001-r1 carries one of every failure, the other five runs are clean.
+  DUMMY-001-r1 carries one of every failure, the other nine runs are clean.
 
   ●  consequences, identity, specific_necessity   real words, right turn, patient
   ○  concern              a score with no evidence at all
@@ -174,19 +184,27 @@ What went in, so you can check what comes out:
   ◐  causes               never scorable by design
   ·  treatment_control, specific_concerns, general_harm, general_overuse
 
-  quotes            38 checked, 35 verify (92%). Only THREE fail, not four:
+  quotes            62 checked, 59 verify (95%). Only THREE fail, not four:
                     `concern` is ungrounded with no quote at all, so it puts
                     nothing in the denominator. A missing citation and a bad
                     one are different failures and are counted apart.
-  ungrounded rate   4 of the 32 scores emitted = 0.125
-  reused turns      12, which is 2 per consultation — turn 1 (consequences +
+  ungrounded rate   4 of the 52 scores emitted = 0.077
+  reused turns      20, which is 2 per consultation — turn 1 (consequences +
                     identity) and turn 3 (causes + personal_control)
-  SD                the column is the mean over patients, so consequences reads
-                    1.05: 1.528 on DUMMY-001 and 0.577 on DUMMY-002. Per patient
-                    it is in coverage.json. Real numbers at all, unlike e4-1,
-                    only because there are three repeats
+  SD                the column is the mean over patients. `timeline` reads 0.55,
+                    which is 0.548 on each patient; `consequences` is the widest,
+                    because DUMMY-001-r1 plants an 8 among fives and sixes. Per
+                    patient the mean and the SD are both in coverage.json, and
+                    they are real numbers at all — unlike e4-1 — only because
+                    there are five repeats.
 
-  And the thing worth looking at twice: `timeline` has a tight spread (0.58) and
+  mean within-patient SD    0.561, the average of the ten (patient, dimension)
+                    cells that have an SD. It is the 2.4 headline, and averaging
+                    per-patient SDs is what keeps it consistency: pooling the
+                    scores first would let the gap between DUMMY-001 and
+                    DUMMY-002 inflate it, and that gap is 2.5's question.
+
+  And the thing worth looking at twice: `timeline` has a tight spread (0.55) and
   is ungrounded in DUMMY-001-r1. Consistency and grounding are independent —
   a score can be perfectly stable across repeats and stand on nothing.
 """
@@ -201,7 +219,7 @@ def main() -> None:
     out = Path(args.out)
     write_batch(out)
 
-    print(f"written: {out}  (2 patients × 3 repeats)")
+    print(f"written: {out}  (2 patients × 5 repeats)")
     print(EXPECTED)
     print(f"  python cover.py {out} --sample 6")
 

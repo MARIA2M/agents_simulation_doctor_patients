@@ -64,8 +64,49 @@ python3 -c "import json; t=json.load(open('runs/s3-1/transcript.json')); print(t
 
 ```bash
 git status --short                          # tiene que estar vacío
-./venv-hpc/bin/python run_batch.py --profile hpc --repeats 2 --run-id e4-1
+./venv-hpc/bin/python run_batch.py --profile hpc --repeats 5 --run-id e4-1
 ```
+
+---
+
+## El orden completo, de la reserva al número
+
+Cinco etapas. **La única que necesita el servidor después de las consultas es
+`rescore.py`**, así que va antes de soltar el nodo; las otras tres son
+post-proceso puro y corren donde sea.
+
+| | Etapa | Servidor | Por qué va aquí |
+|---|---|---|---|
+| 1 | `git commit` + `pytest` | no | `run_batch` aborta con el árbol sucio |
+| 2 | `run_batch.py` | **sí** | las consultas |
+| 3 | puerta: `batch.json` | no | `stop_reason: doctor` en todas, `events: 0`. Si falla, nada de abajo se lee |
+| 4 | `fidel.py` | no | ¿jugó el paciente su perfil? Si no, ni cobertura ni MAE de esa consulta dicen nada |
+| 5 | `cover.py` | no | 3.2 + 2.4. **3.4: no se analiza un corpus que no ha pasado por aquí** |
+| 6 | `rescore.py` | **sí** | 5.4, dos llamadas por consulta. **Última cosa que necesita el nodo** |
+| 7 | `evaluate.py` | no (salvo `--causes`) | el MAE, al final |
+
+```bash
+# 3 — la puerta
+python3 -c "
+import json; b=json.load(open('runs/TANDA/batch.json'))
+for c in b['consultations']:
+    print(c['run'], c['status'], c.get('stop_reason'), 'events', c.get('events'))"
+
+# 4-7
+./venv-hpc/bin/python fidel.py    runs/TANDA --profile hpc --quotes
+./venv-hpc/bin/python cover.py    runs/TANDA
+./venv-hpc/bin/python rescore.py  runs/TANDA --profile hpc     # con servidor
+./venv-hpc/bin/python evaluate.py runs/TANDA --profile hpc
+```
+
+Cada uno deja un fichero junto a la tanda: `fidelity.json`, `coverage.json`,
+`report-intact.json` / `report-ablate.json` por consulta, y `evaluation.json`.
+Ninguno modifica `report.json`.
+
+**`--repeats 5`, no 2 ni 3.** `coverage.py` fija `MIN_REPEATS = 5` y por debajo
+devuelve `sd: None`: una tanda de 3 sale entera en nulos. Se puede empezar por 2
+y subir después con el **mismo `--run-id`**, que reanuda y solo paga las vueltas
+que faltan.
 
 ---
 
@@ -133,6 +174,12 @@ cd /gpfs/projects/bsc02/bsc064212/AHEAD/use_cases/patient_doctor_agents/agents_s
 salloc -A bsc02 -q acc_debug -p acc --gres=gpu:1 -c 40 -t 1:00:00 \
   srun --export=ALL --pty bash
 ```
+
+`acc_debug` con una hora es para humo. **Una tanda no cabe ahí**: cronometra una
+consulta primero (`--repeats 1` sobre un paciente), multiplica por el número de
+consultas, súmale la ablación de 5.4 y pide `-q acc` con ese tiempo más un
+margen. Quedarse corto no pierde el trabajo —relanzar con el mismo `--run-id`
+reanuda— pero sí pierde la reserva.
 
 El `srun` de dentro **no es opcional** (§6.3). `salloc` reserva los recursos
 pero ejecuta el comando en la máquina desde la que se invoca, y los nodos de

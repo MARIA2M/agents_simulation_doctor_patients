@@ -17,6 +17,10 @@ from .config import BIPQ_DIMENSIONS, BMQ_SUBSCALES
 BIPQ_TOLERANCES: Tuple[Tuple[str, float], ...] = (("within_1", 1.0), ("within_2", 2.0))
 BMQ_TOLERANCES: Tuple[Tuple[str, float], ...] = (("within_half", 0.5), ("within_one", 1.0))
 
+# 2.5 needs distinct people, not distinct reports (D12). Two points always
+# correlate at ±1, so three is the floor at which the number says anything.
+MIN_PATIENTS = 3
+
 
 # ── PORTADO: Pearson in pure Python ──────────
 
@@ -186,26 +190,59 @@ def evaluate_batch(pairs: Sequence[Tuple[Any, Dict[str, Any]]]) -> BatchMetrics:
             scored=len(scored),
             na=len(entries) - len(scored),
             # across patients, on this one dimension: does it rank them right?
-            between_patient_r=_pearson([d.ground_truth for d in scored],
-                                       [d.inferred for d in scored]),
+            between_patient_r=_between_patients(
+                _per_patient_pairs(patients, dimension=name)
+            ),
         )
 
     all_scored = [d for p in patients for d in p.dimensions if d.scored]
     total = sum(len(p.dimensions) for p in patients)
-
-    # 2.5 — on the patient means: a scorer that gives everyone the same profile
-    # lands near zero here however good its MAE
-    means = [(p, _mean(d.ground_truth for d in p.dimensions if d.scored),
-              _mean(d.inferred for d in p.dimensions if d.scored)) for p in patients]
-    usable = [(t, i) for _, t, i in means if t is not None and i is not None]
 
     return BatchMetrics(
         patients=patients,
         by_dimension=by_dimension,
         mae=_mean(d.absolute_error for d in all_scored),
         coverage_rate=round(len(all_scored) / total, 3) if total else 0.0,
-        between_patient_r=_pearson([t for t, _ in usable], [i for _, i in usable]),
+        # 2.5 — on the patient means: a scorer that gives everyone the same
+        # profile lands near zero here however good its MAE
+        between_patient_r=_between_patients(_per_patient_pairs(patients)),
     )
+
+
+# ── 2.5: one point per person, not per report (D12) ──
+
+
+def _per_patient_pairs(
+    patients: Sequence[PatientMetrics], dimension: Optional[str] = None
+) -> List[Tuple[float, float]]:
+    """One (truth, inferred) per patient, averaging that patient's repeats.
+
+    A batch of 10 × 5 holds fifty PatientMetrics and ten people. Correlating the
+    reports counts each person five times and reads their repeat-to-repeat noise
+    as agreement between patients, which is the opposite of what 2.5 asks.
+    """
+    by_patient: Dict[str, List[DimensionMetrics]] = {}
+    for patient in patients:
+        entries = [
+            d for d in patient.dimensions
+            if d.scored and (dimension is None or d.dimension == dimension)
+        ]
+        by_patient.setdefault(patient.patient_id, []).extend(entries)
+
+    pairs = []
+    for _, entries in sorted(by_patient.items()):
+        truth = _mean(d.ground_truth for d in entries)
+        inferred = _mean(d.inferred for d in entries)
+        if truth is not None and inferred is not None:
+            pairs.append((truth, inferred))
+    return pairs
+
+
+def _between_patients(pairs: Sequence[Tuple[float, float]]) -> Optional[float]:
+    """None below MIN_PATIENTS: two people always correlate at ±1."""
+    if len(pairs) < MIN_PATIENTS:
+        return None
+    return _pearson([t for t, _ in pairs], [i for _, i in pairs])
 
 
 # ── Arithmetic ───────────────────────────────

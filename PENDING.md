@@ -1,7 +1,7 @@
 # Pendientes
 
 Lo que queda abierto, con lo que hace falta antes de poder tocarlo. Corte del
-2026-08-27. `TASKS.md` sigue siendo la lista completa por fases; esto es solo lo
+2026-08-31. `TASKS.md` sigue siendo la lista completa por fases; esto es solo lo
 que está vivo.
 
 ---
@@ -9,40 +9,106 @@ que está vivo.
 ## La tanda que desbloquea todo lo demás
 
 **Todo lo que queda abierto se atasca en el mismo sitio: no hay ninguna tanda
-con tres repeticiones.** Sin eso 2.4 no da número, y sin 2.4 no hay 2.5, ni 2.6,
-ni 4.6. Es un problema de datos, no de código.
+con cinco repeticiones.** Sin eso 2.4 no da número, y sin 2.4 no hay 2.5, ni
+2.6, ni 4.6. Es un problema de datos, no de código.
+
+**Son cinco, no tres.** `coverage.py` fija `MIN_REPEATS = 5` y por debajo
+devuelve `sd: None`, que es lo que pide TASKS 2.4 —«por debajo de N=5 la
+dispersión no significa nada»—. Este documento decía tres hasta el 2026-08-31 y
+estaba equivocado: una tanda de 3 sale entera en nulos.
 
 Orden de ejecución, con los brazos de estilo que `skills/styles/README.md` dejó
 fijados y sin lanzar:
 
 ```bash
 git add -A && git commit -m "..."          # run_batch aborta con el árbol sucio
-export OLLAMA_MODELS=/gpfs/projects/bsc02/llm_models/ollama && ollama serve &
+. serve_ollama.sh                          # en el nodo de cómputo, no en login
 
 # Cronometrar UNA antes de comprometerse a cuarenta
 time ./venv-hpc/bin/python run_batch.py --profile style-narrowly_biomedical \
      --patients patients/CLL-001.json --repeats 1 --run-id timing-1
 
-./venv-hpc/bin/python run_batch.py --profile style-narrowly_biomedical --repeats 2 --run-id s52-nb-1
-./venv-hpc/bin/python run_batch.py --profile style-biopsychosocial     --repeats 2 --run-id s52-bps-1
+./venv-hpc/bin/python run_batch.py --profile style-narrowly_biomedical --repeats 5 --run-id s52-nb-1
+./venv-hpc/bin/python run_batch.py --profile style-biopsychosocial     --repeats 5 --run-id s52-bps-1
 
-./venv-hpc/bin/python cover.py    runs/s52-nb-1                                    # sin servidor
+# Post-proceso. Solo rescore.py necesita el servidor: va antes de soltar el nodo.
+./venv-hpc/bin/python fidel.py    runs/s52-nb-1 --profile hpc   # 3.5, sin servidor
+./venv-hpc/bin/python cover.py    runs/s52-nb-1                 # 3.2 + 2.4, sin servidor
+./venv-hpc/bin/python rescore.py  runs/s52-nb-1 --profile hpc   # 5.4, CON servidor
 ./venv-hpc/bin/python evaluate.py runs/s52-nb-1 --profile style-narrowly_biomedical
 ```
 
-**Cobertura antes que evaluación**, porque 3.4 dice que un corpus no se analiza
-hasta pasar 3.2, y un MAE sobre números sin fundamento no significa nada.
+**El orden no es decorativo.** Fidelidad primero: si el paciente no jugó su
+perfil, ni la cobertura ni el MAE de esa consulta dicen nada. Después cobertura,
+porque 3.4 prohíbe analizar un corpus que no ha pasado 3.2, y un MAE sobre
+números sin fundamento no significa nada. La evaluación va la última.
 
-**Empezar por `--repeats 2` y subir a 3 después.** `run_batch.py` salta lo que ya
-existe, así que relanzar con `--repeats 3` y **el mismo `--run-id`** añade solo
-la tercera vuelta. Es la forma de tener 2.4 sin arriesgar una demo.
+**Se puede subir de 2 a 5 sin repetir nada.** `run_batch.py` salta lo que ya
+existe, así que relanzar con `--repeats 5` y **el mismo `--run-id`** añade solo
+las vueltas que faltan.
 
 **Puerta D antes que nada** (`skills/styles/README.md`): que toda consulta cierre
 con `stop_reason: doctor`. Si alguna se agota por `max_turns`, el estilo cambió
 la regla de cierre y todo lo de abajo hereda el problema.
 
-**No comparar contra `e4-1`**: es pre-styles, otro hash de prompt y otras bandas.
-Los dos brazos se comparan entre sí.
+**No comparar contra `e4-1`**: es pre-styles, otro hash de prompt, otras bandas y
+otro build del modelo del paciente (`hpc.yaml` fija hoy
+`dolphin-llama3:8b-v2.9-q8_0`; `e4-1` corrió el `dolphin-llama3` sin etiqueta,
+que resuelve al Q4). Los brazos se comparan entre sí.
+
+---
+
+## El plan de cobertura, por peldaños
+
+El diseño por capas y qué paper respalda cada una están en **ARCHITECTURE §13**.
+Aquí solo el orden y lo que bloquea cada peldaño.
+
+| | Qué es | Bloqueado por | Coste |
+|---|---|---|---|
+| **L0** ✅ | integridad de citas, scores sin fundamento, dispersión | — | hecho |
+| **F1** ✅ | `fidelity.py` — ¿juega el paciente su perfil? | — | hecho 2026-08-31 |
+| **L0b** | 2.5 y 2.6 dentro de cobertura | que acaben las tandas con N≥5 | ~35 líneas |
+| **G** | conjunto etiquetado, forma AIS (ver §13.5) | **tu tiempo**, ~20 min | — |
+| **L1** | el juez de ASKED — checklist, terreno firme | G, y el umbral sin fijar | ~400 líneas + rúbrica |
+| **L2** | ¿la cita es de esa dimensión? — atribución, terreno malo | L1, y un modelo NLI | ver §13.4 |
+
+**L0b y G no dependen una de otra.** L1 y L2 sí van detrás de G, y **no van
+encadenadas entre sí**: son tareas con fiabilidades distintas y L2 puede no
+hacerse nunca.
+
+**Antes de pedir etiquetas**, las dos validaciones que no cuestan anotación
+(§13.6): degradar al médico a propósito y ver si la cobertura cae, y contrastar
+dos modelos entre sí. Ninguna da accuracy, pero acotan.
+
+### F1 — hecho, y con qué límite
+
+`ahead_agent/fidelity.py` + `fidel.py`. Determinista, sin modelo, y **lee
+`patients/*.json`**, que es justo lo que `coverage.py` tiene prohibido: por eso
+son dos ficheros y no uno. Escribe `fidelity.json` y no toca ninguna puntuación.
+
+Cuatro comprobaciones, en dos severidades:
+
+- **CONTRADICTION** — el perfil dice lo contrario, o no dice nada y el paciente
+  se lo inventa. Reclamar medicación con un régimen `watch and wait`, nombrar un
+  fármaco con ese régimen —incluido «I'm taking ibrutinib», que no contiene
+  ningún sustantivo de medicación—, o decir una edad que no es la del perfil
+  **o que el perfil no registra**. Un dato ausente no es carta blanca. Es el
+  fallo real de `s51-nb-1` r1.
+- **UNSUPPORTED** — nombrado y no sostenido: un fármaco de más en un paciente ya
+  tratado, un síntoma que el perfil no lista. Un paciente real da detalles, así
+  que esto se lee, no suspende por sí solo.
+
+**Lo que no es: una medida.** Lee entidades nombradas, no significado, así que
+un paciente que se invente una narrativa entera con palabras que no están en
+ninguna lista pasa limpio. **Todo fallo de detección cae del lado del aprobado**,
+y por eso la tasa que emite es una **cota superior** de la fidelidad y nunca una
+puntuación. Se lee una corrida que falla; no se lee una tasa que aprueba.
+
+Es la misma trampa que este documento describe abajo para la cobertura —una
+lista de palabras mide vocabulario, no tema—. La diferencia está en la pregunta:
+«¿exploró el médico lo familiar?» es una clase semántica abierta y una lista no
+puede contestarla; «¿afirmó el paciente un fármaco?» es una clase cerrada de
+cosas nombradas, donde la lista es precisa y sus fallos caen del lado seguro.
 
 ---
 
@@ -58,9 +124,23 @@ los turnos citados por varias dimensiones. Determinista, sin modelo, sin labels
 y ciego a la verdad. `tools/make_dummy_batch.py` fabrica una tanda con la
 respuesta conocida para ejercitarlo sin servidor.
 
+**2.4 emite tres cosas desde el 2026-08-31**, y las tres salen en `cover.py` y
+en `coverage.json`:
+
+- `mean` y `sd` **por (paciente, dimensión)**. La media se da desde una sola
+  puntuación; la sd solo a partir de `MIN_REPEATS`, y nunca un cero engañoso.
+- `mean_within_patient_sd` — **la medida global de consistencia**: la media de
+  las sd calculadas *dentro* de cada paciente. Promediar sd internas es lo que
+  la mantiene siendo consistencia: agrupar antes las puntuaciones dejaría que la
+  distancia *entre* pacientes la inflara, y eso es el número de 2.5, no el de 2.4.
+- `within_patient_sd_by_dimension` — la mitad accionable: en qué dimensión el
+  médico es menos estable.
+
 Lo que falta, por orden de coste:
 
 - **2.5 y 2.6** — unas pocas líneas cada una, esperando a que 2.4 dé número.
+  Ojo con 2.5: `evaluate.py` la calcula sobre **pacientes distintos**, así que
+  con menos de tres devuelve `None` (D12, arreglado el 2026-08-31).
 - **ASKED** — decir si el médico preguntó exige un juicio sobre lenguaje: rúbrica
   por dimensión, un modelo juzgando con cita obligatoria, y un conjunto anotado a
   mano contra el que validarlo antes de dejarle decidir nada. **No está
@@ -154,9 +234,18 @@ fabricación. El indicio en contra es de clasificación — en `run_01/CLL-001`,
 expresa `Concern`. Cita real, dimensión equivocada. Es un indicio, no una
 prueba: el orden de generación no se deduce del texto final.
 
-Diseño propuesto: un brazo que obligue a emitir cita textual y dimensión
-**antes** del número, y comparar MAE contra el brazo actual. Es Fase 5, que está
-entera sin empezar.
+**La herramienta ya existe y nunca ha corrido.** `ahead_agent/ablation.py` +
+`rescore.py` (5.4, escritos el 2026-08-28): quitan del transcript las frases que
+el propio médico citó y vuelven a puntuar en dos condiciones —`intact` y
+`ablate`—, las dos leídas en frío. `intact` no es un experimento aparte sino el
+**control**: el informe original lo escribió el médico continuando su consulta
+(D9), y un lector en frío ve mucho menos, así que comparar `ablate` contra el
+original mediría la ablación y la pérdida de contexto a la vez.
+
+Si la puntuación no se mueve al quitar la evidencia, la evidencia era
+decorativa. Cuesta dos llamadas por consulta y corre sobre una tanda ya escrita,
+así que **es el experimento más barato que queda abierto**. Lo único que le
+falta es haberse ejecutado una vez.
 
 ---
 

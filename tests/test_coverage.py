@@ -271,6 +271,77 @@ def test_repeats_of_one_patient_are_not_four_patients(tmp_path):
     assert consequences[0].patient_id == "TEST-001"
 
 
+# ── Mean and the overall consistency (2.4) ───
+
+
+def batch_of(tmp_path, **per_patient):
+    """Several patients, each with one repeat per score given."""
+    batch = tmp_path / "b"
+    for patient_id, scores in per_patient.items():
+        for repeat, score in enumerate(scores, start=1):
+            write_run(batch, patient_id, repeat, report_body(consequences=([], score)))
+    return coverage.read_batch(batch)
+
+
+def test_the_mean_is_reported_from_one_score_up(tmp_path):
+    """Unlike the sd, a mean needs no sample size to mean what it says. Holding
+    it back below the floor would leave the map with no centre to read."""
+    spread = _spread_of(batch_with(tmp_path, 4, 2, 5, 3), "consequences")
+
+    assert spread.mean == 3.5
+    assert spread.sd is None
+
+
+def test_the_mean_by_hand(tmp_path):
+    """4, 2, 5, 3, 6 — mean 4.0, sample sd 1.581."""
+    spread = _spread_of(batch_with(tmp_path, 4, 2, 5, 3, 6), "consequences")
+
+    assert spread.mean == 4.0
+    assert spread.sd == 1.581
+
+
+def test_the_overall_consistency_averages_the_per_patient_sds(tmp_path):
+    """A: 3,3,3,3,3 → sd 0. B: 1,1,1,1,3 → sd 0.894. The measure is their
+    average, 0.447 — one number per patient, then the mean of those."""
+    batch = batch_of(tmp_path, A=[3, 3, 3, 3, 3], B=[1, 1, 1, 1, 3])
+
+    assert _spread_of_patient(batch, "A").sd == 0.0
+    assert _spread_of_patient(batch, "B").sd == 0.894
+    assert batch.mean_within_patient_sd == 0.447
+
+
+def test_a_gap_between_patients_does_not_inflate_the_within_patient_sd(tmp_path):
+    """The distinction 2.4 and 2.5 turn on. Two patients parked at opposite ends
+    of the scale, each perfectly steady: consistency is 0, and the distance
+    between them belongs to 2.5, which is a different question."""
+    batch = batch_of(tmp_path, A=[2, 2, 2, 2, 2], B=[9, 9, 9, 9, 9])
+
+    assert batch.mean_within_patient_sd == 0.0
+
+
+def test_the_overall_consistency_is_none_when_nothing_reached_the_floor(tmp_path):
+    """Four repeats is below MIN_REPEATS, so there is no sd to average and the
+    answer is "not enough data", never 0.0."""
+    batch = batch_of(tmp_path, A=[3, 3, 3, 3], B=[1, 1, 1, 3])
+
+    assert batch.mean_within_patient_sd is None
+
+
+def test_the_consistency_is_also_reported_per_dimension(tmp_path):
+    """Which dimension the doctor is least steady on is the actionable half."""
+    batch = batch_of(tmp_path, A=[1, 1, 1, 1, 3])
+    by_dimension = batch.within_patient_sd_by_dimension
+
+    assert by_dimension["consequences"] == 0.894
+    assert by_dimension["timeline"] is None        # never scored in this fixture
+    assert "causes" not in by_dimension            # never scored at all (4.3)
+
+
+def _spread_of_patient(batch, patient_id, dimension="consequences"):
+    return next(s for s in batch.spreads
+                if s.dimension == dimension and s.patient_id == patient_id)
+
+
 # ── The batch ────────────────────────────────
 
 
@@ -337,10 +408,12 @@ def test_the_batch_reads_without_batch_json(tmp_path):
     ]
 
 
-def test_batch_json_decides_when_it_is_there(tmp_path):
-    """A failed consultation is in the index and has nothing to read."""
+def test_a_failed_consultation_is_skipped_even_with_a_transcript(tmp_path):
+    """The index is believed about *who* each consultation is and about which
+    ones failed. A failed one may have left half a transcript behind."""
     batch = tmp_path / "b"
     write_run(batch, "TEST-001", 1, report_body(consequences=([], 8)))
+    write_run(batch, "TEST-001", 2, report_body(consequences=([], 4)))
     (batch / "batch.json").write_text(json.dumps({
         "batch_id": "b",
         "consultations": [
@@ -350,6 +423,28 @@ def test_batch_json_decides_when_it_is_there(tmp_path):
     }))
 
     assert len(coverage.read_batch(batch).consultations) == 1
+
+
+def test_a_resumed_batch_is_read_whole(tmp_path):
+    """The bug s52-bps-1 found: run_batch used to rewrite batch.json with only
+    the consultations of the latest launch, so a batch of 20 read as 8. What
+    exists is decided by the disk; the index only says who each one is."""
+    batch = tmp_path / "b"
+    for repeat in (1, 2, 3):
+        write_run(batch, "TEST-001", repeat, report_body(consequences=([], 8)))
+
+    # An index that only remembers the last launch.
+    (batch / "batch.json").write_text(json.dumps({
+        "batch_id": "b",
+        "consultations": [
+            {"run": "TEST-001-r3", "patient_id": "TEST-001", "repeat": 3, "status": "ok"},
+        ],
+    }))
+
+    result = coverage.read_batch(batch)
+
+    assert len(result.consultations) == 3
+    assert sorted(c.repeat for c in result.consultations) == [1, 2, 3]
 
 
 # ── The invariants (§9) ──────────────────────

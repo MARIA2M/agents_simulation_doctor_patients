@@ -69,6 +69,8 @@ def report_text(batch: coverage.BatchCoverage) -> str:
         "SD: the spread within one patient across repeats (2.4), averaged over",
         "    patients. Per patient it is in coverage.json, never collapsed there.",
         "",
+        _consistency_text(batch),
+        "",
         _quote_text(batch),
         "",
         f"{'ungrounded rate':22}{_cell(batch.ungrounded_rate)}"
@@ -77,7 +79,9 @@ def report_text(batch: coverage.BatchCoverage) -> str:
 
     reuse = sum(len(c.turn_reuse) for c in runs)
     lines.append(
-        f"{'reused turns':22}{reuse}   ({reuse / len(runs):.1f} per consultation, "
+        # padded to the width _cell gives, so this line's parenthetical starts
+        # where the one above it does
+        f"{'reused turns':22}{reuse:<4}   ({reuse / len(runs):.1f} per consultation, "
         "cited by 2+ dimensions — V3 candidates)"
     )
 
@@ -132,6 +136,62 @@ def _why(check) -> str:
     return f"in turn {where}, and spoken by the doctor, not the patient"
 
 
+def _consistency_text(batch: coverage.BatchCoverage) -> str:
+    """2.4 — mean and SD per patient per dimension, and the one number over them.
+
+    Printed per patient rather than pooled: two patients whose scores sit at
+    opposite ends of the scale are perfectly consistent individually, and
+    pooling them first would report that as noise.
+    """
+    scored = [s for s in batch.spreads if s.scores]
+    if not scored:
+        return f"{'consistency (2.4)':22}nothing scored to compare"
+
+    patients = sorted({s.patient_id for s in scored})
+    lines = [
+        f"{'consistency (2.4)':22}mean ± SD per patient, over {coverage.MIN_REPEATS}+ repeats",
+        "",
+        f"{'dimension':22}" + "".join(f"{p:>18}" for p in patients),
+    ]
+
+    for name in coverage.DIMENSIONS:
+        if name in coverage.UNSCORED_DIMENSIONS:
+            continue
+        cells = ""
+        for patient in patients:
+            spread = next((s for s in scored
+                           if s.dimension == name and s.patient_id == patient), None)
+            cells += f"{_mean_sd_cell(spread):>18}"
+        lines.append(f"{name:22}{cells}")
+
+    overall = batch.mean_within_patient_sd
+    lines += [
+        "",
+        # 26, not 22: the label is itself 22 characters, so a 22-wide field puts
+        # the number flush against the "SD" and it reads as "SD0.56".
+        f"{'mean within-patient SD':26}{_cell(overall):>6}"
+        "   ← the overall consistency measure (lower = steadier)",
+    ]
+    if overall is None:
+        lines.append(
+            f"  no cell reached {coverage.MIN_REPEATS} scored repeats, so no SD is "
+            "reported. Below that a spread says nothing (TASKS 2.4)."
+        )
+    return "\n".join(lines)
+
+
+def _mean_sd_cell(spread) -> str:
+    """`4.20 ± 0.84`, or the mean alone while the sample is too small for an SD."""
+    if spread is None or spread.mean is None:
+        return "-"
+    if spread.sd is None:
+        # `± ?(1)` read as a broken number rather than as "one observation, no
+        # spread": a ± with nothing after it sends the reader looking for the
+        # missing figure.
+        return f"{spread.mean:.2f} (n={spread.n})"
+    return f"{spread.mean:.2f} ± {spread.sd:.2f}"
+
+
 def _map_row(name: str, runs, patients: list) -> str:
     """Glyphs grouped by patient, so a hole in one patient reads as a hole."""
     return " ".join(
@@ -145,8 +205,7 @@ def _ungrounded(name: str, runs) -> int:
 
 
 def _mean_sd(name: str, batch: coverage.BatchCoverage):
-    values = [s.sd for s in batch.spreads if s.dimension == name and s.sd is not None]
-    return round(sum(values) / len(values), 2) if values else None
+    return batch.within_patient_sd_by_dimension.get(name)
 
 
 def _cell(value) -> str:
@@ -166,7 +225,12 @@ def write_coverage(batch_dir: Path, batch: coverage.BatchCoverage) -> Path:
         "quote_normalisation": coverage.NORMALISATION,
         "min_repeats_for_spread": coverage.MIN_REPEATS,
         "reads_ground_truth": False,   # 4.1 — coverage is truth-blind by design
-        "overall": {"ungrounded_rate": batch.ungrounded_rate},
+        "overall": {
+            "ungrounded_rate": batch.ungrounded_rate,
+            # 2.4 — the average of the per-(patient, dimension) SDs
+            "mean_within_patient_sd": batch.mean_within_patient_sd,
+        },
+        "within_patient_sd_by_dimension": batch.within_patient_sd_by_dimension,
         "by_consultation": [dataclasses.asdict(c) for c in batch.consultations],
         "by_patient_dimension": [
             {**dataclasses.asdict(s), "n": s.n} for s in batch.spreads

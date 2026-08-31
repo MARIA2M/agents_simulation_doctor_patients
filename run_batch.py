@@ -134,6 +134,16 @@ def main() -> None:
     print(f"  metadata       : {write_metadata(meta, runs_dir)}")
     warm_up(config)
 
+    # Lo que ya dijera un lanzamiento anterior. Sin esto, reanudar reescribía el
+    # índice con las consultas de *esta* sesión y las anteriores desaparecían de
+    # él: una tanda de 20 se leía como de 8.
+    manifest = batch_dir / "batch.json"
+    earlier = {}
+    if manifest.exists():
+        earlier = {c["run"]: c
+                   for c in json.loads(manifest.read_text()).get("consultations", [])
+                   if "run" in c}
+
     index = {"batch_id": meta.run_id, "repeats": args.repeats, "consultations": []}
     done = 0
 
@@ -151,6 +161,12 @@ def main() -> None:
             # the queue cut it off instead of paying for it twice.
             if (outdir / "transcript.json").exists():
                 print(f"\n[{done}/{total}] {name} — already run, skipped")
+                # Se arrastra al índice nuevo. Saltarla y no anotarla la borraba
+                # del registro de la tanda aunque siguiera en disco.
+                index["consultations"].append(
+                    earlier.get(name, {"run": name, "patient_id": patient_id,
+                                       "repeat": repeat, "status": "ok"})
+                )
                 continue
 
             print(f"\n[{done}/{total}] {name}")

@@ -827,4 +827,153 @@ el español —si se mantiene— se regenera.
 | Reescribir el frontend en vez de adaptarlo | Congelar los endpoints de §7 antes de tocar `App.tsx` |
 | **Contaminación entre pacientes.** En `simulation.rb` el agente médico se crea **una vez** fuera del bucle de pacientes y se reinicia con `doctor.start`. Si el reinicio no es completo, el paciente N ve residuos del N−1 | Crear el agente médico **dentro** del bucle, uno por consulta. Test: dos consultas seguidas no comparten ni un mensaje |
 | Dejar la evaluación para el final y descubrir que el corpus no sirve | Corridas de humo por etapa (§8) y la puerta de 3.4 |
+| **Automatizar un juicio que la literatura sitúa en 60-80% y leerlo como si fuera exacto** | §13: lo verificable se verifica, lo interpretable se valida contra etiquetas antes de decidir nada |
 | **Dos documentos nombran una línea base distinta.** `STATUS.md` trata `e4-1` como el corpus vivo y el README de `runs/historic/` la da por superada. Mientras dure, una cifra de `e4-1` puede leerse como línea base sin serlo | Aplazado a la Fase 8 de TASKS (8.11), a propósito: se reconcilia con una tanda nueva delante, no reescribiendo ahora. Hasta entonces toda cifra de `e4-1` se reporta con la nota |
+
+---
+
+## 13. Cobertura: capas, y qué respalda cada una
+
+`coverage.py` no es un módulo con una métrica: son **capas con fiabilidades muy
+distintas**, y mezclarlas es lo que convierte una medida en una impresión. El
+orden va de lo que se comprueba a lo que se interpreta, y cada capa valida a la
+siguiente.
+
+### 13.1 Las tres capas
+
+| | Qué decide | Cómo | Fiabilidad |
+|---|---|---|---|
+| **L0** | ¿existe la cita, en ese turno, dicha por el paciente? | comparación de cadenas | exacta |
+| **L1** | ¿preguntó el médico por esta dimensión? | juicio tipo **checklist** | alta, medible |
+| **L2** | ¿la cita **sostiene** esa dimensión? | juicio de **atribución** | 60-80%, ver 13.4 |
+
+**L0 está hecho** y da tres comprobaciones separadas —literal, turno declarado,
+línea del paciente—, los cuatro estados de puntuación × evidencia, y la
+dispersión entre repeticiones. Sin modelo, sin etiquetas y ciego a la verdad.
+
+**Que las tres comprobaciones vayan separadas no es cosmético.** Al correr sobre
+`e4-1` salió `verbatim 95% · turno 93% · del paciente 0%`, y ese cero exacto
+delató un fallo de código —un turno es un intercambio, y médico y paciente
+comparten número— que un único `verified` habría presentado como «el médico no
+fundamenta nada».
+
+### 13.2 Los cuatro estados
+
+|  | evidencia verificada = 0 | ≥ 1 |
+|---|---|---|
+| **sin puntuar** | `SILENT` | `CITED_UNSCORED` — citó y se negó a puntuar |
+| **puntuado** | **`UNGROUNDED`** — un número sin nada detrás | `GROUNDED` |
+
+`UNGROUNDED` es la celda que justifica el módulo, y tiene nombre en la
+literatura: es el *citation recall* de **ALCE** en el caso de conjunto de citas
+vacío. Lo que **no** se toma de ALCE es el método — ellos resuelven con un modelo
+NLI sobre identificadores de pasaje; aquí el médico emite citas literales y eso
+lo decide `str.find`. Citar ALCE como respaldo de la comparación de cadenas
+sería falso.
+
+### 13.3 Lo que L0 no puede ver, por construcción
+
+Una cita **inventada por el paciente** es una cita real del transcript: verifica
+y sale `GROUNDED`. La integridad de la cita y la fidelidad al perfil son cosas
+distintas, y por eso **3.5 es un módulo hermano y no una capa de cobertura**:
+leería el perfil y rompería la ceguera a la verdad que hace que cobertura valga
+para cualquier brazo.
+
+No es teórico. En la línea base, el paciente afirmó tratamiento activo en 3 de 5
+repeticiones de un paciente en watch-and-wait, y el médico lo aceptó — con lo que
+`specific_necessity` y `specific_concerns` se puntuaron sobre un fármaco
+inexistente.
+
+**Y es el único sitio donde una lista de palabras es legítima.** Buscar
+*Ritalin* no es un proxy: el fármaco es el hecho. Buscar *trabajo* para decidir
+si se exploró `consequences` sí lo es. Entender por qué una vale y la otra no es
+lo que marca la frontera de L1.
+
+### 13.4 Restricción de método para L2
+
+De **AttributionBench** (arXiv 2402.15089), que mide la atribución automática
+como clasificación binaria sobre siete conjuntos:
+
+- GPT-4 zero-shot con CoT: **73.3%** de macro-F1. GPT-3.5 afinado: **~80%**. En
+  dominio especializado, **por debajo del 60%** — y un diálogo clínico lo es.
+- **Los LLM grandes rinden por debajo de modelos NLI pequeños afinados**
+  (FLAN-T5 3B, y en algún conjunto el de 770M).
+- **El prompt no es la palanca**: cuatro prompts cada vez más elaborados movieron
+  el F1 de 73.2 a 74.0. Lo que cambia es el reparto entre falsos positivos y
+  negativos, no el acierto.
+- **Más contexto empeora**: añadir la pregunta y la respuesta completas degradó
+  el resultado, porque el modelo acaba juzgando utilidad en vez de atribución.
+
+Consecuencias, si se llega a L2:
+
+1. Un **modelo NLI**, no el modelo del médico con un prompt cuidado. ALCE usa
+   `google/t5_xxl_true_nli_mixture` y su implementación cabe en ocho líneas:
+   componer `"premise: {pasaje} hypothesis: {afirmación}"` y leer si devuelve `1`.
+2. **Entrada mínima**: la cita y la definición de la dimensión, sin el transcript
+   alrededor.
+3. La cita es un fragmento —*«Bien.»*, *«No sé.»*— cuyo significado solo existe
+   en su turno, así que antes hay que convertirla en proposición autónoma. Es la
+   **explicatura** de AIS, y sin ese paso el juicio es incoherente.
+4. Expectativa en 70-80%, no en «resuelto».
+
+**L1 y L2 no son el mismo problema y no van encadenadas.** L1 es tipo checklist,
+y ahí el estudio del OSCE francés mide ICC 0.85 —frente a ~0 en juicios de
+calidad lingüística, donde además los humanos tampoco coincidían entre sí—. L2 es
+atribución, y es el terreno malo. Tratarlas como una sola escalera fue un error
+de la primera versión de este plan.
+
+### 13.5 La forma del conjunto etiquetado
+
+Cuando haga falta validar L1 o L2, el esquema ya existe: es el de **AIS**, y su
+repositorio publica los datos con esa forma.
+
+- **Dos fases, en orden.** Primero `INT` —¿es interpretable la frase en su
+  contexto?—; la atribución **solo se anota si `INT = 1`**. Nunca se pregunta lo
+  segundo sin haber contestado lo primero.
+- **Acuerdo registrado**, no supuesto: cuántos anotadores coincidieron.
+- **Una salida `Flagged`** para la tarea imposible de juzgar. La abstención es un
+  valor, igual que el NA de 4.4.
+- Las guías completas están en el **paper**, no en el repositorio.
+
+Y un aviso del propio AttributionBench: el **11.2%** de sus casos de error
+resultaron ser fallos de la etiqueta humana. Etiquetar mal es un riesgo medido.
+
+### 13.6 Validar sin etiquetas
+
+Dos comprobaciones que no cuestan anotación y conviene hacer antes de pedirla:
+
+- **Degradación deliberada** (método del OSCE francés): estropear al médico a
+  propósito y comprobar que la cobertura cae. La maquinaria ya existe — son los
+  brazos de estilo.
+- **Acuerdo entre dos modelos** sobre las mismas conversaciones. No demuestra que
+  ninguno acierte, pero el desacuerdo marca el techo del método.
+
+Ninguna da *accuracy*. Sin etiquetas no hay accuracy, y no hay truco que lo evite.
+
+### 13.7 Restricciones heredadas de la codificación de diálogo clínico
+
+De **RIAS**, que lleva desde 2002 codificando interacción médico-paciente:
+
+- La unidad de codificación es **el pensamiento**, no el turno. El nuestro es aún
+  más grueso —un intercambio entero, médico y paciente bajo el mismo número— y
+  los estilos apilan varias preguntas en un turno.
+- **No deducir la pregunta de la respuesta.** L1 y la presencia de información
+  tienen que ser juicios independientes, o el 2×2 se colapsa solo.
+- **Las palabras clave no bastan** para identificar el tipo de pregunta. Es,
+  publicado hace veinte años, la misma conclusión que cerró el lector de puertas
+  el 2026-08-27.
+
+Y de **AMIE**: una rúbrica no se inventa, se deriva de instrumentos publicados y
+se refina con clínicos.
+
+### 13.8 Lo que no tiene respaldo, y hay que decirlo
+
+Dos piezas no se apoyan en nada de la literatura reunida, y el informe tiene que
+declararlo en vez de colgarlas de una cita que dice otra cosa:
+
+- **La comparación de cadenas de L0** no es el método de ALCE aunque comparta el
+  nombre de la métrica.
+- **3.5, la fidelidad del paciente**, mide algo que ninguno de los siete papers
+  mide. El *information recall* del OSCE francés es lo más cercano y va al revés:
+  comprueba si el paciente **suelta** los ítems de su ficha, no si **inventa** los
+  que no tiene. Es métrica nuestra.

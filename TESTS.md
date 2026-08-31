@@ -5,9 +5,14 @@ concreto, y si hace falta. **Se actualiza al añadir, quitar o cambiar un test.*
 Se contrasta con [TASKS.md](TASKS.md) y con los ocho invariantes de
 [ARCHITECTURE.md](ARCHITECTURE.md) §9.
 
-**202 funciones `test_`; los casos con parametrización están sin recontar desde
+**296 funciones `test_`; los casos con parametrización están sin recontar desde
 el 2026-08-26** —eran 346 con 198 funciones—. Ninguna toca la red: el LLM está
 sustituido por respuestas guionizadas.
+
+Este documento se quedó en 202 funciones entre el 2026-08-27 y el 2026-08-31,
+mientras se añadían tres ficheros que no aparecían en la tabla: `test_coverage.py`
+(3.2), `test_ablation.py` (5.4) y `test_fidelity.py` (3.5). Si el recuento de
+aquí no cuadra con el `grep`, gana el `grep`.
 
 El recuento de funciones sale de `grep -c '^def test_' tests/test_*.py`; el de
 casos exige pytest, y `test_corpus.py` acaba de pasar de 21 a 40. Recontar antes
@@ -40,7 +45,7 @@ Leyenda: **✅** hace falta · **📄** documenta más que verifica.
 |---|---|---|---|---|
 | `conftest.py` | — | — | Andamio compartido: `PATIENT`, `speaks`, `note`, `profile`, `in_mode`, y las fixtures `scripted`, `state`, `make_run_profile` | — |
 | `test_config.py` | 22 | 28 | Los perfiles cargan; ninguno deja un ajuste al servidor | 1 |
-| `test_corpus.py` | 7 | 40 | Los 10 pacientes, su ground truth, y de dónde salió cada número | 1 |
+| `test_corpus.py` | 9 | 40 | Los 10 pacientes, su ground truth, y de dónde salió cada número | 1 |
 | `test_metadata.py` | 13 | 15 | La provenance se recoge entera y sobrevive al disco | 1 |
 | `test_llm.py` | 11 | 11 | Qué viaja en cada llamada y qué se reintenta | 2/4 |
 | `test_prompts.py` | 16 | 16 | Composición determinista desde disco, y sus hashes | 2 |
@@ -51,9 +56,12 @@ Leyenda: **✅** hace falta · **📄** documenta más que verifica.
 | `test_coverage_hint.py` | 12 | 18 | El brazo `coverage_hint` | 3 |
 | `test_notes.py` | 9 | 14 | El brazo `working_notes` | 3 |
 | `test_report.py` | 32 | 42 | Esquema, parseo, huecos, reintento, salida a disco | 3 |
-| `test_evaluation.py` | 14 | 14 | MAE, sesgo, bandas, las dos correlaciones | 5 |
+| `test_evaluation.py` | 17 | 17 | MAE, sesgo, bandas, las dos correlaciones, y D12 | 5 |
 | `test_causes.py` | 17 | 17 | Coseno, emparejamiento, taxonomía, método registrado | 5 |
 | `test_evaluate.py` | 8 | 8 | El punto de entrada de 4.7 — nunca estuvo en esta tabla | 5 |
+| `test_coverage.py` | 34 | — | 3.2 y 2.4: integridad de citas, los cuatro estados, media y dispersión | 6 |
+| `test_fidelity.py` | 38 | 50 | 3.5: ¿jugó el paciente su perfil?, y los falsos positivos que lo harían inútil | 6 |
+| `test_ablation.py` | 17 | — | 5.4: qué frase se quita y cómo se comparan las dos condiciones | 7 |
 
 ### `conftest.py`
 
@@ -347,6 +355,81 @@ Dos son regresión pura del parser viejo: `test_text_with_b_and_r_survives_intac
 
 ---
 
+## Fase 6 — Cobertura, fidelidad y ablación
+
+### `test_coverage.py` — 34 funciones ✅
+
+3.2 y 2.4. Fixtures sintéticas: nada aquí necesita una tanda en disco.
+
+El fixture `CONVERSATION` está numerado como **intercambios**, no como
+intervenciones: `nodes.py` da a la pregunta del médico y a la respuesta del
+paciente el mismo número (D13). Leerlo como cuatro turnos es el bug que costó
+una revisión — verificar una cita exige cruzar turno **y** rol, porque coger la
+primera línea con ese número aterriza siempre en el médico.
+
+Los seis de consistencia (2.4) guardan la distinción que separa 2.4 de 2.5:
+`test_a_gap_between_patients_does_not_inflate_the_within_patient_sd` pone dos
+pacientes en extremos opuestos de la escala, cada uno perfectamente estable, y
+exige consistencia 0. Agrupar las puntuaciones antes de calcular la sd daría un
+número grande, y sería la distancia entre personas —la pregunta de 2.5— disfrazada
+de ruido. `test_the_overall_consistency_is_none_when_nothing_reached_the_floor`
+es el otro lado: por debajo de `MIN_REPEATS` la respuesta es «no hay datos», nunca 0.0.
+
+### `test_fidelity.py` — 38 funciones, 50 casos ✅
+
+3.5. **La mitad de este fichero son falsos positivos**, y es deliberado: una
+comprobación que grita sobre habla normal se ignora a la semana, y entonces no
+comprueba nada.
+
+- `test_a_denial_is_not_a_claim` — «no estoy tomando nada» contiene las mismas
+  palabras que la afirmación que buscamos. Sin la ventana de negación el módulo
+  dispararía justo sobre las frases que **demuestran** fidelidad.
+- `test_a_denial_early_in_the_turn_does_not_hide_a_claim_later_in_it` — el otro
+  lado de lo mismo. La negación deja de alcanzar en `but`, `then` o un punto: sin
+  eso, «no nausea at first, but then the nausea got bad» no informaba de nada,
+  porque la búsqueda paraba en la primera aparición y esa estaba negada. La coma
+  **no** corta, para que «no pills, no tablets» siga siendo una sola negación.
+- `test_a_number_with_a_unit_after_it_is_not_an_age` — desde que un perfil *sin*
+  edad también produce hallazgo, «I'm 45 minutes late» dispararía en todos los
+  pacientes en vez de solo en los que discrepan. El guardia de unidades es lo que
+  hace segura esa ampliación.
+- `test_a_drug_claim_is_reported_once_not_twice` — «I'm taking ibrutinib» encaja
+  a la vez en la regla de tratamiento y en la de fármaco. Un reclamo es un
+  hallazgo, y se queda el que nombra el fármaco.
+- `test_the_quote_survives_doubled_whitespace` — las posiciones salían de una
+  copia con los espacios colapsados, así que cualquier espacio doble corría la
+  cita a la izquierda de lo que pretendía enseñar.
+- `test_a_drug_in_the_turn_does_not_hide_the_symptoms` — **el que ningún otro
+  test podía ver.** Una variable local del bucle de fármacos tapaba la del texto
+  completo, así que el barrido de síntomas buscaba dentro del nombre del fármaco
+  y cualquier turno que nombrara uno salía sin síntomas. Cada tipo de hallazgo
+  estaba probado por separado y el fallo solo aparece cuando coinciden dos en el
+  mismo turno.
+- `test_ordinary_words_that_end_like_drugs_are_not_drugs` — la regla que caza
+  `emtricitabine` caza también `medicine`, `routine` y `determine`. Es la razón
+  de que el sufijo se quede en `-nib`/`-mab`/`-vir` y el resto sea lista nombrada.
+- `test_a_drug_named_twice_is_one_finding` y el solapamiento de
+  `headache`/`headaches`: si un síntoma se cuenta dos veces, el número de
+  hallazgos deja de significar nada.
+- `test_the_belief_profile_is_never_read` — **el importante**. Un paciente que
+  expresa una creencia está haciendo su trabajo; comprobar creencias aquí
+  penalizaría exactamente la conducta sobre la que se sostiene la simulación.
+- `test_the_doctors_lines_are_not_checked` — que el médico nombre un fármaco es
+  una pregunta, no una fabricación del paciente.
+- `test_the_scores_are_never_touched` — QC y nada más: lee `transcript.json` y
+  no abre `report.json`.
+
+### `test_ablation.py` — 17 funciones ✅
+
+5.4, solo la parte determinista. `test_the_pieces_rebuild_the_text` es el
+cimiento: si trocear en frases pierde un carácter, el transcript ablado deja de
+ser «el mismo texto menos la evidencia» y pasa a ser otro texto, con lo que la
+comparación entre condiciones no mide la ablación. Se ablan **frases enteras**
+a propósito — recortar la cita por dentro deja un turno mutilado, y el modelo
+reaccionaría a la mutilación además de a la falta de evidencia.
+
+---
+
 ## Qué se quitó, y por qué
 
 Cuatro tests retirados en la limpieza. Ninguno dejó de comprobarse: los cuatro
@@ -373,9 +456,11 @@ escribir). El nombre libre le hace falta a 3.2.
 | Módulo | Estado |
 |---|---|
 | `run_batch.py` | 0 tests. Sus dos guardas (árbol sucio, dos temperaturas a 0) no las comprueba nada. Se deja así de momento |
-| `reproducibility.py` | 0 tests. Borrador sin verificar — se planifica antes de tocarlo, y no se usan sus números |
 | `main.py` | 0 tests |
-| `coverage.py` (3.2) | No existe |
-| `artifacts.py` (5.4) | No existe |
+| `cover.py`, `fidel.py`, `rescore.py` | 0 tests **de la capa CLI**. Los módulos que hay debajo —`coverage.py`, `fidelity.py`, `ablation.py`— sí están cubiertos; lo que no se comprueba es el formateo ni el parseo de argumentos |
+| `ablation.rescore()` | La llamada al modelo de 5.4 no se ejercita: `test_ablation.py` cubre la mitad determinista —qué frase se quita, cómo se comparan las condiciones— y para el resto haría falta guionizar el LLM |
 | `api_server.py` (§8.9) | No existe |
 | Skills §5.1 | El mecanismo está probado; el test espera a que exista un documento de skill sobre el que correrlo |
+
+`reproducibility.py` se borró el 2026-08-27 y ya no aparece aquí. Lo que 2.4
+necesitaba se escribió dentro de `coverage.py`, con tests.

@@ -235,6 +235,7 @@ class Spread:
     dimension: str
     scores: List[float]
     na: int
+    mean: Optional[float]
     sd: Optional[float]
 
     @property
@@ -262,6 +263,10 @@ def spreads(consultations: List[ConsultationCoverage]) -> List[Spread]:
                     dimension=name,
                     scores=present,
                     na=len(values) - len(present),
+                    # The mean is this patient's own average, so it is reported
+                    # from one score up: unlike the sd it needs no sample size
+                    # to mean what it says.
+                    mean=round(statistics.mean(present), 3) if present else None,
                     # sample sd, and only once there is enough of a sample
                     sd=round(statistics.stdev(present), 3) if len(present) >= MIN_REPEATS else None,
                 )
@@ -288,28 +293,72 @@ class BatchCoverage:
             return None
         return round(sum(1 for s in states if s == UNGROUNDED) / emitted, 3)
 
+    # 2.4 — the headline consistency number
+    @property
+    def mean_within_patient_sd(self) -> Optional[float]:
+        """The average of the per-(patient, dimension) SDs.
+
+        Averaging SDs that were each computed inside one patient is what keeps
+        this a consistency measure: pooling the scores first would let the gap
+        *between* patients inflate it, which is 2.5's number, not 2.4's.
+
+        None when no cell reached MIN_REPEATS — a batch too small to say.
+        """
+        return _mean_of(s.sd for s in self.spreads)
+
+    @property
+    def within_patient_sd_by_dimension(self) -> Dict[str, Optional[float]]:
+        """The same, per dimension: which dimension the doctor is least stable on."""
+        return {
+            name: _mean_of(s.sd for s in self.spreads if s.dimension == name)
+            for name in DIMENSIONS
+            if name not in UNSCORED_DIMENSIONS
+        }
+
+
+def _mean_of(values) -> Optional[float]:
+    present = [v for v in values if v is not None]
+    return round(sum(present) / len(present), 3) if present else None
+
 
 def _index(batch: Path) -> List[Dict[str, Any]]:
-    """Which consultation is which. `batch.json` when it is there — run_batch
-    rewrites it after every consultation, so it survives a walltime kill — and
-    the directory names when it is not."""
+    """Which consultation is which.
+
+    **The disk decides what exists**; `batch.json` only says who each one is.
+    Trusting the index for existence loses whole sessions: a batch resumed after
+    a walltime kill rewrites it with the consultations of *that* launch alone, so
+    a batch of 20 read as 8. The directory name carries the same two facts —
+    `<patient_id>-r<repeat>` — and is written by the same code that writes the
+    transcript, so it cannot disagree with it.
+    """
+    known: Dict[str, Dict[str, Any]] = {}
     manifest = batch / "batch.json"
     if manifest.exists():
-        return [
-            {"run": c["run"], "patient_id": c["patient_id"], "repeat": c["repeat"]}
+        known = {
+            c["run"]: c
             for c in json.loads(manifest.read_text()).get("consultations", [])
-            if c.get("status") == "ok"
-        ]
+            if "run" in c
+        }
 
     entries = []
     for path in sorted(batch.glob("*/transcript.json")):
         name = path.parent.name
-        patient_id, _, repeat = name.rpartition("-r")
-        entries.append({
-            "run": name,
-            "patient_id": patient_id or name,
-            "repeat": int(repeat) if repeat.isdigit() else 1,
-        })
+        record = known.get(name)
+
+        # A consultation the index calls failed is named, not read: it may have
+        # left half a transcript behind.
+        if record is not None and record.get("status") not in (None, "ok"):
+            continue
+
+        if record is not None:
+            entries.append({"run": name,
+                            "patient_id": record.get("patient_id") or name,
+                            "repeat": record.get("repeat") or 1})
+        else:
+            patient_id, _, repeat = name.rpartition("-r")
+            entries.append({"run": name,
+                            "patient_id": patient_id or name,
+                            "repeat": int(repeat) if repeat.isdigit() else 1})
     return entries
 
 

@@ -164,6 +164,22 @@ huecos**: se confunden fallos de infraestructura con fallos de inferencia.
 Auditar si el paciente jugó su perfil: contradicciones contra `disease_profile`,
 sin modelo de por medio. Corre sobre una tanda existente, no necesita cola.
 
+Hecho el 2026-08-31 (`ahead_agent/fidelity.py` + `fidel.py`). Dos cosas de
+diseño que la tarea no decía y ahora forman parte de ella:
+
+- **Va en su propio módulo porque lee la verdad.** `coverage.py` tiene prohibido
+  abrir `patients/*.json` —es lo que impide que el mapa de 3.2 vea la respuesta—
+  y fidelidad es exactamente una comprobación *contra* esa respuesta. Juntarlas
+  contaminaría 3.2.
+- **`belief_profile` no se lee, solo `disease_profile`.** Un paciente que expresa
+  una creencia está actuando su perfil, que es su trabajo; comprobar creencias
+  aquí penalizaría la conducta que toda la simulación existe para producir.
+
+Lo que **no** entrega: una medida. Compara entidades nombradas —régimen,
+fármaco, síntoma, edad—, no significado, así que su tasa es una **cota superior**
+de la fidelidad. Toda fuga cae del lado del aprobado. Se usa para leer las
+corridas que fallan, nunca para creerse las que pasan.
+
 ---
 
 ## Fase 4 — Evaluación
@@ -202,11 +218,14 @@ ejercitarlo:
   hallazgo de que la cobertura es muy sensible al umbral, que también es
   resultado. El umbral y el modelo de embeddings van juntos, porque la
   distribución de cosenos cambia con el modelo.
-- **`models.embed` no se valida.** `hpc.yaml` pide un modelo de HuggingFace que
-  este código no puede alcanzar, porque solo habla con Ollama. Hoy «modelo
-  ausente» y «modelo inalcanzable por diseño» salen igual y degradan la métrica
-  a solapamiento de categorías **en silencio**. Debería fallar al cargar el
-  perfil, no a mitad de una tanda.
+- **`models.embed` ya no es el problema que decía este documento.** `hpc.yaml`
+  fija `nomic-embed-text`, que está en el almacén de Ollama y este código sí
+  alcanza. La descripción anterior —un modelo de HuggingFace inalcanzable— se
+  quedó aquí después de que el perfil se arreglara, y se corrige el 2026-08-31.
+  Lo que sigue sin existir es la **validación**: si algún día falta el modelo,
+  «ausente» y «inalcanzable» seguirán saliendo igual y degradando la métrica a
+  solapamiento de categorías en silencio, a mitad de tanda en vez de al cargar
+  el perfil.
 
 **Cuenta con el coste:** clasificar cada causa es una llamada al modelo, tanto
 las inferidas como las del perfil. Por eso no se llama desde dentro de una

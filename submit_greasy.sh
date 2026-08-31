@@ -49,6 +49,14 @@ echo "[plan] $(grep -cve '^[[:space:]]*$' -e '^[[:space:]]*#' "$TASKS") tareas" 
      "sobre ${SLURM_JOB_NUM_NODES:-1} obreros"
 echo "[node] maestro en $(hostname) / ${SLURM_NODELIST:-?}"
 
+# Lo mismo que valida submit_matrix.sh antes de gastar la asignación: en el nodo
+# de login venv-hpc no importa nada, y eso se ve mejor aquí que en N logs.
+want="$(sed -n 's/^version *= *\([0-9]*\.[0-9]*\).*/\1/p' venv-hpc/pyvenv.cfg)"
+have="$(./venv-hpc/bin/python -c 'import sys; print("%d.%d" % sys.version_info[:2])')"
+[ "$want" = "$have" ] || { echo "venv-hpc espera python $want y este nodo da $have" >&2; exit 1; }
+./venv-hpc/bin/python -c "import langgraph, yaml" || { echo "venv-hpc sin dependencias" >&2; exit 1; }
+echo "[venv] python $have, langgraph ok"
+
 module load openmpi/4.1.5-gcc
 module load greasy
 export GREASY_LOGFILE="logs/greasy_${SLURM_JOB_ID:-manual}.log"
