@@ -1,0 +1,151 @@
+{
+  "patient_id": "CLL-003",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "CLL-003",
+    "clinical_summary": "Patient presents with a tender, newly developed (2-week) lymph node under the left jawline and fatigue of several months duration. Family history of CLL (father). No other lymphadenopathy, weight loss, or night sweats reported. Routine blood work last year was unremarkable. Patient takes a daily multivitamin and occasional ibuprofen. No CLL-specific medication initiated. Plan: blood work (CBC and relevant markers) plus ultrasound/biopsy of the lymph node. Follow-up Thursday at 10 am.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "I've been feeling more tired than usual after work for a few months now, but it's mostly been attributed to my job and the stress that comes with it.",
+            "turn": 3
+          }
+        ],
+        "reasoning": "The patient attributes fatigue to work stress rather than illness, and has not reported any role loss or adaptation to their daily activities.",
+        "score": 2.0,
+        "confidence": 0.7
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "The lump is quite new, only appeared about two weeks ago.",
+            "turn": 2
+          }
+        ],
+        "reasoning": "The patient presents with a new symptom and has not expressed a clear expectation about the duration or course of the illness.",
+        "score": 4.0,
+        "confidence": 0.6
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I'm actually quite diligent about keeping track of my physical health, so I would have mentioned anything else by now.",
+            "turn": 4
+          }
+        ],
+        "reasoning": "The patient appears health-conscious and proactive in monitoring their health, actively seeking medical evaluation.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [],
+        "reasoning": "No treatment has been initiated yet, so there is no evidence about treatment control.",
+        "score": null,
+        "confidence": 0.0
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "Yes, it is a bit tender when you press on it.",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient can describe one specific symptom (tender lymph node) and is questioning the relationship between symptoms.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "I'm glad you're taking this seriously.",
+            "turn": 9
+          }
+        ],
+        "reasoning": "Concern is expressed but minimal; the patient appears accepting and not personally worried about the situation.",
+        "score": 2.0,
+        "confidence": 0.6
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "My dad had Chronic Lymphocytic Leukemia, which runs in our family.",
+            "turn": 3
+          }
+        ],
+        "reasoning": "The patient understands the family connection but is still trying to make sense of their symptoms and the relationship between the lump and fatigue.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "No, that's all for now. Thank you very much, doctor, for your time and concern.",
+            "turn": 10
+          }
+        ],
+        "reasoning": "The patient appears emotionally stable and not significantly affected by the situation, discussing the matter without emotional distress.",
+        "score": 2.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [],
+        "reasoning": "No specific medication has been prescribed for this condition yet.",
+        "score": null,
+        "confidence": 0.0
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "I take a daily multivitamin and occasionally some ibuprofen for minor headaches. Nothing related to CLL or my lymph nodes.",
+            "turn": 6
+          }
+        ],
+        "reasoning": "The patient takes over-the-counter medications without expressing any concerns about them.",
+        "score": 2.0,
+        "confidence": 0.9
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [],
+        "reasoning": "The patient has not expressed any general views about medicines as a class.",
+        "score": null,
+        "confidence": 0.0
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "The patient has not expressed any views about prescribing practices.",
+        "score": null,
+        "confidence": 0.0
+      }
+    },
+    "causes": [
+      "family history of CLL",
+      "work stress"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "My dad had Chronic Lymphocytic Leukemia, which runs in our family.",
+        "turn": 3
+      },
+      {
+        "quote": "it's mostly been attributed to my job and the stress that comes with it.",
+        "turn": 3
+      }
+    ]
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "run_id": "s51-bps-1",
+  "started_at": "2026-08-26T00:04:31+02:00",
+  "profile": "style-biopsychosocial",
+  "models": {
+    "doctor": "glm-4.7-flash:q8_0",
+    "patient": "dolphin-llama3",
+    "embed": "jina-embeddings-v4"
+  },
+  "sampling": {
+    "doctor_temperature": 0.7,
+    "patient_temperature": 0.7,
+    "report_temperature": 0.0,
+    "seed": null,
+    "context_length": 32768,
+    "num_parallel": 1
+  },
+  "server": {
+    "ollama_url": "http://127.0.0.1:11500",
+    "request_timeout": 300,
+    "keep_alive": "4h"
+  },
+  "features": {
+    "coverage_hint": "off",
+    "working_notes": false
+  },
+  "prompts": {
+    "doctor": "sha256:a636f9eea31ef43bece6c4d04b6078a6c02309a6a56fb6311cd587522b10f3e2",
+    "patient": "sha256:015abcca1e792b88282a30e7797c105876d506d095ce44c72dfc9bebe6bd6334",
+    "report": "sha256:a50756908605ffecfb06012d91335c1ebd4024e28296b863db32ca93745823cf",
+    "doctor_rubric": "sha256:a0dc400a5c317478a2fed0df2bd4c7033f43fa259219f62e609d1a558c706c9e",
+    "tools": "sha256:68cf2ed0d7b64657886e9a16e49568f2a93022bb422077f3a069d2a24e809fc9",
+    "patient_bands": "sha256:2c1b9906f0412bc046911b562f64b8b9c08461ac99fc53d85ec02e07a13251c9",
+    "skills": {
+      "doctor": [
+        "styles/biopsychosocial"
+      ],
+      "patient": []
+    }
+  },
+  "code": {
+    "git_commit": "f5dbf3b",
+    "dirty": true
+  },
+  "compute": {
+    "hostname": "alogin4",
+    "slurm_nodelist": null,
+    "slurm_job": null,
+    "gpus": 4
+  },
+  "corpus": {
+    "patients": 1,
+    "patient_ids": [
+      "CLL-001"
+    ],
+    "ground_truth_source": "patients/*.json"
+  }
+}

@@ -1,0 +1,242 @@
+{
+  "patient_id": "CLL-004",
+  "turns": 11,
+  "stop_reason": "doctor",
+  "conversation": [
+    {
+      "role": "doctor",
+      "content": "Hello. What brings you in today?",
+      "turn": 1
+    },
+    {
+      "role": "patient",
+      "content": "Good morning, doctor. I'm here because my fatigue won't seem to go away, no matter how much rest I take. I also get these recurrent infections quite often, which have been a real nuisance lately. Plus, I've noticed that I'm losing weight unintentionally and my neck and groin areas feel swollen at times.",
+      "turn": 1
+    },
+    {
+      "role": "doctor",
+      "content": "How long have these symptoms been going on? And when you say recurrent infections, what kind of infections are you getting?",
+      "turn": 2
+    },
+    {
+      "role": "patient",
+      "content": "The fatigue has been a constant for as long as I can remember since my diagnosis. The recurrent infections usually require antibiotics 4-5 times per year. They've been a persistent problem ever since my treatment started, so it's been about two years now. Most of these infections are bacterial in nature.",
+      "turn": 2
+    },
+    {
+      "role": "doctor",
+      "content": "What is your diagnosis, and what treatment are you currently on?",
+      "turn": 3
+    },
+    {
+      "role": "patient",
+      "content": "I was diagnosed with Chronic Lymphocytic Leukemia (CLL) a few years ago. Currently, I'm taking Venetoclax 400 mg daily as my maintenance medication and had completed initial cycles of Obinutuzumab before that. My doctor also mentioned the possibility of needing additional lines of therapy in the future.",
+      "turn": 3
+    },
+    {
+      "role": "doctor",
+      "content": "Are you experiencing any infections or swollen lymph nodes right now, or are these symptoms intermittent?",
+      "turn": 4
+    },
+    {
+      "role": "patient",
+      "content": "Swollen lymph nodes have been a persistent issue. I can feel them in my neck, armpits, and groin areas. As for infections, they've become more frequent recently, so it's quite an ongoing battle to keep them at bay with the help of antibiotics. The fatigue is also there every day, making even simple tasks feel like monumental efforts.",
+      "turn": 4
+    },
+    {
+      "role": "doctor",
+      "content": "Are you taking your Venetoclax as prescribed every day without missing any doses? And have you had any side effects from the medication?",
+      "turn": 5
+    },
+    {
+      "role": "patient",
+      "content": "Yes, I've been taking my Venetoclax exactly as prescribed, 400 mg daily. I completed the ramp-up phase without issues and haven't missed a dose since then. However, I have started to get these terrible headaches recently, which seem to be unrelated to any physical activity or stress. They're quite bothersome and make it difficult for me to focus on anything else.",
+      "turn": 5
+    },
+    {
+      "role": "doctor",
+      "content": "How severe are these headaches, and do they come on suddenly or gradually? Have you had any blood work done since starting Venetoclax to check your blood counts?",
+      "turn": 6
+    },
+    {
+      "role": "patient",
+      "content": "The headaches I've been getting lately have been quite severe. They feel like a dull ache that doesn't go away for hours, sometimes even an entire day. They don't seem to be related to physical activity or stress, but rather appear out of nowhere. As for blood work, it's part of my regular monthly checkups, which also include monitoring my lymphocyte counts. The last time I had blood work done was just a few weeks ago, and everything seemed to be within normal limits.",
+      "turn": 6
+    },
+    {
+      "role": "doctor",
+      "content": "When was your last follow-up appointment, and have you mentioned these headaches to your oncologist?",
+      "turn": 7
+    },
+    {
+      "role": "patient",
+      "content": "My last follow-up appointment was about two months ago. Yes, I did mention the headaches then, but my oncologist didn't seem too concerned at the time. They said it could be due to the treatment or just a side effect of Venetoclax. However, they suggested that we keep an eye on them and report back if anything changes or if they become more severe.",
+      "turn": 7
+    },
+    {
+      "role": "doctor",
+      "content": "Overall, how would you rate your energy level and ability to do your normal daily activities compared to before you started treatment?",
+      "turn": 8
+    },
+    {
+      "role": "patient",
+      "content": "Honestly, doctor, my energy levels have been significantly lower since starting the treatment. Even simple tasks that I used to be able to complete without any issue now require a lot of effort from me. I've also had to start taking afternoon naps most days just to be able to function throughout the day. So, overall, I'd say my ability to do normal daily activities has been greatly affected by these symptoms.",
+      "turn": 8
+    },
+    {
+      "role": "doctor",
+      "content": "When you do get infections, how long do they typically last and how are they being treated? Are you completing the full course of antibiotics each time?",
+      "turn": 9
+    },
+    {
+      "role": "patient",
+      "content": "The infections tend to last for a few weeks, depending on the severity. They're usually treated with antibiotics, which I always complete as prescribed by my doctor. Sometimes, it's just a single round of antibiotics, but other times, I might need to take another round if the infection persists or comes back. It can be quite frustrating and tiring, honestly.",
+      "turn": 9
+    },
+    {
+      "role": "doctor",
+      "content": "Based on what you've described, I'd like to summarize a few key points. You have CLL and are on Venetoclax 400mg daily with good adherence. Your main concerns are persistent fatigue, recurrent bacterial infections, swollen lymph nodes, and new severe headaches.\n\nGiven that your blood work was normal just a few weeks ago but you're experiencing ongoing lymphadenopathy and increasing infection frequency, I'd recommend contacting your oncologist soon to report these symptoms. The headaches you mentioned should also be discussed, especially since they're persistent and severe even though they weren't concerning at your last visit.\n\nIn the meantime, I'd suggest continuing your Venetoclax as prescribed and letting your doctor know when you have a follow-up appointment so they can assess whether any changes in your treatment or additional testing are needed. The frequent infections may indicate your immune system needs additional support, so be sure to mention that specifically at your next visit.",
+      "turn": 10
+    },
+    {
+      "role": "patient",
+      "content": "Thank you for summarizing my situation so clearly, doctor. I'll definitely reach out to my oncologist soon and keep them updated on these symptoms, especially the new headaches. I appreciate your guidance and will make sure to discuss all of this during my follow-up appointment.",
+      "turn": 10
+    },
+    {
+      "role": "doctor",
+      "content": "You're welcome. It's important to stay on top of these symptoms and communicate regularly with your care team. Take care, and I hope your next appointment goes well.",
+      "turn": 11
+    },
+    {
+      "role": "patient",
+      "content": "Thank you for your advice, doctor. I'll make sure to do just that. Have a great day!",
+      "turn": 11
+    }
+  ],
+  "coverage_hint": {},
+  "working_notes": [],
+  "events": [],
+  "usage": [
+    {
+      "role": "doctor",
+      "eval_tokens": 79,
+      "prompt_tokens": 1527
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 67,
+      "prompt_tokens": 1292
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 119,
+      "prompt_tokens": 1676
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 62,
+      "prompt_tokens": 1392
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 91,
+      "prompt_tokens": 1860
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 70,
+      "prompt_tokens": 1476
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 137,
+      "prompt_tokens": 2024
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 73,
+      "prompt_tokens": 1573
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 88,
+      "prompt_tokens": 2237
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 79,
+      "prompt_tokens": 1683
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 116,
+      "prompt_tokens": 2407
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 101,
+      "prompt_tokens": 1805
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 103,
+      "prompt_tokens": 2627
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 78,
+      "prompt_tokens": 1934
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 199,
+      "prompt_tokens": 2811
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 84,
+      "prompt_tokens": 2045
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 139,
+      "prompt_tokens": 3097
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 74,
+      "prompt_tokens": 2168
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 403,
+      "prompt_tokens": 3313
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 55,
+      "prompt_tokens": 2438
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 86,
+      "prompt_tokens": 3774
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 23,
+      "prompt_tokens": 2536
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 832,
+      "prompt_tokens": 3886
+    },
+    {
+      "role": "report",
+      "eval_tokens": 5199,
+      "prompt_tokens": 8733
+    }
+  ]
+}

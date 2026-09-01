@@ -1,0 +1,222 @@
+{
+  "patient_id": "HIV-002",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "HIV-002",
+    "clinical_summary": "The patient has HIV and is on Dovato (dolutegravir + lamivudine), having transitioned from a different medication about 5 months ago. They report feeling 'a bit down' and experiencing sleep changes (longer to fall asleep, more frequent nighttime waking) and reduced energy. They have occasional vivid dreams as a side effect. Their viral load is trending down but not yet undetectable. They have good adherence to the daily one-tablet regimen. They view HIV as a lifelong condition that is part of their identity, and they feel they have significant control over their health through proactive management. They experience challenges in romantic relationships due to HIV disclosure and some days feel overwhelmed emotionally, but generally maintain activities and connections. They have concerns about long-term medication effects (hormonal imbalances) and whether they'll ever be able to stop taking medication.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "HIV has certainly impacted my life in many ways. I think the most noticeable change has been in my relationships — especially romantic ones. It's a challenging topic to bring up when getting to know someone new, and there are times when people have reacted negatively or with discomfort.",
+            "turn": 7
+          },
+          {
+            "quote": "In terms of mood and activities, I will admit that there are days when the weight of everything feels overwhelming.",
+            "turn": 7
+          }
+        ],
+        "reasoning": "The patient has experienced significant changes in romantic relationships due to HIV disclosure and negative reactions. They report days when the 'weight of everything feels overwhelming.' However, they still enjoy hobbies and maintain connections with friends and family. This suggests a major role (romantic relationships) has been affected, but other aspects of life continue.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "To be honest, I see my HIV infection as a lifelong reality. It's not something I can just shake off or ignore — it's part of who I am now.",
+            "turn": 6
+          }
+        ],
+        "reasoning": "The patient explicitly states HIV is a 'lifelong reality' and 'part of who I am now.' They plan on the assumption it stays.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I definitely feel like I have a significant amount of control over my health. I've learned that being proactive about managing HIV is key — making sure I'm taking my medication on time every day, getting regular check-ups with my doctor, and keeping up with any necessary tests or screenings.",
+            "turn": 10
+          },
+          {
+            "quote": "Overall, though, I feel like I'm doing what I can to steer my health in a positive direction, and I'm grateful for the tools and resources available to me.",
+            "turn": 10
+          }
+        ],
+        "reasoning": "The patient feels they have 'significant amount of control' and actively manages their health through medication adherence, check-ups, and screenings. They attribute their current state to their own doing.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "I know there are still challenges ahead, but for now, I'm confident in my treatment plan.",
+            "turn": 8
+          },
+          {
+            "quote": "Since transitioning to Dovato, my viral load has been trending down — it's not yet undetectable, but the numbers are getting closer.",
+            "turn": 5
+          },
+          {
+            "quote": "I think one of the most important things would be seeing my viral load consistently stay undetectable. That would indicate that the virus isn't reproducing as much, which means the medication is doing its job effectively.",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient is confident in their treatment plan and attributes the trending viral load to the medication working. They see the medication as 'doing its job effectively.'",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "To be honest, I see my HIV infection as a lifelong reality. It's not something I can just shake off or ignore — it's part of who I am now.",
+            "turn": 6
+          }
+        ],
+        "reasoning": "The patient explicitly states HIV is 'part of who I am now' and a 'lifelong reality.' They have integrated HIV into their identity.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "I do have some lingering concerns about the long-term effects of the medication and whether they might cause any harm down the line.",
+            "turn": 4
+          },
+          {
+            "quote": "Well, I've read that some medications can cause hormonal imbalances in the long run, and that's definitely something that gives me pause.",
+            "turn": 5
+          },
+          {
+            "quote": "There is definitely some worry about whether I'll ever be able to stop taking it or if I'll always need it in some capacity.",
+            "turn": 7
+          },
+          {
+            "quote": "In terms of mood and activities, I will admit that there are days when the weight of everything feels overwhelming.",
+            "turn": 7
+          }
+        ],
+        "reasoning": "The patient has recurring concerns about long-term medication effects (hormonal imbalances, whether they'll ever be able to stop). They also experience days when the 'weight of everything feels overwhelming.' These concerns recur unprompted and shape some decisions.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "In terms of understanding what the virus is doing and how treatment is helping, I have a good grasp on that part. The medical professionals who have been guiding me through everything have done an excellent job of explaining how Dovato works and what it's up against.",
+            "turn": 8
+          },
+          {
+            "quote": "I think one of the most important things would be seeing my viral load consistently stay undetectable. That would indicate that the virus isn't reproducing as much, which means the medication is doing its job effectively.",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient has a 'good grasp' on what the virus is doing and how treatment is helping. They understand how Dovato works and what it's up against. They can explain the mechanism (viral load not reproducing as much) and the reason for the plan.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "In terms of mood and activities, I will admit that there are days when the weight of everything feels overwhelming.",
+            "turn": 7
+          },
+          {
+            "quote": "HIV has certainly impacted my life in many ways. I think the most noticeable change has been in my relationships — especially romantic ones. It's a challenging topic to bring up when getting to know someone new, and there are times when people have reacted negatively or with discomfort.",
+            "turn": 7
+          }
+        ],
+        "reasoning": "The patient reports days when the 'weight of everything feels overwhelming' and acknowledges emotional impact on mood. They also discuss relationship challenges that affect their emotional state. However, they also mention they 'try not to let it consume me entirely' and still enjoy hobbies and spending time with friends and family. This suggests emotion is recurrent and affects mood, but is not completely consuming.",
+        "score": 8.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "In all honesty, I've been trying to maintain a consistent routine with my new medication schedule. It hasn't been too difficult since it only requires one tablet per day, which is pretty convenient.",
+            "turn": 4
+          },
+          {
+            "quote": "I understand the importance of taking the treatment as prescribed to keep my viral load under control.",
+            "turn": 4
+          },
+          {
+            "quote": "I don't really feel like I'm relying on it too much right now. It's become a natural part of my routine at this point.",
+            "turn": 7
+          },
+          {
+            "quote": "For now, I'm focusing on maintaining consistency and making sure that the treatment plan continues to work well.",
+            "turn": 7
+          }
+        ],
+        "reasoning": "The patient maintains a consistent routine, takes medication as prescribed, and considers it 'important' for keeping viral load under control. They've organized their life around it (it's a 'natural part of my routine').",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "I do have some lingering concerns about the long-term effects of the medication and whether they might cause any harm down the line.",
+            "turn": 4
+          },
+          {
+            "quote": "Well, I've read that some medications can cause hormonal imbalances in the long run, and that's definitely something that gives me pause.",
+            "turn": 5
+          },
+          {
+            "quote": "There is definitely some worry about whether I'll ever be able to stop taking it or if I'll always need it in some capacity.",
+            "turn": 7
+          }
+        ],
+        "reasoning": "The patient has recurring concerns about long-term effects (hormonal imbalances, whether they'll ever be able to stop). These concerns recur unprompted and they've thought about whether they'll always need it.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "I do have some lingering concerns about the long-term effects of the medication and whether they might cause any harm down the line.",
+            "turn": 4
+          },
+          {
+            "quote": "Well, I've read that some medications can cause hormonal imbalances in the long run, and that's definitely something that gives me pause.",
+            "turn": 5
+          }
+        ],
+        "reasoning": "The patient expresses concern about long-term harm from medications, specifically mentioning hormonal imbalances. They've read about potential harm and it 'gives them pause.'",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "The patient never expressed any view about whether doctors prescribe too readily. They trust their medical team and feel they have adequate information about their treatment.",
+        "score": null,
+        "confidence": 0.0
+      }
+    },
+    "causes": [
+      "risky behavior",
+      "not being as careful as I should have been in certain situations"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "As for what caused it, I've always been pretty candid about my own actions leading up to my diagnosis. It was a result of some risky behavior and not being as careful as I should have been in certain situations. Looking back, there are definitely things I wish I could have done differently.",
+        "turn": 6
+      }
+    ]
+  }
+}

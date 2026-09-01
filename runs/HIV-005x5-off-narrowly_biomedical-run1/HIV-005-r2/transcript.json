@@ -1,0 +1,242 @@
+{
+  "patient_id": "HIV-005",
+  "turns": 11,
+  "stop_reason": "doctor",
+  "conversation": [
+    {
+      "role": "doctor",
+      "content": "Hello. What brings you in today?",
+      "turn": 1
+    },
+    {
+      "role": "patient",
+      "content": "Hi, doctor. I've been feeling quite run down lately and thought it might be time to check up on my HIV infection. My viral load has been fluctuating, and I'm concerned about the recent increase. I also get these terrible headaches sometimes, but I'm not sure if that's related or just stress from work.",
+      "turn": 1
+    },
+    {
+      "role": "doctor",
+      "content": "What were your most recent viral load and CD4 count results?",
+      "turn": 2
+    },
+    {
+      "role": "patient",
+      "content": "My last viral load was 340 copies/mL, which is detectable but low-level viremia. My CD4 count is still at a healthy level, at 410 cells/uL. I've been taking Triumeq as prescribed for the past three years, but I must admit that I sometimes miss doses or even take drug holidays when I feel well.",
+      "turn": 2
+    },
+    {
+      "role": "doctor",
+      "content": "When was your viral load last measured at a lower level, and when did the increase to 340 copies/mL occur?",
+      "turn": 3
+    },
+    {
+      "role": "patient",
+      "content": "My viral load has been undetectable for most of my treatment journey, but it started fluctuating a few months ago. The lower levels were seen about two months ago, and then it gradually increased to the current detectable level. I believe this coincided with me being less consistent with my medication regimen.",
+      "turn": 3
+    },
+    {
+      "role": "doctor",
+      "content": "Can you describe your typical pattern with Triumeq - how often do you miss doses, and what do you mean by \"less consistent\"?",
+      "turn": 4
+    },
+    {
+      "role": "patient",
+      "content": "I usually manage to take my pill every day as prescribed, but I'll admit that there are 2-3 times a week when I forget to take it. Sometimes I even skip entire days or take drug holidays without telling the doctor \u2014 I know it's not ideal, but I get worried about potential side effects or how my body will handle it.",
+      "turn": 4
+    },
+    {
+      "role": "doctor",
+      "content": "When do these headaches occur? How long do they last, and have you had them evaluated?",
+      "turn": 5
+    },
+    {
+      "role": "patient",
+      "content": "The headaches come on sporadically, sometimes even daily. They usually last for a couple of hours but can be more persistent on some days. I've never specifically sought medical advice for them since I assumed they were just stress-related or due to my job, which often requires long hours at the computer.",
+      "turn": 5
+    },
+    {
+      "role": "doctor",
+      "content": "Have you experienced any fever, rash, night sweats, weight loss, or other symptoms that might suggest an infection? Have you had any recent illnesses?",
+      "turn": 6
+    },
+    {
+      "role": "patient",
+      "content": "I haven't noticed any fever, rash, or significant weight loss recently. I do experience some low-grade fatigue from time to time, but I usually attribute it to my work schedule and manage it with rest and self-care. As for illnesses, I caught a cold about a month ago, which seems to have cleared up on its own.",
+      "turn": 6
+    },
+    {
+      "role": "doctor",
+      "content": "Consistent HIV treatment is essential to maintain an undetectable viral load and prevent resistance. With 2-3 missed doses per week plus occasional drug holidays, your viral load is now detectable. We should recheck your viral load in 4-6 weeks after improving your adherence.",
+      "turn": 7
+    },
+    {
+      "role": "patient",
+      "content": "I understand the importance of consistent treatment, doctor. I know it's crucial for my health and to avoid resistance. I'll make a real effort to be more diligent with my medication from now on. It's just that sometimes I get worried about potential side effects or feel like I'm just taking this pill indefinitely without any end in sight.",
+      "turn": 7
+    },
+    {
+      "role": "doctor",
+      "content": "Triumeq has a good safety profile. Common side effects are minimal and usually temporary. HIV is a chronic condition requiring lifelong treatment to suppress the virus and prevent progression. We can adjust treatment if side effects become problematic, but consistent daily use is the most effective strategy.",
+      "turn": 8
+    },
+    {
+      "role": "patient",
+      "content": "Thank you for explaining that, doctor. I appreciate your reassurance about the medication's safety profile. It helps to know that there are options should any side effects arise. I will do my best to be more disciplined with my Triumeq regimen and keep our next appointment in 4-6 weeks as planned.",
+      "turn": 8
+    },
+    {
+      "role": "doctor",
+      "content": "For your headaches, monitor them. If they worsen, become severe, or are accompanied by fever, neck stiffness, or neurological symptoms, seek medical attention. Otherwise, stress management and rest are reasonable approaches.",
+      "turn": 9
+    },
+    {
+      "role": "patient",
+      "content": "I'll keep that in mind, doctor. I'll be mindful of any changes in my headache pattern and make sure to reach out if anything concerning comes up. Thank you for your time today.",
+      "turn": 9
+    },
+    {
+      "role": "doctor",
+      "content": "Summary: Viral load 340 copies/mL, CD4 410 cells/uL. Adherence issues (2-3 missed doses per week, occasional drug holidays) likely caused the detectable viremia. Start consistent daily Triumeq. Repeat viral load in 4-6 weeks. Headaches likely stress-related but monitor for concerning features. Next appointment in 4-6 weeks.",
+      "turn": 10
+    },
+    {
+      "role": "patient",
+      "content": "Understood. I will focus on being more consistent with my medication and monitoring my symptoms closely. Thank you again, doctor.",
+      "turn": 10
+    },
+    {
+      "role": "doctor",
+      "content": "I'll see you in 4-6 weeks. Take care.",
+      "turn": 11
+    },
+    {
+      "role": "patient",
+      "content": "You too, doctor. Have a great day!",
+      "turn": 11
+    }
+  ],
+  "coverage_hint": {},
+  "working_notes": [],
+  "events": [],
+  "usage": [
+    {
+      "role": "doctor",
+      "eval_tokens": 73,
+      "prompt_tokens": 1527
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 67,
+      "prompt_tokens": 1282
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 119,
+      "prompt_tokens": 1670
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 74,
+      "prompt_tokens": 1371
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 160,
+      "prompt_tokens": 1867
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 63,
+      "prompt_tokens": 1478
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 135,
+      "prompt_tokens": 2093
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 72,
+      "prompt_tokens": 1578
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 149,
+      "prompt_tokens": 2303
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 62,
+      "prompt_tokens": 1678
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 161,
+      "prompt_tokens": 2517
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 69,
+      "prompt_tokens": 1780
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 194,
+      "prompt_tokens": 2750
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 69,
+      "prompt_tokens": 1916
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 189,
+      "prompt_tokens": 3016
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 64,
+      "prompt_tokens": 2048
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 143,
+      "prompt_tokens": 3272
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 40,
+      "prompt_tokens": 2163
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 127,
+      "prompt_tokens": 3458
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 26,
+      "prompt_tokens": 2292
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 54,
+      "prompt_tokens": 3614
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 11,
+      "prompt_tokens": 2341
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 658,
+      "prompt_tokens": 3682
+    },
+    {
+      "role": "report",
+      "eval_tokens": 4138,
+      "prompt_tokens": 8161
+    }
+  ]
+}

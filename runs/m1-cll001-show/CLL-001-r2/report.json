@@ -1,0 +1,270 @@
+{
+  "patient_id": "CLL-001",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "CLL-001",
+    "clinical_summary": "Patient with Chronic Lymphocytic Leukemia experiencing persistent fatigue and night sweats that significantly disrupt daily life. Not currently on medication; following 'watch and wait' approach. Patient feels uncertain about future timeline, has very little personal control, and is emotionally affected with anxiety and feeling overwhelmed. Trusts medical team's judgment and approach.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "my illness is taking a toll on me. Chronic Lymphocytic Leukemia has really disrupted my life",
+            "turn": 1
+          },
+          {
+            "quote": "even getting out of bed in the morning is a struggle. Simple tasks take a lot more effort than they should",
+            "turn": 2
+          },
+          {
+            "quote": "I don't remember feeling this uncomfortable while sleeping for years now",
+            "turn": 2
+          },
+          {
+            "quote": "it's taking a real toll on me and my life",
+            "turn": 12
+          },
+          {
+            "quote": "It feels invasive and overwhelming to have something so disruptive just linger within me without any clear end in sight",
+            "turn": 12
+          }
+        ],
+        "reasoning": "Patient describes significant disruption to daily life - getting out of bed is a struggle, simple tasks take much more effort, they have persistent night sweats that are uncomfortable, and they feel the illness has 'taken over every aspect of my life'. They've had to adapt their life substantially.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "it feels like there's no end in sight",
+            "turn": 1
+          },
+          {
+            "quote": "Part of me fears this might be something I have to deal with for years—maybe even the rest of my life",
+            "turn": 10
+          },
+          {
+            "quote": "But then there's another part of me that holds onto hope that new treatments will come along and make a difference",
+            "turn": 10
+          }
+        ],
+        "reasoning": "Patient expresses significant uncertainty about the future timeline. They fear it might be for years or the rest of their life, but also hold onto hope for improvement. They don't have a clear expectation.",
+        "score": 6.0,
+        "confidence": 0.9
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I feel like I have very little control",
+            "turn": 9
+          },
+          {
+            "quote": "I've tried making some changes to my lifestyle—eating a bit healthier and trying to get more rest—but the fatigue is just so persistent",
+            "turn": 9
+          },
+          {
+            "quote": "It feels like this illness has taken over every aspect of my life",
+            "turn": 9
+          },
+          {
+            "quote": "All I can do, really, is try to stay positive and hope that things will improve in time",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient feels they have very little control. They've tried lifestyle changes but the fatigue persists. They feel the illness has 'taken over every aspect of my life' and they can only 'try to stay positive and hope that things will improve in time.'",
+        "score": 2.0,
+        "confidence": 0.85
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "I trust that you and the team know best about how to handle this illness",
+            "turn": 5
+          },
+          {
+            "quote": "I do understand how important it is to start treatment when the time comes",
+            "turn": 6
+          },
+          {
+            "quote": "I trust that you'll only prescribe medications when it's absolutely necessary and that you'll keep an eye on any side effects",
+            "turn": 11
+          }
+        ],
+        "reasoning": "The patient trusts the medical team's judgment and approach. They understand treatment is important when needed, but they're not currently on any medication. They trust the team to make the right decisions.",
+        "score": 6.0,
+        "confidence": 0.75
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "The fatigue and night sweats are persistent too",
+            "turn": 1
+          },
+          {
+            "quote": "even getting out of bed in the morning is a struggle",
+            "turn": 2
+          },
+          {
+            "quote": "I don't remember feeling this uncomfortable while sleeping for years now",
+            "turn": 2
+          },
+          {
+            "quote": "it's taking a real toll on me and my life",
+            "turn": 12
+          },
+          {
+            "quote": "It feels invasive and overwhelming to have something so disruptive just linger within me without any clear end in sight",
+            "turn": 12
+          }
+        ],
+        "reasoning": "The patient has persistent fatigue and night sweats that are affecting their daily life. They describe these as significant symptoms that are 'persistent' and 'invasive.'",
+        "score": 8.0,
+        "confidence": 0.85
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "the uncertainty is weighing heavily on me",
+            "turn": 1
+          },
+          {
+            "quote": "The uncertainty is just so hard to handle. It makes me anxious all the time",
+            "turn": 8
+          },
+          {
+            "quote": "I'm worried about what might be coming next... about how this will impact my family... about whether I'll even be able to keep working in the future",
+            "turn": 8
+          },
+          {
+            "quote": "It's hard not knowing what the future holds",
+            "turn": 10
+          }
+        ],
+        "reasoning": "The patient is very concerned about uncertainty, feeling it 'weighs heavily on me' and makes them 'anxious all the time.' They're worried about the future, their family, and their ability to keep working.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I still feel pretty confused about many aspects of my condition",
+            "turn": 3
+          },
+          {
+            "quote": "I'm still quite confused about all this. The more I learn, the less certain I feel about what might work best for me. It's all so overwhelming",
+            "turn": 7
+          },
+          {
+            "quote": "CLL is a type of leukemia—a cancer that affects the blood and bone marrow. It's something that attacks the immune system by producing too many B cells",
+            "turn": 12
+          },
+          {
+            "quote": "Having it means my body isn't functioning the way it should—it's like there's an ongoing battle inside me, one where my own immune system is fighting against itself",
+            "turn": 12
+          }
+        ],
+        "reasoning": "The patient has some understanding of what CLL is (leukemia affecting blood/bone marrow, attacking immune system), but they also admit they're 'still pretty confused about many aspects of my condition' and find the information 'overwhelming.' They have gaps in their understanding.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "Emotionally, it's been a rollercoaster. There are days when I feel really down, overwhelmed by everything. And then there are days when I try to put on a brave face and pretend everything is normal",
+            "turn": 8
+          },
+          {
+            "quote": "It makes me anxious all the time",
+            "turn": 8
+          },
+          {
+            "quote": "It feels like this illness has taken over every aspect of my life",
+            "turn": 9
+          },
+          {
+            "quote": "my family has been my rock through all of this",
+            "turn": 13
+          }
+        ],
+        "reasoning": "The patient describes an emotional rollercoaster, feeling down and overwhelmed at times, trying to put on a brave face, and feeling anxious all the time. The illness has clearly affected their emotional state.",
+        "score": 8.0,
+        "confidence": 0.85
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "I do understand how important it is to start treatment when the time comes",
+            "turn": 6
+          },
+          {
+            "quote": "I trust that you'll only prescribe medications when it's absolutely necessary",
+            "turn": 11
+          }
+        ],
+        "reasoning": "The patient understands that treatment is important when needed, but they're not currently on any medication. They trust the team to prescribe only when absolutely necessary.",
+        "score": 3.0,
+        "confidence": 0.7
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "I've had some worries about potential side effects, of course",
+            "turn": 11
+          }
+        ],
+        "reasoning": "The patient has some concerns about potential side effects, but they trust the team's approach.",
+        "score": 2.0,
+        "confidence": 0.6
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [],
+        "reasoning": "This dimension was never explored in the consultation.",
+        "score": null,
+        "confidence": 0.0
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "This dimension was never explored in the consultation.",
+        "score": null,
+        "confidence": 0.0
+      }
+    },
+    "causes": [
+      "family history",
+      "stress from work",
+      "unexplained"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "There's a part of me that feels like this illness must be linked to my family history. My dad had some form of cancer too",
+        "turn": 4
+      },
+      {
+        "quote": "stress from work could potentially contribute",
+        "turn": 4
+      },
+      {
+        "quote": "I was working crazy hours for years before the symptoms began showing up",
+        "turn": 4
+      },
+      {
+        "quote": "maybe it's just one of those things that happen without any clear cause",
+        "turn": 4
+      }
+    ]
+  }
+}

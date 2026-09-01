@@ -1,0 +1,153 @@
+{
+  "patient_id": "CLL-001",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "CLL-001",
+    "clinical_summary": "The patient presents with fatigue described as a constant drain on energy that persists despite good sleep and reduces motivation, along with swollen lymph nodes in the neck (under jawline and base of neck, firm but not painful, stable for months). They also report night sweats. Their last blood test showed slightly elevated white blood cell count. They have a history of well-controlled hypertension on amlodipine. They are open to medical evaluation and expect tests to determine the cause.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "The fatigue feels more like a constant drain on my energy. Even after getting good sleep, I still feel tired throughout the day. It's harder to find the motivation for things that usually energize me.",
+            "turn": 3
+          }
+        ],
+        "reasoning": "The patient describes fatigue as a constant drain that persists despite good sleep and reduces motivation for activities that usually energize them, indicating significant functional impact on daily life.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "These symptoms have been ongoing for a few months now, though the fatigue has always been there at some level. The swollen nodes are more noticeable recently.",
+            "turn": 2
+          }
+        ],
+        "reasoning": "Symptoms have been present for several months with fatigue at some level for longer and swollen nodes more recently, suggesting a chronic or slowly evolving course rather than acute.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I'm not entirely sure what's causing my symptoms",
+            "turn": 2
+          }
+        ],
+        "reasoning": "The patient appears to believe the illness is beyond direct personal control and expects medical evaluation to determine cause and guide management.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "I believe you'll be running some more tests to check for anything related to CLL or other potential causes of these symptoms",
+            "turn": 4
+          },
+          {
+            "quote": "Yes, that sounds like a good plan to me. I want to get to the bottom of these symptoms so I can better manage my health.",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient trusts that medical evaluation and treatment will identify the cause and allow appropriate management. They are open to the proposed plan.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "I've heard about Chronic Lymphocytic Leukemia (CLL) and thought it might be best to check if that's what it could be.",
+            "turn": 1
+          }
+        ],
+        "reasoning": "The patient mentions CLL as a possibility they've heard about, showing some awareness of the condition but not self-identifying with it.",
+        "score": 4.0,
+        "confidence": 0.6
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "I'm worried something might be wrong.",
+            "turn": 1
+          }
+        ],
+        "reasoning": "The patient expresses worry about what might be wrong about their symptoms.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I'm not entirely sure what's causing my symptoms",
+            "turn": 2
+          }
+        ],
+        "reasoning": "The patient understands their symptoms reasonably well but is uncertain about their cause; they expect doctors to clarify.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "I'm worried something might be wrong.",
+            "turn": 1
+          }
+        ],
+        "reasoning": "The patient shows anxiety/worry about potential illness.",
+        "score": 4.0,
+        "confidence": 0.7
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "I'm on Amlodipine for my hypertension, which has been helping with managing my blood pressure. I don't recall experiencing any significant side effects from it.",
+            "turn": 7
+          }
+        ],
+        "reasoning": "The patient is taking their hypertension medication and reports it's helping with blood pressure control. No concerns mentioned.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "I don't recall experiencing any significant side effects from it.",
+            "turn": 7
+          }
+        ],
+        "reasoning": "No concerns about the medication mentioned.",
+        "score": 2.0,
+        "confidence": 0.7
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [],
+        "reasoning": "Never explored.",
+        "score": null,
+        "confidence": 0.0
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "Never explored.",
+        "score": null,
+        "confidence": 0.0
+      }
+    },
+    "causes": [],
+    "causes_evidence": []
+  }
+}

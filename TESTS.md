@@ -1,28 +1,36 @@
-# Qué cubre la suite
+# What the suite covers
 
-Inventario vivo de `tests/`. Para cada fichero: qué guarda, contra qué fallo
-concreto, y si hace falta. **Se actualiza al añadir, quitar o cambiar un test.**
-Se contrasta con [TASKS.md](TASKS.md) y con los ocho invariantes de
-[ARCHITECTURE.md](ARCHITECTURE.md) §9.
+A living inventory of `tests/`. For each file: what it guards, against which
+concrete failure, and whether it is needed. **Updated whenever a test is added,
+removed or changed.** It is checked against [TASKS.md](TASKS.md) and against the
+eight invariants of [ARCHITECTURE.md](ARCHITECTURE.md) §9.
 
-**296 funciones `test_`; los casos con parametrización están sin recontar desde
-el 2026-08-26** —eran 346 con 198 funciones—. Ninguna toca la red: el LLM está
-sustituido por respuestas guionizadas.
+**321 `test_` functions and 511 cases**, recounted on 2026-09-01 — 296 functions
+and 486 cases on 2026-08-31, and 346 cases with 198 functions on 2026-08-26. None
+of them touches the network: the LLM is replaced by scripted replies.
 
-Este documento se quedó en 202 funciones entre el 2026-08-27 y el 2026-08-31,
-mientras se añadían tres ficheros que no aparecían en la tabla: `test_coverage.py`
-(3.2), `test_ablation.py` (5.4) y `test_fidelity.py` (3.5). Si el recuento de
-aquí no cuadra con el `grep`, gana el `grep`.
+The 511 come out with `AHEAD_GRAPH_TESTS=1`; without the variable it is 509 and 2
+skipped, which are the two end-to-end tests — the only ones that build the graph
+and therefore import `langgraph`.
 
-El recuento de funciones sale de `grep -c '^def test_' tests/test_*.py`; el de
-casos exige pytest, y `test_corpus.py` acaba de pasar de 21 a 40. Recontar antes
-de fiarse del número.
+The jump from 486 to 511 is 5 in `test_llm.py` (N10) and 20 in
+`test_replay_server.py`, and no test changed its meaning.
 
-Los casos **no dependen solo de los tests**: `test_config.py`, `test_metadata.py`
-y `test_prompts.py` se parametrizan sobre `config/*.yaml`, así que **cada brazo
-nuevo añade casos a tests que nadie ha tocado**. Los dos perfiles de estilo de
-1.14 sumaron 7 por sí solos. Un número que sube sin que se haya escrito un test
-no es una regresión: son perfiles nuevos. Para recontar:
+This document sat at 202 functions between 2026-08-27 and 2026-08-31 while three
+files were added that did not appear in the table: `test_coverage.py` (3.2),
+`test_ablation.py` (5.4) and `test_fidelity.py` (3.5). And on 2026-09-01 it was
+five short on `test_llm.py`, which had gone from 11 to 16 with the N10 tests
+without anyone recording it. **If the count here does not match `grep`, `grep`
+wins.**
+
+The function count comes from `grep -c '^def test_' tests/test_*.py`; the case
+count needs pytest. Recount before trusting the number.
+
+The cases **do not depend on the tests alone**: `test_config.py`,
+`test_metadata.py` and `test_prompts.py` are parametrised over `config/*.yaml`,
+so **every new arm adds cases to tests nobody has touched**. The two style
+profiles of 1.14 added 7 on their own. A number going up without a test being
+written is not a regression: it is new profiles. To recount:
 
 ```bash
 ./venv-hpc/bin/python -m pytest tests/ --collect-only -q | sed 's/::.*//' | sort | uniq -c
@@ -32,435 +40,504 @@ no es una regresión: son perfiles nuevos. Para recontar:
 AHEAD_GRAPH_TESTS=1 ./venv-local/bin/python -m pytest tests/ -q
 ```
 
-Sin la variable quedan fuera los dos de punta a punta, que son los únicos que
-construyen el grafo y por tanto importan `langgraph`.
-
-Leyenda: **✅** hace falta · **📄** documenta más que verifica.
+Key: **✅** needed · **📄** documents more than it verifies.
 
 ---
 
-## Resumen
+## Summary
 
-| Fichero | Funciones | Casos | Qué guarda | Etapa |
+| File | Functions | Cases | What it guards | Stage |
 |---|---|---|---|---|
-| `conftest.py` | — | — | Andamio compartido: `PATIENT`, `speaks`, `note`, `profile`, `in_mode`, y las fixtures `scripted`, `state`, `make_run_profile` | — |
-| `test_config.py` | 22 | 28 | Los perfiles cargan; ninguno deja un ajuste al servidor | 1 |
-| `test_corpus.py` | 9 | 40 | Los 10 pacientes, su ground truth, y de dónde salió cada número | 1 |
-| `test_metadata.py` | 13 | 15 | La provenance se recoge entera y sobrevive al disco | 1 |
-| `test_llm.py` | 11 | 11 | Qué viaja en cada llamada y qué se reintenta | 2/4 |
-| `test_prompts.py` | 16 | 16 | Composición determinista desde disco, y sus hashes | 2 |
-| `test_styles.py` | 16 | 95 | Los nueve estilos del médico: registro, forma, contenido y brazos | 2 |
-| `test_tools.py` | 6 | 12 | Leer la llamada, y armar las tools de cada brazo | 2 |
-| `test_nodes.py` | 7 | 7 | El bucle, y el aislamiento del perfil | 2 |
-| `test_patient_profile.py` | 12 | 28 | Puntuación → conducta, y el hueco que se deja sin puntuación | 2 |
-| `test_coverage_hint.py` | 12 | 18 | El brazo `coverage_hint` | 3 |
-| `test_notes.py` | 9 | 14 | El brazo `working_notes` | 3 |
-| `test_report.py` | 32 | 42 | Esquema, parseo, huecos, reintento, salida a disco | 3 |
-| `test_evaluation.py` | 17 | 17 | MAE, sesgo, bandas, las dos correlaciones, y D12 | 5 |
-| `test_causes.py` | 17 | 17 | Coseno, emparejamiento, taxonomía, método registrado | 5 |
-| `test_evaluate.py` | 8 | 8 | El punto de entrada de 4.7 — nunca estuvo en esta tabla | 5 |
-| `test_coverage.py` | 34 | — | 3.2 y 2.4: integridad de citas, los cuatro estados, media y dispersión | 6 |
-| `test_fidelity.py` | 38 | 50 | 3.5: ¿jugó el paciente su perfil?, y los falsos positivos que lo harían inútil | 6 |
-| `test_ablation.py` | 17 | — | 5.4: qué frase se quita y cómo se comparan las dos condiciones | 7 |
+| `conftest.py` | — | — | Shared scaffolding: `PATIENT`, `speaks`, `note`, `profile`, `in_mode`, and the `scripted`, `state`, `make_run_profile` fixtures | — |
+| `test_config.py` | 22 | 28 | The profiles load; none of them leaves a setting to the server | 1 |
+| `test_corpus.py` | 9 | 40 | The 10 patients, their ground truth, and where each number came from | 1 |
+| `test_metadata.py` | 13 | 15 | The provenance is collected whole and survives the disk | 1 |
+| `test_llm.py` | 16 | 16 | What travels on each call, and **how the request changes on a retry** | 2/4 |
+| `test_prompts.py` | 16 | 16 | Deterministic composition from disk, and its hashes | 2 |
+| `test_styles.py` | 16 | 95 | The doctor's nine styles: register, form, content and arms | 2 |
+| `test_tools.py` | 6 | 12 | Reading the call, and building each arm's tools | 2 |
+| `test_nodes.py` | 7 | 7 | The loop, and the isolation of the profile | 2 |
+| `test_patient_profile.py` | 12 | 28 | Score → behaviour, and the gap left where there is no score | 2 |
+| `test_coverage_hint.py` | 12 | 18 | The `coverage_hint` arm | 3 |
+| `test_notes.py` | 9 | 14 | The `working_notes` arm | 3 |
+| `test_report.py` | 32 | 42 | Schema, parsing, gaps, retry, writing to disk | 3 |
+| `test_evaluation.py` | 17 | 17 | MAE, bias, bands, the two correlations, and D12 | 5 |
+| `test_causes.py` | 17 | 17 | Cosine, matching, taxonomy, recorded method | 5 |
+| `test_evaluate.py` | 8 | 8 | The entry point of 4.7 — it was never in this table | 5 |
+| `test_coverage.py` | 34 | — | 3.2 and 2.4: quote integrity, the four states, mean and spread | 6 |
+| `test_fidelity.py` | 38 | 50 | 3.5: did the patient play its profile?, and the false positives that would make it useless | 6 |
+| `test_ablation.py` | 17 | — | 5.4: which sentence is removed and how the two conditions are compared | 7 |
+| `test_replay_server.py` | 20 | 20 | The viewer: which consultations a batch says it holds, whose they are, and what one carries once read off disk | 7 |
 
 ### `conftest.py`
 
-Lo que comparte la suite. Vive aquí porque antes vivía en un fichero de test:
-`test_nodes` exportaba `PATIENT`, `speaks`, `scripted` y `state` a otros tres
-ficheros, y `test_coverage` exportaba `profile` e `in_mode` a un cuarto. Tocar
-`PATIENT` rompía ficheros que no lo mencionaban, y el orden de importación pasaba
-a contar.
+What the suite shares. It lives here because it used to live in a test file:
+`test_nodes` exported `PATIENT`, `speaks`, `scripted` and `state` to three other
+files, and `test_coverage` exported `profile` and `in_mode` to a fourth. Touching
+`PATIENT` broke files that never mentioned it, and import order started to
+matter.
 
-`PATIENT` es watch-and-wait a propósito (C1: las subescalas `specific_*` no
-tienen fármaco del que hablar) y lleva el `belief_profile` entero, que es lo que
-el test de aislamiento busca en el contexto del médico.
+`PATIENT` is watch-and-wait on purpose (C1: the `specific_*` subscales have no
+drug to be about) and carries the whole `belief_profile`, which is what the
+isolation test looks for in the doctor's context.
 
 ---
 
-## Fase 1 — Base
+## Phase 1 — Foundation
 
-### `test_config.py` — 22 funciones, 28 casos
+### `test_config.py` — 22 functions, 28 cases
 
-Todos ✅. El bloque de rechazos existe porque **un ajuste que falta no da error:
-lo decide el servidor** (§12), y entonces la metadata miente.
+All ✅. The rejection block exists because **a missing setting does not raise: the
+server decides it** (§12), and then the metadata lies.
 
-| Test | Qué impide |
+| Test | What it prevents |
 |---|---|
-| `test_shipped_profile_loads` | Un perfil del repo que no carga |
-| `test_shipped_profile_survives_first_load_from_gpfs` | Timeout < 300 s: el primer blob desde GPFS aborta (§6.1) |
-| `test_each_load_is_independent` | Estado compartido entre perfiles |
-| `test_temperature_is_required_for_every_role` | Un rol muestreando a lo que decida el servidor |
-| `test_zero_temperature_is_accepted` | Que un check de falsedad tire 0.0, que es una temperatura |
+| `test_shipped_profile_loads` | A profile in the repo that does not load |
+| `test_shipped_profile_survives_first_load_from_gpfs` | Timeout < 300 s: the first blob off GPFS aborts (§6.1) |
+| `test_each_load_is_independent` | State shared between profiles |
+| `test_temperature_is_required_for_every_role` | A role sampling at whatever the server decides |
+| `test_zero_temperature_is_accepted` | A falsiness check throwing away 0.0, which is a temperature |
 | `test_missing_model_is_rejected` | — |
-| `test_missing_turn_limit_is_rejected` | Sin `max_turns` nada para a un médico que no cierra (1.5) |
-| `test_missing_paths_are_rejected` | Un `KeyError` pelado a mitad de una tanda |
-| `test_declared_profile_must_match_filename` | Corridas mal etiquetadas en la metadata |
+| `test_missing_turn_limit_is_rejected` | Without `max_turns` nothing stops a doctor that does not close (1.5) |
+| `test_missing_paths_are_rejected` | A bare `KeyError` halfway through a batch |
+| `test_declared_profile_must_match_filename` | Mislabelled runs in the metadata |
 | `test_unknown_profile_is_rejected` | — |
 | `test_the_coverage_arms_are_accepted` | — |
-| `test_a_retired_mode_is_rejected` | Que un perfil viejo con `declare` corra como si nada |
-| `test_an_unquoted_off_is_caught_and_named` | `off` a secas es `False` en YAML: leería como "sin cobertura" significando "nadie eligió" |
-| `test_a_quoted_working_notes_is_caught_and_named` | El espejo de la trampa anterior: aquí el peligro es **entrecomillarlo**. `"off"` es una cadena no vacía, y encendería el brazo sin que nadie lo pidiera |
+| `test_a_retired_mode_is_rejected` | An old profile with `declare` running as if nothing had changed |
+| `test_an_unquoted_off_is_caught_and_named` | Bare `off` is `False` in YAML: it would read as "no coverage" while meaning "nobody chose" |
+| `test_a_quoted_working_notes_is_caught_and_named` | The mirror of the previous trap: here the danger is **quoting it**. `"off"` is a non-empty string, and would switch the arm on with nobody asking |
 | `test_ollama_url_can_be_redirected` | — |
-| `test_causes_is_not_a_numeric_dimension` | Que algo itere `b_ipq` y promedie una lista de strings |
+| `test_causes_is_not_a_numeric_dimension` | Something iterating `b_ipq` and averaging a list of strings |
 
-Los rechazos dependen de que `make_run_profile` **sustituya** el bloque en vez de
-fusionarlo: omitir una clave es cómo se comprueba que es obligatoria. Fusionar
-volvería verdes cuatro tests sin que nada los sostenga.
+The rejections depend on `make_run_profile` **replacing** the block rather than
+merging it: omitting a key is how you check that it is required. Merging would
+turn four tests green with nothing holding them up.
 
-### `test_corpus.py` — 7 funciones, 40 casos
+### `test_corpus.py` — 9 functions, 40 cases
 
-Reescrito el 2026-08-26, cuando `patients/` pasó a ser el corpus de CK
-normalizado. Lo que cambió de fondo: el corpus ya **no** es el del brazo Ruby, y
-**C1 se retiró** — CK puntúa las `specific_*` también sin receta.
+Rewritten on 2026-08-26, when `patients/` became the normalised CK corpus. What
+changed substantively: the corpus is **no longer** the Ruby arm's, and **C1 was
+retired** — CK scores the `specific_*` subscales without a prescription too.
 
-| Test | Necesidad |
+| Test | Need |
 |---|---|
 | `test_corpus_has_ten_patients` | ✅ |
-| `test_profile_carries_ground_truth` | ✅ cada dimensión es un número, lo que cubre también que la clave exista, y ahora dentro de rango: B-IPQ 0–10, BMQ 1–5. Ya no exige NA sin receta |
-| `test_patients_is_the_normalised_ck_corpus` | ✅ el que sustituye a 0.3. Reejecuta la normalización sobre `patientsCK/` y exige que reproduzca el fichero byte a byte. Sin él, `patients/` es un directorio editado a mano y la procedencia del ground truth se pierde |
-| `test_the_ruby_corpus_is_frozen` | ✅ lo que 0.3 protegía, movido a `sintetic_patients/patients_version1/`. Las tandas de `runs/historic/` se puntuaron contra ese corpus, así que reanalizarlas exige que siga intacto |
-| `test_the_item_mean_returns_the_one_to_five_scale` | ✅ 5 casos. El denominador es el número de ítems por 5, no un divisor: `21/25` es una suma de 21 sobre 5 ítems, o sea 4.2, y nunca la proporción 0.84. Incluye suelo y techo |
-| `test_an_unexpected_maximum_is_refused` | ✅ el importante de los dos. Un máximo que no cuadra significa otro número de ítems, y normalizarlo igual mete un valor en otra escala sin que se note. Es el caso del `7/10` de CLL-003 |
-| `test_the_normaliser_leaves_the_beliefs_alone` | ✅ solo el BMQ cambia de forma. Si el script tocara `b_ipq`, el ground truth de ocho dimensiones dependería de él sin que nadie lo hubiera decidido |
+| `test_profile_carries_ground_truth` | ✅ every dimension is a number, which also covers the key existing, and now within range: B-IPQ 0–10, BMQ 1–5. It no longer requires NA without a prescription |
+| `test_patients_is_the_normalised_ck_corpus` | ✅ the one that replaces 0.3. It re-runs the normalisation over `patientsCK/` and requires it to reproduce the file byte for byte. Without it, `patients/` is a hand-edited directory and the provenance of the ground truth is lost |
+| `test_the_ruby_corpus_is_frozen` | ✅ what 0.3 protected, moved to `sintetic_patients/patients_version1/`. The `runs/historic/` batches were scored against that corpus, so re-analysing them requires it to stay intact |
+| `test_the_item_mean_returns_the_one_to_five_scale` | ✅ 5 cases. The denominator is the item count times 5, not a divisor: `21/25` is a sum of 21 over 5 items, i.e. 4.2, and never the proportion 0.84. Floor and ceiling included |
+| `test_an_unexpected_maximum_is_refused` | ✅ the important one of the two. A maximum that does not add up means a different item count, and normalising it anyway puts a value on a different scale without anyone noticing. It is CLL-003's `7/10` case |
+| `test_the_normaliser_leaves_the_beliefs_alone` | ✅ only the BMQ changes shape. If the script touched `b_ipq`, the ground truth of eight dimensions would depend on it without anyone having decided so |
 
-### `test_metadata.py` — 13 funciones, 15 casos ✅
+### `test_metadata.py` — 13 functions, 15 cases ✅
 
-`test_the_temperature_recorded_is_the_one_that_will_be_sent` se compara contra
-`llm.sampling_options`, que es quien mete la temperatura en la petición: que la
-metadata guarde un número no vale de nada si el que viaja es otro, y son dos
-lecturas distintas del mismo bloque (§12).
+`test_the_temperature_recorded_is_the_one_that_will_be_sent` compares against
+`llm.sampling_options`, which is what puts the temperature into the request:
+storing a number in the metadata is worth nothing if a different one travels, and
+they are two separate readings of the same block (§12).
 
-Los demás guardan cosas que se pierden fácil:
-`test_code_provenance_answers_both_questions` (un commit sin `dirty` nombra otro
-código), `test_compute_records_both_hostname_and_nodelist` (la señal de §6.3),
-`test_started_at_carries_a_timezone`, `test_serialises_completely`.
+The rest guard things that are easily lost:
+`test_code_provenance_answers_both_questions` (a commit without `dirty` names
+different code), `test_compute_records_both_hostname_and_nodelist` (the §6.3
+signal), `test_started_at_carries_a_timezone`, `test_serialises_completely`.
 
 ---
 
-## Fase 2 — Bucle agéntico
+## Phase 2 — The agentic loop
 
-### `test_llm.py` — 11 ✅
+### `test_llm.py` — 16 ✅
 
-Dos mitades, las dos necesarias. **Qué viaja**: temperatura y `num_ctx` siempre
-explícitos, seed solo si está, `keep_alive` en cada llamada (sin él el servidor
-suelta el modelo a los cinco minutos), tools solo cuando se dan, y el informe lo
-escribe el modelo del médico. **Qué se reintenta**: respuesta vacía (el 19% del
-corpus anterior), fallo de transporte hasta `MAX_ATTEMPTS`, y cada reintento deja
-un evento.
+Three blocks. **What travels**: temperature and `num_ctx` always explicit, seed
+only when set, `keep_alive` on every call (without it the server drops the model
+after five minutes), tools only when given, and the report is written by the
+doctor's model. **What is retried**: an empty reply (19% of the previous corpus),
+a transport failure up to `MAX_ATTEMPTS`, and every retry leaves an event.
 
-`test_a_reply_with_only_tool_calls_is_not_empty` evita que el reintento de turnos
-vacíos se coma el caso normal: el médico habla *por* la herramienta, así que su
-`content` está vacío por diseño.
+`test_a_reply_with_only_tool_calls_is_not_empty` stops the empty-turn retry from
+swallowing the normal case: the doctor speaks *through* the tool, so its
+`content` is empty by design.
+
+**How the request changes on a retry** — the five of N10, and what they guard is
+a distinction, not a rule:
+
+- `test_a_transport_failure_is_retried_with_the_identical_request` — the server
+  did not answer, so the correct request is the same one. Changing it here would
+  measure something else for no reason.
+- `test_an_empty_reply_at_temperature_zero_is_retried_with_a_different_draw` —
+  the mirror, and **the one that cost two consultations**: the model did answer,
+  and answered nothing. At T=0 the next draw is the same nothing, so the three
+  attempts reproduced the failure instead of recovering from it.
+- `test_a_role_already_sampling_above_the_floor_is_left_alone` — the floor only
+  raises. Dropping the doctor's temperature to 0.3 on a retry would change its
+  behaviour halfway through a consultation.
+- `test_a_pinned_seed_moves_too_when_the_reply_was_empty` — with the seed pinned
+  the draw is identical however the temperature moves, so raising it alone is not
+  enough.
+- `test_the_temperature_a_clean_call_sends_is_the_declared_one` — the one holding
+  §12 up: attempt 1 sends what the profile says, and `metadata.sampling` does not
+  lie. What went out on a retry lives in its event, as `retry_temperature`.
 
 ### `test_prompts.py` — 16 ✅
 
-Resolución de ficheros, composición ordenada (skills antes que recursos, cada rol
-solo los suyos), separador entre fragmentos, y hashes.
+File resolution, ordered composition (skills before resources, each role only its
+own), the separator between fragments, and hashes.
 
-Los tres de hash son el motor de la Fase 6:
-`test_the_hash_is_of_the_composed_prompt_not_the_base_file` es lo que permite
-atribuir un cambio de resultado a un cambio de prompt.
+The three hash tests are the engine of Phase 6:
+`test_the_hash_is_of_the_composed_prompt_not_the_base_file` is what allows a
+change of result to be attributed to a change of prompt.
 
-`test_the_doctor_never_sees_the_scale_during_the_consultation` merece señalarse:
-la rúbrica solo llega al informe. Un médico con las anclas en la mano estaría
-puntuando mientras habla, que es el brazo de elicitación por otra puerta.
+`test_the_doctor_never_sees_the_scale_during_the_consultation` is worth
+flagging: the rubric only reaches the report. A doctor with the anchors in hand
+would be scoring while it talks, which is the elicitation arm through another
+door.
 
-`test_an_arm_that_adds_a_tool_argument_changes_the_tool_hash` cierra un agujero
-de provenance: las descripciones de las tools son instrucciones, y hasta ahora no
-las hasheaba nadie. Se podía reescribir la del argumento `notes` —cambiando lo
-que el médico anota— y `metadata.json` salía idéntico.
+`test_an_arm_that_adds_a_tool_argument_changes_the_tool_hash` closes a provenance
+hole: tool descriptions are instructions, and until now nobody hashed them. The
+`notes` argument's description could be rewritten — changing what the doctor
+records — and `metadata.json` came out identical.
 
-### `test_styles.py` — 16 funciones, 95 casos ✅
+### `test_styles.py` — 16 functions, 95 cases ✅
 
-Los nueve estilos de comunicación del médico (1.14): ocho portados de
-`ahead_agent_ckakalou` y `good_doctor`, que es lo que `DOCTOR.md` llevaba dentro.
-Ninguno toca la red — si el estilo *cambia* el transcript no se puede preguntar
-aquí, y esa es la mitad viva del test de §5.1.
+The doctor's nine communication styles (1.14): eight ported from
+`ahead_agent_ckakalou` and `good_doctor`, which is what `DOCTOR.md` carried
+inside it. None of them touches the network — whether the style *changes* the
+transcript cannot be asked here, and that is the live half of the §5.1 test.
 
-Cuatro bloques, y cada uno guarda un fallo distinto:
+Four blocks, each guarding a different failure:
 
-**El registro contra el directorio.** `test_every_style_has_a_file_and_every_file_a_style`
-es la corrección del bug del origen: `prompt_builder.py:20` escribía
-`high_psysician_control_paternalistic` y el fichero decía `physician`, así que ese
-estilo era inalcanzable por los dos lados. La ortografía nunca fue el arreglo.
+**The registry against the directory.**
+`test_every_style_has_a_file_and_every_file_a_style` is the correction of the
+original's bug: `prompt_builder.py:20` wrote
+`high_psysician_control_paternalistic` and the file said `physician`, so that
+style was unreachable from both sides. The spelling was never the fix.
 
-**Qué puede decir un estilo.** `test_no_style_names_the_instrument_or_the_scale`
-y `test_no_style_tells_the_doctor_which_dimensions_will_stay_empty`. El segundo es
-el que importa: la sección 9 del origen le decía al médico qué construcciones
-quedarían visibles y cuáles vacías, y es el mismo agente que después puntúa esas
-construcciones y puede devolver NA. Nombrar una dimensión no es el problema
-—`DOCTOR.md` §5 las lista todas—; predecírselas sí. Viven en `styles.yaml`, y
-`test_the_hypotheses_stayed_out_of_the_prompt` comprueba que se quedaron ahí.
+**What a style may say.** `test_no_style_names_the_instrument_or_the_scale` and
+`test_no_style_tells_the_doctor_which_dimensions_will_stay_empty`. The second is
+the one that matters: section 9 of the original told the doctor which constructs
+would be visible and which empty, and it is the same agent that later scores
+those constructs and can return NA. Naming a dimension is not the problem —
+`DOCTOR.md` §5 lists them all; predicting them for it is. They live in
+`styles.yaml`, and `test_the_hypotheses_stayed_out_of_the_prompt` checks that
+they stayed there.
 
-**Composición y hashes.** `test_each_style_gives_the_doctor_prompt_its_own_hash`:
-nueve estilos, nueve hashes distintos, o dos brazos son una sola corrida en la
-provenance. `test_the_anchors_still_do_not_reach_a_doctor_with_a_style` repite con
-skill cargada el invariante de `test_prompts`: un estilo es una vía nueva para
-que la escala llegue a la consulta.
+**Composition and hashes.**
+`test_each_style_gives_the_doctor_prompt_its_own_hash`: nine styles, nine
+distinct hashes, or two arms are a single run in the provenance.
+`test_the_anchors_still_do_not_reach_a_doctor_with_a_style` repeats
+`test_prompts`'s invariant with a skill loaded: a style is a new route for the
+scale to reach the consultation.
 
-**Los perfiles del disco.** `test_every_profile_names_exactly_one_style` es una
-regla nueva del proyecto, no una comprobación de código: después de 1.14 el
-estilo del médico es siempre un fichero que alguien eligió. Un perfil sin estilo
-corre el brazo sin nombre que esta tarea existe para eliminar.
-`test_the_style_left_the_base_prompt_and_is_in_good_doctor` guarda las dos
-mitades del traslado: si la frase sigue en `DOCTOR.md`, todos los estilos la
-contradicen; si no está en `good_doctor.md`, el brazo bajo el que se midió todo
-lo anterior ha cambiado sin que nadie lo decida.
+**The profiles on disk.** `test_every_profile_names_exactly_one_style` is a new
+project rule, not a code check: after 1.14 the doctor's style is always a file
+somebody chose. A profile with no style runs the unnamed arm this task exists to
+eliminate. `test_the_style_left_the_base_prompt_and_is_in_good_doctor` guards
+both halves of the move: if the sentence is still in `DOCTOR.md`, every style
+contradicts it; if it is not in `good_doctor.md`, the arm everything before was
+measured under has changed with nobody deciding it.
 
-**La forma del fichero.** `test_every_style_has_the_same_three_sections` y
-`test_a_style_constrains_about_as_much_as_it_prescribes`. El segundo sale de un
-fallo real: `good_doctor` se escribió con cinco instrucciones y **una** sola
-prohibición, contra cuatro en los ocho portados. Presión de restricción desigual
-es una diferencia entre brazos que no ha elegido nadie, y cae justo sobre el eje
-que los estilos quieren variar.
+**The shape of the file.** `test_every_style_has_the_same_three_sections` and
+`test_a_style_constrains_about_as_much_as_it_prescribes`. The second comes from a
+real failure: `good_doctor` was written with five instructions and **one**
+prohibition, against four in the eight ported ones. Unequal constraint pressure
+is a difference between arms that nobody chose, and it falls exactly on the axis
+the styles are meant to vary.
 
-### `test_tools.py` — 6 funciones, 12 casos ✅
+### `test_tools.py` — 6 functions, 12 cases ✅
 
-`test_a_broken_call_raises_rather_than_ending_the_consultation` es el importante:
-una llamada rota **no** es una decisión de cerrar. Confundirlas metería consultas
-truncadas en el corpus como si el médico las hubiera dado por terminadas.
+`test_a_broken_call_raises_rather_than_ending_the_consultation` is the important
+one: a broken call is **not** a decision to close. Confusing them would put
+truncated consultations into the corpus as if the doctor had finished them.
 
-`test_building_the_tools_never_touches_the_one_the_module_ships` recorre los
-cuatro modos: `doctor_tools` copia antes de añadir argumentos, y si mutara la
-constante el primer brazo dejaría contaminados a los siguientes dentro del mismo
-proceso — y una tanda corre los brazos en el mismo proceso.
+`test_building_the_tools_never_touches_the_one_the_module_ships` walks the four
+modes: `doctor_tools` copies before adding arguments, and if it mutated the
+constant the first arm would leave the following ones contaminated inside the
+same process — and a batch runs the arms in the same process.
 
-`test_the_patient_reply_goes_back_as_the_tool_result` guarda el canal: en un
-resultado de herramienta el médico no distingue nuestras palabras de las del
-paciente, y `Evidence.quote` tiene que ser una línea literal suya.
+`test_the_patient_reply_goes_back_as_the_tool_result` guards the channel: inside
+a tool result the doctor cannot tell our words from the patient's, and
+`Evidence.quote` has to be a literal line of theirs.
 
 ### `test_nodes.py` — 7 ✅
 
-Contiene el invariante 1, el único obligatorio desde la Etapa 2:
-`test_the_patient_profile_never_reaches_the_doctor` serializa todo lo enviado al
-médico y busca cada valor del `belief_profile`. Su complemento,
-`test_the_patient_is_told_who_they_are`, comprueba que ese mismo perfil sí llega
-al paciente.
+It holds invariant 1, the only one mandatory since Stage 2:
+`test_the_patient_profile_never_reaches_the_doctor` serialises everything sent to
+the doctor and looks for every value of the `belief_profile`. Its complement,
+`test_the_patient_is_told_who_they_are`, checks that the same profile does reach
+the patient.
 
 ---
 
-### `test_patient_profile.py` — 12 funciones, 28 casos ✅
+### `test_patient_profile.py` — 12 functions, 28 cases ✅
 
-La puntuación se convierte en conducta, y lo que no tiene puntuación no se
-inventa. Tres bloques:
+The score turns into behaviour, and what has no score is not invented. Three
+blocks:
 
-- **Fronteras de banda.** `_band_for` usa `score <= upper`, así que un 2 sigue
-  siendo la primera banda y un 2.1 ya es la segunda. Se recorren las dos
-  escaleras enteras —2/4/6/8/10 en B-IPQ, 2/3/4/5 en BMQ— porque son distintas y
-  confundirlas desplazaría a todos los pacientes una banda.
-- **Lo que falta se omite** (P9): una dimensión sin número, un valor que no es
-  número, y el bloque de medicación entero desapareciendo cuando el paciente va
-  en watch-and-wait (C1).
-- **Lo que el paciente lee.** Los hechos clínicos van literales, pero
-  `test_the_score_itself_never_reaches_the_patient` comprueba que el número no
-  aparece nunca: es 1.9 en una línea.
+- **Band boundaries.** `_band_for` uses `score <= upper`, so a 2 is still the
+  first band and a 2.1 is already the second. Both ladders are walked in full —
+  2/4/6/8/10 for B-IPQ, 2/3/4/5 for BMQ — because they are different and
+  confusing them would shift every patient by one band.
+- **What is missing is omitted** (P9): a dimension with no number, a value that
+  is not a number, and the whole medication block disappearing when the patient
+  is on watch-and-wait (C1).
+- **What the patient reads.** The clinical facts go through verbatim, but
+  `test_the_score_itself_never_reaches_the_patient` checks that the number never
+  appears: that is 1.9 in one line.
 
-Ver también la regla del suelo de bandas en TASKS 7.1 — hoy un B-IPQ de 0 se
-jugaría como un 2, y el corpus todavía no tiene ninguno.
+See also the band-floor rule in TASKS 7.1 — today a B-IPQ of 0 would be played as
+a 2, and the corpus does not have one yet.
 
-## Fase 3 — Informe y brazos
+## Phase 3 — Report and arms
 
-### `test_report.py` — 32 funciones, 42 casos ✅
+### `test_report.py` — 32 functions, 42 cases ✅
 
-Cinco bloques, todos con motivo:
+Five blocks, all of them with a reason:
 
-- **El esquema es la especificación** (2.1) — `evidence` antes que `score`, y NA
-  como valor.
-- **Parseo** — objeto con y sin cercas (GLM las pone aunque REPORT.md pida que no),
-  cualquier otra cosa es `None` para que salte el reintento, y
-  `test_a_score_off_the_scale_is_na_and_never_clamped`: el brazo viejo hacía
-  min/max y convertía un valor ilegal en uno legal de aspecto.
-  `test_the_two_scales_are_judged_separately` — 5.5 es legal en B-IPQ e ilegal en BMQ.
-- **Qué cuenta como inacabado** (1.13) — la distinción fina de `gaps()`: un NA
-  declarado **tiene razonamiento y es una respuesta**; uno que rellenó el parser
-  no la tiene, y ese silencio es lo único que se pregunta dos veces. `causes`
-  queda fuera a propósito: exigirlo es lo que produce una causa inventada (N3).
-- **Rendirse en vez de dar vueltas** — y `test_every_way_of_finishing_routes_to_the_report`,
-  que es 1.13 entero: el informe corre lo haya cerrado quien lo haya cerrado.
-- **Quién lo escribe** — D9. El médico continúa su consulta, no lee un transcript
-  en frío; se le manda el transcript numerado porque `Evidence.turn` lo necesita;
-  y se le pide sin tools porque no queda nada que preguntar.
+- **The schema is the specification** (2.1) — `evidence` before `score`, and NA
+  as a value.
+- **Parsing** — an object with and without fences (GLM adds them even though
+  REPORT.md asks it not to), anything else is `None` so the retry fires, and
+  `test_a_score_off_the_scale_is_na_and_never_clamped`: the old arm did min/max
+  and turned an illegal value into a legal-looking one.
+  `test_the_two_scales_are_judged_separately` — 5.5 is legal in B-IPQ and illegal
+  in BMQ.
+- **What counts as unfinished** (1.13) — the fine distinction in `gaps()`: a
+  declared NA **has reasoning and is an answer**; one the parser filled in does
+  not, and that silence is the only thing asked about twice. `causes` is left out
+  on purpose: demanding it is what produces an invented cause (N3).
+- **Giving up instead of looping** — and
+  `test_every_way_of_finishing_routes_to_the_report`, which is 1.13 entire: the
+  report runs whoever closed the consultation.
+- **Who writes it** — D9. The doctor continues its consultation, it does not read
+  a transcript cold; it is sent the numbered transcript because `Evidence.turn`
+  needs it; and it is asked without tools because there is nothing left to ask.
 
-Los dos de punta a punta están detrás de `AHEAD_GRAPH_TESTS=1`.
-`test_a_thin_report_is_asked_for_again_and_then_given_up_on` es **el único sitio
-donde el camino de reintento se ejercita completo**: en vivo nunca se ha
-disparado (N8, 24 corridas con `attempts: 1`).
+The two end-to-end tests sit behind `AHEAD_GRAPH_TESTS=1`.
+`test_a_thin_report_is_asked_for_again_and_then_given_up_on` is **the only place
+the retry path is exercised in full**. It had never fired live (N8, 24 runs with
+`attempts: 1`) until 2026-09-01, when it fired and exhausted its attempts — see
+N10.
 
-### `test_coverage_hint.py` — 12 funciones, 18 casos ✅
+### `test_coverage_hint.py` — 12 functions, 18 cases ✅
 
-| Test | Qué guarda |
+| Test | What it guards |
 |---|---|
-| `test_off_never_asks_the_doctor_anything` | La línea base no tiene el argumento |
+| `test_off_never_asks_the_doctor_anything` | The baseline does not have the argument |
 | `test_show_asks_and_promises_what_comes_back` | — |
 | `test_the_dimensions_it_names_are_taken` | — |
-| `test_anything_it_does_not_declare_properly_is_simply_no_news` | Nada de cobertura puede costar una llamada |
+| `test_anything_it_does_not_declare_properly_is_simply_no_news` | Nothing about coverage may cost a call |
 | `test_a_reply_with_no_call_declares_nothing` | — |
-| `test_the_note_is_a_separate_message_in_our_own_voice` | Va por `role: user`, el canal del OPENING, nunca dentro del resultado de la herramienta |
+| `test_the_note_is_a_separate_message_in_our_own_voice` | It goes as `role: user`, the OPENING's channel, never inside a tool result |
 | `test_there_is_no_note_when_nothing_is_open` | — |
 | `test_the_map_accumulates_across_turns` | — |
 | `test_show_hands_back_what_is_still_open` | — |
-| `test_the_patient_never_sees_the_coverage_note` | En el contexto del paciente sería una lista de temas |
-| `test_the_doctor_can_always_close_with_dimensions_open` | Los cuatro modos: ninguno obliga a cubrir nada (1.5) |
+| `test_the_patient_never_sees_the_coverage_note` | In the patient's context it would be a list of topics |
+| `test_the_doctor_can_always_close_with_dimensions_open` | All four modes: none of them compels covering anything (1.5) |
 | `test_off_hands_back_nothing_at_all` | — |
 
-### `test_notes.py` — 9 funciones, 14 casos ✅
+### `test_notes.py` — 9 functions, 14 cases ✅
 
-| Test | Qué guarda |
+| Test | What it guards |
 |---|---|
 | `test_no_notes_argument_by_default` | — |
-| `test_the_two_switches_are_independent` | Las cuatro combinaciones; en un solo valor no se sabría cuál produjo el efecto |
+| `test_the_two_switches_are_independent` | All four combinations; in a single value there would be no telling which produced the effect |
 | `test_a_note_is_taken_with_its_dimension` | — |
-| `test_anything_malformed_is_discarded_and_the_call_survives` | Seis formas malas |
+| `test_anything_malformed_is_discarded_and_the_call_survives` | Six malformed shapes |
 | `test_a_note_carries_the_turn_it_was_taken_in` | — |
-| `test_a_second_note_on_the_same_dimension_is_added_not_replaced` | **El que justifica el brazo**: la revisión fechada es lo único que puede enseñar si 1.11 compra algo |
-| `test_nothing_is_recorded_when_the_arm_is_off` | El que falló y descubrió que `doctor_node` no miraba el interruptor |
+| `test_a_second_note_on_the_same_dimension_is_added_not_replaced` | **The one that justifies the arm**: a dated revision is the only thing that can show whether 1.11 buys anything |
+| `test_nothing_is_recorded_when_the_arm_is_off` | The one that failed and revealed that `doctor_node` was not looking at the switch |
 | `test_the_patient_never_sees_the_notes` | — |
-| `test_the_transcript_keeps_only_what_was_said` | Una nota en el transcript es una frase que nadie pronunció, y 3.2 verifica citas contra él |
+| `test_the_transcript_keeps_only_what_was_said` | A note in the transcript is a sentence nobody spoke, and 3.2 verifies quotes against it |
 
 ---
 
-## Fase 5 — Evaluación
+## Phase 5 — Evaluation
 
-### `test_evaluation.py` — 14 ✅
+### `test_evaluation.py` — 17 ✅
 
-Separa explícitamente **portado** de **nuevo**, que es lo que hace auditable el
-port. Portado: error absoluto, sesgo con signo, bandas, MAE y mediana a mano.
+It separates **ported** from **new** explicitly, which is what makes the port
+auditable. Ported: absolute error, signed bias, bands, MAE and median by hand.
 
-Nuevo, y cada uno contra un fallo concreto del original:
+New, and each against a concrete failure of the original:
 
-- `test_an_na_is_excluded_from_the_mae_and_counted` — saltárselo en silencio daría
-  a un informe de 11 NAs un MAE perfecto.
+- `test_an_na_is_excluded_from_the_mae_and_counted` — skipping it silently would
+  give a report of 11 NAs a perfect MAE.
 - `test_between_patient_has_nothing_to_say_when_everyone_gets_the_same_report` —
-  **es 2.5**: el scorer degenerado de llama3.2 (67% ochos) tenía dispersión
-  perfecta y era inútil.
-- `test_ranking_survives_a_compressed_scale` — lo que muestra `e4-1`: el orden
-  está bien y el rango va a la mitad. Son problemas distintos y se arreglan
-  distinto (calibración, no más sondeo).
-- `test_the_per_patient_mean_hides_what_the_per_dimension_bias_shows` — 4.5:
-  Ruby informaba +0.13 agregado con `identity` en +1.00.
-- `test_a_correlation_that_cannot_be_computed_is_none_not_zero` — el portado
-  devolvía 0.0, que se lee como "sin correlación" cuando significa "sin datos".
+  **this is 2.5**: llama3.2's degenerate scorer (67% eights) had perfect spread
+  and was useless.
+- `test_ranking_survives_a_compressed_scale` — what `e4-1` shows: the order is
+  right and the range is half. They are different problems and they are fixed
+  differently (calibration, not more probing).
+- `test_the_per_patient_mean_hides_what_the_per_dimension_bias_shows` — 4.5: Ruby
+  reported +0.13 aggregate with `identity` at +1.00.
+- `test_a_correlation_that_cannot_be_computed_is_none_not_zero` — the ported one
+  returned 0.0, which reads as "no correlation" when it means "no data".
 
 ### `test_causes.py` — 17 ✅
 
-Portado: coseno (incluido el vector cero, que dividiría por cero), emparejamiento
-greedy, umbral. Nuevo: `None` en vez de 0.0 sin ground truth, `None` en vez de
-`"unknown"` para una respuesta ilegible —porque `unknown` es una categoría real
-del paciente que no sabe—, y **el método registrado**: el módulo viejo cambiaba
-de métrica en silencio al fallar los embeddings, así que una tanda podía mezclar
-dos medidas sin dejar rastro.
+Ported: cosine (including the zero vector, which would divide by zero), greedy
+matching, threshold. New: `None` instead of 0.0 with no ground truth, `None`
+instead of `"unknown"` for an unreadable answer — because `unknown` is a real
+category for a patient who does not know — and **the recorded method**: the old
+module changed metric silently when the embeddings failed, so a batch could mix
+two measures without leaving a trace.
 
-Dos son regresión pura del parser viejo: `test_text_with_b_and_r_survives_intact`
-(borraba toda `b` y `r`: "Stress" → "St ess") y `test_markup_in_a_cause_is_left_alone`.
-
----
-
-## Fase 6 — Cobertura, fidelidad y ablación
-
-### `test_coverage.py` — 34 funciones ✅
-
-3.2 y 2.4. Fixtures sintéticas: nada aquí necesita una tanda en disco.
-
-El fixture `CONVERSATION` está numerado como **intercambios**, no como
-intervenciones: `nodes.py` da a la pregunta del médico y a la respuesta del
-paciente el mismo número (D13). Leerlo como cuatro turnos es el bug que costó
-una revisión — verificar una cita exige cruzar turno **y** rol, porque coger la
-primera línea con ese número aterriza siempre en el médico.
-
-Los seis de consistencia (2.4) guardan la distinción que separa 2.4 de 2.5:
-`test_a_gap_between_patients_does_not_inflate_the_within_patient_sd` pone dos
-pacientes en extremos opuestos de la escala, cada uno perfectamente estable, y
-exige consistencia 0. Agrupar las puntuaciones antes de calcular la sd daría un
-número grande, y sería la distancia entre personas —la pregunta de 2.5— disfrazada
-de ruido. `test_the_overall_consistency_is_none_when_nothing_reached_the_floor`
-es el otro lado: por debajo de `MIN_REPEATS` la respuesta es «no hay datos», nunca 0.0.
-
-### `test_fidelity.py` — 38 funciones, 50 casos ✅
-
-3.5. **La mitad de este fichero son falsos positivos**, y es deliberado: una
-comprobación que grita sobre habla normal se ignora a la semana, y entonces no
-comprueba nada.
-
-- `test_a_denial_is_not_a_claim` — «no estoy tomando nada» contiene las mismas
-  palabras que la afirmación que buscamos. Sin la ventana de negación el módulo
-  dispararía justo sobre las frases que **demuestran** fidelidad.
-- `test_a_denial_early_in_the_turn_does_not_hide_a_claim_later_in_it` — el otro
-  lado de lo mismo. La negación deja de alcanzar en `but`, `then` o un punto: sin
-  eso, «no nausea at first, but then the nausea got bad» no informaba de nada,
-  porque la búsqueda paraba en la primera aparición y esa estaba negada. La coma
-  **no** corta, para que «no pills, no tablets» siga siendo una sola negación.
-- `test_a_number_with_a_unit_after_it_is_not_an_age` — desde que un perfil *sin*
-  edad también produce hallazgo, «I'm 45 minutes late» dispararía en todos los
-  pacientes en vez de solo en los que discrepan. El guardia de unidades es lo que
-  hace segura esa ampliación.
-- `test_a_drug_claim_is_reported_once_not_twice` — «I'm taking ibrutinib» encaja
-  a la vez en la regla de tratamiento y en la de fármaco. Un reclamo es un
-  hallazgo, y se queda el que nombra el fármaco.
-- `test_the_quote_survives_doubled_whitespace` — las posiciones salían de una
-  copia con los espacios colapsados, así que cualquier espacio doble corría la
-  cita a la izquierda de lo que pretendía enseñar.
-- `test_a_drug_in_the_turn_does_not_hide_the_symptoms` — **el que ningún otro
-  test podía ver.** Una variable local del bucle de fármacos tapaba la del texto
-  completo, así que el barrido de síntomas buscaba dentro del nombre del fármaco
-  y cualquier turno que nombrara uno salía sin síntomas. Cada tipo de hallazgo
-  estaba probado por separado y el fallo solo aparece cuando coinciden dos en el
-  mismo turno.
-- `test_ordinary_words_that_end_like_drugs_are_not_drugs` — la regla que caza
-  `emtricitabine` caza también `medicine`, `routine` y `determine`. Es la razón
-  de que el sufijo se quede en `-nib`/`-mab`/`-vir` y el resto sea lista nombrada.
-- `test_a_drug_named_twice_is_one_finding` y el solapamiento de
-  `headache`/`headaches`: si un síntoma se cuenta dos veces, el número de
-  hallazgos deja de significar nada.
-- `test_the_belief_profile_is_never_read` — **el importante**. Un paciente que
-  expresa una creencia está haciendo su trabajo; comprobar creencias aquí
-  penalizaría exactamente la conducta sobre la que se sostiene la simulación.
-- `test_the_doctors_lines_are_not_checked` — que el médico nombre un fármaco es
-  una pregunta, no una fabricación del paciente.
-- `test_the_scores_are_never_touched` — QC y nada más: lee `transcript.json` y
-  no abre `report.json`.
-
-### `test_ablation.py` — 17 funciones ✅
-
-5.4, solo la parte determinista. `test_the_pieces_rebuild_the_text` es el
-cimiento: si trocear en frases pierde un carácter, el transcript ablado deja de
-ser «el mismo texto menos la evidencia» y pasa a ser otro texto, con lo que la
-comparación entre condiciones no mide la ablación. Se ablan **frases enteras**
-a propósito — recortar la cita por dentro deja un turno mutilado, y el modelo
-reaccionaría a la mutilación además de a la falta de evidencia.
+Two are pure regressions of the old parser:
+`test_text_with_b_and_r_survives_intact` (it deleted every `b` and `r`: "Stress"
+→ "St ess") and `test_markup_in_a_cause_is_left_alone`.
 
 ---
 
-## Qué se quitó, y por qué
+## Phase 6 — Coverage, fidelity and ablation
 
-Cuatro tests retirados en la limpieza. Ninguno dejó de comprobarse: los cuatro
-estaban duplicados en otro sitio. Se anota aquí y no en el mensaje del commit
-porque un test borrado se mira meses después, y el sitio donde se mira es este.
+### `test_coverage.py` — 34 functions ✅
 
-| Retirado | Dónde sigue comprobándose |
+3.2 and 2.4. Synthetic fixtures: nothing here needs a batch on disk.
+
+The `CONVERSATION` fixture is numbered as **exchanges**, not as interventions:
+`nodes.py` gives the doctor's question and the patient's reply the same number
+(D13). Reading it as four turns is the bug that cost a review — verifying a quote
+requires crossing turn **and** role, because taking the first line with that
+number lands on the doctor every time.
+
+The six consistency tests (2.4) guard the distinction that separates 2.4 from
+2.5: `test_a_gap_between_patients_does_not_inflate_the_within_patient_sd` puts
+two patients at opposite ends of the scale, each perfectly stable, and requires a
+consistency of 0. Pooling the scores before computing the sd would give a large
+number, and it would be the distance between people — 2.5's question — disguised
+as noise. `test_the_overall_consistency_is_none_when_nothing_reached_the_floor`
+is the other side: below `MIN_REPEATS` the answer is "no data", never 0.0.
+
+### `test_fidelity.py` — 38 functions, 50 cases ✅
+
+3.5. **Half of this file is false positives**, and that is deliberate: a check
+that shouts at normal speech gets ignored within a week, and then it checks
+nothing.
+
+- `test_a_denial_is_not_a_claim` — "I'm not taking anything" contains the same
+  words as the assertion being looked for. Without the negation window the module
+  would fire on exactly the sentences that **demonstrate** fidelity.
+- `test_a_denial_early_in_the_turn_does_not_hide_a_claim_later_in_it` — the other
+  side of the same thing. The negation stops reaching at `but`, `then` or a full
+  stop: without that, "no nausea at first, but then the nausea got bad" reported
+  nothing, because the search stopped at the first occurrence and that one was
+  negated. A comma does **not** cut, so that "no pills, no tablets" stays one
+  negation.
+- `test_a_number_with_a_unit_after_it_is_not_an_age` — since a profile *without*
+  an age also produces a finding, "I'm 45 minutes late" would fire on every
+  patient instead of only on the ones that disagree. The unit guard is what makes
+  that widening safe.
+- `test_a_drug_claim_is_reported_once_not_twice` — "I'm taking ibrutinib" matches
+  both the treatment rule and the drug rule. One claim is one finding, and the
+  one that names the drug is kept.
+- `test_the_quote_survives_doubled_whitespace` — the positions came from a copy
+  with the whitespace collapsed, so any double space shifted the quote to the
+  left of what it meant to show.
+- `test_a_drug_in_the_turn_does_not_hide_the_symptoms` — **the one no other test
+  could see.** A local variable in the drug loop shadowed the one holding the
+  full text, so the symptom sweep searched inside the drug's name and any turn
+  naming one came back with no symptoms. Each kind of finding was tested
+  separately and the failure only appears when two coincide in the same turn.
+- `test_ordinary_words_that_end_like_drugs_are_not_drugs` — the rule that catches
+  `emtricitabine` also catches `medicine`, `routine` and `determine`. That is why
+  the suffix stays at `-nib`/`-mab`/`-vir` and the rest is a named list.
+- `test_a_drug_named_twice_is_one_finding` and the `headache`/`headaches`
+  overlap: if a symptom is counted twice, the number of findings stops meaning
+  anything.
+- `test_the_belief_profile_is_never_read` — **the important one**. A patient
+  expressing a belief is doing its job; checking beliefs here would penalise
+  exactly the behaviour the simulation rests on.
+- `test_the_doctors_lines_are_not_checked` — the doctor naming a drug is a
+  question, not a fabrication by the patient.
+- `test_the_scores_are_never_touched` — QC and nothing else: it reads
+  `transcript.json` and does not open `report.json`.
+
+### `test_ablation.py` — 17 functions ✅
+
+5.4, only the deterministic part. `test_the_pieces_rebuild_the_text` is the
+foundation: if splitting into sentences loses a character, the ablated transcript
+stops being "the same text minus the evidence" and becomes a different text, at
+which point the comparison between conditions does not measure the ablation.
+**Whole sentences** are ablated on purpose — trimming inside the quote leaves a
+mutilated turn, and the model would react to the mutilation as well as to the
+missing evidence.
+
+### `test_replay_server.py` — 20 functions, 20 cases ✅
+
+The read layer of `replay_server.py`. **What is tested is the reading, not the
+HTML**: which consultations a batch says it holds, whose they are, and what one
+carries once read back off disk. Nothing needs a real batch — everything is
+fabricated in `tmp_path`, so these say the same thing on a machine with an empty
+`runs/`.
+
+Four blocks:
+
+**The disk decides, not the index.**
+`test_the_disk_decides_what_exists_not_the_index` is the same invariant as
+`coverage._index`: a batch resumed after a kill rewrites `batch.json` with *that*
+launch's consultations, so trusting the index for what exists loses whole
+sessions. The index *is* still read for `stop_reason`, which is nowhere else and
+is the one thing the picker has to show — `turn_cap` is a result, not a fault.
+
+**One patient at a time.**
+`test_a_batch_holding_nobody_asked_for_disappears_entirely`: filtering the
+consultations and leaving the batch would put an empty arm on screen, and an arm
+with no consultations reads as an arm that failed. And both sides of the person
+list: someone with a profile who never ran is not offered, and someone who ran
+but lost their profile is — a transcript is worth reading even with nothing left
+to score it against.
+
+**What a consultation carries.** The report is **re-parsed** rather than taken on
+trust, so the NA policy of 4.4 applies here too and an off-scale score comes back
+NA instead of clamped. `test_the_evaluation_is_the_one_evaluate_py_would_give` is
+the one that matters: the figure on screen has to be the one in
+`evaluation.json`, and computing it a second way is how the two drift apart
+without anyone noticing.
+
+**Over HTTP.** A `..` in the URL does not read outside `runs/` — both parts are
+used as directory names — and
+`test_a_server_pinned_to_one_patient_cannot_be_talked_out_of_it`: `--patient` is
+a decision about what that instance shows, not a default the browser can bypass
+by asking for somebody else.
+
+What it does **not** cover: the HTML. The turn by turn playback, the jump from a
+quote to its turn and the drawing of NAs are seen by no test, the same way
+`cover.py`'s formatting is not.
+
+---
+
+## What was removed, and why
+
+Four tests retired in the cleanup. None of them stopped being checked: all four
+were duplicated elsewhere. It is recorded here and not in the commit message
+because a deleted test gets looked at months later, and this is where you look.
+
+| Retired | Where it is still checked |
 |---|---|
-| `test_coverage.py::test_the_patient_channel_carries_only_the_patient` | `test_tools.py::test_the_patient_reply_goes_back_as_the_tool_result`, misma aserción. Se le pasó el razonamiento del canal |
-| `test_coverage.py::test_asking_the_doctor_does_not_disturb_the_tool_it_already_had` | Fusionado en `test_tools.py::test_building_the_tools_never_touches_the_one_the_module_ships`, ahora sobre los cuatro modos |
-| `test_notes.py::test_the_tool_the_module_ships_is_never_touched` | El mismo invariante, mismo destino |
-| `test_notes.py::test_the_doctor_still_closes_when_it_wants` | `test_coverage_hint.py::test_the_doctor_can_always_close_with_dimensions_open`, que pasó de 2 modos a las 4 combinaciones |
-| `test_config.py::test_dimension_ids_match_every_patient` | `test_corpus.py::test_profile_carries_ground_truth` exige que cada dimensión sea un número dentro de rango, y no se lee el valor de una clave que falta |
+| `test_coverage.py::test_the_patient_channel_carries_only_the_patient` | `test_tools.py::test_the_patient_reply_goes_back_as_the_tool_result`, same assertion. The channel reasoning was carried over to it |
+| `test_coverage.py::test_asking_the_doctor_does_not_disturb_the_tool_it_already_had` | Merged into `test_tools.py::test_building_the_tools_never_touches_the_one_the_module_ships`, now over all four modes |
+| `test_notes.py::test_the_tool_the_module_ships_is_never_touched` | The same invariant, the same destination |
+| `test_notes.py::test_the_doctor_still_closes_when_it_wants` | `test_coverage_hint.py::test_the_doctor_can_always_close_with_dimensions_open`, which went from 2 modes to all 4 combinations |
+| `test_config.py::test_dimension_ids_match_every_patient` | `test_corpus.py::test_profile_carries_ground_truth` requires every dimension to be a number within range, and the value of a missing key is never read |
 
-`test_coverage.py` pasó a llamarse **`test_coverage_hint.py`**. "Coverage"
-significaba tres cosas a la vez: `causes.similarity.coverage_score` (portado), el
-brazo `coverage_hint` (este fichero) y el mapa dimensión × paciente de 3.2 (sin
-escribir). El nombre libre le hace falta a 3.2.
+`test_coverage.py` was renamed **`test_coverage_hint.py`**. "Coverage" meant
+three things at once: `causes.similarity.coverage_score` (ported), the
+`coverage_hint` arm (this file) and the dimension × patient map of 3.2 (unwritten
+at the time). 3.2 needed the name free.
 
 ---
 
-## Qué no está cubierto
+## What is not covered
 
-| Módulo | Estado |
+| Module | Status |
 |---|---|
-| `run_batch.py` | 0 tests. Sus dos guardas (árbol sucio, dos temperaturas a 0) no las comprueba nada. Se deja así de momento |
+| `run_batch.py` | 0 tests. Its two guards (dirty tree, both temperatures at 0) are checked by nothing. Left that way for now |
 | `main.py` | 0 tests |
-| `cover.py`, `fidel.py`, `rescore.py` | 0 tests **de la capa CLI**. Los módulos que hay debajo —`coverage.py`, `fidelity.py`, `ablation.py`— sí están cubiertos; lo que no se comprueba es el formateo ni el parseo de argumentos |
-| `ablation.rescore()` | La llamada al modelo de 5.4 no se ejercita: `test_ablation.py` cubre la mitad determinista —qué frase se quita, cómo se comparan las condiciones— y para el resto haría falta guionizar el LLM |
-| `api_server.py` (§8.9) | No existe |
-| Skills §5.1 | El mecanismo está probado; el test espera a que exista un documento de skill sobre el que correrlo |
+| `cover.py`, `fidel.py`, `rescore.py` | 0 tests **of the CLI layer**. The modules underneath — `coverage.py`, `fidelity.py`, `ablation.py` — are covered; what is not checked is the formatting or the argument parsing. **What stands in for it is the `tools/make_dummy_batch.py` smoke test**, and it found three formatting failures no test would have seen |
+| `tools/make_dummy_batch.py` | 0 tests, and **it is the only end-to-end exercise of `cover.py`**. It fabricates 2 patients × 5 repeats with the answer planted, so what it prints can be checked against what went in. It went from 3 to 5 repeats on 2026-08-31: with `MIN_REPEATS = 5` the 3-repeat version produced a batch with every SD null while its own text promised numbers, which is to say it had stopped exercising exactly what it exists to exercise |
+| `ablation.rescore()` | 5.4's call to the model is not exercised: `test_ablation.py` covers the deterministic half — which sentence is removed, how the conditions are compared — and the rest would need the LLM scripted |
+| `replay_frontend/index.html` | 0 tests. See `test_replay_server.py`: the read layer is covered, the browser layer is not |
+| `api_server.py` (§8.9) | Does not exist |
+| Skills §5.1 | The mechanism is tested; the test is waiting for a skill document to run it on |
 
-`reproducibility.py` se borró el 2026-08-27 y ya no aparece aquí. Lo que 2.4
-necesitaba se escribió dentro de `coverage.py`, con tests.
+`reproducibility.py` was deleted on 2026-08-27 and no longer appears here. What
+2.4 needed was written inside `coverage.py`, with tests.

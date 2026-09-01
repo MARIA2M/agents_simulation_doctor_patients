@@ -1,0 +1,303 @@
+{
+  "patient_id": "CLL-003",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "CLL-003",
+    "clinical_summary": "The patient has been living with Chronic Lymphocytic Leukemia (CLL) for five years. They describe their condition as early stage and hope they may never need treatment. They're currently managing without medication and feel grateful for this. They've recently noticed a tender lump in their neck that has been present for a couple of weeks and is causing them concern. They're trying to stay positive and maintain control over their health, but they're feeling overwhelmed by the new concern and worry about whether they're doing enough to keep the illness at bay. They're approaching the possibility of future treatment rationally and want to weigh pros and cons if needed.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "Overall, I've been managing alright with my chronic illness",
+            "turn": 1
+          },
+          {
+            "quote": "It's been a bit of a rollercoaster ride, to be honest",
+            "turn": 3
+          },
+          {
+            "quote": "It's reassuring to think that my illness might not dictate my life as much once I understand more about how it behaves and what I can do to manage it",
+            "turn": 5
+          },
+          {
+            "quote": "feeling a bit overwhelmed by it all — coming to terms with this new concern about the lump",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient describes managing 'alright' but acknowledges a 'rollercoaster' over five years. They express that their illness doesn't dictate their life as much as they'd like, and they're feeling overwhelmed by a new concern. They're still managing their routine and trying to stay positive. This suggests moderate impact - they've adapted and maintained their roles but are experiencing some disruption.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "My hematologist said that it's in its very early stages and that I might never need treatment",
+            "turn": 3
+          },
+          {
+            "quote": "The idea of never needing treatment is definitely something I find hopeful",
+            "turn": 5
+          },
+          {
+            "quote": "having the possibility that I might need treatment always lingering in the back of my mind",
+            "turn": 5
+          }
+        ],
+        "reasoning": "They view their CLL as early stage and potentially indolent. They hope they may never need treatment. However, they acknowledge the possibility of needing treatment in the future. This suggests they're not fully committed to a permanent chronic course but are hopeful for an indolent one.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I try to stay positive and maintain as much control over my health as possible",
+            "turn": 3
+          },
+          {
+            "quote": "It makes me wonder whether I'm doing enough or if there's something more I could be doing to keep this at bay",
+            "turn": 5
+          },
+          {
+            "quote": "stay focused on staying as healthy as possible",
+            "turn": 5
+          },
+          {
+            "quote": "trying not to get too anxious",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient actively tries to maintain control over their health, stays positive, and focuses on staying healthy. They wonder if they're doing enough, showing they believe their actions matter. They're actively managing their anxiety and trying to stay in control.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "My hematologist said that it's in its very early stages and that I might never need treatment",
+            "turn": 3
+          },
+          {
+            "quote": "The idea of never needing treatment is definitely something I find hopeful",
+            "turn": 5
+          },
+          {
+            "quote": "If the need for treatment ever arises in the future, though, I know I want to approach it as calmly and rationally as possible, weighing the pros and cons before making any decisions",
+            "turn": 6
+          }
+        ],
+        "reasoning": "They believe treatment is available and effective, but they're hopeful they may never need it. When treatment is mentioned, they approach it rationally and want to weigh pros and cons. They don't currently have treatment, so their belief is more about the possibility of treatment working rather than direct experience.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "managing alright with my chronic illness",
+            "turn": 1
+          },
+          {
+            "quote": "I've been living with Chronic Lymphocytic Leukemia (CLL) for about five years now",
+            "turn": 3
+          },
+          {
+            "quote": "My understanding is that CLL often presents as enlarged lymph nodes — so the lump might just be a sign of the disease affecting other parts of my body",
+            "turn": 4
+          }
+        ],
+        "reasoning": "They identify strongly with having CLL - it's been a central part of their life for five years. They understand that CLL can present as enlarged lymph nodes. The lump is something they attribute to their condition.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "a small lump in my neck that's been worrying me",
+            "turn": 1
+          },
+          {
+            "quote": "the concern is growing",
+            "turn": 2
+          },
+          {
+            "quote": "It's all quite unsettling, to be honest",
+            "turn": 4
+          },
+          {
+            "quote": "having the possibility that I might need treatment always lingering in the back of my mind does create some worry",
+            "turn": 5
+          },
+          {
+            "quote": "It makes me wonder whether I'm doing enough or if there's something more I could be doing to keep this at bay",
+            "turn": 5
+          },
+          {
+            "quote": "feeling a bit overwhelmed by it all",
+            "turn": 8
+          },
+          {
+            "quote": "trying not to get too anxious",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The lump has caused them to feel 'unsettled' and 'overwhelmed.' They have worry about treatment necessity and whether they're doing enough. They're trying not to let worries take over, which suggests worry is recurring and shaping some decisions.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I've been living with Chronic Lymphocytic Leukemia (CLL) for about five years now",
+            "turn": 3
+          },
+          {
+            "quote": "To be honest, I'm not all that familiar with every detail of my CLL and its potential symptoms",
+            "turn": 4
+          },
+          {
+            "quote": "My understanding is that CLL often presents as enlarged lymph nodes — so the lump might just be a sign of the disease affecting other parts of my body",
+            "turn": 4
+          },
+          {
+            "quote": "I'm trying to keep an open mind while seeking more information",
+            "turn": 4
+          }
+        ],
+        "reasoning": "They know the label (CLL) and understand that it can present as enlarged lymph nodes. However, they acknowledge they're not familiar with every detail and are seeking more information. They're trying to keep an open mind. This suggests moderate understanding with gaps.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "It's been a bit of a rollercoaster ride, to be honest",
+            "turn": 3
+          },
+          {
+            "quote": "The idea of never needing treatment is definitely something I find hopeful",
+            "turn": 5
+          },
+          {
+            "quote": "having the possibility that I might need treatment always lingering in the back of my mind does create some worry",
+            "turn": 5
+          },
+          {
+            "quote": "feeling a bit overwhelmed by it all",
+            "turn": 8
+          },
+          {
+            "quote": "trying not to get too anxious",
+            "turn": 8
+          },
+          {
+            "quote": "You've put me at ease even in this uncertain time",
+            "turn": 10
+          }
+        ],
+        "reasoning": "They acknowledge emotional ups and downs ('rollercoaster'), express hope about not needing treatment, and admit to feeling overwhelmed and worried. They're trying to manage their anxiety. Emotion is prominent and affects what they do - they're trying not to let worries take over.",
+        "score": 6.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "My hematologist said that it's in its very early stages and that I might never need treatment",
+            "turn": 3
+          },
+          {
+            "quote": "The idea of never needing treatment is definitely something I find hopeful",
+            "turn": 5
+          },
+          {
+            "quote": "So far, I haven't been put on any medication for my CLL, and that's something I've felt pretty grateful for",
+            "turn": 6
+          },
+          {
+            "quote": "If the need for treatment ever arises in the future, though, I know I want to approach it as calmly and rationally as possible, weighing the pros and cons before making any decisions",
+            "turn": 6
+          }
+        ],
+        "reasoning": "They haven't been prescribed medication yet and feel grateful for this. They're hopeful they may never need treatment. If treatment becomes necessary, they want to approach it rationally and weigh pros and cons. They don't currently have a prescription, so their specific necessity belief is low.",
+        "score": 2.0,
+        "confidence": 0.7
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "I understand that medications can sometimes have side effects, so having never had to deal with those has made it easier to manage day-to-day",
+            "turn": 6
+          },
+          {
+            "quote": "If the need for treatment ever arises in the future, though, I know I want to approach it as calmly and rationally as possible, weighing the pros and cons before making any decisions",
+            "turn": 6
+          },
+          {
+            "quote": "my understanding is that some patients may indeed receive prescriptions for medications they don't necessarily need",
+            "turn": 7
+          }
+        ],
+        "reasoning": "They're aware of potential side effects of medication. They want to approach treatment rationally and weigh pros and cons. They understand that some patients may receive unnecessary prescriptions. These are concerns they've thought about, even if they haven't acted on them yet.",
+        "score": 3.0,
+        "confidence": 0.6
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "I understand that medications can sometimes have side effects",
+            "turn": 6
+          },
+          {
+            "quote": "my understanding is that some patients may indeed receive prescriptions for medications they don't necessarily need",
+            "turn": 7
+          },
+          {
+            "quote": "It could be due to a variety of factors, including pressure from pharmaceutical companies or the influence of an over-protective doctor",
+            "turn": 7
+          }
+        ],
+        "reasoning": "They acknowledge that medications can have side effects and that some patients may receive unnecessary prescriptions. They mention factors like pharmaceutical company pressure and over-protective doctors. This suggests mild generalised caution about taking things long-term.",
+        "score": 3.0,
+        "confidence": 0.7
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [
+          {
+            "quote": "my understanding is that some patients may indeed receive prescriptions for medications they don't necessarily need",
+            "turn": 7
+          },
+          {
+            "quote": "It could be due to a variety of factors, including pressure from pharmaceutical companies or the influence of an over-protective doctor",
+            "turn": 7
+          },
+          {
+            "quote": "I do believe there are many doctors out there who take a more measured approach and only prescribe medication when it's truly necessary",
+            "turn": 7
+          },
+          {
+            "quote": "So in my experience, it really depends on the specific healthcare provider involved",
+            "turn": 7
+          }
+        ],
+        "reasoning": "They believe that some patients may receive unnecessary prescriptions due to factors like pharmaceutical company pressure or over-protective doctors. However, they also believe many doctors take a measured approach. They see it as variable depending on the healthcare provider. This suggests occasional doubt about prescribing, not a blanket belief in overuse.",
+        "score": 3.0,
+        "confidence": 0.6
+      }
+    },
+    "causes": [],
+    "causes_evidence": []
+  }
+}

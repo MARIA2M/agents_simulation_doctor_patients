@@ -1,0 +1,262 @@
+{
+  "patient_id": "CLL-001",
+  "turns": 12,
+  "stop_reason": "doctor",
+  "conversation": [
+    {
+      "role": "doctor",
+      "content": "Hello, I see you're here for an appointment today. What brings you in?",
+      "turn": 1
+    },
+    {
+      "role": "patient",
+      "content": "Hello, doctor. To be honest, it's been quite challenging coping with my chronic illness. The fatigue and occasional night sweats are making it hard to keep up with work and maintain a normal social life. I've noticed some changes too - my neck feels a bit swollen, but the pain isn't unbearable. I'm hoping we can go over some treatment options or perhaps find ways to manage these symptoms better?",
+      "turn": 1
+    },
+    {
+      "role": "doctor",
+      "content": "What is your diagnosis, and what treatment are you currently on?",
+      "turn": 2
+    },
+    {
+      "role": "patient",
+      "content": "The diagnosis you have is Chronic Lymphocytic Leukemia (CLL), which seems to be progressing slowly. You're not currently on any medication; you've been advised that watchful waiting and regular blood monitoring might be all that's needed for now. Your last couple of blood draws have shown a stable white blood cell count, which indicates the condition is under control at this stage.",
+      "turn": 2
+    },
+    {
+      "role": "doctor",
+      "content": "You mentioned a swollen neck. Has this been present since you noticed it, or has it changed over time? And how long have you been in the watchful waiting phase?",
+      "turn": 3
+    },
+    {
+      "role": "patient",
+      "content": "The swelling in my neck has been persistent but not too severe. It's mostly been there as long as I can remember having this illness. As for being in the watchful waiting phase, that would be about a year now. You've reassured me that it might still be quite some time before any treatment is needed.",
+      "turn": 3
+    },
+    {
+      "role": "doctor",
+      "content": "How well do you understand what CLL is and why watchful waiting is recommended at this stage? Do you have any concerns about the disease progression or the need for future treatment?",
+      "turn": 4
+    },
+    {
+      "role": "patient",
+      "content": "Honestly, I grasp the basics of CLL but still feel a bit confused about some aspects. You've mentioned that it might be years before needing any treatment, which does give me reassurance. However, with the uncertainty comes worry and concern about potential disease progression or if there will come a point where watchful waiting won't suffice.",
+      "turn": 4
+    },
+    {
+      "role": "doctor",
+      "content": "Do you know what factors would typically indicate that CLL has progressed to a point where treatment becomes necessary? And how do you manage the uncertainty of not having a fixed timeline?",
+      "turn": 5
+    },
+    {
+      "role": "patient",
+      "content": "Factors that might indicate CLL progression and the need for treatment include an increase in lymph node size, unexplained weight loss, the development of more severe symptoms like fever or infections, or a rapid and significant rise in blood cell counts. Regarding managing the uncertainty, I've been trying to stay active with regular exercise, eating healthily, and maintaining social connections despite everything. It helps put my mind at ease to some extent, but I understand that this might not be possible for everyone in a similar situation.",
+      "turn": 5
+    },
+    {
+      "role": "doctor",
+      "content": "You mentioned fatigue and night sweats are affecting your work and social life. How would you rate these symptoms on a scale of 1 to 10, and do you have any specific triggers or patterns you've noticed?",
+      "turn": 6
+    },
+    {
+      "role": "patient",
+      "content": "I wouldn't want to put these symptoms on a numerical scale since they're difficult to quantify; it's more about the impact on my daily functioning. The fatigue often makes concentrating at work challenging, and I find myself needing frequent breaks. As for night sweats, they tend to occur most nights, usually after I've been in bed for an hour or so. It feels like a sudden rush of heat that wakes me up drenched in sweat.",
+      "turn": 6
+    },
+    {
+      "role": "doctor",
+      "content": "Besides the fatigue, night sweats, and swollen neck, do you experience any other symptoms like fevers, infections, or changes in your weight? And have you discussed these symptoms with anyone else since your diagnosis?",
+      "turn": 7
+    },
+    {
+      "role": "patient",
+      "content": "Apart from what we've already talked about, I haven't noticed any fever or major changes in my weight. But I am more prone to getting minor infections that take a bit longer than usual to heal. As for discussing these issues, I usually only talk to my partner about them since they understand and support me best.",
+      "turn": 7
+    },
+    {
+      "role": "doctor",
+      "content": "What would you like to achieve from today's appointment? Are you hoping for specific changes to your management plan, or would you like more information about your options?",
+      "turn": 8
+    },
+    {
+      "role": "patient",
+      "content": "I suppose I'd like some reassurance that everything is under control despite the symptoms. If there are any new treatment options or strategies we could consider, that'd be helpful too. Mostly, I think I just need someone to listen and understand my concerns since this condition can feel quite overwhelming at times.",
+      "turn": 8
+    },
+    {
+      "role": "doctor",
+      "content": "How often are you having blood draws for monitoring, and when is your next scheduled appointment? Do you know what your next blood work will be looking for specifically?",
+      "turn": 9
+    },
+    {
+      "role": "patient",
+      "content": "You're having blood draws once a month for monitoring, as per your doctor's advice. The next scheduled appointment would be in two months' time. As far as I'm aware, the next set of blood work would likely look at white blood cell count and other standard markers relevant to CLL management.",
+      "turn": 9
+    },
+    {
+      "role": "doctor",
+      "content": "Based on what you've told me, your CLL is stable with a slow progression, and you're in the watchful waiting phase with monthly blood monitoring. The swelling in your neck has been persistent but not changed significantly, and your blood counts remain stable. The fatigue and night sweats are affecting your daily functioning but don't indicate an immediate need for treatment at this time. Your next appointment is in two months with routine blood work. Is there anything else you'd like to address before we wrap up today?",
+      "turn": 10
+    },
+    {
+      "role": "patient",
+      "content": "I appreciate the detailed overview of my condition, doctor. I think for now, that's about all I wanted to discuss. I understand that the situation might change if new symptoms arise or if blood tests indicate a different scenario. For now, though, it would be helpful just to know how to manage these day-to-day challenges and maybe prepare for any larger concerns down the line when necessary.",
+      "turn": 10
+    },
+    {
+      "role": "doctor",
+      "content": "For the fatigue, try to prioritize rest during particularly difficult days and consider scheduling important tasks when you have more energy. For night sweats, keeping a change of clothes at bedside can be helpful. Continue with your healthy lifestyle choices and maintain regular follow-up with your monitoring schedule. If you notice any of the progression indicators we discussed - significant lymph node growth, unexplained weight loss, fevers, or rapid changes in blood counts - contact your care team promptly. Is there anything else you'd like me to clarify?",
+      "turn": 11
+    },
+    {
+      "role": "patient",
+      "content": "Thank you for the advice and reassurance, doctor. I think that's enough to be going on with for now. I'll keep an eye out for any new symptoms and stay proactive about my monitoring. Please remind me of the importance of maintaining open lines of communication with your care team if anything changes unexpectedly.",
+      "turn": 11
+    },
+    {
+      "role": "doctor",
+      "content": "You're welcome. I'll make sure you have contact information for your care team and know what to do if you notice any concerning changes. Take care until your next appointment in two months.",
+      "turn": 12
+    },
+    {
+      "role": "patient",
+      "content": "Thank you, doctor. That sounds like a plan. You take care too. Goodbye.",
+      "turn": 12
+    }
+  ],
+  "coverage_hint": {},
+  "working_notes": [],
+  "events": [],
+  "usage": [
+    {
+      "role": "doctor",
+      "eval_tokens": 129,
+      "prompt_tokens": 1532
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 84,
+      "prompt_tokens": 1161
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 156,
+      "prompt_tokens": 1748
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 80,
+      "prompt_tokens": 1267
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 212,
+      "prompt_tokens": 1987
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 66,
+      "prompt_tokens": 1391
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 155,
+      "prompt_tokens": 2268
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 67,
+      "prompt_tokens": 1501
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 200,
+      "prompt_tokens": 2493
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 101,
+      "prompt_tokens": 1611
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 205,
+      "prompt_tokens": 2797
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 91,
+      "prompt_tokens": 1765
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 173,
+      "prompt_tokens": 3096
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 65,
+      "prompt_tokens": 1908
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 160,
+      "prompt_tokens": 3337
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 61,
+      "prompt_tokens": 2014
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 151,
+      "prompt_tokens": 3561
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 61,
+      "prompt_tokens": 2116
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 229,
+      "prompt_tokens": 3776
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 79,
+      "prompt_tokens": 2288
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 180,
+      "prompt_tokens": 4087
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 63,
+      "prompt_tokens": 2479
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 72,
+      "prompt_tokens": 4333
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 20,
+      "prompt_tokens": 2589
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 768,
+      "prompt_tokens": 4428
+    },
+    {
+      "role": "report",
+      "eval_tokens": 3208,
+      "prompt_tokens": 9406
+    }
+  ]
+}

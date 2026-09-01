@@ -1,0 +1,160 @@
+{
+  "patient_id": "CLL-005",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "CLL-005",
+    "clinical_summary": "Patient presents with fatigue (coming and going for a few months), lymphadenopathy (two small lymph nodes in neck, noticed about a month ago), unexplained weight loss (started about a month ago), and intermittent night sweats. Recently diagnosed with high blood pressure about two months ago and started taking Amlodipine as instructed. Reports taking medication as prescribed. Family history of breast cancer (mother, 15 years ago). No recent infections, travel, or close contact with sick individuals. No other significant medical conditions. Adherence to blood pressure medication confirmed.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "I've been experiencing some fatigue that comes and goes",
+            "turn": 1
+          },
+          {
+            "quote": "I did lose some weight recently without changing my diet or exercise routine",
+            "turn": 2
+          },
+          {
+            "quote": "I'm concerned about these symptoms and wanted to get checked out",
+            "turn": 1
+          }
+        ],
+        "reasoning": "Patient reports fatigue and weight loss, and expresses concern about symptoms. However, fatigue is described as intermittent ('comes and goes') and no major role loss or functional impairment is described. Weight loss is noted but not described as severely impacting daily life.",
+        "score": 3.0,
+        "confidence": 0.6
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "The fatigue has been coming and going for a few months now",
+            "turn": 2
+          },
+          {
+            "quote": "I first noticed the lymph nodes about a month ago",
+            "turn": 4
+          },
+          {
+            "quote": "The unexplained weight loss started around the same time I noticed the lymph nodes, about a month ago",
+            "turn": 5
+          }
+        ],
+        "reasoning": "Patient describes symptoms with different durations - fatigue over months, others over a month. No expression of expectations about duration or course of the illness.",
+        "score": null,
+        "confidence": 0.0
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I'm concerned about these symptoms and wanted to get checked out",
+            "turn": 1
+          }
+        ],
+        "reasoning": "Patient presents for medical evaluation but has not expressed any beliefs about personal control over the illness or self-management strategies.",
+        "score": null,
+        "confidence": 0.0
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "The doctor prescribed me some tablets called Amlodipine to control it. I've been taking them as instructed since then.",
+            "turn": 4
+          }
+        ],
+        "reasoning": "Patient is adherent to Amlodipine but has not expressed beliefs about its effectiveness or role in their overall condition.",
+        "score": null,
+        "confidence": 0.0
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "I've been experiencing some fatigue that comes and goes, and recently I've noticed two small lymph nodes in my neck. Occasionally, I wake up with mild night sweats too.",
+            "turn": 1
+          }
+        ],
+        "reasoning": "Patient identifies specific symptoms (fatigue, lymphadenopathy, night sweats) but has not given the illness a label or name. Symptoms are described as one or two main symptoms, intermittent, and not limiting.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "I'm concerned about these symptoms and wanted to get checked out.",
+            "turn": 1
+          }
+        ],
+        "reasoning": "Patient explicitly expresses concern but it is tied to seeking medical evaluation. No description of worry as frequent, recurring unprompted, or affecting decisions beyond seeking care.",
+        "score": 3.0,
+        "confidence": 0.6
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [],
+        "reasoning": "Patient has not explained what they understand about their condition, its causes, or what is happening to them beyond presenting with symptoms and seeking evaluation.",
+        "score": null,
+        "confidence": 0.0
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "I'm concerned about these symptoms and wanted to get checked out.",
+            "turn": 1
+          }
+        ],
+        "reasoning": "Patient expresses concern but does not describe emotional responses that affect mood, sleep, or behavior. The concern appears tied to seeking medical evaluation.",
+        "score": 2.0,
+        "confidence": 0.7
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "The doctor prescribed me some tablets called Amlodipine to control it. I've been taking them as instructed since then.",
+            "turn": 4
+          }
+        ],
+        "reasoning": "Patient is adherent to Amlodipine but has not expressed beliefs about whether the medication is necessary or would be worse off without it.",
+        "score": null,
+        "confidence": 0.0
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "The doctor prescribed me some tablets called Amlodipine to control it. I've been taking them as instructed since then.",
+            "turn": 4
+          }
+        ],
+        "reasoning": "Patient has not raised any concerns about their medication, prompted or unprompted.",
+        "score": 2.0,
+        "confidence": 0.8
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [],
+        "reasoning": "Patient has not expressed any general views about medicines as a class being harmful.",
+        "score": null,
+        "confidence": 0.0
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "Patient has not expressed any general views about prescribing practices.",
+        "score": null,
+        "confidence": 0.0
+      }
+    },
+    "causes": [],
+    "causes_evidence": []
+  }
+}

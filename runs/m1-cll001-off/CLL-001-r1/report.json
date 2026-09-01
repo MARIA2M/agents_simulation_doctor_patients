@@ -1,0 +1,258 @@
+{
+  "patient_id": "CLL-001",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "CLL-001",
+    "clinical_summary": "The patient is a lawyer diagnosed with Chronic Lymphocytic Leukemia (CLL) a few years ago. They present with persistent fatigue, tender swollen lymph nodes in the neck, and occasional night sweats. They've been on Ritalin for about a month (switched from Wellbutrin due to side effects) and are experiencing intense, persistent headaches that are exacerbating their anxiety. They're in a 'watch and wait' approach with stable blood cell counts but feel uneasy about not having active treatment. The patient expresses significant emotional distress, feeling the disease has 'taken over everything' including work and family time. They're worried about maintaining their career as a lawyer and fear the illness will impact their relationships and hobbies. They believe CLL is largely genetic and related to environmental factors, with family history of various cancers contributing. The patient makes efforts to stay active and eat healthily but finds it difficult due to fatigue. They want practical guidance and strategies to manage symptoms so they don't control their life completely.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "some days I can barely get out of bed",
+            "turn": 4
+          },
+          {
+            "quote": "It feels like this disease has taken over everything — my work, my time with the kids, everything",
+            "turn": 4
+          },
+          {
+            "quote": "I worry if I'll be able to keep up with everything as this illness progresses",
+            "turn": 12
+          },
+          {
+            "quote": "Part of me is scared about how much this illness might impact everything — not just work but also my relationships and hobbies",
+            "turn": 13
+          }
+        ],
+        "reasoning": "The patient describes significant impact on daily functioning, work, family time, and relationships. They can barely get out of bed on some days and feel the disease has 'taken over everything.'",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "I was diagnosed with Chronic Lymphocytic Leukemia a few years back. It's been a slow progression so far, thankfully",
+            "turn": 2
+          },
+          {
+            "quote": "My doctor said it might be years before we need to start any treatment",
+            "turn": 2
+          },
+          {
+            "quote": "I know it's a chronic illness and that there might not be any treatment needed for years",
+            "turn": 7
+          },
+          {
+            "quote": "I can't shake off this feeling of dread — like something bad could happen at any moment",
+            "turn": 7
+          }
+        ],
+        "reasoning": "The patient acknowledges the chronic nature and potential for years without treatment, but still feels dread and uncertainty about the future. They hold both endings open and plan for neither.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "Sometimes I feel like I have no say in any of it",
+            "turn": 4
+          },
+          {
+            "quote": "Even when I try to do everything right, there are times when it still feels like the illness is just taking its course regardless of anything I do",
+            "turn": 6
+          },
+          {
+            "quote": "I try to stay active and eat relatively healthily, but it's difficult when I'm feeling this tired all the time. Sometimes, even just getting through the day feels like an accomplishment",
+            "turn": 10
+          }
+        ],
+        "reasoning": "The patient makes efforts to stay active and eat healthily, but feels limited by fatigue and believes the illness is taking its course regardless of their actions. They do what is asked but doubt it changes the course of anything.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "I know there might not be any need for treatment right now, but at the same time, it's hard not to feel like something should be happening or changing",
+            "turn": 9
+          },
+          {
+            "quote": "Ritalin seems to have caused more side effects than it's worth",
+            "turn": 9
+          },
+          {
+            "quote": "I worry about what might happen if we try something new",
+            "turn": 9
+          },
+          {
+            "quote": "I keep wondering if it's really worth it",
+            "turn": 4
+          }
+        ],
+        "reasoning": "The patient acknowledges the 'watch and wait' approach but feels uneasy about not having active treatment. They see Ritalin as causing more harm than good and are worried about trying something new.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "I'm a lawyer",
+            "turn": 12
+          },
+          {
+            "quote": "Outside of work, I love spending time with my family and staying involved in community organizations",
+            "turn": 13
+          },
+          {
+            "quote": "It feels like this disease has taken over everything — my work, my time with the kids, everything",
+            "turn": 4
+          }
+        ],
+        "reasoning": "The patient has multiple roles (lawyer, family person, community member) but feels the disease has impacted these significantly. They have several symptoms (fatigue, swollen lymph nodes, night sweats) that are present most days.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "I can't shake off this feeling of dread — like something bad could happen at any moment",
+            "turn": 7
+          },
+          {
+            "quote": "The biggest worry is just not knowing what's coming next or how things will change",
+            "turn": 7
+          },
+          {
+            "quote": "It keeps me up at night, wondering if I'm doing enough to take care of myself and if there's more I should be doing",
+            "turn": 7
+          },
+          {
+            "quote": "The uncertainty is the hardest part to bear, really",
+            "turn": 13
+          }
+        ],
+        "reasoning": "The patient experiences frequent worry and dread, with uncertainty about the future keeping them up at night. Their worry is prominent and affects their daily life.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I was diagnosed with Chronic Lymphocytic Leukemia a few years back",
+            "turn": 2
+          },
+          {
+            "quote": "I know it's a chronic illness and that there might not be any treatment needed for years",
+            "turn": 7
+          },
+          {
+            "quote": "I believe CLL is largely genetic and related to some environmental factors",
+            "turn": 10
+          }
+        ],
+        "reasoning": "The patient has a reasonable understanding of their diagnosis and the general approach, but their emotional response doesn't fully align with this understanding.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "It feels like this disease has taken over everything",
+            "turn": 4
+          },
+          {
+            "quote": "I can't shake off this feeling of dread",
+            "turn": 7
+          },
+          {
+            "quote": "It keeps me up at night",
+            "turn": 7
+          },
+          {
+            "quote": "The uncertainty is the hardest part to bear, really",
+            "turn": 13
+          }
+        ],
+        "reasoning": "The patient experiences significant emotional distress, with feelings of dread, anxiety, and uncertainty that affect their daily life and sleep.",
+        "score": 8.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "I keep wondering if it's really worth it",
+            "turn": 4
+          },
+          {
+            "quote": "Ritalin seems to have caused more side effects than it's worth",
+            "turn": 9
+          },
+          {
+            "quote": "I worry about what might happen if we try something new",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient is taking Ritalin but expresses significant concerns about its necessity due to side effects. They're not fully convinced it's worth it.",
+        "score": 3.0,
+        "confidence": 0.7
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "The headaches are definitely the main concern for me with the Ritalin. They're quite intense and persistent",
+            "turn": 8
+          },
+          {
+            "quote": "It's also making my anxiety feel more heightened overall — like everything is just adding up",
+            "turn": 8
+          },
+          {
+            "quote": "I keep wondering if it's really worth it",
+            "turn": 4
+          }
+        ],
+        "reasoning": "The patient has significant concerns about Ritalin, particularly the intense and persistent headaches, and how it's affecting their anxiety. These concerns have led them to question whether the medication is worth it.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [],
+        "reasoning": "The patient hasn't expressed a general view about medicines as a class being harmful. They're concerned about specific side effects of their medication, but this doesn't translate to a general belief about medicines being harmful.",
+        "score": 2.0,
+        "confidence": 0.5
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "The patient hasn't expressed any views about doctors prescribing too readily. They're concerned about specific medications and their side effects, but not about the prescribing practice in general.",
+        "score": 2.0,
+        "confidence": 0.5
+      }
+    },
+    "causes": [
+      "genetic",
+      "environmental factors",
+      "family history of various cancers"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "I believe CLL is largely genetic and related to some environmental factors. My family has a history of various cancers, so I think that might have played into my diagnosis as well",
+        "turn": 10
+      }
+    ]
+  }
+}

@@ -1,0 +1,161 @@
+{
+  "patient_id": "CLL-001",
+  "mode": "ablate",
+  "removed_turns": 7,
+  "removed_words": 358,
+  "events": [],
+  "report": {
+    "patient_id": "CLL-001",
+    "clinical_summary": "The patient presents with new symptoms (fatigue, night sweats, neck discomfort) that started two months ago, on a background of a five-year diagnosis of Chronic Lymphocytic Leukemia (CLL) managed via 'watch and wait'. They are seeking answers to understand if these symptoms are related to their CLL or something else entirely. They express concern about the new symptoms and hope for guidance to regain a sense of control.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "The fatigue has also been getting worse over time",
+            "turn": 2
+          },
+          {
+            "quote": "more tired when I've been sitting at the computer for a while",
+            "turn": 9
+          }
+        ],
+        "reasoning": "Fatigue is worsening and is noticeable during specific activities (sitting at a computer), indicating a change in how they manage their daily life (pacing) rather than a complete loss of role.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "The symptoms started about two months ago",
+            "turn": 2
+          }
+        ],
+        "reasoning": "The duration of the symptoms is short, suggesting an expectation that they will resolve within a reasonable timeframe.",
+        "score": 2.0,
+        "confidence": 0.8
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "If you're able to rule out any more serious concerns and provide me with some guidance on how best to manage these symptoms, I think that would go a long way towards helping me feel more in control again",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient is waiting for the doctor to provide guidance to feel in control and has not described any active self-management strategies beyond seeking medical help.",
+        "score": 2.0,
+        "confidence": 0.8
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "currently on watch and wait",
+            "turn": 5
+          }
+        ],
+        "reasoning": "The patient is in a monitoring phase ('watch and wait') rather than an active treatment phase, and has not attributed their current state to treatment efficacy.",
+        "score": 0.0,
+        "confidence": 0.9
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "The symptoms started about two months ago... The fatigue has also been getting worse over time",
+            "turn": 2
+          }
+        ],
+        "reasoning": "The patient identifies specific symptoms (fatigue, night sweats, neck discomfort) as part of their current state.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "new symptoms that are worrying you",
+            "turn": 2
+          },
+          {
+            "quote": "hope that we can figure out what might be causing these new symptoms - whether it's something related to CLL or something else entirely",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient is worried about the new symptoms and is actively seeking to rule out serious concerns.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I'm not sure, doctor. The night sweats and neck discomfort could potentially be related, though I know that's not a given",
+            "turn": 6
+          }
+        ],
+        "reasoning": "The patient does not understand the connection between the new symptoms and their underlying condition.",
+        "score": 2.0,
+        "confidence": 0.9
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "I've also considered reaching out to mental health resources in the past when I was feeling particularly overwhelmed",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient acknowledges emotional impact ('overwhelmed') and has utilized support systems.",
+        "score": 4.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [],
+        "reasoning": "The patient is on 'watch and wait' and no specific medication regimen was discussed.",
+        "score": null,
+        "confidence": 1.0
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [],
+        "reasoning": "No concerns about specific medication were raised.",
+        "score": null,
+        "confidence": 1.0
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [],
+        "reasoning": "No general views on medicines as a class were expressed.",
+        "score": null,
+        "confidence": 1.0
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "No views on prescribing practices were expressed.",
+        "score": null,
+        "confidence": 1.0
+      }
+    },
+    "causes": [
+      "Chronic Lymphocytic Leukemia",
+      "something else entirely"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "diagnosed with Chronic Lymphocytic Leukemia",
+        "turn": 5
+      },
+      {
+        "quote": "whether it's something related to CLL or something else entirely",
+        "turn": 8
+      }
+    ]
+  }
+}

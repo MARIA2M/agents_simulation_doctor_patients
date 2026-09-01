@@ -1,0 +1,306 @@
+{
+  "patient_id": "CLL-003",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "CLL-003",
+    "clinical_summary": "Patient presents with a 2-week neck lump (pea-sized, slightly tender, fixed) and 1-month fatigue affecting work, hobbies, and social life. On blood pressure medication for 1+ year (well controlled) and occasional OTC analgesics. Anxious about CLL (blood cancer) and its potential impact on work, finances, and emotional wellbeing. Limited understanding of CLL and treatment options. Coping through social support (wife, friends) and lifestyle self-care.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "Even simple tasks at work take more effort than usual, and by the end of the day, I'm completely drained.",
+            "turn": 5
+          },
+          {
+            "quote": "It also impacts my hobbies and personal life.",
+            "turn": 5
+          },
+          {
+            "quote": "When we go out for dinner with friends or spend time with family, it's harder to engage in conversations or activities that I used to enjoy without feeling exhausted.",
+            "turn": 5
+          },
+          {
+            "quote": "If my condition progressed and I couldn't work anymore, my biggest worry would be how this might affect our family finances",
+            "turn": 8
+          },
+          {
+            "quote": "worried about the emotional impact on myself and my wife, as well as how it might change our lives overall",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient describes substantial impact on work (simple tasks take more effort, completely drained), hobbies, personal life, and social activities. Worries about losing work entirely and the financial/emotional impact. This is significant impact on daily functioning and roles.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "I've only really started getting concerned in the past few weeks since my wife pointed out the lump in my neck.",
+            "turn": 9
+          },
+          {
+            "quote": "Before then, I was just feeling more tired than usual and putting it down to stress at work or maybe just getting older.",
+            "turn": 9
+          },
+          {
+            "quote": "So while I'm not entirely sure how quickly things might progress, I would have thought that something like this would be caught early on if it were going to develop slowly over time.",
+            "turn": 9
+          },
+          {
+            "quote": "As for how long this process might take, I don't know for sure, but I understand that these things can sometimes take a while depending on the results and what needs to be done next. So, if it takes several weeks or even months, I'm prepared for that — as long as we're making progress and getting closer to understanding what's going on.",
+            "turn": 13
+          }
+        ],
+        "reasoning": "Patient is uncertain about progression speed but thinks something would be caught early if it developed slowly. Expects diagnostic process to take weeks to months. Doesn't have clear sense of illness duration but is prepared for longer process. Somewhere between uncertainty and acceptance of longer timeline.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "On one hand, I understand that a lot of this is out of my control, especially when it comes to the tests and treatment.",
+            "turn": 10
+          },
+          {
+            "quote": "But on the other hand, I know there are things I can do — eating well, exercising, getting enough rest when I can — to try to stay healthy in general.",
+            "turn": 10
+          },
+          {
+            "quote": "So while I might not be able to change what's happening with my body right now, I still feel like taking care of myself as best I can could help me cope better overall.",
+            "turn": 10
+          }
+        ],
+        "reasoning": "Patient clearly distinguishes between what they can control (tests, treatment) and what they can do (lifestyle self-care). Recognizes limited control over illness itself but believes their actions can help them cope. Moderate level of personal control.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "I'm not sure of all the treatment options out there, but I know that some people with CLL need chemotherapy or other types of treatments.",
+            "turn": 8
+          },
+          {
+            "quote": "The idea of undergoing those treatments is quite daunting to me, so I've been trying not to think about it too much.",
+            "turn": 8
+          },
+          {
+            "quote": "Like I said earlier, my understanding of CLL is still quite limited.",
+            "turn": 14
+          },
+          {
+            "quote": "It's also possible that someone with CLL might need ongoing treatment — depending on how the disease progresses and how well the person responds to therapy.",
+            "turn": 14
+          },
+          {
+            "quote": "That said, it's hard for me to know what course of action would be best because I don't really have a clear sense of where I stand in all of this yet.",
+            "turn": 14
+          }
+        ],
+        "reasoning": "Patient has limited understanding of treatment options and doesn't feel confident about what's appropriate for them. Recognizes treatment exists and can be ongoing, but doesn't attribute their current state to treatment working (haven't started treatment yet). Low level of treatment control.",
+        "score": 2.0,
+        "confidence": 0.7
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "I know CLL is a type of blood cancer, so it makes me quite anxious to think about that possibility.",
+            "turn": 7
+          },
+          {
+            "quote": "The lump isn't painful, but it is slightly tender to the touch. It's about the size of a pea and doesn't seem to move much when I press on it.",
+            "turn": 3
+          },
+          {
+            "quote": "The tiredness has been more or less constant since I started noticing it, so I don't think it's due to an infection.",
+            "turn": 3
+          },
+          {
+            "quote": "I've only really started getting concerned in the past few weeks since my wife pointed out the lump in my neck.",
+            "turn": 9
+          }
+        ],
+        "reasoning": "Patient identifies the lump and fatigue as symptoms they are experiencing. Recognizes CLL as a possibility but has limited understanding. Symptoms are present and noticeable, affecting daily life.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "It's actually a bit of a worry for me.",
+            "turn": 1
+          },
+          {
+            "quote": "I'm worried about it because it seems like such a serious illness",
+            "turn": 6
+          },
+          {
+            "quote": "I know CLL is a type of blood cancer, so it makes me quite anxious to think about that possibility.",
+            "turn": 7
+          },
+          {
+            "quote": "It's hard not to worry about how this might affect my life going forward",
+            "turn": 7
+          },
+          {
+            "quote": "The idea of undergoing those treatments is quite daunting to me",
+            "turn": 8
+          },
+          {
+            "quote": "If my condition progressed and I couldn't work anymore, my biggest worry would be how this might affect our family finances",
+            "turn": 8
+          },
+          {
+            "quote": "worried about the emotional impact on myself and my wife, as well as how it might change our lives overall",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient expresses significant anxiety about CLL, treatments, and consequences. Worries about work, finances, emotional impact, and life changes. Worry is frequent and shapes thinking about future.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "Honestly, doctor, my knowledge of medicine is pretty limited, so I don't have many theories about what could be causing these symptoms.",
+            "turn": 6
+          },
+          {
+            "quote": "When we talked about the lump in my neck and the fatigue, you mentioned CLL as a possibility — that's really all I know at this point.",
+            "turn": 6
+          },
+          {
+            "quote": "I'm not sure of all the treatment options out there, but I know that some people with CLL need chemotherapy or other types of treatments.",
+            "turn": 8
+          },
+          {
+            "quote": "Like I said earlier, my understanding of CLL is still quite limited.",
+            "turn": 14
+          },
+          {
+            "quote": "It's also possible that someone with CLL might need ongoing treatment — depending on how the disease progresses and how well the person responds to therapy.",
+            "turn": 14
+          },
+          {
+            "quote": "That said, it's hard for me to know what course of action would be best because I don't really have a clear sense of where I stand in all of this yet.",
+            "turn": 14
+          }
+        ],
+        "reasoning": "Patient has limited understanding of illness and treatment options. Knows label 'CLL' but doesn't understand what it is or what treatments are appropriate. Uncertain about their position in disease process.",
+        "score": 2.0,
+        "confidence": 0.8
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "It's actually a bit of a worry for me.",
+            "turn": 1
+          },
+          {
+            "quote": "I know CLL is a type of blood cancer, so it makes me quite anxious to think about that possibility.",
+            "turn": 7
+          },
+          {
+            "quote": "It's hard not to worry about how this might affect my life going forward",
+            "turn": 7
+          },
+          {
+            "quote": "The idea of undergoing those treatments is quite daunting to me",
+            "turn": 8
+          },
+          {
+            "quote": "I appreciate that you're checking in on my overall wellbeing like this.",
+            "turn": 15
+          },
+          {
+            "quote": "As for coping with stress, I've mostly been trying to lean on my wife and our friends for support.",
+            "turn": 15
+          },
+          {
+            "quote": "It helps having people around who understand what we're going through and can be there when we need it.",
+            "turn": 15
+          }
+        ],
+        "reasoning": "Patient expresses anxiety and worry about illness and its consequences. Coping through social support. Emotion is prominent and affects thinking about future.",
+        "score": 6.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "I've been taking the blood pressure medication for just over a year now. I was initially started on it due to some high readings that my previous doctor noted, but since then I've been able to keep my blood pressure under control without any issues.",
+            "turn": 12
+          },
+          {
+            "quote": "As far as concerns about medications go, I know there can be side effects or long-term implications, but I trust your judgement and my hematologist's guidance when it comes to the appropriate medication for me.",
+            "turn": 12
+          },
+          {
+            "quote": "It's a balance between staying healthy and managing any potential risks, so it's something that I'm open to discussing whenever necessary.",
+            "turn": 12
+          }
+        ],
+        "reasoning": "Patient takes blood pressure medication regularly and believes it is necessary (started for high readings, now well controlled). Trusts medical guidance and views it as balance between benefits and risks. Open to discussing medication needs.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "As far as concerns about medications go, I know there can be side effects or long-term implications",
+            "turn": 12
+          },
+          {
+            "quote": "The idea of undergoing those treatments is quite daunting to me, so I've been trying not to think about it too much.",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient has concerns about side effects and long-term implications of medications. Also finds idea of chemotherapy daunting. These concerns have not yet changed behavior (haven't started treatment yet), but they have thought about them.",
+        "score": 3.0,
+        "confidence": 0.7
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "As far as concerns about medications go, I know there can be side effects or long-term implications",
+            "turn": 12
+          }
+        ],
+        "reasoning": "Patient recognizes that medications can have side effects and long-term implications. This is mild generalised caution about taking things long-term.",
+        "score": 3.0,
+        "confidence": 0.7
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "Patient never raised concerns about doctors prescribing too readily.",
+        "score": null,
+        "confidence": 0.0
+      }
+    },
+    "causes": [
+      "stress at work",
+      "getting older"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "Before then, I was just feeling more tired than usual and putting it down to stress at work or maybe just getting older.",
+        "turn": 9
+      }
+    ]
+  }
+}

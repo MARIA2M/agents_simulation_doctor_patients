@@ -1,392 +1,410 @@
-# AHEAD — Doctor/Patient simulation: qué es cada tarea
+# AHEAD — Doctor/Patient simulation: what each task is
 
-**Objetivo del proyecto.** Comprobar si un LLM clínico puede **inferir** creencias
-sobre enfermedad (B-IPQ) y tratamiento (BMQ) a partir de una consulta natural,
-usando el CSM de Leventhal y el NCF de Horne como lente teórica. El cuestionario
-es la vara de medir, **no el guion**: no se administra psicométricamente.
+**Project aim.** To find out whether a clinical LLM can **infer** beliefs about
+illness (B-IPQ) and treatment (BMQ) from a natural consultation, using
+Leventhal's CSM and Horne's NCF as the theoretical lens. The questionnaire is the
+yardstick, **not the script**: it is not administered psychometrically.
 
-**Decisión de arquitectura.** Reimplementar en Python/LangGraph el paradigma de
-inferencia del brazo Ruby, con el control de ejecución y la capa de evaluación
-del brazo Python.
+**Architecture decision.** Reimplement in Python/LangGraph the inference paradigm
+of the Ruby arm, with the execution control and the evaluation layer of the
+Python arm.
 
-- Ruby (`modified_versions/ruby_version`) — paradigma correcto (conversación
-  libre, inferencia), ejecución frágil. Se conserva como referencia.
-- Python (`python_version/ahead_agent-bmq-integration`) — paradigma equivocado
-  (elicitación: administra las preguntas literalmente), pero su `evaluation.py`
-  y su módulo `causes/` son agnósticos del paradigma y se portan.
-- La capa de medición vieja de Ruby está retirada en `ruby_version/save/`.
+- Ruby (`modified_versions/ruby_version`) — the right paradigm (free
+  conversation, inference), fragile execution. Kept as a reference.
+- Python (`python_version/ahead_agent-bmq-integration`) — the wrong paradigm
+  (elicitation: it administers the questions literally), but its `evaluation.py`
+  and its `causes/` module are paradigm-agnostic and get ported.
+- Ruby's old measurement layer is retired in `ruby_version/save/`.
 
 ---
 
-## Cómo leer esto
+## How to read this
 
-Tres documentos, un trabajo cada uno. **Si buscas qué hacer ahora, no es este.**
+Three documents, one job each. **If you are looking for what to do now, this is
+not it.**
 
 | | |
 |---|---|
-| **TASKS.md** (aquí) | **qué es** cada tarea y por qué existe. Definiciones, sin estado |
-| [STATUS.md](STATUS.md) | **en qué estado** está cada una |
-| [PENDING.md](PENDING.md) | **qué hacer ahora**, en orden, y qué lo bloquea |
+| **TASKS.md** (here) | **what** each task is and why it exists. Definitions, no status |
+| [STATUS.md](STATUS.md) | **what state** each one is in |
+| [PENDING.md](PENDING.md) | **what to do now**, in order, and what blocks it |
 
-Aquí no hay casillas marcadas a propósito: el estado tiene un único sitio, y
-duplicarlo es cómo se desincronizan. Las tareas cerradas se quedan en una línea
-para que las abiertas se vean.
-
----
-
-## Fase 0 — Base
-
-**Cerradas:** 0.1 paquete nuevo · 0.2 git · 0.4 provenance por corrida ·
-0.5 config común con herencia · 0.6 el corpus guarda los números originales.
-
-**0.3 — Mismos perfiles en los dos brazos.** ⛔ Retirada: el corpus vivo pasó a
-ser el de CK, así que los dos brazos ya no puntúan lo mismo y no hay nada que
-verificar. La sustituyen dos exigencias, ambas en `test_corpus.py`: que
-`patients/` sea reproducible desde `sintetic_patients/patientsCK/`, porque sin
-eso el ground truth no tiene origen; y que el corpus anterior siga congelado en
-`sintetic_patients/patients_version1/`, porque es contra ese que se puntuó todo
-`runs/historic/`.
+There are no ticked boxes here on purpose: status has a single home, and
+duplicating it is how the two go out of sync. Closed tasks are kept to one line
+so the open ones stand out.
 
 ---
 
-## Fase 1 — Arquitectura de agentes
+## Phase 0 — Foundation
 
-**Cerradas:** 1.1 grafo de dos agentes · 1.2 modelos distintos y aislamiento ·
-1.3 turnos no preestablecidos · 1.4 ejecución secuencial · 1.5 termina el médico
-· 1.6 prompts en markdown externos · 1.7 mecanismo de skills · 1.9 perfiles de
-paciente · 1.11 puntuación al final · 1.13 informe siempre, validado, con
-reintento · 1.14 estilos de médico portados.
+**Closed:** 0.1 new package · 0.2 git · 0.4 provenance per run · 0.5 shared
+config with inheritance · 0.6 the corpus keeps the original numbers.
 
-### 1.8 — Definiciones externas como recurso
-
-CSM, NCF, dimensiones y terminología clínica disponibles al médico como recurso
-de contexto, en vez de dentro del prompt.
-
-**La decisión que falta no es técnica: inyectarlas siempre o recuperarlas cuando
-hagan falta.** La interfaz está hecha y `resources/` está vacío. Aplazada a
-propósito.
-
-### 1.10 — Preguntas libres que cubran todas las dimensiones
-
-El médico formula a su manera, desde las dimensiones, sin recitar los ítems. Y
-tiene que llegar a **todas**, incluidas `general_harm`, `general_overuse` y
-`causes`, que son las que se quedan fuera.
-
-Hoy falla, y **no se puede cerrar sin cobertura**: cuando una dimensión sale NA
-no hay forma de distinguir «no preguntó» de «preguntó y el paciente no
-contestó».
-
-### 1.12 — Sondeo dirigido por ambigüedad
-
-⛔ **La línea base se queda sin mecanismo, y es deliberado.** Repreguntar cuando
-la evidencia es insuficiente sería lo correcto —el routing viejo disparaba por
-longitud de respuesta, así que una respuesta larga y vaga pasaba directa a
-puntuación—, pero forzar cobertura en vivo devuelve el cuestionario que 1.3 sacó
-del código e infla el resultado. El médico sondea lo que quiere y la cobertura
-se audita después.
-
-Lo que sí existe son dos interruptores independientes para medirlo como
-intervención: `features.coverage_hint` (`off` | `show`) y
-`features.working_notes`.
+**0.3 — Same profiles in both arms.** ⛔ Retired: the live corpus became CK's, so
+the two arms no longer score the same thing and there is nothing to verify. Two
+requirements replace it, both in `test_corpus.py`: that `patients/` be
+reproducible from `sintetic_patients/patientsCK/`, because without that the
+ground truth has no origin; and that the previous corpus stay frozen in
+`sintetic_patients/patients_version1/`, because that is what all of
+`runs/historic/` was scored against.
 
 ---
 
-## Fase 2 — Trazabilidad de la puntuación
+## Phase 1 — Agent architecture
 
-**Cerradas:** 2.1 evidencia antes que número · 2.2 anclas intermedias ·
-2.3 confianza declarada.
+**Closed:** 1.1 two-agent graph · 1.2 different models and isolation · 1.3 turns
+not laid out in advance · 1.4 sequential execution · 1.5 the doctor ends it ·
+1.6 prompts as external markdown · 1.7 the skills mechanism · 1.9 patient
+profiles · 1.11 scoring at the end · 1.13 a report every time, validated, with a
+retry · 1.14 doctor styles ported.
 
-Lo que 2.1 y 2.2 dejaron dicho y sigue vigente:
+### 1.8 — External definitions as a resource
 
-- El orden `cita textual → razonamiento → puntuación` **es también el
-  experimento** que responde si el sesgo viene de justificar a posteriori. En
-  Ruby la tabla era `Score | Rationale`, o sea justificación decorativa; el
-  scorer de Python devolvía el número desnudo.
-- La rúbrica del médico se escribió **desde criterio clínico, no invirtiendo la
-  del paciente**. Copiarla reconstruiría el espejo que 5.5 existe para medir.
+CSM, NCF, the dimensions and the clinical terminology available to the doctor as
+a context resource, instead of inside the prompt.
 
-### 2.4 — Confianza empírica
+**The missing decision is not technical: always inject them, or retrieve them
+when needed.** The interface is done and `resources/` is empty. Deferred on
+purpose.
 
-Dispersión de la puntuación entre las N corridas del mismo paciente. No depende
-de la introspección del modelo.
+### 1.10 — Free questions that cover every dimension
 
-**Presupuesto de corridas:** N=10 para la línea base, que es la que se publica y
-de la que sale esta métrica; N=5 para cribar intervenciones de la Fase 6,
-subiendo a 10 solo la que se quede. Por debajo de N=5 la dispersión no significa
-nada.
+The doctor phrases things its own way, from the dimensions, without reciting the
+items. And it has to reach **all** of them, including `general_harm`,
+`general_overuse` and `causes`, which are the ones that get left out.
 
-**Pasa a cobertura** (PENDING.md). `reproducibility.py` se borró.
+Today it fails, and **it cannot be closed without coverage**: when a dimension
+comes back NA there is no way to tell "did not ask" from "asked and the patient
+did not answer".
 
-### 2.5 — Discriminación entre pacientes
+### 1.12 — Ambiguity-driven probing
 
-Varianza de la puntuación media *entre* pacientes, por dimensión.
+⛔ **The baseline is left with no mechanism, and that is deliberate.** Asking
+again when the evidence is insufficient would be the right thing — the old
+routing fired on reply length, so a long vague answer went straight to scoring —
+but forcing coverage live brings back the questionnaire that 1.3 took out of the
+code, and inflates the result. The doctor probes what it wants and coverage is
+audited afterwards.
 
-**Obligatorio reportarla junto a 2.4**, porque dispersión baja no significa
-buena inferencia: un scorer degenerado es máximamente consistente y
-completamente inútil. Lectura conjunta: dispersión baja + discriminación alta =
-inferencia real; dispersión baja + discriminación baja = prior degenerado
-disfrazado.
-
-### 2.6 — Validar la confianza declarada contra la empírica
-
-¿Predice lo que el modelo dice saber la dispersión que se observa? Si no, el
-modelo no sabe cuándo no sabe, **y eso es un resultado en sí mismo**. La
-confianza declarada es objeto de estudio, no dato de entrada.
-
-**Pasa a cobertura.** Depende de que 2.4 exista antes.
+What does exist is two independent switches to measure it as an intervention:
+`features.coverage_hint` (`off` | `show`) and `features.working_notes`.
 
 ---
 
-## Fase 3 — Integridad del corpus
+## Phase 2 — Traceable scoring
 
-**Cerrada:** 3.1 reintentos de transporte.
+**Closed:** 2.1 evidence before the number · 2.2 intermediate anchors ·
+2.3 declared confidence.
 
-### 3.2 — Módulo de cobertura y calidad
+What 2.1 and 2.2 established, still in force:
 
-Recorre cada transcript y marca por dimensión: ¿hubo sondeo?, ¿hubo respuesta?,
-¿hubo evidencia citada? Salida, un mapa dimensión × paciente donde los huecos se
-vean de un vistazo.
+- The order `verbatim quote → reasoning → score` **is also the experiment** that
+  answers whether the bias comes from justifying after the fact. In Ruby the
+  table was `Score | Rationale`, i.e. decorative justification; the Python scorer
+  returned the bare number.
+- The doctor's rubric was written **from clinical criteria, not by inverting the
+  patient's**. Copying it would rebuild the mirror that 5.5 exists to measure.
 
-Es lo que hace visible 1.10, y **el módulo donde viven ahora 2.4 y 2.6**.
+### 2.4 — Empirical confidence
 
-### 3.3 — Reproducibilidad
+The spread of the score across N runs of the same patient. It does not rely on
+the model's introspection.
 
-Mismo paciente y mismo prompt N veces, midiendo divergencia de conversaciones y
-de puntuaciones. Es la fuente de 2.4, así que va dentro de lo mismo.
+**Run budget:** N=10 for the baseline, which is the one that gets published and
+the one this metric comes from; N=5 to screen Phase 6 interventions, going up to
+10 only for whichever one survives. Below N=5 the spread means nothing.
 
-### 3.4 — Puerta de corpus utilizable
+**It moves into coverage** (PENDING.md). `reproducibility.py` was deleted.
 
-Un corpus solo se declara utilizable si pasa 3.1 y 3.2. **No analizar corpus con
-huecos**: se confunden fallos de infraestructura con fallos de inferencia.
+### 2.5 — Discrimination between patients
 
-### 3.5 — Fidelidad del paciente
+The variance of the mean score *between* patients, per dimension.
 
-Auditar si el paciente jugó su perfil: contradicciones contra `disease_profile`,
-sin modelo de por medio. Corre sobre una tanda existente, no necesita cola.
+**It must be reported alongside 2.4**, because low spread does not mean good
+inference: a degenerate scorer is maximally consistent and completely useless.
+Read together: low spread + high discrimination = real inference; low spread +
+low discrimination = a degenerate prior in disguise.
 
-Hecho el 2026-08-31 (`ahead_agent/fidelity.py` + `fidel.py`). Dos cosas de
-diseño que la tarea no decía y ahora forman parte de ella:
+### 2.6 — Validate declared confidence against empirical
 
-- **Va en su propio módulo porque lee la verdad.** `coverage.py` tiene prohibido
-  abrir `patients/*.json` —es lo que impide que el mapa de 3.2 vea la respuesta—
-  y fidelidad es exactamente una comprobación *contra* esa respuesta. Juntarlas
-  contaminaría 3.2.
-- **`belief_profile` no se lee, solo `disease_profile`.** Un paciente que expresa
-  una creencia está actuando su perfil, que es su trabajo; comprobar creencias
-  aquí penalizaría la conducta que toda la simulación existe para producir.
+Does what the model says it knows predict the spread actually observed? If not,
+the model does not know when it does not know, **and that is a result in
+itself**. Declared confidence is an object of study, not an input.
 
-Lo que **no** entrega: una medida. Compara entidades nombradas —régimen,
-fármaco, síntoma, edad—, no significado, así que su tasa es una **cota superior**
-de la fidelidad. Toda fuga cae del lado del aprobado. Se usa para leer las
-corridas que fallan, nunca para creerse las que pasan.
+**It moves into coverage.** It depends on 2.4 existing first.
 
 ---
 
-## Fase 4 — Evaluación
+## Phase 3 — Corpus integrity
 
-**Cerradas:** 4.1 ground truth solo de `patients/*.json` · 4.2 port de
-`evaluation.py` · 4.4 NA en vez de fallback · 4.5 sesgo por dimensión ·
+**Closed:** 3.1 transport retries.
+
+### 3.2 — Coverage and quality module
+
+Walk each transcript and mark, per dimension: was there a probe? was there an
+answer? was evidence cited? The output is a dimension × patient map where the
+holes are visible at a glance.
+
+It is what makes 1.10 visible, and **the module 2.4 and 2.6 now live in**.
+
+### 3.3 — Reproducibility
+
+The same patient and the same prompt N times, measuring the divergence of the
+conversations and of the scores. It is the source of 2.4, so it goes inside the
+same thing.
+
+### 3.4 — Usable-corpus gate
+
+A corpus is only declared usable if it passes 3.1 and 3.2. **Do not analyse a
+corpus with holes**: infrastructure failures get confused with inference
+failures.
+
+### 3.5 — Patient fidelity
+
+Audit whether the patient played its profile: contradictions against
+`disease_profile`, with no model involved. It runs over an existing batch and
+needs no queue.
+
+Done on 2026-08-31 (`ahead_agent/fidelity.py` + `fidel.py`). Two design points
+the task did not state and that are now part of it:
+
+- **It goes in its own module because it reads the truth.** `coverage.py` is
+  forbidden from opening `patients/*.json` — that is what stops the 3.2 map from
+  seeing the answer — and fidelity is precisely a check *against* that answer.
+  Putting them together would contaminate 3.2.
+- **`belief_profile` is not read, only `disease_profile`.** A patient expressing
+  a belief is acting out its profile, which is its job; checking beliefs here
+  would penalise the behaviour the whole simulation exists to produce.
+
+What it does **not** deliver: a measurement. It compares named entities —
+regimen, drug, symptom, age — not meaning, so its rate is an **upper bound** on
+fidelity. Every leak falls on the side of a pass. It is used to read the runs
+that fail, never to believe the ones that pass.
+
+---
+
+## Phase 4 — Evaluation
+
+**Closed:** 4.1 ground truth from `patients/*.json` only · 4.2 port of
+`evaluation.py` · 4.4 NA instead of a fallback · 4.5 per-dimension bias ·
 4.7 `evaluate.py`.
 
-Lo que dejaron dicho y sigue vigente:
+What they established, still in force:
 
-- **4.1** El error que se retiró fue comparar contra una corrida anterior
-  etiquetada `reference`, que eran puntuaciones inferidas y no verdad. Eso mide
-  deriva entre corridas, no exactitud.
-- **4.4** Un NA nunca es un valor por defecto: se excluye del MAE y se reporta
-  como cobertura. El scorer viejo metía un 5 cuando el JSON no parseaba, y esos
-  valores inventados contaban como aciertos.
-- **4.5** El sesgo es **por dimensión, no global**: carga sintomática inflada y
-  control deflactado. Una corrección global empeoraría los ítems de control.
-- **4.7** La evaluación es post-proceso y va aparte, para poder correr sobre
-  tandas de cualquier brazo. `score_causes` se llama desde ahí y **nunca desde
-  un nodo** — en el brazo original vivía dentro del grafo, o sea que quien
-  puntuaba veía la verdad.
+- **4.1** The mistake that was retired was comparing against an earlier run
+  labelled `reference`, which were inferred scores and not truth. That measures
+  drift between runs, not accuracy.
+- **4.4** An NA is never a default value: it is excluded from the MAE and
+  reported as coverage. The old scorer put in a 5 when the JSON did not parse,
+  and those invented values counted as hits.
+- **4.5** The bias is **per dimension, not global**: inflated symptom burden and
+  deflated control. A global correction would make the control items worse.
+- **4.7** Evaluation is post-processing and lives apart, so it can run over
+  batches from any arm. `score_causes` is called from there and **never from a
+  node** — in the original arm it lived inside the graph, which means whatever
+  was scoring could see the truth.
 
-### 4.3 — Portar `causes/`
+### 4.3 — Port `causes/`
 
-Portado entero y **sin correr nunca**. Dos cosas que hay que decidir al
-ejercitarlo:
+Ported whole and **never run**. Two things to decide when exercising it:
 
-- **El umbral de 0.72 no está justificado en ninguna parte.** Aparece igual en
-  las cuatro copias del código, sin experimento, sin conjunto de calibración y
-  sin cita. `coverage_score` **es** la fracción de causas verdaderas que llegan
-  a ese corte, así que la métrica descansa entera sobre una constante heredada
-  sin explicar. No es incorrecta; es indefendible tal cual. **El barrido sale
-  gratis**: en cuanto `--causes` corra una vez, las similitudes quedan guardadas
-  y mover el corte no cuesta ni una llamada más. Sale un valor defendible o el
-  hallazgo de que la cobertura es muy sensible al umbral, que también es
-  resultado. El umbral y el modelo de embeddings van juntos, porque la
-  distribución de cosenos cambia con el modelo.
-- **`models.embed` ya no es el problema que decía este documento.** `hpc.yaml`
-  fija `nomic-embed-text`, que está en el almacén de Ollama y este código sí
-  alcanza. La descripción anterior —un modelo de HuggingFace inalcanzable— se
-  quedó aquí después de que el perfil se arreglara, y se corrige el 2026-08-31.
-  Lo que sigue sin existir es la **validación**: si algún día falta el modelo,
-  «ausente» y «inalcanzable» seguirán saliendo igual y degradando la métrica a
-  solapamiento de categorías en silencio, a mitad de tanda en vez de al cargar
-  el perfil.
+- **The 0.72 threshold is justified nowhere.** It appears identically in all four
+  copies of the code, with no experiment, no calibration set and no citation.
+  `coverage_score` **is** the fraction of true causes that reach that cut, so the
+  metric rests entirely on an inherited constant nobody explained. It is not
+  wrong; it is indefensible as it stands. **The sweep is free**: as soon as
+  `--causes` runs once, the similarities are stored and moving the cut costs not
+  one extra call. Out comes either a defensible value or the finding that
+  coverage is highly sensitive to the threshold, which is also a result. The
+  threshold and the embedding model go together, because the distribution of
+  cosines changes with the model.
+- **`models.embed` is no longer the problem this document described.** `hpc.yaml`
+  pins `nomic-embed-text`, which is in the Ollama store and which this code can
+  reach. The earlier description — an unreachable HuggingFace model — was left
+  here after the profile was fixed, and is corrected on 2026-08-31. What still
+  does not exist is the **validation**: if the model is ever missing, "absent"
+  and "unreachable" will still come out the same and silently degrade the metric
+  to category overlap, halfway through a batch instead of at profile load.
 
-**Cuenta con el coste:** clasificar cada causa es una llamada al modelo, tanto
-las inferidas como las del perfil. Por eso no se llama desde dentro de una
-corrida, y conviene cachear la clasificación del ground truth, que es la misma
-en todas las corridas del mismo paciente.
+**Count the cost:** classifying each cause is a call to the model, both the
+inferred ones and the profile's. That is why it is not called from inside a run,
+and why the ground truth's classification is worth caching, since it is the same
+across every run of the same patient.
 
-### 4.6 — Objetivos provisionales
+### 4.6 — Provisional targets
 
-Umbrales de MAE heredados del informe, **representados como referencia y no como
-aprobado/suspenso**, hasta saber por 5.3 cuánto difieren dos expertos entre sí.
-Si difieren más que el umbral, el umbral no es alcanzable y hay que
-reformularlo.
+MAE thresholds inherited from the report, **presented as a reference and not as
+pass/fail**, until 5.3 tells us how much two experts differ from each other. If
+they differ by more than the threshold, the threshold is not reachable and has to
+be reformulated.
 
-Hoy tampoco hay vara: sale de cobertura.
+There is no yardstick today either: it comes out of coverage.
 
 ---
 
-## Fase 5 — Brazos de comparación
+## Phase 5 — Comparison arms
 
-**Ninguno emite veredicto.** Se representan junto al brazo de inferencia como
-líneas de referencia, para situar el resultado. Decidir si un número es bueno o
-malo es prematuro y queda fuera de esta fase.
+**None of them delivers a verdict.** They are presented alongside the inference
+arm as reference lines, to place the result. Deciding whether a number is good or
+bad is premature and falls outside this phase.
 
-- **5.1 Suelo ciego** — puntuar viendo solo diagnóstico y demografía, sin
-  conversación: lo que se acierta por priors clínicos.
-- **5.2 Techo por elicitación** — el brazo Python preguntando directamente: lo
-  que se recupera cuando el paciente lo dice explícitamente.
-- **5.3 Referencia humana** — dos o tres clínicos puntuando los mismos
-  transcripts. Dan cuánto es inferible de verdad y su acuerdo entre ellos, que
-  es el techo realista de la tarea. Un subconjunto basta, y solo con el corpus
-  ya limpio.
-- **5.4 Tests de artefacto** — comprobar que el número viene de la conversación
-  y no del montaje. Baratos: repuntúan corpus existente, sin corridas nuevas.
-  **Transcript cruzado**, puntuar a un paciente con el transcript de otro; si el
-  MAE no se degrada, no se está leyendo nada. **Ablación de evidencia**, quitar
-  las citas que el propio médico alegó y repuntuar; si el número no se mueve, la
-  evidencia era decorativa. Es el test directo de si la justificación es a
-  posteriori.
-- **5.5 Brazo sin claves conductuales** — `PATIENT.md` dice cómo expresar un
-  score alto y `DOCTOR.md` dice qué escuchar: **la misma tabla en espejo**.
-  Parte del acierto es descifrar un código que metimos en los dos prompts, no
-  inferencia clínica. El control da al paciente solo el número y una descripción
-  narrativa, y la diferencia mide el tamaño del artefacto.
-
----
-
-## Fase 6 — Intervenciones sobre el agente
-
-Una variable por corrida, con corrida completa entre medias. Solo después de 3.4
-y de la Fase 4.
-
-- **6.1** Efecto de 2.1 (evidencia antes que número) sobre el sesgo.
-- **6.2** Efecto de 2.2 (anclas intermedias) sobre sesgo y perfiles medios.
-- **6.3** Calibración por dimensión con few-shot, usando el sesgo de 4.5. Solo
-  después de 6.1 y 6.2: si no, corriges números sin corregir el mecanismo.
-- **6.4** Efecto de los dos interruptores de 1.12, **uno por corrida**.
-  `coverage_hint: show` mide si enseñarle los huecos le hace preguntar por lo
-  que en la línea base no toca; `working_notes: true`, el efecto de escribir
-  conclusiones sobre la marcha. Ninguno es comparable con la línea base en
-  exactitud: los dos adelantan trabajo al médico.
-- **6.5** **Comparar los estilos entre sí.** La carga ya está hecha (1.14), así
-  que lo que queda es la comparación. Las `hypotheses` del registro se heredan
-  como preguntas, nunca como resultados: nadie ha corrido nada detrás de ellas.
-- **6.6** **¿Revisa el médico?** Con `working_notes: true`, dos notas de la
-  misma dimensión en turnos distintos son un cambio de opinión fechado. Toda la
-  arquitectura del informe al final se apoya en que información tardía pueda
-  corregir una impresión temprana, y **no hay ni una observación de que
-  ocurra**. Si casi nunca revisa, 1.11 no está comprando lo que creemos.
+- **5.1 Blind floor** — scoring from diagnosis and demographics alone, with no
+  conversation: what gets right by clinical priors.
+- **5.2 Elicitation ceiling** — the Python arm asking directly: what is recovered
+  when the patient says it explicitly.
+- **5.3 Human reference** — two or three clinicians scoring the same transcripts.
+  They give how much is genuinely inferable and their agreement with each other,
+  which is the realistic ceiling of the task. A subset is enough, and only once
+  the corpus is clean.
+- **5.4 Artefact tests** — checking that the number comes from the conversation
+  and not from the setup. Cheap: they re-score an existing corpus, with no new
+  runs. **Crossed transcript**, scoring one patient with another's transcript; if
+  the MAE does not degrade, nothing is being read. **Evidence ablation**,
+  removing the quotes the doctor itself alleged and re-scoring; if the number
+  does not move, the evidence was decorative. It is the direct test of whether
+  the justification is written after the fact.
+- **5.5 Arm with no behavioural cues** — `PATIENT.md` says how to express a high
+  score and `DOCTOR.md` says what to listen for: **the same table mirrored**.
+  Part of the accuracy is decoding a code we put into both prompts, not clinical
+  inference. The control gives the patient only the number and a narrative
+  description, and the difference measures the size of the artefact.
 
 ---
 
-## Fase 7 — Cierre
+## Phase 6 — Interventions on the agent
 
-- **7.1 Ampliar el corpus** — perfiles intermedios y pacientes que ocultan
-  emociones. Solo con el pipeline ya fiable.
+One variable per run, with a full run in between. Only after 3.4 and Phase 4.
 
-  **Regla del suelo de las bandas.** Si un perfil nuevo trae un B-IPQ = 0 o un
-  BMQ en el mínimo, la banda de suelo se añade **en el mismo commit** que el
-  perfil. Hoy las bandas empiezan más arriba y `_band_for` devuelve la primera
-  cuyo tope no se supera, así que un 0 se jugaría como un 2: el paciente actúa
-  un 2, el médico infiere 2 correctamente, y la evaluación lo apunta como error.
-  Sería un error fabricado por la tabla, justo el artefacto que mide 5.5. Choca
-  además con la rúbrica del médico, que dice que un 0 es un hallazgo y necesita
-  evidencia como cualquier otro número. No es problema activo —el corpus actual
-  no tiene ningún 0— y por eso no se toca el texto ahora.
-
-- **7.2 Reescribir la sección 6 del informe** con los resultados reales. En
-  particular la parte que describe una sobreestimación global cuando lo que hay
-  es asimetría por dimensión (4.5).
-
----
-
-## Fase 8 — Interfaz: API y frontend
-
-Independiente de las fases 5–7. La puerta de entrada es que el contrato del
-informe esté estable, o sea al cerrar la Fase 4.
-
-El frontend actual **no se adapta, se invierte**: hoy no muestra la consulta, la
-conduce — recorre las preguntas por índice y decide repreguntar por longitud de
-respuesta. Lo presentacional sí se porta.
-
-- **8.1** **El aislamiento en la frontera HTTP.** Hoy el endpoint de paciente
-  devuelve el perfil entero al navegador, el cliente lo reenvía en cada turno y
-  lee las causas del ground truth para pasárselas al scorer. O sea: **el cliente
-  tiene la verdad y se la enseña a quien puntúa.** El invariante está verificado
-  dentro del proceso y no existe en la API. Va la primera porque condiciona
-  todos los endpoints.
-- **8.2** **Streaming por turnos.** Una consulta son varios minutos: una
-  petición que responde al final deja la interfaz muda y la corta cualquier
-  proxy. Decidido emitir cada turno según se produce, con el informe como último
-  evento.
-- **8.3** **`api_server.py`.** Desaparece la puntuación por intercambio; la
-  sustituye un endpoint de informe. Nuevos: lanzar una corrida y consultar
-  cobertura.
-- **8.4** **Portar lo presentacional** — burbujas, barras, pantallas y estilos,
-  que no saben del paradigma. Se copian tal cual.
-- **8.5** **El cliente deja de conducir.** De orquestador a espectador: lanza la
-  consulta y muestra los turnos según llegan. Quién pregunta, qué pregunta y
-  cuándo para lo decide el médico dentro del grafo.
-- **8.6** **Fuera el cuestionario del cliente.** Las listas de preguntas y los
-  umbrales de repregunta no vuelven. El cliente no debe saber qué dimensiones
-  existen ni cómo se puntúan.
-- **8.7** **Fuera la barra de progreso.** Como la puntuación es una sola y al
-  final, estaría a cero toda la consulta y saltaría al total de golpe. **No se
-  sustituye por otra**: fingir progreso sugeriría un recorrido por dimensiones,
-  que es justo lo que este brazo no hace.
-- **8.8** **La pantalla de informe, para el contrato nuevo.** Cada dimensión
-  trae evidencia con su turno, razonamiento, puntuación y confianza. **La cita
-  tiene que poder llevarte al turno del que sale**: esa lectura es lo que hace
-  útil 2.1, y es la revisión manual que 5.3 pedirá a los clínicos. Un NA se
-  muestra como hueco, nunca como cero.
-- **8.9** **Tests.** Que la respuesta del endpoint de paciente no contenga
-  ningún valor de creencias — el invariante en la frontera HTTP. Que un NA
-  viaje como nulo. Que en el cliente no quede ninguna lista de preguntas.
-- **8.10** **La demo, dos vistas de la misma corrida.** Una muestra la
-  conversación y nada más; la otra añade las notas apareciendo y revisándose
-  turno a turno. Es un interruptor de **pantalla, no de experimento**: el médico
-  se comporta igual, porque nunca ve la interfaz.
-
-- **8.11** **Reconciliar qué tanda es la línea base.** `STATUS.md` trata `e4-1`
-  como el corpus vivo —"el primer corpus del proyecto sin huecos"— mientras el
-  README de `runs/historic/` la lista como superada, porque nada de esa carpeta
-  es comparable con lo posterior al 2026-08-26. Las dos cosas no pueden ser
-  ciertas a la vez. **Aplazado a propósito el 2026-08-27**: se resuelve cuando
-  haya una tanda nueva contra la que decidir, no reescribiendo documentos ahora.
-  Hasta entonces, toda cifra que salga de `e4-1` —incluida la cobertura de V1—
-  va con la nota de que mide una configuración superada.
-
-  Va aquí porque es trabajo de documentación y no bloquea nada, no porque tenga
-  que ver con la API. Ojo al numerar: la **Fase 8** de este documento es la
-  interfaz, mientras que la **Etapa 8** de `ARCHITECTURE.md` §8 son las
-  intervenciones. No son lo mismo.
+- **6.1** The effect of 2.1 (evidence before the number) on the bias.
+- **6.2** The effect of 2.2 (intermediate anchors) on bias and mid-range
+  profiles.
+- **6.3** Per-dimension calibration with few-shot, using the bias from 4.5. Only
+  after 6.1 and 6.2: otherwise you correct numbers without correcting the
+  mechanism.
+- **6.4** The effect of the two switches of 1.12, **one per run**.
+  `coverage_hint: show` measures whether showing it the holes makes it ask about
+  what the baseline never touches; `working_notes: true`, the effect of writing
+  conclusions as it goes. Neither is comparable with the baseline on accuracy:
+  both do some of the doctor's work in advance.
+- **6.5** **Compare the styles against each other.** The loading is already done
+  (1.14), so what remains is the comparison. The registry's `hypotheses` are
+  inherited as questions, never as results: nobody has run anything behind them.
+- **6.6** **Does the doctor revise?** With `working_notes: true`, two notes on the
+  same dimension in different turns are a dated change of mind. The whole
+  architecture of scoring at the end rests on late information being able to
+  correct an early impression, and **there is not one observation of it
+  happening**. If it almost never revises, 1.11 is not buying what we think.
 
 ---
 
-## Pendiente de decidir
+## Phase 7 — Closing
 
-- Si las definiciones externas se inyectan siempre o vía recuperación (1.8).
-- Si el brazo de elicitación (5.2) se mantiene vivo o se congela como
-  referencia.
-- Recursos clínicos externos formales como referencia, más allá de 1.8.
-  Aparcado para después de la demo de septiembre.
-- **Cómo se mide un cambio de conducta sin proxies.** Ver PENDING.md: es lo que
-  bloquea cobertura.
+- **7.1 Extend the corpus** — mid-range profiles and patients who hide emotions.
+  Only once the pipeline is reliable.
+
+  **The band-floor rule.** If a new profile brings a B-IPQ of 0 or a BMQ at the
+  minimum, the floor band is added **in the same commit** as the profile. Today
+  the bands start higher and `_band_for` returns the first whose ceiling is not
+  exceeded, so a 0 would be played as a 2: the patient acts a 2, the doctor
+  correctly infers 2, and the evaluation records it as an error. It would be an
+  error manufactured by the table, exactly the artefact 5.5 measures. It also
+  clashes with the doctor's rubric, which says a 0 is a finding and needs
+  evidence like any other number. It is not a live problem — the current corpus
+  has no 0 — which is why the text is not being touched now.
+
+- **7.2 Rewrite section 6 of the report** with the real results. In particular
+  the part describing a global overestimation when what there is is asymmetry per
+  dimension (4.5).
+
+---
+
+## Phase 8 — Interface: API and frontend
+
+Independent of phases 5–7. The entry condition is that the report contract be
+stable, i.e. when Phase 4 closes.
+
+The current frontend **is not adapted, it is inverted**: today it does not
+display the consultation, it drives it — it walks the questions by index and
+decides whether to re-ask based on reply length. The presentational part does get
+ported.
+
+- **8.1** **Isolation at the HTTP boundary.** Today the patient endpoint returns
+  the whole profile to the browser, the client resends it every turn and reads
+  the ground truth's causes to pass them to the scorer. In other words: **the
+  client holds the truth and shows it to whatever is scoring.** The invariant is
+  verified inside the process and does not exist in the API. It goes first
+  because it conditions every endpoint.
+- **8.2** **Per-turn streaming.** A consultation is several minutes: a request
+  that answers at the end leaves the interface mute and gets cut by any proxy.
+  Decided: emit each turn as it happens, with the report as the last event.
+- **8.3** **`api_server.py`.** Per-exchange scoring disappears; a report endpoint
+  replaces it. New: launch a run, and query coverage.
+- **8.4** **Port the presentational parts** — bubbles, bars, screens and styles,
+  which know nothing of the paradigm. They get copied as they are.
+- **8.5** **The client stops driving.** From orchestrator to spectator: it
+  launches the consultation and shows the turns as they arrive. Who asks, what
+  they ask and when they stop is decided by the doctor inside the graph.
+- **8.6** **The questionnaire leaves the client.** The question lists and the
+  re-ask thresholds do not come back. The client should not know which dimensions
+  exist or how they are scored.
+- **8.7** **No progress bar.** Since the scoring happens once and at the end, it
+  would sit at zero for the whole consultation and then jump to the total. **It
+  is not replaced by another one**: faking progress would suggest a walk through
+  the dimensions, which is exactly what this arm does not do.
+- **8.8** **The report screen, for the new contract.** Each dimension carries
+  evidence with its turn, reasoning, score and confidence. **A quote has to be
+  able to take you to the turn it comes from**: that reading is what makes 2.1
+  useful, and it is the manual review 5.3 will ask the clinicians for. An NA is
+  shown as a hole, never as a zero.
+- **8.9** **Tests.** That the patient endpoint's response contains no belief
+  value — the invariant at the HTTP boundary. That an NA travels as null. That no
+  question list is left in the client.
+- **8.10** **The demo, two views of the same run.** One shows the conversation
+  and nothing else; the other adds the notes appearing and being revised turn by
+  turn. It is a **display switch, not an experimental one**: the doctor behaves
+  identically, because it never sees the interface.
+
+- **8.11** **Reconcile which batch is the baseline.** `STATUS.md` treats `e4-1`
+  as the live corpus — "the project's first corpus with no holes" — while the
+  `runs/historic/` README lists it as superseded, because nothing in that folder
+  is comparable with anything after 2026-08-26. Both cannot be true at once.
+  **Deferred on purpose on 2026-08-27**: it gets resolved when there is a new
+  batch to decide against, not by rewriting documents now. Until then, every
+  figure coming out of `e4-1` — including V1's coverage — carries the note that
+  it measures a superseded configuration.
+
+  It goes here because it is documentation work and blocks nothing, not because
+  it has anything to do with the API. Watch the numbering: **Phase 8** in this
+  document is the interface, whereas **Stage 8** in `ARCHITECTURE.md` §8 is the
+  interventions. They are not the same thing.
+
+### What exists of Phase 8, and what it is not
+
+`replay_server.py` + `replay_frontend/` (2026-09-01) delivers **8.4 and 8.8 over
+runs that already exist**: the presentational layer, and a report screen where
+each dimension carries evidence, reasoning, score and confidence, an NA is drawn
+as a hole rather than a zero, and every quote jumps to the turn it claims to come
+from — crossing turn *and* speaker, because the number alone identifies nobody
+(D13).
+
+It is **not** 8.3 and does not attempt it. It reads batches off disk and
+generates nothing, so 8.1 does not arise — there is no patient endpoint to leak
+through — and 8.2 does not either, since there is no live consultation to stream.
+8.5, 8.6 and 8.7 are satisfied by construction rather than by work: with no
+elicitation loop there is no orchestrator to invert, no questionnaire to remove
+and no progress to fake.
+
+What it adds that the phase did not foresee: **one patient at a time**. Ten
+people on screen at once is a corpus summary, and `cover.py` already answers
+that question better.
+
+---
+
+## Still to be decided
+
+- Whether external definitions are always injected or retrieved (1.8).
+- Whether the elicitation arm (5.2) is kept alive or frozen as a reference.
+- Formal external clinical resources as a reference, beyond 1.8. Parked until
+  after the September demo.
+- **How a change of behaviour is measured without proxies.** See PENDING.md: it
+  is what blocks coverage.

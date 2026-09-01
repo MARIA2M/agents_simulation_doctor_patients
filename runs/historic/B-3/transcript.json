@@ -1,0 +1,35 @@
+{
+  "patient_id": "CLL-001",
+  "turns": 1,
+  "stop_reason": "doctor",
+  "conversation": [
+    {
+      "role": "doctor",
+      "content": "Let's talk about your chronic condition. Can you tell me a little bit about how it affects your life?",
+      "turn": 1
+    },
+    {
+      "role": "patient",
+      "content": "Yes, of course. The Chronic Lymphocytic Leukemia has been affecting my life quite significantly. It's an ongoing challenge that I have to deal with every day. Simple tasks at work or even taking care of my family become more difficult because I often feel tired and fatigued. \n\nThen there are the physical symptoms, like my lymph nodes being swollen in my neck. They're not painful or anything, but they can be a bit uncomfortable when wearing tight clothing or during certain types of exercise.\n\nAnd let's not forget about the emotional toll it takes on me. It's hard to keep up with your friends and hobbies you used to enjoy so much when you always have this looming over your head. I sometimes feel like my life is put on hold, and that can be quite isolating at times.\n\nIt may sound minor compared to some conditions, but for me, it's a big deal. It really impacts the quality of my day-to-day living.",
+      "turn": 1
+    }
+  ],
+  "events": [],
+  "usage": [
+    {
+      "role": "doctor",
+      "prompt_tokens": 692,
+      "eval_tokens": 40
+    },
+    {
+      "role": "patient",
+      "prompt_tokens": 714,
+      "eval_tokens": 197
+    },
+    {
+      "role": "doctor",
+      "prompt_tokens": 826,
+      "eval_tokens": 40
+    }
+  ]
+}

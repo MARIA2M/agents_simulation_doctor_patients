@@ -1,0 +1,283 @@
+{
+  "patient_id": "HIV-003",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "HIV-003",
+    "clinical_summary": "This patient has been managing chronic fatigue for 2 years, which began after an HIV medication change, and joint pain that started 6 months ago and has spread to multiple joints. The fatigue is constant and affects work and family roles, while joint pain is worse in mornings with burning quality. They've tried medication adjustments but find only temporary relief. They have good support from family and work team but feel guilty about reduced contributions. They're frustrated by lack of clear answers and hoping for new management strategies.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "It's like a constant presence in my life, and it's really affecting my ability to work and be there for my family",
+            "turn": 1
+          },
+          {
+            "quote": "At home, I end up having to ask my partner or kids for help with things like cooking dinner or running errands",
+            "turn": 4
+          },
+          {
+            "quote": "At work, it's been a challenge to keep up with everything, especially since I can't put in the same hours as my colleagues",
+            "turn": 5
+          },
+          {
+            "quote": "I feel like I'm letting them down",
+            "turn": 4
+          },
+          {
+            "quote": "I feel like I'm holding everyone back",
+            "turn": 5
+          }
+        ],
+        "reasoning": "The patient describes significant impact on both work and family roles. They have to ask for help with basic tasks, can't work the same hours, and feel guilty about not being able to contribute. This clearly shows a major role is being reduced.",
+        "score": 8.0,
+        "confidence": 0.85
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "The fatigue started about two years ago... hasn't let up since",
+            "turn": 2
+          },
+          {
+            "quote": "I tend to assume that this is something I'll be managing for a while",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient describes symptoms that have persisted for 2 years and explicitly states they assume they'll be managing this for a while, indicating they've accepted a chronic course.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I try to maintain some semblance of routine by doing gentle exercises and working on some tasks that don't require a lot of energy",
+            "turn": 4
+          },
+          {
+            "quote": "On better days, I try to use that extra energy to catch up on tasks and be productive",
+            "turn": 5
+          },
+          {
+            "quote": "I try to focus on taking care of myself as best I can, both physically and emotionally",
+            "turn": 9
+          },
+          {
+            "quote": "I've been trying a few different things to manage the joint pain",
+            "turn": 15
+          },
+          {
+            "quote": "I've started using heat packs and taking some over-the-counter pain relievers",
+            "turn": 15
+          },
+          {
+            "quote": "I've also tried gentle exercises like swimming",
+            "turn": 15
+          }
+        ],
+        "reasoning": "The patient actively tries to manage their symptoms through gentle exercise, heat packs, OTC medications, and energy conservation. They credit their own actions with helping, though they acknowledge limitations.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "I've tried adjusting my dosage a few times, but nothing seems to help for more than a couple of weeks",
+            "turn": 2
+          },
+          {
+            "quote": "I'm definitely frustrated by the temporary nature of these changes in dosage — it's like we're just putting out fires as they come",
+            "turn": 7
+          },
+          {
+            "quote": "I trust my care team to be vigilant in monitoring me and adjusting things as needed",
+            "turn": 7
+          }
+        ],
+        "reasoning": "The patient has tried medication adjustments but finds them only temporarily helpful. They see the treatment as having some effect but not enough to matter much. They trust their care team but are frustrated by the lack of long-term solutions.",
+        "score": 4.0,
+        "confidence": 0.85
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "I've been dealing with chronic fatigue that just won't go away",
+            "turn": 1
+          },
+          {
+            "quote": "I've noticed some joint pain lately",
+            "turn": 1
+          },
+          {
+            "quote": "The joint pain is a bit more concerning",
+            "turn": 3
+          },
+          {
+            "quote": "I've been trying a few different things to manage the joint pain",
+            "turn": 15
+          }
+        ],
+        "reasoning": "The patient clearly identifies with both chronic fatigue and joint pain as significant, ongoing symptoms that they're actively managing. These are central to their experience.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "I'm worried about what all this might mean",
+            "turn": 1
+          },
+          {
+            "quote": "The joint pain is a bit more concerning because there isn't an obvious cause connected to my HIV treatment",
+            "turn": 3
+          },
+          {
+            "quote": "It's definitely frustrating not to have a clear explanation so far",
+            "turn": 14
+          },
+          {
+            "quote": "I'm definitely frustrated by the temporary nature of these changes in dosage",
+            "turn": 7
+          },
+          {
+            "quote": "My mood has definitely been impacted by the constant fatigue and other symptoms — it's hard not to feel discouraged or down",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient expresses worry about what's happening, frustration with lack of clear answers, and emotional impact on their mood. These concerns recur unprompted and shape their decisions about seeking care.",
+        "score": 6.0,
+        "confidence": 0.85
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I believe there are likely multiple factors at play here",
+            "turn": 6
+          },
+          {
+            "quote": "It's hard to tease out what might be because of the medication versus what might just be part of managing chronic illness overall",
+            "turn": 6
+          },
+          {
+            "quote": "My care team has mentioned the possibility of fibromyalgia as one potential cause",
+            "turn": 14
+          }
+        ],
+        "reasoning": "The patient has a fairly good understanding of what's happening but acknowledges complexity and uncertainty. They can explain the general pattern but recognize gaps in their understanding.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "It's like a constant presence in my life",
+            "turn": 1
+          },
+          {
+            "quote": "I feel like I'm letting them down",
+            "turn": 4
+          },
+          {
+            "quote": "I feel like I'm holding everyone back",
+            "turn": 5
+          },
+          {
+            "quote": "I'm definitely frustrated by the temporary nature of these changes in dosage",
+            "turn": 7
+          },
+          {
+            "quote": "My mood has definitely been impacted by the constant fatigue and other symptoms — it's hard not to feel discouraged or down",
+            "turn": 8
+          },
+          {
+            "quote": "I try to stay positive for their sake",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient describes significant emotional impact including guilt, frustration, discouragement, and down mood. They acknowledge these feelings and try to manage them for family's sake.",
+        "score": 8.0,
+        "confidence": 0.85
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "I've tried adjusting my dosage a few times, but nothing seems to help for more than a couple of weeks",
+            "turn": 2
+          },
+          {
+            "quote": "I trust my care team to be vigilant in monitoring me and adjusting things as needed",
+            "turn": 7
+          }
+        ],
+        "reasoning": "The patient continues with their medication and trusts their care team, but finds the current regimen only temporarily helpful. They organize around their treatment but are frustrated by its limitations.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "I do sometimes worry about potential long-term side effects from my treatment or the possibility that the virus might develop resistance",
+            "turn": 7
+          }
+        ],
+        "reasoning": "The patient has specific concerns about long-term side effects and resistance, and these concerns have led them to continue monitoring with their care team.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "I do sometimes worry about potential long-term side effects from my treatment",
+            "turn": 7
+          }
+        ],
+        "reasoning": "The patient has concerns about their specific medication but doesn't express general distrust of medicines as a class.",
+        "score": 2.0,
+        "confidence": 0.7
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "The patient never expressed concerns about doctors prescribing too readily or overuse of medication in general.",
+        "score": null,
+        "confidence": 0.0
+      }
+    },
+    "causes": [
+      "medication regimen changes for HIV",
+      "ongoing HIV treatment",
+      "living with chronic illness"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "The fatigue started about two years ago, after I changed my medication regimen for my HIV",
+        "turn": 2
+      },
+      {
+        "quote": "The fatigue and joint pain seem to be related to my ongoing treatment for HIV",
+        "turn": 6
+      },
+      {
+        "quote": "I know that living with this illness — dealing with its ups and downs — has taken a toll on me over the years",
+        "turn": 6
+      },
+      {
+        "quote": "It's hard to tease out what might be because of the medication versus what might just be part of managing chronic illness overall",
+        "turn": 6
+      }
+    ]
+  }
+}

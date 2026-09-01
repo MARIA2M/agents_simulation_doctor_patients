@@ -1,0 +1,209 @@
+{
+  "patient_id": "CLL-005",
+  "turns": 9,
+  "stop_reason": "doctor",
+  "conversation": [
+    {
+      "role": "doctor",
+      "content": "Good morning. I'm Dr. [Name]. What brings you in today?",
+      "turn": 1
+    },
+    {
+      "role": "patient",
+      "content": "Good morning, doctor. I've been experiencing some fatigue that comes and goes, and recently I've noticed two small lymph nodes in my neck. Occasionally, I wake up with mild night sweats too. I'm concerned about these symptoms and wanted to get checked out.",
+      "turn": 1
+    },
+    {
+      "role": "doctor",
+      "content": "How long have you been noticing the fatigue, and have you had any other symptoms like fever, weight loss, or night sweats besides the ones you mentioned?",
+      "turn": 2
+    },
+    {
+      "role": "patient",
+      "content": "The fatigue has been coming and going for a few months now. I haven't experienced any fever, but I did lose some weight recently without changing my diet or exercise routine. The night sweats seem to happen only on certain nights and not every night.",
+      "turn": 2
+    },
+    {
+      "role": "doctor",
+      "content": "Have you noticed the lymph nodes in your neck yourself, or did someone else point them out? And do you have any prior medical conditions or are you currently taking any medications?",
+      "turn": 3
+    },
+    {
+      "role": "patient",
+      "content": "I have been feeling the lymph nodes myself for a while now. I don't have any other significant medical conditions, and I am not currently on any medication. However, I was recently diagnosed with high blood pressure and started taking some tablets for that.",
+      "turn": 3
+    },
+    {
+      "role": "doctor",
+      "content": "When did you first notice the lymph nodes, and what was the diagnosis and treatment for your high blood pressure?",
+      "turn": 4
+    },
+    {
+      "role": "patient",
+      "content": "I first noticed the lymph nodes about a month ago. For my high blood pressure, I was diagnosed a couple of months back. The doctor prescribed me some tablets called Amlodipine to control it. I've been taking them as instructed since then.",
+      "turn": 4
+    },
+    {
+      "role": "doctor",
+      "content": "When did you first notice the unexplained weight loss, and have you had any symptoms like shortness of breath, cough, or difficulty swallowing along with the lymph nodes?",
+      "turn": 5
+    },
+    {
+      "role": "patient",
+      "content": "The unexplained weight loss started around the same time I noticed the lymph nodes, about a month ago. I haven't experienced any shortness of breath, cough, or difficulty swallowing, just the fatigue and night sweats.",
+      "turn": 5
+    },
+    {
+      "role": "doctor",
+      "content": "Are the night sweats happening every night, or do they come on only on certain nights, and have you had any recent infections, travel, or contact with anyone who's been sick?",
+      "turn": 6
+    },
+    {
+      "role": "patient",
+      "content": "The night sweats seem to happen only on certain nights, not every night. I haven't had any recent infections or travels. As far as I know, I haven't had close contact with anyone who's been sick recently either.",
+      "turn": 6
+    },
+    {
+      "role": "doctor",
+      "content": "Does anyone in your family have a history of cancer, blood disorders, or autoimmune conditions? Have you had any previous surgeries or procedures?",
+      "turn": 7
+    },
+    {
+      "role": "patient",
+      "content": "My mother had breast cancer about 15 years ago, but besides that, I don't think anyone else in my immediate family has had a history of cancer. As for surgeries, I haven't had any major ones, just a few minor medical procedures like tonsillectomy when I was younger.",
+      "turn": 7
+    },
+    {
+      "role": "doctor",
+      "content": "Given your symptoms \u2014 particularly the lymphadenopathy, unexplained weight loss, and night sweats \u2014 I'd like to arrange some blood tests and consider a neck ultrasound to examine the lymph nodes further. I'll also want to review your blood pressure medication. Can you come back in a week to discuss these results?",
+      "turn": 8
+    },
+    {
+      "role": "patient",
+      "content": "Yes, that sounds fine. Please let me know if there's anything else you need from me before then or if you have any questions about what's going on. Thank you for your help and understanding.",
+      "turn": 8
+    },
+    {
+      "role": "doctor",
+      "content": "I'll arrange the blood tests and neck ultrasound. In the meantime, continue taking your Amlodipine as prescribed. Please return next week to discuss the results. Is there anything else I can clarify for you today?",
+      "turn": 9
+    },
+    {
+      "role": "patient",
+      "content": "No, that all sounds good. Thank you again for your help, Dr. [Name]. Have a great day!",
+      "turn": 9
+    }
+  ],
+  "coverage_hint": {},
+  "working_notes": [],
+  "events": [
+    {
+      "event": "llm_retry",
+      "role": "report",
+      "attempt": 1,
+      "failure": "empty reply"
+    }
+  ],
+  "usage": [
+    {
+      "role": "doctor",
+      "eval_tokens": 71,
+      "prompt_tokens": 1527
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 55,
+      "prompt_tokens": 1202
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 102,
+      "prompt_tokens": 1656
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 52,
+      "prompt_tokens": 1298
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 112,
+      "prompt_tokens": 1813
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 51,
+      "prompt_tokens": 1394
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 85,
+      "prompt_tokens": 1979
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 53,
+      "prompt_tokens": 1476
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 132,
+      "prompt_tokens": 2120
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 46,
+      "prompt_tokens": 1572
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 113,
+      "prompt_tokens": 2301
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 48,
+      "prompt_tokens": 1665
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 138,
+      "prompt_tokens": 2465
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 61,
+      "prompt_tokens": 1749
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 159,
+      "prompt_tokens": 2667
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 42,
+      "prompt_tokens": 1882
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 84,
+      "prompt_tokens": 2871
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 25,
+      "prompt_tokens": 1978
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 50,
+      "prompt_tokens": 2983
+    },
+    {
+      "role": "report",
+      "eval_tokens": 4680,
+      "prompt_tokens": 6583
+    }
+  ]
+}

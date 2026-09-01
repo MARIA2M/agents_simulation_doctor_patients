@@ -1,0 +1,251 @@
+{
+  "patient_id": "CLL-003",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "CLL-003",
+    "clinical_summary": "Patient presents with new-onset fatigue and a neck lump, with family history of CLL. They report anxiety and difficulty focusing on daily activities. They understand CLL as a blood cancer affecting B cells and recognize potential treatments including medication, monitoring, and possibly chemotherapy/radiation. They express confidence in medical treatment's ability to manage the condition and prolong lifespan, while having mild concerns about medication side effects. They are committed to being proactive and making informed decisions about their care.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "I've been feeling more tired than usual after work lately",
+            "turn": 1
+          },
+          {
+            "quote": "It's making me more tired after work and impacting my ability to focus on things at home or in my daily routine",
+            "turn": 3
+          },
+          {
+            "quote": "I've noticed that some aspects of my behavior or mindset have been changing as a result of dealing with this situation - mostly just being more mindful and prioritizing my health",
+            "turn": 7
+          }
+        ],
+        "reasoning": "The patient reports fatigue affecting work and daily functioning, and behavioral changes toward being more mindful and prioritizing health. This suggests moderate impact on daily life - they're experiencing symptoms that affect their ability to focus and are changing their behavior, but they're still able to function and maintain their roles.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "I do recognize that this could potentially be a long-term situation",
+            "turn": 8
+          },
+          {
+            "quote": "While I hope that the lump is nothing serious and that my health will improve over time, I also understand that CLL is a chronic illness which may require ongoing monitoring and management",
+            "turn": 8
+          },
+          {
+            "quote": "I know there may be various treatments available depending on the stage and severity",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient recognizes this could be long-term and understands CLL is chronic, but also expresses hope that it might improve over time. They're holding both possibilities open.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "Honestly, I'm not sure if there's much I can do in terms of controlling the situation at this point",
+            "turn": 4
+          },
+          {
+            "quote": "But I know that being proactive about managing my health is important",
+            "turn": 4
+          },
+          {
+            "quote": "I'm committed to doing everything in my power to maintain my well-being and make informed decisions about my health care going forward",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient feels uncertain about controlling the situation but is committed to being proactive and doing everything in their power. They're taking action (monitoring, making informed decisions) but don't feel they have full control.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "I am confident in medical science's ability to help manage conditions like CLL and potentially prolong my lifespan by mitigating symptoms and slowing disease progression",
+            "turn": 9
+          },
+          {
+            "quote": "I trust that you and other healthcare professionals will be able to guide me in making informed decisions about any necessary treatments",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient expresses confidence in medical treatment's ability to help manage the condition and prolong lifespan. They trust healthcare professionals to guide them.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "At this point, it's still uncertain what the lump in my neck might indicate, so it's difficult for me to fully envision that scenario coming to pass",
+            "turn": 7
+          },
+          {
+            "quote": "While part of me recognizes the possibility of facing a similar situation as my father did with CLL",
+            "turn": 7
+          }
+        ],
+        "reasoning": "The patient has not yet fully identified with CLL. They recognize the possibility but are still uncertain and not envisioning themselves in that situation.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "I've been feeling more anxious than usual",
+            "turn": 3
+          },
+          {
+            "quote": "I'm concerned that it could be related to CLL like it was for your father",
+            "turn": 3
+          },
+          {
+            "quote": "Overall, I'm feeling quite anxious and uncertain about everything",
+            "turn": 8
+          },
+          {
+            "quote": "It's been difficult to process all of these new symptoms and concerns related to the lump in my neck",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient reports significant anxiety and uncertainty, and finds it difficult to process the situation. This suggests frequent worry that shapes their experience.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "From what I understand, it's a type of blood cancer that affects white blood cells, specifically B cells",
+            "turn": 2
+          },
+          {
+            "quote": "I know there may be various treatments available depending on the stage and severity",
+            "turn": 9
+          },
+          {
+            "quote": "I'm committed to doing everything in my power to maintain my well-being and make informed decisions about my health care going forward",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient has some understanding of CLL as a blood cancer affecting B cells, and understands there are various treatments available depending on stage and severity. They're committed to making informed decisions.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "I've been feeling more anxious than usual",
+            "turn": 3
+          },
+          {
+            "quote": "Overall, I'm feeling quite anxious and uncertain about everything",
+            "turn": 8
+          },
+          {
+            "quote": "It's been difficult to process all of these new symptoms and concerns related to the lump in my neck",
+            "turn": 8
+          },
+          {
+            "quote": "I'm also trying to stay hopeful and keep an open mind about what might be causing it and how it can be managed or treated if necessary",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient reports significant anxiety and uncertainty, and finds it difficult to process the situation. They're actively trying to maintain hope and keep an open mind, which suggests the emotion is prominent and affects how they approach the situation.",
+        "score": 8.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "I believe it could be an important part of managing my health and potentially extending my lifespan",
+            "turn": 5
+          },
+          {
+            "quote": "I know there may be various treatments available depending on the stage and severity. It could involve monitoring my blood counts regularly, taking medication as prescribed",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient believes medication could be an important part of managing health and extending lifespan. They understand medication may be prescribed and are open to it.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "While the idea of taking medication regularly is not entirely appealing",
+            "turn": 5
+          },
+          {
+            "quote": "I do carry some mild worries and concerns about potential side effects from medication",
+            "turn": 6
+          }
+        ],
+        "reasoning": "The patient has reservations about taking medication regularly and carries mild worries about potential side effects. These concerns have not yet led to behavioral changes (they haven't mentioned altering doses or stopping).",
+        "score": 3.0,
+        "confidence": 0.7
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "I do carry some mild worries and concerns about potential side effects from medication",
+            "turn": 6
+          },
+          {
+            "quote": "I understand that medications are often necessary for treating various conditions",
+            "turn": 6
+          }
+        ],
+        "reasoning": "The patient has mild generalised caution about taking things long-term but also recognizes medications are often necessary. They don't view medicines as fundamentally harmful.",
+        "score": 2.0,
+        "confidence": 0.7
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [
+          {
+            "quote": "I trust that doctors like yourself will prescribe medicine only when it's truly needed",
+            "turn": 6
+          }
+        ],
+        "reasoning": "The patient trusts that doctors will prescribe medicine only when truly needed. They don't express a general belief that doctors prescribe too readily.",
+        "score": 2.0,
+        "confidence": 0.7
+      }
+    },
+    "causes": [
+      "family history (father had CLL)",
+      "general health or lifestyle factors"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "I'm concerned about it because my father had Chronic Lymphocytic Leukemia (CLL)",
+        "turn": 1
+      },
+      {
+        "quote": "It could potentially be related to CLL or other factors",
+        "turn": 6
+      },
+      {
+        "quote": "I can't think of anything specific that might have caused it, but sometimes these things can be related to general health or lifestyle factors",
+        "turn": 10
+      }
+    ]
+  }
+}

@@ -1,0 +1,235 @@
+{
+  "patient_id": "CLL-001",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "CLL-001",
+    "clinical_summary": "The patient presents with fatigue (deep-rooted, constant drain on energy), headaches (lingering for hours, can be any time of day, sometimes with light/sound sensitivity), night sweats (new within past couple months, more intense/frequent than stress-related ones), and appetite changes (craving salty foods, eating when not hungry). They also have a stable neck lump (pea-sized, been there for years). They have no regular medications, only occasional OTC pain reliever for headaches. Family history includes a sister with a blood-related issue (frequent infections, regular medication) and parents with high blood pressure and diabetes. They are cooperative with medical investigation and agree to blood tests and CT scan.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "I've been having to cut back on my activities at work and home, which is quite frustrating because I used to be able to handle everything with ease.",
+            "turn": 4
+          },
+          {
+            "quote": "It's more than just feeling tired after a day of work — I feel like I'm constantly running on empty.",
+            "turn": 4
+          },
+          {
+            "quote": "even simple tasks take much more effort than they should",
+            "turn": 1
+          }
+        ],
+        "reasoning": "The patient has had to cut back on activities at work and home, which is frustrating because they previously handled everything with ease. They describe fatigue as 'more than just feeling tired after a day of work' and 'constantly running on empty.' They note that even simple tasks take much more effort. This suggests a significant impact on their daily functioning and roles.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "The fatigue started gradually over the past year or so but has definitely worsened recently.",
+            "turn": 4
+          },
+          {
+            "quote": "I'm fairly certain these night sweats started within the past couple of months.",
+            "turn": 2
+          },
+          {
+            "quote": "It's been quite a change for me.",
+            "turn": 2
+          }
+        ],
+        "reasoning": "The patient describes fatigue as having started gradually over a year ago and worsening recently. Night sweats started within the past couple of months. They describe this as 'quite a change' but don't express a clear expectation about how long it will last. They're seeking answers through testing, which suggests uncertainty about the future course.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I'm not on any regular medications — just an occasional over-the-counter pain reliever for the headaches if needed.",
+            "turn": 5
+          },
+          {
+            "quote": "I've been having to cut back on my activities at work and home",
+            "turn": 4
+          },
+          {
+            "quote": "I'll make sure to arrange my schedule so I can get those tests done",
+            "turn": 10
+          }
+        ],
+        "reasoning": "The patient has taken minimal action beyond occasional OTC pain reliever. They haven't described any self-management strategies or lifestyle changes to address the symptoms. They are cooperating with medical investigation but haven't described any personal actions they believe are influencing their condition. The fact they're having to cut back on activities suggests they feel somewhat passive about managing their condition.",
+        "score": 4.0,
+        "confidence": 0.6
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "Of course, doctor. If it can help figure out what's going on, I'm more than happy to go ahead with those tests.",
+            "turn": 9
+          },
+          {
+            "quote": "Anything to understand this better must be worth trying.",
+            "turn": 9
+          },
+          {
+            "quote": "I'll make sure to arrange my schedule so I can get those tests done.",
+            "turn": 10
+          },
+          {
+            "quote": "Thank you for your help — it's reassuring to have someone looking into this.",
+            "turn": 10
+          }
+        ],
+        "reasoning": "The patient is agreeable to medical investigation and expresses hope that tests will help 'figure out what's going on.' They say 'anything to understand this better must be worth trying' and express that it's 'reassuring to have someone looking into this.' However, they don't express any belief about the effectiveness of medical treatment specifically - they're seeking understanding, not necessarily expecting treatment to cure them. They haven't described any prior experience with treatment effectiveness.",
+        "score": 4.0,
+        "confidence": 0.5
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "I've been feeling quite tired lately. It's more than just the usual day-to-day weariness — it feels deep-rooted, like a constant drain on my energy.",
+            "turn": 1
+          },
+          {
+            "quote": "I've been getting these headaches that linger for hours at a time.",
+            "turn": 1
+          },
+          {
+            "quote": "And then there are the night sweats — I was never prone to them before, so it's quite unsettling.",
+            "turn": 1
+          },
+          {
+            "quote": "my appetite has been a bit off lately. I've been craving salty foods more than usual",
+            "turn": 6
+          },
+          {
+            "quote": "there's one in my neck that has been there for a while",
+            "turn": 6
+          }
+        ],
+        "reasoning": "The patient describes multiple symptoms (fatigue, headaches, night sweats, appetite changes, neck lump) but doesn't give the condition a specific label. They attribute these symptoms to their current state but don't name an illness. They have several symptoms that are present and noticeable.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "And then there are the night sweats — I was never prone to them before, so it's quite unsettling.",
+            "turn": 1
+          },
+          {
+            "quote": "It's been quite a change for me.",
+            "turn": 2
+          },
+          {
+            "quote": "It's probably nothing, but with these other symptoms...",
+            "turn": 3
+          },
+          {
+            "quote": "I'm just glad to have some answers — even if they're not what I hope for.",
+            "turn": 11
+          },
+          {
+            "quote": "Thank you for your help — it's reassuring to have someone looking into this.",
+            "turn": 10
+          }
+        ],
+        "reasoning": "The patient describes the night sweats as 'unsettling' and notes they're 'quite a change.' They express anxiety about the results ('even if they're not what I hope for') and express gratitude for having someone looking into it. They seem concerned about what the future might hold. The worry appears to be tied to specific moments (results, appointments) and shapes their decision to seek medical help.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "Of course, doctor. If it can help figure out what's going on, I'm more than happy to go ahead with those tests.",
+            "turn": 9
+          },
+          {
+            "quote": "Anything to understand this better must be worth trying.",
+            "turn": 9
+          },
+          {
+            "quote": "I'll make sure to arrange my schedule so I can get those tests done.",
+            "turn": 10
+          },
+          {
+            "quote": "I'm just glad to have some answers — even if they're not what I hope for.",
+            "turn": 11
+          }
+        ],
+        "reasoning": "The patient is actively seeking understanding and wants to 'figure out what's going on.' They express a desire to understand 'this better' and are glad to have 'some answers.' They're not confused about what they're experiencing - they can describe their symptoms clearly - but they don't have a clear understanding of what's causing them. They're seeking medical clarification.",
+        "score": 6.0,
+        "confidence": 0.6
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "It's quite frustrating because I used to be able to handle everything with ease.",
+            "turn": 4
+          },
+          {
+            "quote": "And then there are the night sweats — I was never prone to them before, so it's quite unsettling.",
+            "turn": 1
+          },
+          {
+            "quote": "It's been quite a change for me.",
+            "turn": 2
+          },
+          {
+            "quote": "I'm just glad to have some answers — even if they're not what I hope for.",
+            "turn": 11
+          },
+          {
+            "quote": "Thank you for your help — it's reassuring to have someone looking into this.",
+            "turn": 10
+          }
+        ],
+        "reasoning": "The patient expresses frustration about having to cut back on activities. They describe the night sweats as 'unsettling' and note they're 'quite a change.' They express anxiety about the results ('even if they're not what I hope for') and gratitude for having someone looking into it. The emotion appears to be recurrent and affects how they speak about the situation.",
+        "score": 6.0,
+        "confidence": 0.7
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [],
+        "reasoning": "The patient is not on any regular medications, only occasional OTC pain reliever. They haven't expressed any belief about the necessity of medication. Since they're not prescribed regular medication, this dimension is not applicable.",
+        "score": null,
+        "confidence": 0.9
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [],
+        "reasoning": "The patient is not on any regular medications, only occasional OTC pain reliever. They haven't expressed any specific concerns about medication. Since they're not prescribed regular medication, this dimension is not applicable.",
+        "score": null,
+        "confidence": 0.9
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [],
+        "reasoning": "The patient hasn't expressed any general beliefs about medicines as a class. They use occasional OTC pain reliever but haven't expressed concerns about medication harm. This dimension was never explored.",
+        "score": null,
+        "confidence": 0.9
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "The patient hasn't expressed any general beliefs about doctors prescribing too readily. They're cooperative with medical investigation but haven't expressed concerns about overprescribing. This dimension was never explored.",
+        "score": null,
+        "confidence": 0.9
+      }
+    },
+    "causes": [],
+    "causes_evidence": []
+  }
+}

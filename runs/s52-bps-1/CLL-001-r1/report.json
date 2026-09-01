@@ -1,0 +1,227 @@
+{
+  "patient_id": "CLL-001",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "CLL-001",
+    "clinical_summary": "Patient with Chronic Lymphocytic Leukemia (CLL) diagnosed 5 years ago, currently on watch and wait with monthly blood draws. Presents with new symptoms over past 2 months: fatigue, occasional night sweats, and neck tension/discomfort. Fatigue significantly affecting work and daily life. Strong support system (partner, close friends). Expresses worry and uncertainty about new symptoms and future progression.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "Even though I'm trying to maintain my usual routine, it's becoming harder and harder to keep up with everything",
+            "turn": 2
+          },
+          {
+            "quote": "it's harder and harder to get through my usual workday without feeling exhausted",
+            "turn": 3
+          },
+          {
+            "quote": "It's making everything feel more difficult than it should be",
+            "turn": 3
+          }
+        ],
+        "reasoning": "Patient describes significant impact on work and daily life, struggling to maintain routine and get through workdays. Everything feels more difficult than it should be.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "It was diagnosed about five years ago",
+            "turn": 5
+          },
+          {
+            "quote": "I know that not everyone with CLL has such a slow progression",
+            "turn": 7
+          },
+          {
+            "quote": "difficult to live with the uncertainty of what might happen down the line",
+            "turn": 7
+          },
+          {
+            "quote": "worried that something new might be developing",
+            "turn": 6
+          }
+        ],
+        "reasoning": "Patient has had CLL for 5 years with stability but expresses uncertainty about future progression and what might happen 'down the line'. Holds both possibilities open.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "it's hard not to feel a bit out of control sometimes",
+            "turn": 7
+          },
+          {
+            "quote": "Part of me feels like they're just part of living with CLL",
+            "turn": 7
+          },
+          {
+            "quote": "I feel frustrated and worried because I didn't expect them to start happening now",
+            "turn": 7
+          },
+          {
+            "quote": "As for these new symptoms, it's hard to say how much control I have over them",
+            "turn": 7
+          }
+        ],
+        "reasoning": "Patient expresses feeling out of control and frustrated that new symptoms started unexpectedly. Uncertain about how much control they have over the symptoms.",
+        "score": 4.0,
+        "confidence": 0.6
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "I'm currently on watch and wait status, so I don't take any medication at the moment",
+            "turn": 5
+          },
+          {
+            "quote": "I do have monthly blood draws to monitor my condition",
+            "turn": 5
+          }
+        ],
+        "reasoning": "Patient is not on active treatment - only on watch and wait with monitoring. No treatment to evaluate for efficacy.",
+        "score": null,
+        "confidence": 1.0
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "my energy levels have been really low lately",
+            "turn": 1
+          },
+          {
+            "quote": "occasional night sweats",
+            "turn": 2
+          },
+          {
+            "quote": "discomfort in my neck when I touch it",
+            "turn": 2
+          },
+          {
+            "quote": "tension that doesn't seem to go away, even when I'm resting or sleeping",
+            "turn": 3
+          },
+          {
+            "quote": "It can sometimes feel tender if I press on it",
+            "turn": 3
+          }
+        ],
+        "reasoning": "Patient has multiple symptoms (low energy, night sweats, neck tension) that they attribute to their condition and that affect daily life.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "new symptoms that are quite concerning me",
+            "turn": 1
+          },
+          {
+            "quote": "I guess part of me is just worried that something new might be developing, which is scary to think about",
+            "turn": 6
+          },
+          {
+            "quote": "It's hard not to feel a bit out of control sometimes",
+            "turn": 7
+          },
+          {
+            "quote": "I feel frustrated and worried because I didn't expect them to start happening now",
+            "turn": 7
+          },
+          {
+            "quote": "It can be scary when new symptoms start cropping up",
+            "turn": 11
+          }
+        ],
+        "reasoning": "Patient expresses significant worry and concern about new symptoms, describing them as 'scary' and expressing frustration and worry about feeling out of control.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "My understanding of CLL is that it can sometimes have unexpected effects on other parts of the body",
+            "turn": 6
+          },
+          {
+            "quote": "I know that not everyone with CLL has such a slow progression",
+            "turn": 7
+          },
+          {
+            "quote": "difficult to live with the uncertainty of what might happen down the line",
+            "turn": 7
+          }
+        ],
+        "reasoning": "Patient has some understanding of CLL basics but expresses uncertainty about what might happen and struggles with unpredictability. Doesn't seem to have detailed understanding of mechanism or what to expect.",
+        "score": 4.0,
+        "confidence": 0.6
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "I guess part of me is just worried that something new might be developing, which is scary to think about",
+            "turn": 6
+          },
+          {
+            "quote": "I feel frustrated and worried because I didn't expect them to start happening now",
+            "turn": 7
+          },
+          {
+            "quote": "It's hard not to feel a bit out of control sometimes",
+            "turn": 7
+          },
+          {
+            "quote": "It can be scary when new symptoms start cropping up",
+            "turn": 11
+          }
+        ],
+        "reasoning": "Patient expresses significant emotional distress - worry, fear, frustration, and feeling out of control. These emotions are prominent and affect their experience.",
+        "score": 8.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [],
+        "reasoning": "Patient is not on any prescribed medication, only on watch and wait with monitoring.",
+        "score": null,
+        "confidence": 1.0
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [],
+        "reasoning": "Patient is not on any prescribed medication, only on watch and wait with monitoring.",
+        "score": null,
+        "confidence": 1.0
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [],
+        "reasoning": "This dimension was never explored during the consultation.",
+        "score": null,
+        "confidence": 1.0
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "This dimension was never explored during the consultation.",
+        "score": null,
+        "confidence": 1.0
+      }
+    },
+    "causes": [],
+    "causes_evidence": []
+  }
+}

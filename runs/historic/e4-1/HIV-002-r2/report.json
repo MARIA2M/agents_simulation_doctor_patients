@@ -1,0 +1,372 @@
+{
+  "patient_id": "HIV-002",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "HIV-002",
+    "clinical_summary": "The patient has been diagnosed with HIV and is taking Dovato (a two-drug regimen). They report frequent headaches (almost every other day) that started after starting the medication, ranging from mild discomfort to severe pain. The headaches affect their daily life, making it difficult to focus on work or conversation, and sometimes requiring them to retreat to a quiet place. They describe feeling overwhelmed, anxious, and frustrated that their life has been 'so drastically affected' by the illness. They have some sense of personal responsibility for their situation but also believe HIV is unpredictable and that 'there's only so much control we have over certain things.' They generally adhere to their medication but have had occasional slip-ups due to stress and forgetfulness. They trust medical professionals but want more clarity about their treatment and future. They have moderate concerns about long-term medication effects and side effects.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "certain activities are becoming increasingly difficult to manage",
+            "turn": 1
+          },
+          {
+            "quote": "days I just want to rest and not much else",
+            "turn": 1
+          },
+          {
+            "quote": "life has been so drastically affected by this illness",
+            "turn": 4
+          },
+          {
+            "quote": "struggle through them, trying to focus on work or even just conversation",
+            "turn": 2
+          },
+          {
+            "quote": "sometimes I have no choice but to retreat to a quiet place to try and find some relief",
+            "turn": 2
+          }
+        ],
+        "reasoning": "The patient has had to scale back activities, needs more rest, and has had to retreat from social/work situations due to headaches. They describe their life as 'drastically affected' by the illness. This is more than just minor adaptation - they're having to struggle through daily activities and retreat for relief.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "this HIV infection could possibly be with me for a while",
+            "turn": 6
+          },
+          {
+            "quote": "the illness is going to continue influencing my life in one way or another",
+            "turn": 10
+          },
+          {
+            "quote": "treatment adjustments may need to happen over time",
+            "turn": 6
+          },
+          {
+            "quote": "possibly needing a more potent regimen if my viral load doesn't become undetectable soon",
+            "turn": 6
+          }
+        ],
+        "reasoning": "The patient clearly views HIV as a long-term condition that will continue to influence their life. They understand that treatment adjustments may be needed over time and that they may need more potent regimens. They're planning for the long term.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "invisible enemy inside me that I can't see or touch",
+            "turn": 3
+          },
+          {
+            "quote": "there's only so much control we have over certain things",
+            "turn": 7
+          },
+          {
+            "quote": "sometimes I feel like I have no say in any of it",
+            "turn": 1
+          },
+          {
+            "quote": "wish I had taken more precautions and perhaps been more assertive in discussing my partner's sexual history and practices",
+            "turn": 7
+          },
+          {
+            "quote": "I try my best to stay informed about my condition and follow your advice as closely as possible",
+            "turn": 8
+          },
+          {
+            "quote": "I'm doing what I can",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient has mixed feelings. They acknowledge some personal responsibility ('wish I had taken more precautions') and try to stay informed and follow advice. However, they predominantly view HIV as an unpredictable force beyond their direct control ('invisible enemy,' 'only so much control we have over certain things,' 'sometimes I feel like I have no say in any of it'). Their sense of control is limited.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "I trust your expertise and knowledge",
+            "turn": 11
+          },
+          {
+            "quote": "viral load can become undetectable with consistent treatment",
+            "turn": 6
+          },
+          {
+            "quote": "trust that adjustments can be made as necessary",
+            "turn": 10
+          },
+          {
+            "quote": "it does give me a chance to live a relatively normal life despite having this illness",
+            "turn": 10
+          },
+          {
+            "quote": "helps keep me healthy and gives me some semblance of control over my illness",
+            "turn": 11
+          }
+        ],
+        "reasoning": "The patient has moderate to high trust in medical treatment. They understand that treatment can lead to undetectable viral loads and that adjustments can be made. They see treatment as giving them a chance for a relatively normal life and some control over their illness. However, they also express uncertainty about the future and the complexity of treatment.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "this HIV infection",
+            "turn": 3
+          },
+          {
+            "quote": "invisible enemy inside me that I can't see or touch but is causing all these changes in my body",
+            "turn": 3
+          },
+          {
+            "quote": "living with HIV is not something I can simply ignore or forget about",
+            "turn": 11
+          },
+          {
+            "quote": "this illness is going to continue influencing my life in one way or another",
+            "turn": 10
+          }
+        ],
+        "reasoning": "The patient clearly identifies with having HIV. They describe it as an 'invisible enemy' causing changes in their body and an ongoing process they cannot ignore. They see it as something that will continue to influence their life.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "wonder if it's worth it—whether taking the medication is really helping me more than it's causing other issues",
+            "turn": 4
+          },
+          {
+            "quote": "worry if my viral load could become undetectable soon",
+            "turn": 6
+          },
+          {
+            "quote": "worry creeps up about whether I'm doing everything right",
+            "turn": 8
+          },
+          {
+            "quote": "concern that does occasionally cross my mind",
+            "turn": 13
+          },
+          {
+            "quote": "worry about potential side effects and whether they could change over time",
+            "turn": 10
+          },
+          {
+            "quote": "worry about what long-term use might mean in terms of my overall health or any potential long-term consequences",
+            "turn": 13
+          }
+        ],
+        "reasoning": "The patient has moderate to high concern. They frequently question whether treatment is worth it, worry about their viral load, worry about doing everything right, and have concerns about long-term effects and side effects. These concerns recur unprompted and affect their thinking.",
+        "score": 7.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "difficult to wrap my head around it",
+            "turn": 3
+          },
+          {
+            "quote": "It's all quite complex really",
+            "turn": 6
+          },
+          {
+            "quote": "understand it's supposed to control the virus and keep it from progressing",
+            "turn": 3
+          },
+          {
+            "quote": "viral load can become undetectable with consistent treatment",
+            "turn": 6
+          },
+          {
+            "quote": "treatment adjustments may need to happen over time",
+            "turn": 6
+          },
+          {
+            "quote": "possibly needing a more potent regimen if my viral load doesn't become undetectable soon",
+            "turn": 6
+          }
+        ],
+        "reasoning": "The patient has moderate coherence. They understand some basic concepts (viral load, undetectable, treatment adjustments) and have read about their condition. However, they still find it 'difficult to wrap my head around it' and describe it as 'quite complex.' They have gaps in their understanding.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "roller coaster ride",
+            "turn": 4
+          },
+          {
+            "quote": "overwhelmed by all of this",
+            "turn": 4
+          },
+          {
+            "quote": "headaches have been adding to my stress and anxiety",
+            "turn": 4
+          },
+          {
+            "quote": "even without the headache, I find myself feeling anxious or upset at times",
+            "turn": 4
+          },
+          {
+            "quote": "frustrated that my life has been so drastically affected by this illness",
+            "turn": 4
+          },
+          {
+            "quote": "sometimes, it feels like too much",
+            "turn": 4
+          },
+          {
+            "quote": "anxiety and stress tied to all this",
+            "turn": 8
+          },
+          {
+            "quote": "worry creeps up",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient's emotions are prominent and recurrent. They describe feeling overwhelmed, anxious, frustrated, and sometimes like it's 'too much.' These emotions recur unprompted and affect their mood and thinking. This is clearly affecting them emotionally.",
+        "score": 8.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "stopping the medication abruptly could cause more problems than it would solve",
+            "turn": 9
+          },
+          {
+            "quote": "treatment is crucial and helps me manage my illness effectively",
+            "turn": 13
+          },
+          {
+            "quote": "remembering the importance of this treatment is crucial",
+            "turn": 12
+          },
+          {
+            "quote": "it's manageable and necessary",
+            "turn": 11
+          },
+          {
+            "quote": "it does give me a chance to live a relatively normal life despite having this illness",
+            "turn": 10
+          }
+        ],
+        "reasoning": "The patient clearly sees their medication as necessary and important. They understand that stopping abruptly would cause problems, they describe treatment as 'crucial' and 'necessary,' and they see it as giving them a chance for a relatively normal life. They organize around it (set reminders, it's become part of their routine).",
+        "score": 4.5,
+        "confidence": 0.8
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "wondering if there might be other things going on that are not related to the HIV",
+            "turn": 3
+          },
+          {
+            "quote": "wonder if it's worth it—whether taking the medication is really helping me more than it's causing other issues",
+            "turn": 4
+          },
+          {
+            "quote": "possibility of a connection between my headaches and Dovato has crossed my mind",
+            "turn": 9
+          },
+          {
+            "quote": "worry about potential side effects and whether they could change over time",
+            "turn": 10
+          },
+          {
+            "quote": "worry about what long-term use might mean in terms of my overall health or any potential long-term consequences",
+            "turn": 13
+          },
+          {
+            "quote": "concern that does occasionally cross my mind",
+            "turn": 13
+          }
+        ],
+        "reasoning": "The patient has specific concerns about their medication, particularly about side effects (headaches), whether it's worth it, and long-term effects. These concerns recur unprompted and have led them to question whether they should keep taking the medication. They've thought about reducing the dose or stopping.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "worry about what long-term use might mean in terms of my overall health or any potential long-term consequences",
+            "turn": 13
+          },
+          {
+            "quote": "being mindful of possible risks from long-term medication use",
+            "turn": 13
+          }
+        ],
+        "reasoning": "The patient has mild generalised caution about taking things long-term. They worry about long-term health consequences and are mindful of possible risks. However, they don't express strong avoidance of medicines as a class.",
+        "score": 3.0,
+        "confidence": 0.7
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [
+          {
+            "quote": "medical professionals are generally cautious when prescribing medication",
+            "turn": 13
+          },
+          {
+            "quote": "do take into consideration the potential risks and side effects",
+            "turn": 13
+          }
+        ],
+        "reasoning": "The patient believes medical professionals are generally cautious when prescribing medication and consider risks and side effects. They don't express belief that doctors prescribe too readily.",
+        "score": 1.0,
+        "confidence": 0.8
+      }
+    },
+    "causes": [
+      "sexual activity with a recent partner",
+      "lack of precautions",
+      "unpredictability of HIV"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "got tested due to a recent relationship",
+        "turn": 7
+      },
+      {
+        "quote": "wish I had taken more precautions and perhaps been more assertive in discussing my partner's sexual history and practices",
+        "turn": 7
+      },
+      {
+        "quote": "HIV is unpredictable",
+        "turn": 7
+      },
+      {
+        "quote": "It could have happened regardless of any precaution I took or decisions I made",
+        "turn": 7
+      },
+      {
+        "quote": "one of those unfortunate things that can happen",
+        "turn": 7
+      }
+    ]
+  }
+}

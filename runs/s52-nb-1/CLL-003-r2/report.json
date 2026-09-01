@@ -1,0 +1,238 @@
+{
+  "patient_id": "CLL-003",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "CLL-003",
+    "clinical_summary": "Patient has CLL in very early stages with slightly elevated white blood cell count. Currently on watchful waiting with no medication. Reports intermittent fatigue after work for about a month and a new pea-sized neck lump noticed by wife two weeks ago. No other concerning symptoms. Has regular three-month follow-ups with hematologist. Family history of CLL (father had it). Trusts the care being received.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "Lately, I've been feeling more tired than usual after work",
+            "turn": 1
+          },
+          {
+            "quote": "occasional increased tiredness after work",
+            "turn": 3
+          },
+          {
+            "quote": "sometimes I have more energy than usual, but other days, even light tasks feel like they require more effort than usual",
+            "turn": 5
+          },
+          {
+            "quote": "The fatigue is the most notable change in my routine lately",
+            "turn": 6
+          }
+        ],
+        "reasoning": "Patient describes intermittent fatigue that affects their ability to do light tasks but doesn't seem to be severely limiting their daily functioning. They still work and manage their routine, but with some adaptation. This represents a moderate impact on their life.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "The hematologist we saw last year said it was very early stages for me",
+            "turn": 1
+          },
+          {
+            "quote": "my condition is still very mild",
+            "turn": 3
+          },
+          {
+            "quote": "many people with CLL live normal lifespans and never need treatment",
+            "turn": 7
+          },
+          {
+            "quote": "very early stage of CLL",
+            "turn": 7
+          },
+          {
+            "quote": "continue my regular appointments and blood tests for now",
+            "turn": 7
+          }
+        ],
+        "reasoning": "Patient believes their CLL is in very early stages and that many people live normal lifespans. They expect ongoing monitoring but not immediate intervention. They don't seem to have accepted that this is a chronic condition that will continue indefinitely, but they're not planning for it to end soon either.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I've been adhering to the schedule and taking care of myself as recommended",
+            "turn": 3
+          },
+          {
+            "quote": "I trust the care I'm receiving",
+            "turn": 9
+          }
+        ],
+        "reasoning": "Patient follows the recommended schedule (follow-up appointments every three months) and takes care of themselves. However, they don't seem to be actively managing their condition beyond what's been recommended. They're relying on the hematologist's guidance rather than taking independent actions.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "I'm not on any medication currently",
+            "turn": 3
+          },
+          {
+            "quote": "The hematologist advised watchful waiting at the moment",
+            "turn": 3
+          },
+          {
+            "quote": "many people with CLL live normal lifespans and never need treatment",
+            "turn": 7
+          },
+          {
+            "quote": "continue my regular appointments and blood tests for now",
+            "turn": 7
+          }
+        ],
+        "reasoning": "Patient is not currently receiving any treatment. They believe treatment may not be needed for some patients. They're relying on monitoring rather than treatment. There's no evidence they believe treatment would help if it were prescribed.",
+        "score": 2.0,
+        "confidence": 0.6
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "my father had Chronic Lymphocytic Leukemia (CLL)",
+            "turn": 1
+          },
+          {
+            "quote": "my condition is still very mild",
+            "turn": 3
+          },
+          {
+            "quote": "The fatigue is the most notable change in my routine lately",
+            "turn": 6
+          }
+        ],
+        "reasoning": "Patient identifies as having CLL and recognizes it as a condition. They describe it as 'very mild' and don't seem to have many symptoms attributed to it. The fatigue is the most notable change, but it's intermittent and not severe.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "I'm worried about it because my father had Chronic Lymphocytic Leukemia (CLL)",
+            "turn": 1
+          },
+          {
+            "quote": "I can't help but feel concerned",
+            "turn": 1
+          },
+          {
+            "quote": "I just hope the lump is nothing serious",
+            "turn": 9
+          },
+          {
+            "quote": "that the increased fatigue isn't an indication of something more concerning",
+            "turn": 9
+          }
+        ],
+        "reasoning": "Patient expresses worry about the new neck lump and whether the fatigue indicates something more serious. They're concerned about cancer progression despite reassurance from the hematologist. This worry appears to be tied to specific moments (the new symptoms) and shapes some of their thinking.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "The hematologist we saw last year did an examination and some blood tests, which showed slightly elevated white blood cell count",
+            "turn": 2
+          },
+          {
+            "quote": "my condition is still very mild",
+            "turn": 3
+          },
+          {
+            "quote": "my blood count was only mildly abnormal, which suggests a very early stage of CLL",
+            "turn": 7
+          },
+          {
+            "quote": "slightly elevated but not overly concerning",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient understands they have CLL and that it involves white blood cells. They know it's in 'very early stages' and that their blood count is 'mildly abnormal.' They understand they're on watchful waiting and have regular blood tests. However, they don't seem to have a detailed understanding of what CLL is or how it progresses.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "I'm worried about it because my father had Chronic Lymphocytic Leukemia (CLL)",
+            "turn": 1
+          },
+          {
+            "quote": "I can't help but feel concerned",
+            "turn": 1
+          },
+          {
+            "quote": "I just hope the lump is nothing serious",
+            "turn": 9
+          },
+          {
+            "quote": "that the increased fatigue isn't an indication of something more concerning",
+            "turn": 9
+          },
+          {
+            "quote": "I appreciate you listening and understanding my concerns",
+            "turn": 9
+          }
+        ],
+        "reasoning": "Patient expresses worry and concern about their symptoms. They acknowledge their concerns and appreciate being listened to. The emotion appears to be moderate - they're concerned but not overwhelmed. They don't seem to be avoiding the subject or changing their behavior significantly due to emotional distress.",
+        "score": 4.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [],
+        "reasoning": "Patient is not currently taking any medication. They believe treatment may not be needed for some patients. Since there's no medication, there's no specific belief about necessity.",
+        "score": null,
+        "confidence": 0.9
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [],
+        "reasoning": "Patient expresses worry about symptoms and the illness, but these concerns are about the illness itself, not about medication. They're not currently taking any medication, so there are no specific concerns about medication side effects, dependence, or long-term harm.",
+        "score": null,
+        "confidence": 0.9
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [],
+        "reasoning": "Patient never discussed their general views on medicines as a class. They're not currently taking any medication, so there's no basis for forming a belief about general harm.",
+        "score": null,
+        "confidence": 0.9
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "Patient never discussed their views on whether doctors prescribe too readily. They trust the care they're receiving, but this doesn't necessarily mean they have a specific belief about general overuse of medication.",
+        "score": null,
+        "confidence": 0.9
+      }
+    },
+    "causes": [
+      "family history (father had CLL)"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "I'm worried about it because my father had Chronic Lymphocytic Leukemia (CLL)",
+        "turn": 1
+      }
+    ]
+  }
+}

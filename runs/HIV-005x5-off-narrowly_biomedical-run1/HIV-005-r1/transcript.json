@@ -1,0 +1,262 @@
+{
+  "patient_id": "HIV-005",
+  "turns": 12,
+  "stop_reason": "doctor",
+  "conversation": [
+    {
+      "role": "doctor",
+      "content": "Hello. I'm Dr. [Name]. What brings you in to see me today?",
+      "turn": 1
+    },
+    {
+      "role": "patient",
+      "content": "Hi Doctor, I've been feeling really tired and run-down lately. It's impacting my work and personal life, and I'm worried about it. I think it might be related to my HIV infection, but I'm not sure what to make of it all. Sometimes I wonder if the medication is really helping or if there are other factors at play.",
+      "turn": 1
+    },
+    {
+      "role": "doctor",
+      "content": "I understand you're feeling fatigued and concerned. How long have you been experiencing this fatigue? And what antiretroviral medications are you currently taking?",
+      "turn": 2
+    },
+    {
+      "role": "patient",
+      "content": "The fatigue has been building up over a few months, but I've been putting it down to work stress and not getting enough rest. As for my medication, I'm on Triumeq - one tablet daily. But sometimes when I feel well, I take a break from the medicine \u2014 maybe a day or two off.",
+      "turn": 2
+    },
+    {
+      "role": "doctor",
+      "content": "When were you diagnosed with HIV, and have you had any recent viral load or CD4 count tests? What other symptoms besides fatigue are you noticing?",
+      "turn": 3
+    },
+    {
+      "role": "patient",
+      "content": "I was diagnosed with HIV about three years ago. My last viral load test showed 340 copies/mL, which I know is detectable but low. The doctor said it's due to inconsistent adherence to my medication. My CD4 count is at 410 cells/uL. Besides fatigue, I've had some occasional headaches, but they're not too severe.",
+      "turn": 3
+    },
+    {
+      "role": "doctor",
+      "content": "Your viral load is detectable at 340 copies/mL and your CD4 count is at 410 cells/uL. Are you experiencing any side effects from Triumeq that might affect how you take it? And how often do you miss doses?",
+      "turn": 4
+    },
+    {
+      "role": "patient",
+      "content": "Sometimes, I get these terrible headaches after taking my medication, and they last the whole day. It's like a constant pressure around my forehead. But I don't know if it's because of the medication or just stress from work. As for missing doses, it happens about two to three times per week when I forget. Sometimes, I even take drug holidays of several days when I feel well.",
+      "turn": 4
+    },
+    {
+      "role": "doctor",
+      "content": "You mentioned headaches after taking the medication. Have you noticed if the headaches get better when you skip doses? And how do you feel about your current viral load result and whether the treatment is actually working?",
+      "turn": 5
+    },
+    {
+      "role": "patient",
+      "content": "I haven't specifically made a connection between missing doses and my headaches, but I have wondered if it might be related. As for my viral load result, I'm worried because it's not undetectable like it was before. I know that adherence is important in keeping the virus under control, so this result has made me more concerned about how well my treatment is working overall.",
+      "turn": 5
+    },
+    {
+      "role": "doctor",
+      "content": "You're right that adherence is important for viral control. What do you think is causing your fatigue and headaches - do you think it's directly related to the HIV virus, or do you feel it's something else entirely?",
+      "turn": 6
+    },
+    {
+      "role": "patient",
+      "content": "I'm not sure what's causing my fatigue and headaches. Part of me thinks they must be connected to the HIV in some way, but another part wonders if it might just be general stress from work and life. It's hard to know for sure without more information.",
+      "turn": 6
+    },
+    {
+      "role": "doctor",
+      "content": "When you think about your HIV going forward, what do you expect will happen if the virus stays at 340 copies/mL? Do you see this as a temporary issue or something that will continue?",
+      "turn": 7
+    },
+    {
+      "role": "patient",
+      "content": "Honestly, doctor, I'm scared about what might happen if my viral load keeps creeping up. I worry that it might lead to more serious health problems down the line. But I also know that I have some control over it \u2014 if I can improve my adherence, maybe I can get those numbers back under control too. I guess I see this as a long-term issue that will require ongoing effort and attention.",
+      "turn": 7
+    },
+    {
+      "role": "doctor",
+      "content": "You mentioned feeling well sometimes and taking breaks from medication. Do you think Triumeq is actually helping control your virus, or do you wonder if it's doing anything at all?",
+      "turn": 8
+    },
+    {
+      "role": "patient",
+      "content": "I'm not sure anymore if the medication is really controlling my virus. As you know, I've been missing doses quite a bit lately, so that might be part of the problem. But even before I started missing doses, I wasn't entirely convinced that the medicine was doing much of anything. I guess I feel somewhat hesitant about it all and wonder if there are other factors at play.",
+      "turn": 8
+    },
+    {
+      "role": "doctor",
+      "content": "You've been diagnosed with HIV for three years now. What do you understand about how you got the virus? And do you feel you have a good understanding of what HIV is and how the medication works to control it?",
+      "turn": 9
+    },
+    {
+      "role": "patient",
+      "content": "I think I got HIV from a previous partner who didn't disclose his status. I was pretty naive at the time, so I didn't ask many questions. As for my understanding of the illness and treatment, I know some basics about how HIV affects the immune system and that antiretroviral medication helps control the virus. But honestly, doctor, there's still a lot that confuses me or feels unclear. I'm always happy to learn more if you have time to explain things further.",
+      "turn": 9
+    },
+    {
+      "role": "doctor",
+      "content": "You mentioned wondering if there are other factors at play. Do you ever feel like doctors might be prescribing more medication than necessary, or do you think medicines are generally helpful?",
+      "turn": 10
+    },
+    {
+      "role": "patient",
+      "content": "Sometimes I wonder if doctors might be a bit quick to prescribe medication \u2014 especially when it comes to HIV. But I also know that you've always been careful and thoughtful in your approach with me. Overall, I trust your judgment, but I can't help feeling a little cautious about the role of medicines as a whole.",
+      "turn": 10
+    },
+    {
+      "role": "doctor",
+      "content": "To summarize what we've discussed: Your viral load is detectable at 340 copies/mL with a CD4 count of 410 cells/uL. You've been experiencing fatigue and headaches, and you're taking Triumeq daily but missing doses 2-3 times per week and sometimes taking drug holidays. You're uncertain if the medication is actually working and have concerns about future health complications. \n\nYour next steps would be to increase your adherence to Triumeq consistently, and I'd like to repeat your viral load in about 3-4 months to see if it improves. Are there any other concerns you'd like to address before we end today?",
+      "turn": 11
+    },
+    {
+      "role": "patient",
+      "content": "No, doctor, that covers everything I wanted to discuss for now. Thank you so much for listening and giving me your time. I'll do my best to improve my adherence going forward.",
+      "turn": 11
+    },
+    {
+      "role": "doctor",
+      "content": "You're welcome. I appreciate your willingness to work on improving your adherence. If you have any issues with the medication or start experiencing new symptoms, don't hesitate to reach out. Take care.",
+      "turn": 12
+    },
+    {
+      "role": "patient",
+      "content": "Thank you, doctor. Have a great day ahead!",
+      "turn": 12
+    }
+  ],
+  "coverage_hint": {},
+  "working_notes": [],
+  "events": [],
+  "usage": [
+    {
+      "role": "doctor",
+      "eval_tokens": 209,
+      "prompt_tokens": 1527
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 72,
+      "prompt_tokens": 1292
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 122,
+      "prompt_tokens": 1811
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 66,
+      "prompt_tokens": 1406
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 141,
+      "prompt_tokens": 2002
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 73,
+      "prompt_tokens": 1511
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 188,
+      "prompt_tokens": 2220
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 81,
+      "prompt_tokens": 1643
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 135,
+      "prompt_tokens": 2492
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 77,
+      "prompt_tokens": 1773
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 139,
+      "prompt_tokens": 2707
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 55,
+      "prompt_tokens": 1903
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 104,
+      "prompt_tokens": 2904
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 83,
+      "prompt_tokens": 2006
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 103,
+      "prompt_tokens": 3094
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 79,
+      "prompt_tokens": 2134
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 140,
+      "prompt_tokens": 3279
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 101,
+      "prompt_tokens": 2266
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 265,
+      "prompt_tokens": 3523
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 65,
+      "prompt_tokens": 2410
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 377,
+      "prompt_tokens": 3856
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 39,
+      "prompt_tokens": 2616
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 77,
+      "prompt_tokens": 4275
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 12,
+      "prompt_tokens": 2703
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 622,
+      "prompt_tokens": 4367
+    },
+    {
+      "role": "report",
+      "eval_tokens": 3770,
+      "prompt_tokens": 9178
+    }
+  ]
+}

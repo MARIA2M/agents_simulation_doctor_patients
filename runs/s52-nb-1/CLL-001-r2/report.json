@@ -1,0 +1,187 @@
+{
+  "patient_id": "CLL-001",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "CLL-001",
+    "clinical_summary": "Patient with Chronic Lymphocytic Leukemia (CLL) managed with active surveillance. Experiencing mild intermittent fatigue and occasional night sweats. Recent blood work shows stable white blood cell counts. Patient has adjusted lifestyle and routines to accommodate the condition. Monthly blood draws for monitoring.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "It's been a slow-progressing situation, but it has definitely impacted my life in various ways.",
+            "turn": 2
+          },
+          {
+            "quote": "I've learned to adjust my lifestyle and routines accordingly",
+            "turn": 2
+          }
+        ],
+        "reasoning": "Patient acknowledges that CLL has impacted their life in various ways and required lifestyle adjustments, indicating moderate impact on daily functioning.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "It's been a slow-progressing situation",
+            "turn": 2
+          },
+          {
+            "quote": "knowing that treatment might not be needed for years, if at all",
+            "turn": 6
+          },
+          {
+            "quote": "It can be quite challenging knowing that treatment might not be needed for years, if at all",
+            "turn": 6
+          }
+        ],
+        "reasoning": "Patient describes CLL as slow-progressing but expresses uncertainty about the timeline, holding both endings open and planning for neither.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "keeping up with regular check-ups and monitoring from my healthcare team",
+            "turn": 2
+          },
+          {
+            "quote": "try my best to stay informed and proactive in managing my condition",
+            "turn": 6
+          }
+        ],
+        "reasoning": "Patient actively monitors their condition and stays informed, but accepts that treatment decisions are made by their healthcare team.",
+        "score": 5.0,
+        "confidence": 0.8
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "my physician has advised me to follow an active surveillance approach",
+            "turn": 4
+          },
+          {
+            "quote": "I understand there might be times when decisions about my care are complex",
+            "turn": 7
+          }
+        ],
+        "reasoning": "Patient accepts their physician's recommendation for active surveillance and trusts that treatment will be recommended when needed.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "I'm managing Chronic Lymphocytic Leukemia (CLL) at the moment",
+            "turn": 2
+          },
+          {
+            "quote": "mild fatigue that comes and goes throughout the day",
+            "turn": 3
+          },
+          {
+            "quote": "occasional night sweats lately which can be quite uncomfortable",
+            "turn": 3
+          }
+        ],
+        "reasoning": "Patient identifies with CLL and reports several symptoms that they attribute to the condition.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "struggling with understanding how long I might need to follow this active surveillance approach",
+            "turn": 6
+          },
+          {
+            "quote": "It can be quite challenging knowing that treatment might not be needed for years, if at all",
+            "turn": 6
+          },
+          {
+            "quote": "At times, it feels like there's a sense of limbo or uncertainty around the whole situation",
+            "turn": 6
+          }
+        ],
+        "reasoning": "Patient expresses uncertainty about the timeline and emotional discomfort from this uncertainty.",
+        "score": 5.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "active surveillance for CLL means regular monitoring without treatment until there's evidence the disease is progressing",
+            "turn": 7
+          },
+          {
+            "quote": "my lymphocyte levels have also remained stable, which is something that my doctor and I are keeping an eye on as part of the active surveillance process",
+            "turn": 5
+          }
+        ],
+        "reasoning": "Patient demonstrates good understanding of their condition, the monitoring process, and the rationale for active surveillance.",
+        "score": 7.0,
+        "confidence": 0.8
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "struggling with understanding how long I might need to follow this active surveillance approach",
+            "turn": 6
+          },
+          {
+            "quote": "At times, it feels like there's a sense of limbo or uncertainty around the whole situation",
+            "turn": 6
+          },
+          {
+            "quote": "your guidance and support certainly ease some of the anxiety and uncertainty",
+            "turn": 7
+          }
+        ],
+        "reasoning": "Patient acknowledges emotional challenges from uncertainty and mentions anxiety, indicating moderate emotional impact.",
+        "score": 5.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [],
+        "reasoning": "Patient is not on any prescribed medication for CLL, so there is no specific belief about medication necessity.",
+        "score": null,
+        "confidence": 1.0
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [],
+        "reasoning": "Patient is not on any prescribed medication for CLL, so there are no specific concerns about medication.",
+        "score": null,
+        "confidence": 1.0
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [],
+        "reasoning": "General beliefs about medicines as a class were not explored in this consultation.",
+        "score": null,
+        "confidence": 1.0
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "Beliefs about doctor prescribing practices were not explored in this consultation.",
+        "score": null,
+        "confidence": 1.0
+      }
+    },
+    "causes": [],
+    "causes_evidence": []
+  }
+}

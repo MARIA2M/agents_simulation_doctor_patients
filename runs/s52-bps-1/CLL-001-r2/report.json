@@ -1,0 +1,208 @@
+{
+  "patient_id": "CLL-001",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "CLL-001",
+    "clinical_summary": "The patient presents with persistent fatigue that has worsened recently and is affecting daily functioning, along with a stable neck swelling that has been present for about two weeks. The symptoms began around the same time as work-related stress. The patient has a history of back surgery and takes occasional ibuprofen. They have not tried to find an explanation for their symptoms on their own and are open to medical help but hesitant due to lack of experience with this type of condition.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "It's making everything harder, doctor. Even simple tasks like cooking dinner or running errands feel more difficult than usual.",
+            "turn": 4
+          },
+          {
+            "quote": "I've also been sleeping more, but it doesn't seem to help much with the fatigue. And sometimes, when I do wake up, I still feel groggy and sluggish.",
+            "turn": 4
+          }
+        ],
+        "reasoning": "The patient describes significant impact on daily functioning - difficulty with simple tasks like cooking and errands, increased sleep without improvement, and persistent grogginess. This aligns with an 8 on the scale, where a major role is lost or substantially reduced.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "The tiredness has been there for a while now.",
+            "turn": 2
+          },
+          {
+            "quote": "The neck swelling is newer — I noticed it about two weeks ago and it hasn't gone away.",
+            "turn": 2
+          },
+          {
+            "quote": "The fatigue seems to have coincided with the onset of the symptoms, so maybe they're connected somehow.",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient describes fatigue as having been present for a while and worsening recently, while the neck swelling is new (2 weeks) and stable. They don't have a clear sense of how long either will last. This suggests uncertainty about duration, which aligns with a 6 on the scale where they genuinely hold both endings open and plan for neither.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "As for control, it feels like everything's out of my hands right now.",
+            "turn": 9
+          },
+          {
+            "quote": "The fatigue and swelling are just there, and no matter how hard I try, I can't seem to shake them off.",
+            "turn": 9
+          },
+          {
+            "quote": "I've been trying to get more sleep and rest as much as I can, but it doesn't seem to be helping much.",
+            "turn": 10
+          }
+        ],
+        "reasoning": "The patient expresses a strong sense of helplessness, feeling that their actions have little impact on their symptoms despite trying rest and sleep. This aligns with a 2 on the scale where they take no action of their own and attribute outcomes to external factors.",
+        "score": 2.0,
+        "confidence": 0.8
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "I'm definitely open to hearing any options you might have, but I'm also a bit hesitant since I've never been through this kind of thing before.",
+            "turn": 12
+          },
+          {
+            "quote": "I guess I just want to know what's causing these symptoms so I can better understand what's happening to me.",
+            "turn": 12
+          }
+        ],
+        "reasoning": "The patient is open to treatment but hesitant due to lack of experience. They want to understand the cause before committing to treatment, suggesting uncertainty about treatment effectiveness.",
+        "score": 4.0,
+        "confidence": 0.6
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "It's hard to describe, but there's something about this situation that feels different.",
+            "turn": 13
+          },
+          {
+            "quote": "Maybe it's because the symptoms are more diffuse and harder to pinpoint.",
+            "turn": 13
+          }
+        ],
+        "reasoning": "The patient struggles to identify what's happening, describing the situation as 'different' and the symptoms as 'diffuse and hard to pinpoint.' This suggests they don't have a clear sense of their illness identity.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "I'm worried about some swelling I've noticed in my neck.",
+            "turn": 1
+          },
+          {
+            "quote": "It's making everything harder, doctor.",
+            "turn": 4
+          },
+          {
+            "quote": "It's frustrating not to feel in control of my own body.",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient expresses worry about the neck swelling and frustration about not feeling in control. The symptoms are affecting their daily life, suggesting moderate concern.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I'm not sure what could be causing it, and I don't want to jump to any conclusions without talking to a professional like yourself.",
+            "turn": 11
+          },
+          {
+            "quote": "Maybe it's because the symptoms are more diffuse and harder to pinpoint.",
+            "turn": 13
+          }
+        ],
+        "reasoning": "The patient hasn't tried to find an explanation on their own, prefers professional guidance, and describes the symptoms as 'diffuse and hard to pinpoint.' This suggests they lack a coherent understanding of their condition.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "I've been feeling pretty stressed lately.",
+            "turn": 7
+          },
+          {
+            "quote": "It's hard to focus on anything else right now.",
+            "turn": 7
+          },
+          {
+            "quote": "It's frustrating not to feel in control of my own body.",
+            "turn": 9
+          },
+          {
+            "quote": "I appreciate it more than I can say.",
+            "turn": 15
+          }
+        ],
+        "reasoning": "The patient describes feeling stressed, frustrated, and overwhelmed. The symptoms are affecting their ability to focus and their emotional state, suggesting a moderate emotional response.",
+        "score": 6.0,
+        "confidence": 0.7
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [],
+        "reasoning": "The patient has not been offered specific treatment options yet, so there is no evidence about their beliefs about the necessity of their own prescribed medication.",
+        "score": null,
+        "confidence": 0.0
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "I'm also a bit hesitant since I've never been through this kind of thing before.",
+            "turn": 12
+          }
+        ],
+        "reasoning": "The patient expresses hesitation about treatment due to lack of experience, but doesn't articulate specific concerns about side effects or harm. This aligns with a 2 on the scale where they raise no concerns when prompted.",
+        "score": 2.0,
+        "confidence": 0.6
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [],
+        "reasoning": "The patient has not expressed any general views about medicines as a class, so there is no evidence about their beliefs about the general harm of medicines.",
+        "score": null,
+        "confidence": 0.0
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "The patient has not expressed any views about doctors prescribing too readily, so there is no evidence about their beliefs about the general overuse of prescribing.",
+        "score": null,
+        "confidence": 0.0
+      }
+    },
+    "causes": [
+      "stress at work",
+      "lifestyle factors"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "I do wonder if my lifestyle is contributing to the stress.",
+        "turn": 9
+      },
+      {
+        "quote": "The stress seems to have coincided with the onset of the symptoms, so maybe they're connected somehow.",
+        "turn": 8
+      }
+    ]
+  }
+}

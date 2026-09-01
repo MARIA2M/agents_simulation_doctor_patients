@@ -1,0 +1,251 @@
+{
+  "patient_id": "HIV-004",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "HIV-004",
+    "clinical_summary": "Patient diagnosed with HIV a few months ago, started Biktarvy four weeks ago. HIV symptoms have mostly resolved. Reports feeling overwhelmed, mild anxiety, and difficulty sleeping, which they attribute to knowing they have HIV. Experiences mild morning nausea from medication but it doesn't affect appetite or adherence. Adherence is excellent — takes medication every day as instructed. No recent blood work yet; expects undetectable viral load within 3-6 months. Views HIV as a lifelong condition to manage, with early treatment offering best long-term prognosis. Takes personal responsibility for health by following treatment plan and maintaining healthy lifestyle. Understands treatment goal (undetectable viral load) and what to monitor (viral load, CD4 count), but doesn't understand how medication works biologically. Trusts healthcare team to monitor and adjust treatment.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "I've been feeling pretty overwhelmed lately, and my symptoms from the HIV infection have been on my mind a lot",
+            "turn": 1
+          },
+          {
+            "quote": "I've been feeling this mild anxiety and difficulty sleeping lately. It's probably related to the whole situation, just knowing that I have HIV",
+            "turn": 2
+          },
+          {
+            "quote": "I do have concerns about how it might affect me in the future — both physically and emotionally",
+            "turn": 6
+          }
+        ],
+        "reasoning": "Patient reports feeling overwhelmed, anxiety, and difficulty sleeping. Has concerns about future physical and emotional effects. However, hasn't reported any major role loss or functional impairment. Symptoms are described as mild and they're still managing daily life.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "My physician said that undetectable viral load is expected within 3-6 months after starting Biktarvy, so I'm still in the early stages of treatment",
+            "turn": 3
+          },
+          {
+            "quote": "I believe my illness is going to be something I'll need to manage for the rest of my life",
+            "turn": 6
+          }
+        ],
+        "reasoning": "Patient has clear understanding that HIV is a lifelong condition to manage. Planning for long term, not a short-term fix. Arrangements are built around it continuing.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "my focus is on taking care of myself by following my treatment plan and doing what I can to maintain a healthy lifestyle",
+            "turn": 6
+          },
+          {
+            "quote": "I think taking my medication every day is crucial in managing my condition and protecting my health",
+            "turn": 7
+          },
+          {
+            "quote": "I understand that it's necessary if I want to keep living the healthiest life possible",
+            "turn": 7
+          }
+        ],
+        "reasoning": "Patient takes personal responsibility for health by following treatment plan and maintaining healthy lifestyle. Understands medication is crucial and necessary. Actively managing their condition.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "My physician said that undetectable viral load is expected within 3-6 months after starting Biktarvy",
+            "turn": 3
+          },
+          {
+            "quote": "The physician explained that Biktarvy is a single tablet regimen and it's one of the newer medications that can help suppress the virus to undetectable levels",
+            "turn": 4
+          },
+          {
+            "quote": "A successful outcome for me would be getting my viral load down to undetectable levels and maintaining that status",
+            "turn": 9
+          },
+          {
+            "quote": "I believe the regular blood tests should give us some indication of whether this is happening or not",
+            "turn": 9
+          },
+          {
+            "quote": "As long as my CD4 count remains robust, and my viral load continues to drop, I'll consider things to be going well",
+            "turn": 9
+          }
+        ],
+        "reasoning": "Patient has clear understanding of what treatment is supposed to do (suppress virus to undetectable levels). Has specific goal and knows what to monitor (viral load, CD4 count). Expects treatment to work within specific timeframe.",
+        "score": 8.0,
+        "confidence": 0.7
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "my symptoms from the HIV infection have been on my mind a lot",
+            "turn": 1
+          },
+          {
+            "quote": "I've been feeling this mild anxiety and difficulty sleeping lately. It's probably related to the whole situation, just knowing that I have HIV",
+            "turn": 2
+          }
+        ],
+        "reasoning": "Patient identifies condition as HIV infection. Reports symptoms (anxiety, difficulty sleeping) attributed to illness. Symptoms are mild and intermittent, not daily or intrusive.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "I've been feeling pretty overwhelmed lately",
+            "turn": 1
+          },
+          {
+            "quote": "I've been feeling this mild anxiety and difficulty sleeping lately",
+            "turn": 2
+          },
+          {
+            "quote": "I do have concerns about how it might affect me in the future — both physically and emotionally",
+            "turn": 6
+          }
+        ],
+        "reasoning": "Patient reports feeling overwhelmed and experiencing anxiety and difficulty sleeping. Has explicit concerns about future physical and emotional effects. Worry is tied to knowledge of having HIV and what it might mean long-term.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "My physician said that undetectable viral load is expected within 3-6 months after starting Biktarvy",
+            "turn": 3
+          },
+          {
+            "quote": "The physician explained that Biktarvy is a single tablet regimen and it's one of the newer medications that can help suppress the virus to undetectable levels",
+            "turn": 4
+          },
+          {
+            "quote": "While I don't fully understand how it works, I trust my doctor and their expertise in prescribing this medication for me",
+            "turn": 4
+          },
+          {
+            "quote": "A successful outcome for me would be getting my viral load down to undetectable levels and maintaining that status",
+            "turn": 9
+          },
+          {
+            "quote": "I believe the regular blood tests should give us some indication of whether this is happening or not",
+            "turn": 9
+          },
+          {
+            "quote": "As long as my CD4 count remains robust, and my viral load continues to drop, I'll consider things to be going well",
+            "turn": 9
+          }
+        ],
+        "reasoning": "Patient understands treatment goal (undetectable viral load) and what to monitor (viral load, CD4 count). Knows what successful outcome looks like. However, doesn't understand how medication works biologically. Relies on trusting doctor's expertise.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "I've been feeling pretty overwhelmed lately",
+            "turn": 1
+          },
+          {
+            "quote": "I've been feeling this mild anxiety and difficulty sleeping lately",
+            "turn": 2
+          },
+          {
+            "quote": "It's probably related to the whole situation, just knowing that I have HIV",
+            "turn": 2
+          },
+          {
+            "quote": "It's difficult to think about this without getting overwhelmed",
+            "turn": 6
+          }
+        ],
+        "reasoning": "Patient reports feeling overwhelmed and experiencing anxiety and difficulty sleeping. These emotional responses are tied to knowledge of having HIV. Emotion is recurrent and affects mood and sleep.",
+        "score": 6.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "I think taking my medication every day is crucial in managing my condition and protecting my health",
+            "turn": 7
+          },
+          {
+            "quote": "I understand that it's necessary if I want to keep living the healthiest life possible",
+            "turn": 7
+          },
+          {
+            "quote": "I must admit I have a vague unease about taking so many pills every day. But I know it's necessary and beneficial to my health",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient views daily medication as crucial and necessary for managing condition and protecting health. Understands it's necessary for living healthiest life possible. Acknowledges it's necessary and beneficial, despite some unease.",
+        "score": 4.5,
+        "confidence": 0.7
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "As for long-term concerns, I do have some worries about potential side effects or any changes in how my body reacts to the medication over time",
+            "turn": 7
+          },
+          {
+            "quote": "I must admit I have a vague unease about taking so many pills every day",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient has specific concerns about potential side effects and how body might react to medication over time. Also has vague unease about taking many pills daily. However, these concerns haven't led to any behavioral changes (still taking medication as prescribed).",
+        "score": 3.0,
+        "confidence": 0.7
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "I must admit I have a vague unease about taking so many pills every day",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient expresses vague unease about taking many pills daily, but this is about specific medication, not medicines in general. Doesn't express strong beliefs that medicines as a class are inherently harmful. Unease is mild and doesn't lead to avoidance.",
+        "score": 2.0,
+        "confidence": 0.8
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [
+          {
+            "quote": "I must admit I have a vague unease about taking so many pills every day",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient expresses unease about taking many pills daily, but this is about specific medication, not about doctors prescribing too readily. Trusts that doctors prescribe appropriately based on individual patient situations. Unease is mild and doesn't lead to distrust of prescribing practices.",
+        "score": 2.0,
+        "confidence": 0.8
+      }
+    },
+    "causes": [],
+    "causes_evidence": []
+  }
+}

@@ -1,0 +1,238 @@
+{
+  "patient_id": "HIV-005",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "HIV-005",
+    "clinical_summary": "Patient diagnosed with HIV 3 years ago, currently on Triumeq daily but missing doses 2-3 times per week and taking drug holidays. Viral load is detectable at 340 copies/mL with CD4 count of 410 cells/uL. Reports fatigue and terrible headaches lasting the whole day after taking medication. Expresses uncertainty about whether medication is actually working and has concerns about future health complications.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "It's impacting my work and personal life",
+            "turn": 1
+          },
+          {
+            "quote": "The fatigue has been building up over a few months",
+            "turn": 2
+          },
+          {
+            "quote": "terrible headaches after taking my medication, and they last the whole day",
+            "turn": 4
+          },
+          {
+            "quote": "I'm scared about what might happen if my viral load keeps creeping up. I worry that it might lead to more serious health problems down the line",
+            "turn": 7
+          }
+        ],
+        "reasoning": "Patient reports fatigue impacting work and personal life, daily headaches lasting the whole day, and expresses fear about serious health complications. This shows significant impact on daily functioning and role performance.",
+        "score": 7.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "The fatigue has been building up over a few months",
+            "turn": 2
+          },
+          {
+            "quote": "I guess I see this as a long-term issue that will require ongoing effort and attention",
+            "turn": 7
+          }
+        ],
+        "reasoning": "Patient describes symptoms building over months and explicitly states they view HIV as a long-term issue requiring ongoing effort.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I also know that I have some control over it — if I can improve my adherence, maybe I can get those numbers back under control too",
+            "turn": 7
+          }
+        ],
+        "reasoning": "Patient explicitly states they have control and believe improved adherence could bring viral load back under control.",
+        "score": 8.0,
+        "confidence": 0.85
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "My last viral load test showed 340 copies/mL, which I know is detectable but low. The doctor said it's due to inconsistent adherence to my medication.",
+            "turn": 3
+          },
+          {
+            "quote": "As for my viral load result, I'm worried because it's not undetectable like it was before. I know that adherence is important in keeping the virus under control, so this result has made me more concerned about how well my treatment is working overall.",
+            "turn": 5
+          },
+          {
+            "quote": "I'm not sure anymore if the medication is really controlling my virus... But even before I started missing doses, I wasn't entirely convinced that the medicine was doing much of anything.",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient knows their viral load is detectable due to inconsistent adherence but expresses uncertainty about whether the medication is actually controlling the virus. They weren't convinced even before missing doses.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "I think it might be related to my HIV infection",
+            "turn": 1
+          },
+          {
+            "quote": "I was diagnosed with HIV about three years ago",
+            "turn": 3
+          },
+          {
+            "quote": "terrible headaches after taking my medication",
+            "turn": 4
+          }
+        ],
+        "reasoning": "Patient identifies as having HIV and reports symptoms (fatigue, headaches) that they're unsure are related to HIV. They have occasional headaches but describe them as 'not too severe.'",
+        "score": 4.0,
+        "confidence": 0.75
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "I'm worried about it",
+            "turn": 1
+          },
+          {
+            "quote": "As for my viral load result, I'm worried because it's not undetectable like it was before",
+            "turn": 5
+          },
+          {
+            "quote": "Honestly, doctor, I'm scared about what might happen if my viral load keeps creeping up. I worry that it might lead to more serious health problems down the line",
+            "turn": 7
+          }
+        ],
+        "reasoning": "Patient expresses worry about their viral load result, fear about future health problems, and general concern about the illness.",
+        "score": 7.0,
+        "confidence": 0.85
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I think it might be related to my HIV infection, but I'm not sure what to make of it all",
+            "turn": 1
+          },
+          {
+            "quote": "I'm not sure what's causing my fatigue and headaches. Part of me thinks they must be connected to the HIV in some way, but another part wonders if it might just be general stress from work and life. It's hard to know for sure without more information.",
+            "turn": 6
+          },
+          {
+            "quote": "But honestly, doctor, there's still a lot that confuses me or feels unclear. I'm always happy to learn more if you have time to explain things further.",
+            "turn": 9
+          }
+        ],
+        "reasoning": "Patient expresses confusion, uncertainty about what's happening, and acknowledges gaps in their understanding. They know basic information but feel unclear about the illness.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "I'm worried about it",
+            "turn": 1
+          },
+          {
+            "quote": "Honestly, doctor, I'm scared about what might happen if my viral load keeps creeping up",
+            "turn": 7
+          },
+          {
+            "quote": "I was pretty naive at the time, so I didn't ask many questions",
+            "turn": 9
+          }
+        ],
+        "reasoning": "Patient expresses worry and fear about their condition. They also express feeling naive about past decisions.",
+        "score": 6.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "But sometimes when I feel well, I take a break from the medicine — maybe a day or two off",
+            "turn": 2
+          },
+          {
+            "quote": "Sometimes, I even take drug holidays of several days when I feel well",
+            "turn": 4
+          },
+          {
+            "quote": "I'm not sure anymore if the medication is really controlling my virus... But even before I started missing doses, I wasn't entirely convinced that the medicine was doing much of anything.",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient takes breaks from medication and drug holidays, and expresses uncertainty about whether the medication is necessary or effective.",
+        "score": 2.0,
+        "confidence": 0.85
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "Sometimes, I get these terrible headaches after taking my medication, and they last the whole day. It's like a constant pressure around my forehead. But I don't know if it's because of the medication or just stress from work.",
+            "turn": 4
+          },
+          {
+            "quote": "As for my viral load result, I'm worried because it's not undetectable like it was before",
+            "turn": 5
+          },
+          {
+            "quote": "I guess I feel somewhat hesitant about it all and wonder if there are other factors at play",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient experiences side effects (headaches) and expresses worry about the viral load result and whether the medication is working. They're hesitant about the medication.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "Overall, I trust your judgment, but I can't help feeling a little cautious about the role of medicines as a whole.",
+            "turn": 10
+          }
+        ],
+        "reasoning": "Patient expresses general caution about medicines as a whole, though they trust their specific doctor.",
+        "score": 3.0,
+        "confidence": 0.75
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [
+          {
+            "quote": "Sometimes I wonder if doctors might be a bit quick to prescribe medication — especially when it comes to HIV.",
+            "turn": 10
+          }
+        ],
+        "reasoning": "Patient occasionally wonders if doctors are quick to prescribe medication, particularly for HIV.",
+        "score": 3.0,
+        "confidence": 0.7
+      }
+    },
+    "causes": [
+      "previous partner who didn't disclose his status"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "I think I got HIV from a previous partner who didn't disclose his status. I was pretty naive at the time, so I didn't ask many questions.",
+        "turn": 9
+      }
+    ]
+  }
+}

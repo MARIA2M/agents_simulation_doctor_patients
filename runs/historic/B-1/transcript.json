@@ -1,0 +1,35 @@
+{
+  "patient_id": "CLL-001",
+  "turns": 1,
+  "stop_reason": "doctor",
+  "conversation": [
+    {
+      "role": "doctor",
+      "content": "So, let's talk about your chronic condition. Can you tell me a little bit about how it affects your daily life?",
+      "turn": 1
+    },
+    {
+      "role": "patient",
+      "content": "Sure, my chronic illness has really impacted my life in various ways. It's made work more challenging since I often have to take breaks or can't put in the same hours as others. Relationships with friends and family are strained too, because I'm often tired and can't do activities like we used to. Even leisure activities, like going out for a movie or enjoying hobbies, become difficult when fatigue hits.",
+      "turn": 1
+    }
+  ],
+  "events": [],
+  "usage": [
+    {
+      "role": "doctor",
+      "prompt_tokens": 692,
+      "eval_tokens": 43
+    },
+    {
+      "role": "patient",
+      "prompt_tokens": 717,
+      "eval_tokens": 83
+    },
+    {
+      "role": "doctor",
+      "prompt_tokens": 715,
+      "eval_tokens": 58
+    }
+  ]
+}

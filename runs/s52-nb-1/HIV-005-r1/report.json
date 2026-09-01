@@ -1,0 +1,270 @@
+{
+  "patient_id": "HIV-005",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "HIV-005",
+    "clinical_summary": "Patient with HIV in chronic stage taking Triumeq (abacavir/dolutegravir/lamivudine). Reports low energy, frequent headaches, and fatigue attributed to work stress. Viral load detectable at 340 copies/mL with CD4 count of 410 cells/uL. Misses doses 2-3 times per week and takes drug holidays when feeling well. Has mild side effects (stomach discomfort, headaches) that make adherence challenging. Has basic understanding of undetectable viral load but some confusion on specifics. Expresses concerns about long-term side effects and whether doctors prescribe too readily. Willing to work on improving adherence with structured routine.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "I've been feeling quite run down lately",
+            "turn": 1
+          },
+          {
+            "quote": "My energy levels have been low",
+            "turn": 1
+          },
+          {
+            "quote": "I've had some headaches too",
+            "turn": 1
+          },
+          {
+            "quote": "The fatigue I feel is mostly attributed to my work stress rather than the HIV itself",
+            "turn": 3
+          }
+        ],
+        "reasoning": "Patient reports low energy, headaches, and fatigue, but attributes fatigue primarily to work stress rather than HIV. Does not describe significant functional impairment or loss of roles. Still working and managing.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "I've been diagnosed with Human Immunodeficiency Virus (HIV) infection, which is in its chronic stage",
+            "turn": 2
+          },
+          {
+            "quote": "I know this inconsistency is not great for managing my chronic illness",
+            "turn": 5
+          },
+          {
+            "quote": "I'm looking forward to our next appointment and continuing our journey toward better health together",
+            "turn": 10
+          }
+        ],
+        "reasoning": "Patient frames HIV as a chronic condition requiring ongoing management. Acknowledges chronic nature and plans for ongoing care. Does not express expectation of cure or short-term resolution.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I try to stay positive and focused on maintaining my health through medication adherence and regular check-ups",
+            "turn": 2
+          },
+          {
+            "quote": "I try to be consistent with my medication, but I have a hard time remembering sometimes",
+            "turn": 5
+          },
+          {
+            "quote": "I know this inconsistency is not great for managing my chronic illness, but it's a struggle to stay on track",
+            "turn": 5
+          },
+          {
+            "quote": "I'll give it a shot with the help of a more structured daily routine",
+            "turn": 9
+          }
+        ],
+        "reasoning": "Patient takes some action (medication adherence, regular check-ups) but acknowledges difficulty and lack of control over adherence. Struggles to stay on track and is willing to try structured routine. Suggests limited personal control.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "The physician has been reminding me about the importance of adherence to keep my viral load undetectable",
+            "turn": 4
+          },
+          {
+            "quote": "From what I've gathered, keeping my viral load undetectable is crucial in managing my chronic illness and preventing any potential complications down the line",
+            "turn": 7
+          },
+          {
+            "quote": "I worry that my medication might have long-term side effects",
+            "turn": 8
+          },
+          {
+            "quote": "Sometimes, I wonder if doctors prescribe medications too quickly and if there's a better way to manage this chronic illness",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient understands treatment can help (undetectable viral load is crucial) but expresses doubts about whether doctors prescribe too quickly and if there's a better way to manage. Has concerns about long-term effects. Suggests moderate belief in treatment efficacy with some uncertainty.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "I've been diagnosed with Human Immunodeficiency Virus (HIV) infection, which is in its chronic stage",
+            "turn": 2
+          },
+          {
+            "quote": "I've had occasional headaches for as long as I can remember, but lately they seem to be more frequent",
+            "turn": 3
+          },
+          {
+            "quote": "The fatigue I feel is mostly attributed to my work stress rather than the HIV itself",
+            "turn": 3
+          },
+          {
+            "quote": "I've had some headaches too",
+            "turn": 1
+          }
+        ],
+        "reasoning": "Patient identifies as having HIV. Reports headaches and fatigue, but attributes fatigue primarily to work stress rather than HIV. Headaches described as occasional and not limiting. Suggests moderate symptom burden but not severe.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "I'm concerned about my chronic illness and want to make sure everything's under control",
+            "turn": 1
+          },
+          {
+            "quote": "I worry that my medication might have long-term side effects or that there could be some hidden risks I'm not aware of",
+            "turn": 8
+          },
+          {
+            "quote": "Sometimes, I wonder if doctors prescribe medications too quickly and if there's a better way to manage this chronic illness",
+            "turn": 8
+          },
+          {
+            "quote": "it's hard not to dwell on what-ifs from time to time",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient expresses concern about illness and treatment. Worries about long-term side effects, hidden risks, and whether doctors prescribe too quickly. Acknowledges dwelling on 'what-ifs.' Suggests moderate concern that affects thinking.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "To be honest, I have a basic understanding of what undetectable viral load means for my health, but there's still quite a bit of confusion on the specifics",
+            "turn": 7
+          },
+          {
+            "quote": "From what I've gathered, keeping my viral load undetectable is crucial in managing my chronic illness and preventing any potential complications down the line",
+            "turn": 7
+          }
+        ],
+        "reasoning": "Patient has basic understanding of key concepts but explicitly states confusion on specifics. Understands importance of undetectable viral load but doesn't fully grasp details. Suggests moderate but incomplete understanding.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "I try to stay positive and focused on maintaining my health",
+            "turn": 2
+          },
+          {
+            "quote": "I appreciate your concern, doctor",
+            "turn": 9
+          },
+          {
+            "quote": "I'm looking forward to our next appointment and continuing our journey toward better health together",
+            "turn": 10
+          }
+        ],
+        "reasoning": "Patient describes trying to stay positive and focused. Expresses appreciation and looks forward to future appointments. Does not describe significant emotional distress or avoidance. Suggests moderate emotional response.",
+        "score": 6.0,
+        "confidence": 0.7
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "I try to stay positive and focused on maintaining my health through medication adherence and regular check-ups",
+            "turn": 2
+          },
+          {
+            "quote": "I know this inconsistency is not great for managing my chronic illness",
+            "turn": 5
+          },
+          {
+            "quote": "I'll give it a shot with the help of a more structured daily routine",
+            "turn": 9
+          },
+          {
+            "quote": "It's important for me to do what I can to manage this chronic illness effectively",
+            "turn": 9
+          }
+        ],
+        "reasoning": "Patient acknowledges importance of medication for managing illness and is willing to work on adherence. However, admits to missing doses and taking drug holidays, suggesting they don't fully accept necessity. Moderate belief in necessity.",
+        "score": 3.0,
+        "confidence": 0.7
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "I worry that my medication might have long-term side effects or that there could be some hidden risks I'm not aware of",
+            "turn": 8
+          },
+          {
+            "quote": "I've noticed some mild side effects from Triumeq, such as occasional stomach discomfort and headaches",
+            "turn": 6
+          },
+          {
+            "quote": "These haven't been severe enough for me to stop taking the medication altogether, but they do make it a bit more challenging to remember my daily dose or keep up with my schedule",
+            "turn": 6
+          }
+        ],
+        "reasoning": "Patient expresses concerns about long-term side effects and hidden risks. Experiences mild side effects that make adherence challenging. Suggests moderate concerns that have affected behavior (making it harder to remember doses).",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "I worry that my medication might have long-term side effects or that there could be some hidden risks I'm not aware of",
+            "turn": 8
+          },
+          {
+            "quote": "Sometimes, I wonder if doctors prescribe medications too quickly and if there's a better way to manage this chronic illness",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient expresses concern about long-term side effects and hidden risks, suggesting some belief that medications may carry potential harm. However, doesn't express general distrust of medicines as a class or avoidance of medication. Mild general harm concern.",
+        "score": 3.0,
+        "confidence": 0.7
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [
+          {
+            "quote": "Sometimes, I wonder if doctors prescribe medications too quickly and if there's a better way to manage this chronic illness",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient occasionally wonders if doctors prescribe too quickly and if there's a better way to manage illness. Suggests mild skepticism about prescribing practices, though also trusts doctor's judgment.",
+        "score": 3.0,
+        "confidence": 0.7
+      }
+    },
+    "causes": [
+      "work stress"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "The fatigue I feel is mostly attributed to my work stress rather than the HIV itself",
+        "turn": 3
+      }
+    ]
+  }
+}

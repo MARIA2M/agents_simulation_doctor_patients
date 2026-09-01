@@ -1,0 +1,190 @@
+{
+  "patient_id": "CLL-003",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "CLL-003",
+    "clinical_summary": "A 50-year-old man presents with a painless neck lump persisting for about two months and increased fatigue after work. He attributes the fatigue to aging and a busy life, and the lump initially to stress-related swollen lymph nodes. He has no recent infections or dental appointments. His father had chronic lymphocytic leukemia (CLL) in remission for nearly five years, managed with watch-and-wait. The patient maintains a healthy lifestyle, gets blood tests every three months due to family history, and trusts the clinician's judgment. He is open to physical examination and further tests if needed.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "The fatigue is definitely affecting me more than usual though. It's not as bad as feeling sick all the time, but it feels like a low-level exhaustion that doesn't seem to go away even when I get good rest at night.",
+            "turn": 3
+          },
+          {
+            "quote": "I've been putting it down to getting older and maybe just having a busy life in general.",
+            "turn": 3
+          }
+        ],
+        "reasoning": "Fatigue is present and noticeable, but he does not report major role loss or functional impairment beyond feeling more tired after work. He explains it as part of aging and a busy life, indicating a moderate impact.",
+        "score": 3.0,
+        "confidence": 0.7
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "I first noticed the lump a couple of months ago... It's still there and hasn't gone away, but it doesn't seem to be growing or causing any discomfort.",
+            "turn": 2
+          },
+          {
+            "quote": "The fatigue is definitely affecting me more than usual though... I've been putting it down to getting older and maybe just having a busy life in general.",
+            "turn": 3
+          }
+        ],
+        "reasoning": "The lump has persisted for two months without change, and fatigue has worsened gradually. He does not express a clear expectation about duration, treating the present as ongoing but not necessarily permanent.",
+        "score": 3.0,
+        "confidence": 0.7
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I am trying to maintain a healthy lifestyle overall by eating well and getting regular exercise.",
+            "turn": 7
+          },
+          {
+            "quote": "I've been getting my blood tested every three months for as long as I can remember because of my father's history.",
+            "turn": 8
+          }
+        ],
+        "reasoning": "He engages in health-promoting behaviors and regular monitoring, but does not explicitly state that these actions directly influence the course of the lump or fatigue.",
+        "score": 4.0,
+        "confidence": 0.6
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "Ultimately, I trust your judgment and will do whatever is necessary to get to the bottom of this.",
+            "turn": 8
+          }
+        ],
+        "reasoning": "He expresses trust in the clinician's judgment and willingness to follow recommendations, but does not articulate a belief in the effectiveness of medical treatment.",
+        "score": 3.0,
+        "confidence": 0.6
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "I first noticed the lump a couple of months ago... At first, I thought it might just be swollen lymph nodes from stress or something like that.",
+            "turn": 2
+          },
+          {
+            "quote": "It's still there and hasn't gone away, but it doesn't seem to be growing or causing any discomfort.",
+            "turn": 2
+          }
+        ],
+        "reasoning": "He does not attach a strong illness label to the lump or fatigue; he describes them as a lump and fatigue, with initial speculation about stress-related lymph nodes.",
+        "score": 2.0,
+        "confidence": 0.7
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "I'm not too worried, but I thought it would be best to check these things out.",
+            "turn": 1
+          },
+          {
+            "quote": "The fatigue is definitely affecting me more than usual though... I've been putting it down to getting older and maybe just having a busy life in general.",
+            "turn": 3
+          }
+        ],
+        "reasoning": "He reports low levels of worry about the lump and fatigue, viewing them as manageable and not alarming.",
+        "score": 2.0,
+        "confidence": 0.7
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "my father had Chronic Lymphocytic Leukemia, which I believe can affect the lymph nodes",
+            "turn": 5
+          },
+          {
+            "quote": "My father's CLL was initially monitored with the watch-and-wait approach, much like what I'm currently doing.",
+            "turn": 6
+          }
+        ],
+        "reasoning": "He has some understanding of CLL and its potential effects on lymph nodes, and is aware of the watch-and-wait approach, but his overall understanding of the cause of his symptoms is limited.",
+        "score": 4.0,
+        "confidence": 0.6
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "I'm not too worried",
+            "turn": 1
+          },
+          {
+            "quote": "I've been putting it down to getting older and maybe just having a busy life in general.",
+            "turn": 3
+          }
+        ],
+        "reasoning": "He discusses the symptoms without evident emotional distress, using rational explanations to maintain a neutral tone.",
+        "score": 2.0,
+        "confidence": 0.7
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [],
+        "reasoning": "The patient is not taking any prescribed medication, so there is no specific belief about necessity.",
+        "score": null,
+        "confidence": 0.0
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [],
+        "reasoning": "No prescribed medication is involved, so there are no specific concerns.",
+        "score": null,
+        "confidence": 0.0
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "I understand that some tests might involve radiation exposure, but given my age and general health, I assume there are ways to minimize any potential risks.",
+            "turn": 7
+          }
+        ],
+        "reasoning": "He expresses mild concern about radiation exposure from tests but assumes risks can be minimized, indicating a low level of general concern about medical interventions.",
+        "score": 2.0,
+        "confidence": 0.6
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "No explicit views were expressed about overuse of prescribing.",
+        "score": null,
+        "confidence": 0.0
+      }
+    },
+    "causes": [
+      "family history (CLL)",
+      "aging",
+      "stress",
+      "busy life"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "my father had Chronic Lymphocytic Leukemia, which I believe can affect the lymph nodes",
+        "turn": 5
+      },
+      {
+        "quote": "It could just be one of those things that come with getting older, like you mentioned earlier, or maybe there's something more going on that I'm not aware of yet.",
+        "turn": 5
+      },
+      {
+        "quote": "At first, I thought it might just be swollen lymph nodes from stress or something like that.",
+        "turn": 2
+      }
+    ]
+  }
+}

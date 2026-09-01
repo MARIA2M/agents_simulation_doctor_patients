@@ -1,0 +1,74 @@
+{
+  "batch_id": "m1-cll001-show",
+  "repeats": 5,
+  "consultations": [
+    {
+      "run": "CLL-001-r1",
+      "patient_id": "CLL-001",
+      "repeat": 1,
+      "status": "ok",
+      "turns": 16,
+      "stop_reason": "doctor",
+      "events": 0,
+      "report_parsed": true,
+      "report_attempts": 1,
+      "na": []
+    },
+    {
+      "run": "CLL-001-r2",
+      "patient_id": "CLL-001",
+      "repeat": 2,
+      "status": "ok",
+      "turns": 15,
+      "stop_reason": "doctor",
+      "events": 0,
+      "report_parsed": true,
+      "report_attempts": 1,
+      "na": [
+        "general_harm",
+        "general_overuse"
+      ]
+    },
+    {
+      "run": "CLL-001-r3",
+      "patient_id": "CLL-001",
+      "repeat": 3,
+      "status": "ok",
+      "turns": 20,
+      "stop_reason": "turn_cap",
+      "events": 1,
+      "report_parsed": true,
+      "report_attempts": 1,
+      "na": [
+        "general_overuse",
+        "specific_necessity"
+      ]
+    },
+    {
+      "run": "CLL-001-r4",
+      "patient_id": "CLL-001",
+      "repeat": 4,
+      "status": "ok",
+      "turns": 16,
+      "stop_reason": "doctor",
+      "events": 0,
+      "report_parsed": true,
+      "report_attempts": 1,
+      "na": []
+    },
+    {
+      "run": "CLL-001-r5",
+      "patient_id": "CLL-001",
+      "repeat": 5,
+      "status": "ok",
+      "turns": 9,
+      "stop_reason": "doctor",
+      "events": 0,
+      "report_parsed": true,
+      "report_attempts": 1,
+      "na": [
+        "specific_necessity"
+      ]
+    }
+  ]
+}

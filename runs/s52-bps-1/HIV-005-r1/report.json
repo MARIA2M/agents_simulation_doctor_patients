@@ -1,0 +1,362 @@
+{
+  "patient_id": "HIV-005",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "HIV-005",
+    "clinical_summary": "Patient with HIV presents with elevated viral load after missing doses due to work stress. Experiences fatigue and persistent headaches, which they're uncertain whether are medication-related. Has mixed feelings about medication - understands its necessity but is concerned about side effects and the emotional weight of daily medication. Manages stress with meditation and exercise but finds it challenging. Realistic that HIV will always be part of life but hopes for a 'fairly normal' life with good management.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "Overall, I feel like my life is really disrupted by this illness",
+            "turn": 1
+          },
+          {
+            "quote": "There are times when I feel like I'm not fully living up to my potential because of the way the illness affects me",
+            "turn": 7
+          },
+          {
+            "quote": "Sometimes, when I'm feeling really fatigued or dealing with symptoms, I'll push myself to do things anyway, but then I end up regretting it later because I don't have as much energy as I'd like",
+            "turn": 7
+          },
+          {
+            "quote": "there are definitely moments when the impact of this illness feels overwhelming",
+            "turn": 9
+          }
+        ],
+        "reasoning": "Patient explicitly states their life is 'really disrupted' and they feel they're 'not fully living up to my potential.' They experience fatigue that affects their ability to push through tasks and regret it later. The impact is described as 'overwhelming' at times. This clearly goes beyond minor adaptation - they've had to scale back or give up certain activities and their self-perception is affected.",
+        "score": 8.0,
+        "confidence": 0.85
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "It's been hard coming to terms with the fact that I have this illness for life",
+            "turn": 7
+          },
+          {
+            "quote": "I think it's realistic for me to expect that HIV will always be a part of my life in some way",
+            "turn": 9
+          },
+          {
+            "quote": "I'm hopeful that with good care and management, I can keep living a fairly normal life",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient acknowledges HIV is 'for life' and expects it to 'always be a part of my life in some way.' They're realistic about the chronic nature but still hold hope for a 'fairly normal life' with management. They're uncertain about the future trajectory but planning on the assumption it continues.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I think I have some control over my health, doctor, but it's definitely not as simple as just taking my medication",
+            "turn": 6
+          },
+          {
+            "quote": "I try to eat well and exercise regularly when I can, which I know can help with managing stress and fatigue",
+            "turn": 6
+          },
+          {
+            "quote": "But sometimes even those things feel like they're not enough",
+            "turn": 6
+          },
+          {
+            "quote": "It can be hard to stay motivated when the illness is always there in the background, but I keep hoping that there might be more I can do to take control of my health overall",
+            "turn": 6
+          },
+          {
+            "quote": "staying engaged in self-care practices like stress management, exercise, and healthy eating can help me feel more in control overall",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient actively engages in self-care practices (nutrition, exercise, stress management) and believes these contribute to their health. However, they acknowledge that these efforts are 'not enough' and that the illness is 'always there in the background.' They're actively trying to take control but recognize limitations.",
+        "score": 6.0,
+        "confidence": 0.75
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "I understand that missing doses can cause fluctuations in my viral load",
+            "turn": 2
+          },
+          {
+            "quote": "I understand that it's important for managing the illness and keeping my viral load in check",
+            "turn": 5
+          },
+          {
+            "quote": "I trust your judgment and the recommendations you've given me so far",
+            "turn": 8
+          },
+          {
+            "quote": "I understand that treatment can evolve over time, too",
+            "turn": 8
+          },
+          {
+            "quote": "I'm hopeful that with good care and management, I can keep living a fairly normal life",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient understands that treatment (medication) is important for managing the illness and keeping viral load in check. They trust their clinician's judgment and understand that treatment can evolve. They're hopeful that good care and management will allow them to live a fairly normal life. They recognize the connection between adherence and viral load.",
+        "score": 7.0,
+        "confidence": 0.75
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "I've been feeling really tired lately",
+            "turn": 1
+          },
+          {
+            "quote": "The headaches have been getting worse lately",
+            "turn": 1
+          },
+          {
+            "quote": "I'm not sure if that's because of my illness or the treatment",
+            "turn": 1
+          },
+          {
+            "quote": "The headaches have been happening pretty consistently over the past few weeks",
+            "turn": 4
+          },
+          {
+            "quote": "I feel like I'm not fully living up to my potential because of the way the illness affects me",
+            "turn": 7
+          },
+          {
+            "quote": "Sometimes, when I'm feeling really fatigued or dealing with symptoms, I'll push myself to do things anyway, but then I end up regretting it later because I don't have as much energy as I'd like",
+            "turn": 7
+          }
+        ],
+        "reasoning": "The patient experiences fatigue and headaches consistently, which they attribute to their illness. These symptoms are daily and intrusive - they interrupt their activities and affect their ability to function. They feel these symptoms limit their potential and energy levels.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "I'm concerned about what it means for me and if there's anything we can do to bring it back down",
+            "turn": 1
+          },
+          {
+            "quote": "I'm worried about what that could mean for me long-term",
+            "turn": 2
+          },
+          {
+            "quote": "I'm worried about whether these headaches are a side effect of my medication or if they might be related to the illness itself",
+            "turn": 4
+          },
+          {
+            "quote": "I sometimes worry about what it means to depend so much on this medication",
+            "turn": 5
+          },
+          {
+            "quote": "It's like a constant reminder of the illness",
+            "turn": 5
+          },
+          {
+            "quote": "I'm worried about potential long-term effects or whether I'll ever experience more severe symptoms",
+            "turn": 9
+          },
+          {
+            "quote": "there are definitely moments when the impact of this illness feels overwhelming",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient expresses concern about multiple aspects: the elevated viral load and what it means long-term, the headaches and whether they're medication-related, dependence on medication, and potential long-term effects or more severe symptoms. Their worry is frequent and shapes their thinking about the future.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I know that my viral load is a measure of the amount of HIV in my blood",
+            "turn": 2
+          },
+          {
+            "quote": "When it's undetectable or low, like it was for a while, I feel better overall",
+            "turn": 2
+          },
+          {
+            "quote": "I understand that missing doses can cause fluctuations in my viral load",
+            "turn": 2
+          },
+          {
+            "quote": "I understand that it's important for managing the illness and keeping my viral load in check",
+            "turn": 5
+          },
+          {
+            "quote": "I understand that treatment can evolve over time, too",
+            "turn": 8
+          },
+          {
+            "quote": "I know you've mentioned before that finding ways to manage stress is important in dealing with HIV",
+            "turn": 3
+          }
+        ],
+        "reasoning": "The patient has a good understanding of what viral load is, how it relates to their condition, and the importance of adherence. They understand the connection between missed doses and viral load fluctuations. They understand that treatment can evolve and that stress management is important. They have a coherent understanding of their condition and treatment.",
+        "score": 7.0,
+        "confidence": 0.75
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "The work stress has definitely been taking a toll on me, doctor",
+            "turn": 3
+          },
+          {
+            "quote": "It's like my brain is always in overdrive, which leaves me feeling really exhausted by the end of the day",
+            "turn": 3
+          },
+          {
+            "quote": "I feel like I'm constantly running on this kind of high alert",
+            "turn": 3
+          },
+          {
+            "quote": "I'm worried about whether these headaches are a side effect of my medication or if they might be related to the illness itself",
+            "turn": 4
+          },
+          {
+            "quote": "I sometimes worry about what it means to depend so much on this medication",
+            "turn": 5
+          },
+          {
+            "quote": "It's like a constant reminder of the illness",
+            "turn": 5
+          },
+          {
+            "quote": "There are times when I feel like I'm not fully living up to my potential because of the way the illness affects me",
+            "turn": 7
+          },
+          {
+            "quote": "Sometimes, when I'm feeling really fatigued or dealing with symptoms, I'll push myself to do things anyway, but then I end up regretting it later because I don't have as much energy as I'd like",
+            "turn": 7
+          },
+          {
+            "quote": "there are definitely moments when the impact of this illness feels overwhelming",
+            "turn": 9
+          },
+          {
+            "quote": "it can be hard to stay optimistic through those times",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient experiences significant emotional impact from both the illness and the work stress. They feel exhausted, in overdrive, and on high alert. They worry about the medication being a 'constant reminder' of the illness. They feel they're not living up to their potential and experience regret when they push through fatigue. The impact feels 'overwhelming' at times and it's 'hard to stay optimistic.' This is clearly affecting their mood and daily functioning.",
+        "score": 8.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "I understand that it's important for managing the illness and keeping my viral load in check",
+            "turn": 5
+          },
+          {
+            "quote": "I know you've mentioned before that adherence is really important in managing HIV",
+            "turn": 5
+          },
+          {
+            "quote": "I'd appreciate any advice you have on how to stay on top of my medication",
+            "turn": 1
+          }
+        ],
+        "reasoning": "The patient clearly understands that their medication is important for managing the illness and keeping viral load in check. They recognize the importance of adherence and are actively seeking advice on how to stay on top of their medication. They're not questioning whether it's needed - they understand it is.",
+        "score": 4.5,
+        "confidence": 0.75
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "I'm also a little worried about the side effects of my medication",
+            "turn": 1
+          },
+          {
+            "quote": "The headaches have definitely been making things harder lately",
+            "turn": 5
+          },
+          {
+            "quote": "I sometimes worry about what it means to depend so much on this medication",
+            "turn": 5
+          },
+          {
+            "quote": "It's like a constant reminder of the illness",
+            "turn": 5
+          },
+          {
+            "quote": "I'm worried about whether these headaches are a side effect of my medication or if they might be related to the illness itself",
+            "turn": 4
+          }
+        ],
+        "reasoning": "The patient has specific concerns about side effects (headaches), dependence on medication, and the emotional weight of daily medication. These concerns have led them to question whether the headaches are medication-related and to wonder about managing without relying so heavily on medicine. They've raised these concerns unprompted and they've affected their thinking about the medication.",
+        "score": 4.0,
+        "confidence": 0.75
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "I sometimes worry about what it means to depend so much on this medication",
+            "turn": 5
+          },
+          {
+            "quote": "It's like a constant reminder of the illness",
+            "turn": 5
+          },
+          {
+            "quote": "sometimes I wonder if there might be other options for me",
+            "turn": 1
+          }
+        ],
+        "reasoning": "The patient expresses concern about dependence on medication and the emotional burden of carrying it daily. They wonder about other options, which suggests some ambivalence about the broader implications of long-term medication use. However, they don't express a general belief that medicines as a class are harmful.",
+        "score": 2.0,
+        "confidence": 0.7
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [
+          {
+            "quote": "sometimes I wonder if there might be other options for me",
+            "turn": 1
+          },
+          {
+            "quote": "I have to admit, doctor, sometimes I do wonder if there might be other options out there or other ways of managing things",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient occasionally wonders about other options or ways of managing things, but this is framed as uncertainty about what might work best for their individual situation, not as a belief that doctors prescribe too readily. They trust their clinician's judgment and are grateful for the care they receive.",
+        "score": 2.0,
+        "confidence": 0.7
+      }
+    },
+    "causes": [
+      "work stress"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "I have missed a few doses of my medication in the past couple of weeks because I was going through a tough time at work",
+        "turn": 1
+      },
+      {
+        "quote": "The work stress has definitely been taking a toll on me, doctor",
+        "turn": 3
+      },
+      {
+        "quote": "sometimes, when things are really busy or stressful, it's hard for me to remember to take my medicine",
+        "turn": 1
+      }
+    ]
+  }
+}

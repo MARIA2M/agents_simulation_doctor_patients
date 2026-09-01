@@ -1,0 +1,238 @@
+{
+  "patient_id": "HIV-005",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "HIV-005",
+    "clinical_summary": "The patient presents with persistent fatigue for 2 months, daily headaches for 1 week, and increased thirst. They have been on Triumeq for 3 years with adherence issues - missing doses 2-3 times per week and occasionally taking drug holidays when feeling 'well.' Their HIV viral load was undetectable 6 months ago. They express concerns about long-term side effects and drug resistance, and occasionally wonder if doctors prescribe medications too readily. They trust the clinician's judgment.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "I can't seem to shake this fatigue",
+            "turn": 1
+          },
+          {
+            "quote": "it hasn't gone away even when I'm not working",
+            "turn": 2
+          },
+          {
+            "quote": "headaches... almost every day for the past week",
+            "turn": 2
+          },
+          {
+            "quote": "thirst does sometimes wake me up at night",
+            "turn": 4
+          }
+        ],
+        "reasoning": "The patient has persistent fatigue that persists even when not working, daily headaches, and sleep disruption from thirst. This is affecting their daily functioning and quality of life.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "The fatigue started about two months ago",
+            "turn": 2
+          },
+          {
+            "quote": "headaches are a more recent thing",
+            "turn": 2
+          },
+          {
+            "quote": "wondering if there's something else going on",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient doesn't have a clear expectation about duration. Symptoms have been present for 2 months and are ongoing. They express uncertainty about what's happening.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I keep up with appointments and tests",
+            "turn": 8
+          },
+          {
+            "quote": "sometimes the fatigue or headaches make me wonder if there's something else going on",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient takes some action (appointments, tests) but expresses uncertainty about whether their actions are effective given the new symptoms.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "I got my last one about six months ago and the results came back undetectable",
+            "turn": 6
+          },
+          {
+            "quote": "I trust your judgment",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient has evidence that treatment has been effective (undetectable viral load), but they're uncertain about current symptoms. They trust the clinician.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "I've been taking the Triumeq for about three years now",
+            "turn": 5
+          },
+          {
+            "quote": "I think my infection came from a previous partner who didn't disclose his status",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient clearly identifies their HIV infection and has been on treatment for 3 years. They attribute their illness to HIV.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "I keep worrying about my medication for my HIV",
+            "turn": 1
+          },
+          {
+            "quote": "worry a bit about long-term side effects",
+            "turn": 9
+          },
+          {
+            "quote": "fear around potential drug resistance",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient expresses worry about medication and symptoms, though not extreme. The worry is tied to specific concerns (side effects, resistance).",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I think my infection came from a previous partner who didn't disclose his status",
+            "turn": 8
+          },
+          {
+            "quote": "I've since become more careful about testing and disclosing",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient has a clear understanding of their HIV infection and its cause. They understand the need for testing and disclosure.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "I can't seem to shake this fatigue",
+            "turn": 1
+          },
+          {
+            "quote": "That's when doubt sets in",
+            "turn": 7
+          },
+          {
+            "quote": "I trust your judgment",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient expresses frustration with fatigue and doubt about their condition. They also express trust in the clinician. The emotional response is moderate but present.",
+        "score": 6.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "I know I should take it every day",
+            "turn": 1
+          },
+          {
+            "quote": "I sometimes forget to take my pill once a day as prescribed, maybe 2-3 times per week",
+            "turn": 5
+          },
+          {
+            "quote": "I might go a few days without medication",
+            "turn": 5
+          },
+          {
+            "quote": "let's talk more about how to stick to my schedule better",
+            "turn": 10
+          }
+        ],
+        "reasoning": "The patient acknowledges they should take it daily but has significant adherence issues, including occasional drug holidays. They want to improve adherence.",
+        "score": 3.0,
+        "confidence": 0.7
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "I worry a bit about long-term side effects",
+            "turn": 9
+          },
+          {
+            "quote": "fear around potential drug resistance",
+            "turn": 9
+          },
+          {
+            "quote": "sometimes I wonder if doctors might prescribe these medications too quickly",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient has specific concerns about side effects and resistance. They also express some general concerns about prescribing practices.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "sometimes I wonder if doctors might prescribe these medications too quickly or without fully considering alternatives",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient expresses some general concern about medications as a class, though it's not strongly developed.",
+        "score": 3.0,
+        "confidence": 0.6
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [
+          {
+            "quote": "sometimes I wonder if doctors might prescribe these medications too quickly or without fully considering alternatives",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient occasionally doubts prescribing practices, though they trust their own clinician.",
+        "score": 3.0,
+        "confidence": 0.6
+      }
+    },
+    "causes": [
+      "previous partner who didn't disclose his status"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "I think my infection came from a previous partner who didn't disclose his status",
+        "turn": 8
+      }
+    ]
+  }
+}

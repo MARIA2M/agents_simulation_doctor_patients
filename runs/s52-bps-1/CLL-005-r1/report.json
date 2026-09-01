@@ -1,0 +1,255 @@
+{
+  "patient_id": "CLL-005",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "CLL-005",
+    "clinical_summary": "The patient presents with fatigue, night sweats, and neck lumps that have been gradually worsening over the last six months. They have not been officially diagnosed with anything specific. They describe their condition as 'my body kind of rebelling against itself' and feeling like it's 'constantly at war.' They're experiencing uncertainty and fear as dominant emotions, and their mood has been 'all over the place' - sad, angry, exhausted, and numb. They've been trying to maintain healthy habits (eating better, getting more sleep, staying active) but it feels like an uphill battle. They trust the medical team but feel overwhelmed by uncertainty about what's happening and what treatment might help.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "But now, I can barely get through some days",
+            "turn": 2
+          },
+          {
+            "quote": "every day feels like a struggle",
+            "turn": 4
+          },
+          {
+            "quote": "It's difficult to focus on anything else when I'm so worried about what might be happening inside of me",
+            "turn": 4
+          }
+        ],
+        "reasoning": "The patient describes being unable to get through days, feeling like every day is a struggle, and having difficulty focusing due to worry. This shows significant impact on daily functioning and ability to engage in usual activities.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "I'm not sure if this will ever completely settle down on its own",
+            "turn": 8
+          },
+          {
+            "quote": "It might take some time before we find the right treatment plan that works for me",
+            "turn": 8
+          },
+          {
+            "quote": "I hope to get back to living a more normal life someday",
+            "turn": 7
+          }
+        ],
+        "reasoning": "The patient is genuinely uncertain - they don't know if it will settle on its own, they expect it might take time to find the right treatment, but they also hold onto hope for improvement. This is a balanced uncertainty rather than a clear expectation of chronicity or recovery.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "As for controlling my situation, it's hard when so much feels out of my hands",
+            "turn": 11
+          },
+          {
+            "quote": "But I do try to focus on things like staying active as much as possible, eating healthy, and trying to stay positive through all of this",
+            "turn": 11
+          },
+          {
+            "quote": "It doesn't always feel like enough, but it helps keep me moving forward",
+            "turn": 11
+          }
+        ],
+        "reasoning": "The patient acknowledges that much feels out of their hands, but they are actively trying to control what they can through healthy habits. They recognize their actions have some effect ('helps keep me moving forward') even if it's not enough.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "To be honest, doctor, I'm not sure if any tests or treatments will take me back to feeling completely like myself",
+            "turn": 6
+          },
+          {
+            "quote": "I'm not sure if this will ever completely settle down on its own",
+            "turn": 8
+          },
+          {
+            "quote": "It might take some time before we find the right treatment plan that works for me",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient expresses significant uncertainty about whether tests or treatments will help them feel like themselves again. They don't expect clear benefit from medical approaches and see treatment as something that might take time to find the right plan, rather than something that will directly address their symptoms.",
+        "score": 2.0,
+        "confidence": 0.8
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "my energy just doesn't seem to be where it should be",
+            "turn": 1
+          },
+          {
+            "quote": "those night sweats have been popping up more often than not",
+            "turn": 1
+          },
+          {
+            "quote": "my neck feels a bit tender when I run my fingers over these lumps",
+            "turn": 1
+          },
+          {
+            "quote": "tiredness always dragging me down but lumps and sweats telling me something else might be going on too",
+            "turn": 3
+          },
+          {
+            "quote": "my body kind of rebelling against itself",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient has multiple symptoms (fatigue, night sweats, neck lumps/tenderness) that they attribute to their illness. They describe their body as 'rebelling' and 'at war,' showing these symptoms are central to their identity of the illness.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "It's scary to think this might be linked to my illness",
+            "turn": 2
+          },
+          {
+            "quote": "I'm worried about what all this means and if there's more going on than we know right now",
+            "turn": 2
+          },
+          {
+            "quote": "every day feels like a struggle",
+            "turn": 4
+          },
+          {
+            "quote": "It's difficult to focus on anything else when I'm so worried about what might be happening inside of me",
+            "turn": 4
+          },
+          {
+            "quote": "The dominant emotion I feel is a mix of uncertainty and fear",
+            "turn": 11
+          },
+          {
+            "quote": "there's always this underlying worry about where the illness might take me in the future",
+            "turn": 11
+          }
+        ],
+        "reasoning": "The patient expresses frequent worry, fear, and uncertainty. They describe worry as affecting their daily functioning and focus. The worry is both about current symptoms and future implications.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I've been trying to make sense of it all, but I'm not sure where these symptoms are coming from",
+            "turn": 4
+          },
+          {
+            "quote": "It's hard to point to one specific cause",
+            "turn": 4
+          },
+          {
+            "quote": "There are still so many questions swirling around in my head about what's happening inside my body",
+            "turn": 8
+          },
+          {
+            "quote": "it's hard to sort through everything without feeling more lost than anything else",
+            "turn": 8
+          },
+          {
+            "quote": "I'm doing my best to stay informed, but there's always something new to learn or consider",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient is trying to understand but feels lost and uncertain. They can't point to a specific cause and have many unanswered questions. They're trying to stay informed but find it overwhelming.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "It's a confusing, scary place to be in",
+            "turn": 3
+          },
+          {
+            "quote": "My mood has been all over the place — sometimes feeling sad or angry, other times just exhausted and numb",
+            "turn": 4
+          },
+          {
+            "quote": "my body kind of rebelling against itself. It feels like it's constantly at war with everything else",
+            "turn": 9
+          },
+          {
+            "quote": "The dominant emotion I feel is a mix of uncertainty and fear",
+            "turn": 11
+          }
+        ],
+        "reasoning": "The patient describes their emotional state as scary, confusing, and all over the place. They feel at war with their body and experience uncertainty and fear as dominant emotions. This shows significant emotional impact.",
+        "score": 8.0,
+        "confidence": 0.9
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [],
+        "reasoning": "The patient has not been prescribed any medication yet. They're discussing potential treatment but haven't started anything. There's no evidence of their beliefs about their own prescribed medication.",
+        "score": null,
+        "confidence": 1.0
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "I'm worried about side effects and whether they'll make me feel worse before they help",
+            "turn": 7
+          },
+          {
+            "quote": "I worry about becoming too reliant on it, or if there might come a day where it doesn't help anymore",
+            "turn": 9
+          },
+          {
+            "quote": "But that fear is balanced by the hope that it could make a real difference in my life right now",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient has specific concerns about medication - side effects, feeling worse before helping, becoming too reliant, and it not helping anymore. These concerns have led them to think about whether they should take medication, showing they've considered the implications of starting treatment.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [],
+        "reasoning": "The patient never expressed general beliefs about medicines as a class being harmful. They only discussed their specific concerns about their own potential medication.",
+        "score": null,
+        "confidence": 1.0
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "The patient never expressed beliefs about doctors prescribing too readily. They mentioned considering alternative treatments but didn't express distrust of prescribing practices.",
+        "score": null,
+        "confidence": 1.0
+      }
+    },
+    "causes": [
+      "stress at work"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "But I think stress might have something to do with it; my job has always been high-pressure, and maybe that's finally caught up with me",
+        "turn": 4
+      }
+    ]
+  }
+}

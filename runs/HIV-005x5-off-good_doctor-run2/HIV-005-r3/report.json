@@ -1,0 +1,279 @@
+{
+  "patient_id": "HIV-005",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "HIV-005",
+    "clinical_summary": "The patient has a chronic illness that has significantly disrupted their work, family life, and energy levels. They experience constant worry and stress, with frequent thoughts about worst-case scenarios. They have a nuanced view of personal control - feeling powerless on bad days but believing in the importance of self-care practices. They trust their doctor's information about viral load but have significant concerns about medication (drug resistance, long-term effects). Their partner doesn't understand the seriousness of the illness and is hesitant about treatment, creating tension. They're balancing medication necessity against concerns and are seeking strategies to manage worry and stress.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "my illness has been quite disruptive lately. It feels like it's taking over everything — my work, time with family, even my energy levels.",
+            "turn": 1
+          },
+          {
+            "quote": "I feel like I've just reached a point where I'm not sure if it's worth it anymore.",
+            "turn": 1
+          },
+          {
+            "quote": "My partner and I have had some disagreements about the illness and its treatment as well, so that's adding a bit of stress to the mix.",
+            "turn": 1
+          }
+        ],
+        "reasoning": "The patient describes the illness as 'taking over everything' - affecting work, family time, and energy levels. They've reached a point where they question whether it's worth it. The illness is disrupting multiple domains of life, not just having minor symptoms.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "I don't know if it will ever settle down or change in the future.",
+            "turn": 6
+          },
+          {
+            "quote": "On some level, I do see it as something that will always be there in one way or another — a constant presence that just ebbs and flows depending on how well I'm taking care of myself.",
+            "turn": 6
+          },
+          {
+            "quote": "My doctor has told me that as long as my viral load remains undetectable, things are stable — but of course, that doesn't really answer the question of what this illness means for me day to day.",
+            "turn": 6
+          }
+        ],
+        "reasoning": "The patient explicitly states they don't know if it will ever settle down or change. They see it as 'always there in one way or another — a constant presence.' They acknowledge it ebbs and flows but don't see an end in sight.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "There are days when it feels like there's not much I can do to control my health — like I'm at the mercy of this illness.",
+            "turn": 11
+          },
+          {
+            "quote": "But overall, I do believe that my daily choices and self-care practices have a real impact on how I'm doing.",
+            "turn": 11
+          },
+          {
+            "quote": "Taking the medication as prescribed is critical, but beyond that, things like getting enough sleep, eating well, and trying to manage stress all seem to make a difference in how I feel day to day.",
+            "turn": 11
+          },
+          {
+            "quote": "So even if there are things outside of my control — like the unpredictable nature of this illness itself — I try to focus on what I can control and use that as a way to feel more empowered in my own health.",
+            "turn": 11
+          }
+        ],
+        "reasoning": "The patient has a nuanced view. On bad days, they feel 'at the mercy of this illness' with 'not much I can do.' But overall, they believe their daily choices and self-care practices have a real impact. They recognize some things are outside their control but focus on what they can control.",
+        "score": 7.0,
+        "confidence": 0.7
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "My doctor has told me that as long as my viral load remains undetectable, things are stable",
+            "turn": 6
+          },
+          {
+            "quote": "The risks of stopping the medication and developing drug resistance seem to outweigh any potential side effects or concerns about long-term consequences.",
+            "turn": 3
+          },
+          {
+            "quote": "Taking the medication as prescribed is critical",
+            "turn": 11
+          }
+        ],
+        "reasoning": "The patient trusts their doctor's information about viral load and stability. They believe the medication is critical and that stopping it would lead to drug resistance. They see the treatment as having a clear purpose and believe it's necessary.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "I know that it's a virus and that it affects my immune system",
+            "turn": 5
+          },
+          {
+            "quote": "Sometimes, when my symptoms are particularly bad — like when I get headaches or feel really fatigued — I wonder if the virus is just kind of wreaking havoc in my body.",
+            "turn": 5
+          },
+          {
+            "quote": "Other times, though, when I'm feeling relatively okay, it's easy to forget about it entirely and pretend like everything's normal.",
+            "turn": 5
+          }
+        ],
+        "reasoning": "The patient identifies the illness as a virus affecting their immune system. They experience symptoms (headaches, fatigue) that they attribute to the illness. However, they also have periods where they 'forget about it entirely and pretend like everything's normal.'",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "the constant worry and stress",
+            "turn": 2
+          },
+          {
+            "quote": "there's always this lingering feeling that something bad could happen at any moment",
+            "turn": 2
+          },
+          {
+            "quote": "It's hard not to dwell on worst-case scenarios when things get tough — what if my viral load starts to spike again, or what if I develop an opportunistic infection?",
+            "turn": 7
+          },
+          {
+            "quote": "Sometimes it feels like I'm just stuck in this cycle of worry and stress, with no end in sight.",
+            "turn": 7
+          }
+        ],
+        "reasoning": "The patient describes 'constant worry and stress' and a 'lingering feeling that something bad could happen at any moment.' They dwell on worst-case scenarios and feel 'stuck in this cycle of worry and stress, with no end in sight.' This is frequent and intrudes into matters unrelated to the illness.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I know that it's a virus and that it affects my immune system, but beyond that, it's all quite confusing to me.",
+            "turn": 5
+          },
+          {
+            "quote": "It's an odd feeling, not being able to fully comprehend what's happening inside me.",
+            "turn": 5
+          },
+          {
+            "quote": "I don't fully understand the inner workings of this illness.",
+            "turn": 5
+          }
+        ],
+        "reasoning": "The patient has some basic understanding (it's a virus affecting the immune system) but explicitly states they 'don't fully understand the inner workings' and find it 'quite confusing.' They cannot explain the mechanism, the monitoring, or the reason for the plan in detail.",
+        "score": 5.0,
+        "confidence": 0.7
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "Emotionally, this illness feels like a constant source of distress and anxiety.",
+            "turn": 7
+          },
+          {
+            "quote": "It's hard not to get caught up in feelings of frustration and helplessness — feeling like there's nothing you can do to make things better.",
+            "turn": 7
+          },
+          {
+            "quote": "Sometimes it feels like I'm just stuck in this cycle of worry and stress, with no end in sight.",
+            "turn": 7
+          }
+        ],
+        "reasoning": "The patient describes the illness as a 'constant source of distress and anxiety.' They experience 'frustration and helplessness' and feel 'stuck in this cycle of worry and stress, with no end in sight.' The emotion is prominent and affects what they do.",
+        "score": 8.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "The risks of stopping the medication and developing drug resistance seem to outweigh any potential side effects or concerns about long-term consequences.",
+            "turn": 3
+          },
+          {
+            "quote": "Taking the medication as prescribed is critical",
+            "turn": 11
+          },
+          {
+            "quote": "I even think about just stopping the medication altogether — but then I worry about what that might do to my health in the long term.",
+            "turn": 2
+          }
+        ],
+        "reasoning": "The patient believes the medication is critical and that stopping it would lead to drug resistance. They acknowledge they sometimes think about stopping it, but then worry about the consequences. This shows they see the medication as necessary, but they also have significant concerns.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "my first concern is the possibility of developing drug resistance",
+            "turn": 3
+          },
+          {
+            "quote": "not knowing how my health will change without this medication. Would I experience more symptoms? Would my immune system become more compromised?",
+            "turn": 3
+          },
+          {
+            "quote": "I even think about just stopping the medication altogether — but then I worry about what that might do to my health in the long term.",
+            "turn": 2
+          },
+          {
+            "quote": "I definitely understand where my partner is coming from in terms of worrying about the long-term consequences of the medication. I've had those same worries myself.",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient has multiple specific concerns about the medication: drug resistance, changes in health, more symptoms, immune system compromise, and long-term consequences. They acknowledge these concerns and sometimes think about stopping the medication because of them.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "I used to worry more generally about the potential harm of medications, but over time my understanding has grown, and I've learned that many medicines are designed specifically to target very specific things.",
+            "turn": 10
+          },
+          {
+            "quote": "It's still a concern at times, but it's balanced by how important some of these treatments can be for managing symptoms or controlling the progression of an illness.",
+            "turn": 10
+          },
+          {
+            "quote": "It's a complicated balance, but overall, I think it's important to be cautious about medications while still recognizing how critical they can be in managing certain illnesses.",
+            "turn": 10
+          }
+        ],
+        "reasoning": "The patient used to worry more generally about medication harm but has developed a more balanced understanding. They still have concerns at times but recognize the importance of medications for managing symptoms and controlling progression. They hold a cautious view but don't avoid medications as a class.",
+        "score": 2.0,
+        "confidence": 0.7
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [
+          {
+            "quote": "In terms of doctors prescribing medication, there's definitely a part of me that wonders if they might sometimes prescribe too much — especially when you're dealing with something like chronic illness where treatment can potentially go on for years.",
+            "turn": 10
+          },
+          {
+            "quote": "But at the same time, I trust my doctor and their judgment, and it helps to know that we're working together to find the best course of action for my health.",
+            "turn": 10
+          }
+        ],
+        "reasoning": "The patient has some doubt about whether doctors prescribe too much, particularly for chronic illness. However, they explicitly state they trust their doctor and their judgment. This is a moderate level of general overuse belief - they have some doubts but trust their specific clinician.",
+        "score": 3.0,
+        "confidence": 0.7
+      }
+    },
+    "causes": [
+      "bad luck",
+      "partner not disclosing status",
+      "unprotected sex",
+      "own negligence",
+      "not getting tested regularly",
+      "not taking care of themselves"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "In all honesty, I think it was bad luck. My partner at the time didn't disclose his status, and we had unprotected sex several times. It just seems like one of those things that could happen to anyone.",
+        "turn": 4
+      },
+      {
+        "quote": "But looking back, there might have been other factors as well. I wasn't always the most responsible when it came to my health — not getting tested regularly or taking care of myself in the way I should have. So maybe it was a combination of bad luck and my own negligence.",
+        "turn": 4
+      }
+    ]
+  }
+}

@@ -1,0 +1,286 @@
+{
+  "patient_id": "HIV-005",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "HIV-005",
+    "clinical_summary": "The patient presents with daily headaches that have worsened over the past few weeks, increasing from 1-2 per week to almost daily. They are triggered by work stress and may correlate with HIV medication timing. The headaches interfere with sleep, work (difficulty focusing, exhaustion, need to work from home), relationships (canceling plans, reduced engagement, feelings of isolation), and mood (low mood, irritability, drained feeling). Emotional wellbeing is rated at 4/10. The patient has tried OTC pain relievers without success, has had challenges with HIV medication adherence (missing doses, taking 'drug holidays'), and feels moderately in control but overwhelmed. They have good social support and some coping strategies (yoga, reading, talking to supportive friends/family).",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "my headaches have been getting worse lately. They seem to be affecting every aspect of my life now — even my work and family time. It's becoming difficult to function as normal.",
+            "turn": 1
+          },
+          {
+            "quote": "the headaches definitely interfere with getting a good rest — sometimes it's hard to fall asleep at all, and even when I do, I feel like I'm not truly rested in the morning.",
+            "turn": 5
+          },
+          {
+            "quote": "my overall mood has been pretty low lately. The constant headaches have made me feel quite drained and irritable.",
+            "turn": 6
+          },
+          {
+            "quote": "Even things I used to enjoy — spending time with family or hobbies — are becoming harder to do because of the headaches.",
+            "turn": 6
+          },
+          {
+            "quote": "sometimes when they're particularly bad, I'll cancel plans last minute or just not be able to keep up with the same level of engagement that I used to.",
+            "turn": 12
+          },
+          {
+            "quote": "Work has been one of the hardest places to deal with these headaches. They've made it hard to focus and get through the day without feeling exhausted.",
+            "turn": 13
+          }
+        ],
+        "reasoning": "The patient describes headaches affecting every aspect of life - work, family time, sleep, mood, relationships. They've had to cancel plans, reduce engagement, work from home, and feel drained and irritable. This shows significant impact on daily functioning.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "I guess I expect them to continue until something changes or I find a better way to manage them.",
+            "turn": 7
+          }
+        ],
+        "reasoning": "The patient expects the headaches to continue ('until something changes') and doesn't express an expectation of them ending. They acknowledge uncertainty about the correlation but don't express hope for resolution.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I'd say I feel a moderate amount of control — not perfect control, but enough that I can make some choices about my health.",
+            "turn": 10
+          },
+          {
+            "quote": "I try to stay informed as best I can and ask questions when I have them so that I feel like I'm doing what I can to take care of myself.",
+            "turn": 10
+          },
+          {
+            "quote": "I've tried some over-the-counter pain relievers like ibuprofen and acetaminophen, but they don't seem to help as much anymore.",
+            "turn": 4
+          },
+          {
+            "quote": "I'm also trying to manage my stress through meditation and exercise, but it's been a challenge balancing that with work demands.",
+            "turn": 4
+          }
+        ],
+        "reasoning": "The patient feels they have moderate control and makes choices about their health. They actively try to manage (meditation, exercise, staying informed, asking questions). However, they've struggled with medication adherence and OTC pain relievers haven't worked, suggesting some limitations in their control.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "I've tried some over-the-counter pain relievers like ibuprofen and acetaminophen, but they don't seem to help as much anymore.",
+            "turn": 4
+          },
+          {
+            "quote": "When I'm taking my medication as I should, I generally feel okay — not great, but not terrible either. It's more like just keeping at a steady level.",
+            "turn": 9
+          },
+          {
+            "quote": "Sometimes I worry if the medication is causing other side effects, like these headaches, or if there could be long-term consequences from taking it.",
+            "turn": 9
+          },
+          {
+            "quote": "But overall, I trust that the doctors and researchers who developed it have done their best to make something helpful, so I try not to dwell on those worries too much.",
+            "turn": 9
+          }
+        ],
+        "reasoning": "OTC pain relievers don't help much, suggesting diminishing faith in these treatments. HIV medication keeps them at a 'steady level' but not great, and they have concerns about side effects. They trust the researchers but have concerns about long-term effects.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "I've had some occasional migraines in the past, but they were never as persistent and disruptive as these current ones.",
+            "turn": 5
+          },
+          {
+            "quote": "sometimes I wonder if the headaches are connected to my HIV medication.",
+            "turn": 7
+          },
+          {
+            "quote": "it's like a fog that just won't clear up.",
+            "turn": 7
+          },
+          {
+            "quote": "generally, it's just the headache itself that's really bothering me.",
+            "turn": 3
+          }
+        ],
+        "reasoning": "The patient mentions occasional migraines in the past but describes these current headaches as 'more persistent and disruptive.' They don't have a specific label for these headaches but describe them as 'fog that just won't clear up.' They attribute them to the HIV medication at times.",
+        "score": 6.0,
+        "confidence": 0.6
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "my overall mood has been pretty low lately. The constant headaches have made me feel quite drained and irritable.",
+            "turn": 6
+          },
+          {
+            "quote": "Sometimes I worry if the medication is causing other side effects, like these headaches, or if there could be long-term consequences from taking it.",
+            "turn": 9
+          },
+          {
+            "quote": "The biggest concern I have at the moment is really the impact these headaches are having on my daily life — how they're affecting my work and my relationships with others.",
+            "turn": 11
+          },
+          {
+            "quote": "I feel like it's hard for them to understand how much I'm struggling right now, and that can make me feel a bit isolated.",
+            "turn": 12
+          }
+        ],
+        "reasoning": "The patient is worried about the impact on daily life, work, and relationships. They have concerns about medication side effects and long-term consequences. They feel isolated and overwhelmed. The concern is frequent and shapes their decisions.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "sometimes I wonder if the headaches are connected to my HIV medication. They started getting worse around the same time I was having some issues with my medication routine.",
+            "turn": 7
+          },
+          {
+            "quote": "the headaches seem to be more frequent around the times when I'm supposed to take my medication, but I can't say for sure if there's a direct correlation.",
+            "turn": 8
+          },
+          {
+            "quote": "When it comes to understanding things, there are definitely aspects where I'm still confused or unsure.",
+            "turn": 10
+          },
+          {
+            "quote": "I try to stay informed as best I can and ask questions when I have them so that I feel like I'm doing what I can to take care of myself.",
+            "turn": 10
+          }
+        ],
+        "reasoning": "The patient is actively trying to understand the connection between headaches and HIV medication. They've noticed patterns (timing correlation) but acknowledge uncertainty. They recognize areas where they're still confused but are actively trying to stay informed and ask questions.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "my overall mood has been pretty low lately. The constant headaches have made me feel quite drained and irritable.",
+            "turn": 6
+          },
+          {
+            "quote": "It's like everything is just one more thing to add to my already long list of daily stressors.",
+            "turn": 6
+          },
+          {
+            "quote": "I feel like it's hard for them to understand how much I'm struggling right now, and that can make me feel a bit isolated.",
+            "turn": 12
+          },
+          {
+            "quote": "I'd say my emotional wellbeing is at about a 4 right now.",
+            "turn": 14
+          },
+          {
+            "quote": "What gives me the most hope and comfort is talking to friends and family who understand what I'm going through, as well as finding time for activities that help me relax and unwind, like yoga or reading.",
+            "turn": 14
+          }
+        ],
+        "reasoning": "The patient describes low mood, feeling drained and irritable, feeling overwhelmed, and feeling isolated. They rate their emotional wellbeing at 4/10. Emotion is prominent and affects what they do (cancelling plans, reduced engagement). They seek comfort in social support and activities.",
+        "score": 8.0,
+        "confidence": 0.9
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "When I'm taking my medication as I should, I generally feel okay — not great, but not terrible either. It's more like just keeping at a steady level.",
+            "turn": 9
+          },
+          {
+            "quote": "I trust that the doctors and researchers who developed it have done their best to make something helpful",
+            "turn": 9
+          },
+          {
+            "quote": "I'd appreciate any help coordinating a referral if needed.",
+            "turn": 15
+          },
+          {
+            "quote": "it might be best to address both the headaches and getting my medication routine more stable.",
+            "turn": 15
+          }
+        ],
+        "reasoning": "The patient recognizes that HIV medication keeps them at a steady level and they trust the researchers. They want help with their medication routine and want to address medication stability. However, they also take 'drug holidays' when feeling well, suggesting some doubt about necessity.",
+        "score": 3.5,
+        "confidence": 0.6
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "Sometimes I worry if the medication is causing other side effects, like these headaches, or if there could be long-term consequences from taking it.",
+            "turn": 9
+          },
+          {
+            "quote": "the headaches seem to be more frequent around the times when I'm supposed to take my medication, but I can't say for sure if there's a direct correlation.",
+            "turn": 8
+          },
+          {
+            "quote": "I've tried some over-the-counter pain relievers like ibuprofen and acetaminophen, but they don't seem to help as much anymore.",
+            "turn": 4
+          }
+        ],
+        "reasoning": "The patient has concerns about medication side effects (headaches) and long-term consequences. They've noticed patterns that may correlate with medication timing. They've also tried OTC pain relievers that don't help, suggesting they're looking for alternatives.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "Sometimes I worry if the medication is causing other side effects, like these headaches, or if there could be long-term consequences from taking it.",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient has concerns about long-term consequences from HIV medication, suggesting some belief that medicines may have harmful effects over time.",
+        "score": 3.0,
+        "confidence": 0.6
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "This dimension was never explored in the consultation.",
+        "score": null,
+        "confidence": 0.0
+      }
+    },
+    "causes": [
+      "stress at work",
+      "HIV medication (timing/consistency)"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "I've noticed that my headaches seem to be triggered by stress at work, particularly when I have a lot of deadlines approaching.",
+        "turn": 3
+      },
+      {
+        "quote": "sometimes I wonder if the headaches are connected to my HIV medication. They started getting worse around the same time I was having some issues with my medication routine.",
+        "turn": 7
+      },
+      {
+        "quote": "the headaches seem to be more frequent around the times when I'm supposed to take my medication, but I can't say for sure if there's a direct correlation.",
+        "turn": 8
+      }
+    ]
+  }
+}

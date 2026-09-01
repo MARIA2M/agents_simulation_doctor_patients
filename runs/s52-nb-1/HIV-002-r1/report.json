@@ -1,0 +1,229 @@
+{
+  "patient_id": "HIV-002",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "HIV-002",
+    "clinical_summary": "Patient with well-controlled HIV (viral load 120 copies/mL, CD4 480 cells/uL) on daily Dovato for 5 months with good adherence. Reports new-onset vivid/disturbing dreams and fatigue since starting medication, plus mild anxiety-related insomnia and occasional headaches. Fatigue is separate from sleep issues and affects mental focus. Patient is well-informed, actively manages health through diet, exercise, and self-care, and expresses gratitude and optimism about improvement over time. Has concerns about long-term side effects and future progression.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "I've been feeling really run down lately. I don't have much energy, and even though I sleep well, I feel exhausted all day long.",
+            "turn": 1
+          },
+          {
+            "quote": "my dreams have gotten vivid and sometimes disturbing, which is really bothering me.",
+            "turn": 1
+          },
+          {
+            "quote": "And I'm worried about the future — what if this just keeps getting worse?",
+            "turn": 1
+          },
+          {
+            "quote": "Even when I do manage to get some rest, I still feel like I don't have much energy throughout the day. It's not just physical fatigue — I feel mentally drained too. It can be hard to focus on anything for more than a few minutes at a time.",
+            "turn": 6
+          }
+        ],
+        "reasoning": "Patient reports significant impact on daily functioning: fatigue, mental drain, difficulty concentrating, vivid/disturbing dreams, and future concerns. Symptoms affect their ability to focus and emotional wellbeing, requiring adaptation of daily life.",
+        "score": 7.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "I've been feeling like this for a few months now",
+            "turn": 2
+          },
+          {
+            "quote": "I'm trying to stay positive and trust the experts",
+            "turn": 8
+          },
+          {
+            "quote": "there's a good chance they'll continue to improve as time goes on",
+            "turn": 10
+          }
+        ],
+        "reasoning": "Symptoms have persisted for a few months, but patient expresses optimism that they will improve over time. Views present state as temporary rather than permanent.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I believe that my own actions can have a significant impact on my overall health, doctor. I try to eat well and stay active, even if it's just going for a short walk each day. And of course, practicing good self-care — getting enough sleep, managing stress, staying connected with friends and family — is really important too. I don't underestimate the power of these small steps in improving my health and wellbeing.",
+            "turn": 11
+          }
+        ],
+        "reasoning": "Patient actively manages health through diet, exercise, sleep, stress management, and social connections. Believes their actions have significant impact on health.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "my viral load is down to 120 copies/mL and my CD4 count is stable at 480 cells/uL",
+            "turn": 2
+          },
+          {
+            "quote": "It's reassuring to know that the medication is doing its job.",
+            "turn": 8
+          },
+          {
+            "quote": "the benefits definitely outweigh any risks",
+            "turn": 9
+          }
+        ],
+        "reasoning": "Patient sees clear benefit from treatment - low viral load and stable CD4. Trusts medication is working and believes benefits outweigh risks.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "I know I'm HIV positive",
+            "turn": 2
+          },
+          {
+            "quote": "maybe the exhaustion is just part of dealing with living with an ongoing illness",
+            "turn": 10
+          }
+        ],
+        "reasoning": "Patient identifies as someone with HIV and attributes some symptoms to living with the ongoing illness.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "And I'm worried about the future — what if this just keeps getting worse?",
+            "turn": 1
+          },
+          {
+            "quote": "But at the same time, it can be hard not to worry about what might happen in the future. What if my viral load starts going up again? Or what if my immune system gets weaker despite the treatment?",
+            "turn": 8
+          },
+          {
+            "quote": "I do worry a bit about potential side effects from long-term use of Dovato.",
+            "turn": 9
+          }
+        ],
+        "reasoning": "Patient has recurring worries about future progression and long-term side effects. Worries recur unprompted and shape thinking, though they're trying to stay positive.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "my viral load is down to 120 copies/mL and my CD4 count is stable at 480 cells/uL",
+            "turn": 2
+          },
+          {
+            "quote": "It's reassuring to know that the medication is doing its job.",
+            "turn": 8
+          },
+          {
+            "quote": "I'm not sure, doctor, but I suspect it could be a combination of factors. The Dovato medication itself might be contributing to some of the side effects, or maybe the exhaustion is just part of dealing with living with an ongoing illness.",
+            "turn": 10
+          }
+        ],
+        "reasoning": "Patient has good understanding of HIV status, lab values, and treatment importance. Can explain what numbers mean and why treatment matters. Actively trying to understand causes of current symptoms.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "my dreams have gotten vivid and sometimes disturbing, which is really bothering me.",
+            "turn": 1
+          },
+          {
+            "quote": "And I'm worried about the future — what if this just keeps getting worse?",
+            "turn": 1
+          },
+          {
+            "quote": "It's really unsettling, and I'm worried about what it might mean.",
+            "turn": 4
+          },
+          {
+            "quote": "But at the same time, it can be hard not to worry about what might happen in the future.",
+            "turn": 8
+          },
+          {
+            "quote": "But overall, I'm really grateful that my symptoms are mostly manageable right now and that there's a good chance they'll continue to improve as time goes on.",
+            "turn": 10
+          }
+        ],
+        "reasoning": "Patient experiences emotional responses - worry, gratitude, hope. Subject affects mood and emotions are expressed openly. Not avoiding the topic.",
+        "score": 6.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "I know that stopping the medication is not an option for me, and the benefits definitely outweigh any risks.",
+            "turn": 9
+          },
+          {
+            "quote": "So for now, my focus is on staying consistent with my treatment plan and keeping up with regular check-ups to monitor my progress.",
+            "turn": 9
+          }
+        ],
+        "reasoning": "Patient explicitly states stopping medication is not an option and benefits outweigh risks. Focused on consistency and monitoring - non-negotiable approach.",
+        "score": 5.0,
+        "confidence": 0.9
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "I do worry a bit about potential side effects from long-term use of Dovato. I've heard that some people experience major changes in their body composition or develop metabolic issues due to antiretroviral therapy.",
+            "turn": 9
+          },
+          {
+            "quote": "It's really unsettling, and I'm worried about what it might mean.",
+            "turn": 4
+          }
+        ],
+        "reasoning": "Patient has concerns about long-term side effects (body composition changes, metabolic issues). Concerns recur unprompted and have led to thinking about medication effects.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [],
+        "reasoning": "Patient never raised general beliefs about medicines as a class. Concerns are specific to antiretroviral therapy, not a general view of medicines.",
+        "score": null,
+        "confidence": 0.0
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "Patient never raised this topic. No indication of beliefs about doctors prescribing too readily.",
+        "score": null,
+        "confidence": 0.0
+      }
+    },
+    "causes": [
+      "Dovato medication",
+      "living with an ongoing illness"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "I'm not sure, doctor, but I suspect it could be a combination of factors. The Dovato medication itself might be contributing to some of the side effects, or maybe the exhaustion is just part of dealing with living with an ongoing illness.",
+        "turn": 10
+      }
+    ]
+  }
+}

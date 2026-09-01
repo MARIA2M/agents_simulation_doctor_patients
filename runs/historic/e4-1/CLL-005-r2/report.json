@@ -1,0 +1,265 @@
+{
+  "patient_id": "CLL-005",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "CLL-005",
+    "clinical_summary": "The patient has CLL with fluctuating symptoms including fatigue, neck lymphadenopathy, and night sweats. They experience emotional ups and downs, feeling discouraged on some days and optimistic on others. They're managing a 'constant juggling act' between taking care of themselves and maintaining normalcy. They have mixed feelings about treatment - grateful for it but experiencing side effects (headaches) that make them question whether it's worth it. They trust the doctor's expertise and see medication as essential, but also feel uneasy about taking it. They're uncertain about the future trajectory of their illness and worry about maintaining balance without letting the condition take over their life.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "There are days when the fatigue feels like a heavy weight, but other times, I'm feeling okay.",
+            "turn": 1
+          },
+          {
+            "quote": "The small nodes in my neck have not changed much, and occasional night sweats still wake me up, but it's nothing unbearable.",
+            "turn": 1
+          },
+          {
+            "quote": "There are days when I'm feeling pretty good, and then there are times when even smaller tasks seem like too much.",
+            "turn": 2
+          },
+          {
+            "quote": "It's a constant juggling act between taking care of myself and not letting this condition define everything I do.",
+            "turn": 6
+          }
+        ],
+        "reasoning": "The patient describes fluctuating symptoms that impact daily functioning - fatigue, neck nodes, and night sweats. On bad days, even smaller tasks seem too much, and they describe a constant juggling act to maintain balance. They have scaled back or adapted their activities but still maintain many roles.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "I know that CLL is generally a slow-moving condition, but who knows what could happen down the line?",
+            "turn": 7
+          },
+          {
+            "quote": "It's scary to think about potentially managing it long-term, and there are times when I wonder if there will ever be a point where it's no longer an issue.",
+            "turn": 7
+          },
+          {
+            "quote": "What worries me most about the road ahead is the uncertainty of how things will unfold.",
+            "turn": 7
+          },
+          {
+            "quote": "That's something I can't really control or predict, which can be difficult to deal with.",
+            "turn": 7
+          }
+        ],
+        "reasoning": "The patient acknowledges CLL is generally slow-moving but expresses genuine uncertainty about their personal trajectory. They hold both endings open and plan for neither, expressing fear about managing it long-term and wondering if it will ever be no longer an issue.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "On one hand, there's only so much I can do in terms of controlling my environment and routine.",
+            "turn": 3
+          },
+          {
+            "quote": "when I am feeling well, it's a good reminder that my actions have an impact.",
+            "turn": 3
+          },
+          {
+            "quote": "while it might sometimes feel like I'm just along for the ride with this condition",
+            "turn": 3
+          },
+          {
+            "quote": "That's something I can't really control or predict",
+            "turn": 7
+          }
+        ],
+        "reasoning": "The patient recognizes some control through lifestyle factors but also acknowledges significant limitations. They feel 'just along for the ride' at times and explicitly state they cannot control or predict the future. Their sense of agency is limited.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "I trust your expertise",
+            "turn": 4
+          },
+          {
+            "quote": "medications are one of the tools we have to work with",
+            "turn": 5
+          },
+          {
+            "quote": "I believe it's better to stay on top of things medically, given how complex this condition is",
+            "turn": 5
+          }
+        ],
+        "reasoning": "The patient trusts the doctor's expertise and views medication as one of the tools available to manage CLL. They believe staying on top of things medically is important given the condition's complexity, showing they see treatment as having some benefit.",
+        "score": 5.0,
+        "confidence": 0.7
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "I know CLL is a big factor",
+            "turn": 2
+          },
+          {
+            "quote": "the illness lingering in the background",
+            "turn": 6
+          },
+          {
+            "quote": "not letting this condition define everything I do",
+            "turn": 6
+          }
+        ],
+        "reasoning": "The patient identifies with having CLL and describes the illness as 'lingering in the background.' They have several symptoms (fatigue, neck nodes, night sweats) that they attribute to the illness and are actively working to prevent it from defining their identity.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "There are days when I'm feeling discouraged or frustrated by how this condition affects me.",
+            "turn": 6
+          },
+          {
+            "quote": "It makes me question whether I should be doing certain things or if I can truly keep up with my responsibilities.",
+            "turn": 6
+          },
+          {
+            "quote": "What worries me most about the road ahead is the uncertainty of how things will unfold.",
+            "turn": 7
+          },
+          {
+            "quote": "That's something I can't really control or predict, which can be difficult to deal with.",
+            "turn": 7
+          },
+          {
+            "quote": "one thing I'll always worry about is finding a way to live with this condition without letting it completely take over my life",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient expresses frequent worry about the condition, particularly about uncertainty and maintaining balance. They describe it as 'always' something they worry about, and their concern recurs unprompted, shaping their thinking about the future.",
+        "score": 7.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "my understanding of what causes the symptoms is pretty limited, to be honest. I know CLL is a big factor, but beyond that... It's hard for me to say.",
+            "turn": 2
+          },
+          {
+            "quote": "I know from our conversations that CLL is something that doesn't always have a straightforward solution",
+            "turn": 5
+          },
+          {
+            "quote": "You seem to have a good grasp of what CLL is, generally speaking",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient has some understanding of CLL as a factor and that it doesn't have a straightforward solution. They can explain that medications are tools to work with. However, they also acknowledge their understanding of causes is limited and they cannot predict how things will unfold, indicating gaps in their understanding.",
+        "score": 5.0,
+        "confidence": 0.7
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "Emotionally, doctor, it's a bit of a rollercoaster sometimes.",
+            "turn": 6
+          },
+          {
+            "quote": "There are days when I'm feeling discouraged or frustrated by how this condition affects me.",
+            "turn": 6
+          },
+          {
+            "quote": "It makes me question whether I should be doing certain things or if I can truly keep up with my responsibilities.",
+            "turn": 6
+          },
+          {
+            "quote": "But then there are other times when I feel more optimistic and in control",
+            "turn": 6
+          },
+          {
+            "quote": "It's a constant juggling act",
+            "turn": 6
+          }
+        ],
+        "reasoning": "The patient describes an emotional rollercoaster with days of discouragement/frustration and days of optimism/control. The illness affects their mood and how they question their abilities. Their emotional response is recurrent and affects what they do.",
+        "score": 6.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "I think medication plays an essential part in managing this condition",
+            "turn": 5
+          },
+          {
+            "quote": "I believe it's better to stay on top of things medically, given how complex this condition is",
+            "turn": 5
+          }
+        ],
+        "reasoning": "The patient clearly believes their prescribed medication is essential for managing CLL. They see it as one of the tools available and believe staying on top of things medically is important given the condition's complexity. This shows strong agreement that the medication is needed.",
+        "score": 4.5,
+        "confidence": 0.8
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "I have to admit that I've been experiencing some side effects—those terrible headaches",
+            "turn": 4
+          },
+          {
+            "quote": "It makes me wonder if it's all worth it sometimes",
+            "turn": 4
+          },
+          {
+            "quote": "at times, I can't help but feel uneasy about taking them, especially when side effects come up",
+            "turn": 5
+          }
+        ],
+        "reasoning": "The patient experiences side effects (headaches) and feels uneasy about taking the medication. These concerns recur unprompted and have led them to question whether the treatment is worth it. The concerns have affected their thinking about the treatment.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [],
+        "reasoning": "The patient never expressed a general view about medicines as a class. They focused on their specific medication and its side effects, without making broader statements about whether medicines in general are harmful.",
+        "score": null,
+        "confidence": 0.0
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "The patient never expressed a view about whether doctors prescribe too readily. They focused on their specific treatment and its necessity, without making broader statements about prescribing practices.",
+        "score": null,
+        "confidence": 0.0
+      }
+    },
+    "causes": [
+      "CLL",
+      "lifestyle choices (eating well, trying to exercise)"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "I know CLL is a big factor",
+        "turn": 2
+      },
+      {
+        "quote": "I believe my lifestyle choices — eating well, trying to exercise — help manage things as much as possible",
+        "turn": 2
+      }
+    ]
+  }
+}

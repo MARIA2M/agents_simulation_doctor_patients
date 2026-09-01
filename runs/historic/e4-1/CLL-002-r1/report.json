@@ -1,0 +1,313 @@
+{
+  "patient_id": "CLL-002",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "CLL-002",
+    "clinical_summary": "A woman living with Chronic Lymphocytic Leukemia (CLL) who reports significant impact on daily life, including frequent infections, persistent swollen lymph nodes, and overwhelming fatigue. She is taking ibrutinib, which has decreased her lymphocyte count but causes mild diarrhea and occasional joint pain. She maintains good adherence to appointments and medication. She describes the illness as a 'constant battle' and 'enemy' that has taken over her life, with high concern about future progression. She has limited personal control, feeling mostly at the mercy of the disease and treatment, though she uses mindset management and medication adherence as control strategies. She wants to return to a life with normalcy and joy, though with adjustments for her physical limitations.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "The Chronic Lymphocytic Leukemia diagnosis has really taken over my life",
+            "turn": 1
+          },
+          {
+            "quote": "Every day is such a struggle",
+            "turn": 1
+          },
+          {
+            "quote": "It's not just the physical symptoms - I feel like it's affecting me mentally too",
+            "turn": 1
+          },
+          {
+            "quote": "The fatigue is overwhelming at times - it feels like I'm carrying around a weight that just won't let me rest",
+            "turn": 2
+          },
+          {
+            "quote": "It feels like it's taken over every aspect of who I used to be",
+            "turn": 2
+          },
+          {
+            "quote": "I'm on this never-ending rollercoaster ride",
+            "turn": 2
+          }
+        ],
+        "reasoning": "The patient describes the illness as having taken over her life, causing daily struggle, affecting both physical and mental aspects, with overwhelming fatigue. She feels it has taken over every aspect of who she used to be.",
+        "score": 8.0,
+        "confidence": 0.85
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "I know the CLL is something I'll have to contend with for the rest of my life",
+            "turn": 4
+          },
+          {
+            "quote": "It's constantly present but sometimes more noticeable than other times",
+            "turn": 2
+          },
+          {
+            "quote": "Nagging sense in the back of my mind that says 'it could get worse at any moment'",
+            "turn": 2
+          },
+          {
+            "quote": "Never-ending rollercoaster ride",
+            "turn": 2
+          }
+        ],
+        "reasoning": "The patient explicitly states she will have to contend with CLL 'for the rest of my life' and describes it as a never-ending rollercoaster. She holds both the possibility of progression and the chronic nature in mind.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "It can sometimes feel like I'm mostly at the mercy of what the disease and treatment do to me",
+            "turn": 5
+          },
+          {
+            "quote": "I've found that there are certain things I can control - mainly my mindset",
+            "turn": 5
+          },
+          {
+            "quote": "Keeping up with my appointments and medication routine gives me some sense of control",
+            "turn": 5
+          },
+          {
+            "quote": "Most of the time, it feels like I'm mostly along for the ride",
+            "turn": 5
+          }
+        ],
+        "reasoning": "The patient acknowledges limited control - feeling 'mostly at the mercy' of the disease and treatment. She does have some control strategies (mindset, adherence) but describes these as limited.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "The ibrutinib has made a significant difference - my doctor said my lymphocyte count has decreased significantly and that's a good sign",
+            "turn": 3
+          },
+          {
+            "quote": "There's definitely a sense of relief knowing that I'm doing something to help fight back against the disease",
+            "turn": 3
+          },
+          {
+            "quote": "I know it is essential",
+            "turn": 3
+          },
+          {
+            "quote": "Walking a tightrope: you need to take the medicine for survival",
+            "turn": 3
+          }
+        ],
+        "reasoning": "The patient clearly sees the treatment as having made a significant difference (lymphocyte count decreased) and describes it as essential for survival. She feels relief from knowing she's doing something to fight back.",
+        "score": 8.0,
+        "confidence": 0.85
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "It's a constant battle, really. A constant fight against an enemy that seems so much bigger than myself",
+            "turn": 2
+          },
+          {
+            "quote": "The illness has become something of a double-edged sword",
+            "turn": 2
+          },
+          {
+            "quote": "It feels like it's taken over every aspect of who I used to be",
+            "turn": 2
+          },
+          {
+            "quote": "It's constantly present but sometimes more noticeable than other times",
+            "turn": 2
+          }
+        ],
+        "reasoning": "The patient describes the illness as an 'enemy' and 'battle' that has become a 'double-edged sword' constantly present. She feels it has taken over every aspect of who she used to be.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "I can't shake off these worries about what might happen in the future",
+            "turn": 1
+          },
+          {
+            "quote": "Nagging sense in the back of my mind that says 'it could get worse at any moment'",
+            "turn": 2
+          },
+          {
+            "quote": "It's a constant battle... never-ending rollercoaster ride",
+            "turn": 2
+          },
+          {
+            "quote": "Worry about becoming too dependent on this medication",
+            "turn": 3
+          },
+          {
+            "quote": "Wondering whether there might be side effects I'm not even aware of yet - long-term harm",
+            "turn": 3
+          },
+          {
+            "quote": "It can be so draining to constantly battle against feelings of worry and despair",
+            "turn": 6
+          }
+        ],
+        "reasoning": "The patient has frequent, intrusive worries about the future, progression, and medication side effects. She describes worry as 'nagging' and 'draining' and it comes and goes but doesn't go away.",
+        "score": 8.0,
+        "confidence": 0.85
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "It's more like, I'm fighting off all these infections and trying to keep my body from deteriorating in general. But that doesn't make much sense either because it's so intertwined with the leukemia itself",
+            "turn": 2
+          },
+          {
+            "quote": "It's hard for me to articulate what it means beyond those physical symptoms",
+            "turn": 2
+          },
+          {
+            "quote": "I think stress from losing my husband and just getting older probably played a role",
+            "turn": 3
+          },
+          {
+            "quote": "It could be bad luck, chance, weakened immune system as I got older",
+            "turn": 3
+          }
+        ],
+        "reasoning": "The patient expresses confusion about how fighting infections relates to the leukemia itself. She struggles to articulate what the illness means beyond physical symptoms. She offers multiple possible causes but doesn't have a clear understanding of the mechanism.",
+        "score": 6.0,
+        "confidence": 0.75
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "I've been struggling quite a lot lately",
+            "turn": 1
+          },
+          {
+            "quote": "It's not just the physical symptoms - I feel like it's affecting me mentally too",
+            "turn": 1
+          },
+          {
+            "quote": "Every day is such a struggle",
+            "turn": 1
+          },
+          {
+            "quote": "It's a constant battle... enemy... rollercoaster ride",
+            "turn": 2
+          },
+          {
+            "quote": "It feels like it's taken over every aspect of who I used to be",
+            "turn": 2
+          },
+          {
+            "quote": "It can be so draining to constantly battle against feelings of worry and despair",
+            "turn": 6
+          }
+        ],
+        "reasoning": "The patient describes emotional struggle, mental impact, and feelings of being in a battle against an enemy. She uses emotional language throughout and describes worry and despair as draining.",
+        "score": 8.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "I know it is essential",
+            "turn": 3
+          },
+          {
+            "quote": "You need to take the medicine for survival",
+            "turn": 3
+          },
+          {
+            "quote": "I've been able to keep up with my appointments and my medication routine",
+            "turn": 1
+          },
+          {
+            "quote": "It's quite something to have a daily pill that helps control this disease",
+            "turn": 1
+          },
+          {
+            "quote": "I just hope everything keeps going well enough so I can continue taking care of myself as best as I can",
+            "turn": 1
+          }
+        ],
+        "reasoning": "The patient clearly sees the medication as essential for survival and describes it as something she must continue taking. She maintains her medication routine and hopes to continue doing so.",
+        "score": 5.0,
+        "confidence": 0.85
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "I worry about becoming too dependent on this medication",
+            "turn": 3
+          },
+          {
+            "quote": "Wondering whether there might be side effects I'm not even aware of yet - long-term harm",
+            "turn": 3
+          },
+          {
+            "quote": "It's a worry that comes and goes, but it doesn't really deter me from taking the medication as prescribed",
+            "turn": 3
+          }
+        ],
+        "reasoning": "The patient has specific concerns about dependence and unknown long-term side effects. These concerns recur unprompted and have not changed her behavior (she continues taking the medication as prescribed).",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "I trust modern medicine and don't believe medicines are inherently dangerous",
+            "turn": 3
+          }
+        ],
+        "reasoning": "The patient explicitly states she doesn't believe medicines are inherently dangerous. This is a clear statement of low general harm beliefs.",
+        "score": 2.0,
+        "confidence": 0.9
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "No evidence of this belief was explored or stated by the patient.",
+        "score": null,
+        "confidence": 0.0
+      }
+    },
+    "causes": [
+      "stress from losing my husband",
+      "aging",
+      "bad luck",
+      "chance",
+      "weakened immune system"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "I think stress from losing my husband and just getting older probably played a role",
+        "turn": 3
+      },
+      {
+        "quote": "It could be bad luck, chance, weakened immune system as I got older",
+        "turn": 3
+      }
+    ]
+  }
+}

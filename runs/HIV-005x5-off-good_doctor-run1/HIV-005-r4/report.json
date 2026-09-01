@@ -1,0 +1,299 @@
+{
+  "patient_id": "HIV-005",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "HIV-005",
+    "clinical_summary": "The patient has been living with HIV for several years and reports feeling 'really off' with general malaise, fatigue, brain fog, and occasional headaches. They are on antiretroviral medication that generally keeps things under control but struggle with adherence, especially on difficult days when they feel exhausted or emotionally overwhelmed. They've had to adjust their expectations of what they're capable of doing and carry significant uncertainty and worry about the future. They experience obsessive thoughts about medication effectiveness and whether they're making things worse by not being perfect with their regimen.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "It's been a bit of an uphill battle managing everything",
+            "turn": 1
+          },
+          {
+            "quote": "how all of these little things together just seem to be sapping away at my energy and making everything feel so much harder than it should",
+            "turn": 2
+          },
+          {
+            "quote": "There are things that I can't do the way I used to—physically or emotionally",
+            "turn": 7
+          },
+          {
+            "quote": "HIV has just completely taken over my life—like it's the only thing that really matters anymore",
+            "turn": 7
+          }
+        ],
+        "reasoning": "The patient describes significant impact on their energy levels, ability to do things they used to do, and even describes HIV as 'completely taken over my life.' They've had to adjust their capabilities and find new boundaries.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "It's been a bit of a rollercoaster ride in terms of symptoms and how well my treatments are working",
+            "turn": 3
+          },
+          {
+            "quote": "I think it's something I'll likely be dealing with for quite some time yet",
+            "turn": 6
+          },
+          {
+            "quote": "I know that things can change pretty quickly sometimes",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient describes it as a 'rollercoaster ride' and explicitly states they'll 'likely be dealing with it for quite some time yet.' They acknowledge uncertainty but plan for the long term.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "sometimes it can be really hard to muster up the energy to even remember to take my pill",
+            "turn": 4
+          },
+          {
+            "quote": "I know deep down that those aren't exactly the best choices, so it's something I'm constantly trying to work on",
+            "turn": 4
+          },
+          {
+            "quote": "sometimes the physical symptoms... are so exhausting that even getting out of bed to take my pill feels like an insurmountable task",
+            "turn": 5
+          },
+          {
+            "quote": "I think this whole experience has also helped me learn a lot about myself and what I'm truly made of",
+            "turn": 7
+          }
+        ],
+        "reasoning": "The patient struggles with energy and motivation, admits to missing doses and taking breaks, but also shows self-awareness and is 'constantly trying to work on' it. They've learned about themselves through the experience.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "I'm on medication that helps keep everything under control",
+            "turn": 3
+          },
+          {
+            "quote": "I guess I just sort of assume that the medicine is doing its job and keeping everything under control as long as I remember to take it consistently",
+            "turn": 6
+          },
+          {
+            "quote": "When I skip doses or don't take the medicine as directed, though, I sometimes worry that it might be letting the virus start to gain ground again",
+            "turn": 6
+          },
+          {
+            "quote": "When things are going really well with my medication... I like to think that my body is just managing as best it can",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient believes the medication is helping keep things under control and attributes their current state to the treatment working. They also recognize that skipping doses can allow the virus to gain ground.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "HIV has just completely taken over my life—like it's the only thing that really matters anymore",
+            "turn": 7
+          },
+          {
+            "quote": "HIV might have changed a lot of things about my life, but it hasn't really changed who I am at my core",
+            "turn": 7
+          }
+        ],
+        "reasoning": "The patient describes HIV as having 'completely taken over my life' and being 'the only thing that really matters anymore' on some days, but also notes it hasn't changed who they are at their core.",
+        "score": 8.0,
+        "confidence": 0.7
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "I sometimes worry that it might be letting the virus start to gain ground again—that things could get worse if I'm not careful enough with my treatments",
+            "turn": 6
+          },
+          {
+            "quote": "It's hard not to worry about what might happen if something were to shift like that",
+            "turn": 8
+          },
+          {
+            "quote": "Another thing that keeps me up at night is just the general uncertainty of everything",
+            "turn": 8
+          },
+          {
+            "quote": "I've been having these kind of obsessive thoughts about whether the medication is really doing its job, or if I'm somehow making things worse by not being perfect with my regimen",
+            "turn": 12
+          },
+          {
+            "quote": "It's like this constant cycle of worry and self-doubt that can be really exhausting to deal with",
+            "turn": 12
+          }
+        ],
+        "reasoning": "The patient has frequent worries about medication effectiveness, resistance, opportunistic infections, and general uncertainty. They describe 'obsessive thoughts' and a 'constant cycle of worry and self-doubt' that is 'exhausting.'",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I know that there's no real clear-cut cause for HIV, but I've heard that it might be related to a combination of things—like sexual contact or sharing needles with someone who is already infected",
+            "turn": 6
+          },
+          {
+            "quote": "I guess I just sort of assume that the medicine is doing its job and keeping everything under control as long as I remember to take it consistently",
+            "turn": 6
+          },
+          {
+            "quote": "When things aren't going so well... I definitely feel like I can tell that something is happening at a deeper level",
+            "turn": 9
+          },
+          {
+            "quote": "It's almost like there's this constant battle going on inside me, and sometimes the virus comes out ahead while other times my body gets the upper hand",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient has a reasonable understanding of how HIV works, what causes it (though they acknowledge uncertainty), and how the medication is supposed to work. They have a conceptual model of 'a constant battle going on inside me' and understand the relationship between medication adherence and viral control.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "It's been a bit of an uphill battle managing everything",
+            "turn": 1
+          },
+          {
+            "quote": "what's really been getting me down is how all of these little things together just seem to be sapping away at my energy",
+            "turn": 2
+          },
+          {
+            "quote": "it just feels emotionally overwhelming to be dealing with this chronic illness all the time—to know that no matter what happens, HIV will always be a part of my life in some way or another",
+            "turn": 5
+          },
+          {
+            "quote": "It's a heavy weight to carry sometimes",
+            "turn": 8
+          },
+          {
+            "quote": "It can feel really isolating when you don't think anyone else really understands how all-consuming it can be",
+            "turn": 12
+          }
+        ],
+        "reasoning": "The patient describes feeling 'uphill battle,' 'getting me down,' 'emotionally overwhelming,' and carrying a 'heavy weight.' They also describe feeling 'isolated' and that the mental strain is 'all-consuming.'",
+        "score": 8.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "I know how important it is to take the medication exactly as prescribed",
+            "turn": 4
+          },
+          {
+            "quote": "I know deep down that those aren't exactly the best choices",
+            "turn": 4
+          },
+          {
+            "quote": "I think those feelings can sometimes make me want to take a break from the medication, even though I know it's not really the best idea",
+            "turn": 5
+          },
+          {
+            "quote": "I'm on medication that helps keep everything under control",
+            "turn": 3
+          },
+          {
+            "quote": "I guess I just sort of assume that the medicine is doing its job and keeping everything under control as long as I remember to take it consistently",
+            "turn": 6
+          },
+          {
+            "quote": "I sometimes worry that it might be letting the virus start to gain ground again—that things could get worse if I'm not careful enough with my treatments",
+            "turn": 6
+          }
+        ],
+        "reasoning": "The patient clearly believes the medication is important and necessary, but they struggle with adherence and sometimes want to take breaks. They recognize the importance of taking it as prescribed and understand that skipping doses can allow the virus to gain ground.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "sometimes it can be really hard to muster up the energy to even remember to take my pill",
+            "turn": 4
+          },
+          {
+            "quote": "sometimes the physical symptoms... are so exhausting that even getting out of bed to take my pill feels like an insurmountable task",
+            "turn": 5
+          },
+          {
+            "quote": "it just feels emotionally overwhelming to be dealing with this chronic illness all the time",
+            "turn": 5
+          },
+          {
+            "quote": "I've been having these kind of obsessive thoughts about whether the medication is really doing its job, or if I'm somehow making things worse by not being perfect with my regimen",
+            "turn": 12
+          },
+          {
+            "quote": "It's like this constant cycle of worry and self-doubt that can be really exhausting to deal with",
+            "turn": 12
+          }
+        ],
+        "reasoning": "The patient has concerns about the emotional burden of taking medication, the physical exhaustion it causes, and obsessive thoughts about whether it's working. They've had to skip doses or take breaks due to these concerns.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "I think there's definitely some concern in the back of my mind about overprescribing, especially for things like chronic conditions where medication can sometimes have a real impact on quality of life",
+            "turn": 11
+          },
+          {
+            "quote": "I also know that doctors are usually working from a place of wanting to help their patients—not harm them",
+            "turn": 11
+          }
+        ],
+        "reasoning": "The patient expresses concern about overprescribing and how medication can impact quality of life, but they also trust that doctors are working to help, not harm. This suggests mild general caution about medicines as a class.",
+        "score": 3.0,
+        "confidence": 0.7
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [
+          {
+            "quote": "I think there's definitely some concern in the back of my mind about overprescribing, especially for things like chronic conditions where medication can sometimes have a real impact on quality of life",
+            "turn": 11
+          }
+        ],
+        "reasoning": "The patient expresses concern about overprescribing, particularly for chronic conditions. This suggests they believe doctors may prescribe too readily in some cases.",
+        "score": 4.0,
+        "confidence": 0.7
+      }
+    },
+    "causes": [
+      "uncertain about specific cause",
+      "sexual contact or sharing needles with someone who is already infected"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "I know that there's no real clear-cut cause for HIV, but I've heard that it might be related to a combination of things—like sexual contact or sharing needles with someone who is already infected",
+        "turn": 6
+      }
+    ]
+  }
+}

@@ -1,0 +1,322 @@
+{
+  "patient_id": "CLL-003",
+  "turns": 15,
+  "stop_reason": "doctor",
+  "conversation": [
+    {
+      "role": "doctor",
+      "content": "Hello. What brings you in to see me today?",
+      "turn": 1
+    },
+    {
+      "role": "patient",
+      "content": "Well, doctor, I've been feeling a bit more tired than usual after work lately. Also, my wife noticed a small lump in my neck. It's not causing any pain or discomfort, but it's making me a little worried. That's why I decided to come in for a check-up.",
+      "turn": 1
+    },
+    {
+      "role": "doctor",
+      "content": "Tell me more about the lump in your neck. When did your wife first notice it, and how big does it seem to be?",
+      "turn": 2
+    },
+    {
+      "role": "patient",
+      "content": "She noticed it a couple of weeks ago when we were getting ready for bed. It's not very big, just about the size of a pea. I haven't really noticed it myself, but she says it's been there consistently since she first spotted it.",
+      "turn": 2
+    },
+    {
+      "role": "doctor",
+      "content": "Is this the first time you've noticed anything unusual in your neck, or have you had other lumps or swellings before? Have you had any recent infections, particularly a sore throat or cold, that might explain swollen lymph nodes?",
+      "turn": 3
+    },
+    {
+      "role": "patient",
+      "content": "No, doctor, this is the first time I've noticed anything like this. As far as I can remember, my neck has always been pretty normal. I haven't had any recent infections or illnesses that might explain it. I've just been feeling a bit more run down than usual lately.",
+      "turn": 3
+    },
+    {
+      "role": "doctor",
+      "content": "You mentioned feeling more tired than usual after work. How would you describe that fatigue? Does it affect how you feel at the end of the day, or have you noticed it interfering with your ability to do your normal activities?",
+      "turn": 4
+    },
+    {
+      "role": "patient",
+      "content": "Well, doctor, I've just been feeling a bit more drained lately. It's not like I'm completely exhausted or anything, but I definitely notice that I need a little extra rest after work. It doesn't really interfere with my activities during the day, but I find myself dozing off on the couch when I get home. I figure it might just be part of getting older, but I thought I'd mention it just in case there's something going on.",
+      "turn": 4
+    },
+    {
+      "role": "doctor",
+      "content": "Do you have any chronic medical conditions that I should know about, and are you currently taking any medications? Have you noticed any other symptoms like weight changes, night sweats, or fevers?",
+      "turn": 5
+    },
+    {
+      "role": "patient",
+      "content": "I don't have any other chronic medical conditions, aside from the CLL that I mentioned earlier. I'm just taking my usual medication for that. No, I haven't noticed any significant weight changes, night sweats, or fevers. I've been feeling pretty much like myself, aside from this lump in my neck and the increased tiredness after work.",
+      "turn": 5
+    },
+    {
+      "role": "doctor",
+      "content": "I see. You mentioned you have CLL - when were you diagnosed with that, and what treatment have you been receiving? Have you had any recent blood work or clinic visits related to your CLL?",
+      "turn": 6
+    },
+    {
+      "role": "patient",
+      "content": "I was diagnosed with CLL a few years ago, but the hematologist said it's still in a very early stage. I haven't needed any medication yet, just regular follow-up appointments every three months and occasional blood work to keep an eye on my counts. The last time I saw the hematologist, everything seemed to be stable and under control.",
+      "turn": 6
+    },
+    {
+      "role": "doctor",
+      "content": "You said you're not on any medication yet for the CLL. Have you been instructed to take any medications or supplements for this condition, or are you on anything else regularly? And when was your last visit with the hematologist, and what were your blood counts like at that time?",
+      "turn": 7
+    },
+    {
+      "role": "patient",
+      "content": "No, doctor, I'm not on any medications or supplements specifically for the CLL. I've been taking a multivitamin just to make sure I'm getting all the nutrients I need, but that's about it. My last visit with the hematologist was a few months ago, and my blood counts were only mildly abnormal. He said that's pretty common at this stage of CLL and not to worry too much about it for now.",
+      "turn": 7
+    },
+    {
+      "role": "doctor",
+      "content": "Since your CLL is stable and you're not on treatment, the neck lump is worth investigating. Have you had your neck examined before, or has anyone looked at this lump since your wife first noticed it? And is there any history of enlarged lymph nodes elsewhere?",
+      "turn": 8
+    },
+    {
+      "role": "patient",
+      "content": "No one has looked at the lump in my neck yet, doctor. My wife is the only one who's noticed it so far. I don't have any history of enlarged lymph nodes or anything like that. As far as I know, no one else in my family has had any issues with their lymph nodes either.",
+      "turn": 8
+    },
+    {
+      "role": "doctor",
+      "content": "Let's take a look at the lump. Can you point to where in your neck it is, and can you describe how it feels - is it firm or soft, attached to the skin or deeper, and is it moving freely when you move your neck?",
+      "turn": 9
+    },
+    {
+      "role": "patient",
+      "content": "Of course, doctor. It's right here on the left side of my neck, just below my jawline. If I'm understanding what you're asking, it feels a bit firm to the touch but not hard - more like soft tissue, if that makes sense. It seems to be attached to the skin and doesn't move around much when I move my head.",
+      "turn": 9
+    },
+    {
+      "role": "doctor",
+      "content": "That sounds like a lymph node. Let me have you turn your head to the right so I can examine it more thoroughly. Also, can you tell me more about how long you've been feeling the fatigue - is it something that has developed gradually over weeks or months?",
+      "turn": 10
+    },
+    {
+      "role": "patient",
+      "content": "Here you go, doctor. And as for the fatigue, it's definitely something that's developed gradually over the past few months. It hasn't gotten too bad yet, but I'm starting to notice that I need more and more rest after work these days.",
+      "turn": 10
+    },
+    {
+      "role": "doctor",
+      "content": "Let me just check a few other areas around your neck and under your arms to see if there are any other enlarged lymph nodes. Also, have you noticed any changes in your skin - like new moles, rashes, or any unusual spots?",
+      "turn": 11
+    },
+    {
+      "role": "patient",
+      "content": "Of course, doctor. Go ahead and check whatever you need to. And no, I haven't really noticed any changes in my skin aside from the occasional sunspots that come up during the summer. Nothing too out of the ordinary.",
+      "turn": 11
+    },
+    {
+      "role": "doctor",
+      "content": "I've examined your neck and there appears to be an enlarged lymph node on the left side below your jawline. It's firm, attached to the skin, and doesn't move freely, which is concerning and should be evaluated. Given your history of CLL, this could be related to your condition or could be something else entirely. We'll need to investigate this further.",
+      "turn": 12
+    },
+    {
+      "role": "patient",
+      "content": "I understand, doctor. Thank you for taking a look at it. I'm a bit worried, but I trust that we'll figure out what's going on. And if it is related to my CLL, then I know you'll take care of me and help manage the condition.",
+      "turn": 12
+    },
+    {
+      "role": "doctor",
+      "content": "Given the enlarged lymph node, I'd like to arrange some follow-up testing. We should get some blood work done, including a complete blood count and possibly a lymph node biopsy if needed. I'll also want you to see your hematologist to discuss this finding. How does that sound to you?",
+      "turn": 13
+    },
+    {
+      "role": "patient",
+      "content": "That sounds fine, doctor. I'm happy to do whatever needs to be done to figure out what's going on with the lump in my neck. And of course, I'll make sure to keep up with any appointments or tests you recommend.",
+      "turn": 13
+    },
+    {
+      "role": "doctor",
+      "content": "To summarize, you have an enlarged lymph node in your left neck that needs evaluation, and you've also reported some increasing fatigue over the past few months. We'll arrange blood work and follow up with your hematologist. Please let me know if you have any other concerns before we wrap up.",
+      "turn": 14
+    },
+    {
+      "role": "patient",
+      "content": "No, doctor, I think that covers everything for now. Thank you for taking the time to examine the lump in my neck and for helping me figure out what's going on. I'll make sure to follow up with all of your recommendations.",
+      "turn": 14
+    },
+    {
+      "role": "doctor",
+      "content": "You're welcome. I'll get the blood work ordered and send a referral to your hematologist. Take care, and I'll see you again for follow-up.",
+      "turn": 15
+    },
+    {
+      "role": "patient",
+      "content": "Thank you, doctor. It was nice meeting you today. Have a great day!",
+      "turn": 15
+    }
+  ],
+  "coverage_hint": {},
+  "working_notes": [],
+  "events": [],
+  "usage": [
+    {
+      "role": "doctor",
+      "eval_tokens": 155,
+      "prompt_tokens": 1527
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 62,
+      "prompt_tokens": 1173
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 113,
+      "prompt_tokens": 1747
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 53,
+      "prompt_tokens": 1271
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 123,
+      "prompt_tokens": 1916
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 60,
+      "prompt_tokens": 1380
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 117,
+      "prompt_tokens": 2102
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 95,
+      "prompt_tokens": 1494
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 110,
+      "prompt_tokens": 2317
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 73,
+      "prompt_tokens": 1637
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 106,
+      "prompt_tokens": 2503
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 71,
+      "prompt_tokens": 1758
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 129,
+      "prompt_tokens": 2683
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 89,
+      "prompt_tokens": 1895
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 148,
+      "prompt_tokens": 2904
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 65,
+      "prompt_tokens": 2045
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 97,
+      "prompt_tokens": 3120
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 75,
+      "prompt_tokens": 2171
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 132,
+      "prompt_tokens": 3295
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 53,
+      "prompt_tokens": 2309
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 101,
+      "prompt_tokens": 3483
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 48,
+      "prompt_tokens": 2421
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 124,
+      "prompt_tokens": 3635
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 58,
+      "prompt_tokens": 2552
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 122,
+      "prompt_tokens": 3820
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 50,
+      "prompt_tokens": 2679
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 101,
+      "prompt_tokens": 3995
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 50,
+      "prompt_tokens": 2797
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 65,
+      "prompt_tokens": 4149
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 18,
+      "prompt_tokens": 2889
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 827,
+      "prompt_tokens": 4235
+    },
+    {
+      "role": "report",
+      "eval_tokens": 10539,
+      "prompt_tokens": 9564
+    }
+  ]
+}

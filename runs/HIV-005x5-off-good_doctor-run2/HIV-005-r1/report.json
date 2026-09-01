@@ -1,0 +1,307 @@
+{
+  "patient_id": "HIV-005",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "HIV-005",
+    "clinical_summary": "Patient has been living with a chronic illness for several years and describes it as something they will have for the rest of their life. The medication has helped keep their viral load under control but they are experiencing significant side effects including severe headaches (described as 'vise around my skull'), fatigue, and sleep issues. They have considered skipping doses due to the burden of side effects and worry about long-term effects of the medication. They have good understanding of when the medication works but feel uncertain about how to integrate other approaches like exercise, nutrition, and stress management into their daily life. They have supportive friends and family but worry about being a burden. They have experienced changes in identity, having to let go of some ambitions, and at times feel the illness defines them. They struggle with uncertainty about what is real vs. imagined and find medical explanations confusing at times.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "my illness has been weighing quite heavily on me lately. It feels like it's taking over my life — work, relationships, everything",
+            "turn": 1
+          },
+          {
+            "quote": "I can barely get through a shift any more",
+            "turn": 3
+          },
+          {
+            "quote": "It feels like no matter what I do or how hard I try, there's always something else that needs to be taken care of — whether it's work stress, family obligations, or just the day-to-day tasks of living with an illness",
+            "turn": 11
+          }
+        ],
+        "reasoning": "Patient describes the illness as weighing heavily and taking over their life, affecting work, relationships, and daily functioning. They mention being unable to complete shifts and having to let go of ambitions and dreams, indicating a major role is lost or substantially reduced.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "this illness is here to stay, no matter what I do or how well I follow the treatment plan",
+            "turn": 2
+          },
+          {
+            "quote": "my understanding of the illness is that it's something I'll have for the rest of my life",
+            "turn": 3
+          },
+          {
+            "quote": "this is something I'm going to have to deal with for the rest of my life",
+            "turn": 9
+          }
+        ],
+        "reasoning": "Patient clearly states the illness is here to stay and something they will have for the rest of their life, with no expectation of it ending. They plan around it continuing.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "Sometimes it feels like I have no control at all",
+            "turn": 1
+          },
+          {
+            "quote": "I'm struggling to find a sense of control in all this uncertainty",
+            "turn": 2
+          },
+          {
+            "quote": "I think part of it might involve finding ways to make self-care feel less like another chore on my already long to-do list",
+            "turn": 10
+          },
+          {
+            "quote": "taking a short walk during lunch break, or making sure I've got some healthy snacks on hand when I get home from work",
+            "turn": 10
+          }
+        ],
+        "reasoning": "Patient expresses limited sense of control but shows emerging awareness of ways to exercise control through lifestyle changes and self-care practices. They are actively thinking about small, manageable steps.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "the medication has helped keep things under control most of the time",
+            "turn": 3
+          },
+          {
+            "quote": "My viral load hasn't spiked out of control, which is good",
+            "turn": 5
+          },
+          {
+            "quote": "when I remember to take the pills, I feel more confident in my ability to manage the illness",
+            "turn": 5
+          },
+          {
+            "quote": "there have been times where they've adjusted the dosage or switched out pills because of a specific side effect I was experiencing",
+            "turn": 7
+          }
+        ],
+        "reasoning": "Patient clearly believes the medication is effective and has experienced doctors adjusting dosage and switching medications when side effects occur. However, they also express doubt about whether it's 'all worth it' and worry about long-term effects.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "There are parts of myself that I've had to let go — certain ambitions, dreams, and goals that just aren't feasible anymore",
+            "turn": 13
+          },
+          {
+            "quote": "there have been times when it feels like the illness is defining me more than anything else",
+            "turn": 13
+          },
+          {
+            "quote": "sometimes the headache hits out of nowhere and just ruins my plans for the rest of the day",
+            "turn": 4
+          },
+          {
+            "quote": "I tend to withdraw into quiet, dark spaces until the worst of it passes",
+            "turn": 4
+          }
+        ],
+        "reasoning": "Patient describes having to let go of ambitions and feeling at times that the illness defines them. They experience daily, intrusive symptoms (headaches) that interrupt their plans and cause them to withdraw.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "I'm just not sure if it's all worth it",
+            "turn": 1
+          },
+          {
+            "quote": "I worry that not taking my meds regularly will lead to complications down the line",
+            "turn": 3
+          },
+          {
+            "quote": "there's this underlying worry that things could get worse at any moment",
+            "turn": 11
+          },
+          {
+            "quote": "I think part of me is always waiting for the next shoe to drop — that next time the headaches come back, or my viral load starts spiking again",
+            "turn": 11
+          },
+          {
+            "quote": "I'm worried about being a burden",
+            "turn": 12
+          }
+        ],
+        "reasoning": "Patient expresses frequent worry about the illness and its progression, describing living with 'constant sense of being weighed down' and 'underlying worry that things could get worse at any moment.' They worry about being a burden and whether their concerns are real.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "Most of the time when my doctor explains things to me, it's like they're speaking another language",
+            "turn": 9
+          },
+          {
+            "quote": "I end up feeling even more confused about what's going on",
+            "turn": 9
+          },
+          {
+            "quote": "I'm still trying to wrap my head around what it means to live with a chronic illness long-term",
+            "turn": 9
+          },
+          {
+            "quote": "It's hard to imagine how things will change over time — whether the medication will start affecting me in new ways or if the symptoms will just continue as they are now",
+            "turn": 9
+          }
+        ],
+        "reasoning": "Patient finds medical explanations confusing and struggles to understand what it means to live with a chronic illness long-term. They have gaps in their understanding of how the illness and treatment work together.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "Emotionally, it's been a really rough time",
+            "turn": 11
+          },
+          {
+            "quote": "It feels like no matter what I do or how hard I try, there's always something else that needs to be taken care of",
+            "turn": 11
+          },
+          {
+            "quote": "It's like walking on a tightrope without ever really knowing when you might stumble and fall",
+            "turn": 11
+          },
+          {
+            "quote": "I think part of me is always waiting for the next shoe to drop",
+            "turn": 11
+          }
+        ],
+        "reasoning": "Patient describes experiencing significant emotional distress, feeling 'weighed down' and living with constant anxiety. The emotion is prominent and affects what they do.",
+        "score": 8.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "the medication has helped keep things under control most of the time",
+            "turn": 3
+          },
+          {
+            "quote": "My viral load hasn't spiked out of control, which is good",
+            "turn": 5
+          },
+          {
+            "quote": "when I remember to take the pills, I feel more confident in my ability to manage the illness",
+            "turn": 5
+          },
+          {
+            "quote": "I worry that not taking my meds regularly will lead to complications down the line",
+            "turn": 3
+          }
+        ],
+        "reasoning": "Patient clearly believes the medication is needed and effective, but also expresses doubt about whether it's 'all worth it' and has considered skipping doses. They treat it as important but have doubts.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "I've started getting these terrible headaches since I started taking it",
+            "turn": 1
+          },
+          {
+            "quote": "there are other side effects that can be tough to deal with — mostly just feeling fatigued all the time or having trouble sleeping",
+            "turn": 6
+          },
+          {
+            "quote": "there's this nagging worry in the back of my mind about what long-term effects these medications might have on my body",
+            "turn": 6
+          },
+          {
+            "quote": "sometimes I even skip doses because I just can't bear the thought of going through another day like today",
+            "turn": 5
+          },
+          {
+            "quote": "When I skip doses, it's usually because I'm trying to take a break from the constant feeling of being medicated",
+            "turn": 6
+          },
+          {
+            "quote": "But afterward, I always start to worry that I've done something wrong",
+            "turn": 6
+          }
+        ],
+        "reasoning": "Patient has significant concerns about medication side effects (headaches, fatigue, sleep issues) and long-term effects. They have considered skipping doses and experience anxiety after doing so. These concerns have changed their behavior.",
+        "score": 5.0,
+        "confidence": 0.8
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "there's this nagging worry in the back of my mind about what long-term effects these medications might have on my body",
+            "turn": 6
+          },
+          {
+            "quote": "sometimes it's just really hard not to wonder if we're making things worse by trying to manage the illness at all",
+            "turn": 6
+          }
+        ],
+        "reasoning": "Patient expresses worry about long-term effects of medications on their body and questions whether managing the illness is making things worse. This suggests they hold that medicines generally do harm alongside good, and are wary of them as a group.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [
+          {
+            "quote": "I know you're supposed to trust your doctors, but sometimes it's just really hard not to wonder if we're making things worse by trying to manage the illness at all",
+            "turn": 6
+          },
+          {
+            "quote": "I've never really felt comfortable bringing these concerns up with my doctor",
+            "turn": 7
+          },
+          {
+            "quote": "there always seems to be a sense of urgency in the appointments, and I don't want to take up too much time with things that might seem trivial compared to the bigger picture",
+            "turn": 7
+          }
+        ],
+        "reasoning": "Patient expresses skepticism about medical approaches and feels uncomfortable bringing up concerns due to perceived time constraints. This suggests they hold that doctors reach for medication too quickly, as a general pattern.",
+        "score": 4.0,
+        "confidence": 0.7
+      }
+    },
+    "causes": [
+      "uncertainty about causes",
+      "self-blure about past behaviors"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "Sometimes I wonder if things would have been different if I had tested earlier, or if I hadn't let my guard down with that previous partner",
+        "turn": 2
+      },
+      {
+        "quote": "But then again, maybe it's just bad luck",
+        "turn": 2
+      }
+    ]
+  }
+}

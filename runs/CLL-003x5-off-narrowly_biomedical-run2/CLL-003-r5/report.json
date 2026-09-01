@@ -1,0 +1,256 @@
+{
+  "patient_id": "CLL-003",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "CLL-003",
+    "clinical_summary": "The patient presented with a solitary, painless pea-sized lump in the submandibular region (under the chin) that has been present for about a month without change in size or shape. The lump is mobile, firm but not tender, and not associated with any other neck swelling or recent dental issues. Fatigue has been present for about two weeks, worse after work, described as physical tiredness with reduced energy and slower recovery from exercise. No night sweats, temperature changes, or other associated symptoms. The patient is not on any medication and has no chronic conditions. Examination findings: neck lump is firm, mobile, non-tender; thyroid is normal in size and smooth; no other lymphadenopathy noted. Assessment: neck lump is most likely benign; fatigue is non-specific. Plan: watchful waiting for neck lump with monthly self-examination; lifestyle changes for fatigue; blood work if symptoms worsen.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "I've been feeling a bit more tired than usual after work",
+            "turn": 1
+          },
+          {
+            "quote": "It doesn't really impact my ability to do daily activities",
+            "turn": 4
+          },
+          {
+            "quote": "I used to be able to get through my normal daily activities without feeling too tired, but now I find myself needing a bit of extra rest in the afternoon or evening",
+            "turn": 9
+          },
+          {
+            "quote": "It's more of a physical tiredness - I feel like I have less energy overall, and it's taking longer for me to recover from workouts or other physically taxing activities",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient describes fatigue that is noticeable after work and requires extra rest, but they explicitly state it doesn't impact their ability to do daily activities. They have scaled back slightly (needing extra rest, slower recovery from workouts) but are still able to function. This aligns with a score of 4 on the scale - they keep their roles but have changed how they do them (pacing, extra rest).",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "It hasn't grown larger or changed shape since then",
+            "turn": 2
+          },
+          {
+            "quote": "I'll keep a close eye on both the lump in my neck and my fatigue, and come back if anything changes",
+            "turn": 17
+          }
+        ],
+        "reasoning": "The patient has not expressed any clear expectation about duration. The lump has been stable for a month, and the plan is to monitor for another month. No clear view on whether this is temporary or chronic. The patient is taking a watchful waiting approach but hasn't stated whether they expect resolution or continuation.",
+        "score": null,
+        "confidence": 0.5
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I'll keep a close eye on both the lump in my neck and my fatigue, and come back if anything changes",
+            "turn": 17
+          }
+        ],
+        "reasoning": "The patient is actively monitoring the lump ('keep a close eye on it') and appears to feel able to manage fatigue through lifestyle changes (exercise, sleep, stress management). They are taking an active role in monitoring and self-care. This aligns with a score of 6 - they act and credit their actions with some effect alongside the treatment.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "I'm not on any medication",
+            "turn": 5
+          }
+        ],
+        "reasoning": "The patient is not currently on any medication. The proposed treatment is lifestyle changes and monitoring, not pharmacological treatment. No evidence of beliefs about treatment effectiveness since no treatment has been prescribed.",
+        "score": null,
+        "confidence": 0.5
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "I've been feeling a bit more tired than usual after work, and recently noticed a small lump in my neck",
+            "turn": 1
+          },
+          {
+            "quote": "The lump is located right underneath my chin, about in the middle",
+            "turn": 6
+          },
+          {
+            "quote": "When I press on the lump, it doesn't really hurt or feel tender",
+            "turn": 7
+          },
+          {
+            "quote": "The fatigue happens every day, but it seems to be most noticeable after work",
+            "turn": 9
+          },
+          {
+            "quote": "I used to be able to get through my normal daily activities without feeling too tired, but now I find myself needing a bit of extra rest in the afternoon or evening",
+            "turn": 9
+          },
+          {
+            "quote": "It's more of a physical tiredness - I feel like I have less energy overall, and it's taking longer for me to recover from workouts or other physically taxing activities",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient has two identifiable symptoms: fatigue and a neck lump. They describe these clearly and attribute them to their current state. The fatigue is daily and noticeable, and the lump is a physical finding they can describe precisely. This aligns with a score of 4 - one or two symptoms, intermittent, not limiting.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "It's not causing me any pain, but it's bothering me enough to want to get it checked out",
+            "turn": 1
+          },
+          {
+            "quote": "That's mainly why I wanted to come in and get it checked out",
+            "turn": 2
+          },
+          {
+            "quote": "Like I said earlier, the lump in my neck and the fatigue are the main things that prompted me to come in today",
+            "turn": 11
+          }
+        ],
+        "reasoning": "The patient is concerned enough to seek evaluation, but there is no evidence of significant worry or distress. The lump is described as 'bothering me enough to want to get it checked out' rather than causing anxiety. The patient appears calm and pragmatic, with no expressed fear or emotional distress. This aligns with a score of 2 - worry appears only when you raise it, and passes.",
+        "score": 2.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I've been feeling a bit more tired than usual after work, and recently noticed a small lump in my neck",
+            "turn": 1
+          },
+          {
+            "quote": "I first noticed the lump about a month ago, when I was getting dressed one morning. It hasn't grown larger or changed shape since then",
+            "turn": 2
+          },
+          {
+            "quote": "No, I haven't had any recent infections, sore throat, or fever",
+            "turn": 3
+          },
+          {
+            "quote": "I have a family history of thyroid issues, but I haven't been diagnosed with anything myself",
+            "turn": 5
+          },
+          {
+            "quote": "The lump is located right underneath my chin, about in the middle",
+            "turn": 6
+          },
+          {
+            "quote": "When I press on the lump, it doesn't really hurt or feel tender",
+            "turn": 7
+          },
+          {
+            "quote": "No, I haven't had any recent issues with my teeth or gums",
+            "turn": 8
+          },
+          {
+            "quote": "The fatigue happens every day, but it seems to be most noticeable after work",
+            "turn": 9
+          },
+          {
+            "quote": "Besides the lump in my neck and the fatigue, I haven't noticed any major changes in my energy levels throughout the day",
+            "turn": 10
+          },
+          {
+            "quote": "Like I said earlier, the lump in my neck and the fatigue are the main things that prompted me to come in today",
+            "turn": 11
+          }
+        ],
+        "reasoning": "The patient has a basic understanding of their symptoms and can describe them clearly. They know the lump has been present for a month without change, and they can describe its location and characteristics. They have some awareness of family history of thyroid issues. However, they don't have a clear understanding of what's causing the lump or the fatigue, and they're relying on the doctor for explanation. This aligns with a score of 4 - they know the label (lump, fatigue) and the treatment (monitoring, lifestyle changes), but not what either is for.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "It's not causing me any pain, but it's bothering me enough to want to get it checked out",
+            "turn": 1
+          },
+          {
+            "quote": "That's mainly why I wanted to come in and get it checked out",
+            "turn": 2
+          },
+          {
+            "quote": "Like I said earlier, the lump in my neck and the fatigue are the main things that prompted me to come in today",
+            "turn": 11
+          },
+          {
+            "quote": "That's reassuring to hear",
+            "turn": 16
+          },
+          {
+            "quote": "Yes, that all sounds very reasonable",
+            "turn": 17
+          },
+          {
+            "quote": "Thank you for taking the time to see me today. Have a great day!",
+            "turn": 18
+          }
+        ],
+        "reasoning": "The patient appears calm and pragmatic throughout the consultation. There is no expressed fear, frustration, or emotional distress. The tone is matter-of-fact and cooperative. The patient is satisfied with the assessment and plan. This aligns with a score of 2 - they discuss the illness without emotional content, and do not steer away from it.",
+        "score": 2.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "I'm not on any medication",
+            "turn": 5
+          }
+        ],
+        "reasoning": "The patient is not currently on any medication. No evidence of beliefs about medication necessity since no medication has been prescribed.",
+        "score": null,
+        "confidence": 0.5
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "I'm not on any medication",
+            "turn": 5
+          }
+        ],
+        "reasoning": "The patient is not currently on any medication. No evidence of concerns about medication since no medication has been prescribed.",
+        "score": null,
+        "confidence": 0.5
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [],
+        "reasoning": "The patient has not expressed any views about medicines as a class. No evidence of general beliefs about medication harm.",
+        "score": null,
+        "confidence": 0.5
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "The patient has not expressed any views about prescribing practices. No evidence of general beliefs about overuse of medication.",
+        "score": null,
+        "confidence": 0.5
+      }
+    },
+    "causes": [
+      "family history of thyroid issues"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "I have a family history of thyroid issues",
+        "turn": 5
+      }
+    ]
+  }
+}

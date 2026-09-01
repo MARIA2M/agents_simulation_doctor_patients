@@ -1,0 +1,333 @@
+{
+  "patient_id": "CLL-004",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "CLL-004",
+    "clinical_summary": "A patient with a chronic illness experiencing significant impact on daily life, including fatigue, recurrent infections, swollen lymph nodes, unintentional weight loss, and early satiety. They take medications as prescribed but are skeptical about their effectiveness and have concerns about long-term use. They feel powerless against the illness and worry about the future, though they are generally coping fairly well.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "my chronic illness is really getting in the way of my daily life",
+            "turn": 1
+          },
+          {
+            "quote": "affecting my energy levels, causing recurrent infections, and leaving me feeling extremely tired all the time",
+            "turn": 1
+          },
+          {
+            "quote": "The fatigue is one of the most challenging aspects for me... making even simple tasks feel overwhelmingly difficult at times",
+            "turn": 2
+          },
+          {
+            "quote": "recurrent infections that require antibiotics multiple times a year",
+            "turn": 2
+          },
+          {
+            "quote": "swollen lymph nodes... quite uncomfortable and make me self-conscious about my appearance",
+            "turn": 2
+          },
+          {
+            "quote": "Losing weight unintentionally over the past year",
+            "turn": 2
+          },
+          {
+            "quote": "early satiety issues that leave me feeling full too quickly",
+            "turn": 2
+          },
+          {
+            "quote": "constant worry about the future",
+            "turn": 2
+          },
+          {
+            "quote": "extremely overwhelming",
+            "turn": 1
+          }
+        ],
+        "reasoning": "The patient describes multiple severe symptoms that significantly impact daily functioning - fatigue making simple tasks difficult, recurrent infections requiring antibiotics multiple times per year, swollen lymph nodes causing discomfort and self-consciousness, unintentional weight loss, and early satiety. They also experience constant worry about the future. This represents a major role reduction and substantial functional impairment.",
+        "score": 8.0,
+        "confidence": 0.85
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "I understand that I might have to deal with this chronic illness for a long time, if not permanently",
+            "turn": 1
+          }
+        ],
+        "reasoning": "The patient explicitly states they expect to deal with their chronic illness for a long time, if not permanently. This indicates they are planning on the assumption that the condition will continue, rather than expecting it to end.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I feel powerless against it",
+            "turn": 1
+          },
+          {
+            "quote": "so much of this illness seems out of my control",
+            "turn": 4
+          },
+          {
+            "quote": "I try to maintain a healthy diet and exercise when possible, but those things only go so far",
+            "turn": 4
+          }
+        ],
+        "reasoning": "The patient describes feeling powerless against the illness and notes that much of it is 'out of my control.' While they attempt lifestyle measures like diet and exercise, they acknowledge these only go so far, indicating limited personal control.",
+        "score": 2.0,
+        "confidence": 0.85
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "The treatment does seem to help a little bit, but I can't say I'm fully convinced that it makes a major difference in my overall condition",
+            "turn": 1
+          },
+          {
+            "quote": "they don't seem to fully address all the symptoms you described earlier — like the fatigue or early satiety",
+            "turn": 4
+          },
+          {
+            "quote": "I'm trying to focus on the treatments as the main approach",
+            "turn": 4
+          }
+        ],
+        "reasoning": "The patient acknowledges that treatment helps 'a little bit' but is not convinced it makes a major difference. They note that medications don't fully address key symptoms like fatigue and early satiety. While they rely on treatment as their main approach, their confidence in its effectiveness is limited.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "my chronic illness",
+            "turn": 1
+          },
+          {
+            "quote": "recurrent infections",
+            "turn": 1
+          },
+          {
+            "quote": "swollen lymph nodes",
+            "turn": 1
+          },
+          {
+            "quote": "fatigue",
+            "turn": 2
+          },
+          {
+            "quote": "early satiety",
+            "turn": 2
+          },
+          {
+            "quote": "losing weight unintentionally over the past year",
+            "turn": 2
+          }
+        ],
+        "reasoning": "The patient clearly identifies with their illness and lists multiple symptoms that they attribute to it: chronic illness, recurrent infections, swollen lymph nodes, fatigue, early satiety, and unintentional weight loss. These symptoms are daily and intrusive.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "It's quite overwhelming emotionally",
+            "turn": 1
+          },
+          {
+            "quote": "I worry about how it's impacting my life and the lives of those around me",
+            "turn": 1
+          },
+          {
+            "quote": "constant worry about the future",
+            "turn": 2
+          },
+          {
+            "quote": "One thing that's been particularly hard to manage is the uncertainty — not knowing what the future holds or how my condition might progress",
+            "turn": 6
+          },
+          {
+            "quote": "extremely overwhelming",
+            "turn": 2
+          }
+        ],
+        "reasoning": "The patient describes being 'overwhelmed emotionally' and experiencing 'constant worry about the future.' They worry about how the illness impacts their life and others, and find uncertainty particularly difficult to manage. This worry is frequent and intrudes on their decision-making.",
+        "score": 8.0,
+        "confidence": 0.85
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I understand that I might have to deal with this chronic illness for a long time, if not permanently",
+            "turn": 1
+          },
+          {
+            "quote": "I believe the illness was caused by bad luck, though I know some of my behaviors might have played a role as well — like smoking for many years",
+            "turn": 1
+          },
+          {
+            "quote": "I believe it was a combination of things, both under my control and outside of it",
+            "turn": 3
+          },
+          {
+            "quote": "I try to maintain a healthy diet and exercise when possible",
+            "turn": 4
+          },
+          {
+            "quote": "I'll take the meds if it means having a better quality of life",
+            "turn": 5
+          }
+        ],
+        "reasoning": "The patient demonstrates good understanding of their condition. They explain that the illness will last long-term, understand that causes are a combination of factors (both within and outside their control), know they need medication for quality of life, and understand the balance between risks and benefits.",
+        "score": 8.0,
+        "confidence": 0.85
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "It's quite overwhelming emotionally",
+            "turn": 1
+          },
+          {
+            "quote": "I feel powerless against it",
+            "turn": 1
+          },
+          {
+            "quote": "It's really difficult to manage at times",
+            "turn": 3
+          },
+          {
+            "quote": "One thing that's been particularly hard to manage is the uncertainty",
+            "turn": 6
+          },
+          {
+            "quote": "Today has been a bit difficult just because we've had this conversation about the challenges I'm facing",
+            "turn": 6
+          },
+          {
+            "quote": "I try to find solace in learning to live with it rather than constantly questioning whether I deserved it or not",
+            "turn": 3
+          },
+          {
+            "quote": "I've been coping fairly well",
+            "turn": 6
+          }
+        ],
+        "reasoning": "The patient describes being 'overwhelmed emotionally,' feeling powerless, finding it 'really difficult to manage at times,' and noting that uncertainty is particularly hard to manage. They acknowledge that today was difficult due to the conversation about challenges. Despite these difficulties, they report being 'coping fairly well' overall, indicating that the emotional impact is prominent but they are managing.",
+        "score": 8.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "I've been taking my medications as prescribed",
+            "turn": 1
+          },
+          {
+            "quote": "I am grateful for the medications and their potential benefits",
+            "turn": 4
+          },
+          {
+            "quote": "I understand they're essential for managing this illness",
+            "turn": 5
+          },
+          {
+            "quote": "I'll take the meds if it means having a better quality of life",
+            "turn": 5
+          }
+        ],
+        "reasoning": "The patient takes medications as prescribed, is grateful for them, understands they are essential for managing the illness, and will take them to achieve better quality of life. This demonstrates a strong belief in the necessity of their prescribed medication.",
+        "score": 5.0,
+        "confidence": 0.85
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "I can't help but wonder if its risks might sometimes outweigh the benefits",
+            "turn": 1
+          },
+          {
+            "quote": "One thing that keeps me worried is the possibility of developing new health issues from the long-term use of these medicines, given what I've read about their potential side effects",
+            "turn": 5
+          },
+          {
+            "quote": "it's hard not to feel some concern",
+            "turn": 5
+          }
+        ],
+        "reasoning": "The patient has specific concerns about long-term medication use, including worries about developing new health issues and whether risks outweigh benefits. They have read about potential side effects and acknowledge feeling concern. These concerns have not yet led to behavior change but are active and recurring.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "I've read about their potential side effects",
+            "turn": 5
+          },
+          {
+            "quote": "I can't help but wonder if its risks might sometimes outweigh the benefits",
+            "turn": 1
+          }
+        ],
+        "reasoning": "The patient has read about potential side effects of medicines and worries about whether risks might outweigh benefits. This indicates a general caution about medicines as a class, though not an extreme avoidance.",
+        "score": 3.0,
+        "confidence": 0.75
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [
+          {
+            "quote": "especially given that you doctors tend to over-prescribe at times",
+            "turn": 1
+          }
+        ],
+        "reasoning": "The patient explicitly states that 'you doctors tend to over-prescribe at times.' This is a general belief about prescribing practices, not directed at their own clinician specifically.",
+        "score": 4.0,
+        "confidence": 0.8
+      }
+    },
+    "causes": [
+      "bad luck",
+      "smoking",
+      "genetic predispositions",
+      "environmental exposures"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "I believe the illness was caused by bad luck",
+        "turn": 1
+      },
+      {
+        "quote": "some of my behaviors might have played a role as well — like smoking for many years",
+        "turn": 1
+      },
+      {
+        "quote": "It's true that sometimes I wonder if my past habits may have contributed to this disease. The smoking, in particular, seems like a significant factor",
+        "turn": 3
+      },
+      {
+        "quote": "there are many factors beyond our control — genetic predispositions, environmental exposures",
+        "turn": 3
+      },
+      {
+        "quote": "I believe it was a combination of things, both under my control and outside of it",
+        "turn": 3
+      }
+    ]
+  }
+}

@@ -1,0 +1,294 @@
+{
+  "patient_id": "HIV-005",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "HIV-005",
+    "clinical_summary": "Patient with chronic HIV infection (stage 2) on Triumeq for three years presents with fatigue, headaches, and a sense of loss of control. Viral load is detectable at 340 copies/mL, indicating inconsistent adherence. Patient takes breaks from medication when feeling well, driven by concerns about long-term harm and dependence, and is uncertain whether medication is helping with symptoms. Patient expresses fear, uncertainty, and feeling like they're fighting a losing battle.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "I've been feeling really tired and run-down lately. My head's been hurting too, which is unusual for me.",
+            "turn": 1
+          },
+          {
+            "quote": "sometimes I feel like I don't have much control over my life — like everything's just so hard.",
+            "turn": 1
+          },
+          {
+            "quote": "The thought of managing this illness for the rest of my life is pretty overwhelming",
+            "turn": 9
+          },
+          {
+            "quote": "I worry that one day it will get so bad that nothing will work anymore",
+            "turn": 9
+          },
+          {
+            "quote": "It's a constant balancing act, and some days are harder than others",
+            "turn": 9
+          }
+        ],
+        "reasoning": "Patient reports fatigue, headaches, and feeling like they don't have control over their life. They find managing the illness overwhelming and worry about it getting worse, indicating significant impact on daily functioning.",
+        "score": 7.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "The thought of managing this illness for the rest of my life is pretty overwhelming",
+            "turn": 9
+          },
+          {
+            "quote": "I worry that one day it will get so bad that nothing will work anymore",
+            "turn": 9
+          },
+          {
+            "quote": "It's a constant balancing act",
+            "turn": 9
+          },
+          {
+            "quote": "some days are harder than others",
+            "turn": 9
+          }
+        ],
+        "reasoning": "Patient is thinking about managing for the rest of their life and is worried about future progression. They don't have a clear sense of when things might improve or end, indicating they plan on the illness continuing.",
+        "score": 7.0,
+        "confidence": 0.8
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "sometimes I feel like I don't have much control over my life — like everything's just so hard",
+            "turn": 1
+          },
+          {
+            "quote": "Sometimes I think it's all under control and other times I feel like I'm fighting a losing battle",
+            "turn": 5
+          },
+          {
+            "quote": "It's a constant balancing act",
+            "turn": 9
+          },
+          {
+            "quote": "But for now, I'm trying my best to stay informed and do what needs to be done",
+            "turn": 9
+          }
+        ],
+        "reasoning": "Patient feels they don't have much control over their life, describes it as a 'losing battle,' and sees it as a balancing act. They are trying their best but clearly feel limited control.",
+        "score": 5.0,
+        "confidence": 0.8
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "I'm not sure if it's really making a difference",
+            "turn": 6
+          },
+          {
+            "quote": "Sometimes when I take it as prescribed, my headaches seem just as bad as when I miss doses or go on drug holidays",
+            "turn": 6
+          },
+          {
+            "quote": "it's hard to say if there's a direct connection",
+            "turn": 3
+          },
+          {
+            "quote": "But other times they seem just as bad. It's all very confusing",
+            "turn": 3
+          }
+        ],
+        "reasoning": "Patient is uncertain whether the medication is helping. They can't tell if there's a direct connection between medication and symptom control, indicating limited belief in treatment efficacy.",
+        "score": 3.0,
+        "confidence": 0.8
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "I've been feeling really tired and run-down lately. My head's been hurting too, which is unusual for me.",
+            "turn": 1
+          },
+          {
+            "quote": "The fatigue is something that comes and goes — I usually feel pretty good most days, but sometimes I have this low-grade tiredness",
+            "turn": 3
+          },
+          {
+            "quote": "The headaches started about six months ago",
+            "turn": 3
+          },
+          {
+            "quote": "I remember thinking it was just stress from work at first. But then they didn't go away.",
+            "turn": 3
+          }
+        ],
+        "reasoning": "Patient has symptoms (fatigue, headaches) that they attribute to their illness. The headaches are described as 'unusual for me' and they've had them for six months, indicating they've incorporated these symptoms into their illness identity.",
+        "score": 5.0,
+        "confidence": 0.8
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "It's scary not knowing exactly what's going on inside my body",
+            "turn": 5
+          },
+          {
+            "quote": "Sometimes I think it's all under control and other times I feel like I'm fighting a losing battle",
+            "turn": 5
+          },
+          {
+            "quote": "I worry that one day it will get so bad that nothing will work anymore",
+            "turn": 9
+          },
+          {
+            "quote": "It's a constant balancing act",
+            "turn": 9
+          },
+          {
+            "quote": "some days are harder than others",
+            "turn": 9
+          },
+          {
+            "quote": "I can't help but wonder about long-term side effects or dependence",
+            "turn": 6
+          },
+          {
+            "quote": "Sometimes I worry about dependence or long-term harm from taking it every day without fail",
+            "turn": 7
+          }
+        ],
+        "reasoning": "Patient expresses fear, worry about the future, and concerns about long-term effects. They feel scared and uncertain, and worry recurs unprompted, indicating significant concern.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I'm not entirely sure how to interpret these numbers or what they mean for me long-term",
+            "turn": 5
+          },
+          {
+            "quote": "I know that the lower the viral load, the better, but I'm not sure where 340 copies/mL fits into that picture",
+            "turn": 5
+          },
+          {
+            "quote": "Sometimes I feel like I'm in the dark about so many things, like how this illness affects me day to day or what might happen down the line",
+            "turn": 8
+          },
+          {
+            "quote": "It's all quite scary, really",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient doesn't understand what their viral load means, feels 'in the dark' about day-to-day effects and long-term course, and finds it scary. They know the label but don't understand what it means.",
+        "score": 3.0,
+        "confidence": 0.8
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "It's scary not knowing exactly what's going on inside my body",
+            "turn": 5
+          },
+          {
+            "quote": "Sometimes I think it's all under control and other times I feel like I'm fighting a losing battle",
+            "turn": 5
+          },
+          {
+            "quote": "It's a constant balancing act, and some days are harder than others",
+            "turn": 9
+          },
+          {
+            "quote": "It's all quite scary, really",
+            "turn": 8
+          },
+          {
+            "quote": "I worry that one day it will get so bad that nothing will work anymore",
+            "turn": 9
+          }
+        ],
+        "reasoning": "Patient expresses fear, describes feeling like they're fighting a losing battle, and finds it scary. Emotion is prominent and affects what they do.",
+        "score": 6.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "part of me knows how important it is to keep up with treatment and stay on top of things",
+            "turn": 6
+          },
+          {
+            "quote": "But for now, I'm trying my best to stay informed and do what needs to be done",
+            "turn": 9
+          }
+        ],
+        "reasoning": "Patient acknowledges the importance of treatment and is trying their best, but there's some ambivalence about whether it's truly necessary.",
+        "score": 3.0,
+        "confidence": 0.8
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "I can't help but wonder about long-term side effects or dependence",
+            "turn": 6
+          },
+          {
+            "quote": "Sometimes I worry about dependence or long-term harm from taking it every day without fail",
+            "turn": 7
+          }
+        ],
+        "reasoning": "Patient has specific concerns about long-term side effects and dependence, which have led them to take breaks from medication.",
+        "score": 3.0,
+        "confidence": 0.8
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "I can't help but wonder about long-term side effects or dependence",
+            "turn": 6
+          },
+          {
+            "quote": "Sometimes I worry about dependence or long-term harm from taking it every day without fail",
+            "turn": 7
+          }
+        ],
+        "reasoning": "Patient is concerned about long-term harm from taking medication, indicating some belief that medicines as a class may be harmful.",
+        "score": 3.0,
+        "confidence": 0.8
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [
+          {
+            "quote": "when I feel really well and start thinking that maybe the illness isn't as big of a deal as it's made out to be",
+            "turn": 7
+          }
+        ],
+        "reasoning": "Patient sometimes questions whether the illness is as serious as it's made out to be, indicating some skepticism about the medical framing.",
+        "score": 2.0,
+        "confidence": 0.8
+      }
+    },
+    "causes": [
+      "previous partner who didn't disclose his status"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "It's something I got from a previous partner who didn't disclose his status, as far as I know",
+        "turn": 2
+      }
+    ]
+  }
+}

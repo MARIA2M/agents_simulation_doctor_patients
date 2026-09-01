@@ -1,0 +1,307 @@
+{
+  "patient_id": "HIV-003",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "HIV-003",
+    "clinical_summary": "The patient has been living with HIV for several years, currently on Tivicay and Descovy for 2 years with consistent adherence. Viral load is suppressed, CD4 count is 385 and gradually increasing. They experience multiple persistent symptoms: chronic fatigue, lipodystrophy, peripheral neuropathy, diarrhea, joint pain, and difficulty concentrating ('brain fog'). Some symptoms have fluctuated over time. They use non-pharmacological coping strategies and are open to discussing additional medications for symptom management.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "Chronic fatigue, lipodystrophy, peripheral neuropathy, diarrhea, joint pain, and difficulty concentrating have made it increasingly difficult to manage my daily life.",
+            "turn": 1
+          },
+          {
+            "quote": "Overall, I try not to let my symptoms dominate my life, but they do make daily tasks more challenging at times.",
+            "turn": 5
+          },
+          {
+            "quote": "Lipodystrophy continues to affect my appearance, which can be emotionally difficult at times.",
+            "turn": 5
+          }
+        ],
+        "reasoning": "The patient reports multiple symptoms that make daily life more challenging. Lipodystrophy specifically affects appearance and causes emotional difficulty. They use coping strategies like pacing and breaks, and acknowledge symptoms make daily tasks more challenging but don't let them dominate.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "struggling with symptoms related to my HIV infection for quite some time now",
+            "turn": 1
+          },
+          {
+            "quote": "These symptoms began gradually after I started my first round of antiretroviral medications several years ago",
+            "turn": 4
+          },
+          {
+            "quote": "Over the past two years on my current regimen, some of my symptoms have remained relatively stable, while others have fluctuated",
+            "turn": 5
+          },
+          {
+            "quote": "Living with HIV is undoubtedly challenging, but I choose to focus on the fact that it's a manageable condition... requires constant attention and adaptation",
+            "turn": 10
+          }
+        ],
+        "reasoning": "Symptoms began several years ago and have persisted. The patient describes it as requiring constant attention and adaptation. They don't express an expectation of ending.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I make sure to take my medication as prescribed every day, without any missed doses",
+            "turn": 3
+          },
+          {
+            "quote": "I've learned to manage it better through pacing myself and taking breaks when needed",
+            "turn": 5
+          },
+          {
+            "quote": "I choose to focus on the fact that it's a manageable condition... I've learned various coping strategies and techniques",
+            "turn": 10
+          },
+          {
+            "quote": "I believe that I have significant control over how well I manage my health. Adhering strictly to my antiretroviral regimen, staying informed about my condition, and engaging in proactive self-care practices all contribute to a sense of agency",
+            "turn": 13
+          }
+        ],
+        "reasoning": "The patient explicitly states they have 'significant control' and describes active management through adherence, staying informed, and proactive self-care. They use coping strategies and believe in their agency.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "I believe this combination has been working well overall, keeping my viral load suppressed, and allowing me to maintain a somewhat stable immune system",
+            "turn": 2
+          },
+          {
+            "quote": "Despite this, I believe my current regimen is helping to manage these symptoms better than previous medications",
+            "turn": 4
+          },
+          {
+            "quote": "My last viral load test was a few months ago, showing that my virus is still suppressed. As for my CD4 count, it has gradually been increasing since starting Tivicay and Descovy",
+            "turn": 6
+          },
+          {
+            "quote": "My viral load has remained suppressed for the past two years on this treatment plan, and my immune system has been recovering gradually",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient attributes their current good status (suppressed viral load, increasing CD4) to the treatment working. They believe the current regimen is helping manage symptoms better than previous ones.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "struggling with symptoms related to my HIV infection",
+            "turn": 1
+          },
+          {
+            "quote": "lipodystrophy... was noticeable within a few months of starting Kaletra",
+            "turn": 4
+          },
+          {
+            "quote": "Lipodystrophy continues to affect my appearance, which can be emotionally difficult at times",
+            "turn": 5
+          },
+          {
+            "quote": "Peripheral neuropathy still causes burning and tingling sensations in both feet",
+            "turn": 5
+          },
+          {
+            "quote": "Difficulty concentrating, which I like to call 'brain fog'",
+            "turn": 5
+          }
+        ],
+        "reasoning": "The patient identifies multiple symptoms as part of their HIV experience: lipodystrophy affecting appearance, peripheral neuropathy with burning/tingling, and difficulty concentrating ('brain fog'). These are daily, intrusive symptoms.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "struggling with symptoms... have made it increasingly difficult to manage my daily life",
+            "turn": 1
+          },
+          {
+            "quote": "Lipodystrophy continues to affect my appearance, which can be emotionally difficult at times",
+            "turn": 5
+          },
+          {
+            "quote": "While living with this chronic illness can be emotionally overwhelming at times",
+            "turn": 9
+          },
+          {
+            "quote": "While there are days where my symptoms make it difficult to function at my full potential",
+            "turn": 10
+          }
+        ],
+        "reasoning": "The patient acknowledges emotional difficulty with lipodystrophy and occasional emotional overwhelm. They recognize days where symptoms affect functioning. However, they also state they 'try not to let my symptoms dominate my life' and use coping strategies.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I believe I have a relatively clear understanding of how HIV affects my body and overall health, based on the information provided by my doctors and my own research",
+            "turn": 9
+          },
+          {
+            "quote": "It has been an ongoing process of learning and adapting as new symptoms arise or change",
+            "turn": 9
+          },
+          {
+            "quote": "I'm committed to maintaining open communication with my healthcare providers and staying proactive about managing my health",
+            "turn": 10
+          }
+        ],
+        "reasoning": "The patient explicitly states they have a 'relatively clear understanding' and describe an ongoing process of learning and adapting. They stay informed through doctors and research and maintain open communication.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "Lipodystrophy continues to affect my appearance, which can be emotionally difficult at times",
+            "turn": 5
+          },
+          {
+            "quote": "While living with this chronic illness can be emotionally overwhelming at times",
+            "turn": 9
+          },
+          {
+            "quote": "While there are days where my symptoms make it difficult to function at my full potential",
+            "turn": 10
+          },
+          {
+            "quote": "it doesn't have to define the entirety of one's life or limit their potential for a fulfilling existence",
+            "turn": 10
+          }
+        ],
+        "reasoning": "The patient acknowledges emotional difficulty with lipodystrophy and occasional emotional overwhelm. They recognize days where symptoms affect functioning. However, they also express resilience and don't let symptoms define their life.",
+        "score": 6.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "I make sure to take my medication as prescribed every day, without any missed doses",
+            "turn": 3
+          },
+          {
+            "quote": "I understand the importance of adhering strictly to this treatment plan, given my history with other medications",
+            "turn": 3
+          },
+          {
+            "quote": "these have not significantly impacted my day-to-day life or caused me to reconsider my adherence to the regimen",
+            "turn": 8
+          },
+          {
+            "quote": "Adhering strictly to my antiretroviral regimen... all contribute to a sense of agency",
+            "turn": 13
+          }
+        ],
+        "reasoning": "The patient takes their medication every day without missed doses and describes it as 'strictly' adhering. They understand the importance given their history. They haven't reconsidered adherence despite side effects. They attribute agency to adherence.",
+        "score": 4.0,
+        "confidence": 0.9
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "While it can be challenging at times due to the side effects, such as headaches and occasional nausea",
+            "turn": 3
+          },
+          {
+            "quote": "there are concerns about the potential risks associated with any medication, but these have not significantly impacted my day-to-day life or caused me to reconsider my adherence to the regimen",
+            "turn": 8
+          },
+          {
+            "quote": "I understand that medications can be both helpful and potentially associated with side effects",
+            "turn": 11
+          },
+          {
+            "quote": "As a patient, it's important for me to stay informed about my treatment regimen, understand the potential benefits and risks involved, and communicate any concerns or side effects with my healthcare providers",
+            "turn": 11
+          }
+        ],
+        "reasoning": "The patient experiences side effects (headaches, occasional nausea) and acknowledges concerns about potential risks. However, these haven't caused them to reconsider adherence or change their behavior. They stay informed and communicate concerns.",
+        "score": 3.0,
+        "confidence": 0.8
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "While I'm aware that no medication is without potential side effects or complications",
+            "turn": 8
+          },
+          {
+            "quote": "I understand that medications can be both helpful and potentially associated with side effects",
+            "turn": 11
+          },
+          {
+            "quote": "I also recognize that no medication is without potential risks",
+            "turn": 11
+          }
+        ],
+        "reasoning": "The patient acknowledges that medications can have side effects and risks. They don't express a general belief that medicines are inherently harmful, but rather that each medication has potential risks.",
+        "score": 2.0,
+        "confidence": 0.9
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [
+          {
+            "quote": "I trust that doctors generally prescribe medications based on sound medical knowledge and in the best interests of their patients",
+            "turn": 12
+          },
+          {
+            "quote": "I understand that there may be instances where multiple medications are prescribed to manage a complex health situation",
+            "turn": 12
+          },
+          {
+            "quote": "it's important for healthcare providers to carefully consider each patient's individual needs and circumstances when determining the most appropriate treatment plan",
+            "turn": 12
+          },
+          {
+            "quote": "finding the right balance between managing symptoms effectively and minimizing potential side effects is a collaborative effort between patient and healthcare provider",
+            "turn": 12
+          }
+        ],
+        "reasoning": "The patient trusts that doctors prescribe appropriately based on medical knowledge and patient needs. They acknowledge that multiple medications may be needed for complex situations. They don't express concern about over-prescribing.",
+        "score": 2.0,
+        "confidence": 0.9
+      }
+    },
+    "causes": [
+      "HIV infection",
+      "antiretroviral medications"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "struggling with symptoms related to my HIV infection",
+        "turn": 1
+      },
+      {
+        "quote": "These symptoms began gradually after I started my first round of antiretroviral medications several years ago",
+        "turn": 4
+      }
+    ]
+  }
+}

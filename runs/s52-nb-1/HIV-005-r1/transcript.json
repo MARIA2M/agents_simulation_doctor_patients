@@ -1,0 +1,222 @@
+{
+  "patient_id": "HIV-005",
+  "turns": 10,
+  "stop_reason": "doctor",
+  "conversation": [
+    {
+      "role": "doctor",
+      "content": "Hello. What brings you in today?",
+      "turn": 1
+    },
+    {
+      "role": "patient",
+      "content": "Hi there. I've been feeling quite run down lately and thought it was time for a check-up. My energy levels have been low, and I've had some headaches too. I'm concerned about my chronic illness and want to make sure everything's under control.",
+      "turn": 1
+    },
+    {
+      "role": "doctor",
+      "content": "What is your diagnosis of chronic illness?",
+      "turn": 2
+    },
+    {
+      "role": "patient",
+      "content": "I've been diagnosed with Human Immunodeficiency Virus (HIV) infection, which is in its chronic stage. Despite that, I try to stay positive and focused on maintaining my health through medication adherence and regular check-ups.",
+      "turn": 2
+    },
+    {
+      "role": "doctor",
+      "content": "Can you describe your current symptoms? How long have you been feeling run down and having headaches?",
+      "turn": 3
+    },
+    {
+      "role": "patient",
+      "content": "I've had occasional headaches for as long as I can remember, but lately they seem to be more frequent. The fatigue I feel is mostly attributed to my work stress rather than the HIV itself. It's difficult to pinpoint when I started feeling this way; it might have been going on for a few months now.",
+      "turn": 3
+    },
+    {
+      "role": "doctor",
+      "content": "What antiretroviral medication are you currently prescribed? Have you had any recent viral load or CD4 count tests?",
+      "turn": 4
+    },
+    {
+      "role": "patient",
+      "content": "I'm taking Triumeq (abacavir/dolutegravir/lamivudine) as my one daily tablet. My last viral load test showed a detectable but low level of 340 copies/mL, and my CD4 cell count is at 410 cells/uL. The physician has been reminding me about the importance of adherence to keep my viral load undetectable.",
+      "turn": 4
+    },
+    {
+      "role": "doctor",
+      "content": "How consistently do you take your medication each day? Do you ever miss doses, and if so, how frequently?",
+      "turn": 5
+    },
+    {
+      "role": "patient",
+      "content": "I try to be consistent with my medication, but I have a hard time remembering sometimes. I admitted to missing doses 2-3 times per week, and occasionally taking 'drug holidays' of several days when I feel well. I know this inconsistency is not great for managing my chronic illness, but it's a struggle to stay on track.",
+      "turn": 5
+    },
+    {
+      "role": "doctor",
+      "content": "What side effects, if any, have you experienced from Triumeq? Have these affected your ability to take the medication regularly?",
+      "turn": 6
+    },
+    {
+      "role": "patient",
+      "content": "I've noticed some mild side effects from Triumeq, such as occasional stomach discomfort and headaches. These haven't been severe enough for me to stop taking the medication altogether, but they do make it a bit more challenging to remember my daily dose or keep up with my schedule.",
+      "turn": 6
+    },
+    {
+      "role": "doctor",
+      "content": "Do you understand how your current viral load relates to your treatment and long-term health?",
+      "turn": 7
+    },
+    {
+      "role": "patient",
+      "content": "To be honest, I have a basic understanding of what undetectable viral load means for my health, but there's still quite a bit of confusion on the specifics. From what I've gathered, keeping my viral load undetectable is crucial in managing my chronic illness and preventing any potential complications down the line.",
+      "turn": 7
+    },
+    {
+      "role": "doctor",
+      "content": "What concerns do you have about your HIV or your treatment?",
+      "turn": 8
+    },
+    {
+      "role": "patient",
+      "content": "I worry that my medication might have long-term side effects or that there could be some hidden risks I'm not aware of. Sometimes, I wonder if doctors prescribe medications too quickly and if there's a better way to manage this chronic illness. Despite these concerns, I trust my doctor's judgment, but it's hard not to dwell on what-ifs from time to time.",
+      "turn": 8
+    },
+    {
+      "role": "doctor",
+      "content": "To summarise: you're taking Triumeq daily, but you miss doses 2-3 times per week and take drug holidays when you feel well. This has resulted in a detectable viral load of 340 copies/mL and a CD4 count of 410 cells/uL. Your main concerns are long-term side effects of the medication and whether doctors prescribe too readily. We need to address your adherence so your viral load can become undetectable. Would you be willing to try a structured daily routine and regular follow-up to monitor your progress?",
+      "turn": 9
+    },
+    {
+      "role": "patient",
+      "content": "I appreciate your concern, doctor. I'm definitely willing to work on improving my medication adherence. I'll give it a shot with the help of a more structured daily routine and regular check-ins with you. It's important for me to do what I can to manage this chronic illness effectively.",
+      "turn": 9
+    },
+    {
+      "role": "doctor",
+      "content": "Good. I'll arrange regular follow-up appointments to monitor your viral load and CD4 count, and we can work together to refine your daily routine. Take care for now.",
+      "turn": 10
+    },
+    {
+      "role": "patient",
+      "content": "Thank you, doctor. I appreciate your guidance and support. I'm looking forward to our next appointment and continuing our journey toward better health together.",
+      "turn": 10
+    }
+  ],
+  "coverage_hint": {},
+  "working_notes": [],
+  "events": [],
+  "usage": [
+    {
+      "role": "doctor",
+      "eval_tokens": 84,
+      "prompt_tokens": 1527
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 54,
+      "prompt_tokens": 1282
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 82,
+      "prompt_tokens": 1668
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 46,
+      "prompt_tokens": 1353
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 96,
+      "prompt_tokens": 1799
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 64,
+      "prompt_tokens": 1427
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 107,
+      "prompt_tokens": 1962
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 79,
+      "prompt_tokens": 1525
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 136,
+      "prompt_tokens": 2154
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 70,
+      "prompt_tokens": 1636
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 107,
+      "prompt_tokens": 2363
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 57,
+      "prompt_tokens": 1741
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 88,
+      "prompt_tokens": 2530
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 64,
+      "prompt_tokens": 1824
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 84,
+      "prompt_tokens": 2685
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 76,
+      "prompt_tokens": 1909
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 215,
+      "prompt_tokens": 2848
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 59,
+      "prompt_tokens": 2105
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 93,
+      "prompt_tokens": 3125
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 30,
+      "prompt_tokens": 2208
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 764,
+      "prompt_tokens": 3251
+    },
+    {
+      "role": "report",
+      "eval_tokens": 4663,
+      "prompt_tokens": 7720
+    }
+  ]
+}

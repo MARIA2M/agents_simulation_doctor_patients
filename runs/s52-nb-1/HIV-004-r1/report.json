@@ -1,0 +1,181 @@
+{
+  "patient_id": "HIV-004",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "HIV-004",
+    "clinical_summary": "The patient presents with persistent fatigue for several months, affecting work and household tasks. They report occasional palpitations that are sudden and intense, occurring at rest. Sleep is six hours per night with restlessness. No known medical conditions, occasional allergies, and takes a daily multivitamin. Blood work previously done was normal. Thyroid and iron levels have not been checked. Patient acknowledges recent stressors (job demands, personal issues) as contributing factors. No other specific symptoms reported.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "I'm having a hard time keeping up with my job and even simple tasks around the house are feeling more difficult than usual",
+            "turn": 3
+          }
+        ],
+        "reasoning": "The patient reports difficulty keeping up with work and household tasks, which aligns with an 8 on the scale (a major role is lost or substantially reduced).",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [],
+        "reasoning": "The patient has had symptoms for months without a clear start, but hasn't explicitly stated how long they expect it to last. They haven't expressed a clear expectation about duration.",
+        "score": null,
+        "confidence": 0.0
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I've had a few stressors recently — my job has been more demanding than usual, and I'm dealing with some personal stuff as well",
+            "turn": 6
+          }
+        ],
+        "reasoning": "The patient acknowledges stressors as contributing factors, suggesting some awareness that their circumstances may influence their symptoms. However, they haven't explicitly stated what actions they take to manage their condition.",
+        "score": 4.0,
+        "confidence": 0.6
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "I've gone to the doctor a few times for this tiredness and they haven't found anything conclusive yet",
+            "turn": 4
+          }
+        ],
+        "reasoning": "The patient has sought medical evaluation but hasn't received conclusive results. They're open to further testing (thyroid, iron, ECG), suggesting some belief that medical testing can be helpful.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "I've been feeling really tired all the time lately",
+            "turn": 1
+          },
+          {
+            "quote": "Just this constant tiredness that's hard to shake off",
+            "turn": 2
+          }
+        ],
+        "reasoning": "The patient primarily describes their symptoms as fatigue, which is a single symptom that is constant. This aligns with a 4 on the scale (one or two symptoms, intermittent, not limiting).",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "I have this nagging worry at the back of my mind that something's not right",
+            "turn": 1
+          },
+          {
+            "quote": "I'm a bit worried about all of this, to be honest. It's hard to know what might be going on with my body and how long it will take to find out",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient expresses worry about not knowing what's going on and how long it will take to find out. They also mention anxiety and find palpitations alarming. This suggests worry that recurs unprompted and shapes some decisions.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I don't really have any known medical conditions, aside from maybe occasional allergies",
+            "turn": 4
+          },
+          {
+            "quote": "I don't think they checked my thyroid or iron levels",
+            "turn": 5
+          },
+          {
+            "quote": "It's hard to know what might be going on with my body and how long it will take to find out",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient doesn't have a clear understanding of what's causing their symptoms. They've had tests done but nothing conclusive yet, and they're unsure what's happening to their body. They don't know what tests have been done (thyroid, iron) and express uncertainty about the cause.",
+        "score": 2.0,
+        "confidence": 0.9
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "I have this nagging worry at the back of my mind that something's not right",
+            "turn": 1
+          },
+          {
+            "quote": "I'm a bit worried about all of this, to be honest",
+            "turn": 9
+          },
+          {
+            "quote": "It can be a bit alarming because it feels like something isn't right",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient expresses worry, anxiety, and finds palpitations alarming. They're worried about not knowing what's going on and how long it will take to find out. This suggests emotion is prominent and affects what they do.",
+        "score": 8.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "I take an multivitamin every day but nothing else",
+            "turn": 4
+          }
+        ],
+        "reasoning": "The patient takes a daily multivitamin, which suggests they believe in maintaining health through supplementation. However, they haven't expressed a strong belief that this specific medication is necessary for their condition.",
+        "score": 3.0,
+        "confidence": 0.6
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "I'm a bit worried about all of this, to be honest. It's hard to know what might be going on with my body and how long it will take to find out",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient expresses worry about not knowing what's going on and how long it will take to find out. This could extend to concerns about medications or treatments that might be prescribed. However, they haven't explicitly raised concerns about their current medication.",
+        "score": 2.0,
+        "confidence": 0.7
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [],
+        "reasoning": "The patient hasn't expressed any general view about medicines as a class being harmful.",
+        "score": null,
+        "confidence": 0.0
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "The patient hasn't expressed any view about whether doctors prescribe too readily.",
+        "score": null,
+        "confidence": 0.0
+      }
+    },
+    "causes": [
+      "stress at work",
+      "personal issues",
+      "recent cold"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "I've had a few stressors recently — my job has been more demanding than usual, and I'm dealing with some personal stuff as well",
+        "turn": 6
+      },
+      {
+        "quote": "I got a cold a few weeks ago but it went away on its own after a week or so",
+        "turn": 3
+      }
+    ]
+  }
+}

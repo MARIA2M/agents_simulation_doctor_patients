@@ -1,0 +1,233 @@
+{
+  "patient_id": "CLL-001",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "CLL-001",
+    "clinical_summary": "The patient has Chronic Lymphocytic Leukemia and is on watchful waiting. They experience significant fatigue that affects daily functioning, work productivity, and social relationships. They're actively managing their health through balanced diet, regular physical activity (broken into smaller chunks), journaling, and maintaining social support. They're concerned about disease progression and future treatment options. They have a family history of cancer and are considering potential environmental factors. Their emotional response is mixed but includes fear, despair, and worry about the future. They're trying to maintain resilience and hope despite the challenges.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "My Chronic Lymphocytic Leukemia diagnosis has really taken over my life lately. Some days, it feels like I can barely get out of bed",
+            "turn": 1
+          },
+          {
+            "quote": "The fatigue is quite pervasive and makes even simple tasks feel like they take much longer than they should",
+            "turn": 2
+          },
+          {
+            "quote": "At work, my productivity has dipped due to this fatigue. There are days when it feels impossible to get through a full day of tasks without needing a nap mid-afternoon",
+            "turn": 3
+          },
+          {
+            "quote": "sometimes, even small social interactions can feel like too much when I'm already dealing with this exhaustion",
+            "turn": 3
+          }
+        ],
+        "reasoning": "The patient has lost the ability to get through a full day of work, needs naps mid-afternoon, simple tasks take much longer, and social interactions feel overwhelming. They can barely get out of bed on bad days. This clearly meets the criteria for an 8 - a major role (work) is substantially reduced, and daily functioning is significantly impacted.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "As time has passed, I've learned more about the condition and its potential progression, which can be frightening",
+            "turn": 4
+          },
+          {
+            "quote": "It's a bit unsettling not to be on any treatment right now, as I worry about the disease progressing without intervention",
+            "turn": 5
+          },
+          {
+            "quote": "One more concern I have is about potential future treatments if my condition does change",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient is concerned about progression and talks about 'potential progression' and 'if my condition does change.' They're unsettled by not having treatment and worry about progression without intervention. They're thinking ahead about future treatments, which suggests they're planning on the assumption that the disease might continue or worsen.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I know that genetics can play a role, and I come from a family where cancer has been more prevalent than average. Also, growing up near an old industrial site might be a factor, as there could have been environmental exposures over time",
+            "turn": 6
+          },
+          {
+            "quote": "Day-to-day self-care has become more important than ever. I've been trying to maintain a balanced diet and get regular physical activity in my routine, even if it means breaking up tasks into smaller chunks throughout the day",
+            "turn": 7
+          },
+          {
+            "quote": "On those days, I try to remind myself of how crucial these routines are for my overall well-being",
+            "turn": 8
+          },
+          {
+            "quote": "I've learned that acknowledging those feelings while still making an effort to maintain self-care is essential for managing my health holistically",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient actively manages their health through diet, physical activity (even breaking tasks into smaller chunks), journaling, and maintaining relationships. They're trying to work with their body rather than against it. They're making an effort to maintain self-care despite barriers. This shows active management and attribution of some effect to their own actions.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "It's a bit unsettling not to be on any treatment right now, as I worry about the disease progressing without intervention",
+            "turn": 5
+          },
+          {
+            "quote": "One more concern I have is about potential future treatments if my condition does change",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient is unsettled by not having treatment and worries about progression without intervention. They're thinking about future treatments, which suggests they believe treatment would help. They seem to believe treatment would be beneficial if needed.",
+        "score": 8.0,
+        "confidence": 0.7
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "My Chronic Lymphocytic Leukemia diagnosis has really taken over my life lately",
+            "turn": 1
+          },
+          {
+            "quote": "The fatigue is quite pervasive and makes even simple tasks feel like they take much longer than they should",
+            "turn": 2
+          },
+          {
+            "quote": "As time has passed, I've learned more about the condition and its potential progression, which can be frightening",
+            "turn": 4
+          }
+        ],
+        "reasoning": "The patient has persistent fatigue that affects daily functioning, and they've learned about the condition and its potential progression. They talk about 'the condition' and 'my Chronic Lymphocytic Leukemia diagnosis' as central to their experience. The fatigue is pervasive and makes simple tasks take much longer.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "It's quite concerning, and I worry about how things will progress",
+            "turn": 1
+          },
+          {
+            "quote": "Emotionally, it's been a rollercoaster. There are days where I'm filled with fear and despair, wondering what this means for my future",
+            "turn": 4
+          },
+          {
+            "quote": "It's a bit unsettling not to be on any treatment right now, as I worry about the disease progressing without intervention",
+            "turn": 5
+          },
+          {
+            "quote": "Another barrier is the mental toll that comes from dealing with CLL and its uncertainties. It's hard not to let worries consume you at times",
+            "turn": 8
+          },
+          {
+            "quote": "The fear and uncertainty can be very real",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient expresses worry about progression, fear and despair about the future, and worries that consume them. They mention the 'mental toll' of uncertainty and that worries 'consume you at times.' They describe fear and uncertainty as 'very real.'",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "Initially, I didn't understand much about CLL. I was overwhelmed by the news but tried to process it as best as I could when I first got the diagnosis. As time has passed, I've learned more about the condition and its potential progression",
+            "turn": 4
+          },
+          {
+            "quote": "I understand that CLL is complex and its root causes can vary widely from person to person",
+            "turn": 6
+          },
+          {
+            "quote": "Day-to-day self-care has become more important than ever. I've been trying to maintain a balanced diet and get regular physical activity in my routine",
+            "turn": 7
+          }
+        ],
+        "reasoning": "The patient initially didn't understand much but has learned more over time. They understand that CLL is complex and that root causes vary. They're actively managing their health with specific self-care activities. This shows they have some understanding of what's happening and why, though they acknowledge complexity.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "Emotionally, it's been a rollercoaster. There are days where I'm filled with fear and despair, wondering what this means for my future. Other days, though, I can find moments of hope and resilience within myself",
+            "turn": 4
+          },
+          {
+            "quote": "Another barrier is the mental toll that comes from dealing with CLL and its uncertainties. It's hard not to let worries consume you at times",
+            "turn": 8
+          },
+          {
+            "quote": "The fear and uncertainty can be very real",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient describes their emotional response as a rollercoaster with fear and despair, but also moments of hope and resilience. They mention the 'mental toll' of uncertainty and that worries consume them. They acknowledge that fear and uncertainty are 'very real.'",
+        "score": 8.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "It's a bit unsettling not to be on any treatment right now, as I worry about the disease progressing without intervention",
+            "turn": 5
+          }
+        ],
+        "reasoning": "The patient is unsettled by not having treatment and worries about progression without intervention. This suggests they believe treatment is needed. However, they're currently on watchful waiting, which is a standard approach for early-stage CLL. Their belief seems to be that treatment would be beneficial if needed, but they're not currently on any medication.",
+        "score": 4.0,
+        "confidence": 0.6
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "I've noticed occasional headaches since starting the blood tests and testing process. They're not too severe, but they do make me wonder if it's related to the medical procedures or if it's just a coincidence. It's something I'd like to keep an eye on over time",
+            "turn": 5
+          }
+        ],
+        "reasoning": "The patient has occasional headaches from blood tests and wonders if they're related to the procedures. They want to keep an eye on this. This is a mild concern about the testing process, not about medication. Since they're not on any medication, this is more about the monitoring process than the medication itself.",
+        "score": 2.0,
+        "confidence": 0.7
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [],
+        "reasoning": "The patient never expressed any concerns about medicines as a class. They're on watchful waiting, which means no medication, so there's no evidence of general harm beliefs.",
+        "score": null,
+        "confidence": 0.0
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "The patient never expressed any concerns about doctors prescribing too readily. They're on watchful waiting, which means no prescription, so there's no evidence of general overuse beliefs.",
+        "score": null,
+        "confidence": 0.0
+      }
+    },
+    "causes": [
+      "genetics (family history of cancer)",
+      "environmental exposure (old industrial site)"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "I know that genetics can play a role, and I come from a family where cancer has been more prevalent than average. Also, growing up near an old industrial site might be a factor, as there could have been environmental exposures over time",
+        "turn": 6
+      }
+    ]
+  }
+}

@@ -1,0 +1,277 @@
+{
+  "patient_id": "HIV-004",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "HIV-004",
+    "clinical_summary": "The patient has been living with HIV for 4 weeks, taking Biktarvy as prescribed. They report persistent daily symptoms including fatigue, nausea (worse in mornings after medication), anxiety, and difficulty sleeping. They feel overwhelmed and have increased anxiety since starting treatment. They have not yet tried specific coping strategies but expressed openness to mindfulness/meditation. They understand their condition is chronic and that viral suppression typically takes a few months. They are engaged in their care and following the treatment plan.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "it's been a bit of a rough ride to be honest",
+            "turn": 1
+          },
+          {
+            "quote": "my symptoms have been pretty persistent",
+            "turn": 1
+          },
+          {
+            "quote": "The fatigue and nausea are still there every day",
+            "turn": 1
+          },
+          {
+            "quote": "I'm struggling with anxiety as well",
+            "turn": 1
+          },
+          {
+            "quote": "I've been feeling really overwhelmed lately",
+            "turn": 1
+          },
+          {
+            "quote": "anxiety and difficulty sleeping have increased lately",
+            "turn": 2
+          }
+        ],
+        "reasoning": "The patient describes daily, persistent symptoms that are affecting their functioning. They experience fatigue, nausea, anxiety, and sleep difficulties, and feel overwhelmed. These symptoms are impacting their daily life and emotional state.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "chronic illness",
+            "turn": 2
+          },
+          {
+            "quote": "typical course takes a few months for the viral load to become undetectable",
+            "turn": 2
+          }
+        ],
+        "reasoning": "The patient understands this is a chronic condition and has realistic expectations about the timeline for treatment response. They are planning for ongoing management.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "No, not yet. I haven't really tried anything specific for those issues",
+            "turn": 3
+          },
+          {
+            "quote": "To be honest, I'm not sure what that entails",
+            "turn": 4
+          },
+          {
+            "quote": "Would that really help with my situation?",
+            "turn": 4
+          },
+          {
+            "quote": "if it could help me find some relief from this constant worry and stress, I'd definitely give it a shot",
+            "turn": 5
+          }
+        ],
+        "reasoning": "The patient hasn't yet taken specific actions to manage their anxiety or symptoms. They're asking about mindfulness/meditation and seem open but uncertain about their own ability to influence outcomes.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "four weeks since I started Biktarvy",
+            "turn": 2
+          },
+          {
+            "quote": "mild nausea in the mornings has continued",
+            "turn": 2
+          },
+          {
+            "quote": "typical course takes a few months for the viral load to become undetectable",
+            "turn": 2
+          }
+        ],
+        "reasoning": "The patient is following the prescribed treatment and understands the expected timeline for viral suppression. They're experiencing side effects but seem to accept this as part of the treatment process.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "my symptoms have been pretty persistent",
+            "turn": 1
+          },
+          {
+            "quote": "chronic illness",
+            "turn": 2
+          },
+          {
+            "quote": "managing my symptoms",
+            "turn": 2
+          }
+        ],
+        "reasoning": "The patient clearly identifies with having HIV and experiencing its symptoms. They talk about their symptoms as part of their experience.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "it's been a bit of a rough ride to be honest",
+            "turn": 1
+          },
+          {
+            "quote": "I've been feeling really overwhelmed lately",
+            "turn": 1
+          },
+          {
+            "quote": "struggling with anxiety as well",
+            "turn": 1
+          },
+          {
+            "quote": "anxiety and difficulty sleeping have increased lately",
+            "turn": 2
+          },
+          {
+            "quote": "still quite worried about my overall health and what the future might hold with this chronic illness",
+            "turn": 2
+          },
+          {
+            "quote": "constant worry and stress",
+            "turn": 5
+          }
+        ],
+        "reasoning": "The patient is experiencing significant worry and anxiety. They're worried about their overall health and the future with a chronic illness. They describe feeling overwhelmed and having constant worry and stress.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "rough ride",
+            "turn": 1
+          },
+          {
+            "quote": "persistent fatigue and nausea are still there every day",
+            "turn": 1
+          },
+          {
+            "quote": "struggling with anxiety as well",
+            "turn": 1
+          },
+          {
+            "quote": "four weeks since I started Biktarvy",
+            "turn": 2
+          },
+          {
+            "quote": "mild nausea in the mornings has continued",
+            "turn": 2
+          },
+          {
+            "quote": "chronic illness",
+            "turn": 2
+          },
+          {
+            "quote": "typical course takes a few months for the viral load to become undetectable",
+            "turn": 2
+          }
+        ],
+        "reasoning": "The patient demonstrates good understanding of their diagnosis, treatment, and expected timeline. They can describe their symptoms and treatment clearly.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "it's been a bit of a rough ride to be honest",
+            "turn": 1
+          },
+          {
+            "quote": "I've been feeling really overwhelmed lately",
+            "turn": 1
+          },
+          {
+            "quote": "struggling with anxiety as well",
+            "turn": 1
+          },
+          {
+            "quote": "anxiety and difficulty sleeping have increased lately",
+            "turn": 2
+          },
+          {
+            "quote": "still quite worried about my overall health and what the future might hold with this chronic illness",
+            "turn": 2
+          },
+          {
+            "quote": "constant worry and stress",
+            "turn": 5
+          }
+        ],
+        "reasoning": "The patient is experiencing significant emotional distress. They feel overwhelmed, anxious, and worried. The illness is affecting their mood, sleep, and overall emotional state.",
+        "score": 8.0,
+        "confidence": 0.9
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "four weeks since I started Biktarvy",
+            "turn": 2
+          },
+          {
+            "quote": "That sounds good, Dr. Chen. Thank you so much for your help!",
+            "turn": 2
+          }
+        ],
+        "reasoning": "The patient is taking the medication as prescribed and seems to accept it as part of their treatment plan. They haven't expressed any intention to stop or question its necessity.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "mild nausea in the mornings has continued",
+            "turn": 2
+          },
+          {
+            "quote": "anxiety and difficulty sleeping have increased lately",
+            "turn": 2
+          },
+          {
+            "quote": "still quite worried about my overall health and what the future might hold with this chronic illness",
+            "turn": 2
+          }
+        ],
+        "reasoning": "The patient is experiencing side effects (nausea) and increased anxiety/sleep difficulties. They're worried about their overall health and future. These concerns have led them to seek help.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [],
+        "reasoning": "The patient has not expressed any general concerns about medicines as a class. Their concerns are specific to their own medication (side effects).",
+        "score": null,
+        "confidence": 0.5
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "The patient has not expressed any concerns about doctors prescribing too readily. They seem to trust their clinician.",
+        "score": null,
+        "confidence": 0.5
+      }
+    },
+    "causes": [],
+    "causes_evidence": []
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "run_id": "HIV-005x5-show-good_doctor-run2",
+  "started_at": "2026-09-01T00:56:21+02:00",
+  "profile": "hint-show",
+  "models": {
+    "doctor": "glm-4.7-flash:q8_0",
+    "patient": "dolphin-llama3:8b-v2.9-q8_0",
+    "embed": "nomic-embed-text"
+  },
+  "sampling": {
+    "doctor_temperature": 0.7,
+    "patient_temperature": 0.7,
+    "report_temperature": 0.0,
+    "seed": null,
+    "context_length": 32768,
+    "num_parallel": 1
+  },
+  "server": {
+    "ollama_url": "http://127.0.0.1:11500",
+    "request_timeout": 300,
+    "keep_alive": "4h"
+  },
+  "features": {
+    "coverage_hint": "show",
+    "working_notes": false
+  },
+  "prompts": {
+    "doctor": "sha256:347601d233b6ae96996b93faa6d53be9b658b8661c39101267211c4c990aaf9f",
+    "patient": "sha256:015abcca1e792b88282a30e7797c105876d506d095ce44c72dfc9bebe6bd6334",
+    "report": "sha256:a50756908605ffecfb06012d91335c1ebd4024e28296b863db32ca93745823cf",
+    "doctor_rubric": "sha256:a0dc400a5c317478a2fed0df2bd4c7033f43fa259219f62e609d1a558c706c9e",
+    "tools": "sha256:49b1a0c5cdabf6c226dadd97653ed05da81609c1e5190d2bcaff11f3760d103c",
+    "patient_bands": "sha256:06a673b9e57e156b46e048d12d3f6bacc34b97b82d8a3568f64c75e41d595a72",
+    "skills": {
+      "doctor": [
+        "styles/good_doctor"
+      ],
+      "patient": []
+    }
+  },
+  "code": {
+    "git_commit": "056a063",
+    "dirty": true
+  },
+  "compute": {
+    "hostname": "as01r3b13",
+    "slurm_nodelist": "as01r3b[04,10,12-13]",
+    "slurm_job": "45259583",
+    "gpus": 1
+  },
+  "corpus": {
+    "patients": 1,
+    "patient_ids": [
+      "HIV-005"
+    ],
+    "ground_truth_source": "patients/*.json"
+  }
+}

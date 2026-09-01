@@ -1,0 +1,237 @@
+{
+  "patient_id": "HIV-005",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "HIV-005",
+    "clinical_summary": "The patient has been living with HIV, Chronic Stage 2, for several years. They are on Triumeq daily but struggle with adherence, sometimes forgetting or feeling they don't need it when feeling well. They understand HIV attacks the immune system and that there's no cure but treatment can manage it. They're worried about long-term progression and uncertainty, but also feel grateful for their support system. They've had to end some relationships due to risk. They want to improve adherence, manage stress/uncertainty, and are interested in counseling/support groups.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "Living with HIV can be quite challenging",
+            "turn": 6
+          },
+          {
+            "quote": "There are times when my symptoms interfere with my daily activities and I feel a bit down about that",
+            "turn": 6
+          },
+          {
+            "quote": "It's also been difficult in some ways because it's something that can't be fully hidden from those around me",
+            "turn": 6
+          },
+          {
+            "quote": "It's affected my relationships, too, as I've had to end some connections because of the risk they posed",
+            "turn": 6
+          }
+        ],
+        "reasoning": "The patient describes symptoms interfering with daily activities, feeling down, difficulty hiding the condition, and having to end relationships due to risk. This shows moderate to high impact on daily life and relationships.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "Personally, I believe that HIV is a chronic condition that I'll be living with for the rest of my life",
+            "turn": 7
+          },
+          {
+            "quote": "I know how important consistency and adherence are in maintaining that status",
+            "turn": 7
+          },
+          {
+            "quote": "I think it's something that will continue to be a part of my life",
+            "turn": 7
+          }
+        ],
+        "reasoning": "The patient explicitly states they believe HIV is a chronic condition they will live with for the rest of their life and plans accordingly.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "Sometimes it feels like my body has just been able to fight off whatever the virus was trying to cause",
+            "turn": 4
+          },
+          {
+            "quote": "I know how important consistency and adherence are in maintaining that status",
+            "turn": 4
+          },
+          {
+            "quote": "It's a constant battle, but one that I'm willing to fight",
+            "turn": 4
+          }
+        ],
+        "reasoning": "The patient shows mixed beliefs - sometimes attributing health to their body's ability to fight the virus, but also recognizing the importance of medication and expressing willingness to fight the condition.",
+        "score": 5.0,
+        "confidence": 0.7
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "the treatment has been somewhat helpful in managing my symptoms",
+            "turn": 3
+          },
+          {
+            "quote": "I know how important consistency and adherence are in maintaining that status",
+            "turn": 7
+          },
+          {
+            "quote": "sometimes I feel like my body has just been able to fight off whatever the virus was trying to cause",
+            "turn": 4
+          }
+        ],
+        "reasoning": "The patient recognizes treatment helps but also sometimes doubts it's needed when feeling well, showing moderate belief in treatment effectiveness.",
+        "score": 5.0,
+        "confidence": 0.7
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "There are times when my symptoms interfere with my daily activities and I feel a bit down about that",
+            "turn": 6
+          },
+          {
+            "quote": "I'm learning how to manage it and make it a part of my life without letting it define every aspect of who I am",
+            "turn": 6
+          }
+        ],
+        "reasoning": "The patient experiences symptoms that interfere with daily activities but is actively working to manage the condition without letting it define their entire identity.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "The thing that really worries me is not knowing how my condition will progress in the long term",
+            "turn": 8
+          },
+          {
+            "quote": "there's always a fear of what could happen if something were to change",
+            "turn": 8
+          },
+          {
+            "quote": "it's definitely a source of stress for me",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient identifies uncertainty about disease progression as their main worry and describes it as a source of stress, showing moderate to high concern.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "My understanding of HIV is that it attacks my immune system, specifically CD4 cells, which are a type of white blood cell",
+            "turn": 10
+          },
+          {
+            "quote": "there's no cure for it yet, but certain medications can help manage the virus and slow down its impact on my immune system",
+            "turn": 10
+          },
+          {
+            "quote": "My body has to work harder to fight off infections, so maintaining good overall health through exercise, proper nutrition, and regular check-ups is really important in managing the condition",
+            "turn": 10
+          }
+        ],
+        "reasoning": "The patient demonstrates a clear, accurate understanding of how HIV works, its impact on the immune system, and the role of treatment and lifestyle in management.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "There are moments where I feel incredibly grateful for the support system I have in place and my overall health status",
+            "turn": 11
+          },
+          {
+            "quote": "But then there are other times where the stress and uncertainty around the future can weigh heavily on me",
+            "turn": 11
+          },
+          {
+            "quote": "It's a constant mix of feelings—sometimes I'm more optimistic, sometimes I worry more about what might happen",
+            "turn": 11
+          },
+          {
+            "quote": "I've learned to lean into those emotions rather than push them away",
+            "turn": 11
+          }
+        ],
+        "reasoning": "The patient experiences a mix of emotions including gratitude and stress, with uncertainty about the future weighing heavily, showing moderate emotional impact.",
+        "score": 5.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "sometimes I feel like my body has just been able to fight off whatever the virus was trying to cause",
+            "turn": 4
+          },
+          {
+            "quote": "I know how important it is to maintain a consistent routine",
+            "turn": 9
+          },
+          {
+            "quote": "I'd also appreciate more information on the potential long-term effects of not taking it consistently versus missing a dose here and there",
+            "turn": 12
+          }
+        ],
+        "reasoning": "The patient sometimes doubts the need for medication when feeling well but recognizes its importance and wants information about consequences, showing moderate necessity beliefs.",
+        "score": 3.0,
+        "confidence": 0.7
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "sometimes I worry about potential long-term side effects or whether there might be any interactions with other medications if my health needs change in the future",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient expresses moderate concerns about long-term side effects and potential medication interactions, showing some worry about their specific treatment.",
+        "score": 3.0,
+        "confidence": 0.7
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [],
+        "reasoning": "The patient did not express any general concerns about medicines as a class; their concerns are specific to their own medication.",
+        "score": null,
+        "confidence": 0.0
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "The patient did not express any concerns about doctors prescribing too readily; they trust their primary care physician's referral.",
+        "score": null,
+        "confidence": 0.0
+      }
+    },
+    "causes": [
+      "previous partner who did not disclose his status",
+      "virus transmitted during our time together"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "I believe that my illness was caused by a previous partner who did not disclose his status",
+        "turn": 5
+      },
+      {
+        "quote": "the virus might have been transmitted during our time together",
+        "turn": 5
+      }
+    ]
+  }
+}

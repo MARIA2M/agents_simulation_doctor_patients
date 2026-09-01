@@ -1,0 +1,190 @@
+{
+  "patient_id": "CLL-001",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "CLL-001",
+    "clinical_summary": "58-year-old software engineer presenting with 6-month fatigue, recent night sweats (1 month), progressive neck pain (3 weeks), and lymphadenopathy. No current prescription medications, occasional OTC pain reliever for neck pain. Increased job stress and longer hours over past 4 weeks coinciding with symptom progression. Primary care physician referred for evaluation.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "I've been feeling pretty tired these days",
+            "turn": 1
+          },
+          {
+            "quote": "My energy levels just don't seem as high as they used to be, so even getting through the day feels like a bit of an effort at times",
+            "turn": 14
+          },
+          {
+            "quote": "It's been more difficult recently",
+            "turn": 14
+          }
+        ],
+        "reasoning": "The patient reports fatigue affecting daily functioning and energy levels, making it difficult to get through the day. This is affecting their ability to maintain usual routines.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "The fatigue started about six months ago",
+            "turn": 2
+          },
+          {
+            "quote": "The night sweats are more recent. They've been happening every couple of nights for the past month or so",
+            "turn": 2
+          },
+          {
+            "quote": "The soreness in my neck is a newer symptom as well — it's only been present for the last few weeks",
+            "turn": 2
+          }
+        ],
+        "reasoning": "Patient describes a gradual progression over 6 months for fatigue, with more recent onset of other symptoms. They don't express a clear expectation about duration.",
+        "score": 4.0,
+        "confidence": 0.6
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I haven't really been able to pinpoint exactly what might be causing all this",
+            "turn": 11
+          },
+          {
+            "quote": "I can't help but worry about the possibility of it being something like lymphoma",
+            "turn": 12
+          }
+        ],
+        "reasoning": "Patient expresses uncertainty about causes and feels they cannot control the situation. They are seeking answers from the doctor.",
+        "score": 2.0,
+        "confidence": 0.8
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [],
+        "reasoning": "No treatment has been prescribed yet, so patient cannot assess treatment control.",
+        "score": null,
+        "confidence": 0.0
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "I've been feeling pretty tired these days, and my neck has been a bit sore as well",
+            "turn": 1
+          },
+          {
+            "quote": "I've also noticed that I've been sweating at night more than usual",
+            "turn": 1
+          }
+        ],
+        "reasoning": "Patient describes specific symptoms but doesn't identify with a particular illness label.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "I can't help but worry about the possibility of it being something like lymphoma",
+            "turn": 12
+          },
+          {
+            "quote": "they're still concerning enough for me to come in and see you about them",
+            "turn": 11
+          }
+        ],
+        "reasoning": "Patient expresses worry about seriousness of symptoms, specifically mentioning lymphoma possibility.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I've looked up some of the symptoms online, but I haven't found anything that seems like a clear match for what I'm experiencing",
+            "turn": 13
+          },
+          {
+            "quote": "I haven't really been able to pinpoint exactly what might be causing all this",
+            "turn": 11
+          }
+        ],
+        "reasoning": "Patient has done some research but hasn't found clear answers and lacks understanding of what's happening.",
+        "score": 2.0,
+        "confidence": 0.6
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "I can't help but worry about the possibility of it being something like lymphoma",
+            "turn": 12
+          },
+          {
+            "quote": "they're still concerning enough for me to come in and see you about them",
+            "turn": 11
+          }
+        ],
+        "reasoning": "Patient expresses worry and concern about symptoms, though they also acknowledge possibility of stress-related causes.",
+        "score": 4.0,
+        "confidence": 0.7
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [],
+        "reasoning": "No prescribed medications at this time.",
+        "score": null,
+        "confidence": 0.0
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [],
+        "reasoning": "No prescribed medications at this time.",
+        "score": null,
+        "confidence": 0.0
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [],
+        "reasoning": "Never raised.",
+        "score": null,
+        "confidence": 0.0
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "Never raised.",
+        "score": null,
+        "confidence": 0.0
+      }
+    },
+    "causes": [
+      "family history",
+      "job stress"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "My brother mentioned that our family has a history of something like this",
+        "turn": 1
+      },
+      {
+        "quote": "He didn't go into specifics, but he did mention that our grandfather had some kind of blood disorder, and I think he might have also mentioned lymphoma as well",
+        "turn": 6
+      },
+      {
+        "quote": "I can't help but worry about the possibility of it being something like lymphoma, given our family history",
+        "turn": 12
+      },
+      {
+        "quote": "The job-related stress has definitely been ramping up lately, which I think is contributing to the fatigue and night sweats",
+        "turn": 14
+      }
+    ]
+  }
+}

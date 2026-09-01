@@ -1,0 +1,248 @@
+{
+  "patient_id": "CLL-002",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "CLL-002",
+    "clinical_summary": "Patient with Chronic Lymphocytic Leukemia diagnosed a year ago, on ibrutinib therapy with good hematologic response (lymphocyte count significantly down). Still experiences fatigue (rated 5/10), frequent infections, lymphadenopathy, and concerning easy bruising (appears suddenly, takes long to heal, sometimes painful). Also reports increased thirst and dizziness. Patient is compliant with oncologist's care plan, makes practical adjustments to manage energy (taking breaks, pacing), and actively follows up on concerns. Trusts oncologist and sees treatment as beneficial.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "I've had to make some adjustments, like taking more breaks during the day and trying to pace myself",
+            "turn": 7
+          },
+          {
+            "quote": "I just wish I could have more energy to do all the things I used to enjoy",
+            "turn": 7
+          },
+          {
+            "quote": "It's been quite scary",
+            "turn": 3
+          }
+        ],
+        "reasoning": "Patient has made practical adaptations to daily activities (pacing, breaks) and expresses desire to return to previous energy levels. They acknowledge the emotional impact of the illness while maintaining their roles.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [],
+        "reasoning": "Never explored this dimension. Patient mentioned diagnosis was a year ago and treatment is ongoing but did not express expectations about duration.",
+        "score": null,
+        "confidence": 0.0
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I've been seeing them regularly for check-ups and blood tests",
+            "turn": 3
+          },
+          {
+            "quote": "I've had to make some adjustments, like taking more breaks during the day and trying to pace myself",
+            "turn": 7
+          },
+          {
+            "quote": "I'll definitely bring all these concerns up with my oncologist at my next check-up",
+            "turn": 9
+          }
+        ],
+        "reasoning": "Patient actively follows oncologist's care plan, makes practical adjustments to manage symptoms, and is engaged in their healthcare. They take initiative to follow up on concerns.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "My lymphocyte count has gone down a lot since I started on the ibrutinib",
+            "turn": 4
+          },
+          {
+            "quote": "My oncologist said that's a great sign because it means the treatment is working well",
+            "turn": 4
+          },
+          {
+            "quote": "which seems to be helping for now",
+            "turn": 3
+          }
+        ],
+        "reasoning": "Patient clearly attributes benefit to treatment - lymphocyte count has significantly decreased. They understand treatment is working and see it as beneficial.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "I've been feeling quite tired all the time lately",
+            "turn": 1
+          },
+          {
+            "quote": "I get these frequent infections that seem to be coming one after another",
+            "turn": 1
+          },
+          {
+            "quote": "sometimes my neck and armpits feel a bit swollen",
+            "turn": 1
+          },
+          {
+            "quote": "occasionally, I bruise easily on my arms and legs",
+            "turn": 1
+          },
+          {
+            "quote": "fatigue really started about a year ago",
+            "turn": 2
+          },
+          {
+            "quote": "I just wish I could have more energy to do all the things I used to enjoy",
+            "turn": 7
+          }
+        ],
+        "reasoning": "Patient clearly identifies with multiple persistent symptoms (fatigue, infections, lymphadenopathy, bruising) that affect daily life. These are central to their experience of the illness.",
+        "score": 6.0,
+        "confidence": 0.9
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "It's been quite scary",
+            "turn": 3
+          },
+          {
+            "quote": "As for the bruising, yes, it does concern me",
+            "turn": 5
+          },
+          {
+            "quote": "I just wish I could have more energy to do all the things I used to enjoy",
+            "turn": 7
+          },
+          {
+            "quote": "It's reassuring to know that there are still things we can do to manage my condition",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient expresses fear about the illness, specific concern about bruising, and general desire to manage their condition. They are engaged in seeking solutions and follow-up.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I was diagnosed with Chronic Lymphocytic Leukemia about a year ago",
+            "turn": 3
+          },
+          {
+            "quote": "I'm currently on ibrutinib therapy",
+            "turn": 3
+          },
+          {
+            "quote": "My lymphocyte count has gone down a lot since I started on the ibrutinib",
+            "turn": 4
+          },
+          {
+            "quote": "I think it would be a good idea to have it checked, just to make sure everything's okay",
+            "turn": 5
+          },
+          {
+            "quote": "I'll definitely bring all these concerns up with my oncologist at my next check-up",
+            "turn": 9
+          }
+        ],
+        "reasoning": "Patient knows their diagnosis and treatment, understands that treatment has reduced their lymphocyte count, and can explain what they're experiencing. They are engaged in understanding their condition.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "It's been quite scary",
+            "turn": 3
+          },
+          {
+            "quote": "I just want to reiterate how much I appreciate taking the time to talk with me today",
+            "turn": 8
+          },
+          {
+            "quote": "Thank you so much, doctor! I really appreciate it",
+            "turn": 9
+          },
+          {
+            "quote": "It's reassuring to know that there are still things we can do to manage my condition",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient acknowledges emotional impact ('scary') and expresses gratitude and appreciation. They seem to be managing emotions while engaging with their care.",
+        "score": 4.0,
+        "confidence": 0.7
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "I'm currently on ibrutinib therapy",
+            "turn": 3
+          },
+          {
+            "quote": "My lymphocyte count has gone down a lot since I started on the ibrutinib",
+            "turn": 4
+          },
+          {
+            "quote": "I'll definitely bring all these concerns up with my oncologist at my next check-up",
+            "turn": 9
+          },
+          {
+            "quote": "It's reassuring to know that there are still things we can do to manage my condition",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient is on ibrutinib and sees it as working (lymphocyte count down). They follow oncologist's care plan and seek to manage their condition. No indication they would stop or reduce treatment.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "As for the bruising, yes, it does concern me",
+            "turn": 5
+          },
+          {
+            "quote": "I'm not sure if I've had my blood sugar checked lately",
+            "turn": 5
+          },
+          {
+            "quote": "I'll definitely bring all these concerns up with my oncologist at my next check-up",
+            "turn": 9
+          }
+        ],
+        "reasoning": "Patient has concerns about symptoms (bruising, blood sugar) but raises these with oncologist rather than expressing worry about the medication itself. They seek medical guidance rather than expressing fear about treatment.",
+        "score": 2.0,
+        "confidence": 0.7
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [],
+        "reasoning": "Never explored this dimension. Patient focused on their specific treatment and its effects without expressing general concerns about medicines as a class.",
+        "score": null,
+        "confidence": 0.0
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "Never explored this dimension. Patient never expressed concerns about doctors prescribing too readily. They trust their oncologist.",
+        "score": null,
+        "confidence": 0.0
+      }
+    },
+    "causes": [],
+    "causes_evidence": []
+  }
+}

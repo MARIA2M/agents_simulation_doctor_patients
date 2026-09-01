@@ -1,0 +1,109 @@
+{
+  "patient_id": "CLL-002",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "CLL-002",
+    "clinical_summary": "The patient presents with a chronic illness characterized by relentless fatigue, frequent infections, swollen lymph nodes, and unexplained bruising. These symptoms are affecting their ability to work and spend time with family. They describe their situation as an 'uphill struggle.' No specific diagnosis or treatment information was obtained.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "It's all making it difficult for me to keep up with work and spending time with family",
+            "turn": 1
+          }
+        ],
+        "reasoning": "The patient explicitly states that the illness is making it difficult to keep up with work and family, indicating significant impact on their daily functioning and roles.",
+        "score": 8.0,
+        "confidence": 0.7
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [],
+        "reasoning": "The patient acknowledged their illness is 'chronic' but did not provide information about their expectations for duration or course.",
+        "score": null,
+        "confidence": 0.0
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [],
+        "reasoning": "No information was provided about the patient's actions or beliefs about their ability to influence the illness.",
+        "score": null,
+        "confidence": 0.0
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [],
+        "reasoning": "No information was provided about the patient's treatment or beliefs about its effectiveness.",
+        "score": null,
+        "confidence": 0.0
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "The fatigue is just relentless, and the frequent infections are getting harder to deal with. Plus, my swollen lymph nodes have been bothering me more than usual, and I've noticed some bruising on my arms and legs that I can't explain",
+            "turn": 1
+          }
+        ],
+        "reasoning": "The patient describes multiple symptoms (fatigue, infections, swollen lymph nodes, bruising) that they attribute to their illness, indicating these are central to their experience of the condition.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [],
+        "reasoning": "No explicit expression of worry or concern was provided, though the patient described their situation as an 'uphill struggle.'",
+        "score": null,
+        "confidence": 0.0
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [],
+        "reasoning": "The patient acknowledged their illness is 'chronic' but did not demonstrate understanding of what is happening to them or why.",
+        "score": null,
+        "confidence": 0.0
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [],
+        "reasoning": "The patient described their situation as an 'uphill struggle' which suggests emotional impact, but no explicit emotional expression was provided.",
+        "score": null,
+        "confidence": 0.0
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [],
+        "reasoning": "No information was provided about the patient's prescribed medication or beliefs about its necessity.",
+        "score": null,
+        "confidence": 0.0
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [],
+        "reasoning": "No information was provided about the patient's concerns regarding their medication.",
+        "score": null,
+        "confidence": 0.0
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [],
+        "reasoning": "No information was provided about the patient's general views on medicines as a class.",
+        "score": null,
+        "confidence": 0.0
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "No information was provided about the patient's views on prescribing practices.",
+        "score": null,
+        "confidence": 0.0
+      }
+    },
+    "causes": [],
+    "causes_evidence": []
+  }
+}

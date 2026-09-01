@@ -1,0 +1,342 @@
+{
+  "patient_id": "HIV-005",
+  "turns": 16,
+  "stop_reason": "doctor",
+  "conversation": [
+    {
+      "role": "doctor",
+      "content": "Hello, it's good to see you today. How can I help you?",
+      "turn": 1
+    },
+    {
+      "role": "patient",
+      "content": "Thank you for seeing me. Well, the truth is, my illness has been weighing quite heavily on me lately. It feels like it's taking over my life \u2014 work, relationships, everything. And I know you said the medication should help, but I've started getting these terrible headaches since I started taking it, and I'm just not sure if it's all worth it. Sometimes it feels like I have no control at all.",
+      "turn": 1
+    },
+    {
+      "role": "doctor",
+      "content": "I'm really sorry to hear things are feeling so heavy right now. It sounds like you're carrying a lot, and I want you to know that's completely understandable \u2014 when illness starts to touch everything you care about, it can feel overwhelming. I'm glad you've reached out.",
+      "turn": 2
+    },
+    {
+      "role": "patient",
+      "content": "Thank you for understanding. It just feels like this illness is here to stay, no matter what I do or how well I follow the treatment plan. Sometimes I wonder if things would have been different if I had tested earlier, or if I hadn't let my guard down with that previous partner. But then again, maybe it's just bad luck. Either way, I'm struggling to find a sense of control in all this uncertainty.",
+      "turn": 2
+    },
+    {
+      "role": "doctor",
+      "content": "You're right to feel uncertain sometimes, and it's completely normal to look back and ask questions like that. When we're living with something that feels permanent, it can be really hard to separate what was within our control from what wasn't. I'd like to understand better \u2014 when you say this illness is here to stay, do you mean that in your experience, you don't see it going away on its own, or that treatment might not be able to change the course of things?",
+      "turn": 3
+    },
+    {
+      "role": "patient",
+      "content": "I guess it's more that my understanding of the illness is that it's something I'll have for the rest of my life. I've been living with it now for quite a few years, and while the medication has helped keep things under control most of the time, there are still these moments when I wonder if it's all worth it \u2014 like when the headaches start up again, or when I miss a dose because I feel fine and think I can take a break. But then I worry that not taking my meds regularly will lead to complications down the line. It's a constant balancing act, and sometimes it feels like there's no real end in sight.",
+      "turn": 3
+    },
+    {
+      "role": "doctor",
+      "content": "It sounds like you've been managing this for a while, and that experience of it being \"here to stay\" gives you a realistic sense of what you're dealing with. And you're describing something really common \u2014 the tension between feeling like the treatment is helping, but also feeling frustrated when side effects or those moments of doubt come up. I'm particularly interested in the headaches you mentioned. Can you tell me a bit more about those? How often do they happen, and how do they affect you when they do?",
+      "turn": 4
+    },
+    {
+      "role": "patient",
+      "content": "The headaches are one of the most challenging side effects of the medication for me. They tend to happen once or twice a week \u2014 not every day, but enough that I notice. When they hit, it's like someone has put a vise around my skull; nothing else really gets through to me. Light and sound both seem to intensify the pain, so I tend to withdraw into quiet, dark spaces until the worst of it passes. It's been hard to find ways to mitigate them \u2014 I've tried changing my sleep schedule, drinking more water, even taking over-the-counter painkillers when things get really bad, but nothing seems to be a guaranteed solution. And because they happen so erratically, it's hard to plan around them. Sometimes I'll have a day where everything else is going well, and then suddenly the headache hits out of nowhere and just ruins my plans for the rest of the day.",
+      "turn": 4
+    },
+    {
+      "role": "doctor",
+      "content": "That sounds incredibly intense and exhausting. I can understand how frustrating it must be when a medication that's supposed to help you still brings such a heavy burden. Withdrawal into quiet, dark spaces and having plans ruined at the last minute \u2014 that's a really hard way to live, and I want to make sure we address that. The fact that you've tried different approaches and still find yourself caught off guard tells me these headaches are having a real impact on your quality of life. I want to make sure we get a handle on this \u2014 can you tell me a bit more about your overall experience with the medication? Besides the headaches, what has it been like for you, and how do you weigh the benefits against the challenges right now?",
+      "turn": 5
+    },
+    {
+      "role": "patient",
+      "content": "Overall, I'd say my experience with the medication is that it helps keep things under control most of the time. My viral load hasn't spiked out of control, which is good \u2014 and when I remember to take the pills, I feel more confident in my ability to manage the illness. But then there are days like this, where I'm hit with these terrible headaches or other side effects that make me wonder if it's all worth it. Sometimes I even skip doses because I just can't bear the thought of going through another day like today. And when things feel tough, it's hard to remember why I'm doing this at all \u2014 what benefits am I really getting from taking these pills every day? It feels like a never-ending balancing act, and sometimes it's one that I'm not sure I can win.",
+      "turn": 5
+    },
+    {
+      "role": "doctor",
+      "content": "Thank you for being honest about that \u2014 it sounds like you've got a really clear sense of what's working and what isn't, and that's valuable information. I want to dig a little deeper into what happens when you do skip doses. You mentioned that sometimes you skip because you can't bear to go through another day like this \u2014 when you do skip, what happens? Do you feel different afterward, or does it just leave you feeling anxious about what might come next? And are there any other concerns you have about the medication beyond the headaches? Maybe things like how it makes you feel physically, or worries about long-term effects, or anything else on your mind?",
+      "turn": 6
+    },
+    {
+      "role": "patient",
+      "content": "When I skip doses, it's usually because I'm trying to take a break from the constant feeling of being medicated. But afterward, I always start to worry that I've done something wrong \u2014 that maybe I'll wake up tomorrow and find out that things have taken a turn for the worse because I didn't take my medicine. It's a strange kind of anxiety that never quite goes away, even if everything seems fine when I do remember to take the pills.\n\nBeyond the headaches, there are other side effects that can be tough to deal with \u2014 mostly just feeling fatigued all the time or having trouble sleeping, which makes it hard for me to keep up with work and everything else. And then there's this nagging worry in the back of my mind about what long-term effects these medications might have on my body. I know you're supposed to trust your doctors, but sometimes it's just really hard not to wonder if we're making things worse by trying to manage the illness at all.",
+      "turn": 6
+    },
+    {
+      "role": "doctor",
+      "content": "It makes complete sense that you'd feel anxious after skipping doses \u2014 that constant worry that you've undone all the good you've done is exhausting, and I want to acknowledge that you're carrying a lot of heavy emotional weight. The fatigue and sleep issues are really significant too, and I want to make sure we address all of this. I'm curious \u2014 when you've had these concerns about the medication or the long-term effects, have you been able to talk about them with your doctors? And when you do bring them up, what has their response been? Do they help you feel reassured, or do you feel like you're just expected to keep going with things as they are?",
+      "turn": 7
+    },
+    {
+      "role": "patient",
+      "content": "Honestly, I've never really felt comfortable bringing these concerns up with my doctor. It's not that they've ever dismissed me or made me feel like my worries aren't important \u2014 it's more that there always seems to be a sense of urgency in the appointments, and I don't want to take up too much time with things that might seem trivial compared to the bigger picture. And then part of me feels like maybe I'm just being paranoid, or overthinking things \u2014 that all these concerns are just side effects of living with an illness for so long.\n\nBut at the same time, when we do talk about the medication, they always emphasize how important it is to take it consistently and on schedule. And there have been times where they've adjusted the dosage or switched out pills because of a specific side effect I was experiencing. So maybe part of what's making me feel anxious is that uncertainty \u2014 not knowing if my concerns are real, or if I'm just making things up in my head.",
+      "turn": 7
+    },
+    {
+      "role": "doctor",
+      "content": "I can hear how much thought you've put into this, and I want to reassure you that your concerns are absolutely not trivial. It takes courage to recognize when something isn't working and to voice that, even if you're worried about taking up time. The fact that your doctor has adjusted dosage and switched medications shows that they do take side effects seriously \u2014 that's a good thing, and I want you to know that you deserve to have those conversations without feeling like they're an imposition. You're not taking up too much time by looking out for your own health. I'm also picking up on this uncertainty you mentioned \u2014 wondering whether your concerns are real or just in your head. Can you tell me a bit more about that? What makes you feel unsure sometimes about whether what you're experiencing is truly related to the illness or something else?",
+      "turn": 8
+    },
+    {
+      "role": "patient",
+      "content": "That's a tough question. Sometimes it feels like everything is connected, even if I can't necessarily prove it. Other times, though, I'll have moments where I wonder if maybe these headaches are just part of getting older, or if this fatigue is really just from work stress and not the medication at all. It's hard to tease out what might be related to the illness and what isn't \u2014 especially when so much of my day-to-day life is affected by it one way or another.\n\nAnd then there's this part of me that wonders if maybe I'm just getting paranoid, like you said earlier. If I bring up these concerns to my doctor, am I just creating more worry where there doesn't need to be any? It can be really hard to know what's real and what's in my head sometimes.",
+      "turn": 8
+    },
+    {
+      "role": "doctor",
+      "content": "That uncertainty is really common, and you're not alone in feeling that way \u2014 it's actually one of the most difficult parts of living with a chronic condition. When so many different things can affect how you feel, it's natural to wonder which are connected and which aren't. The fact that you're questioning it shows you're being thoughtful about it, not paranoid. I want to understand your experience with the illness better. When your doctors explain what's happening in your body or how the treatment works, what do they tell you? Have you ever felt like you really understood the connection between the illness, the medication, and the symptoms you're experiencing? Or is there ever a point where you think, \"I wish I understood this better\"?",
+      "turn": 9
+    },
+    {
+      "role": "patient",
+      "content": "Most of the time when my doctor explains things to me, it's like they're speaking another language. They'll use all these medical terms that I just can't follow, and I end up feeling even more confused about what's going on. But at the same time, there have been moments where something clicked, and I felt like I really understood the connection between everything.\n\nI think part of my struggle is that I'm still trying to wrap my head around what it means to live with a chronic illness long-term. It's hard to imagine how things will change over time \u2014 whether the medication will start affecting me in new ways or if the symptoms will just continue as they are now. Sometimes I wish there was more out-of-the-box thinking when it comes to managing the illness, like finding other ways to support my body beyond just taking these pills every day.\n\nBut then again, maybe that's just me wanting a magic solution when the reality is that this is something I'm going to have to deal with for the rest of my life.",
+      "turn": 9
+    },
+    {
+      "role": "doctor",
+      "content": "It's completely understandable that you'd want more out-of-the-box thinking \u2014 chronic illness management is so much more than just medication, and you're absolutely right that there are other ways to support your body and your overall well-being. When you mention finding other ways to support yourself beyond the pills, what kinds of things come to mind for you? And how do you feel about the idea of combining different approaches rather than relying on medication alone? I'm curious about your perspective on that.",
+      "turn": 10
+    },
+    {
+      "role": "patient",
+      "content": "When I think about supporting myself beyond the medication, a few things come to mind: exercise, diet and nutrition, stress management techniques like meditation or mindfulness, and staying connected with friends and family.\n\nI've always been hesitant about the idea of combining different approaches, partly because it's hard enough just keeping up with the medication schedule as is. But at the same time, I know that taking care of my overall well-being can't just be an afterthought \u2014 it has to be a priority if I want to keep living my life in a way that feels fulfilling and rewarding.\n\nI'm still not sure exactly what combining approaches would look like for me, but I think part of it might involve finding ways to make self-care feel less like another chore on my already long to-do list. Maybe it's about setting up small victories throughout the day \u2014 taking a short walk during lunch break, or making sure I've got some healthy snacks on hand when I get home from work. Or maybe it's just about being more gentle with myself and recognizing that it's okay not to be perfect all the time.",
+      "turn": 10
+    },
+    {
+      "role": "doctor",
+      "content": "I really appreciate how thoughtfully you're approaching this \u2014 recognizing that self-care can't be an afterthought, and thinking about small, manageable steps rather than trying to overhaul everything at once. That's actually a very wise way to think about it. You've touched on some really important things: exercise, nutrition, stress management, and connection with others \u2014 all of those are really meaningful ways to support yourself. And I love that you're thinking about finding small victories rather than aiming for perfection. You're being very gentle with yourself in that way, which I think is exactly what you need right now. I want to circle back a bit to how you've been feeling overall \u2014 emotionally, not just physically. Given everything you've shared about the illness weighing on you, the side effects, the uncertainty, and all of that \u2014 how have you been feeling on a day-to-day basis? What's the emotional climate been like for you lately?",
+      "turn": 11
+    },
+    {
+      "role": "patient",
+      "content": "Emotionally, it's been a really rough time. I think part of it is just this constant sense of being weighed down by everything. It feels like no matter what I do or how hard I try, there's always something else that needs to be taken care of \u2014 whether it's work stress, family obligations, or just the day-to-day tasks of living with an illness.\n\nAnd then there's this underlying worry that things could get worse at any moment. It's like walking on a tightrope without ever really knowing when you might stumble and fall. I think part of me is always waiting for the next shoe to drop \u2014 that next time the headaches come back, or my viral load starts spiking again.\n\nBut then there are these moments where I'll see something beautiful, or have a conversation with someone who reminds me of what's still important in life, and it feels like maybe there's hope after all. It's those moments that keep me going even when everything else feels so overwhelming.",
+      "turn": 11
+    },
+    {
+      "role": "doctor",
+      "content": "It sounds like you've been carrying an immense emotional burden, and I want to acknowledge how much strength it takes to keep going through that. The image of walking on a tightrope without knowing when you might stumble really captures how exhausting it must be to live with that constant low-level anxiety and fear. And I'm so glad you have those moments of hope \u2014 the conversations and beauty that remind you what's still important. Those moments are precious, and they matter. I'm curious about those connections that give you hope. When you have conversations with people who remind you of what's important, who are they? Friends, family, someone else? And how do you feel when you're able to share some of what you're going through with them? Do you feel like they understand, or do you keep a lot of it to yourself?",
+      "turn": 12
+    },
+    {
+      "role": "patient",
+      "content": "The people who remind me of what's important in life are usually friends and family. They're the ones who make me laugh, listen when I need to vent, or just sit quietly with me when words aren't necessary.\n\nWhen I'm able to share some of what I'm going through with them, it's a relief \u2014 talking about everything that's on my mind feels like such a weight lifted off my shoulders. And while I know everyone processes things differently, I always feel like they understand in some way, even if they can't fully comprehend the experience of living with an illness.\n\nBut there are also times when I don't share as much as I'd like to \u2014 either because it feels too overwhelming, or because I'm worried about burdening others. That's something that's been really hard for me to navigate: finding a balance between sharing my struggles and not feeling like I'm always putting others in the position of having to support me all the time.",
+      "turn": 12
+    },
+    {
+      "role": "doctor",
+      "content": "That's really insightful \u2014 you clearly have people in your life who care about you and want to be there for you, and it sounds like you have a good sense of how to let them in even when it feels difficult. The balance you're trying to strike is so common, and I want you to know that your feelings about not wanting to be a burden are completely understandable, even if they don't make sense logically. Sometimes we just need to protect ourselves. You've shared so much about the physical side effects, the uncertainty, the emotional weight \u2014 I'm curious about how you see yourself fitting into the world right now. When you think about your life and who you are, how has this illness and the challenges of managing it changed that picture? Is there a part of yourself that feels different now, or do you feel like you're still the same person you were before?",
+      "turn": 13
+    },
+    {
+      "role": "patient",
+      "content": "That's such an interesting question. I think in some ways, living with this illness has definitely changed who I am. There are parts of myself that I've had to let go \u2014 certain ambitions, dreams, and goals that just aren't feasible anymore. And there have been times when it feels like the illness is defining me more than anything else.\n\nBut at the same time, I also feel like this experience has brought out strengths in me that maybe weren't there before. It's given me a resilience I never knew I had \u2014 the ability to face really difficult situations and keep moving forward. And even when things are hard, it makes me appreciate the moments of joy and beauty all the more.\n\nSo I guess you could say that living with this illness has changed who I am, but not in a way that defines me completely. It's part of my story now \u2014 an important chapter, but not the whole book.",
+      "turn": 13
+    },
+    {
+      "role": "doctor",
+      "content": "You've shared so much with me today, and I want to acknowledge how much strength and insight you've shown throughout this conversation. It's clear you've been carrying a heavy load \u2014 physically with those headaches and fatigue, emotionally with the constant worry and uncertainty, and even in trying to figure out how to balance your needs with your relationships. The way you've thought about this, the strengths you've developed, and the way you're trying to be gentle with yourself \u2014 that's not just resilience, that's wisdom.\n\nLet me summarize what I'm hearing so we can make sure we're on the same page before we wrap up:\n\nYou've been living with this illness for years and feel like it's something you'll have for the rest of your life. The medication has helped keep things under control, but you're struggling with significant side effects \u2014 particularly the headaches, plus fatigue and sleep issues. You've questioned whether the treatment is worth it, worried about long-term effects, and even considered skipping doses. You have good understanding of when the medication works but feel uncertain about how to integrate other approaches like exercise, nutrition, and stress management into your daily life. You have supportive friends and family, but you worry about being a burden. And you're still figuring out how this illness fits into your identity and what kind of life you want to build going forward.\n\nGiven all of that, what would you like to focus on first as we look at next steps? Are there any immediate concerns you'd like to address, or should we start with one of those other approaches you mentioned?",
+      "turn": 14
+    },
+    {
+      "role": "patient",
+      "content": "Thank you so much for summarizing everything \u2014 it's really helpful to have a clear picture of where we are. I think the most immediate concern right now is dealing with these headaches and finding ways to manage them more effectively. They're such a heavy burden, both physically and emotionally, and they've been interfering with my ability to do things that I enjoy or that help me feel like myself again.\n\nSo maybe it would be helpful to start by looking at different strategies for managing the headaches, whether that's through adjusting your medication regimen, trying different over-the-counter pain relievers, or exploring other approaches like mindfulness or physical therapy. And then we can also talk about how to build those other self-care practices into your daily routine \u2014 finding ways to incorporate exercise, stress management techniques, and good nutrition in a way that feels manageable and sustainable. Does that sound like a good place to start?",
+      "turn": 14
+    },
+    {
+      "role": "doctor",
+      "content": "That sounds like a really practical and thoughtful plan. The headaches are definitely a priority \u2014 they're affecting your quality of life and making it harder to engage in the self-care practices that would help. Here's what I'm thinking:\n\nFor the headaches specifically, we could:\n- Review what you're currently taking and whether there are alternatives that might be gentler on you\n- Talk about timing of the medication to see if there's a way to minimize headaches\n- Explore some non-medical strategies that might help \u2014 things like hydration, avoiding triggers, gentle movement when you can, and relaxation techniques that don't rely on perfect quiet environments\n\nAnd for building those other self-care practices, we can start small \u2014 maybe just one thing at a time, like walking during your lunch break or having healthy snacks ready, rather than trying to overhaul everything at once. The goal is to find what feels sustainable for you, not another thing to feel guilty about if you can't do perfectly.\n\nI want to make sure we also touch on how you're feeling emotionally, and what support you have in your life \u2014 because that's all connected to how you're managing everything. And we should keep the door open for any other concerns that come up between visits.\n\nYou've done a really good job today thinking through all of this, and I'm glad you came in. We'll work together to find what works for you, and I'll be here to support you as you figure out what feels manageable and what doesn't. Is there anything else you'd like to address before we end today?",
+      "turn": 15
+    },
+    {
+      "role": "patient",
+      "content": "Thank you so much for listening and for your thoughtful approach to all of this. It's clear that you understand the complexity of living with a chronic illness, and I appreciate how you're taking everything into account.\n\nFor now, I think focusing on the headaches is definitely the most pressing concern \u2014 so let's start there. And yes, it would be really helpful to touch on emotional support as well, because I know that doesn't exist in a vacuum from the physical side of things. There are days when just having someone who understands what I'm going through makes all the difference.\n\nThank you for your time and your care today \u2014 I feel like this conversation has been incredibly validating, and I'm looking forward to working together on these next steps.",
+      "turn": 15
+    },
+    {
+      "role": "doctor",
+      "content": "You're very welcome, and I'm glad this conversation felt validating for you. You've shown so much insight and resilience throughout, and that's going to be really valuable as we work through these challenges together. \n\nTo recap where we're starting: we'll focus on the headaches first, looking at medication timing and alternatives, plus some strategies to help minimize them. Then we'll build in those small self-care practices one at a time, and we'll keep an eye on how you're feeling emotionally and what support you have in your life. \n\nYou don't have to carry all of this alone, and you don't have to figure it all out at once. We'll take it step by step, and I'll be here to help you navigate what feels doable and what doesn't. \n\nTake care of yourself today, and I hope you're able to find some moments of relief and connection. We'll talk again soon. Take care.",
+      "turn": 16
+    },
+    {
+      "role": "patient",
+      "content": "Thank you for your kind words and support. It means a lot to have someone who understands the challenges I'm facing right now. I look forward to working with you on these next steps, and I appreciate how you're taking everything into account.\n\nYou're absolutely right that I don't need to figure everything out at once \u2014 just finding those small moments of relief is really important right now. So thank you for helping me focus on what's most pressing and for being here to support me as we move forward together.\n\nI'll take care, and I hope you have a great rest of your day too. We'll talk soon.",
+      "turn": 16
+    }
+  ],
+  "coverage_hint": {},
+  "working_notes": [],
+  "events": [],
+  "usage": [
+    {
+      "role": "doctor",
+      "eval_tokens": 137,
+      "prompt_tokens": 1583
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 88,
+      "prompt_tokens": 1290
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 252,
+      "prompt_tokens": 1811
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 88,
+      "prompt_tokens": 1444
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 256,
+      "prompt_tokens": 2154
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 134,
+      "prompt_tokens": 1640
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 267,
+      "prompt_tokens": 2547
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 186,
+      "prompt_tokens": 1887
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 307,
+      "prompt_tokens": 3003
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 166,
+      "prompt_tokens": 2230
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 305,
+      "prompt_tokens": 3479
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 203,
+      "prompt_tokens": 2540
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 337,
+      "prompt_tokens": 3990
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 201,
+      "prompt_tokens": 2890
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 410,
+      "prompt_tokens": 4531
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 167,
+      "prompt_tokens": 3269
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 336,
+      "prompt_tokens": 5111
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 210,
+      "prompt_tokens": 3594
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 317,
+      "prompt_tokens": 5660
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 221,
+      "prompt_tokens": 3910
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 382,
+      "prompt_tokens": 6201
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 204,
+      "prompt_tokens": 4329
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 374,
+      "prompt_tokens": 6790
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 195,
+      "prompt_tokens": 4711
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 333,
+      "prompt_tokens": 7362
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 186,
+      "prompt_tokens": 5092
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 566,
+      "prompt_tokens": 7884
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 179,
+      "prompt_tokens": 5604
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 477,
+      "prompt_tokens": 8632
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 150,
+      "prompt_tokens": 6108
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 285,
+      "prompt_tokens": 9262
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 127,
+      "prompt_tokens": 6458
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 769,
+      "prompt_tokens": 9677
+    },
+    {
+      "role": "report",
+      "eval_tokens": 5524,
+      "prompt_tokens": 18518
+    }
+  ]
+}

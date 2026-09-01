@@ -1,0 +1,286 @@
+{
+  "patient_id": "HIV-005",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "HIV-005",
+    "clinical_summary": "Patient with HIV reports persistent headaches (2-3x/week, 7-8/10 intensity) and low-grade fatigue that began shortly after starting current medication a year ago. They question whether the medication is helping with symptoms and have taken days off ('drug holidays') when feeling well, believing their body can cope without it. The illness has impacted work performance and relationships, and they experience ongoing worry about the future and potential side effects. They have limited understanding of how the medication works and actively seek clearer information.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "At work, there are times when I feel like I'm not performing as well as I used to because of this constant low-level exhaustion.",
+            "turn": 10
+          },
+          {
+            "quote": "It's also been hard to maintain relationships — sometimes people just don't understand what it’s like to live with a chronic condition like this.",
+            "turn": 10
+          },
+          {
+            "quote": "The headaches have been happening every few days, maybe two or three times a week. They're not constant but when they hit, they can be quite intense. I would say they are around 7-8 out of 10 in terms of pain level.",
+            "turn": 2
+          },
+          {
+            "quote": "As for the fatigue, it's been more of a low-grade feeling all the time. It's not like I can sleep all day, but I just feel that I have less energy than before. It doesn't really go away, so it makes getting through the day quite difficult at times.",
+            "turn": 2
+          }
+        ],
+        "reasoning": "The patient has significant functional impairment - work performance is affected, relationships are strained, and they experience daily headaches (7-8/10) and persistent fatigue that makes daily tasks difficult. This is more than just adaptation - they've had to scale back their performance and struggle with maintaining relationships.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "The headaches began shortly after I started my current treatment about a year ago.",
+            "turn": 3
+          },
+          {
+            "quote": "But then again, since this is a chronic condition, it feels like there's always going to be some level of struggle in managing it.",
+            "turn": 9
+          },
+          {
+            "quote": "But like I said earlier, doctor, the uncertainty around all this is something I've learned to live with. I take things one day at a time and do what I can to keep myself as healthy as possible.",
+            "turn": 11
+          },
+          {
+            "quote": "The idea of being on medicine every day for the rest of my life is definitely hard to wrap my head around.",
+            "turn": 13
+          }
+        ],
+        "reasoning": "The patient clearly views HIV as a chronic, long-term condition that will require ongoing management. They've been on treatment for a year and expect to continue for the rest of their life. They acknowledge uncertainty but plan for the long term.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "There are days when I feel like I'm in control — I take my medication as prescribed, eat healthily, and try to get enough sleep.",
+            "turn": 8
+          },
+          {
+            "quote": "But then there are times when the headaches come back with a vengeance or I’m just hit by this overwhelming fatigue, and it feels like HIV is controlling me instead of the other way around.",
+            "turn": 8
+          },
+          {
+            "quote": "I take things one day at a time and do what I can to keep myself as healthy as possible.",
+            "turn": 11
+          },
+          {
+            "quote": "I'm trying to focus on living life as fully as possible despite the challenges.",
+            "turn": 10
+          }
+        ],
+        "reasoning": "The patient demonstrates fluctuating control - they actively engage in healthy behaviors and medication adherence on some days, but feel completely controlled by symptoms on others. They're trying to maintain agency but acknowledge the illness often takes over.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "While I know it's supposed to help with these symptoms and keep my immune system strong, I can't say that it has been doing so in a way that's really noticeable to me.",
+            "turn": 4
+          },
+          {
+            "quote": "The headaches continue and the fatigue doesn’t seem to be improving much.",
+            "turn": 4
+          },
+          {
+            "quote": "Sometimes, when I'm feeling well, I even take a few days off from taking my medicine, but I know I shouldn't do that.",
+            "turn": 4
+          },
+          {
+            "quote": "When I take those 'drug holidays', part of me feels like I'm doing the right thing because I feel okay. It's almost like proof that my body can cope without this medication",
+            "turn": 5
+          }
+        ],
+        "reasoning": "The patient questions whether the medication is actually helping with their symptoms. They've been on it for a year with no improvement in headaches or fatigue. They even use feeling well as evidence that the medication isn't necessary.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "I think it might be related to the HIV infection that I have.",
+            "turn": 1
+          },
+          {
+            "quote": "As for how I see myself, it's something that has changed over time. At first, I felt a lot of anger and resentment towards my situation. But as the years have gone by, I've come to terms with it more — realizing that there are people out there who are doing their best to help me through this. It’s still a part of my identity, but I'm trying to focus on living life as fully as possible despite the challenges.",
+            "turn": 10
+          },
+          {
+            "quote": "The idea of being on medicine every day for the rest of my life is definitely hard to wrap my head around. It’s a constant reminder that I'm living with this illness",
+            "turn": 13
+          }
+        ],
+        "reasoning": "The patient clearly identifies with having HIV - it's a significant part of their identity that has evolved from anger to acceptance. They experience daily symptoms (headaches, fatigue) that they attribute to the illness.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "When I think about the future, there are times when I get scared. Living with this illness feels like walking on thin ice — you never know when things might take a turn for the worse.",
+            "turn": 7
+          },
+          {
+            "quote": "It's hard not to worry about what might happen and whether treatment will keep evolving at the same pace.",
+            "turn": 7
+          },
+          {
+            "quote": "But like I said earlier, doctor, the uncertainty around all this is something I've learned to live with.",
+            "turn": 11
+          },
+          {
+            "quote": "There are times when I worry about potential side effects too. Even though you've explained to me that they're usually manageable, it's hard not to feel anxious about what might happen if my body reacts badly to the medication.",
+            "turn": 12
+          }
+        ],
+        "reasoning": "The patient experiences frequent worry and fear about their health, the future, and potential side effects. They describe living with uncertainty and constant worry.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "Honestly, doctor, my understanding of HIV and its treatment is a bit patchy. I’ve picked up bits and pieces from various sources, but I wouldn't say I have a clear picture of how the medication works or why it's necessary to take it every day.",
+            "turn": 6
+          },
+          {
+            "quote": "I can grasp that it helps control the virus so it doesn’t damage my immune system further, but beyond that, it’s hazy for me.",
+            "turn": 6
+          },
+          {
+            "quote": "A clearer understanding of the medicine and its purpose in my body would definitely help me feel more confident.",
+            "turn": 14
+          }
+        ],
+        "reasoning": "The patient has limited understanding of how their medication works and why it's necessary. They know it helps control the virus and protect the immune system, but beyond that it's 'hazy.' They actively seek better understanding.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "At first, I felt a lot of anger and resentment towards my situation.",
+            "turn": 10
+          },
+          {
+            "quote": "When I think about the future, there are times when I get scared.",
+            "turn": 7
+          },
+          {
+            "quote": "Living with this illness feels like walking on thin ice — you never know when things might take a turn for the worse.",
+            "turn": 7
+          },
+          {
+            "quote": "But like I said earlier, doctor, the uncertainty around all this is something I've learned to live with.",
+            "turn": 11
+          },
+          {
+            "quote": "There are times when I worry about potential side effects too. Even though you've explained to me that they're usually manageable, it's hard not to feel anxious about what might happen if my body reacts badly to the medication.",
+            "turn": 12
+          }
+        ],
+        "reasoning": "The patient experiences significant emotional responses - anger and resentment initially, ongoing fear and anxiety about the future and potential side effects. They acknowledge these emotions and try to manage them.",
+        "score": 8.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "While I know it's supposed to help with these symptoms and keep my immune system strong, I can't say that it has been doing so in a way that's really noticeable to me.",
+            "turn": 4
+          },
+          {
+            "quote": "Sometimes, when I'm feeling well, I even take a few days off from taking my medicine, but I know I shouldn't do that.",
+            "turn": 4
+          },
+          {
+            "quote": "When I take those 'drug holidays', part of me feels like I'm doing the right thing because I feel okay. It's almost like proof that my body can cope without this medication",
+            "turn": 5
+          },
+          {
+            "quote": "When I decide to skip a dose, it's often because of the headaches and fatigue. But part of me also wonders if taking the medicine every day is really necessary — maybe I can get by on less",
+            "turn": 12
+          }
+        ],
+        "reasoning": "The patient questions whether the medication is truly necessary every day. They take days off when feeling well, believing their body can cope without it. They wonder if they can get by on less.",
+        "score": 2.0,
+        "confidence": 0.8
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "There are times when I worry about potential side effects too. Even though you've explained to me that they're usually manageable, it's hard not to feel anxious about what might happen if my body reacts badly to the medication.",
+            "turn": 12
+          },
+          {
+            "quote": "But then, there's always this nagging worry at the back of my mind — what if taking the medication is important and I'm making things worse?",
+            "turn": 5
+          },
+          {
+            "quote": "A clearer understanding of the medicine and its purpose in my body would definitely help me feel more confident.",
+            "turn": 14
+          },
+          {
+            "quote": "Also, having a better grasp on how to manage potential side effects would make things easier.",
+            "turn": 14
+          }
+        ],
+        "reasoning": "The patient has specific concerns about side effects and worries about making things worse by not taking the medication. These concerns have led them to take days off and question the necessity of daily medication.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "The idea of being on medicine every day for the rest of my life is definitely hard to wrap my head around. It’s a constant reminder that I'm living with this illness",
+            "turn": 13
+          },
+          {
+            "quote": "At the same time, I understand that it's an essential part of managing my health.",
+            "turn": 13
+          }
+        ],
+        "reasoning": "The patient finds the prospect of long-term medication difficult but understands it's essential. They don't express general concerns about medicines being harmful, only about their specific medication.",
+        "score": 2.0,
+        "confidence": 0.7
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [
+          {
+            "quote": "At the same time, I trust that you and other healthcare professionals are doing everything possible to help me find the right treatment for my situation.",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient expresses trust in healthcare professionals and believes they're doing their best. There's no indication they believe doctors prescribe too readily.",
+        "score": 1.0,
+        "confidence": 0.8
+      }
+    },
+    "causes": [
+      "previous partner who did not disclose his status to me"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "I believe that my infection was caused by a previous partner who did not disclose his status to me.",
+        "turn": 7
+      }
+    ]
+  }
+}

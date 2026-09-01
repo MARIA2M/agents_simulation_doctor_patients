@@ -1,0 +1,273 @@
+{
+  "patient_id": "CLL-004",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "CLL-004",
+    "clinical_summary": "The patient has CLL and is on Venetoclax 400mg daily with good adherence. They experience persistent fatigue, recurrent bacterial infections (4-5/year), lymphadenopathy (neck, axillary, groin), and new severe persistent headaches. Bloodwork was normal last month. They've had to start taking afternoon naps most days to function, and simple tasks now require 'monumental efforts.' The patient describes infections as an 'ongoing battle' and expresses frustration and tiredness. They are proactive about communicating with their oncologist and will discuss these symptoms at their next follow-up.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "making even simple tasks feel like monumental efforts",
+            "turn": 4
+          },
+          {
+            "quote": "my energy levels have been significantly lower since starting the treatment",
+            "turn": 8
+          },
+          {
+            "quote": "I've also had to start taking afternoon naps most days just to be able to function throughout the day",
+            "turn": 8
+          },
+          {
+            "quote": "my ability to do normal daily activities has been greatly affected by these symptoms",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient has had to start taking afternoon naps most days to function, simple tasks now require 'monumental efforts,' and they explicitly state their ability to do normal daily activities has been 'greatly affected.' This shows a major role is reduced—they're having to nap to function and tasks that were once simple are now difficult.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "The fatigue has been a constant for as long as I can remember since my diagnosis",
+            "turn": 2
+          },
+          {
+            "quote": "They've been a persistent problem ever since my treatment started, so it's been about two years now",
+            "turn": 2
+          },
+          {
+            "quote": "Swollen lymph nodes have been a persistent issue",
+            "turn": 4
+          },
+          {
+            "quote": "As for infections, they've become more frequent recently, so it's quite an ongoing battle",
+            "turn": 4
+          }
+        ],
+        "reasoning": "The patient describes symptoms as 'persistent' and 'ongoing' since diagnosis and treatment started. They don't express an expectation of the illness ending—they talk about it as something they're 'battling' and that has been 'persistent' for years. They don't mention any expectation of remission or cure.",
+        "score": 8.0,
+        "confidence": 0.7
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "it's quite an ongoing battle to keep them at bay with the help of antibiotics",
+            "turn": 4
+          },
+          {
+            "quote": "It can be quite frustrating and tiring, honestly",
+            "turn": 9
+          },
+          {
+            "quote": "I've been taking my Venetoclax exactly as prescribed",
+            "turn": 5
+          },
+          {
+            "quote": "I always complete as prescribed by my doctor",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient describes infections as an 'ongoing battle' and expresses frustration and tiredness. They are adherent to Venetoclax and complete antibiotic courses as prescribed. However, they don't credit their own actions with changing the course of the illness—they talk about 'keeping them at bay' with antibiotics and describe it as a battle they're in. The adherence is because they were told to do it, not because they believe it's something they're actively managing.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "I was diagnosed with Chronic Lymphocytic Leukemia (CLL) a few years ago",
+            "turn": 3
+          },
+          {
+            "quote": "Currently, I'm taking Venetoclax 400 mg daily as my maintenance medication",
+            "turn": 3
+          },
+          {
+            "quote": "My doctor also mentioned the possibility of needing additional lines of therapy in the future",
+            "turn": 3
+          },
+          {
+            "quote": "The infections tend to last for a few weeks, depending on the severity",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient is on Venetoclax as 'maintenance medication' and the doctor has mentioned 'additional lines of therapy in the future,' suggesting the current treatment isn't fully controlling the disease. The infections still occur and last weeks, and the patient describes them as an 'ongoing battle.' They don't attribute their current state to the treatment working—in fact, the treatment seems to be maintenance rather than curative.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "I was diagnosed with Chronic Lymphocytic Leukemia (CLL) a few years ago",
+            "turn": 3
+          },
+          {
+            "quote": "The fatigue has been a constant for as long as I can remember since my diagnosis",
+            "turn": 2
+          },
+          {
+            "quote": "The recurrent infections usually require antibiotics 4-5 times per year",
+            "turn": 2
+          },
+          {
+            "quote": "Swollen lymph nodes have been a persistent issue. I can feel them in my neck, armpits, and groin areas",
+            "turn": 4
+          },
+          {
+            "quote": "making even simple tasks feel like monumental efforts",
+            "turn": 4
+          }
+        ],
+        "reasoning": "The patient explicitly identifies their illness as CLL and describes multiple symptoms they attribute to it: fatigue, recurrent infections, and swollen lymph nodes. They describe these symptoms as 'constant' and 'persistent' and they affect daily functioning.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "which have been a real nuisance lately",
+            "turn": 1
+          },
+          {
+            "quote": "it's quite an ongoing battle to keep them at bay with the help of antibiotics",
+            "turn": 4
+          },
+          {
+            "quote": "It can be quite frustrating and tiring, honestly",
+            "turn": 9
+          },
+          {
+            "quote": "I'll definitely reach out to my oncologist soon and keep them updated on these symptoms",
+            "turn": 10
+          }
+        ],
+        "reasoning": "The patient describes infections as a 'real nuisance' and an 'ongoing battle' that is 'frustrating and tiring.' They express concern enough to reach out to their oncologist and keep them updated. The worry recurs unprompted (about infections and headaches) and shapes their behavior (contacting their doctor).",
+        "score": 8.0,
+        "confidence": 0.7
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I was diagnosed with Chronic Lymphocytic Leukemia (CLL) a few years ago",
+            "turn": 3
+          },
+          {
+            "quote": "Currently, I'm taking Venetoclax 400 mg daily as my maintenance medication",
+            "turn": 3
+          },
+          {
+            "quote": "I completed the ramp-up phase without issues and haven't missed a dose since then",
+            "turn": 5
+          },
+          {
+            "quote": "As for blood work, it's part of my regular monthly checkups, which also include monitoring my lymphocyte counts",
+            "turn": 6
+          },
+          {
+            "quote": "The last time I had blood work done was just a few weeks ago, and everything seemed to be within normal limits",
+            "turn": 6
+          }
+        ],
+        "reasoning": "The patient can explain their diagnosis, treatment (Venetoclax 400mg daily, completed Obinutuzumab), follow-up schedule (monthly checkups), and what blood work monitors (lymphocyte counts). They understand their treatment regimen and follow-up schedule. However, they don't explain the mechanism of CLL or how Venetoclax works.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "which have been a real nuisance lately",
+            "turn": 1
+          },
+          {
+            "quote": "it's quite an ongoing battle to keep them at bay with the help of antibiotics",
+            "turn": 4
+          },
+          {
+            "quote": "It can be quite frustrating and tiring, honestly",
+            "turn": 9
+          },
+          {
+            "quote": "I appreciate your guidance and will make sure to discuss all of this during my follow-up appointment",
+            "turn": 10
+          }
+        ],
+        "reasoning": "The patient expresses frustration ('frustrating and tiring') and describes the illness as an 'ongoing battle.' They acknowledge the emotional impact ('I appreciate your guidance') and are proactive about managing it. The emotion is recurrent and affects how they speak about the illness.",
+        "score": 6.0,
+        "confidence": 0.7
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "Yes, I've been taking my Venetoclax exactly as prescribed, 400 mg daily",
+            "turn": 5
+          },
+          {
+            "quote": "I always complete as prescribed by my doctor",
+            "turn": 9
+          },
+          {
+            "quote": "I'll definitely reach out to my oncologist soon and keep them updated on these symptoms",
+            "turn": 10
+          }
+        ],
+        "reasoning": "The patient is highly adherent to Venetoclax, taking it exactly as prescribed and completing antibiotic courses. They are proactive about communicating with their oncologist. However, they don't explicitly state that they believe Venetoclax is necessary—they take it because they were prescribed it. The adherence is because they were told to do it, not because they believe it's something they're actively managing.",
+        "score": 3.0,
+        "confidence": 0.7
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "However, I have started to get these terrible headaches recently",
+            "turn": 5
+          },
+          {
+            "quote": "They're quite bothersome and make it difficult for me to focus on anything else",
+            "turn": 5
+          },
+          {
+            "quote": "The headaches I've been getting lately have been quite severe",
+            "turn": 6
+          },
+          {
+            "quote": "I'll definitely reach out to my oncologist soon and keep them updated on these symptoms, especially the new headaches",
+            "turn": 10
+          }
+        ],
+        "reasoning": "The patient has developed new severe headaches that are 'terrible' and 'quite bothersome.' They've raised these concerns with their oncologist and are actively seeking follow-up. The concerns recur unprompted (about headaches) and have changed their behavior (contacting their doctor).",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [],
+        "reasoning": "The patient did not offer any general view about whether medicines are harmful. They only discussed their specific medication (Venetoclax) and its side effects.",
+        "score": null,
+        "confidence": 0.9
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "The patient did not offer any general view about whether doctors prescribe too readily. They only discussed their specific treatment and follow-up.",
+        "score": null,
+        "confidence": 0.9
+      }
+    },
+    "causes": [],
+    "causes_evidence": []
+  }
+}

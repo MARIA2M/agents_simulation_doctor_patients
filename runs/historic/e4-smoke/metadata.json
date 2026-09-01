@@ -1,0 +1,50 @@
+{
+  "run_id": "e4-smoke",
+  "started_at": "2026-08-21T15:55:59+02:00",
+  "profile": "hpc",
+  "models": {
+    "doctor": "glm-4.7-flash:q8_0",
+    "patient": "dolphin-llama3",
+    "embed": "jina-embeddings-v4"
+  },
+  "sampling": {
+    "doctor_temperature": 0.7,
+    "patient_temperature": 0.7,
+    "report_temperature": 0.0,
+    "seed": null,
+    "context_length": 32768,
+    "num_parallel": 1
+  },
+  "server": {
+    "ollama_url": "http://127.0.0.1:11500",
+    "request_timeout": 300,
+    "keep_alive": "4h"
+  },
+  "prompts": {
+    "doctor": "sha256:77353d2003a68a421ff8750c05877a1860e7725d39515e21adff8ab28a82f322",
+    "patient": "sha256:015abcca1e792b88282a30e7797c105876d506d095ce44c72dfc9bebe6bd6334",
+    "report": "sha256:a50756908605ffecfb06012d91335c1ebd4024e28296b863db32ca93745823cf",
+    "doctor_rubric": "sha256:a0dc400a5c317478a2fed0df2bd4c7033f43fa259219f62e609d1a558c706c9e",
+    "skills": {
+      "doctor": [],
+      "patient": []
+    }
+  },
+  "code": {
+    "git_commit": "8f604e4",
+    "dirty": false
+  },
+  "compute": {
+    "hostname": "as01r1b19",
+    "slurm_nodelist": "as01r1b19",
+    "slurm_job": "44893193",
+    "gpus": 1
+  },
+  "corpus": {
+    "patients": 1,
+    "patient_ids": [
+      "CLL-003"
+    ],
+    "ground_truth_source": "patients/*.json"
+  }
+}

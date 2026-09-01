@@ -1,0 +1,279 @@
+{
+  "patient_id": "HIV-001",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "HIV-001",
+    "clinical_summary": "The patient has HIV and reports significant fatigue (unpredictable timing, affecting both physical and mental functioning) and tingling in feet (pins-and-needles sensation, started a few months after treatment began). They manage treatment as prescribed and see clear benefits (undetectable viral load, improved quality of life). They actively learn about their condition, use support networks, and find meaning in the experience. They balance personal control with acceptance and have specific concerns about side effects and long-term effects.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "Having this illness means that every aspect of my life is affected — from my work to my relationships and even my hobbies.",
+            "turn": 4
+          },
+          {
+            "quote": "It makes me constantly aware of my health status and how it impacts my daily routine.",
+            "turn": 4
+          },
+          {
+            "quote": "Some days I can feel overwhelmed by everything — the uncertainty, the constant need for self-care, and just the mental burden of dealing with a chronic illness.",
+            "turn": 5
+          }
+        ],
+        "reasoning": "The patient describes how HIV affects every aspect of their life - work, relationships, hobbies, and daily routine. They're constantly aware of their health status and experience mental burden. This suggests significant impact on their life functioning.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "While I'm aware that there's no cure yet for HIV",
+            "turn": 4
+          },
+          {
+            "quote": "It's not as bad as it was though, so that's something.",
+            "turn": 1
+          },
+          {
+            "quote": "It started a few months after starting my treatment, so that's when I first noticed these patterns.",
+            "turn": 2
+          }
+        ],
+        "reasoning": "The patient acknowledges there's no cure, which suggests a chronic perspective. They mention symptoms started a few months after treatment began, and they note 'it's not as bad as it was' which suggests some progression over time. They're planning for the future in terms of maintaining health, which aligns with a chronic condition.",
+        "score": 8.0,
+        "confidence": 0.7
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I do believe my actions and choices can influence how I'm doing on a day-to-day basis",
+            "turn": 7
+          },
+          {
+            "quote": "if I had a really bad day with symptoms, I would think about what might have triggered it or if there were things I could do differently to feel better",
+            "turn": 7
+          },
+          {
+            "quote": "I believe in taking control of my own health as much as possible",
+            "turn": 7
+          },
+          {
+            "quote": "I try not to beat myself up too much when things don't go exactly as planned — it's a delicate balance between responsibility and acceptance",
+            "turn": 7
+          }
+        ],
+        "reasoning": "The patient clearly believes their actions and choices can influence their health. They actively think about what might trigger symptoms and what they could do differently. They see health as a partnership and take control actively. However, they also acknowledge limits and practice acceptance.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "The medication has been helping me overall — keeping my viral load undetectable and allowing me to live more normally",
+            "turn": 3
+          },
+          {
+            "quote": "I know it's essential for my health and well-being",
+            "turn": 3
+          },
+          {
+            "quote": "I know how important it is to stay on track with my regimen and to give it time to work properly",
+            "turn": 3
+          }
+        ],
+        "reasoning": "The patient clearly attributes their improved condition to the treatment working (undetectable viral load, living more normally). They see the medication as essential and believe it's working. They're willing to give it time to work properly.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "Having this illness means that every aspect of my life is affected — from my work to my relationships and even my hobbies",
+            "turn": 4
+          },
+          {
+            "quote": "It makes me constantly aware of my health status",
+            "turn": 4
+          },
+          {
+            "quote": "I'm learning to cope with the unpredictability, like the ups and downs in energy levels or dealing with symptoms",
+            "turn": 4
+          }
+        ],
+        "reasoning": "The patient clearly identifies with having HIV and describes how it affects every aspect of their life. They're constantly aware of their health status and deal with symptoms daily. This suggests a strong illness identity.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "When I think about the future, my biggest concern is staying healthy and keeping up with my treatment regimen",
+            "turn": 4
+          },
+          {
+            "quote": "Some days I can feel overwhelmed by everything — the uncertainty, the constant need for self-care, and just the mental burden of dealing with a chronic illness",
+            "turn": 5
+          },
+          {
+            "quote": "there are times when I can't help feeling anxious about taking it every day",
+            "turn": 6
+          },
+          {
+            "quote": "there's always that nagging worry about side effects or long-term consequences",
+            "turn": 6
+          }
+        ],
+        "reasoning": "The patient has significant concerns about staying healthy, keeping up with treatment, uncertainty, and side effects. These worries recur unprompted and affect their emotional state. The 'nagging worry' and 'mental burden' suggest frequent preoccupation.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "As for making sense of what's happening, well, it's a constant process of learning about the illness, its effects on my body, and how to manage it all",
+            "turn": 4
+          },
+          {
+            "quote": "It involves doing research, talking to healthcare professionals, and listening to others who are going through similar experiences",
+            "turn": 4
+          },
+          {
+            "quote": "I'm learning to cope with the unpredictability",
+            "turn": 4
+          }
+        ],
+        "reasoning": "The patient describes actively learning about their condition, researching, talking to professionals, and listening to others. They're trying to understand the illness and its effects. This shows good coherence.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "Some days I can feel overwhelmed by everything — the uncertainty, the constant need for self-care, and just the mental burden of dealing with a chronic illness",
+            "turn": 5
+          },
+          {
+            "quote": "It's true that managing my health is an emotionally taxing task",
+            "turn": 5
+          },
+          {
+            "quote": "I would like to address is making sure I'm taking care of myself emotionally as well",
+            "turn": 9
+          },
+          {
+            "quote": "This illness affects not just my body, but also my emotional well-being",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient describes feeling overwhelmed, experiencing mental burden, and finding health management emotionally taxing. They explicitly mention emotional well-being as something they need to take care of. This suggests significant emotional impact.",
+        "score": 8.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "The medication has been helping me overall — keeping my viral load undetectable and allowing me to live more normally",
+            "turn": 3
+          },
+          {
+            "quote": "I know it's essential for my health and well-being",
+            "turn": 3
+          },
+          {
+            "quote": "I know how important it is to stay on track with my regimen and to give it time to work properly",
+            "turn": 3
+          },
+          {
+            "quote": "I'm managing the treatment as prescribed",
+            "turn": 3
+          }
+        ],
+        "reasoning": "The patient clearly sees the medication as essential for their health and well-being. They're managing it as prescribed and believe it's helping them live more normally. They're willing to give it time to work properly. This shows strong necessity belief.",
+        "score": 4.5,
+        "confidence": 0.8
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "There are times when I wonder about side effects or long-term effects",
+            "turn": 3
+          },
+          {
+            "quote": "there are times when I can't help feeling anxious about taking it every day",
+            "turn": 6
+          },
+          {
+            "quote": "there's always that nagging worry about side effects or long-term consequences",
+            "turn": 6
+          }
+        ],
+        "reasoning": "The patient has specific concerns about side effects and long-term effects. They experience anxiety about taking medication daily and have 'nagging worries.' These concerns have led them to think about medication adjustments (mentioned in turn 9).",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "I try to be as informed and cautious as possible",
+            "turn": 6
+          },
+          {
+            "quote": "I think doctors usually have our best interests at heart when prescribing medication, but I do believe people can sometimes end up taking too many things",
+            "turn": 6
+          },
+          {
+            "quote": "It's a delicate balance between effectively managing health issues and avoiding unnecessary risks",
+            "turn": 6
+          }
+        ],
+        "reasoning": "The patient is cautious about medications in general and believes there's a balance between benefits and risks. They acknowledge that people can take too many things and want to avoid unnecessary risks. This shows mild general caution.",
+        "score": 3.0,
+        "confidence": 0.7
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [
+          {
+            "quote": "I think doctors usually have our best interests at heart when prescribing medication, but I do believe people can sometimes end up taking too many things",
+            "turn": 6
+          },
+          {
+            "quote": "It's a delicate balance between effectively managing health issues and avoiding unnecessary risks",
+            "turn": 6
+          }
+        ],
+        "reasoning": "The patient believes that people can sometimes end up taking too many things and wants to avoid unnecessary risks. They acknowledge doctors have good intentions but express concern about overuse. This shows moderate concern about overuse.",
+        "score": 4.0,
+        "confidence": 0.7
+      }
+    },
+    "causes": [
+      "one-time event",
+      "decisions and circumstances"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "it was a one-time event that changed everything",
+        "turn": 5
+      },
+      {
+        "quote": "I think back on my life, recognizing the decisions I made and circumstances I found myself in, and I feel like it happened for a reason",
+        "turn": 5
+      }
+    ]
+  }
+}

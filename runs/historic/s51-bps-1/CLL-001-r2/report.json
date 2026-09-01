@@ -1,0 +1,253 @@
+{
+  "patient_id": "CLL-001",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "CLL-001",
+    "clinical_summary": "Patient with CLL diagnosed a few years ago has been under regular monitoring without active treatment. Over the past 2 months, significant fatigue, night sweats, and increased awareness of swollen lymph nodes have developed, affecting work hours, family responsibilities, and hobbies. Patient is hoping for symptom relief and is open to treatment but has concerns about potential side effects. Emotionally, feels drained, anxious, and overwhelmed. Has been trying to manage through rest and avoiding overexertion but finds this challenging.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "My fatigue is really getting in the way of my normal routine",
+            "turn": 1
+          },
+          {
+            "quote": "I've noticed that I'm not able to put in as many hours at work as before",
+            "turn": 1
+          },
+          {
+            "quote": "even taking care of my family has become more difficult",
+            "turn": 1
+          },
+          {
+            "quote": "It's like I have this constant weight on me that doesn't seem to go away",
+            "turn": 1
+          },
+          {
+            "quote": "even getting out of bed in the morning is an effort",
+            "turn": 2
+          },
+          {
+            "quote": "I've had to cut back on some of my hobbies too",
+            "turn": 9
+          }
+        ],
+        "reasoning": "Patient has reduced work hours, cut back on family responsibilities, reduced hobbies, and finds getting out of bed an effort. This shows substantial impact on daily functioning across multiple domains.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "CLL is something you've been dealing with for a few years",
+            "turn": 3
+          },
+          {
+            "quote": "CLL can be a slow-progressing illness",
+            "turn": 5
+          },
+          {
+            "quote": "It's just the fatigue and the night sweats that are becoming harder to manage as time goes on",
+            "turn": 4
+          }
+        ],
+        "reasoning": "Patient views CLL as a chronic condition he has been managing for years, understands it as slow-progressing, and the recent symptoms represent a change in disease course rather than a new acute onset.",
+        "score": 8.0,
+        "confidence": 0.7
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I've tried to rest more and avoid overexerting myself",
+            "turn": 9
+          },
+          {
+            "quote": "It's a juggling act trying to balance everything out",
+            "turn": 9
+          }
+        ],
+        "reasoning": "Patient actively attempts to manage his energy through rest and avoiding overexertion, though he acknowledges the challenge. He is making lifestyle changes to cope with his symptoms.",
+        "score": 6.0,
+        "confidence": 0.6
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "I wonder if there might be something we could do, even if just to alleviate some of this exhaustion I'm feeling",
+            "turn": 5
+          },
+          {
+            "quote": "part of me can't help but wonder whether taking anything right now might make the other symptoms worse",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient is uncertain about whether treatment would help. He is open to it but has concerns about potential worsening of symptoms. Has not received any treatment yet, so his belief about treatment efficacy is not yet tested.",
+        "score": 4.0,
+        "confidence": 0.5
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "CLL is an autoimmune disease affecting the blood cells in my body",
+            "turn": 7
+          },
+          {
+            "quote": "occasionally I get these night sweats",
+            "turn": 2
+          },
+          {
+            "quote": "lymph nodes in my neck have become a bit more palpable",
+            "turn": 2
+          }
+        ],
+        "reasoning": "Patient identifies CLL as affecting blood cells and recognizes specific symptoms (night sweats, swollen lymph nodes). These symptoms are noticeable and affect him, though they are intermittent.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "Knowing that I have this chronic condition makes me worry about my future",
+            "turn": 6
+          },
+          {
+            "quote": "especially if these symptoms are here to stay",
+            "turn": 6
+          },
+          {
+            "quote": "Sometimes I feel anxious and overwhelmed by it all",
+            "turn": 6
+          },
+          {
+            "quote": "It's a bit of unease I can't quite shake off",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient expresses worry about the future and whether symptoms will persist. He feels anxious and overwhelmed. The unease about medication is also a concern that recurs unprompted.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "the specifics are still quite unclear even though I've tried to learn more",
+            "turn": 7
+          },
+          {
+            "quote": "There's always some part that remains uncertain or confusing",
+            "turn": 7
+          },
+          {
+            "quote": "From my understanding, CLL is an autoimmune disease affecting the blood cells in my body",
+            "turn": 7
+          },
+          {
+            "quote": "I believe genetics played a role as it seems to run in my family",
+            "turn": 7
+          },
+          {
+            "quote": "I remember hearing something about environmental factors possibly contributing since I grew up near an old industrial site",
+            "turn": 7
+          }
+        ],
+        "reasoning": "Patient has some understanding of CLL (autoimmune, affecting blood cells) and believes in genetic and environmental causes. However, he explicitly states that the specifics are unclear and there's always uncertainty, showing limited coherence.",
+        "score": 4.0,
+        "confidence": 0.6
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "Emotionally, it's quite draining, doctor",
+            "turn": 6
+          },
+          {
+            "quote": "Knowing that I have this chronic condition makes me worry about my future",
+            "turn": 6
+          },
+          {
+            "quote": "Sometimes I feel anxious and overwhelmed by it all",
+            "turn": 6
+          },
+          {
+            "quote": "It's a bit of unease I can't quite shake off",
+            "turn": 8
+          },
+          {
+            "quote": "It's a juggling act trying to balance everything out",
+            "turn": 9
+          }
+        ],
+        "reasoning": "Patient describes feeling emotionally drained, anxious, and overwhelmed. He worries about the future and feels unease. The emotional impact is prominent and affects how he speaks about his situation.",
+        "score": 8.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [],
+        "reasoning": "Patient has never been prescribed any medication for CLL, so there is no evidence about his beliefs about the necessity of his own prescribed medication.",
+        "score": null,
+        "confidence": 0.0
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "part of me can't help but wonder whether taking anything right now might make the other symptoms worse",
+            "turn": 8
+          },
+          {
+            "quote": "It's a bit of unease I can't quite shake off",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient has concerns about starting medication and whether it might worsen his symptoms. He expresses unease about this. However, he hasn't taken any medication yet, so these concerns haven't produced behavior changes.",
+        "score": 3.0,
+        "confidence": 0.5
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [],
+        "reasoning": "Patient did not express general concerns about medicines as a class during the consultation.",
+        "score": null,
+        "confidence": 0.0
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "Patient did not express concerns about doctors prescribing too readily during the consultation.",
+        "score": null,
+        "confidence": 0.0
+      }
+    },
+    "causes": [
+      "genetics",
+      "environmental factors (grew up near an old industrial site)",
+      "autoimmune disease"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "I believe genetics played a role as it seems to run in my family",
+        "turn": 7
+      },
+      {
+        "quote": "I remember hearing something about environmental factors possibly contributing since I grew up near an old industrial site",
+        "turn": 7
+      },
+      {
+        "quote": "CLL is an autoimmune disease affecting the blood cells in my body",
+        "turn": 7
+      }
+    ]
+  }
+}

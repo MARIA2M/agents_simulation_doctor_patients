@@ -1,0 +1,320 @@
+{
+  "patient_id": "HIV-005",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "HIV-005",
+    "clinical_summary": "This patient is living with HIV, which they believe was transmitted through a past partner who didn't disclose his status. They experience chronic fatigue and occasional headaches, with their daily life having to adjust around their energy levels. They take one tablet daily for treatment and believe it helps them stay in control most of the time, though they've had difficulty with consistency and have worries about long-term effects and resistance. They view this as a lifelong journey with ups and downs, trying to balance hope for improvement with realistic acceptance of challenges.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "Before my diagnosis, I used to be very active, working out regularly and enjoying time with friends and family without any worries. But now, even though I'm still involved in those things, there's always this underlying feeling of exhaustion that just doesn't go away.",
+            "turn": 2
+          },
+          {
+            "quote": "On a typical day, I wake up feeling tired but push through it for work or other commitments. By the end of the day, I'm completely drained and struggle to find the energy for anything else.",
+            "turn": 2
+          },
+          {
+            "quote": "Social plans often have to be canceled or scaled back because I simply don't have the gas in my tank to keep up with everything.",
+            "turn": 2
+          },
+          {
+            "quote": "It's a constant balancing act between what I want to do and what my body is able to handle.",
+            "turn": 2
+          }
+        ],
+        "reasoning": "The patient has had to significantly adjust their lifestyle - they can no longer be as active as before, have to cancel social plans, feel drained by the end of the day, and constantly balance what they want to do with what their body can handle. This represents a substantial impact on their daily life and social functioning.",
+        "score": 7.0,
+        "confidence": 0.9
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "The fatigue has been with me for as long as I can remember since being diagnosed.",
+            "turn": 2
+          },
+          {
+            "quote": "I know that living with this condition is a lifelong journey, and there may always be challenges along the way.",
+            "turn": 6
+          },
+          {
+            "quote": "I like to hope that there will be times when my symptoms improve and that I can take more control over my life again.",
+            "turn": 6
+          },
+          {
+            "quote": "I'm trying to stay optimistic while also being realistic about what might happen.",
+            "turn": 6
+          },
+          {
+            "quote": "Ultimately, I believe it's important for me to focus on taking things one day at a time",
+            "turn": 6
+          }
+        ],
+        "reasoning": "The patient clearly views this as a lifelong condition with ongoing challenges, though they hold hope for improvement. They're planning for the long term and accepting that challenges may always be present.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "Honestly, doctor, I like to think that I have quite a bit of control.",
+            "turn": 4
+          },
+          {
+            "quote": "I know the importance of staying on top of my treatment plan and doing everything in my power to manage my symptoms.",
+            "turn": 4
+          },
+          {
+            "quote": "But at the same time, there are some aspects of this condition that feel out of my hands — things like how well the medication will work or if any new complications might arise.",
+            "turn": 4
+          },
+          {
+            "quote": "It's a balancing act between taking control where I can and accepting those things that are outside of my control.",
+            "turn": 4
+          },
+          {
+            "quote": "Overall, though, I believe that staying proactive and informed as much as possible is key to managing this condition effectively.",
+            "turn": 4
+          }
+        ],
+        "reasoning": "The patient believes they have significant control through staying proactive and informed, but acknowledges some aspects are out of their hands. They actively manage their condition and believe their actions matter.",
+        "score": 7.0,
+        "confidence": 0.85
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "The medication helps keep things under control most of the time.",
+            "turn": 7
+          },
+          {
+            "quote": "Overall, I believe the medication is helping to keep things under control most of the time.",
+            "turn": 7
+          },
+          {
+            "quote": "I take one tablet daily as part of my treatment plan.",
+            "turn": 7
+          }
+        ],
+        "reasoning": "The patient clearly believes the medication is effective and helps them maintain control of their condition. They see it as an important part of their management.",
+        "score": 7.0,
+        "confidence": 0.9
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "I usually say that I'm living with HIV, and I try to be as open and honest as possible about my experience.",
+            "turn": 5
+          },
+          {
+            "quote": "It's not something I shy away from discussing, but I also make sure to focus on the positive things in my life and how I'm managing things day by day.",
+            "turn": 5
+          },
+          {
+            "quote": "The fatigue has been with me for as long as I can remember since being diagnosed.",
+            "turn": 2
+          },
+          {
+            "quote": "I get these headaches that last for a whole day.",
+            "turn": 2
+          }
+        ],
+        "reasoning": "The patient clearly identifies with having HIV and experiences chronic fatigue and headaches as part of their condition. They're open about their identity but try to maintain a positive outlook.",
+        "score": 7.0,
+        "confidence": 0.95
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "But sometimes the uncertainty is tough — never knowing what might happen next, whether the medication will stop working or if anything new will develop.",
+            "turn": 3
+          },
+          {
+            "quote": "Sometimes, I worry about potential complications that might arise from having this condition over time.",
+            "turn": 3
+          },
+          {
+            "quote": "I worry about potential long-term effects or whether I'll develop resistance over time.",
+            "turn": 7
+          },
+          {
+            "quote": "It's hard to know exactly what the future holds",
+            "turn": 3
+          },
+          {
+            "quote": "It's definitely a journey filled with ups and downs.",
+            "turn": 3
+          }
+        ],
+        "reasoning": "The patient expresses significant worry about the future, complications, long-term effects, and resistance. These concerns recur unprompted and shape their thinking about the condition.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I think I have a basic understanding of my illness and its implications, but there are still moments when everything feels pretty overwhelming.",
+            "turn": 3
+          },
+          {
+            "quote": "It's hard to know exactly what the future holds, whether the medication will continue to work effectively, or if new symptoms could develop.",
+            "turn": 3
+          },
+          {
+            "quote": "I want to stay as informed and proactive as possible but can quickly get lost in all the information out there.",
+            "turn": 3
+          },
+          {
+            "quote": "I try my best to focus on managing things day by day, keeping up with appointments and medication schedules, and staying connected with friends and family for support.",
+            "turn": 3
+          }
+        ],
+        "reasoning": "The patient has a basic understanding but feels overwhelmed and gets lost in information. They're trying to stay informed and manage their condition, but their understanding is incomplete and they struggle with the complexity.",
+        "score": 4.0,
+        "confidence": 0.85
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "It's a constant part of my life now.",
+            "turn": 3
+          },
+          {
+            "quote": "I've learned to live with it and manage things as best I can.",
+            "turn": 3
+          },
+          {
+            "quote": "But sometimes the uncertainty is tough",
+            "turn": 3
+          },
+          {
+            "quote": "It's something that still weighs heavily on me, even as I try to move forward with my life and take care of myself.",
+            "turn": 5
+          },
+          {
+            "quote": "It's definitely a journey filled with ups and downs.",
+            "turn": 3
+          },
+          {
+            "quote": "I like to hope that there will be times when my symptoms improve and that I can take more control over my life again.",
+            "turn": 6
+          }
+        ],
+        "reasoning": "The patient experiences significant emotional impact - the uncertainty weighs heavily on them, they've had to learn to live with it, and they're dealing with emotional challenges around the past and future. The emotional response is prominent and affects how they think about their condition.",
+        "score": 8.0,
+        "confidence": 0.9
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "The medication helps keep things under control most of the time.",
+            "turn": 7
+          },
+          {
+            "quote": "I take one tablet daily as part of my treatment plan.",
+            "turn": 7
+          },
+          {
+            "quote": "I know how important it is for controlling the condition.",
+            "turn": 7
+          },
+          {
+            "quote": "So, I'm always trying to remind myself of that and make sure I'm doing everything in my power to stick with the routine as best I can.",
+            "turn": 7
+          },
+          {
+            "quote": "And as much as I try to stick to the schedule, I sometimes forget doses or even take 'drug holidays' if I feel okay.",
+            "turn": 7
+          }
+        ],
+        "reasoning": "The patient clearly believes the medication is important for controlling their condition and tries to stick to the routine, though they struggle with consistency. They acknowledge its importance but have difficulty maintaining adherence.",
+        "score": 3.5,
+        "confidence": 0.85
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "But I worry about potential long-term effects and whether it might cause other health issues later on.",
+            "turn": 7
+          },
+          {
+            "quote": "Sometimes, I worry about potential long-term effects or whether I'll develop resistance over time.",
+            "turn": 7
+          },
+          {
+            "quote": "And as much as I try to stick to the schedule, I sometimes forget doses or even take 'drug holidays' if I feel okay.",
+            "turn": 7
+          },
+          {
+            "quote": "It can be hard to stay consistent with medication management",
+            "turn": 7
+          }
+        ],
+        "reasoning": "The patient has specific concerns about long-term effects and resistance, and these concerns have affected their behavior (taking drug holidays, struggling with consistency). The concerns are active and have changed their medication management.",
+        "score": 4.5,
+        "confidence": 0.9
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "It's not that I don't trust your judgment — I do — but it's hard not to feel a bit wary of all the different pills and treatments out there.",
+            "turn": 8
+          },
+          {
+            "quote": "So while I may have some concerns about medication in general, I also recognize how important it can be for maintaining my health and well-being.",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient expresses general wariness about medications and treatments, though they recognize their importance. This suggests they hold some general concerns about medicines as a class.",
+        "score": 3.0,
+        "confidence": 0.8
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [
+          {
+            "quote": "To be honest, doctor, I sometimes wonder if doctors might be quick to prescribe medications when other approaches might also be effective.",
+            "turn": 8
+          },
+          {
+            "quote": "It's not that I don't trust your judgment — I do — but it's hard not to feel a bit wary of all the different pills and treatments out there.",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient expresses doubt about whether doctors prescribe medications too quickly and wonders if other approaches might be effective. This suggests they hold some general concerns about prescribing practices.",
+        "score": 3.0,
+        "confidence": 0.8
+      }
+    },
+    "causes": [
+      "previous partner who didn't disclose his status",
+      "bad luck",
+      "not getting tested regularly enough"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "As for what caused this condition, I believe it was a previous partner who didn't disclose his own status.",
+        "turn": 5
+      },
+      {
+        "quote": "I've also thought about bad luck or not getting tested regularly enough.",
+        "turn": 5
+      }
+    ]
+  }
+}

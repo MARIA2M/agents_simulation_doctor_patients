@@ -1,0 +1,394 @@
+{
+  "patient_id": "HIV-001",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "HIV-001",
+    "clinical_summary": "Patient presents with worsening fatigue over the past month affecting work, relationships, and daily functioning. Diagnosed with HIV and Chronic Fatigue Syndrome, taking Biktarvy with undetectable viral load for over a year and stable CD4 count. Has tried lifestyle changes (sleep schedule, healthier eating, exercise) but fatigue persists. Expresses concern about potential long-term side effects of Biktarvy and whether it's contributing to exhaustion. Has strong support network and is open to treatment adjustments.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "my energy levels have been very low lately. I've been feeling tired all the time and it's really affecting my work and personal life",
+            "turn": 1
+          },
+          {
+            "quote": "even small tasks feel overwhelming",
+            "turn": 2
+          },
+          {
+            "quote": "harder to focus on anything for more than a few minutes",
+            "turn": 2
+          },
+          {
+            "quote": "struggling to stay focused on tasks and often have to take breaks or push back deadlines",
+            "turn": 5
+          },
+          {
+            "quote": "personal relationships have suffered because I don't have the energy for dates or social events",
+            "turn": 5
+          },
+          {
+            "quote": "doing the groceries or taking care of chores feel like monumental tasks that I'm not sure I can handle",
+            "turn": 5
+          }
+        ],
+        "reasoning": "Patient describes significant impact on work (taking breaks, pushing back deadlines), relationships (unable to give energy for dates/social events), and daily tasks (groceries, chores feel monumental). This shows substantial reduction in functioning.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "I've accepted that Chronic Fatigue Syndrome is likely something I'll need to manage for the rest of my life",
+            "turn": 7
+          }
+        ],
+        "reasoning": "Patient has accepted CFS as a lifelong condition to manage.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I'm trying to stay consistent with my medication schedule and keep up with my doctor's appointments",
+            "turn": 4
+          },
+          {
+            "quote": "I know how important it is to take care of myself",
+            "turn": 4
+          },
+          {
+            "quote": "I've had to learn how to ask for help when I need it",
+            "turn": 7
+          },
+          {
+            "quote": "I know that I'm doing everything I can to manage this illness and take care of myself",
+            "turn": 7
+          },
+          {
+            "quote": "staying consistent with my treatment plan, taking care of myself as best I can",
+            "turn": 11
+          },
+          {
+            "quote": "leaning on my support network when I need it most",
+            "turn": 11
+          }
+        ],
+        "reasoning": "Patient actively manages their conditions, stays consistent with treatment, takes care of themselves, asks for help, and uses a support network. They attribute their ability to manage to their own actions.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "The medication — the Biktarvy — has been helping with my HIV",
+            "turn": 3
+          },
+          {
+            "quote": "knowing that the virus is under control",
+            "turn": 5
+          },
+          {
+            "quote": "My viral load has been undetectable for over a year now, and I've seen steady improvements in my CD4 count",
+            "turn": 9
+          },
+          {
+            "quote": "It's reassuring to know that this medication is helping keep my HIV under control like we want it to",
+            "turn": 9
+          },
+          {
+            "quote": "I trust that the Biktarvy is helping keep my HIV under control",
+            "turn": 10
+          }
+        ],
+        "reasoning": "Patient clearly sees the treatment as effective for HIV control, with undetectable viral load and improved CD4 count. They trust it's working.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "I'm worried about this illness",
+            "turn": 1
+          },
+          {
+            "quote": "the fatigue I'm feeling seems to be increasing",
+            "turn": 2
+          },
+          {
+            "quote": "no energy in my body at all",
+            "turn": 2
+          },
+          {
+            "quote": "The fatigue has been affecting every aspect of my life",
+            "turn": 5
+          },
+          {
+            "quote": "limitations that come with these illnesses",
+            "turn": 7
+          },
+          {
+            "quote": "what I can't do",
+            "turn": 7
+          }
+        ],
+        "reasoning": "Patient identifies strongly with their symptoms (fatigue, low energy) and sees them as central to their experience. They talk about 'these illnesses' as defining their current state.",
+        "score": 8.0,
+        "confidence": 0.85
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "I'm worried about this illness and how it's impacting me",
+            "turn": 1
+          },
+          {
+            "quote": "I wonder if my HIV is in good control or if it's acting up because of it",
+            "turn": 4
+          },
+          {
+            "quote": "I think I'm most worried about HIV progression right now because of this fatigue",
+            "turn": 5
+          },
+          {
+            "quote": "it feels like everything could be getting worse at any moment",
+            "turn": 5
+          },
+          {
+            "quote": "I think I'm most worried about any potential long-term side effects from the Biktarvy",
+            "turn": 6
+          },
+          {
+            "quote": "I can't help but wonder if the exhaustion and other symptoms I'm experiencing might be related to this medication",
+            "turn": 6
+          },
+          {
+            "quote": "question whether I'm really living up to my potential",
+            "turn": 7
+          },
+          {
+            "quote": "That's been a tough mental battle at times",
+            "turn": 7
+          },
+          {
+            "quote": "It can be overwhelming to think about all the potential challenges and changes that might come our way",
+            "turn": 11
+          }
+        ],
+        "reasoning": "Patient expresses worry about HIV progression, medication side effects, whether things are getting worse, and their potential. They describe it as a 'tough mental battle' and find it 'overwhelming'.",
+        "score": 8.0,
+        "confidence": 0.85
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I know the diagnosis was Chronic Fatigue Syndrome a few years back after months of testing",
+            "turn": 3
+          },
+          {
+            "quote": "I'm not sure if there's a direct connection between the two conditions",
+            "turn": 4
+          },
+          {
+            "quote": "Good control for me means being able to go about my days without worrying too much about my health",
+            "turn": 5
+          },
+          {
+            "quote": "maintaining a stable CD4 count, and knowing that the virus is under control",
+            "turn": 5
+          },
+          {
+            "quote": "It's hard to say for sure what triggered my Chronic Fatigue Syndrome",
+            "turn": 8
+          },
+          {
+            "quote": "I think it might have been a combination of factors: stress from work and personal life, not taking care of myself as well as I should have in the past, and maybe even genetic predisposition",
+            "turn": 8
+          },
+          {
+            "quote": "In my case, I know that I didn't use protection consistently, so I think that played a role",
+            "turn": 8
+          },
+          {
+            "quote": "It's a three-drug regimen that targets different stages of the HIV replication cycle, ultimately helping to suppress the virus in my body",
+            "turn": 9
+          },
+          {
+            "quote": "I do think it's important for doctors to carefully consider each patient's unique situation when prescribing medications",
+            "turn": 10
+          }
+        ],
+        "reasoning": "Patient has some understanding of their conditions (diagnosis, treatment mechanism, what good control means), but there's uncertainty about the relationship between HIV and CFS, and what triggered CFS. They understand the treatment mechanism but not the details.",
+        "score": 6.0,
+        "confidence": 0.75
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "I'm worried about this illness and how it's impacting me",
+            "turn": 1
+          },
+          {
+            "quote": "It's like my body is constantly exhausted",
+            "turn": 2
+          },
+          {
+            "quote": "The fatigue is so overwhelming",
+            "turn": 4
+          },
+          {
+            "quote": "I think I'm most worried about HIV progression right now because of this fatigue",
+            "turn": 5
+          },
+          {
+            "quote": "it feels like everything could be getting worse at any moment",
+            "turn": 5
+          },
+          {
+            "quote": "I think I'm most worried about any potential long-term side effects from the Biktarvy",
+            "turn": 6
+          },
+          {
+            "quote": "I can't help but wonder if the exhaustion and other symptoms I'm experiencing might be related to this medication",
+            "turn": 6
+          },
+          {
+            "quote": "question whether I'm really living up to my potential",
+            "turn": 7
+          },
+          {
+            "quote": "That's been a tough mental battle at times",
+            "turn": 7
+          },
+          {
+            "quote": "It can be overwhelming to think about all the potential challenges and changes that might come our way",
+            "turn": 11
+          }
+        ],
+        "reasoning": "Patient expresses worry, overwhelm, and describes it as a 'tough mental battle'. They find it 'overwhelming' to think about uncertainties. This shows emotional impact.",
+        "score": 8.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "The medication — the Biktarvy — has been helping with my HIV",
+            "turn": 3
+          },
+          {
+            "quote": "I want what's best for my health — even if that means making some changes along the way",
+            "turn": 6
+          },
+          {
+            "quote": "I trust that the Biktarvy is helping keep my HIV under control",
+            "turn": 10
+          },
+          {
+            "quote": "without them, my health would likely be in a much worse state than it is now",
+            "turn": 10
+          },
+          {
+            "quote": "I do think it would be helpful to explore our options further, particularly when it comes to adjusting treatment if that's needed",
+            "turn": 12
+          }
+        ],
+        "reasoning": "Patient clearly sees the medication as necessary for HIV control, believes their health would be worse without it, and is open to adjustments if needed. They trust it's working.",
+        "score": 4.5,
+        "confidence": 0.8
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "I'm not sure if it's contributing to this exhaustion",
+            "turn": 3
+          },
+          {
+            "quote": "I think I'm most worried about any potential long-term side effects from the Biktarvy",
+            "turn": 6
+          },
+          {
+            "quote": "I can't help but wonder if the exhaustion and other symptoms I'm experiencing might be related to this medication",
+            "turn": 6
+          },
+          {
+            "quote": "there are still moments when I worry about potential long-term side effects or whether the treatment will continue working as effectively as it has been so far",
+            "turn": 9
+          },
+          {
+            "quote": "while there have been moments when I've felt wary — especially when dealing with the potential side effects of certain treatments",
+            "turn": 10
+          }
+        ],
+        "reasoning": "Patient has specific concerns about long-term side effects and whether the treatment will continue working effectively. These concerns recur unprompted.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "while there have been moments when I've felt wary — especially when dealing with the potential side effects of certain treatments",
+            "turn": 10
+          },
+          {
+            "quote": "overall, I view them as helpful tools",
+            "turn": 10
+          },
+          {
+            "quote": "I do think it's important for doctors to carefully consider each patient's unique situation when prescribing medications",
+            "turn": 10
+          }
+        ],
+        "reasoning": "Patient expresses some wariness about medications in general, particularly regarding side effects, but overall views them as helpful tools. They believe doctors should consider each patient's unique situation.",
+        "score": 3.0,
+        "confidence": 0.7
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [
+          {
+            "quote": "I do think it's important for doctors to carefully consider each patient's unique situation when prescribing medications",
+            "turn": 10
+          },
+          {
+            "quote": "Every person is different, and what works well for one person might not work as well for another",
+            "turn": 10
+          }
+        ],
+        "reasoning": "Patient believes doctors should consider each patient's unique situation and that what works for one person might not work for another. This suggests some caution about prescribing practices.",
+        "score": 3.0,
+        "confidence": 0.6
+      }
+    },
+    "causes": [
+      "stress from work and personal life",
+      "not taking care of myself as well as I should have in the past",
+      "genetic predisposition",
+      "not using protection consistently",
+      "something that just happens sometimes"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "It's hard to say for sure what triggered my Chronic Fatigue Syndrome. I think it might have been a combination of factors: stress from work and personal life, not taking care of myself as well as I should have in the past, and maybe even genetic predisposition",
+        "turn": 8
+      },
+      {
+        "quote": "In my case, I know that I didn't use protection consistently, so I think that played a role. But like you said, doctor, it's also something that just happens sometimes — even when people take all the necessary precautions",
+        "turn": 8
+      }
+    ]
+  }
+}

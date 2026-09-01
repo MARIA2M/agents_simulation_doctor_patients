@@ -1,0 +1,271 @@
+{
+  "patient_id": "CLL-003",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "CLL-003",
+    "clinical_summary": "Patient with CLL diagnosed 2 years ago, currently in watch-and-wait phase with regular 3-month monitoring. Reports increased tiredness after work for several months and a new neck lump noticed by wife. Generally trying to maintain normalcy while staying vigilant about changes. Trusts doctor but wants to stay informed and maintain control.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "I think of CLL as something that's affecting my body's immune system cells, causing them to grow abnormally and form clusters. Even though this might not be hurting me right now, it could potentially develop into a more serious condition down the line if left unchecked.",
+            "turn": 5
+          },
+          {
+            "quote": "Day to day, having CLL means being vigilant about any changes in my health and keeping up with regular appointments to monitor my blood count.",
+            "turn": 5
+          },
+          {
+            "quote": "It's also made me appreciate the importance of living life fully and making each moment count, as I've had this reality check on how short life can be at times.",
+            "turn": 5
+          },
+          {
+            "quote": "It's been a bit of a challenge adjusting to the idea that this is something I'll be dealing with for a while",
+            "turn": 4
+          }
+        ],
+        "reasoning": "Patient recognizes CLL affects immune system and could become serious. Has had to adjust mindset and appreciate life more. Maintains vigilance and regular appointments. Had to adjust to lifelong management. This suggests moderate impact - they've changed how they think about life and maintain vigilance, but still trying to live normally.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "Since I was diagnosed a couple of years ago, I've been following up with regular appointments every three months",
+            "turn": 4
+          },
+          {
+            "quote": "It's been a bit of a challenge adjusting to the idea that this is something I'll be dealing with for a while",
+            "turn": 4
+          },
+          {
+            "quote": "I think of CLL as something that's affecting my body's immune system cells, causing them to grow abnormally and form clusters. Even though this might not be hurting me right now, it could potentially develop into a more serious condition down the line if left unchecked.",
+            "turn": 5
+          },
+          {
+            "quote": "I'm currently in a watch-and-wait phase for my CLL, as my hematologist said many people with CLL can live normal lives without needing treatment right now.",
+            "turn": 4
+          }
+        ],
+        "reasoning": "Diagnosed 2 years ago, in watch-and-wait. Acknowledges it's something they'll be dealing with for a while. Recognizes it could potentially develop into something more serious. Planning for ongoing management.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "Since I was diagnosed a couple of years ago, I've been following up with regular appointments every three months and keeping an eye on my complete blood count.",
+            "turn": 4
+          },
+          {
+            "quote": "But other than that, I'm just trying to continue living my life as normally as possible while being mindful of any changes in my condition.",
+            "turn": 4
+          },
+          {
+            "quote": "Day to day, having CLL means being vigilant about any changes in my health and keeping up with regular appointments to monitor my blood count.",
+            "turn": 5
+          },
+          {
+            "quote": "As for worrying about it, there are moments when I think about the implications and potential future complications. But overall, I try to stay focused on the present and not let it control my thoughts or actions too much. It's a balancing act, but one that helps me maintain some sense of normalcy while still being mindful of my condition.",
+            "turn": 5
+          },
+          {
+            "quote": "If and when the need for treatment becomes necessary, I understand there could be various options available, but I don't have a specific preference at this point as I trust my doctor's judgment in determining the best course of action.",
+            "turn": 6
+          },
+          {
+            "quote": "But as long as I'm well-informed and can maintain a level of control over the situation, I think I'll be able to handle any changes that may come up.",
+            "turn": 6
+          },
+          {
+            "quote": "I can't help but feel a bit uneasy about it. It's not so much the physicality of the lump itself as it is the uncertainty of what it could potentially mean.",
+            "turn": 7
+          },
+          {
+            "quote": "I do my best to stay present in the moment and not let myself get bogged down by worry too much.",
+            "turn": 7
+          }
+        ],
+        "reasoning": "Actively monitoring health, keeping up with appointments, trying to maintain normalcy. Trusts doctor but wants to be well-informed and maintain control. Trying to stay present and not let worry control them. Feels they can handle changes as long as prepared.",
+        "score": 8.0,
+        "confidence": 0.85
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "I'm currently in a watch-and-wait phase for my CLL, as my hematologist said many people with CLL can live normal lives without needing treatment right now.",
+            "turn": 4
+          },
+          {
+            "quote": "I'm hopeful that my situation will continue to fall into that category.",
+            "turn": 6
+          },
+          {
+            "quote": "If and when the need for treatment becomes necessary, I understand there could be various options available, but I don't have a specific preference at this point as I trust my doctor's judgment in determining the best course of action.",
+            "turn": 6
+          },
+          {
+            "quote": "As for concerns about treatment, they're more theoretical than concrete right now. It would depend on the specifics of what kind of treatment is needed and how it might impact my daily life or work schedule. But as long as I'm well-informed and can maintain a level of control over the situation, I think I'll be able to handle any changes that may come up.",
+            "turn": 6
+          }
+        ],
+        "reasoning": "Currently not on treatment, but acknowledges it might become necessary. Trusts doctor's judgment but wants to be well-informed. Feels they can handle treatment changes as long as prepared. No strong beliefs about treatment efficacy yet since not on it.",
+        "score": 6.0,
+        "confidence": 0.75
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "I think of CLL as something that's affecting my body's immune system cells, causing them to grow abnormally and form clusters.",
+            "turn": 5
+          },
+          {
+            "quote": "Day to day, having CLL means being vigilant about any changes in my health and keeping up with regular appointments to monitor my blood count.",
+            "turn": 5
+          },
+          {
+            "quote": "It's also made me appreciate the importance of living life fully and making each moment count, as I've had this reality check on how short life can be at times.",
+            "turn": 5
+          },
+          {
+            "quote": "I can't help but feel a bit uneasy about it. It's not so much the physicality of the lump itself as it is the uncertainty of what it could potentially mean.",
+            "turn": 7
+          },
+          {
+            "quote": "I feel a bit more tired than usual after work sometimes",
+            "turn": 1
+          }
+        ],
+        "reasoning": "Understands CLL affects immune system cells. Has symptoms (tiredness after work, lump in neck). Vigilant about changes. Had to adjust identity around living with chronic condition.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "I can't help but feel a bit uneasy about it. It's not so much the physicality of the lump itself as it is the uncertainty of what it could potentially mean.",
+            "turn": 7
+          },
+          {
+            "quote": "As for worrying about it, there are moments when I think about the implications and potential future complications. But overall, I try to stay focused on the present and not let it control my thoughts or actions too much. It's a balancing act, but one that helps me maintain some sense of normalcy while still being mindful of my condition.",
+            "turn": 5
+          },
+          {
+            "quote": "I do my best to stay present in the moment and not let myself get bogged down by worry too much.",
+            "turn": 7
+          }
+        ],
+        "reasoning": "Feels uneasy about lump due to uncertainty. Has moments of worry about implications and future complications. But tries to stay focused on present and not let worry control them. Moderate concern actively managed.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I think of CLL as something that's affecting my body's immune system cells, causing them to grow abnormally and form clusters.",
+            "turn": 5
+          },
+          {
+            "quote": "Day to day, having CLL means being vigilant about any changes in my health and keeping up with regular appointments to monitor my blood count.",
+            "turn": 5
+          },
+          {
+            "quote": "As for worrying about it, there are moments when I think about the implications and potential future complications. But overall, I try to stay focused on the present and not let it control my thoughts or actions too much. It's a balancing act, but one that helps me maintain some sense of normalcy while still being mindful of my condition.",
+            "turn": 5
+          },
+          {
+            "quote": "If and when the need for treatment becomes necessary, I understand there could be various options available, but I don't have a specific preference at this point as I trust my doctor's judgment in determining the best course of action.",
+            "turn": 6
+          },
+          {
+            "quote": "But as long as I'm well-informed and can maintain a level of control over the situation, I think I'll be able to handle any changes that may come up.",
+            "turn": 6
+          }
+        ],
+        "reasoning": "Understands what CLL is (affecting immune system cells). Knows need for regular monitoring. Understands watch-and-wait approach. Trying to stay informed and maintain control. Good understanding of condition and plan.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "It's been a bit of a challenge adjusting to the idea that this is something I'll be dealing with for a while",
+            "turn": 4
+          },
+          {
+            "quote": "It's also made me appreciate the importance of living life fully and making each moment count, as I've had this reality check on how short life can be at times.",
+            "turn": 5
+          },
+          {
+            "quote": "As for worrying about it, there are moments when I think about the implications and potential future complications. But overall, I try to stay focused on the present and not let it control my thoughts or actions too much. It's a balancing act, but one that helps me maintain some sense of normalcy while still being mindful of my condition.",
+            "turn": 5
+          },
+          {
+            "quote": "I can't help but feel a bit uneasy about it. It's not so much the physicality of the lump itself as it is the uncertainty of what it could potentially mean.",
+            "turn": 7
+          },
+          {
+            "quote": "I do my best to stay present in the moment and not let myself get bogged down by worry too much.",
+            "turn": 7
+          }
+        ],
+        "reasoning": "Had to adjust to lifelong management, which was challenging. Made them appreciate life more. Has moments of worry and unease. But actively trying to stay present and not let worry control them. Moderate emotional impact managed.",
+        "score": 6.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [],
+        "reasoning": "Patient is currently not on any treatment for CLL, so there is no specific belief about their own prescribed medication to hold. They are in watch-and-wait phase and hope to remain so.",
+        "score": null,
+        "confidence": 1.0
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "As for concerns about treatment, they're more theoretical than concrete right now. It would depend on the specifics of what kind of treatment is needed and how it might impact my daily life or work schedule. But as long as I'm well-informed and can maintain a level of control over the situation, I think I'll be able to handle any changes that may come up.",
+            "turn": 6
+          }
+        ],
+        "reasoning": "No concrete concerns about treatment at this time since they are not on any medication. Acknowledges treatment could potentially impact daily life or work schedule, but believes they can handle it as long as well-informed.",
+        "score": 2.0,
+        "confidence": 0.9
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [],
+        "reasoning": "General beliefs about medicines as a class were never explored during the consultation.",
+        "score": null,
+        "confidence": 1.0
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "Beliefs about whether doctors prescribe too readily were never explored during the consultation.",
+        "score": null,
+        "confidence": 1.0
+      }
+    },
+    "causes": [
+      "affecting my body's immune system cells, causing them to grow abnormally and form clusters"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "I think of CLL as something that's affecting my body's immune system cells, causing them to grow abnormally and form clusters.",
+        "turn": 5
+      }
+    ]
+  }
+}

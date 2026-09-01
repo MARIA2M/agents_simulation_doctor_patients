@@ -1,0 +1,269 @@
+{
+  "patient_id": "CLL-003",
+  "turns": 12,
+  "stop_reason": "doctor",
+  "conversation": [
+    {
+      "role": "doctor",
+      "content": "Hello, thanks for coming in today. I hope you're doing as well as you can be. What brings you to see me today?",
+      "turn": 1
+    },
+    {
+      "role": "patient",
+      "content": "Thank you for having me. Well, to be honest, doctor, some days I can barely get out of bed. It feels like this disease has taken over everything \u2014 my work, my time with the kids, everything. And I know you said the medication should help, but I've been getting these terrible headaches since I started, and I keep wondering if it's really worth it. Sometimes I feel like I have no say in any of it.",
+      "turn": 1
+    },
+    {
+      "role": "doctor",
+      "content": "I'm sorry to hear you're feeling this way \u2014 it sounds like a really heavy burden to carry. Before we go further, could you remind me what condition we're talking about today? And then I'd like to hear more about those headaches \u2014 are they constant, or do they come and go? And how are they affecting your day-to-day?",
+      "turn": 2
+    },
+    {
+      "role": "patient",
+      "content": "Of course. As you know, doctor, I've been diagnosed with Chronic Lymphocytic Leukemia, which is a type of cancer that affects the blood cells. It's in an early stage right now, but it's still a concern for me and my family. The headaches started about a week after I began taking the medication. They're more like a constant pressure than a throbbing pain \u2014 it feels like my head's been compressed. It's really hard to concentrate when I'm feeling like that, so I've been missing work more than usual. And because of the fatigue, even small tasks feel overwhelming at times.",
+      "turn": 2
+    },
+    {
+      "role": "doctor",
+      "content": "I understand. CLL is a serious diagnosis, and it's understandable that it weighs on you. The headaches are a real concern \u2014 when something new shows up after starting a treatment, it's natural to worry, isn't it? Have you been able to talk to your prescribing doctor about these headaches yet, or have you been managing them on your own? And how are you feeling about the medication overall \u2014 has it helped you feel any better in other ways, or has the fatigue been your main experience so far?",
+      "turn": 3
+    },
+    {
+      "role": "patient",
+      "content": "I haven't mentioned the headaches to my hematologist yet. I didn't want to worry him or make him think that there was a problem with the treatment. But now that you mention it, maybe I should bring this up at our next appointment. As for how I feel about the medication overall, well, I know it's important for managing the disease and keeping it in check. But the fatigue has been a real struggle for me. It's not just tiredness from work \u2014 it feels like I don't have the energy to do anything, even simple things around the house.",
+      "turn": 3
+    },
+    {
+      "role": "doctor",
+      "content": "It's completely understandable that you'd hesitate to bring it up \u2014 you don't want to be a burden, and you don't want to worry your doctor unnecessarily. But you're right that keeping him informed is important. And when it comes to the fatigue you're describing \u2014 that heavy, unrelenting kind of tiredness \u2014 is that something you've had before, or is this new to this phase of treatment? And when you think about CLL, what do you understand it to be? Like, how did it develop in your body, and what do you think is going on with you?",
+      "turn": 4
+    },
+    {
+      "role": "patient",
+      "content": "This kind of fatigue feels different from the usual tiredness I get after a long day at work. It's more like my body is constantly fighting this disease, and that takes a lot out of me. As for how CLL developed in my body, well, I know that it's genetic \u2014 my father had it too, so there might have been some hereditary factor. But beyond that, I'm not really sure what triggers it or why it happens to be honest. It's just something I've been living with and trying to manage as best I can.",
+      "turn": 4
+    },
+    {
+      "role": "doctor",
+      "content": "That's a really important distinction you're making \u2014 feeling like your body is constantly fighting, not just tired from work. And it makes sense that if your father had it, you'd think there might be some genetic link. The fact that you're not sure about triggers beyond that isn't unusual \u2014 CLL can be complex in that way. But I'm curious: beyond the physical side of things, how has this been affecting you emotionally? Have you found yourself feeling more anxious or down, or is it mostly just frustration that you can't do the things you used to?",
+      "turn": 5
+    },
+    {
+      "role": "patient",
+      "content": "It's definitely been a rollercoaster emotionally, doctor. Some days I feel really upbeat and optimistic, like I'm making progress in managing the disease. But then there are other times when everything feels overwhelming, and I get really down on myself. The frustration is there too \u2014 it's hard to accept that my life has been so drastically changed by this illness. There are things that I used to be able to do without a second thought, but now they're huge challenges.",
+      "turn": 5
+    },
+    {
+      "role": "doctor",
+      "content": "That emotional rollercoaster is exhausting in itself \u2014 it's hard enough dealing with the physical symptoms without the ups and downs of your mood on top of it. And it makes sense that you'd feel frustrated when things you used to handle easily become big challenges. I want to turn to the medication for a moment. You mentioned it's important for keeping the disease in check, but I'm wondering if there's anything about taking it that worries you? Like side effects you're afraid of, or doubts about whether it's actually working?",
+      "turn": 6
+    },
+    {
+      "role": "patient",
+      "content": "There are definitely some worries there, doctor. I've heard horror stories about some of the potential side effects of CLL medication \u2014 things like severe nausea and vomiting, or even worse. But so far, the only side effect I've really noticed is that fatigue I mentioned earlier. That said, I'm still wary about whether this medication will actually work for me in the long term. It's hard not to worry that it might stop working at some point, or that the disease could just keep progressing despite my best efforts.",
+      "turn": 6
+    },
+    {
+      "role": "doctor",
+      "content": "It's natural to hear those stories and worry, especially when you're the one taking the medication. But I'm glad you're only experiencing fatigue so far \u2014 that's a good sign compared to some of the more severe side effects. And the worry about whether it will keep working is something a lot of patients struggle with. You mentioned earlier that sometimes you feel like you have no say in this at all. Can you tell me more about that? What does \"no say\" feel like for you?",
+      "turn": 7
+    },
+    {
+      "role": "patient",
+      "content": "When I say I feel like I have no say, doctor, it's not just about the medication \u2014 it's the whole situation. It feels like I'm just along for the ride while my body goes through this disease. There are things I can do to take care of myself, like eating right and getting enough sleep, but there's only so much I feel like I can control. And when you add on top the worries about the future \u2014 whether the disease will progress or if the medication will stop working \u2014 it feels like all I can do is sit back and wait for things to happen.",
+      "turn": 7
+    },
+    {
+      "role": "doctor",
+      "content": "That sense of being along for the ride is really draining. It sounds like you've found some self-care strategies that help, but there's still that feeling that the disease is the one driving things forward. And the fear of the future \u2014 wondering if it might stop working or progress \u2014 weighs heavily on you. When you picture the road ahead with this disease, do you see it as something you'll always be managing, or do you ever hold out hope for times when things might settle down? And how have you been feeling about your relationship with your hematologist lately \u2014 do you feel like you can be honest about everything, or have you been holding back?",
+      "turn": 8
+    },
+    {
+      "role": "patient",
+      "content": "I definitely see this disease as something I'll always be managing in some way. It's not something that I think will just go away and be done with. As for hope, there are days when I feel pretty optimistic \u2014 like when the hematologist reassures me that many people live normal lifespans despite having CLL. But then there are other times when things feel really bleak, especially if I start to experience more symptoms or my counts start to shift in a concerning way. In terms of my relationship with my hematologist, I try to be as honest as possible. I think we have a good rapport \u2014 he's always been willing to listen and answer any questions I have. But sometimes it can feel like there are things he knows that he isn't telling me, or things I'm too scared to ask about yet.",
+      "turn": 8
+    },
+    {
+      "role": "doctor",
+      "content": "It's really good that you feel comfortable with your hematologist and that he's willing to answer your questions. And it sounds like you're trying to balance that hope for a normal lifespan with the reality of managing something long-term. One more thing I'm curious about \u2014 when you think about everything you're dealing with right now, both the illness and the medication, what feels most helpful to you in managing this day to day? Is there anything \u2014 like having a routine, leaning on family, or something else \u2014 that makes the load feel a little lighter?",
+      "turn": 9
+    },
+    {
+      "role": "patient",
+      "content": "Honestly, doctor, I think the thing that helps most is just having a sense of routine. Even though my days are still very much dictated by how I'm feeling physically, having certain things I know I can rely on \u2014 like an exercise routine or a favorite meal \u2014 makes everything feel a little more manageable. My family's support has been really helpful too \u2014 they understand what I'm going through and are always there to lend an ear when I need it. And of course, being able to talk to you and other medical professionals helps me stay informed about the disease and any potential treatment options.",
+      "turn": 9
+    },
+    {
+      "role": "doctor",
+      "content": "I really appreciate you sharing all of that with me. It sounds like routine and your family are your anchors right now \u2014 that makes sense, especially when everything else feels so unpredictable. Let me summarize what we've talked about so you can see where things stand. You're managing CLL, which you understand as a chronic condition with a genetic component, and you're on medication that you believe is important but you're worried about long-term effectiveness. The headaches and fatigue are real concerns you're dealing with, and you're feeling a mix of hope and uncertainty. I think the most important next step is to make sure your hematologist knows about those headaches so they can assess whether anything needs to change. Would you be comfortable writing down what you want to say to him before your next appointment? I can help you get it clear.",
+      "turn": 10
+    },
+    {
+      "role": "patient",
+      "content": "Thank you, doctor. That summary really captures everything we've talked about today. Yes, I think it would be helpful to write down my concerns for the hematologist so he's fully informed. If that's okay with you, I'd love some guidance on how to approach those notes \u2014 what should I include and how detailed should I get?",
+      "turn": 10
+    },
+    {
+      "role": "doctor",
+      "content": "Absolutely, that's a great approach. Here's what I'd suggest you include: start by mentioning how long you've been on the medication and that you're feeling generally okay with it, but then explain that you've developed a constant pressure-type headache starting about a week after you began. Mention that it's affecting your concentration and making it hard to get through the day, and ask if this is something that might need attention \u2014 whether it's a side effect, something to manage, or something that could be adjusting. Keep it simple and factual, and let him know you're open to his suggestions. Does that sound right to you? And I think we've covered a lot today \u2014 I hope you feel a little less alone in this. Take care of yourself.",
+      "turn": 11
+    },
+    {
+      "role": "patient",
+      "content": "Thank you so much for your help and understanding, doctor. That's an excellent outline for the notes, and it should give me a good starting point for my conversation with the hematologist. And thank you for being there to listen today \u2014 I really appreciate it. I know this isn't easy for either of us, but I'm glad we could have this conversation. Take care, and I'll be sure to let you know how things go next time.",
+      "turn": 11
+    },
+    {
+      "role": "doctor",
+      "content": "You're very welcome. It's been my privilege to hear your story today. And you're right \u2014 this isn't easy, but you're handling it with courage. I hope the notes help you feel more prepared for your next appointment, and I'm glad you're going to bring up those headaches. If anything else comes up in the meantime, don't hesitate to reach out. Take care of yourself, and I wish you the best.",
+      "turn": 12
+    },
+    {
+      "role": "patient",
+      "content": "Thank you, doctor. Your support means a lot to me. I'll be sure to get in touch if anything new comes up. And I hope things go well for you too. Goodbye for now.",
+      "turn": 12
+    }
+  ],
+  "coverage_hint": {},
+  "working_notes": [],
+  "events": [
+    {
+      "event": "llm_retry",
+      "role": "doctor",
+      "attempt": 1,
+      "failure": "HTTPStatusError: Server error '500 Internal Server Error' for url 'http://127.0.0.1:11500/api/chat'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500"
+    }
+  ],
+  "usage": [
+    {
+      "role": "doctor",
+      "eval_tokens": 178,
+      "prompt_tokens": 1531
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 92,
+      "prompt_tokens": 1190
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 272,
+      "prompt_tokens": 1804
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 129,
+      "prompt_tokens": 1362
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 322,
+      "prompt_tokens": 2208
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 118,
+      "prompt_tokens": 1603
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 266,
+      "prompt_tokens": 2651
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 114,
+      "prompt_tokens": 1850
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 268,
+      "prompt_tokens": 3034
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 97,
+      "prompt_tokens": 2088
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 225,
+      "prompt_tokens": 3402
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 105,
+      "prompt_tokens": 2301
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 238,
+      "prompt_tokens": 3735
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 121,
+      "prompt_tokens": 2516
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 300,
+      "prompt_tokens": 4097
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 167,
+      "prompt_tokens": 2778
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 272,
+      "prompt_tokens": 4567
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 120,
+      "prompt_tokens": 3066
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 261,
+      "prompt_tokens": 4962
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 70,
+      "prompt_tokens": 3360
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 217,
+      "prompt_tokens": 5296
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 93,
+      "prompt_tokens": 3593
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 135,
+      "prompt_tokens": 5609
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 43,
+      "prompt_tokens": 3784
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 657,
+      "prompt_tokens": 5790
+    },
+    {
+      "role": "report",
+      "eval_tokens": 5700,
+      "prompt_tokens": 11857
+    }
+  ]
+}

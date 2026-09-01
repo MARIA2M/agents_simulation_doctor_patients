@@ -1,0 +1,272 @@
+{
+  "patient_id": "HIV-005",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "HIV-005",
+    "clinical_summary": "The patient presents with chronic headaches, crashes of exhaustion, low-grade fevers, and general fatigue that have been worsening over time. They've tried rest, hydration, and over-the-counter pain relievers but found them insufficient. Bloodwork came back normal. Symptoms are significantly impacting their work (frequent breaks, calling in sick) and social life (avoiding gatherings). They experience guilt, anxiety, and worry about their health. They have theories about causes (work stress, diet, family history) but lack understanding of what's happening and are unsure what questions to ask. They're open to targeted testing and want advice on approaching their doctor.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "everything is more of a struggle than it used to be",
+            "turn": 1
+          },
+          {
+            "quote": "I've been having to take more frequent breaks at work",
+            "turn": 9
+          },
+          {
+            "quote": "had to call in sick because the headaches were so bad that I couldn't concentrate on anything — even just getting out of bed felt like an enormous effort",
+            "turn": 9
+          },
+          {
+            "quote": "avoid big events or gatherings that might be too overwhelming",
+            "turn": 9
+          },
+          {
+            "quote": "feeling like I'm missing out on something really fun or exciting",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient has had to take frequent breaks at work, call in sick, avoid social gatherings, and feels they're missing out on things. This shows significant impact on their daily functioning and roles.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "The headaches have been coming and going for as long as I can remember",
+            "turn": 3
+          },
+          {
+            "quote": "The crashes started getting more noticeable about a year ago",
+            "turn": 3
+          },
+          {
+            "quote": "they've definitely gotten more frequent and intense in the past few months",
+            "turn": 3
+          },
+          {
+            "quote": "chronic exhaustion",
+            "turn": 10
+          },
+          {
+            "quote": "doesn't go away no matter how much I sleep or rest",
+            "turn": 10
+          }
+        ],
+        "reasoning": "The patient describes symptoms that have been ongoing for years (headaches) and have been getting worse over the past year. They use the term 'chronic exhaustion' and describe symptoms that don't go away. This suggests they expect this to continue long-term.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "Sometimes it seems like the fatigue is linked to work stress or how much sleep I got the night before",
+            "turn": 3
+          },
+          {
+            "quote": "other times it feels completely unexplained — like my body's just not operating at full capacity for no reason",
+            "turn": 3
+          },
+          {
+            "quote": "I've tried a few things — mostly just rest and making sure I'm hydrated",
+            "turn": 6
+          },
+          {
+            "quote": "I've been trying to get more sleep and take breaks when work gets really stressful",
+            "turn": 6
+          },
+          {
+            "quote": "I've been trying to eat healthier lately",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient recognizes some triggers (work stress, sleep) and has tried self-management strategies (rest, hydration, sleep, breaks, healthier diet). However, they also acknowledge times when it feels 'completely unexplained' and 'for no reason.' They're trying to manage but acknowledge limitations.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "I've taken some pain relievers for the headaches when they're really bad, but that doesn't seem to help as much as I'd like it to",
+            "turn": 6
+          },
+          {
+            "quote": "I've definitely thought about it, especially when the headaches get really bad and I can't focus on anything else",
+            "turn": 7
+          },
+          {
+            "quote": "I'm a little hesitant to start taking more powerful medications without really understanding what's going on under the surface",
+            "turn": 7
+          },
+          {
+            "quote": "I'd definitely be open to getting some more targeted testing if it could help me get to the bottom of these symptoms",
+            "turn": 13
+          }
+        ],
+        "reasoning": "The patient has tried over-the-counter pain relievers but found them insufficient. They're considering stronger medications but are hesitant without understanding the underlying cause. They're open to targeted testing. This shows some belief in treatment effectiveness but tempered by caution and lack of understanding.",
+        "score": 4.0,
+        "confidence": 0.6
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "terrible headaches that just won't go away",
+            "turn": 2
+          },
+          {
+            "quote": "suddenly crash, almost like I've hit a wall of exhaustion",
+            "turn": 2
+          },
+          {
+            "quote": "headaches, low-grade fevers, and general fatigue that doesn't go away no matter how much I sleep or rest",
+            "turn": 10
+          }
+        ],
+        "reasoning": "The patient identifies with headaches, crashes/exhaustion, low-grade fevers, and general fatigue. These symptoms are daily and intrusive, affecting their ability to function.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "It's hard to say for sure, but it feels like a lot of my mental energy gets taken up by thoughts related to my health",
+            "turn": 12
+          },
+          {
+            "quote": "I'll notice myself feeling anxious during work meetings or in social situations, because I'm worried about how I'll feel later on",
+            "turn": 12
+          },
+          {
+            "quote": "sometimes when I'm alone at home, I'll start worrying about what might be happening inside my body",
+            "turn": 12
+          },
+          {
+            "quote": "It feels like these symptoms are always lurking in the back of my mind — even if they're not actively making me feel terrible at the moment",
+            "turn": 12
+          }
+        ],
+        "reasoning": "The patient reports that thoughts about their health take up a lot of mental energy, they feel anxious during meetings and social situations, worry about how they'll feel later, and feel symptoms are always 'lurking in the back of my mind.' This shows frequent, intrusive worry.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "It's hard to put my finger on exactly what it is",
+            "turn": 2
+          },
+          {
+            "quote": "I know that the headaches and fatigue are probably connected somehow, but I'm not really sure how or why they're happening",
+            "turn": 2
+          },
+          {
+            "quote": "The bloodwork results came back completely normal, which was a bit of a letdown",
+            "turn": 5
+          },
+          {
+            "quote": "I don't really have any solid evidence to back them up",
+            "turn": 8
+          },
+          {
+            "quote": "I'm not even entirely sure what questions to be asking in the first place",
+            "turn": 11
+          }
+        ],
+        "reasoning": "The patient doesn't understand what's causing their symptoms, doesn't know how the headaches and fatigue are connected, normal bloodwork didn't provide answers, they have theories but no solid evidence, and they're unsure what questions to ask. This shows low understanding.",
+        "score": 2.0,
+        "confidence": 0.8
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "Emotionally, it's been really tough",
+            "turn": 9
+          },
+          {
+            "quote": "I feel guilty for letting everyone down at work",
+            "turn": 9
+          },
+          {
+            "quote": "I feel like I might be missing out on something really fun or exciting — which just adds another layer of stress and disappointment",
+            "turn": 9
+          },
+          {
+            "quote": "It feels like a lot of my mental energy gets taken up by thoughts related to my health",
+            "turn": 12
+          },
+          {
+            "quote": "I'll notice myself feeling anxious during work meetings or in social situations",
+            "turn": 12
+          }
+        ],
+        "reasoning": "The patient reports feeling emotionally tough, guilty, stressed, and disappointed. They report that thoughts about their health take up mental energy and they feel anxious during meetings and social situations. This shows significant emotional impact.",
+        "score": 8.0,
+        "confidence": 0.9
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [],
+        "reasoning": "The patient has no prescription yet, so no specific belief about their own medication.",
+        "score": null,
+        "confidence": 1.0
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [],
+        "reasoning": "The patient has no prescription yet, so no specific belief about their own medication.",
+        "score": null,
+        "confidence": 1.0
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [],
+        "reasoning": "The patient didn't express a general belief that medicines as a class are harmful.",
+        "score": null,
+        "confidence": 0.8
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "The patient didn't express a general belief that doctors prescribe too readily.",
+        "score": null,
+        "confidence": 0.8
+      }
+    },
+    "causes": [
+      "work stress",
+      "diet changes",
+      "family history (heart disease and high blood pressure)"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "I know that work can be pretty stressful sometimes, so I wonder if that could be contributing to the headaches and the crashes",
+        "turn": 8
+      },
+      {
+        "quote": "And as far as my diet goes, I've been trying to eat healthier lately — mostly because I feel like it's better for me overall — but I don't know if that has anything to do with these symptoms",
+        "turn": 8
+      },
+      {
+        "quote": "My family history includes some heart disease and high blood pressure, so I wonder if there might be something there too",
+        "turn": 8
+      },
+      {
+        "quote": "But right now, those are just theories — I don't really have any solid evidence to back them up",
+        "turn": 8
+      }
+    ]
+  }
+}

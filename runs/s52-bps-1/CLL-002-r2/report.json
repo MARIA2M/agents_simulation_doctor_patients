@@ -1,0 +1,338 @@
+{
+  "patient_id": "CLL-002",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "CLL-002",
+    "clinical_summary": "The patient was diagnosed with CLL two years ago and is taking ibrutinib 420mg daily, currently in partial remission. They experience persistent fatigue, frequent infections, swollen lymph nodes, and occasional bruises. Side effects include mild diarrhea and joint aches. The illness has disrupted their work, hobbies, and social life. They actively manage through healthy lifestyle choices (diet, exercise, sleep) and maintain open communication with their care team. They have some hope for a cure but acknowledge it may be lifelong.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "Work has been harder because of the fatigue, and I've had to cut back on my hobbies and spending time with friends and family.",
+            "turn": 1
+          },
+          {
+            "quote": "It's really disrupted my life since the diagnosis.",
+            "turn": 1
+          }
+        ],
+        "reasoning": "The patient has had to cut back on hobbies and social activities, and work has been harder. This represents a significant impact on their life while they continue to function.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "It's not easy accepting that this is likely a lifelong situation",
+            "turn": 1
+          },
+          {
+            "quote": "I do try to stay positive, though. The fact that the medication is helping me reach partial remission gives me hope that one day we might find a full remission or even a cure for CLL.",
+            "turn": 2
+          },
+          {
+            "quote": "I think there's always going to be a part of me that hopes for a future without CLL.",
+            "turn": 4
+          },
+          {
+            "quote": "It's not easy knowing that this disease might always be a part of my life",
+            "turn": 4
+          }
+        ],
+        "reasoning": "The patient acknowledges the illness is likely lifelong but still holds hope for a cure. They are trying to accept the chronic nature while maintaining hope for a future without CLL.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I try to maintain a healthy diet as best as I can, get enough sleep, and exercise when possible.",
+            "turn": 3
+          },
+          {
+            "quote": "It's not always easy with the fatigue, but it does help me feel better overall.",
+            "turn": 3
+          },
+          {
+            "quote": "I've also learned that it's crucial to communicate with you about any changes in my symptoms or how I'm feeling.",
+            "turn": 3
+          },
+          {
+            "quote": "I'm just trying my best to manage the symptoms and live with it as best as I can.",
+            "turn": 2
+          },
+          {
+            "quote": "I guess what I'm trying to say is that while CLL has taken a lot from me, it hasn't taken away my resilience.",
+            "turn": 5
+          }
+        ],
+        "reasoning": "The patient actively manages their health through lifestyle choices and maintains open communication with their care team. They credit their own actions with helping them feel better.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "It's been helping control the disease",
+            "turn": 1
+          },
+          {
+            "quote": "I'm glad to be in partial remission now, even if it's just temporary.",
+            "turn": 1
+          },
+          {
+            "quote": "The fact that the medication is helping me reach partial remission gives me hope",
+            "turn": 2
+          },
+          {
+            "quote": "I trust modern medicine and know that you and your colleagues are doing everything possible to help manage this condition.",
+            "turn": 1
+          },
+          {
+            "quote": "My interactions with you and your team give me hope that there will be new treatments or breakthroughs in research that might change everything for people like me.",
+            "turn": 4
+          }
+        ],
+        "reasoning": "The patient clearly sees the treatment as helping control the disease and attributes their partial remission to it. They trust the medical team and believe in ongoing treatment.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "I was diagnosed with Chronic Lymphocytic Leukemia (CLL)",
+            "turn": 1
+          },
+          {
+            "quote": "persistent fatigue",
+            "turn": 1
+          },
+          {
+            "quote": "frequent infections",
+            "turn": 1
+          },
+          {
+            "quote": "swollen lymph nodes in the neck and armpits",
+            "turn": 1
+          },
+          {
+            "quote": "occasionally, I get these bruises on my arms and legs",
+            "turn": 1
+          },
+          {
+            "quote": "when I feel the fatigue, it feels like my whole body has a weight on it",
+            "turn": 2
+          },
+          {
+            "quote": "swollen lymph nodes, they're quite noticeable",
+            "turn": 2
+          }
+        ],
+        "reasoning": "The patient clearly identifies CLL and describes multiple symptoms that they attribute to it. These symptoms are present and noticeable.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "I do worry about where it might be heading",
+            "turn": 1
+          },
+          {
+            "quote": "there are still days when symptoms feel just as present as they did at the start",
+            "turn": 1
+          },
+          {
+            "quote": "I do have some concerns about taking ibrutinib long-term",
+            "turn": 3
+          },
+          {
+            "quote": "there's also a risk of other complications down the line",
+            "turn": 3
+          },
+          {
+            "quote": "It's scary to think about what my life might look like if those complications happen",
+            "turn": 3
+          },
+          {
+            "quote": "I'm concerned about how my body will continue to respond to the treatment",
+            "turn": 4
+          },
+          {
+            "quote": "I worry about any potential complications from the ibrutinib",
+            "turn": 4
+          },
+          {
+            "quote": "there's also the emotional toll that comes with living with a chronic illness—sometimes it feels like it's just one more thing to worry about",
+            "turn": 4
+          },
+          {
+            "quote": "there are times when the worry and fear can feel overwhelming",
+            "turn": 5
+          }
+        ],
+        "reasoning": "The patient worries about disease progression, treatment response, complications, and the emotional toll. These worries recur unprompted and affect their thinking.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I imagine my immune system is working overtime to fight off this disease",
+            "turn": 2
+          },
+          {
+            "quote": "I think about how my body must be trying to fight something off and creating these nodes as a response",
+            "turn": 2
+          },
+          {
+            "quote": "I do try to stay positive, though. The fact that the medication is helping me reach partial remission gives me hope",
+            "turn": 2
+          },
+          {
+            "quote": "I know how important this medication is in helping manage my condition",
+            "turn": 3
+          },
+          {
+            "quote": "When you put it in perspective, the side effects are relatively mild compared to what would happen without treatment or if the disease progressed unchecked",
+            "turn": 3
+          }
+        ],
+        "reasoning": "The patient has a fairly good understanding of how their body responds (immune system working overtime), how the medication helps, and the consequences of not treating. They can explain the relationship between treatment and disease control.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "it's been a bit of a rollercoaster",
+            "turn": 1
+          },
+          {
+            "quote": "It's really disrupted my life",
+            "turn": 1
+          },
+          {
+            "quote": "It's not easy accepting that this is likely a lifelong situation",
+            "turn": 1
+          },
+          {
+            "quote": "I do worry about where it might be heading",
+            "turn": 1
+          },
+          {
+            "quote": "there's also the emotional toll that comes with living with a chronic illness",
+            "turn": 4
+          },
+          {
+            "quote": "there are times when the worry and fear can feel overwhelming",
+            "turn": 5
+          },
+          {
+            "quote": "I guess what I'm trying to say is that while CLL has taken a lot from me, it hasn't taken away my resilience",
+            "turn": 5
+          }
+        ],
+        "reasoning": "The patient describes emotional exhaustion, worry, fear, and the emotional toll. Emotion is prominent and affects how they speak about their future.",
+        "score": 8.0,
+        "confidence": 0.9
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "I'm taking Ibrutinib 420 mg once daily, as you know, doctor.",
+            "turn": 1
+          },
+          {
+            "quote": "It's been helping control the disease",
+            "turn": 1
+          },
+          {
+            "quote": "I know how important this medication is in helping manage my condition",
+            "turn": 3
+          },
+          {
+            "quote": "When you put it in perspective, the side effects are relatively mild compared to what would happen without treatment or if the disease progressed unchecked",
+            "turn": 3
+          },
+          {
+            "quote": "I'll keep focusing on managing my symptoms and living my life as best as I can",
+            "turn": 4
+          }
+        ],
+        "reasoning": "The patient takes the medication daily, sees it as helping control the disease, and believes it's important for managing their condition. They compare the side effects to what would happen without treatment.",
+        "score": 4.5,
+        "confidence": 0.8
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "I do have some concerns about taking ibrutinib long-term",
+            "turn": 3
+          },
+          {
+            "quote": "there's also a risk of other complications down the line",
+            "turn": 3
+          },
+          {
+            "quote": "It's scary to think about what my life might look like if those complications happen",
+            "turn": 3
+          },
+          {
+            "quote": "I'm concerned about how my body will continue to respond to the treatment",
+            "turn": 4
+          },
+          {
+            "quote": "I worry about any potential complications from the ibrutinib",
+            "turn": 4
+          }
+        ],
+        "reasoning": "The patient has specific concerns about long-term side effects and complications. These concerns recur unprompted.",
+        "score": 4.0,
+        "confidence": 0.9
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "there's also a risk of other complications down the line",
+            "turn": 3
+          },
+          {
+            "quote": "It's scary to think about what my life might look like if those complications happen",
+            "turn": 3
+          },
+          {
+            "quote": "I worry about any potential complications from the ibrutinib",
+            "turn": 4
+          }
+        ],
+        "reasoning": "The patient acknowledges potential complications, which suggests some concern about medicines in general, but this is specific to their medication rather than a general view of medicines as a class.",
+        "score": 2.0,
+        "confidence": 0.7
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "No evidence of this belief was expressed during the consultation.",
+        "score": null,
+        "confidence": 0.0
+      }
+    },
+    "causes": [],
+    "causes_evidence": []
+  }
+}

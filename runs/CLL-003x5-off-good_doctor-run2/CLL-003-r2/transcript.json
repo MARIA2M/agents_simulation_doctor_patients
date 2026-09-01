@@ -1,0 +1,322 @@
+{
+  "patient_id": "CLL-003",
+  "turns": 15,
+  "stop_reason": "doctor",
+  "conversation": [
+    {
+      "role": "doctor",
+      "content": "Hello, and welcome. I'm glad you're here today. What brings you in to see me?",
+      "turn": 1
+    },
+    {
+      "role": "patient",
+      "content": "Hi doctor, thank you for seeing me. Well, my wife actually noticed a small lump in my neck recently and I've been feeling a bit more tired than usual after work. So that's why we decided it would be best to come and get checked out.",
+      "turn": 1
+    },
+    {
+      "role": "doctor",
+      "content": "Thank you for telling me. I'm glad your wife noticed that lump, and that you've come in to get it checked. A lump in the neck can have a few different causes, some more concerning than others, but the important thing is that you're here and we can take a look. When did you first notice it? And have you had any other symptoms since then \u2014 anything else that feels different, like changes in swallowing, difficulty breathing, or even unexplained weight loss?",
+      "turn": 2
+    },
+    {
+      "role": "patient",
+      "content": "I first noticed the lump about two weeks ago. Since then, I haven't really noticed any changes in swallowing or breathing, and I don't think I've lost any significant amount of weight. But I have been feeling more tired than usual after work, which is a bit unusual for me.",
+      "turn": 2
+    },
+    {
+      "role": "doctor",
+      "content": "Two weeks is a relatively short time, but that's long enough to notice any changes. Can you tell me a bit more about the lump itself \u2014 where exactly is it located on your neck? Is it near the surface, or deeper? And when you feel it, is it something you can move around, or does it seem to be attached to something more fixed? Also, have you had any other medical issues in the past that might be relevant, or are you on any regular medication?",
+      "turn": 3
+    },
+    {
+      "role": "patient",
+      "content": "The lump is right under my chin, I'd say about at the level of my voice box. It's not really painful, but it feels a bit like a hard knot. I can move my head around and it stays in one place, so it doesn't seem to be attached to anything else. As for other medical issues or medications, I've had some allergies in the past that I take allergy medication for occasionally, but nothing else that comes to mind right now.",
+      "turn": 3
+    },
+    {
+      "role": "doctor",
+      "content": "That's helpful detail. A lump under the chin that's not particularly painful and moves with your neck tissues is more suggestive of a lymph node or something like a salivary gland issue, though we'll need to check it properly to be sure. The fatigue you mentioned \u2014 when did that start? Was it around the same time as you noticed the lump, or did it come on a bit before? And have you noticed any fevers, night sweats, or a feeling of being generally unwell, aside from the tiredness?",
+      "turn": 4
+    },
+    {
+      "role": "patient",
+      "content": "The fatigue started about a month ago. It wasn't around the same time I noticed the lump in my neck; I've been feeling tired for longer than that. But since then, it's definitely gotten more pronounced. As for fevers or night sweats, no, I haven't experienced any of those. I'd say overall I feel pretty well, aside from the fatigue and now this lump.",
+      "turn": 4
+    },
+    {
+      "role": "doctor",
+      "content": "That's useful \u2014 so the fatigue predates the lump by a few weeks. That might suggest the two are separate issues, or that there's something else going on in your body that's been contributing to the tiredness. You mentioned you feel pretty well overall, which is good to hear. But since the fatigue is affecting you enough to come in, can you describe it a bit more \u2014 is it a kind of bone-weary tiredness, or more like you can't get going in the morning? And have you noticed any changes in your appetite or sleep?",
+      "turn": 5
+    },
+    {
+      "role": "patient",
+      "content": "The fatigue is definitely more like bone-weary tiredness. I'm not necessarily having trouble getting going in the mornings, but by midday or early afternoon, I start feeling really drained and struggle to keep my eyes open. As for changes in my appetite or sleep, I haven't noticed any significant differences \u2014 I still eat about the same amount and go to bed at roughly the same time each night.",
+      "turn": 5
+    },
+    {
+      "role": "doctor",
+      "content": "I see \u2014 it's a midday slump that really hits you hard, with that bone-weary feeling. That's quite draining, especially when it's interfering with your day. It's good that your appetite and sleep patterns have stayed pretty steady, which suggests there might not be something more serious affecting those systems. Have you been under any particularly stressful periods lately, or made any big changes in your routine? Sometimes emotional or life stress can manifest that way, even when we don't think of it as directly related.",
+      "turn": 6
+    },
+    {
+      "role": "patient",
+      "content": "Not really \u2014 I'd say my work has been pretty steady and manageable, and nothing major has changed in my personal life recently either. Maybe I'm just getting older! But seriously, I can't think of anything that's caused me significant stress or changes in routine lately.",
+      "turn": 6
+    },
+    {
+      "role": "doctor",
+      "content": "You're right \u2014 getting older can certainly affect energy levels, though there's often more going on than just that. And it's good that your work and personal life have been relatively stable; stress can definitely contribute to fatigue, but it doesn't seem to be the main factor here. \n\nBefore we have a closer look at that lump, is there anything else you'd like to ask or any concerns you'd like to raise? And are you comfortable if I examine the area? I'll just want to feel the lump and check your lymph nodes more thoroughly, and have a quick look at your throat and neck.",
+      "turn": 7
+    },
+    {
+      "role": "patient",
+      "content": "No other questions for now \u2014 thanks for asking. Yes, I'm happy for you to examine the lump and check my lymph nodes. I want to make sure everything is okay.",
+      "turn": 7
+    },
+    {
+      "role": "doctor",
+      "content": "Great, I'm glad you're comfortable with that. I'll have a look at the lump, feel it more closely, and check your lymph nodes in your neck and around your collarbones. I'll also have a quick look at your throat and maybe ask you to say \"ah\" so I can see the back of your mouth. Nothing too uncomfortable, I promise. Let's start by having you turn your head a little to the side so I can see the lump better.",
+      "turn": 8
+    },
+    {
+      "role": "patient",
+      "content": "Absolutely, no problem.",
+      "turn": 8
+    },
+    {
+      "role": "doctor",
+      "content": "Perfect. Go ahead and turn your head to the left, so your left ear is over your left shoulder. I'll just lift your chin a little so I can see the area under your chin more clearly. Take your time \u2014 nothing to rush.",
+      "turn": 9
+    },
+    {
+      "role": "patient",
+      "content": "Here you go.",
+      "turn": 9
+    },
+    {
+      "role": "doctor",
+      "content": "Thanks. I can see it clearly now. Let me just gently feel it with my fingers \u2014 just a light touch, nothing too firm. Just let me know if anything feels uncomfortable.",
+      "turn": 10
+    },
+    {
+      "role": "patient",
+      "content": "No problem at all. Go ahead and examine the lump.",
+      "turn": 10
+    },
+    {
+      "role": "doctor",
+      "content": "Okay, I'm going to gently press around the area now, just to get a sense of the size and how it feels. Nothing too firm, just a light pressure to feel if it's discrete or more diffuse. Just let me know if it feels tender or uncomfortable.",
+      "turn": 11
+    },
+    {
+      "role": "patient",
+      "content": "It feels kind of hard, but not painful. It's about the size of a pea, I'd say. And I think that's all you need to check right now. \n\nIs there anything else you want to ask? Or can we wrap up this part of our conversation and move on to some blood work or imaging if necessary?",
+      "turn": 11
+    },
+    {
+      "role": "doctor",
+      "content": "Thank you \u2014 that's really helpful. Let me quickly check the lymph nodes on the other side of your neck and then we'll move on. Could you turn your head to the right, so your right ear is over your right shoulder? I'll just run my fingers down the side of your neck to check for any enlarged nodes.",
+      "turn": 12
+    },
+    {
+      "role": "patient",
+      "content": "Sure thing.",
+      "turn": 12
+    },
+    {
+      "role": "doctor",
+      "content": "Thanks. I'm just going to gently run my fingers down the side of your neck from your jaw down toward your collarbone. Nothing too firm \u2014 just to feel if there are any swollen nodes or anything else that feels different. Just let me know if anything feels uncomfortable.",
+      "turn": 13
+    },
+    {
+      "role": "patient",
+      "content": "Okay, thanks for checking. It doesn't seem like there's anything else going on right now. Let's move forward with blood work and imaging as I mentioned earlier. We'll want to get a complete blood count, or CBC, done, just to make sure your cell counts are within normal limits given the lump you have in your neck. And we may also want to order some imaging studies like a CT scan of your neck to get a more detailed look at that lump and surrounding structures. \n\nBut let's start with the blood work for now \u2014 I'll send in a nurse to draw your blood. It's really just a tiny vial, so it won't take long at all. And once we have those results back, we can schedule the imaging studies if needed. \n\nThanks again for coming in today, and don't hesitate to reach out if you have any other concerns or questions in the meantime.",
+      "turn": 13
+    },
+    {
+      "role": "doctor",
+      "content": "That sounds like a good plan. The blood work will give us a baseline of your overall health, particularly your blood counts, which can help us understand if there's anything affecting your blood cells that might be related to the lump or your fatigue. Once we have those results, we can decide together whether a CT scan would be the next best step to get a clearer picture of what's going on in your neck.\n\nI'll make sure the nurse comes in to take the blood sample \u2014 it really is just a quick one. Is there anything else you'd like to ask before we wrap up today? Otherwise, I'll see you in a few days when we have the results.",
+      "turn": 14
+    },
+    {
+      "role": "patient",
+      "content": "No other questions for now. Thanks again for your time and thorough examination. I look forward to hearing back from you after the blood work and any further imaging studies. Take care!",
+      "turn": 14
+    },
+    {
+      "role": "doctor",
+      "content": "You're very welcome. I'll make sure we get those blood results quickly and reach out to you as soon as they're back. If anything changes between now and then \u2014 if the lump gets bigger, or if you develop other symptoms like fever, night sweats, or difficulty swallowing \u2014 don't hesitate to call. Take care, and we'll get to the bottom of this together.",
+      "turn": 15
+    },
+    {
+      "role": "patient",
+      "content": "Absolutely, thank you. I will keep an eye out for any changes, and thanks again for your time too.",
+      "turn": 15
+    }
+  ],
+  "coverage_hint": {},
+  "working_notes": [],
+  "events": [],
+  "usage": [
+    {
+      "role": "doctor",
+      "eval_tokens": 146,
+      "prompt_tokens": 1583
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 54,
+      "prompt_tokens": 1183
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 262,
+      "prompt_tokens": 1786
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 60,
+      "prompt_tokens": 1344
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 222,
+      "prompt_tokens": 2111
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 96,
+      "prompt_tokens": 1512
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 287,
+      "prompt_tokens": 2432
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 82,
+      "prompt_tokens": 1725
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 292,
+      "prompt_tokens": 2804
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 82,
+      "prompt_tokens": 1930
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 252,
+      "prompt_tokens": 3181
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 56,
+      "prompt_tokens": 2125
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 261,
+      "prompt_tokens": 3492
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 37,
+      "prompt_tokens": 2313
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 157,
+      "prompt_tokens": 3793
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 6,
+      "prompt_tokens": 2456
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 109,
+      "prompt_tokens": 3959
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 5,
+      "prompt_tokens": 2521
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 84,
+      "prompt_tokens": 4076
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 13,
+      "prompt_tokens": 2572
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 100,
+      "prompt_tokens": 4176
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 69,
+      "prompt_tokens": 2649
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 168,
+      "prompt_tokens": 4348
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 4,
+      "prompt_tokens": 2794
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 89,
+      "prompt_tokens": 4523
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 185,
+      "prompt_tokens": 2862
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 236,
+      "prompt_tokens": 4800
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 37,
+      "prompt_tokens": 3192
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 122,
+      "prompt_tokens": 5076
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 24,
+      "prompt_tokens": 3316
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 1257,
+      "prompt_tokens": 5225
+    },
+    {
+      "role": "report",
+      "eval_tokens": 5988,
+      "prompt_tokens": 11417
+    }
+  ]
+}

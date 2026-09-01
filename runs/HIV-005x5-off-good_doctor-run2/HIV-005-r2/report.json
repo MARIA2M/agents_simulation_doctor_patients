@@ -1,0 +1,352 @@
+{
+  "patient_id": "HIV-005",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "HIV-005",
+    "clinical_summary": "Patient with chronic HIV infection (6 years) presents with persistent low energy and frequent headaches for ~2 months. Recent viral load showed detectable level (340 copies/mL) after being undetectable 3 months ago. Patient has been missing 2-3 doses per week due to social activities, work stress, and 'drug holidays' when feeling well. Patient has supportive partner who can help with reminders. Patient expresses worry about long-term effects, resistance development, and emotional toll of living with HIV. Patient shows good understanding of treatment mechanism and is ready to get back on track with consistent medication.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "I've been feeling pretty run down lately and my energy levels are really low",
+            "turn": 1
+          },
+          {
+            "quote": "It's not like the usual busy days at work; this feels more persistent",
+            "turn": 1
+          },
+          {
+            "quote": "Even when I'm supposed to relax or unwind, it's tough to muster up any motivation",
+            "turn": 1
+          },
+          {
+            "quote": "detectable viral load can definitely contribute to symptoms like low energy and headaches",
+            "turn": 9
+          },
+          {
+            "quote": "I'm worried about the potential long-term effects of missing doses and drug holidays. Will that impact my body's ability to fight infections?",
+            "turn": 10
+          }
+        ],
+        "reasoning": "Patient describes significant impact on daily life with persistent low energy, difficulty with motivation, and frequent headaches. They connect these symptoms to their HIV status and recent virologic failure, expressing concern about long-term effects including impact on immune function. Symptoms are persistent and affecting quality of life.",
+        "score": 7.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "My usual diagnosis is chronic HIV infection. It's been part of my life for about 6 years now",
+            "turn": 2
+          },
+          {
+            "quote": "There might be days when it feels like everything is going okay, but that could change so quickly",
+            "turn": 5
+          },
+          {
+            "quote": "who knows how long I'll be living with HIV? It's a scary thought",
+            "turn": 6
+          },
+          {
+            "quote": "It's hard to accept when things don't go as planned",
+            "turn": 9
+          },
+          {
+            "quote": "trying to balance hope with realism",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient has lived with HIV for 6 years and recognizes it as a chronic condition. However, they express uncertainty about the future and worry about how long they'll be living with it. They recognize that things can change quickly, suggesting they don't have a fixed timeline in mind. They're trying to balance hope with realism, indicating uncertainty about the future course.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I'm definitely feeling like getting back on track with my medication is something I can control, and that's reassuring",
+            "turn": 8
+          },
+          {
+            "quote": "I know it's going to be challenging, but I'm ready to do what it takes to get things under control again",
+            "turn": 9
+          },
+          {
+            "quote": "I'm fortunate to have a supportive partner who understands my situation and is willing to help in any way he can",
+            "turn": 10
+          },
+          {
+            "quote": "I think this plan sounds doable",
+            "turn": 13
+          },
+          {
+            "quote": "I feel more equipped to manage my situation moving forward",
+            "turn": 15
+          }
+        ],
+        "reasoning": "Patient clearly believes they have control over getting back on track with their medication. They're willing to take action (reminders, new routines) and feel ready to do what it takes. They recognize the importance of their own actions in managing their health. They also have support from their partner. This shows active engagement and belief in their ability to influence outcomes.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "I understand my medicine is meant to help control the virus in my body so that it doesn't weaken my immune system further",
+            "turn": 3
+          },
+          {
+            "quote": "The Triumeq tablet I take once daily contains a combination of drugs that prevent HIV from replicating",
+            "turn": 3
+          },
+          {
+            "quote": "Ideally, this should maintain an undetectable viral load and keep my CD4 count up",
+            "turn": 3
+          },
+          {
+            "quote": "I worry if the treatment is still doing its job effectively",
+            "turn": 3
+          },
+          {
+            "quote": "detectable viral load can definitely contribute to symptoms like low energy and headaches",
+            "turn": 9
+          },
+          {
+            "quote": "with consistent treatment, there's a good chance you'll see improvement",
+            "turn": 13
+          }
+        ],
+        "reasoning": "Patient has a clear understanding of how their medication works and what it's supposed to achieve. They recognize that treatment effectiveness is linked to viral suppression and symptom management. They connect their current symptoms to treatment effectiveness and believe consistent treatment can lead to improvement. They trust the treatment's mechanism.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "I can't say for sure if these symptoms are directly related to my HIV",
+            "turn": 7
+          },
+          {
+            "quote": "The low energy levels have always been part and parcel of living with chronic illness",
+            "turn": 7
+          },
+          {
+            "quote": "detectable viral load can definitely contribute to symptoms like low energy and headaches",
+            "turn": 9
+          },
+          {
+            "quote": "I'm worried about the potential long-term effects of missing doses and drug holidays",
+            "turn": 10
+          }
+        ],
+        "reasoning": "Patient identifies low energy as part of living with chronic illness generally, not specifically HIV. They're uncertain about whether headaches are directly related to HIV. They recognize that symptoms can be related to their HIV status and treatment. They're actively tracking symptoms and trying to understand their relationship to their condition.",
+        "score": 5.0,
+        "confidence": 0.7
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "I'm worried if that could be contributing to how I feel",
+            "turn": 1
+          },
+          {
+            "quote": "There might be days when it feels like everything is going okay, but that could change so quickly",
+            "turn": 5
+          },
+          {
+            "quote": "who knows how long I'll be living with HIV? It's a scary thought",
+            "turn": 6
+          },
+          {
+            "quote": "I'm worried about the potential long-term effects of missing doses and drug holidays",
+            "turn": 10
+          },
+          {
+            "quote": "Can I develop resistance to these medications? It's all a bit scary",
+            "turn": 10
+          },
+          {
+            "quote": "trying to balance hope with realism",
+            "turn": 8
+          },
+          {
+            "quote": "I feel more hopeful after our conversation today",
+            "turn": 13
+          }
+        ],
+        "reasoning": "Patient expresses significant worry about multiple aspects: future duration of HIV, long-term effects of missed doses, resistance development, and the virus changing quickly. They describe feeling scared and acknowledge the emotional toll. However, they also express hope and readiness to take action. The worry is frequent and shapes their thinking about the future.",
+        "score": 7.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I understand my medicine is meant to help control the virus in my body so that it doesn't weaken my immune system further",
+            "turn": 3
+          },
+          {
+            "quote": "The Triumeq tablet I take once daily contains a combination of drugs that prevent HIV from replicating",
+            "turn": 3
+          },
+          {
+            "quote": "Ideally, this should maintain an undetectable viral load and keep my CD4 count up",
+            "turn": 3
+          },
+          {
+            "quote": "I can't say for sure if these symptoms are directly related to my HIV",
+            "turn": 7
+          },
+          {
+            "quote": "detectable viral load can definitely contribute to symptoms like low energy and headaches",
+            "turn": 9
+          },
+          {
+            "quote": "I'm worried about the potential long-term effects of missing doses and drug holidays",
+            "turn": 10
+          }
+        ],
+        "reasoning": "Patient has good understanding of their HIV treatment and what it's supposed to achieve. They understand the mechanism (preventing HIV replication, maintaining undetectable viral load, keeping CD4 up). They recognize the connection between missed doses and detectable viral load. However, they're uncertain about the specific causes of their current symptoms and find the situation 'overwhelming' at times. They're actively trying to understand what's happening.",
+        "score": 7.0,
+        "confidence": 0.7
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "I've been feeling pretty run down lately and my energy levels are really low",
+            "turn": 1
+          },
+          {
+            "quote": "It's not like the usual busy days at work; this feels more persistent",
+            "turn": 1
+          },
+          {
+            "quote": "Even when I'm supposed to relax or unwind, it's tough to muster up any motivation",
+            "turn": 1
+          },
+          {
+            "quote": "There are days when I can't help but worry about what this means for my future — who knows how long I'll be living with HIV? It's a scary thought",
+            "turn": 6
+          },
+          {
+            "quote": "sometimes, I feel really frustrated and angry that someone else's carelessness led to this diagnosis",
+            "turn": 6
+          },
+          {
+            "quote": "When I found out my viral load was detectable again, I felt a mix of emotions — disappointment, worry, and even a bit of denial",
+            "turn": 9
+          },
+          {
+            "quote": "It's all a bit scary",
+            "turn": 10
+          },
+          {
+            "quote": "I feel more hopeful after our conversation today",
+            "turn": 13
+          }
+        ],
+        "reasoning": "Patient experiences significant emotional impact - worry about the future, frustration and anger about how HIV was acquired, disappointment and denial when things don't go as planned. They describe feeling scared and acknowledge the emotional toll of living with HIV. However, they also show resilience and hope, and express feeling more hopeful after the consultation. The emotion is prominent and affects how they think about the future.",
+        "score": 7.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "I understand my medicine is meant to help control the virus in my body so that it doesn't weaken my immune system further",
+            "turn": 3
+          },
+          {
+            "quote": "I worry if the treatment is still doing its job effectively",
+            "turn": 3
+          },
+          {
+            "quote": "I need to stay disciplined about taking my medication — even during those drug holidays, I know deep down that it's not safe to let my guard down completely",
+            "turn": 5
+          },
+          {
+            "quote": "I'm worried about the potential long-term effects of missing doses and drug holidays",
+            "turn": 10
+          },
+          {
+            "quote": "I know it's important to focus on taking care of myself as best I can moving forward",
+            "turn": 10
+          },
+          {
+            "quote": "I think this plan sounds doable",
+            "turn": 13
+          },
+          {
+            "quote": "I feel more equipped to manage my situation moving forward",
+            "turn": 15
+          }
+        ],
+        "reasoning": "Patient clearly believes their medication is necessary for controlling HIV and maintaining their health. They recognize that missing doses can have negative consequences and that they need to stay disciplined. They're actively planning to get back on track with consistent medication. They understand the importance of their medication for their health and are committed to taking it.",
+        "score": 4.5,
+        "confidence": 0.8
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "I worry if the treatment is still doing its job effectively",
+            "turn": 3
+          },
+          {
+            "quote": "I'm worried about the potential long-term effects of missing doses and drug holidays",
+            "turn": 10
+          },
+          {
+            "quote": "Will that impact my body's ability to fight infections?",
+            "turn": 10
+          },
+          {
+            "quote": "Can I develop resistance to these medications?",
+            "turn": 10
+          },
+          {
+            "quote": "It's all a bit scary",
+            "turn": 10
+          },
+          {
+            "quote": "I feel more hopeful after our conversation today",
+            "turn": 13
+          }
+        ],
+        "reasoning": "Patient has specific concerns about their medication: effectiveness when doses are missed, long-term effects, impact on immune function, and risk of resistance. These concerns have led them to think about getting back on track with their medication. They express worry about these issues and find the situation 'scary.' However, they also show readiness to address these concerns through consistent medication.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [],
+        "reasoning": "Patient expresses concern about long-term effects of their medication issues, but this is specific to their own medication and the consequences of not taking it properly. They don't express a general belief that medicines as a class are harmful. Their concerns are about the specific medication they're taking and the consequences of not taking it correctly, not about medicines in general.",
+        "score": null,
+        "confidence": 0.5
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "Patient never expressed any belief about whether doctors prescribe too readily or about medicines as a class in general. Their concerns were specific to their own medication and its effectiveness.",
+        "score": null,
+        "confidence": 0.5
+      }
+    },
+    "causes": [
+      "someone else's carelessness"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "sometimes, I feel really frustrated and angry that someone else's carelessness led to this diagnosis",
+        "turn": 6
+      }
+    ]
+  }
+}

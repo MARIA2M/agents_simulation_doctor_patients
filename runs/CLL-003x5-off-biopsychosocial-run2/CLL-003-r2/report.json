@@ -1,0 +1,221 @@
+{
+  "patient_id": "CLL-003",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "CLL-003",
+    "clinical_summary": "Patient diagnosed with CLL a few months ago, currently on monitoring. Presents with new lump in neck (noticed 1 month ago by wife) and fatigue (few weeks). Fatigue affecting daily life - less energy for housework and family time. High blood pressure managed with medication. Family history includes father with CLL. Patient is worried but trying to stay positive, wants clarity on whether lump and fatigue are related to CLL.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "I have less energy than usual to do things around the house and spend time with my family. It's been impacting my day-to-day life more than anything else.",
+            "turn": 3
+          },
+          {
+            "quote": "The fatigue is really impacting my ability to manage my work and daily routine. It's been harder for me to get through the day without feeling exhausted, which has made it difficult to keep up with my usual tasks and responsibilities.",
+            "turn": 11
+          },
+          {
+            "quote": "I'm trying to make adjustments where I can—prioritizing certain tasks, taking breaks more often—but there are still times when I feel like I'm not able to give things my full attention.",
+            "turn": 11
+          }
+        ],
+        "reasoning": "Patient has lost some ability to manage work and daily routine. They're having to make adjustments (prioritizing, taking breaks) but still can't give full attention. This is affecting their roles - they're not able to do everything they used to.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "I understand that CLL is a chronic illness that may require treatment at some point, but I'm also comfortable with the idea of monitoring it closely and waiting to see how things progress.",
+            "turn": 10
+          },
+          {
+            "quote": "The thought of undergoing treatment right away feels overwhelming, to be honest.",
+            "turn": 10
+          }
+        ],
+        "reasoning": "Patient acknowledges CLL is chronic but is comfortable with monitoring and waiting. They don't want treatment right away, suggesting they're not planning for it to end soon but are not fully committed to it continuing either.",
+        "score": 5.0,
+        "confidence": 0.6
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "If more were known about what was happening with my body, there might be things I could do differently in terms of lifestyle choices or stress management to support my health better.",
+            "turn": 13
+          },
+          {
+            "quote": "I'm definitely open to exploring further if it becomes necessary.",
+            "turn": 13
+          }
+        ],
+        "reasoning": "Patient acknowledges that lifestyle choices and stress management could help if they knew more. They're open to exploring further, showing some belief in their own actions, but it's conditional on having more information.",
+        "score": 4.0,
+        "confidence": 0.6
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "I trust your expertise and judgment in determining what might be best for me.",
+            "turn": 10
+          },
+          {
+            "quote": "I know there are many different options available now, so I'm willing to explore all possibilities and make decisions together with you as more information becomes available.",
+            "turn": 10
+          }
+        ],
+        "reasoning": "Patient trusts the doctor's expertise and judgment. They're willing to explore options and make decisions together, showing some belief in treatment effectiveness, but they're not attributing their current state to treatment working.",
+        "score": 4.0,
+        "confidence": 0.6
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "I was diagnosed with CLL a few months ago",
+            "turn": 15
+          },
+          {
+            "quote": "I understand that CLL is a chronic illness",
+            "turn": 10
+          }
+        ],
+        "reasoning": "Patient has a clear identity - CLL. They understand it's a chronic illness. They have some symptoms (fatigue, lump) that are affecting them, though they're unsure if the lump is related to CLL.",
+        "score": 5.0,
+        "confidence": 0.6
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "I've been feeling quite worried and stressed about everything. The lump in my neck, the fatigue, and even the possibility that there could be something more serious going on—I'm struggling with a lot of uncertainty and anxiety.",
+            "turn": 8
+          },
+          {
+            "quote": "I know you said I have a very early stage of CLL, which gives me some reassurance. Still, it's been difficult dealing with all these unknowns.",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient is worried and stressed about everything. They're struggling with uncertainty and anxiety, dealing with unknowns. This shows frequent worry that shapes their experience.",
+        "score": 7.0,
+        "confidence": 0.7
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "The hematologist explained my diagnosis of CLL during a routine blood test I had a few months back. He said that it's very common and often doesn't cause any symptoms in the early stages.",
+            "turn": 9
+          },
+          {
+            "quote": "I think there were some things I didn't fully understand at first—the specifics about CLL, how it progresses over time, what treatments might look like if needed.",
+            "turn": 9
+          },
+          {
+            "quote": "But the doctor took the time to explain all those details to me and answer my questions as best he could, which helped a lot with putting things into perspective.",
+            "turn": 9
+          },
+          {
+            "quote": "I'm not sure if the lump and the fatigue are directly related to my CLL, or if they could be separate issues.",
+            "turn": 12
+          },
+          {
+            "quote": "Overall, I'm still trying to make sense of things and get a better understanding of what's happening with my body right now.",
+            "turn": 12
+          }
+        ],
+        "reasoning": "Patient has some understanding of CLL - it's common, often asymptomatic in early stages. They didn't fully understand at first but the doctor explained. However, they're still unsure if the lump and fatigue are related to CLL and are still trying to make sense of things.",
+        "score": 5.0,
+        "confidence": 0.6
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "I've been feeling quite worried and stressed about everything.",
+            "turn": 8
+          },
+          {
+            "quote": "I'm struggling with a lot of uncertainty and anxiety.",
+            "turn": 8
+          },
+          {
+            "quote": "It's been difficult dealing with all these unknowns.",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient is worried and stressed. They're struggling with uncertainty and anxiety, dealing with unknowns. This shows prominent emotion affecting what they do.",
+        "score": 7.0,
+        "confidence": 0.7
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "I've been taking my blood pressure medication as prescribed, without any missed doses or issues.",
+            "turn": 7
+          },
+          {
+            "quote": "I trust modern medicine and believe these medications are important for managing health conditions like high blood pressure.",
+            "turn": 7
+          }
+        ],
+        "reasoning": "Patient takes medication as prescribed without missed doses. They trust modern medicine and believe medications are important for managing health conditions, showing they see the medication as necessary.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "However, I must admit that recently, after experiencing this fatigue and the lump in my neck, I have had some worries about whether the medication could be contributing to these symptoms.",
+            "turn": 7
+          }
+        ],
+        "reasoning": "Patient has had some worries about whether the medication could be contributing to their symptoms. This is a specific concern about their medication, but they haven't changed their behavior based on this concern.",
+        "score": 3.0,
+        "confidence": 0.6
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [],
+        "reasoning": "This dimension was never explored in the consultation.",
+        "score": null,
+        "confidence": 0.0
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "This dimension was never explored in the consultation.",
+        "score": null,
+        "confidence": 0.0
+      }
+    },
+    "causes": [
+      "family history (father had CLL)",
+      "overall health and well-being"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "My father had CLL, which I think is something like chronic leukemia.",
+        "turn": 6
+      },
+      {
+        "quote": "It's hard to say for sure if lifestyle factors may have contributed to the development of CLL or the lump and fatigue I'm experiencing now.",
+        "turn": 13
+      },
+      {
+        "quote": "But at the same time, it makes sense that overall health and well-being can impact how our bodies handle different challenges.",
+        "turn": 13
+      }
+    ]
+  }
+}

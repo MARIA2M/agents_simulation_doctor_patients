@@ -1,0 +1,271 @@
+{
+  "patient_id": "CLL-001",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "CLL-001",
+    "clinical_summary": "The patient reports significant impact on daily functioning, with days where they can barely get out of bed. They experience severe headaches since starting medication and question whether treatment is worth it. They describe feeling overwhelmed, with life 'on hold' and unable to take charge of their situation. They take medication for symptom management but have concerns about side effects and long-term effects. They express distress and fear about the unknowns of their condition.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "some days I can barely get out of bed. It feels like this disease has taken over everything — my work, my time with the kids, everything",
+            "turn": 1
+          },
+          {
+            "quote": "sometimes I feel like my life is on hold because of this illness",
+            "turn": 3
+          },
+          {
+            "quote": "It's been affecting me for quite some time now",
+            "turn": 3
+          }
+        ],
+        "reasoning": "The patient describes substantial impact on daily functioning - can barely get out of bed, work and family time affected, life 'on hold'. This represents a major role being lost or substantially reduced.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "while I understand that it may not need treatment for years or even ever, it still feels like a permanent roadblock in my life",
+            "turn": 3
+          },
+          {
+            "quote": "if someone told me they'd have to live with this for the rest of their lives, I think that would be pretty hard to accept",
+            "turn": 3
+          }
+        ],
+        "reasoning": "The patient acknowledges uncertainty but describes the illness as a 'permanent roadblock' and finds the idea of living with it forever 'hard to accept', indicating they are planning around it continuing.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "Sometimes I feel like I have no say in any of it",
+            "turn": 1
+          },
+          {
+            "quote": "When I first learned about this condition, it felt like something of a shock. You're right that there was an element of feeling like I was being guided along, rather than taking charge myself",
+            "turn": 5
+          },
+          {
+            "quote": "But over time, I think I've settled into a rhythm where I'm trying to take as much control as possible while also acknowledging the limits of what I can do",
+            "turn": 5
+          }
+        ],
+        "reasoning": "Initially felt guided rather than in charge, now trying to take as much control as possible while acknowledging limits. This represents a gradual movement toward greater self-efficacy with ongoing uncertainty.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "I know you said the medication should help",
+            "turn": 1
+          },
+          {
+            "quote": "my main reason for taking it is to manage the symptoms and give myself a fighting chance at living as normally as possible",
+            "turn": 4
+          },
+          {
+            "quote": "sometimes I wonder if the treatment is actually making things worse",
+            "turn": 2
+          }
+        ],
+        "reasoning": "They see treatment as potentially helpful for symptom management but are uncertain about its efficacy, questioning whether it might be making things worse.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "this disease has taken over everything",
+            "turn": 1
+          },
+          {
+            "quote": "sometimes I feel like my life is on hold because of this illness",
+            "turn": 3
+          },
+          {
+            "quote": "It's been affecting me for quite some time now",
+            "turn": 3
+          },
+          {
+            "quote": "The headaches come and go, but when I get them, they're pretty severe. They can last for hours or even a whole day",
+            "turn": 2
+          }
+        ],
+        "reasoning": "They describe the illness as having taken over their life and affecting them significantly. The severe headaches are a specific symptom they experience daily.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "I keep wondering if it's really worth it",
+            "turn": 1
+          },
+          {
+            "quote": "Emotionally, it's mostly distress and fear that come up when I think about living with this condition",
+            "turn": 4
+          },
+          {
+            "quote": "there are so many unknowns — we don't really know what will happen or if anything can help in the long run",
+            "turn": 4
+          },
+          {
+            "quote": "It feels like I'm walking a tightrope, trying to stay on top of everything while also dealing with this illness",
+            "turn": 4
+          }
+        ],
+        "reasoning": "They express distress, fear, and worry about unknowns. The tightrope metaphor shows ongoing concern that shapes their daily experience.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I'd say I'm still piecing it all together",
+            "turn": 6
+          },
+          {
+            "quote": "There are moments where I think I have a decent grasp on things — when I can explain how the condition affects me, or understand why certain treatments might be beneficial",
+            "turn": 6
+          },
+          {
+            "quote": "But then there are other times when it feels like there's so much more to learn and understand",
+            "turn": 6
+          },
+          {
+            "quote": "I think that's what makes this illness so difficult: even though I'm trying to take charge of my situation as best I can, there are still parts where I feel like I'm being guided along",
+            "turn": 6
+          }
+        ],
+        "reasoning": "They acknowledge both understanding and uncertainty. They can explain how the condition affects them and why treatments might be beneficial, but also recognize gaps in their understanding.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "It feels like this disease has taken over everything",
+            "turn": 1
+          },
+          {
+            "quote": "Emotionally, it's mostly distress and fear that come up when I think about living with this condition",
+            "turn": 4
+          },
+          {
+            "quote": "It feels like I'm walking a tightrope, trying to stay on top of everything while also dealing with this illness",
+            "turn": 4
+          },
+          {
+            "quote": "sometimes I feel like I have no say in any of it",
+            "turn": 1
+          }
+        ],
+        "reasoning": "They express distress, fear, and feeling overwhelmed. The tightrope metaphor shows emotional impact on their daily experience and ability to function.",
+        "score": 8.0,
+        "confidence": 0.9
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "my main reason for taking it is to manage the symptoms and give myself a fighting chance at living as normally as possible",
+            "turn": 4
+          },
+          {
+            "quote": "I know you said the medication should help",
+            "turn": 1
+          }
+        ],
+        "reasoning": "They take medication for symptom management and to improve their quality of life, viewing it as potentially beneficial.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "I've been getting these terrible headaches since I started",
+            "turn": 1
+          },
+          {
+            "quote": "I keep wondering if it's really worth it",
+            "turn": 1
+          },
+          {
+            "quote": "sometimes I wonder if the treatment is actually making things worse",
+            "turn": 2
+          },
+          {
+            "quote": "I have these nagging worries about whether it's actually making things worse, or if there might be side effects that haven't come up yet but could in the future",
+            "turn": 4
+          },
+          {
+            "quote": "It feels like I'm walking a tightrope, trying to stay on top of everything while also dealing with this illness",
+            "turn": 4
+          }
+        ],
+        "reasoning": "They have specific concerns about side effects (headaches), whether treatment is making things worse, and future unknown side effects. These concerns recur unprompted.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "I sometimes wonder if doctors are a bit quick to prescribe medication",
+            "turn": 5
+          },
+          {
+            "quote": "it's more that I worry about how much we really understand about these treatments, and whether the short-term gains might end up causing long-term issues",
+            "turn": 5
+          }
+        ],
+        "reasoning": "They express general concern about the long-term effects of treatments and whether doctors prescribe too readily, worrying about short-term gains causing long-term harm.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [
+          {
+            "quote": "I sometimes wonder if doctors are a bit quick to prescribe medication",
+            "turn": 5
+          },
+          {
+            "quote": "it's more that I worry about how much we really understand about these treatments",
+            "turn": 5
+          }
+        ],
+        "reasoning": "They express general concern about doctors being 'a bit quick to prescribe medication' and worry about the understanding of treatments.",
+        "score": 4.0,
+        "confidence": 0.7
+      }
+    },
+    "causes": [
+      "genetics",
+      "family members with similar health issues"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "I believe genetics might play a role since I know there are other family members with similar health issues",
+        "turn": 3
+      }
+    ]
+  }
+}

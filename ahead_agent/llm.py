@@ -16,6 +16,15 @@ MAX_ATTEMPTS = 3   # tries per call
 # role → which model answers
 MODEL_FOR_ROLE = {"doctor": "doctor", "patient": "patient", "report": "doctor"}
 
+EMPTY_REPLY = "empty reply"
+
+# Floor the temperature is raised to after an empty reply, per retry. A
+# transport failure is the server not answering and the same request is the one
+# to repeat; an empty reply is the model answering with nothing, and at
+# temperature 0 the next draw is the same nothing (N10). Only raises: a role
+# already sampling above the floor is left alone.
+RESAMPLE_FLOOR = (0.3, 0.6)
+
 
 class TransportError(RuntimeError):
     """The server never gave a usable answer. Says nothing about the model."""
@@ -34,10 +43,13 @@ def chat(
 ) -> Dict[str, Any]:
     """One /api/chat call. Returns the reply, which may carry tool_calls."""
     url = config["server"]["ollama_url"].rstrip("/") + "/api/chat"
-    body = _request_body(config, role, messages, tools)
     timeout = config["server"]["request_timeout"]
+    empties = 0   # empty replies so far, which is what moves the sampling
 
     for attempt in range(1, MAX_ATTEMPTS + 1):
+        # Rebuilt per attempt: the body is not constant once an empty reply has
+        # to come back different.
+        body = _request_body(config, role, messages, tools, empties)
         response, failure = _try_once(url, body, timeout)
 
         if failure is None:
@@ -46,9 +58,16 @@ def chat(
                               "prompt_tokens": response.get("prompt_eval_count")})
             return response["message"]
 
+        if failure == EMPTY_REPLY:
+            empties += 1
+
         if events is not None:
-            events.append({"event": "llm_retry", "role": role,
-                           "attempt": attempt, "failure": failure})
+            event = {"event": "llm_retry", "role": role,
+                     "attempt": attempt, "failure": failure}
+            resampled = _resampled_temperature(config, role, empties)
+            if resampled is not None:
+                event["retry_temperature"] = resampled
+            events.append(event)
         if attempt < MAX_ATTEMPTS:
             time.sleep(2 * attempt)
 
@@ -70,17 +89,35 @@ def sampling_options(config: Dict[str, Any], role: str) -> Dict[str, Any]:
     return options
 
 
+def _resampled_temperature(config: Dict[str, Any], role: str, empties: int) -> Optional[float]:
+    """The temperature the next attempt needs, or None when it needs no change."""
+    if not empties:
+        return None
+    floor = RESAMPLE_FLOOR[min(empties, len(RESAMPLE_FLOOR)) - 1]
+    base = config["sampling"][role + "_temperature"]
+    return floor if floor > base else None
+
+
 def _request_body(
     config: Dict[str, Any],
     role: str,
     messages: List[Dict[str, Any]],
     tools: Optional[List[Dict[str, Any]]],
+    empties: int = 0,
 ) -> Dict[str, Any]:
+    options = sampling_options(config, role)
+    resampled = _resampled_temperature(config, role, empties)
+    if resampled is not None:
+        options["temperature"] = resampled
+    # A pinned seed makes the draw identical whatever the temperature, so it
+    # moves too. Only on a retry: attempt 1 is the seed the profile declared.
+    if empties and options.get("seed") is not None:
+        options["seed"] = options["seed"] + empties
     body = {
         "model": config["models"][MODEL_FOR_ROLE[role]],
         "messages": messages,
         "stream": False,
-        "options": sampling_options(config, role),
+        "options": options,
         "keep_alive": config["server"]["keep_alive"],   # §6.1
     }
     if tools:
@@ -101,7 +138,7 @@ def _try_once(url: str, body: Dict[str, Any], timeout: float):
 
     if reply.get("tool_calls") or (reply.get("content") or "").strip():
         return response, None
-    return None, "empty reply"
+    return None, EMPTY_REPLY
 
 
 # the seam test_llm.py monkeypatches

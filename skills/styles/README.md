@@ -84,9 +84,13 @@ read:
 
 ### Next: the same pair across the corpus
 
-Not launched. Ten patients × 2 repeats × 2 arms = 40 consultations, same shape
-as `e4-1` per arm. **Commit first** — `s51` ran with `dirty: true` and is
-therefore untraceable, which is acceptable for a dry run and not for this.
+`s52-nb-1` and `s52-bps-1` **exist** as of 2026-09-01, and this section said they
+were not launched until then. Neither has been through `cover.py`, so gates A–C
+are still unread.
+
+Ten patients × 2 repeats × 2 arms = 40 consultations, same shape as `e4-1` per
+arm. **Commit first** — `s51` ran with `dirty: true` and is therefore
+untraceable, which is acceptable for a dry run and not for this.
 
 ```bash
 ./venv-hpc/bin/python run_batch.py --profile style-narrowly_biomedical --repeats 2 --run-id s52-nb-1
@@ -106,6 +110,36 @@ existing transcripts and `batch.json`:
 Only if A–D hold does patient behaviour get looked at, and only after that
 NA and MAE. A style that fails D has changed the doctor's stopping rule rather
 than its questioning, and every number downstream inherits that.
+
+### Gate D has since failed, and where
+
+Read on 2026-09-01 over the eight demo batches — CLL-003 and HIV-005, four arms
+each, five repeats. Of 40 consultations, **5 ran out on `max_turns` and 2 fell
+over**, and they are not spread evenly:
+
+| arm | turn_cap | failed | of 10 |
+|---|---|---|---|
+| off + good_doctor | 0 | 0 | 0 |
+| off + biopsychosocial | 0 | 0 | 0 |
+| off + narrowly_biomedical | 2 | 1 | 3 |
+| show + good_doctor | 3 | 1 | 4 |
+
+**Every incident is in the two arms that constrain the doctor.** That is what
+this gate was written to catch, and it caught it on the first batch large enough
+to show it. `narrowly_biomedical` is one half of the pair this file exists to
+compare, so its numbers downstream carry the confound the gate names.
+
+Two readings that follow from it:
+
+- **`show` is not a style and fails the gate anyway.** The code is correct —
+  `test_the_doctor_can_always_close_with_dimensions_open` verifies that the
+  coverage note compels nothing — and the behaviour changes regardless. A correct
+  mechanism and an effect on behaviour are different claims, and only the first
+  one has a test.
+- **The `turn_cap` runs are not relaunched.** They are the result. Removing them
+  would delete from the data exactly the difference between arms that gate D was
+  put there to surface. Only the two that fell get rerun, because they left
+  nothing to read.
 
 ## The bug that was not copied
 

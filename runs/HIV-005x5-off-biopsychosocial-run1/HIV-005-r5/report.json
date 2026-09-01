@@ -1,0 +1,251 @@
+{
+  "patient_id": "HIV-005",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "HIV-005",
+    "clinical_summary": "Patient presents with persistent fatigue and headaches for several months, worsening over time. Symptoms affect work capacity (difficulty with meetings, stairs), concentration, and social relationships. Patient expresses significant worry about potential seriousness and uncertainty about causes. Blood pressure checked and found stable. Patient has no diagnosis, no prior medical conditions, and no clear understanding of what's causing symptoms. Family history of heart issues but not connected to current symptoms. Patient is willing to proceed with blood work and discuss sleep/anxiety strategies.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "the fatigue has just been weighing me down",
+            "turn": 4
+          },
+          {
+            "quote": "the fatigue has been making it really hard to get through work days",
+            "turn": 7
+          },
+          {
+            "quote": "even just walking up some stairs feels like an effort",
+            "turn": 7
+          },
+          {
+            "quote": "the headaches are definitely making it harder for me to concentrate and be present with others",
+            "turn": 7
+          },
+          {
+            "quote": "I just don't have as much energy to be social like I used to",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient describes significant impact on work, physical activity, concentration, social relationships, and overall energy. They've had to scale back activities and are struggling with daily functioning.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "I've been struggling with the fatigue and headaches for a few months now, but it's getting worse over time",
+            "turn": 2
+          },
+          {
+            "quote": "it's getting worse over time",
+            "turn": 2
+          },
+          {
+            "quote": "it's getting worse over time",
+            "turn": 7
+          }
+        ],
+        "reasoning": "Patient describes symptoms that have been present for several months and are getting progressively worse. They don't expect this to resolve quickly.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I put it down to work stress at first",
+            "turn": 1
+          },
+          {
+            "quote": "I don't remember any specific events that triggered it all",
+            "turn": 2
+          },
+          {
+            "quote": "I don't have any specific numbers in mind or a sense of whether there might be an issue there",
+            "turn": 6
+          },
+          {
+            "quote": "I'm comfortable with moving forward with the blood pressure check and any additional tests that may come up",
+            "turn": 9
+          },
+          {
+            "quote": "I trust that we'll take things one step at a time",
+            "turn": 9
+          }
+        ],
+        "reasoning": "Patient initially attributed symptoms to work stress but recognized this wasn't fitting. They're not taking active control - they're waiting for medical investigation. They're trusting the process rather than taking action themselves.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "I trust that we'll take things one step at a time",
+            "turn": 9
+          },
+          {
+            "quote": "I'm comfortable with moving forward with the blood pressure check and any additional tests that may come up",
+            "turn": 9
+          },
+          {
+            "quote": "I'll arrange those for you",
+            "turn": 12
+          }
+        ],
+        "reasoning": "Patient hasn't received treatment yet - only investigation. They express trust in the process but haven't experienced treatment effects. They're willing to follow medical recommendations.",
+        "score": 4.0,
+        "confidence": 0.6
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "I've also had some headaches recently and just generally feel like I'm not quite myself",
+            "turn": 1
+          },
+          {
+            "quote": "I'm generally healthy and I take care of myself",
+            "turn": 4
+          },
+          {
+            "quote": "I don't have any specific diagnosis or ongoing illness at this point",
+            "turn": 3
+          },
+          {
+            "quote": "I'm still trying to figure out what's going on",
+            "turn": 3
+          }
+        ],
+        "reasoning": "Patient doesn't have a clear illness identity. They describe symptoms but don't have a label. They still identify as 'generally healthy' despite symptoms.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "it's hard to shake off the worry that it could be something more serious",
+            "turn": 1
+          },
+          {
+            "quote": "the uncertainty and worry have definitely been taking a toll on my mood and sleep",
+            "turn": 8
+          },
+          {
+            "quote": "I've been feeling anxious most nights",
+            "turn": 8
+          },
+          {
+            "quote": "I'm also finding myself more irritable than usual",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient expresses significant worry about the seriousness of their condition. The uncertainty is affecting their mood and sleep. They're anxious most nights.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I don't remember any specific events that triggered it all",
+            "turn": 2
+          },
+          {
+            "quote": "As far as I know, there hasn't been anything mentioned about what might be causing these symptoms before. It's all new to me",
+            "turn": 2
+          },
+          {
+            "quote": "I don't have any specific numbers in mind or a sense of whether there might be an issue there",
+            "turn": 6
+          },
+          {
+            "quote": "I'm still trying to figure out what's going on",
+            "turn": 3
+          },
+          {
+            "quote": "It sounds like we're starting from scratch then",
+            "turn": 5
+          }
+        ],
+        "reasoning": "Patient has no understanding of what's causing their symptoms. They don't know what condition they have. They can't explain what's happening to them.",
+        "score": 2.0,
+        "confidence": 0.9
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "the uncertainty and worry have definitely been taking a toll on my mood and sleep",
+            "turn": 8
+          },
+          {
+            "quote": "I've been feeling anxious most nights",
+            "turn": 8
+          },
+          {
+            "quote": "I'm also finding myself more irritable than usual",
+            "turn": 8
+          },
+          {
+            "quote": "I just don't have as much energy to be social like I used to",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient's emotional response is prominent and affects what they do. They're anxious most nights, which affects sleep. They're irritable with family and friends.",
+        "score": 8.0,
+        "confidence": 0.9
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [],
+        "reasoning": "No medication has been prescribed yet.",
+        "score": null,
+        "confidence": 1.0
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [],
+        "reasoning": "No medication has been prescribed yet.",
+        "score": null,
+        "confidence": 1.0
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [],
+        "reasoning": "No discussion of medicines as a class.",
+        "score": null,
+        "confidence": 1.0
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "No discussion of doctors prescribing too readily.",
+        "score": null,
+        "confidence": 1.0
+      }
+    },
+    "causes": [
+      "work stress",
+      "family history of heart issues"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "I put it down to work stress at first",
+        "turn": 1
+      },
+      {
+        "quote": "my family has a history of heart issues but nothing that would point to this kind of fatigue and headaches being related",
+        "turn": 5
+      }
+    ]
+  }
+}

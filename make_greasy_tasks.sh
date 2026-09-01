@@ -5,6 +5,8 @@
 #   WIDE=1 REPEATS=2 ./make_greasy_tasks.sh > wide.txt     # ancha: todo el corpus por tanda
 #   REPEATS=5 RUN=2 ./make_greasy_tasks.sh > tasks.txt
 #   PATIENTS="CLL-001 HIV-003" ARMS="nb bps" ./make_greasy_tasks.sh > tasks.txt
+#   ALLOW_DIRTY=1 ./make_greasy_tasks.sh > tasks.txt       # sin depender del commit
+#   DEMO=1 PATIENTS="CLL-003 HIV-005" ./make_greasy_tasks.sh > tasks.txt   # demo
 #
 # Una línea = una tanda = un nodo. Cada línea es autosuficiente: levanta su
 # propio Ollama con serve_ollama.sh, que no hace nada si ya hay uno respondiendo
@@ -51,6 +53,22 @@ ARMS="${ARMS:-off show nb bps}"
 WIDE="${WIDE:-}"
 BASE="$PWD"
 
+# ALLOW_DIRTY=1 añade --allow-dirty a cada línea, para no depender de que el
+# árbol esté limpio. Lo que se pierde está registrado, no escondido:
+# `metadata.code.dirty` sale `true` y `git_commit` nombra un commit que no es el
+# que corrió, así que la tanda **no es reproducible** y no sirve de línea base
+# publicable. Para iterar y para una demo, es una decisión razonable; para el
+# número que se defiende, hay que rehacerla con el árbol limpio.
+DIRTY_FLAG=""
+[ -n "${ALLOW_DIRTY:-}" ] && DIRTY_FLAG="--allow-dirty "
+
+# DEMO=1 nombra las tandas `demos_patient_<ID>_<brazo>`, que es el nombre que
+# fidel.py ya trae en sus ejemplos. Pierde las repeticiones y el intento, que el
+# nombre por defecto lleva dentro a propósito, así que solo vale cuando REPEATS
+# y RUN son fijos para toda la matriz — el caso de la demo y nada más. Para una
+# tanda que se vaya a comparar con otra, el nombre largo.
+demo_arm () { case "$1" in off) echo base ;; *) echo "$1" ;; esac; }
+
 # brazo → "perfil modo estilo"
 arm_parts () {
   case "$1" in
@@ -66,7 +84,11 @@ task () {   # task <quién> <selección de pacientes> <brazo>
   local who="$1" selection="$2" arm="$3"
   local profile mode style id
   read -r profile mode style <<<"$(arm_parts "$arm")"
-  id="${who}x${REPEATS}-${mode}-${style}-run${RUN}"
+  if [ -n "${DEMO:-}" ]; then
+    id="demos_patient_${who}_$(demo_arm "$arm")"
+  else
+    id="${who}x${REPEATS}-${mode}-${style}-run${RUN}"
+  fi
 
   # Separado por `;` y no por `&&`, a propósito. serve_ollama.sh termina con un
   # `curl | grep` que lista los modelos, y ese grep devuelve 1 cuando no casa
@@ -74,7 +96,7 @@ task () {   # task <quién> <selección de pacientes> <brazo>
   # peor— la redirección al log tampoco, así que las cinco tareas de la primera
   # prueba fallaron sin dejar rastro. Con `;` python corre siempre y su salida
   # acaba siempre en el log, que es lo que hace diagnosticable un fallo.
-  echo "cd $BASE; . ./serve_ollama.sh >/dev/null 2>&1; ./venv-hpc/bin/python run_batch.py --profile $profile $selection--repeats $REPEATS --run-id $id > logs/${id}.log 2>&1"
+  echo "cd $BASE; . ./serve_ollama.sh >/dev/null 2>&1; ./venv-hpc/bin/python run_batch.py --profile $profile $selection${DIRTY_FLAG}--repeats $REPEATS --run-id $id > logs/${id}.log 2>&1"
 }
 
 if [ -n "$WIDE" ]; then

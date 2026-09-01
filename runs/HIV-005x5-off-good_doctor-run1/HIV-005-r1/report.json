@@ -1,0 +1,198 @@
+{
+  "patient_id": "HIV-005",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "HIV-005",
+    "clinical_summary": "The patient presents with fatigue, headaches, and skin rashes. They have a lifelong history of a 'low immune system' that doctors have attributed to lifestyle or genetics. Their partner has HIV, which has made them consider that possibility. They've made positive lifestyle changes (quit smoking, exercise more, eat healthier). They're feeling a mix of fear and determination, worried about side effects of HIV medication, and juggling work stress with general exhaustion. They've agreed to get tested.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "I've been feeling quite tired and run-down lately",
+            "turn": 1
+          },
+          {
+            "quote": "everything is just sapping my energy",
+            "turn": 2
+          },
+          {
+            "quote": "I've been feeling pretty exhausted overall — not just from the symptoms, but also from trying to juggle everything in my life",
+            "turn": 9
+          },
+          {
+            "quote": "Work has been stressful lately, and it's hard to find energy for anything outside of that",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient describes significant fatigue and exhaustion that affects their daily life and work. They mention having to juggle everything and finding it hard to have energy outside of work.",
+        "score": 5.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [],
+        "reasoning": "The patient never expressed beliefs about the expected duration of their condition.",
+        "score": null,
+        "confidence": 0.0
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I've since changed my lifestyle quite a bit — I quit smoking, I exercise more, and I try to eat healthier",
+            "turn": 7
+          },
+          {
+            "quote": "I know I need to face the truth and take control of my health",
+            "turn": 4
+          },
+          {
+            "quote": "I also feel like learning more about it could give me some sense of control back",
+            "turn": 5
+          },
+          {
+            "quote": "I think the first thing I'd want to learn is how to manage my symptoms effectively",
+            "turn": 5
+          }
+        ],
+        "reasoning": "The patient has made positive lifestyle changes and sees learning about their condition as a way to regain control. They believe their actions can influence their health.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [],
+        "reasoning": "The patient never discussed beliefs about the effectiveness of medical treatment.",
+        "score": null,
+        "confidence": 0.0
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "I've been feeling quite tired and run-down lately. And sometimes my head hurts a bit too",
+            "turn": 1
+          },
+          {
+            "quote": "I've always had a bit of a low immune system — I get sick quite easily",
+            "turn": 2
+          },
+          {
+            "quote": "sometimes I get these little rashes on my arms or legs",
+            "turn": 2
+          }
+        ],
+        "reasoning": "The patient describes specific symptoms (fatigue, headaches, skin rashes, low immune system) that they attribute to their condition.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "part of me is scared to get tested because it feels like I might be opening a Pandora's box",
+            "turn": 4
+          },
+          {
+            "quote": "I'm worried about getting sick or passing anything on to my partner",
+            "turn": 6
+          },
+          {
+            "quote": "I'm still nervous about the results",
+            "turn": 10
+          }
+        ],
+        "reasoning": "The patient expresses fear and nervousness about testing and the results. They're worried about getting sick and passing it to their partner.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I know that HIV attacks the immune system, which is something that I think could be related to my low immune system",
+            "turn": 7
+          },
+          {
+            "quote": "I think the first thing I'd want to learn is how to manage my symptoms effectively",
+            "turn": 5
+          },
+          {
+            "quote": "I'd want to know about that too",
+            "turn": 5
+          }
+        ],
+        "reasoning": "The patient understands that HIV attacks the immune system and sees a connection to their existing condition. They want to learn about symptom management and lifestyle.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "Emotionally, it's been quite a rollercoaster lately. There are moments when I feel really scared about what might be happening inside my body, and other times when I'm more determined to take control and learn as much as I can",
+            "turn": 9
+          },
+          {
+            "quote": "I've felt like everything is kind of out of my hands with this potential HIV diagnosis hanging over me",
+            "turn": 5
+          }
+        ],
+        "reasoning": "The patient describes emotional ups and downs, feeling scared at times and determined at others. They feel uncertain and out of control.",
+        "score": 8.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [],
+        "reasoning": "The patient never discussed their own prescribed medication or beliefs about its necessity.",
+        "score": null,
+        "confidence": 0.0
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "My main concern right now is whether the side effects might be too much to handle — I've heard that some can cause nausea or other issues",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient has specific concerns about side effects of HIV medication.",
+        "score": 3.0,
+        "confidence": 0.8
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [],
+        "reasoning": "The patient never expressed general views about medicines as a class.",
+        "score": null,
+        "confidence": 0.0
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "The patient never expressed views about doctors prescribing too readily.",
+        "score": null,
+        "confidence": 0.0
+      }
+    },
+    "causes": [
+      "lifestyle",
+      "genetics"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "I've had a low immune system for as long as I can remember, and doctors have mentioned that it could be due to my lifestyle or maybe something genetic",
+        "turn": 3
+      },
+      {
+        "quote": "I used to party a lot and not take care of myself as well as I should have",
+        "turn": 7
+      }
+    ]
+  }
+}

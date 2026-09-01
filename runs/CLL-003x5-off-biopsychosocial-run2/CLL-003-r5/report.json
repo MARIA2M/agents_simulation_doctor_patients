@@ -1,0 +1,298 @@
+{
+  "patient_id": "CLL-003",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "CLL-003",
+    "clinical_summary": "Patient with CLL diagnosed about a year ago, currently in early stages with minimal symptoms. Not on any medication for CLL, following a watch-and-wait approach with regular hematologist follow-up every three months. Reports increased fatigue affecting work and evening family time, and a new lump under the chin. Has made lifestyle adjustments including being more cautious about physical activity and incorporating stress-management techniques. Trusts their hematologist and believes in the effectiveness of medical treatment.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "I've been having trouble staying up late to spend time with my kids after work — I usually feel exhausted around 9 pm",
+            "turn": 2
+          },
+          {
+            "quote": "It's definitely affecting my quality of life and family time",
+            "turn": 2
+          },
+          {
+            "quote": "I've definitely noticed that the fatigue can make it harder for me to get through a full day of work",
+            "turn": 5
+          },
+          {
+            "quote": "There have been days where I've had to take a nap in the afternoon just to recharge, and that's not something I used to do before my diagnosis",
+            "turn": 5
+          },
+          {
+            "quote": "I'm also more cautious about being physically active — I'll try to go for walks or gentle exercise but won't push myself too hard like I used to with sports",
+            "turn": 5
+          }
+        ],
+        "reasoning": "The patient has made significant lifestyle adjustments due to fatigue - taking afternoon naps, being more cautious about physical activity, and having trouble with evening activities with family. This shows moderate impact on their daily life and roles.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "I was diagnosed about a year ago",
+            "turn": 4
+          },
+          {
+            "quote": "Since then, I've just been following up with my hematologist every three months or so",
+            "turn": 4
+          },
+          {
+            "quote": "The hematologist said that since my condition is still in the early stages, we can wait-and-see how things go for now",
+            "turn": 5
+          },
+          {
+            "quote": "I know that living with CLL will be an ongoing process",
+            "turn": 10
+          },
+          {
+            "quote": "I try not to dwell too much on what could happen. But at the same time, I do think about it and make plans accordingly",
+            "turn": 10
+          }
+        ],
+        "reasoning": "The patient understands CLL as an ongoing process and is following a watch-and-wait approach. They acknowledge it will continue but don't dwell on specific timelines.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I try not to let it consume me, though, and instead focus on taking care of myself as best I can in the meantime",
+            "turn": 6
+          },
+          {
+            "quote": "I try to maintain a healthy diet and get enough rest whenever I can",
+            "turn": 7
+          },
+          {
+            "quote": "I've also been trying to incorporate more stress-management techniques into my routine, like meditation and mindfulness exercises",
+            "turn": 7
+          },
+          {
+            "quote": "It's all about finding that balance between being active and not overdoing it",
+            "turn": 7
+          },
+          {
+            "quote": "For now, I'm just focusing on staying as healthy as possible and enjoying life as best I can given the circumstances",
+            "turn": 10
+          }
+        ],
+        "reasoning": "The patient actively manages their health through self-care practices, diet, rest, and stress management. They're making conscious choices about activity levels and planning for the future.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "I trust my hematologist's judgment when it comes to deciding when and how to treat CLL",
+            "turn": 6
+          },
+          {
+            "quote": "My hematologist has explained that there are a variety of options out there depending on how advanced my condition is, and he'll be able to guide me through the decision-making process if it ever becomes necessary",
+            "turn": 9
+          },
+          {
+            "quote": "I trust my doctors to guide me through the process step by step",
+            "turn": 8
+          },
+          {
+            "quote": "I believe in modern medicine and its ability to help manage conditions like mine",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient has high trust in their hematologist and believes in the effectiveness of medical treatment. They view doctors as capable of guiding them through treatment decisions.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "Having CLL has definitely made me more aware of my body and how it's functioning",
+            "turn": 10
+          },
+          {
+            "quote": "Before my diagnosis, I didn't pay as much attention to how I was feeling overall",
+            "turn": 10
+          },
+          {
+            "quote": "Now, I'm much more in tune with any changes that might occur",
+            "turn": 10
+          },
+          {
+            "quote": "Living with it has been interesting, to say the least",
+            "turn": 4
+          },
+          {
+            "quote": "It's definitely something that's always present in the back of my mind",
+            "turn": 4
+          }
+        ],
+        "reasoning": "The patient has become more body-aware and acknowledges CLL as something that's always present in their thoughts, but they still describe themselves as managing it rather than being defined by it.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "It's definitely something that's always present in the back of my mind",
+            "turn": 4
+          },
+          {
+            "quote": "I think there's always some anxiety about how things could change over time, but that's true for anyone dealing with a chronic condition like mine",
+            "turn": 6
+          },
+          {
+            "quote": "It's more of a worry in my mind than anything else at this point",
+            "turn": 8
+          },
+          {
+            "quote": "I try not to let it consume me, though",
+            "turn": 6
+          },
+          {
+            "quote": "I try not to dwell too much on what could happen",
+            "turn": 10
+          }
+        ],
+        "reasoning": "The patient acknowledges some anxiety and that CLL is always present in their thoughts, but they consciously try not to let it consume them or dwell on it. The concern appears to be moderate but managed.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I was diagnosed about a year ago after finding out I had some abnormal blood cell counts during a routine checkup",
+            "turn": 4
+          },
+          {
+            "quote": "Since then, I've just been following up with my hematologist every three months or so and keeping an eye on any changes in my symptoms",
+            "turn": 4
+          },
+          {
+            "quote": "The hematologist said that since my condition is still in the early stages, we can wait-and-see how things go for now",
+            "turn": 5
+          },
+          {
+            "quote": "From what he has explained to me, it seems like we're taking a cautious approach because my symptoms are still minimal at this point",
+            "turn": 6
+          },
+          {
+            "quote": "He mentioned that treatment might become necessary if the disease progresses or if I start experiencing more severe symptoms",
+            "turn": 6
+          },
+          {
+            "quote": "I know that living with CLL will be an ongoing process",
+            "turn": 10
+          }
+        ],
+        "reasoning": "The patient has a good understanding of their condition, the monitoring approach, and when treatment might be needed. They understand the rationale for the watch-and-wait approach.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "Living with it has been interesting, to say the least",
+            "turn": 4
+          },
+          {
+            "quote": "I'm trying to stay positive and hopeful about managing it effectively",
+            "turn": 4
+          },
+          {
+            "quote": "I try not to let it consume me, though, and instead focus on taking care of myself as best I can in the meantime",
+            "turn": 6
+          },
+          {
+            "quote": "I try not to dwell too much on what could happen",
+            "turn": 10
+          },
+          {
+            "quote": "I'm hopeful that advances in research and treatment will continue to improve my outlook",
+            "turn": 10
+          },
+          {
+            "quote": "For now, I'm just focusing on staying as healthy as possible and enjoying life as best I can given the circumstances",
+            "turn": 10
+          }
+        ],
+        "reasoning": "The patient describes their experience as 'interesting' and consciously tries to stay positive and hopeful. They focus on self-care and enjoying life rather than dwelling on worries.",
+        "score": 4.0,
+        "confidence": 0.7
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [],
+        "reasoning": "The patient is currently not on any medication for CLL and is following a watch-and-wait approach. They trust their hematologist and believe in the effectiveness of medical treatment, but they haven't experienced taking medication for CLL yet.",
+        "score": null,
+        "confidence": 0.9
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "As for any concerns about side effects, again, I trust that my doctors will take all factors into account when prescribing medications and that they'll make sure any potential risks are thoroughly discussed beforehand",
+            "turn": 9
+          },
+          {
+            "quote": "I believe in modern medicine and its ability to help manage conditions like mine",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient expresses trust in their doctors to discuss potential risks and make appropriate decisions. They don't express specific concerns about medication side effects.",
+        "score": 2.0,
+        "confidence": 0.8
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "I believe in modern medicine and its ability to help manage conditions like mine",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient expresses general confidence in modern medicine and its ability to help manage conditions. No indication of general concerns about medicines as a class.",
+        "score": 2.0,
+        "confidence": 0.7
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [
+          {
+            "quote": "I trust my hematologist's judgment when it comes to deciding when and how to treat CLL",
+            "turn": 6
+          },
+          {
+            "quote": "My hematologist has explained that there are a variety of options out there depending on how advanced my condition is, and he'll be able to guide me through the decision-making process if it ever becomes necessary",
+            "turn": 9
+          },
+          {
+            "quote": "I trust my doctors to guide me through the process step by step",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient expresses trust in their doctors' judgment and decision-making process. No indication of beliefs that doctors prescribe too readily.",
+        "score": 2.0,
+        "confidence": 0.7
+      }
+    },
+    "causes": [],
+    "causes_evidence": []
+  }
+}

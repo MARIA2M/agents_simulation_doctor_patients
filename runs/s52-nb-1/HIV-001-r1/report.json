@@ -1,0 +1,223 @@
+{
+  "patient_id": "HIV-001",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "HIV-001",
+    "clinical_summary": "Patient with HIV (chronic stage) on Biktarvy for over a year with undetectable viral load and improving CD4 count. Experiencing headaches (1-2x/week, lasting a few hours) and occasional morning GI discomfort that affect concentration at work. Not considering stopping medication but concerned about whether side effects are 'worth it' and open to discussing alternatives. Has decent understanding of condition and treatment, experienced emotional challenges (grief, anger) but has learned to accept it.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "my chronic illness has been affecting my daily life quite a bit lately. It's impacting my work, relationships, and even my leisure activities.",
+            "turn": 1
+          },
+          {
+            "quote": "The headaches have definitely been impacting my work, as it's harder for me to concentrate on tasks that require focus.",
+            "turn": 5
+          },
+          {
+            "quote": "As for gastrointestinal discomfort, while it doesn't impact my work directly, it does make mornings more difficult.",
+            "turn": 5
+          }
+        ],
+        "reasoning": "The illness affects daily life, work, relationships, and leisure. Headaches specifically impact work concentration, and GI discomfort affects mornings. This represents moderate to high impact but not to the point of total dependence.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "I've come to accept that it is something I'll be living with for the rest of my life.",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient has accepted HIV as a lifelong condition, indicating they plan on the assumption it will continue.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I feel like I have some control over managing it through taking my medication consistently and attending regular check-ups",
+            "turn": 8
+          },
+          {
+            "quote": "I try not to dwell on it too much and focus on maintaining a healthy lifestyle as best as I can",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient believes they have control through medication adherence, regular check-ups, and healthy lifestyle choices, indicating active management.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "I am fairly confident that Biktarvy is still working effectively since my viral load has remained undetectable.",
+            "turn": 6
+          },
+          {
+            "quote": "Biktarvy is helping to keep my viral load undetectable and allowing my CD4 count to improve, which in turn strengthens my immune system.",
+            "turn": 7
+          }
+        ],
+        "reasoning": "The patient attributes their current good status (undetectable viral load, improving CD4) to the treatment working effectively.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "I've been diagnosed with Human Immunodeficiency Virus (HIV) infection, which is in its chronic stage.",
+            "turn": 2
+          },
+          {
+            "quote": "I know that HIV attacks the immune system and can lead to various opportunistic infections if left untreated.",
+            "turn": 7
+          }
+        ],
+        "reasoning": "The patient has a clear understanding of their condition and its symptoms/implications, with intermittent symptoms (headaches, GI discomfort) that are not severely limiting.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "I worry about my HIV, but I've come to accept that it is something I'll be living with for the rest of my life.",
+            "turn": 8
+          },
+          {
+            "quote": "The uncertainty around how long I can continue to maintain an undetectable viral load is what worries me most about the long term.",
+            "turn": 9
+          },
+          {
+            "quote": "there are aspects of it that still make me uneasy.",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient worries about long-term maintenance and has some unease, but has accepted the condition and tries not to dwell on it.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I believe I have a decent understanding of my HIV diagnosis, how it affects me, and how my current medication works.",
+            "turn": 7
+          },
+          {
+            "quote": "I know that HIV attacks the immune system and can lead to various opportunistic infections if left untreated.",
+            "turn": 7
+          },
+          {
+            "quote": "Biktarvy is helping to keep my viral load undetectable and allowing my CD4 count to improve, which in turn strengthens my immune system.",
+            "turn": 7
+          }
+        ],
+        "reasoning": "The patient has a good understanding of their diagnosis, how it affects them, and how their medication works, including the mechanism and expected outcomes.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "Since my diagnosis, I've experienced emotional challenges like grief and anger — grieving for the person I was before my diagnosis and feeling angry that this happened to me.",
+            "turn": 9
+          },
+          {
+            "quote": "However, over time, I've learned to accept it and focus on living as best I can with HIV.",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient has experienced significant emotional challenges (grief, anger) but has learned to accept the condition and move forward.",
+        "score": 6.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "Taking regular medication is an important part of managing my HIV and keeping it under control, so I see it as necessary.",
+            "turn": 10
+          },
+          {
+            "quote": "It's a long-term commitment, but I'm willing to take it if it means keeping my viral load undetectable and continuing to improve my CD4 count.",
+            "turn": 10
+          }
+        ],
+        "reasoning": "The patient views medication as necessary for managing HIV and is willing to commit to it long-term for the benefits.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "While there are times when the side effects worry me",
+            "turn": 10
+          },
+          {
+            "quote": "I am worried about whether these side effects are worth continuing with this treatment.",
+            "turn": 5
+          },
+          {
+            "quote": "I'm aware that some people might worry about becoming dependent on medication or experiencing long-term side effects",
+            "turn": 11
+          }
+        ],
+        "reasoning": "The patient has concerns about side effects and long-term effects, and these concerns have led them to consider alternatives.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "I'm aware that some people might worry about becoming dependent on medication or experiencing long-term side effects",
+            "turn": 11
+          },
+          {
+            "quote": "my understanding is that these risks are generally manageable if the treatment regimen is well-tailored and adhered to consistently.",
+            "turn": 11
+          },
+          {
+            "quote": "I believe the benefits of staying healthy far outweigh any potential risks or inconveniences.",
+            "turn": 11
+          }
+        ],
+        "reasoning": "The patient is aware of potential medication harms but believes they are manageable and benefits outweigh risks, indicating no strong general belief that medicines are inherently harmful.",
+        "score": 2.0,
+        "confidence": 0.7
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [
+          {
+            "quote": "I think doctors are generally cautious about prescribing medications and only do so when necessary, after carefully considering the potential benefits and risks.",
+            "turn": 12
+          },
+          {
+            "quote": "They also monitor patients closely while on treatment to ensure that any issues arising from the medication can be addressed promptly.",
+            "turn": 12
+          }
+        ],
+        "reasoning": "The patient believes doctors are cautious and only prescribe when necessary, indicating trust in prescribing decisions.",
+        "score": 1.0,
+        "confidence": 0.8
+      }
+    },
+    "causes": [],
+    "causes_evidence": []
+  }
+}

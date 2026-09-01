@@ -1,0 +1,369 @@
+{
+  "patient_id": "HIV-005",
+  "turns": 17,
+  "stop_reason": "doctor",
+  "conversation": [
+    {
+      "role": "doctor",
+      "content": "Hello, thank you for coming in today. What brings you along?",
+      "turn": 1
+    },
+    {
+      "role": "patient",
+      "content": "Hi, doctor. I'm here because my headaches have been getting worse lately. They seem to be affecting every aspect of my life now \u2014 even my work and family time. It's becoming difficult to function as normal.",
+      "turn": 1
+    },
+    {
+      "role": "doctor",
+      "content": "I'm sorry to hear your headaches are becoming such a burden. Can you tell me a bit more about how they've changed lately \u2014 how often they happen, how long they last, and how intense they feel?",
+      "turn": 2
+    },
+    {
+      "role": "patient",
+      "content": "Well, the frequency has increased quite a bit over the past few weeks. I used to get one or two a week, but now it's almost like I have them every day. They tend to last anywhere from a few hours to an entire day. The intensity varies \u2014 some are more of a dull ache while others can feel really intense and throbbing.",
+      "turn": 2
+    },
+    {
+      "role": "doctor",
+      "content": "That sounds really tough \u2014 daily headaches can be exhausting. Do you notice any particular triggers, like certain foods, weather changes, or stress? And do you get any other symptoms with them, like nausea, sensitivity to light or sound, or feeling dizzy?",
+      "turn": 3
+    },
+    {
+      "role": "patient",
+      "content": "I've noticed that my headaches seem to be triggered by stress at work, particularly when I have a lot of deadlines approaching. As for other symptoms, sometimes the headaches are accompanied by a bit of nausea and sensitivity to light. But generally, it's just the headache itself that's really bothering me.",
+      "turn": 3
+    },
+    {
+      "role": "doctor",
+      "content": "Stress seems to be a big factor for you \u2014 and it makes sense that would affect your work and your headaches. What are you doing right now to manage them? Have you seen a doctor before, or are you taking any medications or trying any home remedies?",
+      "turn": 4
+    },
+    {
+      "role": "patient",
+      "content": "I've tried some over-the-counter pain relievers like ibuprofen and acetaminophen, but they don't seem to help as much anymore. I'm also trying to manage my stress through meditation and exercise, but it's been a challenge balancing that with work demands. This is actually the first time I've seen a doctor about these headaches specifically \u2014 I've always just dealt with them on my own up until now.",
+      "turn": 4
+    },
+    {
+      "role": "doctor",
+      "content": "It's good that you've been proactive in trying some things, even though it's clearly been a struggle. Since this is your first time seeking help for the headaches, have you had any other medical conditions or injuries that might be related? And how are you sleeping \u2014 do you feel rested, or does the headache interfere with your sleep?",
+      "turn": 5
+    },
+    {
+      "role": "patient",
+      "content": "I've had some occasional migraines in the past, but they were never as persistent and disruptive as these current ones. I'm not sure if they're connected somehow. As for my sleep, the headaches definitely interfere with getting a good rest \u2014 sometimes it's hard to fall asleep at all, and even when I do, I feel like I'm not truly rested in the morning.",
+      "turn": 5
+    },
+    {
+      "role": "doctor",
+      "content": "That's interesting \u2014 and it makes sense that if these headaches are more constant and disruptive than your previous migraines, they'd feel quite different. Sleep is so important for both our physical and mental wellbeing, so it's not surprising that this is taking a toll on you. How are you feeling overall right now? I mean, beyond just the headaches \u2014 has your mood or energy been affected?",
+      "turn": 6
+    },
+    {
+      "role": "patient",
+      "content": "Honestly, doctor, my overall mood has been pretty low lately. The constant headaches have made me feel quite drained and irritable. It's like everything is just one more thing to add to my already long list of daily stressors. Even things I used to enjoy \u2014 spending time with family or hobbies \u2014 are becoming harder to do because of the headaches.",
+      "turn": 6
+    },
+    {
+      "role": "doctor",
+      "content": "That sounds really difficult \u2014 to feel drained and irritable on top of everything else, and to lose some of the things that used to give you joy. When you think about what's happening with these headaches, what's your sense of what's going on? I'm curious what you understand about what might be causing them, and how long you expect this to go on.",
+      "turn": 7
+    },
+    {
+      "role": "patient",
+      "content": "To be honest, doctor, sometimes I wonder if the headaches are connected to my HIV medication. They started getting worse around the same time I was having some issues with my medication routine. But at other times, I'm not sure \u2014 it's like a fog that just won't clear up. I know there are lots of factors in life we don't always have control over, so I guess I expect them to continue until something changes or I find a better way to manage them.",
+      "turn": 7
+    },
+    {
+      "role": "doctor",
+      "content": "That's an important connection to explore \u2014 especially given you have HIV. It's common for medication changes or side effects to affect us in ways we notice. Can you tell me more about the medication routine issues you had? And have you noticed if your headaches tend to correlate with any particular times in relation to your HIV treatment schedule?",
+      "turn": 8
+    },
+    {
+      "role": "patient",
+      "content": "The issues with my medication mostly revolve around missing doses and taking 'drug holidays' when I feel well, even though I know it's not good to do that. Sometimes I'll forget to take the pill in the morning and then remember later in the day, which makes me feel guilty or stressed out about it. And as for the headaches, they seem to be more frequent around the times when I'm supposed to take my medication, but I can't say for sure if there's a direct correlation.",
+      "turn": 8
+    },
+    {
+      "role": "doctor",
+      "content": "Thank you for being honest about that \u2014 it takes courage to talk about missing doses and drug holidays. It's completely understandable that you'd feel stressed and guilty when that happens, especially when you know it's not the best approach. When you do take your HIV medication consistently, how do you feel about it? Do you think it's helping you, or are you worried about it in any way?",
+      "turn": 9
+    },
+    {
+      "role": "patient",
+      "content": "When I'm taking my medication as I should, I generally feel okay \u2014 not great, but not terrible either. It's more like just keeping at a steady level. Sometimes I worry if the medication is causing other side effects, like these headaches, or if there could be long-term consequences from taking it. But overall, I trust that the doctors and researchers who developed it have done their best to make something helpful, so I try not to dwell on those worries too much.",
+      "turn": 9
+    },
+    {
+      "role": "doctor",
+      "content": "It sounds like you have a good sense that your medication is keeping you at a steady level \u2014 that's important. And it's natural to have concerns about side effects, especially when they start affecting you in ways you notice. When you think about your overall health and your HIV, how much control do you feel you have over managing it? And do you feel like you understand what's going on with your body and your treatment?",
+      "turn": 10
+    },
+    {
+      "role": "patient",
+      "content": "I'd say I feel a moderate amount of control \u2014 not perfect control, but enough that I can make some choices about my health. When it comes to understanding things, there are definitely aspects where I'm still confused or unsure. But I think that's normal for anyone in this situation. I try to stay informed as best I can and ask questions when I have them so that I feel like I'm doing what I can to take care of myself.",
+      "turn": 10
+    },
+    {
+      "role": "doctor",
+      "content": "That sounds like a balanced approach \u2014 recognizing what you can control and knowing when to seek answers. What's the biggest concern you have right now, beyond just the headaches? Is it about your HIV, or are there other health worries on your mind?",
+      "turn": 11
+    },
+    {
+      "role": "patient",
+      "content": "The biggest concern I have at the moment is really the impact these headaches are having on my daily life \u2014 how they're affecting my work and my relationships with others. It's hard to prioritize self-care when everything else feels so overwhelming. As for HIV, it's always in the back of my mind, but right now I'm mostly focused on just getting through each day without being constantly miserable from the headaches.",
+      "turn": 11
+    },
+    {
+      "role": "doctor",
+      "content": "It makes sense that when something is affecting how you feel and function every day, it naturally becomes the main focus. I'd like to ask a bit more about your relationships \u2014 how have your headaches been affecting your connections with family and friends? And do you feel like you have support from them as you're dealing with this?",
+      "turn": 12
+    },
+    {
+      "role": "patient",
+      "content": "My headaches have definitely affected my relationships in various ways, doctor. Sometimes when they're particularly bad, I'll cancel plans last minute or just not be able to keep up with the same level of engagement that I used to. I feel like it's hard for them to understand how much I'm struggling right now, and that can make me feel a bit isolated. But I do have some understanding family members and friends who are supportive, so I appreciate their patience and kindness.",
+      "turn": 12
+    },
+    {
+      "role": "doctor",
+      "content": "That's really hard \u2014 to feel like you're letting people down or that others don't understand, even when they're trying to be supportive. How is your work situation? Have you had to make any changes to your schedule or responsibilities because of these headaches?",
+      "turn": 13
+    },
+    {
+      "role": "patient",
+      "content": "Work has been one of the hardest places to deal with these headaches. They've made it hard to focus and get through the day without feeling exhausted. I've tried talking to my boss about it, but it's tricky because they're not always sure how much support they can give when it comes to a health issue like this. So I've been trying to take breaks as needed and work from home on particularly bad days. It's not an ideal solution, but it helps me get through the day without making my headaches worse.",
+      "turn": 13
+    },
+    {
+      "role": "doctor",
+      "content": "It sounds like work has become quite challenging with these headaches \u2014 having to adapt your work style and feeling like you're not getting the support you need can be really frustrating. On a scale of 1 to 10, how would you rate your overall emotional wellbeing right now? And what gives you the most hope or comfort when things feel particularly difficult?",
+      "turn": 14
+    },
+    {
+      "role": "patient",
+      "content": "Honestly, doctor, I'd say my emotional wellbeing is at about a 4 right now. There are good days and bad days, but overall it's been quite a struggle with these headaches. What gives me the most hope and comfort is talking to friends and family who understand what I'm going through, as well as finding time for activities that help me relax and unwind, like yoga or reading. It doesn't solve everything, but it helps me feel less overwhelmed by everything else happening in my life right now.",
+      "turn": 14
+    },
+    {
+      "role": "doctor",
+      "content": "Thank you for sharing all of that with me \u2014 you've given me a really clear picture of how these headaches are affecting you across so many areas of your life. Let me summarize what I'm hearing, and then we can talk about next steps.\n\nYou're dealing with daily headaches that seem to be triggered by stress and possibly related to your HIV medication timing. They're interfering with your sleep, work, relationships, and overall mood. You've been managing with OTC pain relievers that aren't working well, and you've had some challenges with your HIV medication routine, including missing doses and taking 'drug holidays.'\n\nYou feel moderately in control but are clearly overwhelmed, and the impact on your daily functioning is significant. At the same time, you have good social support and some strategies that help you cope, like yoga and reading.\n\nI'd like to explore a few things before we wrap up. First, do you have any concerns about discussing your HIV medication with your HIV doctor, or would you prefer I help coordinate a referral? And what would you like to focus on most over the next few weeks \u2014 treating the headaches, getting your medication routine more stable, or both?",
+      "turn": 15
+    },
+    {
+      "role": "patient",
+      "content": "Thank you for summarizing my situation so well, doctor. I don't have any concerns about discussing my HIV medication with my HIV doctor, and I'd appreciate any help coordinating a referral if needed. In terms of what to focus on most over the next few weeks, it might be best to address both the headaches and getting my medication routine more stable. They seem to be somewhat intertwined at this point, so working on them simultaneously could potentially make the biggest difference in my overall wellbeing.",
+      "turn": 15
+    },
+    {
+      "role": "doctor",
+      "content": "That makes perfect sense \u2014 tackling both together could really help break the cycle you're in. Here's what I'd suggest:\n\n1. **Immediate next steps:** I'll help you get connected with your HIV doctor to discuss your medication routine and see if changing the timing or formulation might help with the headaches. We'll also need to work on a plan to support you in staying on track with your medication.\n\n2. **For the headaches:** Depending on what we find, you may benefit from a specific headache treatment plan \u2014 perhaps a trial of a preventive medication or a different approach to managing the pain. We'll also want to build on those stress-management strategies you're already doing.\n\n3. **Follow-up:** I'd like to check in with you in a couple of weeks to see how you're feeling and how things are going with your medication routine.\n\nIn the meantime, if you have any sharp changes in your symptoms \u2014 like sudden, severe headaches, vision changes, or new neurological symptoms \u2014 please don't wait for our next appointment; seek care right away. And if you're finding it hard to keep up with your medication, we can talk about tools or routines that might help.\n\nIs there anything else you'd like to address today before we wrap up?",
+      "turn": 16
+    },
+    {
+      "role": "patient",
+      "content": "No, doctor, that sounds like a good plan. Thank you for all of your help and understanding. I appreciate the support more than words can say, and I'm looking forward to working together on these issues.",
+      "turn": 16
+    },
+    {
+      "role": "doctor",
+      "content": "I'm really glad we could work through this together, and I appreciate your openness about what you've been experiencing. It's clear you're dealing with a lot, but you also have a good support system and a willingness to tackle this. We'll take it one step at a time. Please take care of yourself in the meantime, and reach out if you need anything in between appointments. I'll see you soon. Take care.",
+      "turn": 17
+    },
+    {
+      "role": "patient",
+      "content": "Thank you, doctor. I will. Bye for now.",
+      "turn": 17
+    }
+  ],
+  "coverage_hint": {},
+  "working_notes": [],
+  "events": [
+    {
+      "event": "llm_retry",
+      "role": "doctor",
+      "attempt": 1,
+      "failure": "HTTPStatusError: Server error '500 Internal Server Error' for url 'http://127.0.0.1:11500/api/chat'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500"
+    }
+  ],
+  "usage": [
+    {
+      "role": "doctor",
+      "eval_tokens": 68,
+      "prompt_tokens": 1531
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 45,
+      "prompt_tokens": 1288
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 157,
+      "prompt_tokens": 1647
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 73,
+      "prompt_tokens": 1385
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 138,
+      "prompt_tokens": 1880
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 61,
+      "prompt_tokens": 1518
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 143,
+      "prompt_tokens": 2082
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 87,
+      "prompt_tokens": 1641
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 194,
+      "prompt_tokens": 2315
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 78,
+      "prompt_tokens": 1805
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 158,
+      "prompt_tokens": 2590
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 72,
+      "prompt_tokens": 1971
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 162,
+      "prompt_tokens": 2823
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 98,
+      "prompt_tokens": 2127
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 220,
+      "prompt_tokens": 3086
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 103,
+      "prompt_tokens": 2300
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 247,
+      "prompt_tokens": 3412
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 97,
+      "prompt_tokens": 2492
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 235,
+      "prompt_tokens": 3759
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 92,
+      "prompt_tokens": 2684
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 141,
+      "prompt_tokens": 4089
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 83,
+      "prompt_tokens": 2835
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 157,
+      "prompt_tokens": 4316
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 96,
+      "prompt_tokens": 2992
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 133,
+      "prompt_tokens": 4572
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 107,
+      "prompt_tokens": 3149
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 168,
+      "prompt_tokens": 4815
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 104,
+      "prompt_tokens": 3335
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 363,
+      "prompt_tokens": 5090
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 98,
+      "prompt_tokens": 3684
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 328,
+      "prompt_tokens": 5554
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 44,
+      "prompt_tokens": 4044
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 131,
+      "prompt_tokens": 5929
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 13,
+      "prompt_tokens": 4184
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 848,
+      "prompt_tokens": 6076
+    },
+    {
+      "role": "report",
+      "eval_tokens": 5726,
+      "prompt_tokens": 12611
+    }
+  ]
+}

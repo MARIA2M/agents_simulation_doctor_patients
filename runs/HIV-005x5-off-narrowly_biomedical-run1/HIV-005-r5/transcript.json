@@ -1,0 +1,249 @@
+{
+  "patient_id": "HIV-005",
+  "turns": 11,
+  "stop_reason": "doctor",
+  "conversation": [
+    {
+      "role": "doctor",
+      "content": "Hello. What brings you in today?",
+      "turn": 1
+    },
+    {
+      "role": "patient",
+      "content": "Hi doctor, I've been feeling quite unwell recently. My energy levels are low and I've been getting occasional headaches. I'm worried it might be related to my HIV infection.",
+      "turn": 1
+    },
+    {
+      "role": "doctor",
+      "content": "How long have you been managing HIV, and have you been on antiretroviral therapy consistently?",
+      "turn": 2
+    },
+    {
+      "role": "patient",
+      "content": "I've had HIV for about 5 years now. I started treatment a bit over 3 years ago with Triumeq. However, there were times when I missed doses or even took drug holidays because I felt well. But lately, I've been trying to follow the regimen more consistently.",
+      "turn": 2
+    },
+    {
+      "role": "doctor",
+      "content": "Have you been monitoring your viral load recently, and how long have these low energy levels and headaches been going on?",
+      "turn": 3
+    },
+    {
+      "role": "patient",
+      "content": "I had my viral load checked a few months back, and it was detectable but at a low level of 340 copies/mL. I understand that's not great because it means the virus is still there, even if just in small amounts. The fatigue and headaches have been ongoing for about two to three months now, though they're not constant \u2014 they come and go.",
+      "turn": 3
+    },
+    {
+      "role": "doctor",
+      "content": "How are you doing with taking Triumeq now that you're trying to be more consistent, and have you discussed the detectable viral load with your HIV care team?",
+      "turn": 4
+    },
+    {
+      "role": "patient",
+      "content": "I'm still finding it challenging to take Triumeq every day, as sometimes I forget or lose track of time. But I've been making an effort to prioritize it. As for the detectable viral load, yes, we talked about it at my last appointment. The doctor reassured me that it's not too high and that consistency in adherence is key. They also checked whether it was safe for me to switch to a different medication or adjust the current one.",
+      "turn": 4
+    },
+    {
+      "role": "doctor",
+      "content": "Are you experiencing any other symptoms like nausea, rash, fever, or weight loss alongside the fatigue and headaches?",
+      "turn": 5
+    },
+    {
+      "role": "patient",
+      "content": "No, besides the fatigue and occasional headaches, I haven't noticed any other significant symptoms related to my HIV treatment. My appetite is still good, and I haven't lost any noticeable amount of weight. There's no fever, and I don't recall experiencing any rashes recently either.",
+      "turn": 5
+    },
+    {
+      "role": "doctor",
+      "content": "When do you typically take Triumeq in relation to meals, and have you experienced any issues with the medication itself such as taste changes or difficulty swallowing?",
+      "turn": 6
+    },
+    {
+      "role": "patient",
+      "content": "I usually take Triumeq about 30 minutes before my breakfast, so it's not right after waking up. I find that taking it earlier helps me remember to take it consistently. As for side effects, there have been times when I've experienced a metallic taste in my mouth, but nothing too severe. Swallowing hasn't been an issue for me.",
+      "turn": 6
+    },
+    {
+      "role": "doctor",
+      "content": "Have there been any recent changes in your daily routine, work schedule, or living situation that might affect how reliably you can take your medication?",
+      "turn": 7
+    },
+    {
+      "role": "patient",
+      "content": "Lately, work has been quite stressful, and I've had a few late nights trying to catch up on tasks. There have also been some personal issues going on that have added to the stress. Sometimes when I'm under stress, remembering to take my medication at the right time becomes difficult. Other than that, there haven't been any significant changes in my daily routine or living situation.",
+      "turn": 7
+    },
+    {
+      "role": "doctor",
+      "content": "Do you understand why maintaining an undetectable viral load is important for your long-term health, and how much do you know about the risks of having a detectable viral load?",
+      "turn": 8
+    },
+    {
+      "role": "patient",
+      "content": "I understand that keeping my viral load undetectable helps protect my immune system and prevents the virus from causing damage to my body. I'm aware that there are risks associated with a detectable viral load, such as developing opportunistic infections or cancers. While I have some understanding of these things, I must admit that HIV is still quite complex for me to fully grasp at times.",
+      "turn": 8
+    },
+    {
+      "role": "doctor",
+      "content": "Do you feel like you have enough control over your daily routine to maintain consistent medication adherence, or do you feel like external factors like work stress make it difficult?",
+      "turn": 9
+    },
+    {
+      "role": "patient",
+      "content": "I'm finding it challenging right now because of my workload and personal issues. There are days when remembering to take my medication feels like an extra task on top of everything else. But I know that maintaining consistency is important for my health, so I'm trying my best to stay on track.",
+      "turn": 9
+    },
+    {
+      "role": "doctor",
+      "content": "Based on what you've described, you have detectable HIV viral load at 340 copies/mL, which indicates virologic failure. The fatigue and headaches you're experiencing have been present for 2-3 months. Your current regimen is Triumeq, and while you've made efforts to improve adherence, work stress and personal issues are making it difficult to take the medication consistently. You understand the importance of viral suppression for preventing complications, but maintaining consistency remains a challenge.\n\nThe next steps would be to:\n1. Have your viral load and possibly CD4 count checked to assess your current immune status\n2. Discuss options for adjusting your antiretroviral regimen if adherence continues to be an issue\n3. Consider strategies to support better medication adherence given your current stressors\n\nWould you like to schedule a follow-up appointment to review these options?",
+      "turn": 10
+    },
+    {
+      "role": "patient",
+      "content": "Yes, I would appreciate that very much. Please let me know when we can meet again to discuss these next steps in managing my condition.",
+      "turn": 10
+    },
+    {
+      "role": "doctor",
+      "content": "I'll make a note to schedule a follow-up appointment for you. In the meantime, please continue taking Triumeq as prescribed and try to take it at the same time each day if possible. If you experience any new symptoms or have concerns about your medication, please contact your HIV care team. We'll review your lab results and discuss treatment options at your next appointment. Is there anything else you'd like to address today?",
+      "turn": 11
+    },
+    {
+      "role": "patient",
+      "content": "No, that's all for now. Thank you for your time and guidance, doctor. I look forward to our next meeting.",
+      "turn": 11
+    }
+  ],
+  "coverage_hint": {},
+  "working_notes": [],
+  "events": [
+    {
+      "event": "llm_retry",
+      "role": "doctor",
+      "attempt": 1,
+      "failure": "HTTPStatusError: Server error '500 Internal Server Error' for url 'http://127.0.0.1:11500/api/chat'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500"
+    }
+  ],
+  "usage": [
+    {
+      "role": "doctor",
+      "eval_tokens": 74,
+      "prompt_tokens": 1527
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 38,
+      "prompt_tokens": 1282
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 106,
+      "prompt_tokens": 1642
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 60,
+      "prompt_tokens": 1350
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 135,
+      "prompt_tokens": 1811
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 76,
+      "prompt_tokens": 1442
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 147,
+      "prompt_tokens": 2025
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 95,
+      "prompt_tokens": 1561
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 109,
+      "prompt_tokens": 2270
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 58,
+      "prompt_tokens": 1687
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 141,
+      "prompt_tokens": 2440
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 74,
+      "prompt_tokens": 1785
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 123,
+      "prompt_tokens": 2658
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 79,
+      "prompt_tokens": 1896
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 127,
+      "prompt_tokens": 2863
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 77,
+      "prompt_tokens": 2020
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 128,
+      "prompt_tokens": 3070
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 59,
+      "prompt_tokens": 2138
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 269,
+      "prompt_tokens": 3260
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 29,
+      "prompt_tokens": 2377
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 124,
+      "prompt_tokens": 3561
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 27,
+      "prompt_tokens": 2501
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 937,
+      "prompt_tokens": 3715
+    },
+    {
+      "role": "report",
+      "eval_tokens": 3829,
+      "prompt_tokens": 8647
+    }
+  ]
+}

@@ -1,0 +1,242 @@
+{
+  "patient_id": "HIV-004",
+  "turns": 11,
+  "stop_reason": "doctor",
+  "conversation": [
+    {
+      "role": "doctor",
+      "content": "Hello. What brings you in to see me today?",
+      "turn": 1
+    },
+    {
+      "role": "patient",
+      "content": "Hi, doctor. I've been feeling pretty overwhelmed lately, and my symptoms from the HIV infection have been on my mind a lot. Also, I started taking Biktarvy four weeks ago, and while it's helping with the virus, I'm experiencing some mild nausea in the mornings. It's not too bad, but it's something I wanted to discuss.",
+      "turn": 1
+    },
+    {
+      "role": "doctor",
+      "content": "Can you tell me more about the symptoms from your HIV infection you're experiencing? And how severe is the nausea \u2014 does it affect your appetite or ability to take your medication?",
+      "turn": 2
+    },
+    {
+      "role": "patient",
+      "content": "The symptoms have mostly resolved since my diagnosis, which was a relief. But I've been feeling this mild anxiety and difficulty sleeping lately. It's probably related to the whole situation, just knowing that I have HIV. The nausea from the medication is not too severe \u2014 it doesn't really affect my appetite or make me feel sick enough to skip the pill. It's mostly a minor discomfort in the morning.",
+      "turn": 2
+    },
+    {
+      "role": "doctor",
+      "content": "Have you had any recent blood work to check your viral load, and what's your CD4 count? I'd also like to know what you're doing to manage the nausea \u2014 are you taking anything for it, or adjusting when you take the medication?",
+      "turn": 3
+    },
+    {
+      "role": "patient",
+      "content": "I haven't had any new blood work done yet. My physician said that undetectable viral load is expected within 3-6 months after starting Biktarvy, so I'm still in the early stages of treatment. As for managing the nausea, I've been taking it at the same time every day as you suggested, but if it continues to be a problem, I'll bring it up with my doctor at the next appointment.",
+      "turn": 3
+    },
+    {
+      "role": "doctor",
+      "content": "How long have you been living with HIV, and what was your understanding of the treatment plan before starting Biktarvy? Do you feel you understand how the medication works to control the virus?",
+      "turn": 4
+    },
+    {
+      "role": "patient",
+      "content": "I found out about my HIV infection a few months ago. Before starting Biktarvy, I had some basic knowledge about antiretroviral therapy from online resources, but I was still quite uncertain about it all. The physician explained that Biktarvy is a single tablet regimen and it's one of the newer medications that can help suppress the virus to undetectable levels. While I don't fully understand how it works, I trust my doctor and their expertise in prescribing this medication for me.",
+      "turn": 4
+    },
+    {
+      "role": "doctor",
+      "content": "Since you started Biktarvy four weeks ago, have you taken it every single day without missing any doses? And have you experienced any other side effects beyond the morning nausea?",
+      "turn": 5
+    },
+    {
+      "role": "patient",
+      "content": "Yes, I've been taking Biktarvy every day since my appointment, and I haven't missed a dose yet. Besides the mild nausea in the mornings, I haven't noticed any other significant side effects. But I'm still keeping an eye out for anything that may come up in the future.",
+      "turn": 5
+    },
+    {
+      "role": "doctor",
+      "content": "How do you view HIV as a condition \u2014 do you see it as something that will be manageable for the long term, or do you have concerns about how it might progress or affect your health over time?",
+      "turn": 6
+    },
+    {
+      "role": "patient",
+      "content": "It's difficult to think about this without getting overwhelmed, but I believe my illness is going to be something I'll need to manage for the rest of my life. My understanding is that early treatment can offer the best long-term prognosis, and I'm glad to have started it as soon as possible after my diagnosis. I do have concerns about how it might affect me in the future \u2014 both physically and emotionally \u2014 but right now, my focus is on taking care of myself by following my treatment plan and doing what I can to maintain a healthy lifestyle.",
+      "turn": 6
+    },
+    {
+      "role": "doctor",
+      "content": "You mentioned that early treatment offers the best long-term prognosis. How important do you feel it is to take medication every day for the rest of your life, and do you have any concerns about taking a daily pill long-term?",
+      "turn": 7
+    },
+    {
+      "role": "patient",
+      "content": "I think taking my medication every day is crucial in managing my condition and protecting my health. It's not an easy adjustment to make, but I understand that it's necessary if I want to keep living the healthiest life possible. As for long-term concerns, I do have some worries about potential side effects or any changes in how my body reacts to the medication over time. But I trust my healthcare team to monitor me and adjust things as needed.",
+      "turn": 7
+    },
+    {
+      "role": "doctor",
+      "content": "You mentioned trusting your healthcare team. Do you feel that doctors generally prescribe medication appropriately, or have you had any concerns about how much medication is prescribed in general?",
+      "turn": 8
+    },
+    {
+      "role": "patient",
+      "content": "I do trust that doctors prescribe medications appropriately based on the individual patient's situation. I think they consider many factors before making those decisions. As for concerns about medication in general, I must admit I have a vague unease about taking so many pills every day. But I know it's necessary and beneficial to my health, so I try not to dwell on that too much.",
+      "turn": 8
+    },
+    {
+      "role": "doctor",
+      "content": "Given that you're expecting your viral load to be undetectable within 3-6 months, what would you consider a successful outcome of your treatment \u2014 and how will you know if things are going well?",
+      "turn": 9
+    },
+    {
+      "role": "patient",
+      "content": "A successful outcome for me would be getting my viral load down to undetectable levels and maintaining that status. I believe the regular blood tests should give us some indication of whether this is happening or not. As long as my CD4 count remains robust, and my viral load continues to drop, I'll consider things to be going well in managing my HIV infection.",
+      "turn": 9
+    },
+    {
+      "role": "doctor",
+      "content": "I've reviewed your situation. Taking Biktarvy every day without missing doses is excellent adherence. The mild morning nausea you're experiencing is relatively common, especially in the first few weeks. Since it's not affecting your appetite or ability to take the medication, I'd suggest continuing as you're doing for now. You'll need blood work in the coming weeks to confirm your viral load is undetectable and your CD4 count is stable \u2014 that will be the best indicator that treatment is working as expected. If the nausea becomes more bothersome or any other side effects develop, please contact your doctor before your next scheduled appointment. Is there anything else you'd like to address today?",
+      "turn": 10
+    },
+    {
+      "role": "patient",
+      "content": "No, I think we covered everything for now. Thank you so much for taking the time to talk with me and provide guidance on my medication and overall treatment plan. It's reassuring to know that I'm on track and doing things right. I'll make sure to keep up with my appointments and follow your advice closely.",
+      "turn": 10
+    },
+    {
+      "role": "doctor",
+      "content": "You're welcome. Follow your treatment plan, and we'll check your progress at your next appointment. Take care.",
+      "turn": 11
+    },
+    {
+      "role": "patient",
+      "content": "Thank you, doctor. Have a great day ahead!",
+      "turn": 11
+    }
+  ],
+  "coverage_hint": {},
+  "working_notes": [],
+  "events": [],
+  "usage": [
+    {
+      "role": "doctor",
+      "eval_tokens": 89,
+      "prompt_tokens": 1527
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 74,
+      "prompt_tokens": 1265
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 148,
+      "prompt_tokens": 1693
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 82,
+      "prompt_tokens": 1383
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 186,
+      "prompt_tokens": 1926
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 89,
+      "prompt_tokens": 1525
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 141,
+      "prompt_tokens": 2204
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 101,
+      "prompt_tokens": 1661
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 186,
+      "prompt_tokens": 2449
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 61,
+      "prompt_tokens": 1806
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 130,
+      "prompt_tokens": 2699
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 111,
+      "prompt_tokens": 1917
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 218,
+      "prompt_tokens": 2943
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 91,
+      "prompt_tokens": 2082
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 189,
+      "prompt_tokens": 3255
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 76,
+      "prompt_tokens": 2214
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 187,
+      "prompt_tokens": 3523
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 74,
+      "prompt_tokens": 2341
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 275,
+      "prompt_tokens": 3787
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 65,
+      "prompt_tokens": 2560
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 59,
+      "prompt_tokens": 4130
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 12,
+      "prompt_tokens": 2657
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 457,
+      "prompt_tokens": 4204
+    },
+    {
+      "role": "report",
+      "eval_tokens": 4664,
+      "prompt_tokens": 8817
+    }
+  ]
+}

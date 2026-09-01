@@ -1,0 +1,382 @@
+{
+  "patient_id": "CLL-001",
+  "turns": 18,
+  "stop_reason": "doctor",
+  "conversation": [
+    {
+      "role": "doctor",
+      "content": "Hello. I'm Dr. Johnson. What brings you to see me today?",
+      "turn": 1
+    },
+    {
+      "role": "patient",
+      "content": "Good afternoon, doctor. To be honest, I've been feeling pretty tired these days, and my neck has been a bit sore as well. I've also noticed that I've been sweating at night more than usual. My brother mentioned that our family has a history of something like this, so I thought it might be best to come in for a check-up.",
+      "turn": 1
+    },
+    {
+      "role": "doctor",
+      "content": "How long have you been noticing these symptoms, and when did they start?",
+      "turn": 2
+    },
+    {
+      "role": "patient",
+      "content": "The fatigue started about six months ago, but the night sweats are more recent. They've been happening every couple of nights for the past month or so. The soreness in my neck is a newer symptom as well \u2014 it's only been present for the last few weeks.",
+      "turn": 2
+    },
+    {
+      "role": "doctor",
+      "content": "Is the neck soreness related to any movement, or is it present all the time? Do you have any other symptoms like fever, weight changes, or swollen glands?",
+      "turn": 3
+    },
+    {
+      "role": "patient",
+      "content": "The neck soreness seems to be more constant than anything else. It doesn't seem to go away, even when I'm not actively moving my head. As for other symptoms, I haven't noticed any fever, but I do feel like I've lost a bit of weight recently. And yes, I've also felt some swelling in my neck \u2014 not just where the soreness is, but more generally around that area.",
+      "turn": 3
+    },
+    {
+      "role": "doctor",
+      "content": "About how much weight have you lost, and have you noticed it gradually or more suddenly? Have you seen anyone else about these symptoms?",
+      "turn": 4
+    },
+    {
+      "role": "patient",
+      "content": "I'd say I've lost about five pounds over the past month or so. It's not a sudden loss \u2014 it's been a gradual decrease in my usual weight. As for seeing others about these symptoms, no one else has looked at them yet. My primary care physician is the one who referred me to you.",
+      "turn": 4
+    },
+    {
+      "role": "doctor",
+      "content": "Have you been taking any medications or supplements for these symptoms? And can you tell me your age and whether you have any known medical conditions?",
+      "turn": 5
+    },
+    {
+      "role": "patient",
+      "content": "I'm 58 years old, doctor. As far as I know, my only significant medical condition is a family history of something like this. I haven't been taking any medications or supplements specifically for these symptoms. However, I do take an occasional over-the-counter pain reliever when the neck soreness gets particularly bad.",
+      "turn": 5
+    },
+    {
+      "role": "doctor",
+      "content": "You mentioned your brother said there's a family history of something like this. What condition is he referring to?",
+      "turn": 6
+    },
+    {
+      "role": "patient",
+      "content": "He didn't go into specifics, but he did mention that our grandfather had some kind of blood disorder, and I think he might have also mentioned lymphoma as well. I'm not entirely sure about the details, though.",
+      "turn": 6
+    },
+    {
+      "role": "doctor",
+      "content": "Are you currently taking any prescription medications on a regular basis, or have you been prescribed anything recently?",
+      "turn": 7
+    },
+    {
+      "role": "patient",
+      "content": "No, doctor. Aside from the occasional over-the-counter pain reliever for my neck soreness, I don't take any prescription medications at this time. My primary care physician never prescribed me anything before I started seeing you.",
+      "turn": 7
+    },
+    {
+      "role": "doctor",
+      "content": "What do you do for work, and have there been any significant changes in your work routine or stress levels recently?",
+      "turn": 8
+    },
+    {
+      "role": "patient",
+      "content": "I'm a software engineer, doctor. My job can be quite stressful at times, especially when I'm working on tight deadlines or trying to troubleshoot complex issues. Recently, the company I work for has had me put in some longer hours due to a project deadline that's coming up. I'd say my stress levels have been higher than usual over the past few weeks.",
+      "turn": 8
+    },
+    {
+      "role": "doctor",
+      "content": "When you feel the swelling in your neck, does it feel like swollen lymph nodes, or is it more a general sensation of fullness? Can you show me where it feels most prominent?",
+      "turn": 9
+    },
+    {
+      "role": "patient",
+      "content": "It feels more like swollen lymph nodes, doctor. I can feel them when I run my fingers along the sides of my neck. They seem to be most prominent in the area around my Adam's apple, if that helps.",
+      "turn": 9
+    },
+    {
+      "role": "doctor",
+      "content": "Have you noticed if the swollen lymph nodes change size when you're sick, or have they been there consistently? Do they cause any pain when you press on them?",
+      "turn": 10
+    },
+    {
+      "role": "patient",
+      "content": "I haven't really paid close attention to whether the swollen lymph nodes change size when I'm feeling sick or not. But from what I can tell, they seem to be about the same size most of the time. They don't cause me any pain when I press on them \u2014 it's more of a sensation of fullness.",
+      "turn": 10
+    },
+    {
+      "role": "doctor",
+      "content": "What do you think might be causing these symptoms? Have you given any thought to what could be going on?",
+      "turn": 11
+    },
+    {
+      "role": "patient",
+      "content": "To be honest, doctor, I haven't really been able to pinpoint exactly what might be causing all this. My brother mentioned the family history we have as a possible cause, but other than that, I'm not sure what else it could be. I know you said that these symptoms may not necessarily mean anything serious, but they're still concerning enough for me to come in and see you about them.",
+      "turn": 11
+    },
+    {
+      "role": "doctor",
+      "content": "What are your main concerns about what these symptoms might mean? And have you had any discussions with your brother about what treatment might look like if this is something serious?",
+      "turn": 12
+    },
+    {
+      "role": "patient",
+      "content": "My main concern at the moment, doctor, is that these symptoms could be a sign of something more serious. I know you mentioned that it's possible they could just be related to stress or some other more minor issue, but I can't help but worry about the possibility of it being something like lymphoma, given our family history. As for talking to my brother about treatment options, we haven't really gotten that far in our discussions yet. Right now, he's mostly just been filling me in on what our grandfather had and how his diagnosis went.",
+      "turn": 12
+    },
+    {
+      "role": "doctor",
+      "content": "Have you done any research online or talked to anyone else about these symptoms, or do you have any specific ideas about what tests might be needed?",
+      "turn": 13
+    },
+    {
+      "role": "patient",
+      "content": "I've looked up some of the symptoms online, but I haven't found anything that seems like a clear match for what I'm experiencing. As for talking to others about it, no one else has brought up any specific ideas about what tests might be necessary or even if there's something more serious going on. That's why I'm here seeing you now.",
+      "turn": 13
+    },
+    {
+      "role": "doctor",
+      "content": "How would you rate your current stress levels on a scale of 1 to 10, and have you been able to maintain your usual routines despite these symptoms?",
+      "turn": 14
+    },
+    {
+      "role": "patient",
+      "content": "I'd say my stress levels are around an 8 right now, doctor. The job-related stress has definitely been ramping up lately, which I think is contributing to the fatigue and night sweats. As for maintaining my usual routines, it's been more difficult recently. My energy levels just don't seem as high as they used to be, so even getting through the day feels like a bit of an effort at times.",
+      "turn": 14
+    },
+    {
+      "role": "doctor",
+      "content": "Have you noticed any changes in your sleep patterns or appetite, and are there any other physical symptoms that seem to be related to your job stress?",
+      "turn": 15
+    },
+    {
+      "role": "patient",
+      "content": "I haven't noticed any significant changes in my sleep patterns or appetite directly related to the job stress. However, I have been feeling more tired than usual during the day, even if I'm getting enough sleep at night. As for other physical symptoms, aside from the neck soreness and occasional night sweats, I don't think there's anything else that seems to be directly related to my job stress.",
+      "turn": 15
+    },
+    {
+      "role": "doctor",
+      "content": "What are you hoping to get out of today's visit? What would be most helpful for you to hear?",
+      "turn": 16
+    },
+    {
+      "role": "patient",
+      "content": "I'm hoping to find some answers or at least some direction about what might be causing these symptoms, doctor. I think the most helpful thing for me to hear right now would be if there are any specific tests that you'd like me to undergo or any other steps we can take to try and figure out what's going on.",
+      "turn": 16
+    },
+    {
+      "role": "doctor",
+      "content": "Based on what you've described, I'd like to examine your neck and lymph nodes in more detail today. We'll also need to do a thorough physical exam and may recommend some blood tests and possibly imaging to get a clearer picture. Is there anything else you'd like to address or any other questions about what's next?",
+      "turn": 17
+    },
+    {
+      "role": "patient",
+      "content": "No, doctor. That all sounds reasonable given the symptoms I've been experiencing. I'm happy to do whatever is necessary to try and figure out what's going on. If there's anything else you need from me in the meantime, please don't hesitate to let me know.",
+      "turn": 17
+    },
+    {
+      "role": "doctor",
+      "content": "Thank you. We'll start with a physical examination of your neck and lymph nodes, and then I'll arrange for appropriate blood tests and imaging. I'll see you back in my office to discuss the results. Please feel free to call if you have any urgent concerns between now and then. Take care.",
+      "turn": 18
+    },
+    {
+      "role": "patient",
+      "content": "Thank you, doctor. I appreciate your help and expertise in trying to figure out what's going on with these symptoms. I'll be sure to reach out if anything comes up before our next appointment. Have a great day.",
+      "turn": 18
+    }
+  ],
+  "coverage_hint": {},
+  "working_notes": [],
+  "events": [],
+  "usage": [
+    {
+      "role": "doctor",
+      "eval_tokens": 159,
+      "prompt_tokens": 1527
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 74,
+      "prompt_tokens": 1204
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 135,
+      "prompt_tokens": 1763
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 57,
+      "prompt_tokens": 1302
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 153,
+      "prompt_tokens": 1958
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 86,
+      "prompt_tokens": 1402
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 156,
+      "prompt_tokens": 2200
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 65,
+      "prompt_tokens": 1524
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 94,
+      "prompt_tokens": 2424
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 66,
+      "prompt_tokens": 1626
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 109,
+      "prompt_tokens": 2587
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 46,
+      "prompt_tokens": 1723
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 78,
+      "prompt_tokens": 2745
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 46,
+      "prompt_tokens": 1798
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 76,
+      "prompt_tokens": 2872
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 76,
+      "prompt_tokens": 1876
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 114,
+      "prompt_tokens": 3027
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 46,
+      "prompt_tokens": 1999
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 114,
+      "prompt_tokens": 3190
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 67,
+      "prompt_tokens": 2087
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 123,
+      "prompt_tokens": 3374
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 82,
+      "prompt_tokens": 2185
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 114,
+      "prompt_tokens": 3582
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 112,
+      "prompt_tokens": 2309
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 115,
+      "prompt_tokens": 3811
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 73,
+      "prompt_tokens": 2459
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 110,
+      "prompt_tokens": 4002
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 87,
+      "prompt_tokens": 2573
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 109,
+      "prompt_tokens": 4202
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 82,
+      "prompt_tokens": 2698
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 100,
+      "prompt_tokens": 4396
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 67,
+      "prompt_tokens": 2811
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 135,
+      "prompt_tokens": 4566
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 57,
+      "prompt_tokens": 2952
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 326,
+      "prompt_tokens": 4761
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 46,
+      "prompt_tokens": 3079
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 460,
+      "prompt_tokens": 5136
+    },
+    {
+      "role": "report",
+      "eval_tokens": 6024,
+      "prompt_tokens": 10302
+    }
+  ]
+}

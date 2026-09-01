@@ -1,0 +1,242 @@
+{
+  "patient_id": "CLL-001",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "CLL-001",
+    "clinical_summary": "The patient presents with fatigue, throbbing bilateral headaches, difficulty concentrating, mild neck stiffness, and sleep disturbance over 2-3 weeks. They express moderate concern about the cause but not overwhelming distress. Their illness beliefs appear to be centered on symptoms rather than a named condition, with limited understanding of the underlying cause and minimal discussion of personal or treatment control. Given the biomedical communication style, the patient has not raised psychosocial themes or explored emotional meaning beyond expressing general worry. The patient has not discussed beliefs about medications or treatment, as none have been prescribed.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "I've been feeling really tired lately, even after a full night's sleep",
+            "turn": 1
+          },
+          {
+            "quote": "I do find it harder to concentrate at work",
+            "turn": 2
+          },
+          {
+            "quote": "It's not like me at all",
+            "turn": 1
+          },
+          {
+            "quote": "I just can't seem to shake it off",
+            "turn": 1
+          },
+          {
+            "quote": "I do find myself waking up more frequently than usual",
+            "turn": 7
+          },
+          {
+            "quote": "I still wake up feeling a bit groggy and not entirely rested",
+            "turn": 7
+          },
+          {
+            "quote": "I've been eating less than usual",
+            "turn": 7
+          }
+        ],
+        "reasoning": "The patient reports fatigue, difficulty concentrating, sleep disturbance, and decreased appetite. They say 'It's not like me at all' and 'I just can't seem to shake it off,' indicating the illness has changed their usual state. They've had to adapt their work performance (harder to concentrate). This is moderate to significant impact on daily functioning.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "I've been feeling tired for a few weeks now",
+            "turn": 2
+          },
+          {
+            "quote": "The headaches started about the same time",
+            "turn": 2
+          },
+          {
+            "quote": "It's not like me at all and I just can't seem to shake it off",
+            "turn": 1
+          },
+          {
+            "quote": "The headaches started before things got too crazy at work though",
+            "turn": 6
+          }
+        ],
+        "reasoning": "The patient describes a 2-3 week duration. They say 'can't seem to shake it off' which suggests they expect it to continue. They don't express a clear expectation about duration. The fact that symptoms started before work stress suggests they don't attribute it to a temporary stressor.",
+        "score": 4.0,
+        "confidence": 0.6
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "When I try to sleep it off, I usually feel somewhat better after resting",
+            "turn": 5
+          },
+          {
+            "quote": "Changing positions or moving around doesn't really make much of a difference either way",
+            "turn": 5
+          },
+          {
+            "quote": "I do notice some mild stiffness in my neck every now and then",
+            "turn": 6
+          }
+        ],
+        "reasoning": "The patient mentions rest helps headaches, which suggests some recognition of self-directed management. However, they don't describe any active management strategies beyond rest. They don't express belief in their ability to influence the course of the illness.",
+        "score": 2.0,
+        "confidence": 0.7
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [],
+        "reasoning": "No discussion of treatment effectiveness. The patient has not been prescribed anything that would require them to form beliefs about treatment control.",
+        "score": null,
+        "confidence": 0.0
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "I've been feeling really tired lately, even after a full night's sleep",
+            "turn": 1
+          },
+          {
+            "quote": "I've been experiencing some headaches too",
+            "turn": 1
+          },
+          {
+            "quote": "It's not like me at all",
+            "turn": 1
+          },
+          {
+            "quote": "I do find it harder to concentrate at work",
+            "turn": 2
+          },
+          {
+            "quote": "my mind seems to wander more than usual",
+            "turn": 2
+          }
+        ],
+        "reasoning": "The patient identifies with symptoms (tiredness, headaches, difficulty concentrating) rather than a named condition. They describe multiple symptoms that are present most days. The phrase 'It's not like me at all' suggests these symptoms are significant and noticeable.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "I'm worried about what might be causing this change in my health",
+            "turn": 1
+          },
+          {
+            "quote": "It's not like me at all",
+            "turn": 1
+          },
+          {
+            "quote": "I just can't seem to shake it off",
+            "turn": 1
+          },
+          {
+            "quote": "The headaches are bothering me quite a bit",
+            "turn": 4
+          }
+        ],
+        "reasoning": "The patient expresses worry about the cause and says the headaches 'bother me quite a bit.' They describe the symptoms as 'not like me at all,' indicating concern. However, they don't express frequent, intrusive worry that shapes decisions.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I'm worried about what might be causing this change in my health",
+            "turn": 1
+          },
+          {
+            "quote": "I just can't seem to shake it off",
+            "turn": 1
+          },
+          {
+            "quote": "I do find it harder to concentrate at work",
+            "turn": 2
+          },
+          {
+            "quote": "my mind seems to wander more than usual",
+            "turn": 2
+          },
+          {
+            "quote": "The headaches started before things got too crazy at work though",
+            "turn": 6
+          }
+        ],
+        "reasoning": "The patient doesn't have a clear understanding of what is happening to them. They express worry about the cause and say they 'can't seem to shake it off,' but they don't explain the mechanism or why these symptoms are occurring. They mention the headaches started before work stress, which suggests some attempt to understand causation, but they don't have a coherent explanation.",
+        "score": 2.0,
+        "confidence": 0.8
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "I'm worried about what might be causing this change in my health",
+            "turn": 1
+          },
+          {
+            "quote": "It's not like me at all",
+            "turn": 1
+          },
+          {
+            "quote": "I just can't seem to shake it off",
+            "turn": 1
+          },
+          {
+            "quote": "The headaches are bothering me quite a bit",
+            "turn": 4
+          },
+          {
+            "quote": "I do find myself waking up more frequently than usual",
+            "turn": 7
+          },
+          {
+            "quote": "I still wake up feeling a bit groggy and not entirely rested",
+            "turn": 7
+          }
+        ],
+        "reasoning": "The patient expresses worry and concern. They describe the symptoms as 'not like me at all,' which suggests emotional impact. They also report sleep disturbance, which is an emotional/psychological effect. However, they don't express strong emotional distress beyond this.",
+        "score": 4.0,
+        "confidence": 0.7
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [],
+        "reasoning": "No discussion of the need for prescribed medication. The patient has not been prescribed anything, so this dimension is not applicable.",
+        "score": null,
+        "confidence": 0.0
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [],
+        "reasoning": "No discussion of concerns about prescribed medication. Not applicable.",
+        "score": null,
+        "confidence": 0.0
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [],
+        "reasoning": "Never raised, so no belief can be inferred.",
+        "score": null,
+        "confidence": 0.0
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "Never raised, so no belief can be inferred.",
+        "score": null,
+        "confidence": 0.0
+      }
+    },
+    "causes": [],
+    "causes_evidence": []
+  }
+}

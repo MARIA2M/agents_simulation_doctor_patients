@@ -1,0 +1,223 @@
+{
+  "patient_id": "CLL-003",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "CLL-003",
+    "clinical_summary": "A 50-year-old man with a few years of diagnosis with Chronic Lymphocytic Leukemia (CLL) in early stage, managed with 'watch and wait' - regular check-ups and blood tests, no active treatment. He presents with a small, tender lump in his neck that his wife noticed 2 weeks ago, and fatigue that feels different from his usual post-work tiredness - more of an overall sluggishness lasting throughout the day. He's been monitoring the lump himself and has been coming for regular check-ups. He understands his condition well and is actively engaged in managing his health.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "it hasn't really affected my daily life much up until now",
+            "turn": 4
+          },
+          {
+            "quote": "The occasional fatigue after work has been the most noticeable change",
+            "turn": 4
+          },
+          {
+            "quote": "The fatigue I've been experiencing lately feels somewhat different from my usual post-work tiredness. It's more of an overall feeling of sluggishness that lasts throughout the day",
+            "turn": 5
+          }
+        ],
+        "reasoning": "The patient describes minimal impact on daily life overall, with only occasional fatigue being the most noticeable change. He's still managing his usual roles and activities, just being more aware of his energy levels.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "While I understand that CLL is a chronic condition and may never go away completely",
+            "turn": 4
+          },
+          {
+            "quote": "Since my CLL is in an early stage and isn't showing many signs of progression yet",
+            "turn": 11
+          },
+          {
+            "quote": "I've been living with this approach for a few years now",
+            "turn": 11
+          }
+        ],
+        "reasoning": "The patient understands CLL as a chronic condition that may never go away completely, but also recognizes they're in early stage with minimal symptoms. They're planning for ongoing monitoring rather than a cure.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I've been coming for regular check-ups and blood tests",
+            "turn": 4
+          },
+          {
+            "quote": "I've been doing so on my own when I remember",
+            "turn": 5
+          },
+          {
+            "quote": "I've been more aware of how much energy I have and try to manage it accordingly",
+            "turn": 5
+          },
+          {
+            "quote": "I'm taking a responsible role in your health",
+            "turn": 13
+          }
+        ],
+        "reasoning": "The patient is actively monitoring his condition through regular check-ups, blood tests, and energy management. He's engaged in managing his condition.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "the doctors have advised against starting medication or any other active treatment",
+            "turn": 11
+          },
+          {
+            "quote": "we're just keeping an eye on my blood counts at regular intervals",
+            "turn": 11
+          },
+          {
+            "quote": "I'm not undergoing intense treatments unless they're really needed",
+            "turn": 11
+          }
+        ],
+        "reasoning": "The patient understands that active treatment is not currently needed because CLL is in early stage and not showing progression. He trusts the doctors' decisions about when to treat.",
+        "score": 6.0,
+        "confidence": 0.9
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "I was diagnosed with Chronic Lymphocytic Leukemia (CLL)",
+            "turn": 4
+          },
+          {
+            "quote": "my chronic illness",
+            "turn": 3
+          },
+          {
+            "quote": "CLL",
+            "turn": 4
+          }
+        ],
+        "reasoning": "The patient clearly identifies with the label 'CLL' and views it as his chronic illness.",
+        "score": 4.0,
+        "confidence": 0.9
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "I'm worried about it",
+            "turn": 1
+          },
+          {
+            "quote": "I'm mostly worried about what might be causing it",
+            "turn": 3
+          },
+          {
+            "quote": "it is causing me to worry about the possibility of complications or connections to my CLL",
+            "turn": 6
+          },
+          {
+            "quote": "it can also be challenging at times when I experience new symptoms or worry about what might happen down the line",
+            "turn": 11
+          }
+        ],
+        "reasoning": "The patient acknowledges being worried about the lump and its connection to his CLL. He finds it challenging when experiencing new symptoms, but it's not keeping him up at night.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I was diagnosed with Chronic Lymphocytic Leukemia (CLL) a few years ago",
+            "turn": 4
+          },
+          {
+            "quote": "the doctors told me to watch and wait at the time",
+            "turn": 4
+          },
+          {
+            "quote": "While I understand that CLL is a chronic condition and may never go away completely",
+            "turn": 4
+          },
+          {
+            "quote": "The watch and wait approach, as far as I understand it, is a way of monitoring my condition without intervening with aggressive treatments right away",
+            "turn": 11
+          },
+          {
+            "quote": "Since my CLL is in an early stage and isn't showing many signs of progression yet, the doctors have advised against starting medication or any other active treatment",
+            "turn": 11
+          }
+        ],
+        "reasoning": "The patient has a good understanding of his condition, the 'watch and wait' approach, and why it's being used. He can articulate the rationale for monitoring without active treatment.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "I'm worried about it",
+            "turn": 1
+          },
+          {
+            "quote": "it is causing me to worry about the possibility of complications or connections to my CLL",
+            "turn": 6
+          },
+          {
+            "quote": "it can also be challenging at times when I experience new symptoms or worry about what might happen down the line",
+            "turn": 11
+          },
+          {
+            "quote": "I'm taking a responsible role in your health",
+            "turn": 13
+          }
+        ],
+        "reasoning": "The patient acknowledges worry and finds it challenging when experiencing new symptoms, but he's able to discuss it openly and is taking a responsible role in managing his health.",
+        "score": 4.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [],
+        "reasoning": "The patient doesn't currently have active treatment, so there's no specific belief about his own prescribed medication's necessity. He understands that medication is not needed right now because CLL is in early stage.",
+        "score": null,
+        "confidence": 0.9
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [],
+        "reasoning": "The patient hasn't expressed any specific concerns about medication. He's not on active treatment right now, so there's no medication to have concerns about.",
+        "score": null,
+        "confidence": 0.9
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [],
+        "reasoning": "The patient hasn't expressed any views on medicines as a class. He's not on active treatment right now, so there's no basis for forming a general belief.",
+        "score": null,
+        "confidence": 0.9
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "The patient hasn't expressed any views on whether doctors prescribe too readily. He trusts the doctors' decisions about when to treat.",
+        "score": null,
+        "confidence": 0.9
+      }
+    },
+    "causes": [],
+    "causes_evidence": []
+  }
+}

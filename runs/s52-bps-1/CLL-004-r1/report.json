@@ -1,0 +1,319 @@
+{
+  "patient_id": "CLL-004",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "CLL-004",
+    "clinical_summary": "Patient with Chronic Lymphocytic Leukemia (CLL) on Venetoclax 400mg daily (maintenance) and Obinutuzumab (initial cycles completed). Experiences fatigue, recurrent infections (4-5 times/year), swollen lymph nodes, and unintentional weight loss. The illness has significantly impacted work (can barely get through a shift), relationships (partner supportive but can't help with physical aspects; friends have been insensitive), and activities (used to enjoy hiking and gardening, now short walks are exhausting; avoiding crowded places due to fear of infections). Patient feels overwhelmed, uncertain about the long-term future, and worried about long-term side effects and the possibility of needing additional treatments.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "ever since my diagnosis of Chronic Lymphocytic Leukemia, it feels like the illness has taken over every aspect of my life",
+            "turn": 1
+          },
+          {
+            "quote": "At work, I used to be able to handle a lot of tasks and meet tight deadlines. Now, even getting through a full day's work feels like an accomplishment",
+            "turn": 4
+          },
+          {
+            "quote": "I used to enjoy hiking and gardening quite a bit. Now, even going for short walks can be exhausting",
+            "turn": 4
+          },
+          {
+            "quote": "I've been avoiding crowded places as much as possible",
+            "turn": 4
+          }
+        ],
+        "reasoning": "Patient explicitly states the illness has 'taken over every aspect of my life' and describes significant functional impairment - work capacity reduced to barely getting through a shift, loss of previously enjoyed activities, and avoidance behaviors. This aligns with an 8 where a major role is lost or substantially reduced.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "It's a constant battle that doesn't seem to have an end in sight",
+            "turn": 5
+          },
+          {
+            "quote": "the uncertainty of how things might unfold in the long run keeps nagging at me",
+            "turn": 3
+          },
+          {
+            "quote": "the possibility of needing additional lines of therapy",
+            "turn": 7
+          },
+          {
+            "quote": "It's still hard to imagine facing even more challenges down the line",
+            "turn": 7
+          }
+        ],
+        "reasoning": "Patient describes the illness as having 'no end in sight' and expresses ongoing uncertainty about the future. They worry about needing additional treatments 'down the line.' This aligns with an 8 where plans are built around the assumption it continues.",
+        "score": 8.0,
+        "confidence": 0.85
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I feel like I don't really have a choice but to continue with the treatment",
+            "turn": 3
+          },
+          {
+            "quote": "I trust you and your team at the hospital when it comes to prescribing medications, so I will keep going as advised",
+            "turn": 3
+          },
+          {
+            "quote": "I'm also getting my blood work done monthly, as you advised",
+            "turn": 2
+          }
+        ],
+        "reasoning": "Patient expresses limited personal control, stating they 'don't really have a choice' about continuing treatment. They trust the medical team and follow their advice (monthly bloodwork). However, they are actively engaging in self-management by following the treatment regimen. This aligns with a 4 where they do what is asked but doubt it changes the course.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "It seems to be going well",
+            "turn": 2
+          },
+          {
+            "quote": "Venetoclax is a strong option in managing CLL",
+            "turn": 3
+          },
+          {
+            "quote": "the uncertainty of how things might unfold in the long run keeps nagging at me",
+            "turn": 3
+          }
+        ],
+        "reasoning": "Patient acknowledges the treatment is working ('seems to be going well') and that Venetoclax is a strong option. However, they are also worried about the long-term future and uncertainty. This suggests they see some benefit but not complete control, aligning with a 6 where they see a clear benefit that is nonetheless partial.",
+        "score": 6.0,
+        "confidence": 0.75
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "ever since my diagnosis of Chronic Lymphocytic Leukemia",
+            "turn": 1
+          },
+          {
+            "quote": "When I hear 'CLL,' I immediately think of the challenges it's brought into my life — the fatigue, recurrent infections, swollen lymph nodes, weight loss, night sweats, and early satiety",
+            "turn": 5
+          },
+          {
+            "quote": "It's a constant battle that doesn't seem to have an end in sight",
+            "turn": 5
+          }
+        ],
+        "reasoning": "Patient clearly identifies with CLL and associates it strongly with their symptoms. They list multiple symptoms and describe it as a 'constant battle.' This aligns with an 8 where symptoms are daily and intrusive.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "It's quite a concern really",
+            "turn": 1
+          },
+          {
+            "quote": "the uncertainty of how things might unfold in the long run keeps nagging at me",
+            "turn": 3
+          },
+          {
+            "quote": "I'm still dealing with quite a bit of uncertainty and worry",
+            "turn": 7
+          },
+          {
+            "quote": "the possibility of needing additional lines of therapy",
+            "turn": 7
+          },
+          {
+            "quote": "It's still hard to imagine facing even more challenges down the line",
+            "turn": 7
+          }
+        ],
+        "reasoning": "Patient expresses significant worry and uncertainty. They describe it as 'quite a concern,' worry about the long-term future, and are concerned about needing additional treatments. The worry is frequent and shapes their thinking about the future, aligning with an 8 where worry is frequent and intrudes into matters unrelated to the illness.",
+        "score": 8.0,
+        "confidence": 0.85
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I know it has something to do with my immune system being compromised or not functioning correctly",
+            "turn": 5
+          },
+          {
+            "quote": "the truth is I don't fully understand it myself",
+            "turn": 5
+          },
+          {
+            "quote": "it's all quite overwhelming and confusing",
+            "turn": 5
+          },
+          {
+            "quote": "There are times when I feel like there must be some sort of mistake — why am I living with this disease?",
+            "turn": 5
+          }
+        ],
+        "reasoning": "Patient has some understanding that CLL is related to immune system compromise, but they explicitly state they 'don't fully understand it myself' and find it 'overwhelming and confusing.' They question why they have the disease. This aligns with a 4 where they know the label and treatment but not what either is for.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "It feels like the illness has taken over every aspect of my life",
+            "turn": 1
+          },
+          {
+            "quote": "It's been a tough time, doctor",
+            "turn": 1
+          },
+          {
+            "quote": "I can't deny that I have some concerns and worries",
+            "turn": 3
+          },
+          {
+            "quote": "the uncertainty of how things might unfold in the long run keeps nagging at me",
+            "turn": 3
+          },
+          {
+            "quote": "It's completely normal for you to have those feelings of confusion and frustration",
+            "turn": 5
+          },
+          {
+            "quote": "There are times when I feel like there must be some sort of mistake — why am I living with this disease?",
+            "turn": 5
+          },
+          {
+            "quote": "I'm still dealing with quite a bit of uncertainty and worry",
+            "turn": 7
+          },
+          {
+            "quote": "It's still hard to imagine facing even more challenges down the line",
+            "turn": 7
+          },
+          {
+            "quote": "Your empathy and understanding have made a difficult time feel a little more manageable",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient expresses significant emotional distress - feeling overwhelmed, describing it as a 'tough time,' experiencing confusion and frustration, questioning why they have the disease, and dealing with uncertainty and worry. The emotion is prominent and affects how they speak about their situation, aligning with an 8 where emotion is prominent and affects what they do.",
+        "score": 8.0,
+        "confidence": 0.85
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "I feel like I don't really have a choice but to continue with the treatment",
+            "turn": 3
+          },
+          {
+            "quote": "I trust you and your team at the hospital when it comes to prescribing medications, so I will keep going as advised",
+            "turn": 3
+          },
+          {
+            "quote": "I'm also getting my blood work done monthly, as you advised",
+            "turn": 2
+          }
+        ],
+        "reasoning": "Patient acknowledges the necessity of continuing treatment, stating they 'don't really have a choice' and will 'keep going as advised.' They are following the treatment regimen and monitoring schedule. However, this is qualified by their concerns about side effects and uncertainty. This aligns with a 4 where they treat it as important and organise around it.",
+        "score": 4.0,
+        "confidence": 0.75
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "I can't deny that I have some concerns and worries about being on this medication long-term",
+            "turn": 3
+          },
+          {
+            "quote": "The side effects, especially those headaches, are quite bothersome",
+            "turn": 3
+          },
+          {
+            "quote": "sometimes, I wonder if it's worth it all — managing one issue while creating others",
+            "turn": 3
+          },
+          {
+            "quote": "the uncertainty of how things might unfold in the long run keeps nagging at me",
+            "turn": 3
+          },
+          {
+            "quote": "the possibility of needing additional lines of therapy",
+            "turn": 7
+          },
+          {
+            "quote": "It's still hard to imagine facing even more challenges down the line",
+            "turn": 7
+          }
+        ],
+        "reasoning": "Patient expresses clear concerns about the medication - side effects (headaches), wondering if it's 'worth it all,' and worry about 'creating other issues.' They also worry about the long-term future and needing additional treatments. These concerns are recurring and affect their thinking about the treatment, aligning with a 4 where concerns recur unprompted.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "sometimes, I wonder if it's worth it all — managing one issue while creating others",
+            "turn": 3
+          }
+        ],
+        "reasoning": "Patient expresses concern about the medication 'creating other issues,' which suggests some belief that medicines may cause harm beyond the intended therapeutic effect. However, this is specific to their own medication rather than medicines in general. This aligns with a 3 where there is mild generalised caution about taking things long-term.",
+        "score": 3.0,
+        "confidence": 0.7
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "Patient never expressed concerns about doctors prescribing too readily. They trust their medical team and follow their advice.",
+        "score": null,
+        "confidence": 0.0
+      }
+    },
+    "causes": [
+      "exposure to Agent Orange during military service in Vietnam",
+      "family history of various cancers",
+      "stress and anxiety"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "during my time in the military service in Vietnam, I was exposed to Agent Orange",
+        "turn": 6
+      },
+      {
+        "quote": "It's been suggested that exposure to chemicals like those might increase the risk of developing certain types of cancer, including leukemia",
+        "turn": 6
+      },
+      {
+        "quote": "there's a family history of various cancers — not specifically CLL, but it makes me wonder if there could be some underlying genetic factors at play",
+        "turn": 6
+      },
+      {
+        "quote": "I've always had a tendency towards stress and anxiety",
+        "turn": 6
+      },
+      {
+        "quote": "Could that have somehow contributed to my immune system being compromised?",
+        "turn": 6
+      },
+      {
+        "quote": "Of course, these are all just theories and guesses on my part",
+        "turn": 6
+      }
+    ]
+  }
+}

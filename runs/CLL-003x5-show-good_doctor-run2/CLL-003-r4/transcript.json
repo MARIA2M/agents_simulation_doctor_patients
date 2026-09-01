@@ -1,0 +1,262 @@
+{
+  "patient_id": "CLL-003",
+  "turns": 12,
+  "stop_reason": "doctor",
+  "conversation": [
+    {
+      "role": "doctor",
+      "content": "Hello, it's lovely to meet you. I understand you're here today because you wanted to discuss something with me \u2014 what's on your mind?",
+      "turn": 1
+    },
+    {
+      "role": "patient",
+      "content": "Thank you for seeing me, doctor. To be honest, I've been feeling more tired than usual lately after work, and my wife noticed a small lump in my neck. We're both a bit worried about it, especially since we heard that early detection is important.",
+      "turn": 1
+    },
+    {
+      "role": "doctor",
+      "content": "I'm glad you've come in. A lump in the neck is something we'd want to take seriously, so I'm glad you mentioned it. When did your wife first notice it? And have you noticed anything else \u2014 any other changes in your neck area, or any pain or swelling elsewhere?",
+      "turn": 2
+    },
+    {
+      "role": "patient",
+      "content": "She noticed the lump a few weeks ago when we were getting ready for bed. I haven't really noticed anything else different about my neck. As for other changes, I can say that sometimes my joints ache a bit more than usual, but nothing too out of the ordinary.",
+      "turn": 2
+    },
+    {
+      "role": "doctor",
+      "content": "A few weeks \u2014 that's helpful timing. Can you tell me a bit more about the lump? Is it something you can feel easily, or is it more just something your wife noticed? And has it changed at all since she first saw it \u2014 bigger, harder, anything like that? And on the whole, what have you been thinking might be going on? Do you have any ideas, or are you quite unsure?",
+      "turn": 3
+    },
+    {
+      "role": "patient",
+      "content": "The lump isn't something I can feel easily, but my wife said it's about the size of a pea and feels firm. She also mentioned that it doesn't seem to be tender when she touches it. It hasn't changed visibly since she first noticed it.\n\nAs for what might be going on, I've been doing some research online and I'm aware that neck lumps can be caused by various things \u2014 infections, cysts, or even thyroid issues. I'm not sure which one it could be, but I know it's important to get it checked out just in case.",
+      "turn": 3
+    },
+    {
+      "role": "doctor",
+      "content": "It's good you've done some reading \u2014 that shows you're trying to understand. I can see you're being quite practical about it. How have you been feeling about all of this, overall? Has it been on your mind a lot, or has it been something you've been able to push to the back of your mind? And how has it been affecting your day-to-day life \u2014 anything you've had to change because of it?",
+      "turn": 4
+    },
+    {
+      "role": "patient",
+      "content": "It's definitely been weighing on my mind quite a bit, doctor. I've been feeling more stressed than usual, and some days it's been harder to focus at work. But overall, I try not to let it take over too much. In terms of day-to-day life changes, I've been trying to get more rest when I can and maybe cutting back on some of the things I do after work. Nothing too drastic, though.",
+      "turn": 4
+    },
+    {
+      "role": "doctor",
+      "content": "It sounds like it's been quite stressful for you, and it's understandable that it's been on your mind. I can see you're trying to manage it, even if it's not easy. When you think about this lump and what we might be able to do about it \u2014 do you feel like there's something that can be done? Or do you feel like there's only so much that can be done, and it's largely out of your hands?",
+      "turn": 5
+    },
+    {
+      "role": "patient",
+      "content": "I'd like to believe that there's something that can be done. I know the lump is something that needs further investigation, and I trust in your expertise to help figure out what's going on. In some ways, though, it feels a bit uncertain \u2014 like we're just starting this journey together.",
+      "turn": 5
+    },
+    {
+      "role": "doctor",
+      "content": "It's natural to feel uncertain when you're just starting this process \u2014 that's how most people feel. I'm glad you trust that we can work through this together. I'm curious \u2014 when you think about what might have caused this, do you have any sense of what could have brought it on? Or is it just one of those things that seems to have happened without an obvious cause? And thinking ahead, do you see this as something that will resolve on its own, or something you'll be dealing with over the longer term?",
+      "turn": 6
+    },
+    {
+      "role": "patient",
+      "content": "I've been doing some research and I know that genetics can play a role in some cases, especially since my father had CLL. But other than that, I don't have any specific ideas about what might have caused it. As for whether it will resolve on its own or not, I guess it depends on what the final diagnosis is. If there's something treatable like an infection, maybe it could clear up with time. But if it's something more serious, then it might be a longer-term concern.",
+      "turn": 6
+    },
+    {
+      "role": "doctor",
+      "content": "Your father having CLL is an important piece of the puzzle \u2014 that makes sense why you'd be thinking about genetics. How have you been feeling about that connection? Has the idea of something like that running in the family crossed your mind, or has that been something you've tried not to think about too much? And when you talk about \"a lump,\" how do you think of it \u2014 is that how you see it, or do you have another way you'd describe it to someone?",
+      "turn": 7
+    },
+    {
+      "role": "patient",
+      "content": "It's definitely been on my mind, especially since CLL is hereditary. It's a bit scary, but I've also been trying not to dwell on it too much. As for the lump itself, I guess \"lump\" is how I'd describe it to someone \u2014 it's a firm, small thing in my neck that's noticeable when I run my fingers over it.",
+      "turn": 7
+    },
+    {
+      "role": "doctor",
+      "content": "It's understandable that the connection to your father would be worrying \u2014 that's a lot to carry. And it sounds like you're trying to balance that worry with a desire not to let it consume you. I'm curious about your general views on treatment. When you think about medication or other treatments \u2014 do you feel like they're something you'd need, or do you worry about them in any way? And have you ever felt like doctors might prescribe things too readily?",
+      "turn": 8
+    },
+    {
+      "role": "patient",
+      "content": "I believe that medications and treatments can be very helpful when used appropriately. I trust the doctors I see to help me navigate those decisions, based on my individual situation. But at times, I do wonder if there's a risk of doctors prescribing things too readily \u2014 especially since not every condition has a perfect solution. That said, I also know that it's important for me to listen to their recommendations and weigh the pros and cons before making any decisions.",
+      "turn": 8
+    },
+    {
+      "role": "doctor",
+      "content": "That's a sensible approach \u2014 listening to recommendations and weighing them makes a lot of sense. I'm wondering, more generally: when you think about medicines in general, do you ever feel like they can be harmful, or are you mostly comfortable with them? And are there any specific things about taking medication that worry you \u2014 side effects, or anything like that?",
+      "turn": 9
+    },
+    {
+      "role": "patient",
+      "content": "I understand that no medicine is without its risks. But I also believe that the benefits of treatment often outweigh the potential harm. When it comes to side effects, they're definitely something I think about. It's important for me to be aware of them and monitor any changes in my body that might be related to medication. But overall, I trust the doctors I see to help manage those risks and make sure I'm on the right medications at the right time.",
+      "turn": 9
+    },
+    {
+      "role": "doctor",
+      "content": "Thank you for sharing all of that with me. It sounds like this has been a stressful time, and I really appreciate your honesty about how it's been affecting you \u2014 the tiredness, the difficulty focusing at work, and the worry about your father's history. You've been thinking quite carefully about it, which is good.\n\nTo summarise what we've talked about: a lump in your neck that your wife noticed a few weeks ago, firm and about the size of a pea, not tender and not changed. You've been doing some research and thinking about possible causes, including genetics given your father's CLL. You've felt stressed and worried about it, and it's been affecting your daily life a bit \u2014 you've been trying to get more rest and cut back on activities. You feel like there's something that can be done and trust that we can work through this together, but you also feel some uncertainty about what the future holds.\n\nNext steps: I'd like to examine the lump and have a thorough look at your neck area. I may also want to do some blood tests and perhaps an ultrasound or referral for further imaging to get a clearer picture. We'll need to rule out different possibilities and see what's going on. Would you like to go ahead with that?",
+      "turn": 10
+    },
+    {
+      "role": "patient",
+      "content": "Thank you, doctor, for taking the time to listen and understand my situation. I appreciate your compassion and expertise. Yes, I'd definitely like to go ahead with further examination and testing. Whatever it takes to figure out what's going on, I'm willing to do it.",
+      "turn": 10
+    },
+    {
+      "role": "doctor",
+      "content": "I'm glad you're comfortable moving forward. We'll do a thorough examination today and then decide what tests make the most sense. Take your time \u2014 there's no rush, and I'm here to answer any questions you might have along the way. Thank you for trusting me with this, and I'll see you in a little while.",
+      "turn": 11
+    },
+    {
+      "role": "patient",
+      "content": "Thank you, doctor. You've been very patient and understanding. I appreciate that more than words can say, and I look forward to seeing you again soon.",
+      "turn": 11
+    },
+    {
+      "role": "doctor",
+      "content": "Take care, and I'll see you in a little while.",
+      "turn": 12
+    },
+    {
+      "role": "patient",
+      "content": "You too, doctor. Have a good day.",
+      "turn": 12
+    }
+  ],
+  "coverage_hint": {},
+  "working_notes": [],
+  "events": [],
+  "usage": [
+    {
+      "role": "doctor",
+      "eval_tokens": 108,
+      "prompt_tokens": 1651
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 55,
+      "prompt_tokens": 1192
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 224,
+      "prompt_tokens": 1861
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 56,
+      "prompt_tokens": 1316
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 263,
+      "prompt_tokens": 2188
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 119,
+      "prompt_tokens": 1466
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 285,
+      "prompt_tokens": 2617
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 90,
+      "prompt_tokens": 1683
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 242,
+      "prompt_tokens": 3039
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 62,
+      "prompt_tokens": 1875
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 278,
+      "prompt_tokens": 3390
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 104,
+      "prompt_tokens": 2054
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 268,
+      "prompt_tokens": 3819
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 78,
+      "prompt_tokens": 2265
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 268,
+      "prompt_tokens": 4212
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 91,
+      "prompt_tokens": 2446
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 221,
+      "prompt_tokens": 4618
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 93,
+      "prompt_tokens": 2618
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 698,
+      "prompt_tokens": 4979
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 57,
+      "prompt_tokens": 2978
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 177,
+      "prompt_tokens": 5781
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 33,
+      "prompt_tokens": 3112
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 131,
+      "prompt_tokens": 6038
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 11,
+      "prompt_tokens": 3167
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 1149,
+      "prompt_tokens": 6227
+    },
+    {
+      "role": "report",
+      "eval_tokens": 3881,
+      "prompt_tokens": 12069
+    }
+  ]
+}

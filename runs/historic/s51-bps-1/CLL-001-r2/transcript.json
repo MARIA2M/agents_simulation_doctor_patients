@@ -1,0 +1,249 @@
+{
+  "patient_id": "CLL-001",
+  "turns": 11,
+  "stop_reason": "doctor",
+  "conversation": [
+    {
+      "role": "doctor",
+      "content": "Hello, thank you for coming in. I'd like to start by finding out what brings you to see me today \u2014 what's on your mind, and how can I help you?",
+      "turn": 1
+    },
+    {
+      "role": "patient",
+      "content": "It's been quite challenging lately, doctor. My fatigue is really getting in the way of my normal routine. I've noticed that I'm not able to put in as many hours at work as before and even taking care of my family has become more difficult. It's like I have this constant weight on me that doesn't seem to go away.",
+      "turn": 1
+    },
+    {
+      "role": "doctor",
+      "content": "That sounds really difficult, and it's understandable that you're feeling the impact on both work and your family life. When did this fatigue first start becoming a significant issue for you, and have you noticed any changes in other aspects of your health alongside it?",
+      "turn": 2
+    },
+    {
+      "role": "patient",
+      "content": "It started about two months ago, doctor. Before that, I was managing my tasks just fine. But now, even getting out of bed in the morning is an effort. As for other aspects of my health, occasionally I get these night sweats that leave me feeling drained during the day. And I've noticed that the lymph nodes in my neck have become a bit more palpable than before.",
+      "turn": 2
+    },
+    {
+      "role": "doctor",
+      "content": "Two months is a significant change, and it makes sense that you're feeling the effects. The night sweats and those swollen lymph nodes in your neck \u2014 when did you first notice those becoming more prominent, and have you had them checked by anyone yet?",
+      "turn": 3
+    },
+    {
+      "role": "patient",
+      "content": "The night sweats started around the same time as the fatigue, but I haven't been keeping track of their exact onset. But the nodes in my neck, they've actually been noticeable for a few years now, on and off. I mentioned it to my primary care doctor when I noticed the swelling was getting more persistent. They told me that CLL is something we often see in older people and that monitoring blood counts would be important.",
+      "turn": 3
+    },
+    {
+      "role": "doctor",
+      "content": "Thank you for sharing that background. CLL is something you've been dealing with for a few years, then \u2014 so this fatigue is a fairly recent change. Have you had regular blood work done since that conversation with your primary care doctor, and are you currently taking any medication for the CLL or for symptom management?",
+      "turn": 4
+    },
+    {
+      "role": "patient",
+      "content": "Yes, I have been getting my blood regularly checked as my primary care doctor advised. But up until now, no specific treatment has been prescribed. We've mostly been watchful, waiting to see if anything changes further. It's just the fatigue and the night sweats that are becoming harder to manage as time goes on.",
+      "turn": 4
+    },
+    {
+      "role": "doctor",
+      "content": "It's understandable that you're feeling unsettled when you're used to a certain level of functioning and now find yourself struggling more. You've been under careful monitoring without active treatment so far \u2014 how do you feel about that approach, and what are you hoping to get addressed in this visit today?",
+      "turn": 5
+    },
+    {
+      "role": "patient",
+      "content": "I guess I still hope for some relief from these symptoms, doctor. I understand CLL can be a slow-progressing illness, but it's the impact on my daily life that's hard right now. I wonder if there might be something we could do, even if just to alleviate some of this exhaustion I'm feeling.",
+      "turn": 5
+    },
+    {
+      "role": "doctor",
+      "content": "It makes sense that you want some relief when this is affecting how you live your life. What has it been like for you emotionally, dealing with this fatigue and knowing that CLL is something you're living with? Have you had a chance to talk with anyone about how this is affecting you beyond just the physical side?",
+      "turn": 6
+    },
+    {
+      "role": "patient",
+      "content": "Emotionally, it's quite draining, doctor. Knowing that I have this chronic condition makes me worry about my future, especially if these symptoms are here to stay. Sometimes I feel anxious and overwhelmed by it all. And while I've discussed some of this with family and friends, professional support for managing the emotional aspect of living with CLL would be helpful.",
+      "turn": 6
+    },
+    {
+      "role": "doctor",
+      "content": "It takes courage to talk about that side of things, and having emotional support alongside the medical care is really important. You mentioned CLL is something you've been aware of for a few years \u2014 can you tell me a bit about what you understand it is and how it developed in your body? Do you feel like you have a clear picture of what's happening, or are there still some parts that are uncertain to you?",
+      "turn": 7
+    },
+    {
+      "role": "patient",
+      "content": "From my understanding, CLL is an autoimmune disease affecting the blood cells in my body. I believe genetics played a role as it seems to run in my family. Also, I remember hearing something about environmental factors possibly contributing since I grew up near an old industrial site. But honestly, the specifics are still quite unclear even though I've tried to learn more. There's always some part that remains uncertain or confusing.",
+      "turn": 7
+    },
+    {
+      "role": "doctor",
+      "content": "That's a fair amount of information to hold onto, even if some of it feels uncertain. Since you've been under careful monitoring without active treatment so far, I'm curious \u2014 what are your thoughts on medication for CLL? Do you feel comfortable with the idea of starting something if it would help with these symptoms, or do you have any concerns about that?",
+      "turn": 8
+    },
+    {
+      "role": "patient",
+      "content": "I understand there might be options for medications to manage my CLL and its associated symptoms. While I trust your judgment, doctor, part of me can't help but wonder whether taking anything right now might make the other symptoms worse. It's a bit of unease I can't quite shake off, even though I know that you would only recommend something if it were beneficial.",
+      "turn": 8
+    },
+    {
+      "role": "doctor",
+      "content": "It's completely understandable to have those concerns when you're already dealing with difficult symptoms. You're balancing the hope for relief with the worry that something else might make things worse. How have you been managing your energy and activities on a daily basis, and have you made any changes to your routine to cope with the fatigue?",
+      "turn": 9
+    },
+    {
+      "role": "patient",
+      "content": "Honestly, I've tried to rest more and avoid overexerting myself, but it's challenging when my work requires so much mental stamina. I've had to cut back on some of my hobbies too. It's a juggling act trying to balance everything out.",
+      "turn": 9
+    },
+    {
+      "role": "doctor",
+      "content": "I appreciate you sharing all of that with me. To summarize what I'm hearing \u2014 you've been managing CLL for a few years, and over the past couple of months you've been experiencing significant fatigue, night sweats, and increased awareness of swollen lymph nodes. This is affecting your work and family life, and you're feeling anxious about what the future might hold. You've been under careful monitoring without active treatment, though you're now hoping for symptom relief.\n\nYour concerns about starting medication are very understandable \u2014 you're worried about whether it might make things worse, and you want to be sure any treatment would truly help. You've been trying to manage your energy through rest and avoiding overexertion, though that's becoming harder with your work demands.\n\nBefore we decide on next steps, is there anything else about your situation that you'd like to discuss or any concerns I haven't addressed?",
+      "turn": 10
+    },
+    {
+      "role": "patient",
+      "content": "I think that pretty much covers it for now. I appreciate the time we've had to talk through this today and the way you're helping me make sense of everything. It's reassuring to have someone listen and understand what I'm going through, even when there aren't simple answers or solutions right away.",
+      "turn": 10
+    },
+    {
+      "role": "doctor",
+      "content": "I'm glad we could talk through all of this together. What I'd suggest is that we consider whether it's the right time for you to start treatment now, given how much this is affecting your daily life. I'd like to review your blood work from your recent check-ups and consider some options that might help with the fatigue and night sweats while addressing your CLL.\n\nWe can also discuss what kind of emotional support might be helpful for you \u2014 whether that's connecting with a counselor or a support group for people living with CLL. You don't have to figure it all out today, but I want to make sure we have a plan that addresses both your physical symptoms and how you're feeling about everything.\n\nThank you for trusting me with this, and I'll be in touch soon with next steps. Take care of yourself in the meantime.",
+      "turn": 11
+    },
+    {
+      "role": "patient",
+      "content": "Thank you, doctor. It means a lot that you're taking all of this into account and are willing to work towards some solutions. I appreciate your understanding and support. Please reach out when you have news or advice \u2014 it's reassuring to know I'm not alone in managing my health. Take care too.",
+      "turn": 11
+    }
+  ],
+  "coverage_hint": {},
+  "working_notes": [],
+  "events": [
+    {
+      "event": "llm_retry",
+      "role": "doctor",
+      "attempt": 1,
+      "failure": "HTTPStatusError: Server error '500 Internal Server Error' for url 'http://127.0.0.1:11500/api/chat'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500"
+    }
+  ],
+  "usage": [
+    {
+      "role": "doctor",
+      "eval_tokens": 176,
+      "prompt_tokens": 1536
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 71,
+      "prompt_tokens": 1181
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 140,
+      "prompt_tokens": 1786
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 81,
+      "prompt_tokens": 1312
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 154,
+      "prompt_tokens": 2010
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 88,
+      "prompt_tokens": 1453
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 208,
+      "prompt_tokens": 2255
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 66,
+      "prompt_tokens": 1612
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 197,
+      "prompt_tokens": 2532
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 65,
+      "prompt_tokens": 1746
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 175,
+      "prompt_tokens": 2797
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 73,
+      "prompt_tokens": 1883
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 260,
+      "prompt_tokens": 3048
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 83,
+      "prompt_tokens": 2049
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 230,
+      "prompt_tokens": 3394
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 75,
+      "prompt_tokens": 2213
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 215,
+      "prompt_tokens": 3702
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 55,
+      "prompt_tokens": 2361
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 398,
+      "prompt_tokens": 3975
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 62,
+      "prompt_tokens": 2605
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 224,
+      "prompt_tokens": 4438
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 63,
+      "prompt_tokens": 2845
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 824,
+      "prompt_tokens": 4728
+    },
+    {
+      "role": "report",
+      "eval_tokens": 3363,
+      "prompt_tokens": 10057
+    }
+  ]
+}

@@ -1,0 +1,260 @@
+{
+  "patient_id": "HIV-005",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "HIV-005",
+    "clinical_summary": "The patient has been experiencing significant fatigue, headaches, changes in appetite and sleep leading to weight loss, and mood changes over the past several months. They've tested negative for HIV multiple times, and their partner's HIV is well-controlled with treatment. They're considering possibilities like hormonal or autoimmune issues and are open to further investigation with more specialized care.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "It's been tough at work too, as I can barely get through the day without feeling drained",
+            "turn": 2
+          },
+          {
+            "quote": "I've had to cut back on my hours at work and make sure I'm really pacing myself when I do anything. It's been a real wake-up call about how much my body has been struggling lately",
+            "turn": 6
+          },
+          {
+            "quote": "everything just feels too intense and overwhelming to be only about aging",
+            "turn": 7
+          }
+        ],
+        "reasoning": "The patient has had to cut back on work hours, can barely get through the day, and describes it as a 'wake-up call' about how much their body is struggling. This suggests significant impact on their daily functioning.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "everything just sort of started creeping up on me gradually",
+            "turn": 4
+          },
+          {
+            "quote": "everything just feels too intense and overwhelming to be only about aging",
+            "turn": 7
+          },
+          {
+            "quote": "I know there could be lots of factors involved, from work stress to just getting older",
+            "turn": 6
+          }
+        ],
+        "reasoning": "The patient describes symptoms as 'creeping up gradually' and is considering aging as a factor. They don't express a clear expectation about duration.",
+        "score": 4.0,
+        "confidence": 0.6
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I also feel like I need to figure out what's going on for myself too",
+            "turn": 8
+          },
+          {
+            "quote": "I definitely think it's worth it to keep exploring this further and trying to figure out what's going on",
+            "turn": 9
+          },
+          {
+            "quote": "I do generally view them as helpful tools for figuring out what's happening inside my body",
+            "turn": 11
+          }
+        ],
+        "reasoning": "The patient wants to figure things out themselves and is actively seeking medical help. They view medical care as helpful tools.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "I definitely think it's worth it to keep exploring this further and trying to figure out what's going on",
+            "turn": 9
+          },
+          {
+            "quote": "I do generally view them as helpful tools for figuring out what's happening inside my body",
+            "turn": 11
+          },
+          {
+            "quote": "I'm hoping that getting to the bottom of this will involve finding a cause for my symptoms so we can address it more effectively",
+            "turn": 11
+          }
+        ],
+        "reasoning": "The patient is open to medical treatment and views it as helpful, but hasn't yet experienced any treatment that has clearly helped.",
+        "score": 6.0,
+        "confidence": 0.6
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "I've just not been feeling quite right lately",
+            "turn": 1
+          },
+          {
+            "quote": "I can't help but wonder if my symptoms could be connected somehow to my partner's HIV status after all",
+            "turn": 7
+          },
+          {
+            "quote": "I'm not sure exactly what other things it could be — maybe some kind of hormonal imbalance or an autoimmune disorder?",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient doesn't have a clear illness label. They're considering various possibilities but haven't assigned a specific identity to their symptoms.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "I can't help but wonder if... well, if that could have anything to do with it",
+            "turn": 1
+          },
+          {
+            "quote": "I can't help but wonder if my symptoms could be connected somehow to my partner's HIV status after all",
+            "turn": 7
+          },
+          {
+            "quote": "I'm also wondering if there might be something else going on inside me",
+            "turn": 3
+          },
+          {
+            "quote": "I'm still not completely sure what's going on",
+            "turn": 6
+          },
+          {
+            "quote": "I'm hoping that we'll get some clarity on what's going on soon",
+            "turn": 15
+          }
+        ],
+        "reasoning": "The patient has expressed worry about HIV connection and uncertainty about what's going on. They're actively seeking answers.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I'm still not completely sure what's going on",
+            "turn": 6
+          },
+          {
+            "quote": "I feel like I'm stuck in limbo, trying to figure out what else it could be",
+            "turn": 7
+          },
+          {
+            "quote": "I still think it's really up in the air right now",
+            "turn": 10
+          },
+          {
+            "quote": "there's still quite a bit that feels unclear and overwhelming to me",
+            "turn": 12
+          }
+        ],
+        "reasoning": "The patient is clearly uncertain and doesn't have a coherent understanding of what's happening. They're considering multiple possibilities but haven't reached a clear understanding.",
+        "score": 2.0,
+        "confidence": 0.8
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "I'll admit I've been feeling a bit down and anxious lately too",
+            "turn": 2
+          },
+          {
+            "quote": "It's really difficult to say for sure without knowing more",
+            "turn": 3
+          },
+          {
+            "quote": "It's really frustrating",
+            "turn": 7
+          },
+          {
+            "quote": "everything just feels too intense and overwhelming to be only about aging",
+            "turn": 7
+          },
+          {
+            "quote": "It's definitely been a challenge to stay on top of my self-care lately",
+            "turn": 13
+          }
+        ],
+        "reasoning": "The patient has expressed feeling down, anxious, frustrated, and overwhelmed. These emotions are affecting their self-care and daily life.",
+        "score": 6.0,
+        "confidence": 0.7
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "I do generally view them as helpful tools for figuring out what's happening inside my body",
+            "turn": 11
+          },
+          {
+            "quote": "I'm hoping that getting to the bottom of this will involve finding a cause for my symptoms so we can address it more effectively",
+            "turn": 11
+          },
+          {
+            "quote": "whether that involves medications, lifestyle changes, or some combination of things — whatever makes the most sense given what's going on",
+            "turn": 11
+          }
+        ],
+        "reasoning": "The patient views medications as helpful tools and is open to them as part of addressing their symptoms. They haven't been prescribed anything yet, so this is based on their general attitude toward medical treatment.",
+        "score": 3.0,
+        "confidence": 0.5
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "part of me is also worried about potential side effects or complications from any medications or procedures — but that's probably a normal concern to have",
+            "turn": 11
+          }
+        ],
+        "reasoning": "The patient has expressed concern about potential side effects and complications, but acknowledges it's 'probably a normal concern to have.'",
+        "score": 2.0,
+        "confidence": 0.6
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [],
+        "reasoning": "The patient hasn't expressed any general view about medicines being harmful.",
+        "score": null,
+        "confidence": 0.0
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "The patient hasn't expressed any view about prescribing practices.",
+        "score": null,
+        "confidence": 0.0
+      }
+    },
+    "causes": [
+      "work stress",
+      "getting older",
+      "hormonal imbalance",
+      "autoimmune disorder",
+      "HIV transmission risk"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "I know there could be lots of factors involved, from work stress to just getting older",
+        "turn": 6
+      },
+      {
+        "quote": "maybe some kind of hormonal imbalance or an autoimmune disorder?",
+        "turn": 9
+      },
+      {
+        "quote": "I can't help but wonder if my symptoms could be connected somehow to my partner's HIV status after all",
+        "turn": 7
+      }
+    ]
+  }
+}

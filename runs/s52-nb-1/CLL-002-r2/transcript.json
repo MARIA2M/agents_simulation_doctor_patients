@@ -1,0 +1,42 @@
+{
+  "patient_id": "CLL-002",
+  "turns": 1,
+  "stop_reason": "doctor",
+  "conversation": [
+    {
+      "role": "doctor",
+      "content": "Hello, I'm Dr. Chen. What brings you in to see me today?",
+      "turn": 1
+    },
+    {
+      "role": "patient",
+      "content": "Hello, doctor. Well, it's been a bit of an uphill struggle lately with this chronic illness. The fatigue is just relentless, and the frequent infections are getting harder to deal with. Plus, my swollen lymph nodes have been bothering me more than usual, and I've noticed some bruising on my arms and legs that I can't explain. It's all making it difficult for me to keep up with work and spending time with family.",
+      "turn": 1
+    }
+  ],
+  "coverage_hint": {},
+  "working_notes": [],
+  "events": [],
+  "usage": [
+    {
+      "role": "doctor",
+      "eval_tokens": 145,
+      "prompt_tokens": 1527
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 90,
+      "prompt_tokens": 1216
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 128,
+      "prompt_tokens": 1765
+    },
+    {
+      "role": "report",
+      "eval_tokens": 4032,
+      "prompt_tokens": 4701
+    }
+  ]
+}

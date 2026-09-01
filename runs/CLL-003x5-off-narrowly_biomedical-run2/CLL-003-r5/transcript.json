@@ -1,0 +1,382 @@
+{
+  "patient_id": "CLL-003",
+  "turns": 18,
+  "stop_reason": "doctor",
+  "conversation": [
+    {
+      "role": "doctor",
+      "content": "Hello. What brings you in today?",
+      "turn": 1
+    },
+    {
+      "role": "patient",
+      "content": "Hi there. I've been feeling a bit more tired than usual after work, and recently noticed a small lump in my neck. It's not causing me any pain, but it's bothering me enough to want to get it checked out.",
+      "turn": 1
+    },
+    {
+      "role": "doctor",
+      "content": "When did you first notice the lump in your neck? Has it grown or changed at all since then?",
+      "turn": 2
+    },
+    {
+      "role": "patient",
+      "content": "I first noticed the lump about a month ago, when I was getting dressed one morning. It hasn't grown larger or changed shape since then, but I've been feeling more tired than usual after work. That's mainly why I wanted to come in and get it checked out.",
+      "turn": 2
+    },
+    {
+      "role": "doctor",
+      "content": "Have you had any recent infections, sore throat, or fever? Have you noticed any changes in your weight, appetite, or any neck swelling on the other side?",
+      "turn": 3
+    },
+    {
+      "role": "patient",
+      "content": "No, I haven't had any recent infections, sore throat, or fever. My weight has remained about the same, and my appetite is fine. As for neck swelling, there doesn't seem to be anything on the other side. The lump is just on one side and hasn't spread.",
+      "turn": 3
+    },
+    {
+      "role": "doctor",
+      "content": "How long have you been experiencing this fatigue? Does it affect your ability to do your normal daily activities, and have you noticed anything else with it like shortness of breath, palpitations, or trouble sleeping?",
+      "turn": 4
+    },
+    {
+      "role": "patient",
+      "content": "I've been feeling more tired than usual after work for about two weeks now. It doesn't really impact my ability to do daily activities, but I feel like I need a little bit of extra rest compared to how I used to. I don't have any shortness of breath, palpitations, or trouble sleeping related to the fatigue.",
+      "turn": 4
+    },
+    {
+      "role": "doctor",
+      "content": "Do you have any history of thyroid problems, previous surgeries, or any other chronic medical conditions that I should know about? Have you started any new medications recently?",
+      "turn": 5
+    },
+    {
+      "role": "patient",
+      "content": "I have a family history of thyroid issues, but I haven't been diagnosed with anything myself. Other than that, I'm not on any medication and don't have any chronic conditions that I know of. As far as surgeries go, I had my wisdom teeth removed about five years ago, but that's the only major procedure I've had.",
+      "turn": 5
+    },
+    {
+      "role": "doctor",
+      "content": "Where exactly in the neck is the lump located? Can you show me where it is? Is it under the skin, or do you feel it more like a mass that might be deeper?",
+      "turn": 6
+    },
+    {
+      "role": "patient",
+      "content": "The lump is located right underneath my chin, about in the middle. I can definitely feel it under the skin, but it doesn't seem to extend very deep. It's not too big - roughly the size of a pea, if that helps.",
+      "turn": 6
+    },
+    {
+      "role": "doctor",
+      "content": "Is there any tenderness when you press on it? Can you move it around with your fingers, or does it feel fixed to the surrounding tissues?",
+      "turn": 7
+    },
+    {
+      "role": "patient",
+      "content": "When I press on the lump, it doesn't really hurt or feel tender. It's a bit hard to the touch, but not so much that it's painful. I can move it around with my fingers, but it feels like it has some give and take to it - it doesn't feel fixed to the surrounding tissues, if that makes sense.",
+      "turn": 7
+    },
+    {
+      "role": "doctor",
+      "content": "Have you had any issues with your teeth or gums recently? Any dental work or oral infections?",
+      "turn": 8
+    },
+    {
+      "role": "patient",
+      "content": "No, I haven't had any recent issues with my teeth or gums. I go to the dentist regularly for checkups and cleanings, but everything has been fine on that front. No dental work or oral infections that I'm aware of.",
+      "turn": 8
+    },
+    {
+      "role": "doctor",
+      "content": "Does the fatigue you're experiencing happen every day, or just after work? When you say you need extra rest compared to before, can you describe that more - do you feel physically tired, mentally drained, or something else?",
+      "turn": 9
+    },
+    {
+      "role": "patient",
+      "content": "The fatigue happens every day, but it seems to be most noticeable after work. I used to be able to get through my normal daily activities without feeling too tired, but now I find myself needing a bit of extra rest in the afternoon or evening. It's more of a physical tiredness - I feel like I have less energy overall, and it's taking longer for me to recover from workouts or other physically taxing activities.",
+      "turn": 9
+    },
+    {
+      "role": "doctor",
+      "content": "I've been hearing about the lump in your neck and the fatigue you're experiencing. Have there been any other symptoms - like sweating at night, feeling hot or cold, or any changes in your energy level throughout the day?",
+      "turn": 10
+    },
+    {
+      "role": "patient",
+      "content": "Besides the lump in my neck and the fatigue, I haven't noticed any major changes in my energy levels throughout the day. As for other symptoms, I don't think I've been experiencing any excessive sweating at night, nor do I feel particularly hot or cold. If anything, I feel more like I'm running slightly cooler than usual.",
+      "turn": 10
+    },
+    {
+      "role": "doctor",
+      "content": "Is there anything else you'd like to mention or any other concerns you have about your health before we proceed with the examination?",
+      "turn": 11
+    },
+    {
+      "role": "patient",
+      "content": "Not really, no. Like I said earlier, the lump in my neck and the fatigue are the main things that prompted me to come in today. I'm hoping you'll be able to give me more insight into what might be going on and how best to address it.",
+      "turn": 11
+    },
+    {
+      "role": "doctor",
+      "content": "I'd like to examine the lump in your neck to get a better sense of its size, consistency, and mobility. Would you be comfortable with that?",
+      "turn": 12
+    },
+    {
+      "role": "patient",
+      "content": "Yes, of course. I'm here for any necessary examination or testing to help figure out what's going on. Let's proceed as needed.",
+      "turn": 12
+    },
+    {
+      "role": "doctor",
+      "content": "I'll examine the lump now. Please tilt your head slightly forward, and I'll gently feel around that area.",
+      "turn": 13
+    },
+    {
+      "role": "patient",
+      "content": "Sure thing. Here you go.",
+      "turn": 13
+    },
+    {
+      "role": "doctor",
+      "content": "The lump is firm but not rock hard, about the size of a pea, and moves freely under the skin. It's not tender to palpation. I'm also going to feel your neck to check your lymph nodes in other areas and examine your thyroid. Let me know if anything feels uncomfortable.",
+      "turn": 14
+    },
+    {
+      "role": "patient",
+      "content": "Okay, that sounds fine. Just let me know if you need me to adjust my position or anything like that.",
+      "turn": 14
+    },
+    {
+      "role": "doctor",
+      "content": "I can also check your thyroid by asking you to swallow while I feel your neck. Please go ahead and swallow when you're ready.",
+      "turn": 15
+    },
+    {
+      "role": "patient",
+      "content": "All right, here goes. Swallowing now.",
+      "turn": 15
+    },
+    {
+      "role": "doctor",
+      "content": "Your thyroid feels normal in size and is smooth. I don't see any other swollen lymph nodes in your neck. Based on what I've heard and what I've found, the lump in your neck is most likely a benign lymph node or possibly a small salivary gland issue. It's not concerning for cancer given its characteristics. Your fatigue is also non-specific and could be related to many factors, including stress, lack of sleep, or other minor health issues.",
+      "turn": 16
+    },
+    {
+      "role": "patient",
+      "content": "That's reassuring to hear. What would you recommend in terms of next steps? I'm happy to come back for further testing if needed.",
+      "turn": 16
+    },
+    {
+      "role": "doctor",
+      "content": "For the neck lump, I recommend keeping an eye on it. If it grows, becomes painful, or if you develop other swollen lymph nodes, come back and we can order tests like a neck ultrasound. For now, I'd like you to monitor it for about a month. Regarding the fatigue, I'd suggest getting regular exercise, maintaining consistent sleep, and checking your stress levels. If the fatigue worsens or you develop other symptoms, let me know and we can do some blood work to check for underlying issues like anemia or thyroid problems. Does that sound reasonable?",
+      "turn": 17
+    },
+    {
+      "role": "patient",
+      "content": "Yes, that all sounds very reasonable. I'll keep a close eye on both the lump in my neck and my fatigue, and come back if anything changes. Thank you for your help today.",
+      "turn": 17
+    },
+    {
+      "role": "doctor",
+      "content": "You're welcome. I've noted everything you've told me, and I'll make sure your records are updated with this assessment. Take care, and don't hesitate to reach out if you have any concerns or if things change between now and your next visit.",
+      "turn": 18
+    },
+    {
+      "role": "patient",
+      "content": "Thank you for taking the time to see me today. Have a great day!",
+      "turn": 18
+    }
+  ],
+  "coverage_hint": {},
+  "working_notes": [],
+  "events": [],
+  "usage": [
+    {
+      "role": "doctor",
+      "eval_tokens": 82,
+      "prompt_tokens": 1527
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 49,
+      "prompt_tokens": 1170
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 133,
+      "prompt_tokens": 1661
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 57,
+      "prompt_tokens": 1249
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 171,
+      "prompt_tokens": 1854
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 60,
+      "prompt_tokens": 1348
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 144,
+      "prompt_tokens": 2088
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 69,
+      "prompt_tokens": 1459
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 101,
+      "prompt_tokens": 2304
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 70,
+      "prompt_tokens": 1569
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 126,
+      "prompt_tokens": 2478
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 51,
+      "prompt_tokens": 1686
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 107,
+      "prompt_tokens": 2658
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 72,
+      "prompt_tokens": 1776
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 116,
+      "prompt_tokens": 2840
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 50,
+      "prompt_tokens": 1876
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 121,
+      "prompt_tokens": 3009
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 86,
+      "prompt_tokens": 1980
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 126,
+      "prompt_tokens": 3219
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 69,
+      "prompt_tokens": 2120
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 84,
+      "prompt_tokens": 3417
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 56,
+      "prompt_tokens": 2223
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 78,
+      "prompt_tokens": 3560
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 30,
+      "prompt_tokens": 2319
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 54,
+      "prompt_tokens": 3671
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 8,
+      "prompt_tokens": 2381
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 106,
+      "prompt_tokens": 3736
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 24,
+      "prompt_tokens": 2458
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 59,
+      "prompt_tokens": 3869
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 12,
+      "prompt_tokens": 2518
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 121,
+      "prompt_tokens": 3943
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 29,
+      "prompt_tokens": 2633
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 177,
+      "prompt_tokens": 4096
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 40,
+      "prompt_tokens": 2786
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 95,
+      "prompt_tokens": 4316
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 17,
+      "prompt_tokens": 2887
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 975,
+      "prompt_tokens": 4431
+    },
+    {
+      "role": "report",
+      "eval_tokens": 5175,
+      "prompt_tokens": 9917
+    }
+  ]
+}

@@ -1,0 +1,222 @@
+{
+  "patient_id": "CLL-002",
+  "turns": 10,
+  "stop_reason": "doctor",
+  "conversation": [
+    {
+      "role": "doctor",
+      "content": "Hello, I'm Dr. Chen. What brings you in to see me today?",
+      "turn": 1
+    },
+    {
+      "role": "patient",
+      "content": "Oh hello, doctor. It's really nice to meet you. Well, I've been feeling quite tired all the time lately. And I get these frequent infections that seem to be coming one after another. Oh, and sometimes my neck and armpits feel a bit swollen. And occasionally, I bruise easily on my arms and legs.",
+      "turn": 1
+    },
+    {
+      "role": "doctor",
+      "content": "How long have you been experiencing these symptoms? And have you had any other symptoms that might be relevant, like fevers, night sweats, or weight changes?",
+      "turn": 2
+    },
+    {
+      "role": "patient",
+      "content": "Well, doctor, the fatigue really started about a year ago, soon after I found out about my diagnosis. The infections seem to have increased in frequency since then as well. As for other symptoms, nothing else really stands out. But I do recall feeling a bit more thirsty than usual lately. And maybe just a touch of dizziness here and there.",
+      "turn": 2
+    },
+    {
+      "role": "doctor",
+      "content": "What was your original diagnosis, and have you been under any specialist care since then?",
+      "turn": 3
+    },
+    {
+      "role": "patient",
+      "content": "I was diagnosed with Chronic Lymphocytic Leukemia about a year ago, doctor. It's been quite scary, but my oncologist has been fantastic throughout it all. I've been seeing them regularly for check-ups and blood tests. And as you know, I'm currently on ibrutinib therapy, which seems to be helping for now.",
+      "turn": 3
+    },
+    {
+      "role": "doctor",
+      "content": "What do the most recent blood tests show, and has there been any change in your ibrutinib dose or schedule?",
+      "turn": 4
+    },
+    {
+      "role": "patient",
+      "content": "I think my most recent blood test results were pretty good, doctor. My lymphocyte count has gone down a lot since I started on the ibrutinib. My oncologist said that's a great sign because it means the treatment is working well. And as far as I know, my dose and schedule for the ibrutinib haven't changed at all.",
+      "turn": 4
+    },
+    {
+      "role": "doctor",
+      "content": "Have you had your blood sugar checked recently? And can you tell me more about the easy bruising - are there any unexplained bruises or bleeding that concerns you?",
+      "turn": 5
+    },
+    {
+      "role": "patient",
+      "content": "I'm not sure if I've had my blood sugar checked lately, doctor. But I think it would be a good idea to have it checked, just to make sure everything's okay. As for the bruising, yes, it does concern me because they seem to appear out of nowhere and take quite a long time to heal. And sometimes, they're even a bit painful when they first show up.",
+      "turn": 5
+    },
+    {
+      "role": "doctor",
+      "content": "Have your oncologist mentioned anything specific about your platelet count or any blood clotting issues when reviewing your blood work?",
+      "turn": 6
+    },
+    {
+      "role": "patient",
+      "content": "I'm not entirely sure, doctor. They do mention my platelet count sometimes during the check-ups, but I don't think they've raised any concerns about it. And as far as I know, there hasn't been anything mentioned about blood clotting issues. But again, I could be mistaken, so if you think it's something that should be looked into further, I'm all for it.",
+      "turn": 6
+    },
+    {
+      "role": "doctor",
+      "content": "In terms of your current symptoms, how would you rate your overall energy level on a scale of 1 to 10, and are you managing your daily activities okay?",
+      "turn": 7
+    },
+    {
+      "role": "patient",
+      "content": "Well, doctor, if I had to put my energy level on a scale like that, I'd probably give it a 5. It's not as low as it was when I first found out about my diagnosis, but it's still definitely lower than what I'm used to. In terms of managing daily activities, I've had to make some adjustments, like taking more breaks during the day and trying to pace myself. But overall, I think I'm doing okay - I just wish I could have more energy to do all the things I used to enjoy.",
+      "turn": 7
+    },
+    {
+      "role": "doctor",
+      "content": "To summarize, you have CLL that's responded well to ibrutinib, but you're still experiencing fatigue, frequent infections, lymphadenopathy, and easy bruising. I'd recommend discussing with your oncologist about getting your blood sugar checked given the thirst and dizziness, and specifically asking about your platelet count and any concerns about clotting. They should be able to order the necessary tests. Is there anything else you'd like to address today?",
+      "turn": 8
+    },
+    {
+      "role": "patient",
+      "content": "Well, doctor, I just want to reiterate how much I appreciate taking the time to talk with me today. It's reassuring to know that there are still things we can do to manage my condition and hopefully improve my quality of life. Thank you so much for your help and advice!",
+      "turn": 8
+    },
+    {
+      "role": "doctor",
+      "content": "You're welcome. Your oncologist will be able to order the blood tests we discussed, and they're in the best position to evaluate any changes in your condition. Make sure to follow up with them about the blood sugar, platelet count, and bruising. Take care, and I hope you see some improvement soon.",
+      "turn": 9
+    },
+    {
+      "role": "patient",
+      "content": "Thank you so much, doctor! I really appreciate it. And please don't worry - I'll definitely bring all these concerns up with my oncologist at my next check-up. Have a great day!",
+      "turn": 9
+    },
+    {
+      "role": "doctor",
+      "content": "Have a good day as well, and I hope your next appointment goes well. Take care.",
+      "turn": 10
+    },
+    {
+      "role": "patient",
+      "content": "Goodbye, doctor. Thank you once again!",
+      "turn": 10
+    }
+  ],
+  "coverage_hint": {},
+  "working_notes": [],
+  "events": [],
+  "usage": [
+    {
+      "role": "doctor",
+      "eval_tokens": 77,
+      "prompt_tokens": 1527
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 70,
+      "prompt_tokens": 1216
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 171,
+      "prompt_tokens": 1677
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 72,
+      "prompt_tokens": 1328
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 146,
+      "prompt_tokens": 1923
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 73,
+      "prompt_tokens": 1426
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 204,
+      "prompt_tokens": 2145
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 75,
+      "prompt_tokens": 1533
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 176,
+      "prompt_tokens": 2427
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 83,
+      "prompt_tokens": 1650
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 189,
+      "prompt_tokens": 2689
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 82,
+      "prompt_tokens": 1766
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 219,
+      "prompt_tokens": 2963
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 114,
+      "prompt_tokens": 1891
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 234,
+      "prompt_tokens": 3299
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 59,
+      "prompt_tokens": 2106
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 141,
+      "prompt_tokens": 3595
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 42,
+      "prompt_tokens": 2239
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 134,
+      "prompt_tokens": 3781
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 11,
+      "prompt_tokens": 2309
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 82,
+      "prompt_tokens": 3929
+    },
+    {
+      "role": "report",
+      "eval_tokens": 4201,
+      "prompt_tokens": 7869
+    }
+  ]
+}

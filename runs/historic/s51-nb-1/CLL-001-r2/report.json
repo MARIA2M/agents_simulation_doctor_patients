@@ -1,0 +1,203 @@
+{
+  "patient_id": "CLL-001",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "CLL-001",
+    "clinical_summary": "The patient has Chronic Lymphocytic Leukemia (CLL) that is progressing slowly. They are in the watchful waiting phase with monthly blood monitoring. They experience fatigue and night sweats that affect their work and social life, along with a persistent but not severe swollen neck. They are more prone to minor infections that take longer to heal. They understand the basics of CLL and the progression indicators but feel confused about some aspects. They actively manage through lifestyle changes (exercise, healthy eating, social connections) and seek reassurance about their condition. They have no current medication but understand treatment will eventually be needed.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "The fatigue and occasional night sweats are making it hard to keep up with work and maintain a normal social life",
+            "turn": 1
+          },
+          {
+            "quote": "The fatigue often makes concentrating at work challenging, and I find myself needing frequent breaks",
+            "turn": 6
+          }
+        ],
+        "reasoning": "The patient reports that fatigue and night sweats are significantly impacting their ability to work and maintain social life. They need frequent breaks at work due to fatigue, indicating substantial impact on daily functioning.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "The diagnosis you have is Chronic Lymphocytic Leukemia (CLL), which seems to be progressing slowly",
+            "turn": 2
+          },
+          {
+            "quote": "You've reassured me that it might still be quite some time before any treatment is needed",
+            "turn": 3
+          },
+          {
+            "quote": "Honestly, I grasp the basics of CLL but still feel a bit confused about some aspects",
+            "turn": 4
+          },
+          {
+            "quote": "However, with the uncertainty comes worry and concern about potential disease progression or if there will come a point where watchful waiting won't suffice",
+            "turn": 4
+          }
+        ],
+        "reasoning": "The patient understands CLL progresses slowly and has been in watchful waiting for about a year. They accept that it may be years before treatment is needed, but express ongoing uncertainty about the future trajectory. They hold both endings open and plan for neither.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "Regarding managing the uncertainty, I've been trying to stay active with regular exercise, eating healthily, and maintaining social connections despite everything",
+            "turn": 5
+          }
+        ],
+        "reasoning": "The patient actively manages their situation through lifestyle measures (exercise, healthy eating, social connections) and seeks to monitor for progression indicators. They recognize that their actions can influence outcomes to some extent.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "You're not currently on any medication; you've been advised that watchful waiting and regular blood monitoring might be all that's needed for now",
+            "turn": 2
+          },
+          {
+            "quote": "You've reassured me that it might still be quite some time before any treatment is needed",
+            "turn": 3
+          },
+          {
+            "quote": "I suppose I'd like some reassurance that everything is under control despite the symptoms",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient is not currently on treatment and believes treatment will eventually be needed but not at this stage. They accept watchful waiting as the appropriate current approach. They seek reassurance about the current management.",
+        "score": 4.0,
+        "confidence": 0.6
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "The diagnosis you have is Chronic Lymphocytic Leukemia (CLL), which seems to be progressing slowly",
+            "turn": 2
+          },
+          {
+            "quote": "The swelling in my neck has been persistent but not too severe. It's mostly been there as long as I can remember having this illness",
+            "turn": 3
+          },
+          {
+            "quote": "I've noticed some changes too - my neck feels a bit swollen",
+            "turn": 1
+          }
+        ],
+        "reasoning": "The patient clearly identifies as having CLL and recognizes the persistent swollen neck as part of their illness. They report symptoms that they attribute to their condition.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "However, with the uncertainty comes worry and concern about potential disease progression or if there will come a point where watchful waiting won't suffice",
+            "turn": 4
+          },
+          {
+            "quote": "I suppose I'd like some reassurance that everything is under control despite the symptoms",
+            "turn": 8
+          },
+          {
+            "quote": "this condition can feel quite overwhelming at times",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient expresses worry about disease progression and uncertainty about when treatment might become necessary. They seek reassurance and describe the condition as feeling overwhelming at times.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "Factors that might indicate CLL progression and the need for treatment include an increase in lymph node size, unexplained weight loss, the development of more severe symptoms like fever or infections, or a rapid and significant rise in blood cell counts",
+            "turn": 5
+          },
+          {
+            "quote": "Honestly, I grasp the basics of CLL but still feel a bit confused about some aspects",
+            "turn": 4
+          }
+        ],
+        "reasoning": "The patient demonstrates good understanding of CLL basics and the clinical indicators that would signal progression requiring treatment. They admit to feeling confused about some aspects but have strong comprehension of the disease and monitoring plan.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "this condition can feel quite overwhelming at times",
+            "turn": 8
+          },
+          {
+            "quote": "I appreciate the detailed overview of my condition, doctor",
+            "turn": 10
+          },
+          {
+            "quote": "Thank you for the advice and reassurance, doctor",
+            "turn": 11
+          }
+        ],
+        "reasoning": "The patient describes the condition as feeling overwhelming at times and explicitly seeks reassurance and someone to listen to their concerns. They express gratitude and appreciation for the consultation.",
+        "score": 6.0,
+        "confidence": 0.7
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [],
+        "reasoning": "The patient is not currently on any medication, so there is no specific belief about their own prescribed medication to assess.",
+        "score": null,
+        "confidence": 0.5
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [],
+        "reasoning": "The patient is not currently on any medication, so there are no specific concerns about their own prescribed medication to assess.",
+        "score": null,
+        "confidence": 0.5
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [],
+        "reasoning": "The patient did not discuss concerns about medicines as a class during the consultation.",
+        "score": null,
+        "confidence": 0.5
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "The patient did not discuss their views on prescribing practices during the consultation.",
+        "score": null,
+        "confidence": 0.5
+      }
+    },
+    "causes": [
+      "CLL",
+      "chronic illness"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "The diagnosis you have is Chronic Lymphocytic Leukemia (CLL), which seems to be progressing slowly",
+        "turn": 2
+      },
+      {
+        "quote": "The swelling in my neck has been persistent but not too severe. It's mostly been there as long as I can remember having this illness",
+        "turn": 3
+      }
+    ]
+  }
+}

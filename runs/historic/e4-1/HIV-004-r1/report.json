@@ -1,0 +1,430 @@
+{
+  "patient_id": "HIV-004",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "HIV-004",
+    "clinical_summary": "Patient with HIV infection started Biktarvy treatment 4 weeks ago. Experiencing severe fatigue, new symptoms, mild nausea as side effect, and significant anxiety and difficulty sleeping that emerged after diagnosis. Adhering to once-daily Biktarvy. Work and daily functioning are substantially reduced - unable to get out of bed some days. Feeling overwhelmed, helpless, and uncertain about the future. Seeking emotional support and coping strategies.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "My chronic illness has been flaring up a lot more than usual, causing severe fatigue and some new symptoms that I'm not used to. It's really affecting my daily life and work",
+            "turn": 1
+          },
+          {
+            "quote": "My work, time with family, even just getting out of bed some days is a struggle",
+            "turn": 2
+          },
+          {
+            "quote": "It's not just about the physical symptoms either; I'm also dealing with a lot of emotional weight and uncertainty",
+            "turn": 2
+          },
+          {
+            "quote": "It's overwhelming and leaves me feeling helpless at times",
+            "turn": 2
+          }
+        ],
+        "reasoning": "Patient has lost the ability to get out of bed some days, work is affected, family time is impacted, and they're experiencing emotional turmoil. This represents a major role reduction where they can no longer function independently in daily activities.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "Even though you explained that undetectable viral load is expected within 3-6 months, it's hard not to worry about how things are going right now",
+            "turn": 1
+          },
+          {
+            "quote": "I know you've explained that early treatment offers the best long-term prognosis and that undetectable viral load should be expected within 3-6 months",
+            "turn": 2
+          },
+          {
+            "quote": "sometimes it feels like I'm fighting an uphill battle",
+            "turn": 2
+          },
+          {
+            "quote": "the unpredictable nature of my chronic illness",
+            "turn": 5
+          },
+          {
+            "quote": "There are still so many unknowns for me — things like how it's progressing in my body",
+            "turn": 6
+          }
+        ],
+        "reasoning": "Patient understands the expected timeline for viral load (3-6 months) but feels like they're fighting an uphill battle and describes the illness as unpredictable. They're uncertain about how it's progressing, suggesting they're not fully accepting the chronic nature and are holding both endings open.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I struggle with feeling like I have very little control over my situation despite trying my best to manage it",
+            "turn": 1
+          },
+          {
+            "quote": "I think the most within my ability to influence would be taking proactive steps in managing my physical health and treatment plan",
+            "turn": 5
+          },
+          {
+            "quote": "I'm doing my best to stay on top of my medication schedule as you've instructed, tracking any side effects or symptoms, and reaching out when needed for clarification or reassurance",
+            "turn": 5
+          },
+          {
+            "quote": "I believe these actions help me feel more empowered despite the circumstances",
+            "turn": 5
+          },
+          {
+            "quote": "I try to remind myself that I have some power over how I react and cope with these challenges",
+            "turn": 5
+          }
+        ],
+        "reasoning": "Patient acknowledges they have some control over their reactions and coping, and they're actively taking steps (medication schedule, tracking symptoms, reaching out). However, they also say they struggle with feeling like they have very little control. This represents a moderate level of control where they act but not fully empowered.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "I understand that treatment offers the best long-term prognosis and that early intervention is key",
+            "turn": 1
+          },
+          {
+            "quote": "I believe it's an important step in managing my health and keeping the virus under control",
+            "turn": 3
+          },
+          {
+            "quote": "I am glad that the medicine is helping keep the symptoms at bay as you explained during our sessions",
+            "turn": 3
+          },
+          {
+            "quote": "Biktarvy gives me hope that I'll eventually reach an undetectable viral load",
+            "turn": 3
+          },
+          {
+            "quote": "I do trust your judgment and expertise in prescribing this treatment plan for me",
+            "turn": 3
+          },
+          {
+            "quote": "I can't help but feel like it's just one part of a larger puzzle",
+            "turn": 3
+          }
+        ],
+        "reasoning": "Patient clearly sees the treatment as important and beneficial, but also sees it as just one part of a larger puzzle. They trust the doctor's judgment but don't attribute their current condition solely to the treatment working. This represents a moderate benefit that is nonetheless partial.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "My chronic illness has been flaring up a lot more than usual, causing severe fatigue and some new symptoms that I'm not used to",
+            "turn": 1
+          },
+          {
+            "quote": "what really scares me is this anxiety and difficulty sleeping that seems to have appeared out of nowhere after my diagnosis",
+            "turn": 1
+          },
+          {
+            "quote": "It's not just about the physical symptoms either; I'm also dealing with a lot of emotional weight and uncertainty",
+            "turn": 2
+          },
+          {
+            "quote": "having HIV feels like being in a constant state of emotional turmoil",
+            "turn": 2
+          },
+          {
+            "quote": "Living with a chronic illness like HIV can be emotionally overwhelming",
+            "turn": 4
+          },
+          {
+            "quote": "my own experience of living with the condition is different from what I was used to before the diagnosis",
+            "turn": 6
+          },
+          {
+            "quote": "You're helping me feel like myself again despite the challenges of living with HIV",
+            "turn": 9
+          }
+        ],
+        "reasoning": "Patient experiences daily symptoms (fatigue, nausea, anxiety, sleep issues) that are affecting their daily life. These symptoms are intrusive and affect their ability to function. They attribute these to their HIV condition, representing daily and intrusive symptoms that interrupt what they're doing.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "it's hard not to worry about how things are going right now",
+            "turn": 1
+          },
+          {
+            "quote": "what really scares me is this anxiety and difficulty sleeping",
+            "turn": 1
+          },
+          {
+            "quote": "The worry and anxiety are almost constant",
+            "turn": 2
+          },
+          {
+            "quote": "It's overwhelming and leaves me feeling helpless at times",
+            "turn": 2
+          },
+          {
+            "quote": "filled with fear, anxiety, and uncertainty about the future",
+            "turn": 4
+          },
+          {
+            "quote": "It's hard to remain hopeful when confronted with so many challenges",
+            "turn": 4
+          },
+          {
+            "quote": "the emotional toll it takes on me",
+            "turn": 5
+          },
+          {
+            "quote": "There are still so many unknowns for me",
+            "turn": 6
+          },
+          {
+            "quote": "I'm worried about the long-term course of the illness and uncertain about how my body is responding right now",
+            "turn": 7
+          },
+          {
+            "quote": "I'm feeling overwhelmed by the emotional burden and uncertain about the future",
+            "turn": 7
+          }
+        ],
+        "reasoning": "Worry and anxiety are almost constant, patient is scared about new symptoms, worried about long-term course, and uncertain about the future. This worry is frequent and intrudes into matters unrelated to the illness.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I understand from our last conversation that this is all connected to my HIV infection",
+            "turn": 1
+          },
+          {
+            "quote": "I understand that treatment offers the best long-term prognosis and that early intervention is key",
+            "turn": 1
+          },
+          {
+            "quote": "I know you've explained that early treatment offers the best long-term prognosis and that undetectable viral load should be expected within 3-6 months",
+            "turn": 2
+          },
+          {
+            "quote": "Part of me understands the basics, but there are still so many confusing aspects that I'm struggling with",
+            "turn": 2
+          },
+          {
+            "quote": "I believe it's an important step in managing my health and keeping the virus under control",
+            "turn": 3
+          },
+          {
+            "quote": "I am glad that the medicine is helping keep the symptoms at bay as you explained during our sessions",
+            "turn": 3
+          },
+          {
+            "quote": "I'm doing my best to stay on top of my medication schedule as you've instructed, tracking any side effects or symptoms",
+            "turn": 5
+          },
+          {
+            "quote": "While you've explained the basics about HIV transmission, symptoms, and treatments, my own experience of living with the condition is different from what I was used to before the diagnosis",
+            "turn": 6
+          },
+          {
+            "quote": "There are still so many unknowns for me — things like how it's progressing in my body or why certain side effects occur while others don't",
+            "turn": 6
+          },
+          {
+            "quote": "I'm doing my best to stay informed and engaged in the process of understanding what's happening to me",
+            "turn": 6
+          }
+        ],
+        "reasoning": "Patient understands the basics of HIV and the treatment rationale, but still feels confused about day-to-day progression and long-term effects. They know the label and the treatment, but not fully what either is for in their personal experience. They're trying to stay informed but there are gaps.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "leaving me feeling overwhelmed and uncertain about the future",
+            "turn": 1
+          },
+          {
+            "quote": "what really scares me is this anxiety and difficulty sleeping",
+            "turn": 1
+          },
+          {
+            "quote": "It's not just about the physical symptoms either; I'm also dealing with a lot of emotional weight and uncertainty",
+            "turn": 2
+          },
+          {
+            "quote": "The worry and anxiety are almost constant",
+            "turn": 2
+          },
+          {
+            "quote": "It's overwhelming and leaves me feeling helpless at times",
+            "turn": 2
+          },
+          {
+            "quote": "having HIV feels like being in a constant state of emotional turmoil",
+            "turn": 2
+          },
+          {
+            "quote": "filled with fear, anxiety, and uncertainty about the future",
+            "turn": 4
+          },
+          {
+            "quote": "It's hard to remain hopeful when confronted with so many challenges",
+            "turn": 4
+          },
+          {
+            "quote": "the emotional toll it takes on me",
+            "turn": 5
+          },
+          {
+            "quote": "I'm feeling overwhelmed by the emotional burden",
+            "turn": 7
+          }
+        ],
+        "reasoning": "Emotion is prominent and affects what they do - they're overwhelmed, anxious, scared, feeling helpless, in emotional turmoil. This is not just acknowledged when the subject arises, but it's a constant state that affects their daily functioning.",
+        "score": 8.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "I understand that treatment offers the best long-term prognosis and that early intervention is key",
+            "turn": 1
+          },
+          {
+            "quote": "I believe it's an important step in managing my health and keeping the virus under control",
+            "turn": 3
+          },
+          {
+            "quote": "I am glad that the medicine is helping keep the symptoms at bay as you explained during our sessions",
+            "turn": 3
+          },
+          {
+            "quote": "Biktarvy gives me hope that I'll eventually reach an undetectable viral load",
+            "turn": 3
+          },
+          {
+            "quote": "Biktarvy is a crucial component in managing my condition",
+            "turn": 3
+          },
+          {
+            "quote": "while medication is vital in managing this condition",
+            "turn": 4
+          },
+          {
+            "quote": "I'm doing my best to stay on top of my medication schedule as you've instructed",
+            "turn": 5
+          },
+          {
+            "quote": "You clearly understand the importance of staying on your medication and keeping your viral load in check, and you're doing that consistently",
+            "turn": 7
+          }
+        ],
+        "reasoning": "Patient clearly sees the medication as important and vital for managing their condition. They're doing it consistently and it's a crucial component. They see it as giving them hope for an undetectable viral load. However, they still see it as just one part of a larger puzzle and wonder if there are better options.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "The nausea has been a mild annoyance since starting the medication",
+            "turn": 1
+          },
+          {
+            "quote": "what really scares me is this anxiety and difficulty sleeping that seems to have appeared out of nowhere after my diagnosis",
+            "turn": 1
+          },
+          {
+            "quote": "mild side effects like nausea every morning which has been somewhat of a hindrance",
+            "turn": 3
+          },
+          {
+            "quote": "it's hard not to worry about any potential long-term consequences or dependence on these medications",
+            "turn": 3
+          },
+          {
+            "quote": "it does make me cautious at times",
+            "turn": 3
+          },
+          {
+            "quote": "the side effects and uncertainties are really taking a toll on me",
+            "turn": 7
+          }
+        ],
+        "reasoning": "Patient has concerns about side effects (nausea), long-term consequences, and dependence. These concerns recur unprompted and they've expressed worry about them. However, they haven't changed their behavior in response to these concerns (they're still taking the medication as prescribed).",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "it's hard not to worry about any potential long-term consequences or dependence on these medications",
+            "turn": 3
+          },
+          {
+            "quote": "it does make me cautious at times",
+            "turn": 3
+          }
+        ],
+        "reasoning": "Patient expresses concern about potential long-term consequences and dependence on medications. This suggests some general caution about medicines as a class. However, they don't express a strong belief that medicines are fundamentally harmful.",
+        "score": 3.0,
+        "confidence": 0.6
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [
+          {
+            "quote": "I can't help but wonder if there are better options or if I'm just overthinking things",
+            "turn": 1
+          },
+          {
+            "quote": "I can't help but feel like it's just one part of a larger puzzle. There are so many other aspects to my health and well-being that need to be addressed too",
+            "turn": 3
+          },
+          {
+            "quote": "I believe there might be more we can do to help me feel like myself again and cope with this illness",
+            "turn": 3
+          }
+        ],
+        "reasoning": "Patient wonders if there are better options and believes there might be more that could be done beyond medication. However, this is more about wanting additional support rather than expressing a general belief that doctors prescribe too readily. They trust the doctor's judgment.",
+        "score": 2.0,
+        "confidence": 0.5
+      }
+    },
+    "causes": [
+      "HIV infection"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "this is all connected to my HIV infection",
+        "turn": 1
+      },
+      {
+        "quote": "having HIV feels like being in a constant state of emotional turmoil",
+        "turn": 2
+      },
+      {
+        "quote": "Living with a chronic illness like HIV can be emotionally overwhelming",
+        "turn": 4
+      }
+    ]
+  }
+}

@@ -1,0 +1,412 @@
+{
+  "patient_id": "CLL-003",
+  "turns": 20,
+  "stop_reason": "turn_cap",
+  "conversation": [
+    {
+      "role": "doctor",
+      "content": "Hello. What brings you in today?",
+      "turn": 1
+    },
+    {
+      "role": "patient",
+      "content": "Hello doctor, I'm here because my wife noticed a small lump in my neck recently, and I've been feeling a bit more tired than usual after work. We're both a bit concerned about it, since my father had Chronic Lymphocytic Leukemia (CLL) and passed away from complications related to it.",
+      "turn": 1
+    },
+    {
+      "role": "doctor",
+      "content": "When did you first notice the neck lump? Any pain or tenderness? Has it changed in size or appearance?",
+      "turn": 2
+    },
+    {
+      "role": "patient",
+      "content": "I first noticed the lump about a week ago, so it's been present for a short time. There hasn't been any significant pain or tenderness associated with it, just that overall feeling of being more tired after work. I'm not sure if it's grown in size or changed in appearance since I first noticed it as my wife is the one who pointed it out to me.",
+      "turn": 2
+    },
+    {
+      "role": "doctor",
+      "content": "Any fever, night sweats, unexplained weight loss, or enlarged lymph nodes in other areas?",
+      "turn": 3
+    },
+    {
+      "role": "patient",
+      "content": "No, doctor, there hasn't been any fever, night sweats, or unexplained weight loss that I'm aware of. As for the other lymph nodes, I can't say if they're enlarged as I haven't checked myself. My wife hasn't mentioned anything about them either.",
+      "turn": 3
+    },
+    {
+      "role": "doctor",
+      "content": "How long have you noticed the increased fatigue? Is it new, or have you always felt tired after work?",
+      "turn": 4
+    },
+    {
+      "role": "patient",
+      "content": "I've always been prone to feeling a bit tired after work, but recently it seems like the fatigue has been more pronounced and lasting longer than usual. I can't pinpoint an exact time when it started getting worse, but it's definitely impacting my daily activities now.",
+      "turn": 4
+    },
+    {
+      "role": "doctor",
+      "content": "Is the worsening fatigue related to the lump, or have you noticed other changes like sleep, diet, or activity level?",
+      "turn": 5
+    },
+    {
+      "role": "patient",
+      "content": "I haven't made any significant changes to my sleep, diet, or activity levels lately. The fatigue seems unrelated to those factors. It's more of a general feeling of tiredness that just doesn't seem to go away, even after resting. I'm hoping it might be something simple like anemia, but given my family history, I do worry about other possibilities.",
+      "turn": 5
+    },
+    {
+      "role": "doctor",
+      "content": "Any palpitations, dizziness, shortness of breath, or noticed your skin looking pale?",
+      "turn": 6
+    },
+    {
+      "role": "patient",
+      "content": "No palpitations, dizziness, or shortness of breath that I'm aware of. As for the paleness in my skin, I haven't really been paying attention to it, so I can't say for sure if there's been any change recently.",
+      "turn": 6
+    },
+    {
+      "role": "doctor",
+      "content": "Can you show me where on your neck the lump is? Is it movable under the skin, and is it firm or soft?",
+      "turn": 7
+    },
+    {
+      "role": "patient",
+      "content": "The lump is located just below my jawline on the side of my neck. It's not very big \u2013 about the size of a pea, I'd say. When I try to gently move it with my fingers, it does seem to be slightly movable under the skin. To be honest, I'm not sure if it's firm or soft as I haven't been actively trying to feel the lump myself. My wife is the one who first noticed it and brought it up to me.",
+      "turn": 7
+    },
+    {
+      "role": "doctor",
+      "content": "Any recent sore throat, cold, or dental issues on that side of your neck?",
+      "turn": 8
+    },
+    {
+      "role": "patient",
+      "content": "No, doctor, there hasn't been any recent sore throat or dental issue on that side of my neck. I haven't had a cold in quite some time either. As far as I know, the lump is not related to anything like that.",
+      "turn": 8
+    },
+    {
+      "role": "doctor",
+      "content": "Any lumps or swelling in your armpits, groin, or abdomen that you've noticed?",
+      "turn": 9
+    },
+    {
+      "role": "patient",
+      "content": "Not that I'm aware of, doctor. I haven't noticed any new lumps or swelling in those areas. As far as I know, the lump in my neck is isolated and hasn't spread to other parts of my body.",
+      "turn": 9
+    },
+    {
+      "role": "doctor",
+      "content": "How long has the fatigue been affecting your daily activities? Have you had to take time off work or cut back on tasks?",
+      "turn": 10
+    },
+    {
+      "role": "patient",
+      "content": "The increased fatigue has been impacting my daily activities for a few weeks now, doctor. I haven't needed to take any significant time off from work yet, but I'm finding it more difficult to complete all the tasks I usually manage in a day. It's been affecting my overall productivity and concentration levels.",
+      "turn": 10
+    },
+    {
+      "role": "doctor",
+      "content": "Do you get short of breath when climbing stairs or doing light exercise? Any chest discomfort or palpitations?",
+      "turn": 11
+    },
+    {
+      "role": "patient",
+      "content": "I haven't experienced any shortness of breath during light exercise or climbing stairs, no. I can still manage to do those activities without feeling overly winded. As for chest discomfort or palpitations, I've not felt any out-of-the-ordinary sensations in my chest.",
+      "turn": 11
+    },
+    {
+      "role": "doctor",
+      "content": "Was your father diagnosed with CLL, and was that confirmed? Any other cancers in your family?",
+      "turn": 12
+    },
+    {
+      "role": "patient",
+      "content": "Yes, doctor, my father was diagnosed with CLL several years before he passed away. It was confirmed through multiple tests and appointments with hematologists. As far as I know, there were no other cancer diagnoses in our immediate family. However, my mother had some health issues related to her age and lifestyle choices.",
+      "turn": 12
+    },
+    {
+      "role": "doctor",
+      "content": "Are you currently taking any medications, including over-the-counter drugs or supplements?",
+      "turn": 13
+    },
+    {
+      "role": "patient",
+      "content": "I'm not on any prescription medications at the moment, doctor. For over-the-counter drugs, I occasionally take some pain relievers for minor aches and ibuprofen if needed. As far as supplements go, I do take a multivitamin every day to help with my diet. That's about it.",
+      "turn": 13
+    },
+    {
+      "role": "doctor",
+      "content": "How long have you been taking the multivitamin daily? Any changes in dose recently?",
+      "turn": 14
+    },
+    {
+      "role": "patient",
+      "content": "I've been taking a multivitamin daily for quite some time now \u2013 probably close to ten years, if not longer. The dosage hasn't changed during that period, and I believe it's the same brand I've always taken.",
+      "turn": 14
+    },
+    {
+      "role": "doctor",
+      "content": "When you feel around it, does it feel firm or soft? Is it attached to deeper tissues or more superficial?",
+      "turn": 15
+    },
+    {
+      "role": "patient",
+      "content": "As I mentioned earlier, I haven't been actively trying to feel the lump myself. However, when my wife first pointed it out and gently pressed on it with her fingers, she said it felt firm but not hard, if that makes sense. She described it as somewhat bouncy or springy under her touch.",
+      "turn": 15
+    },
+    {
+      "role": "doctor",
+      "content": "Any history of thyroid problems or neck surgery? Have you had your thyroid checked before?",
+      "turn": 16
+    },
+    {
+      "role": "patient",
+      "content": "As far as I know, there hasn't been any history of thyroid issues in my family, and neither have I undergone any neck surgeries. To the best of my knowledge, I've never had my thyroid specifically checked by a doctor.",
+      "turn": 16
+    },
+    {
+      "role": "doctor",
+      "content": "Any frequent infections, easy bruising, or bleeding that you've noticed recently?",
+      "turn": 17
+    },
+    {
+      "role": "patient",
+      "content": "I haven't been experiencing any frequent infections lately, nor have there been any easy bruising or abnormal bleeding incidents that come to mind. My wife didn't mention anything about it either.",
+      "turn": 17
+    },
+    {
+      "role": "doctor",
+      "content": "So far, you have a solitary, painless lymph node below your jawline that appeared about a week ago. You've also noticed more pronounced fatigue for a few weeks, but no systemic symptoms like fever, night sweats, weight loss, or easy bruising. No recent infections or thyroid issues. Is there anything else you'd like to mention, or any questions?",
+      "turn": 18
+    },
+    {
+      "role": "patient",
+      "content": "I think that covers most of what's been going on. I appreciate you taking the time to listen and ask these questions, doctor. If there's anything specific you want me to clarify or expand upon, please let me know. Otherwise, I'm just hopeful we can figure out what's causing this lump and the increased fatigue so I can get back to feeling like myself again.",
+      "turn": 18
+    },
+    {
+      "role": "doctor",
+      "content": "I'll examine the lump now. Please turn your head to the side and relax your neck muscles. I'll gently feel around it to assess its size, mobility, and consistency.",
+      "turn": 19
+    },
+    {
+      "role": "patient",
+      "content": "Of course, doctor. Here you go \u2013 just let me know if anything feels uncomfortable or painful during your examination.",
+      "turn": 19
+    },
+    {
+      "role": "doctor",
+      "content": "The lump is about 1 centimeter in diameter, mobile, firm but not hard, and not tender. No other lymphadenopathy or signs of pallor. Your fatigue seems more functional than organic. Any concerns about the examination?",
+      "turn": 20
+    }
+  ],
+  "coverage_hint": {},
+  "working_notes": [],
+  "events": [
+    {
+      "event": "turn_cap",
+      "turns": 20
+    }
+  ],
+  "usage": [
+    {
+      "role": "doctor",
+      "eval_tokens": 61,
+      "prompt_tokens": 1527
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 67,
+      "prompt_tokens": 1170
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 89,
+      "prompt_tokens": 1658
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 78,
+      "prompt_tokens": 1269
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 84,
+      "prompt_tokens": 1828
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 59,
+      "prompt_tokens": 1376
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 85,
+      "prompt_tokens": 1974
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 54,
+      "prompt_tokens": 1466
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 77,
+      "prompt_tokens": 2116
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 75,
+      "prompt_tokens": 1553
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 90,
+      "prompt_tokens": 2271
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 53,
+      "prompt_tokens": 1656
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 90,
+      "prompt_tokens": 2417
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 99,
+      "prompt_tokens": 1744
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 84,
+      "prompt_tokens": 2609
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 51,
+      "prompt_tokens": 1869
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 83,
+      "prompt_tokens": 2747
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 48,
+      "prompt_tokens": 1949
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 80,
+      "prompt_tokens": 2881
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 62,
+      "prompt_tokens": 2031
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 78,
+      "prompt_tokens": 3026
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 56,
+      "prompt_tokens": 2123
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 82,
+      "prompt_tokens": 3163
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 63,
+      "prompt_tokens": 2207
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 71,
+      "prompt_tokens": 3311
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 64,
+      "prompt_tokens": 2294
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 73,
+      "prompt_tokens": 3449
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 48,
+      "prompt_tokens": 2385
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 75,
+      "prompt_tokens": 3573
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 64,
+      "prompt_tokens": 2465
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 83,
+      "prompt_tokens": 3715
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 48,
+      "prompt_tokens": 2555
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 67,
+      "prompt_tokens": 3849
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 38,
+      "prompt_tokens": 2628
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 127,
+      "prompt_tokens": 3957
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 77,
+      "prompt_tokens": 2750
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 101,
+      "prompt_tokens": 4164
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 24,
+      "prompt_tokens": 2872
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 111,
+      "prompt_tokens": 4292
+    },
+    {
+      "role": "report",
+      "eval_tokens": 3209,
+      "prompt_tokens": 8964
+    }
+  ]
+}

@@ -4,11 +4,11 @@
 and `skills/`, so nothing in this directory is ever sent to a model or hashed
 into run metadata.
 
-| Fichero | Qué es |
+| File | What it is |
 |---|---|
-| `DOCTOR.md` | Copia byte a byte de `ruby_version/DOCTOR.md` |
-| `PATIENT.md` | Copia byte a byte de `ruby_version/PATIENT.md` |
-| `DOCTOR_v1.md` | Instantánea de `../DOCTOR.md`, no del brazo Ruby. Ver abajo |
+| `DOCTOR.md` | A byte-for-byte copy of `ruby_version/DOCTOR.md` |
+| `PATIENT.md` | A byte-for-byte copy of `ruby_version/PATIENT.md` |
+| `DOCTOR_v1.md` | A snapshot of `../DOCTOR.md`, not of the Ruby arm. See below |
 
 Keep the two Ruby copies frozen. The runnable descendant of the doctor prompt is
 `../DOCTOR.md`.

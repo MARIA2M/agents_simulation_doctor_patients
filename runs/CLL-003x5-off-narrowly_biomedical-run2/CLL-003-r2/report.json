@@ -1,0 +1,239 @@
+{
+  "patient_id": "CLL-003",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "CLL-003",
+    "clinical_summary": "The patient presents with mild fatigue (rated 5/10) lasting about two weeks and a tender neck lump that appears to have grown over time. No hoarseness, difficulty swallowing, weight changes, night sweats, or fevers. No known medical conditions or regular medications. Follows a healthy lifestyle with regular exercise and balanced diet. Family history of CLL. Patient trusts specialist expertise and is willing to undergo biopsy.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "I would say it's around a 5 or so. It's definitely lower than what it used to be, but not at the point where I'm feeling completely exhausted all the time.",
+            "turn": 11
+          },
+          {
+            "quote": "The fatigue has been ongoing for about two weeks now. It's more of a general tiredness that lingers throughout the day, but it doesn't really hit me at any specific time. It's just always there in some degree.",
+            "turn": 2
+          }
+        ],
+        "reasoning": "Patient rates energy at 5/10, lower than before but not completely exhausted. Fatigue is described as 'always there in some degree' and 'lingers throughout the day,' indicating moderate impact on daily functioning without complete dependence on others.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "The fatigue has been ongoing for about two weeks now.",
+            "turn": 2
+          },
+          {
+            "quote": "My wife noticed the lump about a week ago",
+            "turn": 3
+          },
+          {
+            "quote": "From what I can tell, it feels like something that may have been present for a little while but has grown in size over time.",
+            "turn": 9
+          }
+        ],
+        "reasoning": "Symptoms have been present for a relatively short time (2 weeks for fatigue, lump noticed about a week ago, but may have been present longer). Patient does not express expectation that this will be permanent or that it will last forever.",
+        "score": 2.0,
+        "confidence": 0.8
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I don't have any known medical conditions, and I'm not taking any regular medications at the moment. However, I do follow a healthy lifestyle as much as possible, including regular exercise and maintaining a balanced diet.",
+            "turn": 5
+          },
+          {
+            "quote": "Of course, go ahead. I want to make sure everything is okay and address any concerns I might have.",
+            "turn": 7
+          },
+          {
+            "quote": "I understand that this might be necessary given my situation and family history. While it's a bit concerning, I trust the expertise of the specialists and want to make sure everything is taken care of. So, if that's what you think is best, then I'm on board with that plan.",
+            "turn": 12
+          }
+        ],
+        "reasoning": "Patient describes following a healthy lifestyle with regular exercise and balanced diet, suggesting belief that their own actions can influence health. Actively seeking medical evaluation and willing to follow specialist recommendations.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "Of course, go ahead. I want to make sure everything is okay and address any concerns I might have.",
+            "turn": 7
+          },
+          {
+            "quote": "It feels a bit tender, but not excruciatingly so. The doctor's touch is gentle, and I trust their expertise.",
+            "turn": 8
+          },
+          {
+            "quote": "I understand that this might be necessary given my situation and family history. While it's a bit concerning, I trust the expertise of the specialists and want to make sure everything is taken care of. So, if that's what you think is best, then I'm on board with that plan.",
+            "turn": 12
+          }
+        ],
+        "reasoning": "Patient expresses trust in specialist expertise and willingness to follow medical recommendations. No doubt expressed about effectiveness of medical treatment.",
+        "score": 7.0,
+        "confidence": 0.8
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "I've been feeling a bit more tired than usual lately after work, and my wife also noticed a small lump in my neck recently.",
+            "turn": 1
+          },
+          {
+            "quote": "The fatigue has been ongoing for about two weeks now. It's more of a general tiredness that lingers throughout the day, but it doesn't really hit me at any specific time. It's just always there in some degree.",
+            "turn": 2
+          },
+          {
+            "quote": "My wife noticed the lump about a week ago during a casual conversation when she was helping me with my tie.",
+            "turn": 3
+          },
+          {
+            "quote": "No, not at all. Aside from the lump in my neck, I haven't noticed anything unusual like hoarseness or difficulty swallowing. And to my knowledge, there aren't any other lumps present on my body.",
+            "turn": 4
+          }
+        ],
+        "reasoning": "Patient describes specific symptoms (fatigue and neck lump) but doesn't label them as a specific illness or condition. No strong illness identity.",
+        "score": 3.0,
+        "confidence": 0.7
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "I'm not too worried, but I thought it would be best to have a professional check it out.",
+            "turn": 1
+          },
+          {
+            "quote": "While it's a bit concerning, I trust the expertise of the specialists and want to make sure everything is taken care of. So, if that's what you think is best, then I'm on board with that plan.",
+            "turn": 12
+          }
+        ],
+        "reasoning": "Patient acknowledges situation is 'a bit concerning' but doesn't express significant worry. Trusts medical process and willing to follow recommendations.",
+        "score": 3.0,
+        "confidence": 0.7
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I've been feeling a bit more tired than usual lately after work, and my wife also noticed a small lump in my neck recently.",
+            "turn": 1
+          },
+          {
+            "quote": "The fatigue has been ongoing for about two weeks now. It's more of a general tiredness that lingers throughout the day, but it doesn't really hit me at any specific time. It's just always there in some degree.",
+            "turn": 2
+          },
+          {
+            "quote": "My wife noticed the lump about a week ago during a casual conversation when she was helping me with my tie.",
+            "turn": 3
+          },
+          {
+            "quote": "No, not at all. Aside from the lump in my neck, I haven't noticed anything unusual like hoarseness or difficulty swallowing. And to my knowledge, there aren't any other lumps present on my body.",
+            "turn": 4
+          },
+          {
+            "quote": "I don't have any known medical conditions, and I'm not taking any regular medications at the moment. However, I do follow a healthy lifestyle as much as possible, including regular exercise and maintaining a balanced diet.",
+            "turn": 5
+          },
+          {
+            "quote": "Yes, my father had Chronic Lymphocytic Leukemia, which is a type of cancer that affects the immune system. He's been managing it well with regular check-ups and monitoring, but I'm not on any medication for it myself.",
+            "turn": 6
+          },
+          {
+            "quote": "From what I can tell, it feels like something that may have been present for a little while but has grown in size over time. The doctor seems to be taking it seriously, which is reassuring.",
+            "turn": 9
+          },
+          {
+            "quote": "No, I haven't experienced any significant changes in my weight recently, and I haven't had any night sweats or fevers. But then again, I can't say for certain if there have been subtle changes that I'm not aware of.",
+            "turn": 10
+          },
+          {
+            "quote": "I would say it's around a 5 or so. It's definitely lower than what it used to be, but not at the point where I'm feeling completely exhausted all the time.",
+            "turn": 11
+          },
+          {
+            "quote": "I understand that this might be necessary given my situation and family history. While it's a bit concerning, I trust the expertise of the specialists and want to make sure everything is taken care of. So, if that's what you think is best, then I'm on board with that plan.",
+            "turn": 12
+          }
+        ],
+        "reasoning": "Patient can describe symptoms clearly and has some understanding of what's happening, but lacks detailed understanding of underlying mechanism or specific cause.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "I'm not too worried, but I thought it would be best to have a professional check it out.",
+            "turn": 1
+          },
+          {
+            "quote": "While it's a bit concerning, I trust the expertise of the specialists and want to make sure everything is taken care of. So, if that's what you think is best, then I'm on board with that plan.",
+            "turn": 12
+          },
+          {
+            "quote": "No, I think that covers everything for now. Thank you, doctor, for taking the time to listen and address my concerns. I appreciate your help and expertise.",
+            "turn": 13
+          },
+          {
+            "quote": "Thank you. Take care too.",
+            "turn": 14
+          }
+        ],
+        "reasoning": "Patient expresses mild concern but shows no significant emotional distress. Calm, composed, and trusts medical process.",
+        "score": 3.0,
+        "confidence": 0.7
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [],
+        "reasoning": "Patient is not taking any regular medications, so specific beliefs about their own medication cannot be assessed.",
+        "score": null,
+        "confidence": 1.0
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [],
+        "reasoning": "Patient is not taking any regular medications, so specific concerns about their own medication cannot be assessed.",
+        "score": null,
+        "confidence": 1.0
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [],
+        "reasoning": "This dimension was never explored in the consultation.",
+        "score": null,
+        "confidence": 1.0
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "This dimension was never explored in the consultation.",
+        "score": null,
+        "confidence": 1.0
+      }
+    },
+    "causes": [
+      "family history of CLL",
+      "unknown cause"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "Yes, my father had Chronic Lymphocytic Leukemia, which is a type of cancer that affects the immune system.",
+        "turn": 6
+      }
+    ]
+  }
+}

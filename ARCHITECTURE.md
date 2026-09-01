@@ -1,38 +1,40 @@
-# AHEAD — Arquitectura e instrucciones de construcción
+# AHEAD — Architecture and build instructions
 
-Documento de diseño para la reimplementación. Las tareas numeradas (`1.5`, `2.1`…)
-remiten a [TASKS.md](TASKS.md).
+The design document for the reimplementation. The numbered tasks (`1.5`, `2.1`…)
+refer to [TASKS.md](TASKS.md).
 
 ---
 
-## 1. Decisiones de base
+## 1. Baseline decisions
 
-| Decisión | Qué significa |
+| Decision | What it means |
 |---|---|
 | **Runtime** | Python + LangGraph. |
-| **Paradigma** | Inferencia, no elicitación. El médico conversa libre e infiere; nunca recita ítems del cuestionario. |
-| **Comportamiento agéntico** | El del brazo Ruby/Scout: el paciente es una **herramienta** del médico, no un nodo par. |
-| **Estilo de código** | El del brazo Python actual, para poder reutilizar el frontend y el `api_server`. |
-| **Base de partida** | `python_version/ahead_agent-bmq-integration`. |
+| **Paradigm** | Inference, not elicitation. The doctor converses freely and infers; it never recites questionnaire items. |
+| **Agentic behaviour** | The Ruby/Scout arm's: the patient is a **tool** of the doctor, not a peer node. |
+| **Code style** | The current Python arm's, so the frontend and the `api_server` can be reused. |
+| **Starting point** | `python_version/ahead_agent-bmq-integration`. |
 
-### 1.1 La pieza que hay que emular
+### 1.1 The piece to emulate
 
-En Scout, `delegate` registra al paciente como una función del médico:
+In Scout, `delegate` registers the patient as a function of the doctor:
 
 ```ruby
 doctor.delegate patient, :patient, "Ask this patient questions"
-# → expone la tool `hand_off_to_patient(message:, new_conversation:)`
+# → exposes the tool hand_off_to_patient(message:, new_conversation:)
 ```
 
-El médico es un agente normal con tools. Hablar con el paciente **es una llamada
-a herramienta**. De ahí salen tres propiedades que el brazo Python actual no tiene:
+The doctor is an ordinary agent with tools. Talking to the patient **is a tool
+call**. Three properties follow that the current Python arm does not have:
 
-- Los turnos no están preestablecidos: el médico llama a la tool cuando quiere (1.3).
-- El médico decide cuándo parar: deja de llamarla y pasa a escribir (1.5).
-- El transcript es un subproducto: se reconstruye de los pares
-  `function_call` / `function_call_output`.
+- Turns are not laid out in advance: the doctor calls the tool when it wants
+  (1.3).
+- The doctor decides when to stop: it stops calling and moves on to writing
+  (1.5).
+- The transcript is a by-product: it is rebuilt from the `function_call` /
+  `function_call_output` pairs.
 
-**En LangGraph esto es un bucle agente↔herramienta**, no una cadena de nodos fijos:
+**In LangGraph this is an agent↔tool loop**, not a chain of fixed nodes:
 
 ```
                  ┌──────────────────────────────┐
@@ -40,141 +42,142 @@ a herramienta**. De ahí salen tres propiedades que el brazo Python actual no ti
                  ▼                              │
   START ──► doctor ──(tool_call: speak)──► patient_tool
                  │                              │
-                 └──(sin tool_call)──► report ──► END
+                 └──(no tool_call)──► report ──► END
 ```
 
-`patient_tool` invoca al LLM del paciente con su perfil y devuelve la respuesta
-como resultado de herramienta. El médico la recibe y decide: volver a preguntar,
-o terminar. `report` **siempre** se ejecuta al salir del bucle (1.13).
+`patient_tool` invokes the patient's LLM with its profile and returns the reply
+as a tool result. The doctor receives it and decides: ask again, or finish.
+`report` **always** runs on leaving the loop (1.13).
 
-Contraste con lo que hay hoy en `graph.py`: un recorrido por lista de preguntas
-con `q_index` y `bmq_index`. Eso desaparece por completo.
+Contrast with what is in `graph.py` today: a walk through a list of questions
+with `q_index` and `bmq_index`. That disappears entirely.
 
-**Libre no significa concurrente** (1.4). El bucle es estrictamente secuencial:
-cada turno ve el estado completo del anterior. Las llamadas al LLM son `async`
-por transporte, pero nunca hay dos turnos en vuelo a la vez. Lo que es libre es
-*cuándo* y *cuántas veces* habla el médico, no el orden.
+**Free does not mean concurrent** (1.4). The loop is strictly sequential: every
+turn sees the full state of the previous one. Calls to the LLM are `async` at
+the transport level, but there are never two turns in flight at once. What is
+free is *when* and *how many times* the doctor speaks, not the order.
 
 ---
 
-## 2. Estructura de ficheros
+## 2. File structure
 
-Espeja la actual para que el frontend y el estilo de importación sigan valiendo.
-`NUEVO` = no existe hoy. `PORTAR` = viene del paquete actual.
+It mirrors the current one so the frontend and the import style keep working.
+`NEW` = does not exist today. `PORT` = comes from the current package.
 
 ```
 ahead_agent_v2/
-├── main.py                  # CLI, misma forma que el main.py actual
-├── api_server.py            # FastAPI (ver §7)
-├── run_batch.py             # PORTAR — N corridas × M pacientes
+├── main.py                  # CLI, same shape as the current main.py
+├── api_server.py            # FastAPI (see §7)
+├── run_batch.py             # PORT — N runs × M patients
 │
 ├── ahead_agent/
-│   ├── __init__.py          # reexporta State y build_graph (este último, perezoso)
-│   ├── config.py            # CONFIG, modelos, rutas. SIN lista de preguntas
+│   ├── __init__.py          # re-exports State and build_graph (the latter, lazily)
+│   ├── config.py            # CONFIG, models, paths. NO question list
 │   ├── state.py             # State TypedDict (§3)
-│   ├── graph.py             # build_graph() — único sitio que toca StateGraph
+│   ├── graph.py             # build_graph() — the only place that touches StateGraph
 │   ├── nodes.py             # doctor_node, patient_tool_node, report_node
 │   ├── routing.py           # route_after_doctor
-│   ├── tools.py             # NUEVO — equivalente a delegate de Scout
-│   ├── prompts.py           # NUEVO — carga de markdown: prompts, skills, recursos
-│   ├── llm.py               # PORTAR — cliente HTTP, reintentos (3.1)
-│   ├── patient_profile.py   # PORTAR — perfil → prompt de paciente
+│   ├── tools.py             # NEW — the equivalent of Scout's delegate
+│   ├── prompts.py           # NEW — loading markdown: prompts, skills, resources
+│   ├── llm.py               # PORT — HTTP client, retries (3.1)
+│   ├── patient_profile.py   # PORT — profile → patient prompt
 │   │
-│   ├── report.py            # NUEVO — esquema, parseo, validación, reintento (§4)
-│   ├── evaluation.py        # PORTAR — MAE, sesgo, Pearson, ICC (4.2)
-│   ├── coverage.py          # NUEVO — 3.2, mapa de cobertura + verificación de citas
-│   ├── reproducibility.py   # NUEVO — 3.3, dispersión (2.4) y discriminación (2.5)
-│   ├── artifacts.py         # NUEVO — 5.4, transcript cruzado y ablación
+│   ├── report.py            # NEW — schema, parsing, validation, retry (§4)
+│   ├── evaluation.py        # PORT — MAE, bias, Pearson, ICC (4.2)
+│   ├── coverage.py          # NEW — 3.2, coverage map + quote verification
+│   ├── reproducibility.py   # NEW — 3.3, spread (2.4) and discrimination (2.5)
+│   ├── artifacts.py         # NEW — 5.4, crossed transcript and ablation
 │   │
 │   ├── api/
-│   │   ├── doctor.py        # PORTAR/adaptar — ahora con tools
-│   │   ├── patient.py       # PORTAR casi tal cual
-│   │   └── reporter.py      # NUEVO — sustituye a scorer.py
+│   │   ├── doctor.py        # PORT/adapt — now with tools
+│   │   ├── patient.py       # PORT almost as is
+│   │   └── reporter.py      # NEW — replaces scorer.py
 │   │
-│   └── causes/              # PORTAR sin cambios — embeddings, similitud, scorer
+│   └── causes/              # PORT unchanged — embeddings, similarity, scorer
 │
-├── config/                  # perfiles de ejecución (§6)
-│   ├── base.yaml            # 0.5 — lo compartido; no es un perfil, no carga solo
-│   ├── local.yaml           # modelos pequeños, escala de humo
-│   └── hpc.yaml             # modelos grandes, tandas completas
+├── config/                  # run profiles (§6)
+│   ├── base.yaml            # 0.5 — what is shared; not a profile, does not load alone
+│   ├── local.yaml           # small models, smoke scale
+│   └── hpc.yaml             # large models, full batches
 ├── prompts/
-│   ├── DOCTOR.md            # rol del médico
-│   ├── PATIENT.md           # rol del paciente
-│   └── rubric/              # 2.2 — anclas 2/4/6/8 LADO MÉDICO
+│   ├── DOCTOR.md            # the doctor's role
+│   ├── PATIENT.md           # the patient's role
+│   └── rubric/              # 2.2 — anchors 2/4/6/8, DOCTOR SIDE
 │       ├── bipq.md
 │       └── bmq.md
 ├── skills/
-│   └── styles/              # 6.5 — un .md por estilo de comunicación
-├── resources/               # 1.8 — CSM, NCF, terminología
-├── patients/                # perfiles + ground truth
-└── runs/                    # salidas por corrida
+│   └── styles/              # 6.5 — one .md per communication style
+├── resources/               # 1.8 — CSM, NCF, terminology
+├── patients/                # profiles + ground truth
+└── runs/                    # outputs per run
 ```
 
-`build_graph` se resuelve al pedirlo, no al importar el paquete: `graph.py` trae
-langgraph, que desde GPFS tarda unos tres minutos, y un reexport normal se lo
-cobraría a cualquier import — incluidos los de post-proceso, que no tocan el
-grafo. Es también lo que permite que los dos tests de punta a punta sigan detrás
-de `AHEAD_GRAPH_TESTS=1` sin arrastrar al resto de la suite.
+`build_graph` is resolved when asked for, not when the package is imported:
+`graph.py` pulls in langgraph, which off GPFS takes about three minutes, and an
+ordinary re-export would charge that to every import — including the
+post-processing ones, which never touch the graph. It is also what lets the two
+end-to-end tests stay behind `AHEAD_GRAPH_TESTS=1` without dragging the rest of
+the suite along.
 
-**Estructura plana, como hoy.** El paquete actual tiene 9 módulos de primer nivel
-y solo dos subpaquetes (`api/`, `causes/`). Se mantiene igual: `report.py`,
-`coverage.py`, `reproducibility.py` y `artifacts.py` son módulos sueltos, no
-paquetes. Si alguno pasa de ~400 líneas se parte entonces, no antes.
+**A flat structure, as today.** The current package has 9 top-level modules and
+only two subpackages (`api/`, `causes/`). It stays that way: `report.py`,
+`coverage.py`, `reproducibility.py` and `artifacts.py` are loose modules, not
+packages. If any of them passes ~400 lines it gets split then, not before.
 
-**Regla de dependencias.** `nodes` → `api` → `llm`. `evaluation`, `coverage`,
-`reproducibility`, `artifacts` y `causes` no importan nada de `nodes`/`graph`:
-son post-proceso puro y deben poder ejecutarse sobre corridas de cualquier brazo,
-incluido el de elicitación (5.2).
+**Dependency rule.** `nodes` → `api` → `llm`. `evaluation`, `coverage`,
+`reproducibility`, `artifacts` and `causes` import nothing from `nodes`/`graph`:
+they are pure post-processing and must be able to run over runs from any arm,
+the elicitation one included (5.2).
 
 ---
 
-## 3. Estado
+## 3. State
 
 ```python
 class State(TypedDict):
-    # ── Conversación ──
+    # ── Conversation ──
     conversation: List[Dict]      # [{"role": "doctor"|"patient", "content": str, "turn": int}]
-    doctor_messages: List[Dict]   # historial del LLM médico, con tool_calls
+    doctor_messages: List[Dict]   # the doctor LLM's history, with tool_calls
     turn_count: int
-    finished: bool                # el médico cerró la consulta (1.5)
-    coverage_hint: Dict[str, str] # dimensión → "covered"; ausente = sin sondear (§4.1)
+    finished: bool                # the doctor closed the consultation (1.5)
+    coverage_hint: Dict[str, str] # dimension → "covered"; absent = not probed (§4.1)
     working_notes: List[Dict]     # [{turn, dimension, observation}] (§4.1)
 
-    # ── Paciente ──
-    profile: Dict                 # JSON completo. SOLO lo lee patient_tool_node
+    # ── Patient ──
+    profile: Dict                 # the full JSON. ONLY patient_tool_node reads it
     patient_messages: List[Dict]
 
-    # ── Salida ──
+    # ── Output ──
     report_raw: Optional[str]
-    report: Optional[Report]      # ver §4
+    report: Optional[Report]      # see §4
     report_attempts: int
 
-    # ── Trazabilidad ──
+    # ── Traceability ──
     run_meta: RunMeta             # 0.4
-    events: List[Dict]            # reintentos, fallos, turnos vacíos
+    events: List[Dict]            # retries, failures, empty turns
 ```
 
-Fuera: `q_index`, `bmq_index`, `follow_up_count`, `scores`, `bmq_scores`. No hay
-puntuación incremental — se emite entera al final (1.11).
+Out: `q_index`, `bmq_index`, `follow_up_count`, `scores`, `bmq_scores`. There is
+no incremental scoring — it is emitted whole at the end (1.11).
 
-### 3.1 Invariante de aislamiento (1.2)
+### 3.1 The isolation invariant (1.2)
 
-> `profile` no aparece jamás en el contexto del médico.
+> `profile` never appears in the doctor's context.
 
-No es un comentario, es un test. `patient_tool_node` es el único que lee
-`state["profile"]`. Añadir en la suite una comprobación que serialice todos los
-mensajes enviados al médico y falle si contiene cualquier valor de `belief_profile`.
+This is not a comment, it is a test. `patient_tool_node` is the only thing that
+reads `state["profile"]`. Add a check to the suite that serialises every message
+sent to the doctor and fails if it contains any `belief_profile` value.
 
-Modelos distintos para médico y paciente: `CONFIG["doctor_model"]` y
-`CONFIG["patient_model"]`. El config actual llama `model` al del médico; conviene
-renombrarlo a `doctor_model` al portarlo, porque `model` a secas también servía
-al scorer, que ya no existe.
+Different models for doctor and patient: `CONFIG["doctor_model"]` and
+`CONFIG["patient_model"]`. The current config calls the doctor's `model`; it is
+worth renaming to `doctor_model` when porting, because a bare `model` also served
+the scorer, which no longer exists.
 
-### 3.2 `run_meta`: provenance de la corrida (0.4)
+### 3.2 `run_meta`: the run's provenance (0.4)
 
-Todo lo necesario para interpretar los resultados de una corrida meses después.
-Se escribe **una vez al empezar**, junto a las salidas, en `runs/<run_id>/run_meta.json`.
-Precedente a copiar: el `manifest.json` de `run_config.rb` en el brazo Ruby.
+Everything needed to interpret a run's results months later. It is written
+**once at the start**, next to the outputs, in `runs/<run_id>/run_meta.json`. The
+precedent to copy: `run_config.rb`'s `manifest.json` in the Ruby arm.
 
 ```jsonc
 {
@@ -186,15 +189,15 @@ Precedente a copiar: el `manifest.json` de `run_config.rb` en el brazo Ruby.
                 "patient": "dolphin-llama3",
                 "embed": "jina-embeddings-v4" },
 
-  "sampling": { "temperature": 0.7,        // SIEMPRE explícita (§12)
+  "sampling": { "temperature": 0.7,        // ALWAYS explicit (§12)
                 "seed": null,
                 "context_length": 32768,
                 "num_parallel": 1 },
 
-  "features": { "coverage_hint": "off",    // el brazo de la corrida (§4.1)
+  "features": { "coverage_hint": "off",    // the run's arm (§4.1)
                 "working_notes": false },
 
-  "prompts":  { "doctor": "sha256:a1b2…",  // hash del prompt YA compuesto (§5.1)
+  "prompts":  { "doctor": "sha256:a1b2…",  // hash of the ALREADY COMPOSED prompt (§5.1)
                 "patient": "sha256:c3d4…",
                 "rubric": "sha256:e5f6…",
                 "skills": ["styles/empathic"] },
@@ -207,85 +210,86 @@ Precedente a copiar: el `manifest.json` de `run_config.rb` en el brazo Ruby.
 }
 ```
 
-Sin esto, el método de "una variable por corrida" no funciona: al ver que el MAE
-cambió entre dos corridas no podrías saber si fue por el cambio que hiciste o por
-otra cosa. Tres campos que parecen menores y no lo son:
+Without this, the "one variable per run" method does not work: on seeing the MAE
+change between two runs you could not tell whether it was the change you made or
+something else. Three fields that look minor and are not:
 
-- **`dirty`** — si había cambios sin commitear, `git_commit` miente. Marcarlo
-  evita creer que una corrida es reproducible cuando no lo es.
-- **`temperature`** — se registra lo que se **envió**, no lo que se supone. Un
-  servidor con su propio valor por defecto cambia los resultados en silencio.
-- **hashes de prompts** — son lo que hace medible la fase 6: atribuyen un cambio
-  de resultado a un cambio de prompt concreto.
-- **`features`** — el brazo (§4.1). Los valores compartidos viven en `base.yaml`
-  desde 0.5, así que el fichero de perfil ya no los enseña: si no se copian
-  aquí, una corrida con `coverage_hint: show` es indistinguible de la línea base
-  al leerla meses después.
+- **`dirty`** — if there were uncommitted changes, `git_commit` lies. Recording
+  it stops you believing a run is reproducible when it is not.
+- **`temperature`** — what was **sent** is recorded, not what is assumed. A
+  server with its own default changes results silently.
+- **prompt hashes** — they are what makes phase 6 measurable: they attribute a
+  change of result to a specific change of prompt.
+- **`features`** — the arm (§4.1). The shared values have lived in `base.yaml`
+  since 0.5, so the profile file no longer shows them: without copying them here,
+  a run with `coverage_hint: show` is indistinguishable from the baseline when
+  read months later.
 
 ---
 
-## 4. Contrato del informe
+## 4. The report contract
 
-El médico devuelve **una sola** estructura al final. Es el corazón de la fase 2.
+The doctor returns **one single** structure at the end. It is the heart of
+phase 2.
 
 ```python
 @dataclass
 class Evidence:
-    quote: str          # cita literal del transcript
-    turn: int           # turno del que sale
+    quote: str          # a verbatim quote from the transcript
+    turn: int           # the turn it comes from
 
 @dataclass
 class DimensionScore:
     dimension: str
-    evidence: List[Evidence]   # PRIMERO
-    reasoning: str             # SEGUNDO
-    score: float | None        # TERCERO — None = NA (4.4)
-    confidence: float          # 0–1, declarada por el médico (2.3)
+    evidence: List[Evidence]   # FIRST
+    reasoning: str             # SECOND
+    score: float | None        # THIRD — None = NA (4.4)
+    confidence: float          # 0–1, declared by the doctor (2.3)
 
 @dataclass
 class Report:
     patient_id: str
     clinical_summary: str
-    bipq: Dict[str, DimensionScore]    # 8 dimensiones
-    bmq:  Dict[str, DimensionScore]    # en ve subescalas
-    causes: List[str]                  # abierto, ranked
+    bipq: Dict[str, DimensionScore]    # 8 dimensions
+    bmq:  Dict[str, DimensionScore]    # 4 subscales
+    causes: List[str]                  # open, ranked
     causes_evidence: List[Evidence]
 ```
 
-**El orden de los campos es la especificación** (2.1). El prompt y el esquema de
-salida deben forzar `evidence → reasoning → score`. Hoy la tabla de Ruby es
-`Score | Rationale`, así que la justificación se genera después del número y es
-decorativa; el scorer de Python devuelve el número desnudo.
+**The field order is the specification** (2.1). The prompt and the output schema
+must force `evidence → reasoning → score`. Today Ruby's table is
+`Score | Rationale`, so the justification is generated after the number and is
+decorative; the Python scorer returns the bare number.
 
-**Política NA** (4.4). `score = None` cuando no se puede extraer, no se sondeó la
-dimensión, o el JSON no parsea. Nunca un valor por defecto. Un NA:
+**NA policy** (4.4). `score = None` when it cannot be extracted, when the
+dimension was not probed, or when the JSON does not parse. Never a default value.
+An NA:
 
-- se excluye del MAE,
-- se cuenta en la tasa de cobertura,
-- aparece como hueco en el mapa de 3.2.
+- is excluded from the MAE,
+- is counted in the coverage rate,
+- appears as a hole in the 3.2 map.
 
-**Validación y reintento** (1.13). `report.py` comprueba las 12 dimensiones +
-causas. Si falta algo, reintento con el mismo transcript y un prompt que señale
-explícitamente qué falta. Máximo 3 intentos (`limits.report_attempts`); lo que siga faltando queda NA y se
-registra en `events`.
+**Validation and retry** (1.13). `report.py` checks the 12 dimensions + causes.
+If something is missing, retry with the same transcript and a prompt that names
+explicitly what is missing. At most 3 attempts (`limits.report_attempts`);
+whatever is still missing stays NA and is recorded in `events`.
 
-### 4.1 Sondeo dirigido por ambigüedad (1.12) — decidido
+### 4.1 Ambiguity-driven probing (1.12) — decided
 
-El médico repregunta cuando la **evidencia es insuficiente**, no cuando la
-respuesta es corta. El routing viejo de Python disparaba con
-`len(respuesta) < 10 palabras`, así que una respuesta larga y vaga pasaba directa
-a puntuación. Esa regla no existe aquí y no vuelve.
+The doctor asks again when the **evidence is insufficient**, not when the answer
+is short. The old Python routing fired on `len(reply) < 10 words`, so a long
+vague answer went straight to scoring. That rule does not exist here and does not
+come back.
 
-Lo que sí se decidió, al cerrar la Etapa 3, es **cómo se sostiene**. La primera
-versión de esta sección daba por hecho que el médico llevaría su propia lista y
-la consultaría antes de cerrar. Eso es un brazo, no la línea base: una lista de
-dimensiones que el médico recorre es el cuestionario que 1.3 sacó del código,
-entrando otra vez por la puerta de atrás, y fuerza una cobertura que después
-infla el resultado.
+What was decided, on closing Stage 3, is **how it is supported**. The first
+version of this section assumed the doctor would keep its own list and consult it
+before closing. That is an arm, not the baseline: a list of dimensions the doctor
+walks is the questionnaire 1.3 took out of the code, coming back in through the
+back door, and it forces a coverage that then inflates the result.
 
-Se implementa como **dos interruptores independientes**, declarados en el bloque
-`features` —en `base.yaml`, o sobrescrito por el perfil— y copiados a `run_meta`
-tal como quedan al fundirse (0.4):
+It is implemented as **two independent switches**, declared in the `features`
+block — in `base.yaml`, or overridden by the profile — and copied to `run_meta`
+as they end up after merging (0.4):
 
 ```yaml
 features:
@@ -293,687 +297,709 @@ features:
   working_notes: false
 ```
 
-Independientes a propósito: recordarle lo que le falta y pedirle que anote lo
-que concluye son intervenciones distintas, y en un solo valor no se sabría cuál
-produjo el efecto.
+Independent on purpose: reminding it what it is missing and asking it to write
+down what it concludes are different interventions, and in a single value there
+would be no telling which produced the effect.
 
-| `coverage_hint` | `working_notes` | Qué es |
+| `coverage_hint` | `working_notes` | What it is |
 |---|---|---|
-| `off` | `false` | **Línea base.** Ni se le pregunta ni se le dice. |
-| `show` | `false` | Se le devuelve lo que queda abierto, en cada respuesta. |
-| `off` | `true` | Anota lo que concluye, sin que se le diga nada. |
-| `show` | `true` | Las dos cosas. Es el modo de la demo. |
+| `off` | `false` | **Baseline.** It is neither asked nor told. |
+| `show` | `false` | What is still open is handed back on every reply. |
+| `off` | `true` | It records what it concludes, with nothing said to it. |
+| `show` | `true` | Both. This is the demo's mode. |
 
-**La línea base es `off` / `false`**, y con ella 1.12 se queda deliberadamente
-**sin mecanismo**: el médico sondea lo que quiere y la cobertura se reconstruye
-después desde el transcript (3.2). No preguntar por una dimensión es un
-resultado, no un fallo que haya que evitar en vivo.
+**The baseline is `off` / `false`**, and with it 1.12 is deliberately left
+**without a mechanism**: the doctor probes what it wants and coverage is
+reconstructed afterwards from the transcript (3.2). Not asking about a dimension
+is a result, not a fault to be avoided live.
 
-El estado que sostiene la cobertura es mínimo — una dimensión pasa a
-`"covered"` cuando el médico lo declara, y no hay estado intermedio:
+The state that supports coverage is minimal — a dimension becomes `"covered"`
+when the doctor declares it, and there is no intermediate state:
 
 ```python
-coverage_hint: Dict[str, str]   # dimensión → "covered"; ausente = sin sondear
+coverage_hint: Dict[str, str]   # dimension → "covered"; absent = not probed
 ```
 
-#### `working_notes` — lo único que puede enseñar si el médico revisa
+#### `working_notes` — the only thing that can show whether the doctor revises
 
-El médico anota, en la misma llamada a la herramienta y sin llamadas extra, lo
-que cada respuesta le dice sobre una dimensión. No hay campo de puntuación: eso
-sigue siendo del final y con el transcript entero (1.11).
+The doctor records, in the same tool call and with no extra calls, what each
+answer tells it about a dimension. There is no score field: that still belongs to
+the end and to the whole transcript (1.11).
 
 ```python
 working_notes: List[Dict]   # [{"turn", "dimension", "observation"}]
 ```
 
-**Se añaden, nunca se sustituyen.** Dos entradas de la misma dimensión en turnos
-distintos son un cambio de opinión fechado:
+**They are added, never replaced.** Two entries for the same dimension in
+different turns are a dated change of mind:
 
 ```python
 {"turn": 2, "dimension": "consequences",
- "observation": "Ha dejado el paseo de después de cenar. Suena a renuncia."}
+ "observation": "Has given up the after-dinner walk. Sounds like resignation."}
 {"turn": 6, "dimension": "consequences",
- "observation": "Antes lo leí como renuncia, pero aclara que puede y no le
-                 apetece. Es menos limitación de lo que parecía."}
+ "observation": "I read that as resignation, but they clarify they can and just
+                 don't feel like it. Less limitation than it looked."}
 ```
 
-Toda la arquitectura del informe al final se apoya en que información tardía
-pueda corregir una impresión temprana, y **no hay ni una observación de que eso
-ocurra**. Este es el único brazo que la produce.
+The whole architecture of reporting at the end rests on late information being
+able to correct an early impression, and **there is not one observation of that
+happening**. This is the only arm that produces it.
 
-Lo que cuesta: adelanta parte del juicio. Al puntuar, el médico llega con sus
-impresiones ya escritas, así que **sus resultados no son comparables con la
-línea base** y hay que decirlo al reportarlos.
+What it costs: it brings part of the judgement forward. When it comes to scoring,
+the doctor arrives with its impressions already written, so **its results are not
+comparable with the baseline** and that has to be said when reporting them.
 
-Hubo un tercer modo de `coverage_hint`, `declare` —declarar sin recibir nada—,
-pensado para cruzar lo que el médico cree haber explorado contra lo que exploró.
-**Retirado**: sus propias declaraciones vuelven en el historial dentro de los
-`tool_calls`, así que podía releerse y el brazo no aislaba lo que decía aislar.
+There was a third `coverage_hint` mode, `declare` — declare without receiving
+anything — meant to cross what the doctor believes it explored against what it
+explored. **Retired**: its own declarations come back in the history inside the
+`tool_calls`, so it could re-read itself and the arm did not isolate what it
+claimed to isolate.
 
-Y una nota de forma que resultó no ser menor: el recordatorio de `show` viaja
-como mensaje aparte con `role: user` —el mismo canal que el `OPENING`—, nunca
-dentro del resultado de la herramienta. En ese canal el médico no puede
-distinguir nuestras palabras de las del paciente, y `Evidence.quote` tiene que
-ser una cita literal suya.
+And a point of form that turned out not to be minor: `show`'s reminder travels as
+a separate message with `role: user` — the same channel as the `OPENING` — never
+inside the tool result. In that channel the doctor cannot tell our words from the
+patient's, and `Evidence.quote` has to be a verbatim quote of theirs.
 
-**Lo que se ve con `off`** (tanda `e4-1`, 10 pacientes × 2): `general_overuse`
-queda NA en 5 de 10 pacientes y lleva número en los otros 5; las dos subescalas
-`specific_*` reciben número en los 3 pacientes sin receta. Es exactamente lo que
-esta sección predice y lo que 3.2 tiene que hacer visible: la cobertura no se
-fuerza, se mide.
+**What `off` shows** (batch `e4-1`, 10 patients × 2): `general_overuse` comes
+back NA in 5 of 10 patients and carries a number in the other 5; both `specific_*`
+subscales get a number in the 3 patients with no prescription. That is exactly
+what this section predicts and what 3.2 has to make visible: coverage is not
+forced, it is measured.
 
 ---
 
-## 5. Prompts, skills y recursos
+## 5. Prompts, skills and resources
 
-Los tres se cargan desde disco con `prompts.py`, nunca embebidos en código (1.6).
+All three are loaded from disk with `prompts.py`, never embedded in code (1.6).
 
-- **`prompts/DOCTOR.md`, `prompts/PATIENT.md`** — rol base.
-- **`prompts/rubric/`** (2.2) — anclas 2/4/6/8 por dimensión, **lado médico**.
-  Escritas desde criterios clínicos. **No invertir las bandas de
-  `patient_profile.py`**: eso reconstruye el espejo (5.5). Que existan las dos
-  sin ser la misma tabla es el objetivo.
-- **`skills/`** (1.7, 6.5) — fragmentos que se componen sobre el prompt base.
-  Los estilos de comunicación del médico son ficheros aquí, no ramas de código.
-  **Composición determinista, no carga decidida por el modelo** — ver §5.1.
-- **`resources/`** (1.8) — CSM, NCF, terminología. Pendiente decidir si se
-  inyectan siempre o vía recuperación; dejar la interfaz preparada para ambas.
+- **`prompts/DOCTOR.md`, `prompts/PATIENT.md`** — the base role.
+- **`prompts/rubric/`** (2.2) — anchors 2/4/6/8 per dimension, **doctor side**.
+  Written from clinical criteria. **Do not invert the bands in
+  `patient_profile.py`**: that rebuilds the mirror (5.5). Having both without
+  their being the same table is the point.
+- **`skills/`** (1.7, 6.5) — fragments composed onto the base prompt. The
+  doctor's communication styles are files here, not code branches.
+  **Deterministic composition, not model-decided loading** — see §5.1.
+- **`resources/`** (1.8) — CSM, NCF, terminology. Still to be decided whether
+  they are always injected or retrieved; leave the interface ready for both.
 
-Cada fichero se hashea y el hash va a `run_meta` (0.4), para poder atribuir un
-resultado a una versión de prompt.
+Each file is hashed and the hash goes into `run_meta` (0.4), so a result can be
+attributed to a version of a prompt.
 
-### 5.1 Qué significa "skill" aquí (1.7)
+### 5.1 What "skill" means here (1.7)
 
-**No es el mecanismo de skills de Claude.** Ahí el modelo decide por sí mismo qué
-skill cargar y cuándo, mediante descubrimiento progresivo. Los modelos de este
-proyecto —llama3.2, GLM, los grandes de HuggingFace— no hacen eso de forma
-fiable, y montar el diseño sobre esa suposición lo rompería en silencio.
+**It is not Claude's skills mechanism.** There the model decides for itself which
+skill to load and when, through progressive disclosure. This project's models —
+llama3.2, GLM, the large HuggingFace ones — do not do that reliably, and building
+the design on that assumption would break it silently.
 
-Aquí una skill es **un fragmento de markdown que el orquestador concatena al
-prompt del sistema antes de la llamada**. Quién decide qué se carga es el código,
-según el perfil de ejecución y el brazo experimental, no el modelo.
+Here a skill is **a markdown fragment the orchestrator concatenates onto the
+system prompt before the call**. What gets loaded is decided by the code,
+according to the run profile and the experimental arm, not by the model.
 
 ```python
 build_prompt("DOCTOR.md", skills=["styles/empathic"], resources=["csm"])
-# → un único string de sistema, determinista y hasheable
+# → a single system string, deterministic and hashable
 ```
 
-Tres consecuencias:
+Three consequences:
 
-1. **Es agnóstico del modelo.** Funciona igual con cualquier backend porque solo
-   manipula texto antes de enviarlo.
-2. **Es reproducible.** El hash del prompt compuesto va a `run_meta` (0.4). Con
-   carga decidida por el modelo no sabrías qué prompt produjo qué resultado.
-3. **Hay que verificar que el fragmento surte efecto.** Que se concatene no
-   garantiza que el modelo lo obedezca: un modelo pequeño puede ignorar una
-   instrucción de estilo enterrada en un prompt largo. **Test de la etapa 2:**
-   componer dos skills opuestas, correr la misma consulta con cada una, y
-   comprobar que los transcripts difieren de forma observable. Si no difieren, el
-   mecanismo no funciona con ese modelo por mucho que el código sea correcto.
+1. **It is model-agnostic.** It works the same with any backend because it only
+   manipulates text before sending it.
+2. **It is reproducible.** The hash of the composed prompt goes into `run_meta`
+   (0.4). With model-decided loading you would not know which prompt produced
+   which result.
+3. **The fragment has to be verified to have an effect.** Concatenating it does
+   not guarantee the model obeys it: a small model can ignore a style instruction
+   buried in a long prompt. **Stage 2 test:** compose two opposite skills, run the
+   same consultation with each, and check that the transcripts differ observably.
+   If they do not differ, the mechanism does not work with that model however
+   correct the code is.
 
-### 5.2 Perfil de paciente y espacio para personalidades (1.9, 7.1)
+### 5.2 Patient profile and room for personalities (1.9, 7.1)
 
-La estructura actual se conserva: `disease_profile` (diagnóstico, estadio,
-tratamiento, síntomas, laboratorio, demografía) + `belief_profile` (B-IPQ, BMQ,
-causas) como ground truth.
+The current structure is kept: `disease_profile` (diagnosis, stage, treatment,
+symptoms, lab, demographics) + `belief_profile` (B-IPQ, BMQ, causes) as ground
+truth.
 
-Se añade **un bloque `persona` opcional**, separado del `belief_profile`:
+An **optional `persona` block** is added, separate from `belief_profile`:
 
 ```jsonc
 "persona": {
-  "communication_style": "guarded",     // locuaz, evasivo, técnico…
-  "emotional_expression": "suppressed", // 7.1 — pacientes que ocultan emociones
+  "communication_style": "guarded",     // talkative, evasive, technical…
+  "emotional_expression": "suppressed", // 7.1 — patients who hide emotions
   "health_literacy": "high",
   "traits": ["stoic", "self-reliant"]
 }
 ```
 
-Tres razones para dejarlo abierto desde el principio aunque no se rellene aún:
+Three reasons to leave it open from the start even if it is not filled in yet:
 
-1. **7.1 lo necesita.** "Pacientes que ocultan emociones" es una propiedad de
-   persona, no de creencia. Sin este bloque habría que tocar el esquema después.
-2. **Mantiene separadas las dos cosas que se miden.** `belief_profile` es lo que
-   el médico debe inferir; `persona` es lo que hace la inferencia más o menos
-   difícil. Mezclarlas impide analizar el efecto por separado.
-3. **Se compone vía skills** (1.7): cada rasgo es un fragmento markdown que se
-   añade al prompt del paciente, igual que los estilos del médico. Nada de
-   ramas en `patient_profile.py`.
+1. **7.1 needs it.** "Patients who hide emotions" is a property of persona, not
+   of belief. Without this block the schema would have to be touched later.
+2. **It keeps the two measured things apart.** `belief_profile` is what the
+   doctor has to infer; `persona` is what makes the inference more or less
+   difficult. Mixing them makes it impossible to analyse the effects separately.
+3. **It composes through skills** (1.7): each trait is a markdown fragment added
+   to the patient's prompt, just like the doctor's styles. No branches in
+   `patient_profile.py`.
 
-`patient_profile.py` traduce `belief_profile` → conducta hoy; con esto pasa a
-traducir `belief_profile` + `persona` → conducta, sin cambiar su firma.
+`patient_profile.py` translates `belief_profile` → behaviour today; with this it
+translates `belief_profile` + `persona` → behaviour, without changing its
+signature.
 
 ---
 
-## 6. Dos perfiles de ejecución: local y HPC
+## 6. Two run profiles: local and HPC
 
-Todo se ejecuta **en local**, sin endpoints remotos. Dos perfiles, misma
-arquitectura y mismo código: cambian el modelo, la escala y el sitio.
+Everything runs **locally**, with no remote endpoints. Two profiles, the same
+architecture and the same code: the model, the scale and the place change.
 
 | | **Local** | **HPC** |
 |---|---|---|
-| Para qué | Desarrollo, humo, tests | Líneas base, brazos, tandas |
-| Dónde | Nodo de login o portátil | Nodo de cómputo, por cola |
-| Servidor | Ollama, `127.0.0.1:11434` | Ollama o vLLM en el nodo |
-| Médico | `llama3.2` (2 GB) | modelo grande — ver §6.2 |
-| Paciente | `dolphin-llama3` (4.7 GB) | otra familia distinta al médico |
+| What for | Development, smoke, tests | Baselines, arms, batches |
+| Where | Login node or laptop | Compute node, through the queue |
+| Server | Ollama, `127.0.0.1:11434` | Ollama or vLLM on the node |
+| Doctor | `llama3.2` (2 GB) | a large model — see §6.2 |
+| Patient | `dolphin-llama3` (4.7 GB) | a family different from the doctor's |
 | Embeddings | `nomic-embed-text` | `jina-embeddings-v4` |
-| Escala | 1–2 pacientes × 1 corrida | hasta 10 × 10 |
+| Scale | 1–2 patients × 1 run | up to 10 × 10 |
 
-El perfil es **config, no una rama de código**, y se elige con `--profile`.
-`config/base.yaml` tiene todo lo compartido; `config/local.yaml` y
-`config/hpc.yaml` declaran de quién heredan y solo lo que cambia —los modelos y
-`keep_alive`—:
+The profile is **config, not a code branch**, and is chosen with `--profile`.
+`config/base.yaml` has everything shared; `config/local.yaml` and
+`config/hpc.yaml` declare what they inherit from and only what changes — the
+models and `keep_alive`:
 
 ```yaml
 profile: hpc
 extends: base
 ```
 
-Se funde **bloque a bloque** al cargar (0.5): una fusión superficial borraría un
-bloque entero en vez de completarlo, así que `models: {doctor: …}` en el perfil
-se quedaría sin `embed`.
+It is merged **block by block** on load (0.5): a shallow merge would erase a
+whole block instead of completing it, so `models: {doctor: …}` in the profile
+would end up with no `embed`.
 
-**La herencia es explícita y encadenable.** Un perfil sin `extends` carga solo
-—es lo que permite que un test deje fuera una clave y la vea rechazada— y una
-cadena puede tener los eslabones que haga falta:
+**Inheritance is explicit and chainable.** A profile without `extends` loads on
+its own — that is what lets a test leave a key out and see it rejected — and a
+chain can have as many links as needed:
 
 ```
-base.yaml ◄── hpc.yaml ◄── hpc-show.yaml   # `features.coverage_hint: show`, nada más
+base.yaml ◄── hpc.yaml ◄── hpc-show.yaml   # `features.coverage_hint: show`, nothing else
 ```
 
-Es la forma que pide "una variable por corrida": un brazo de la Fase 6 es un
-fichero de tres líneas que nombra su padre y el interruptor que mueve, en vez de
-una copia de `hpc.yaml` que vuelve a derivar. Un ciclo se detecta y se nombra;
-heredar de algo que no existe también, porque si no un perfil huérfano parecería
-un perfil al que simplemente le faltan ajustes.
+It is the shape "one variable per run" asks for: a Phase 6 arm is a three-line
+file naming its parent and the switch it moves, instead of a copy of `hpc.yaml`
+that drifts all over again. A cycle is detected and named; so is inheriting from
+something that does not exist, because otherwise an orphaned profile would look
+like a profile that is simply missing settings.
 
-`base.yaml` no es un perfil y no carga solo: no tiene clave `profile:`. Lo que se
-copia a `run_meta` (0.4) es **el resultado ya fundido** —incluido `features`, que
-es el brazo—, así que una corrida se sigue leyendo desde un único fichero aunque
-su configuración venga de varios.
+`base.yaml` is not a profile and does not load alone: it has no `profile:` key.
+What is copied to `run_meta` (0.4) is **the merged result** — `features`
+included, which is the arm — so a run is still read from a single file even when
+its configuration comes from several.
 
-Ningún resultado de perfil local entra en las métricas publicadas: sirve para
-saber que el código funciona, no cuánto acierta.
+No result from the local profile goes into published metrics: it tells you the
+code works, not how accurate it is.
 
-### 6.1 Almacén de modelos
+### 6.1 Model store
 
-Los modelos de Ollama del proyecto **no están en `~/.ollama`** sino en el almacén
-compartido. Hay que exportar la variable antes de arrancar el servidor, o solo se
-verá lo que haya en el home:
+The project's Ollama models **are not in `~/.ollama`** but in the shared store.
+The variable has to be exported before starting the server, or only what is in
+the home directory will be visible:
 
 ```bash
 export OLLAMA_MODELS=/gpfs/projects/bsc02/llm_models/ollama
 ollama serve
 ```
 
-Contiene `llama3.2`, `dolphin-llama3`, `nomic-embed-text` y `glm-4.7-flash:q8_0`.
-Los modelos grandes de HuggingFace están aparte, en
-`/gpfs/projects/bsc02/llm_models/huggingface_models`, y se sirven con vLLM.
+It holds `llama3.2`, `dolphin-llama3`, `nomic-embed-text` and
+`glm-4.7-flash:q8_0`. The large HuggingFace models are elsewhere, in
+`/gpfs/projects/bsc02/llm_models/huggingface_models`, and are served with vLLM.
 
-**La primera carga desde GPFS es lenta** — un blob grande puede tardar más de dos
-minutos y Ollama aborta si el cliente se cansa antes. Consecuencias de diseño:
+**The first load from GPFS is slow** — a large blob can take over two minutes and
+Ollama aborts if the client gives up first. Design consequences:
 
-- El timeout del cliente debe ser generoso en la primera llamada (≥300 s).
-- Cada corrida empieza con un **calentamiento**: una llamada trivial que fuerza la
-  carga antes de cronometrar o medir nada.
-- En HPC conviene copiar los pesos al disco local del nodo si lo hay; leer un
-  modelo de 30 GB por GPFS en cada tarea no escala.
+- The client timeout has to be generous on the first call (≥300 s).
+- Every run starts with a **warm-up**: a trivial call that forces the load before
+  anything is timed or measured.
+- On HPC it is worth copying the weights to the node's local disk if there is
+  one; reading a 30 GB model over GPFS on every task does not scale.
 
-### 6.2 Elección de modelos
+### 6.2 Choosing models
 
-Cuatro criterios, por orden de dureza:
+Four criteria, in order of hardness:
 
-- **Familias distintas para médico y paciente.** No dos tamaños del mismo modelo:
-  comparten convenciones de expresión aprendidas en el mismo entrenamiento, y el
-  médico puede estar decodificando esas convenciones en vez de inferir. Es el
-  problema de 5.5 a nivel de pesos, y no lo detecta ningún test de 5.4.
-- **El médico necesita tool calling fiable.** Es el requisito duro: sin él no hay
-  bucle agéntico. Se verifica con la sonda antes de elegir, no después.
-- **El paciente no debe ser demasiado servicial.** Un modelo muy alineado hace de
-  paciente sospechosamente cooperativo, que responde completo y ordenado a todo, e
-  infla el rendimiento aparente del médico.
-- **La pareja se congela antes de la línea base** de la etapa 7. Cambiarla después
-  invalida la comparabilidad de todo lo anterior.
+- **Different families for doctor and patient.** Not two sizes of the same model:
+  they share expression conventions learnt in the same training, and the doctor
+  may be decoding those conventions rather than inferring. It is 5.5's problem at
+  the level of weights, and no 5.4 test detects it.
+- **The doctor needs reliable tool calling.** That is the hard requirement:
+  without it there is no agentic loop. It is verified with the probe before
+  choosing, not after.
+- **The patient must not be too obliging.** A heavily aligned model plays a
+  suspiciously cooperative patient, answering everything completely and in order,
+  and inflates the doctor's apparent performance.
+- **The pair is frozen before the stage 7 baseline.** Changing it afterwards
+  invalidates the comparability of everything before.
 
-**Verificación con `tools/probe_tools.py`** — N llamadas a temperatura 0 con la
-tool real `hand_off_to_patient`, contando cuántas devuelven una llamada bien
-formada. Distingue fallo del modelo de caída de transporte.
+**Verification with `tools/probe_tools.py`** — N calls at temperature 0 with the
+real `hand_off_to_patient` tool, counting how many return a well-formed call. It
+distinguishes a model failure from a transport failure.
 
-| Modelo | Resultado | Nota |
+| Model | Result | Note |
 |---|---|---|
-| `glm-4.7-flash:q8_0` | **10/10** | Apto para médico. Determinista a T=0. Medido en nodo de login (ver §6.3): el veredicto vale, el tiempo de carga de 43 s hay que remedirlo |
-| `llama3.2` | 3/3 y 5/5 | Sirve de humo. Determinista a T=0. Carga en 5 s en nodo de cómputo |
-| `dolphin-llama3` | sin medir | Es paciente, no necesita tools |
-| Grandes de HuggingFace | pendiente | Solo si hace falta más que GLM |
+| `glm-4.7-flash:q8_0` | **10/10** | Fit for doctor. Deterministic at T=0. Measured on a login node (see §6.3): the verdict holds, the 43 s load time has to be remeasured |
+| `llama3.2` | 3/3 and 5/5 | Good for smoke tests. Deterministic at T=0. Loads in 5 s on a compute node |
+| `dolphin-llama3` | not measured | It is the patient, it needs no tools |
+| Large HuggingFace ones | pending | Only if more than GLM is needed |
 
-En HPC se lanza con `tools/probe_hpc.sh <modelo> [N] [horas]`, que replica el
-entorno de `submit.sh`, levanta su propio Ollama en el nodo y calienta el modelo
-antes de medir.
+On HPC it is launched with `tools/probe_hpc.sh <model> [N] [hours]`, which
+replicates `submit.sh`'s environment, starts its own Ollama on the node and warms
+the model before measuring.
 
-**Determinismo confirmado en local.** Las 10 respuestas de GLM a T=0 son idénticas
-palabra por palabra, igual que las de llama3.2. Sirve para tests de regresión
-reproducibles, pero **la dispersión de 2.4 exige temperatura > 0**: a T=0 no hay
-nada que medir.
+**Determinism confirmed locally.** GLM's 10 replies at T=0 are identical word for
+word, as are llama3.2's. That is useful for reproducible regression tests, but
+**2.4's spread requires temperature > 0**: at T=0 there is nothing to measure.
 
-### 6.3 Trampa de SLURM: `salloc` sin `srun`
+### 6.3 The SLURM trap: `salloc` without `srun`
 
-`salloc` reserva los recursos pero **ejecuta el comando en la máquina desde la que
-se invoca**, no en el nodo asignado. Hay que envolver la orden en `srun`.
+`salloc` reserves the resources but **runs the command on the machine it was
+invoked from**, not on the allocated node. The command has to be wrapped in
+`srun`.
 
-En la partición ACC el error es especialmente traicionero porque **los nodos de
-login también tienen H100**: `nvidia-smi` responde, el modelo carga, todo parece
-correcto, y mientras tanto el nodo reservado no hace nada.
+On the ACC partition the mistake is especially treacherous because **the login
+nodes also have H100s**: `nvidia-smi` answers, the model loads, everything looks
+correct, and meanwhile the reserved node does nothing.
 
-Tres formas de detectarlo, comprobadas:
+Three ways to detect it, all verified:
 
-| Señal | Sin `srun` (mal) | Con `srun` (bien) |
+| Signal | Without `srun` (wrong) | With `srun` (right) |
 |---|---|---|
 | `hostname` | `alogin4` | `as01r1b18` = `$SLURM_NODELIST` |
-| `nvidia-smi` | 4 H100 (las del login) | 1 H100 (la de `--gres=gpu:1`) |
+| `nvidia-smi` | 4 H100s (the login node's) | 1 H100 (the one from `--gres=gpu:1`) |
 
-`probe_hpc.sh` compara `hostname` con `$SLURM_NODELIST` y avisa. **Verificado**:
-sin `srun` daba `alogin4` y 4 GPUs; con `srun --export=ALL` da el nodo asignado
-y 1 GPU.
+`probe_hpc.sh` compares `hostname` with `$SLURM_NODELIST` and warns.
+**Verified**: without `srun` it gave `alogin4` and 4 GPUs; with `srun
+--export=ALL` it gives the allocated node and 1 GPU.
 
-`submit.sh` del brazo Ruby usa el mismo patrón sin `srun`, así que sus corridas
-"local" se ejecutaron casi con seguridad en el nodo de login. No invalida las
-puntuaciones —el modelo y los pesos eran los mismos— pero sí cualquier conclusión
-sobre tiempos o rendimiento de aquellas tandas.
-
----
-
-## 7. Frontend y API
-
-El frontend (`bipq_frontend/`, React+Vite, `src/App.tsx`) consume `api_server.py`.
-Para reutilizarlo:
-
-**Se conservan tal cual:**
-`GET /patients`, `GET /patients/{id}`, `POST /patient/respond`, `POST /transcript`,
-`GET /health`.
-
-**Cambian:**
-- `POST /doctor/ask` → devuelve también la intención (`speak` | `finish`) y la
-  tool call, no solo el mensaje.
-- `POST /evaluate` → misma ruta, pero recibe un `Report` en vez de un diccionario
-  de puntuaciones sueltas, y devuelve además cobertura y NAs.
-- `POST /score` y `POST /bmq/score` → **desaparecen.** No hay puntuación por
-  intercambio. Los sustituye `POST /report`, que recibe el transcript completo y
-  devuelve un `Report`.
-
-**Nuevos:** `POST /report`, `GET /coverage/{run_id}`, `POST /run` (lanzar una
-consulta completa).
-
-Mantener los modelos Pydantic con el mismo estilo (`DoctorRequest`/`DoctorResponse`…)
-para que el trabajo en `App.tsx` sea de adaptación, no reescritura.
+The Ruby arm's `submit.sh` uses the same pattern without `srun`, so its "local"
+runs almost certainly executed on the login node. It does not invalidate the
+scores — the model and the weights were the same — but it does invalidate any
+conclusion about the timings or throughput of those batches.
 
 ---
 
-## 8. Orden de construcción
+## 7. Frontend and API
 
-Nueve etapas. Cada una termina con algo ejecutable y verificable — no pasar a la
-siguiente sin cerrar la anterior.
+The frontend (`bipq_frontend/`, React+Vite, `src/App.tsx`) consumes
+`api_server.py`. To reuse it:
 
-**Nada se lanza en grande al final.** Cada etapa se cierra con una *corrida de
-humo* pequeña y barata que se ejecuta de verdad contra un LLM local. La escala
-sube solo cuando la etapa anterior está en verde:
+**Kept as they are:**
+`GET /patients`, `GET /patients/{id}`, `POST /patient/respond`,
+`POST /transcript`, `GET /health`.
 
-| Etapa | Corrida de humo | Coste |
+**Changed:**
+- `POST /doctor/ask` → also returns the intent (`speak` | `finish`) and the tool
+  call, not just the message.
+- `POST /evaluate` → same route, but it receives a `Report` instead of a
+  dictionary of loose scores, and also returns coverage and NAs.
+- `POST /score` and `POST /bmq/score` → **they disappear.** There is no
+  per-exchange scoring. `POST /report` replaces them, receiving the full
+  transcript and returning a `Report`.
+
+**New:** `POST /report`, `GET /coverage/{run_id}`, `POST /run` (launch a full
+consultation).
+
+Keep the Pydantic models in the same style (`DoctorRequest`/`DoctorResponse`…) so
+that the work on `App.tsx` is adaptation, not a rewrite.
+
+**Since 2026-09-01 there is a read-only server that is not this one.**
+`replay_server.py` + `replay_frontend/` play back consultations already on disk:
+no model, no GPU, no graph. It delivers what 8.4 and 8.8 of TASKS asked for and
+deliberately does not attempt `POST /run` — a consultation is minutes of wall
+clock, which is what §8.2 of TASKS says has to be streamed per turn.
+
+---
+
+## 8. Build order
+
+Nine stages. Each ends with something runnable and verifiable — do not move to
+the next without closing the previous one.
+
+**Nothing is launched at scale at the end.** Each stage closes with a small,
+cheap *smoke run* actually executed against a local LLM. The scale only goes up
+when the previous stage is green:
+
+| Stage | Smoke run | Cost |
 |---|---|---|
-| 1 | ninguna — solo arranque | — |
-| 2 | 1 paciente × 1 corrida | ~15 turnos |
-| 3 | 2 pacientes × 1 corrida | ~2 informes |
-| 4 | 10 pacientes × 2 corridas | 20 consultas |
-| 5 | reusa la tanda de la 4 | 0 |
-| 6 | 10 × 5 | 50 consultas |
-| 7 | 10 × 10 (línea base) + brazos | 100 + brazos |
-| 8 | 10 × 5 por intervención | 50 c/u |
-| 9 | según corpus ampliado | — |
+| 1 | none — startup only | — |
+| 2 | 1 patient × 1 run | ~15 turns |
+| 3 | 2 patients × 1 run | ~2 reports |
+| 4 | 10 patients × 2 runs | 20 consultations |
+| 5 | reuses stage 4's batch | 0 |
+| 6 | 10 × 5 | 50 consultations |
+| 7 | 10 × 10 (baseline) + arms | 100 + arms |
+| 8 | 10 × 5 per intervention | 50 each |
+| 9 | depending on the extended corpus | — |
 
-Los tests se escriben **en la etapa que introduce el comportamiento**, no al
-final. Cada etapa hereda y vuelve a ejecutar los tests de las anteriores.
+Tests are written **in the stage that introduces the behaviour**, not at the end.
+Each stage inherits and re-runs the previous stages' tests.
 
-### Etapa 1 — Esqueleto (0.1, 0.2, 0.3, 0.4)
-Copiar el paquete, `git init`, `run_meta` con provenance, verificar que los
-`patients/*.json` coinciden entre brazos.
-**Tests:** carga de config; `run_meta` se serializa completo.
-**Hecho cuando:** `git log` tiene el commit inicial y `python main.py --help` corre.
+### Stage 1 — Skeleton (0.1, 0.2, 0.3, 0.4)
+Copy the package, `git init`, `run_meta` with provenance, verify that the
+`patients/*.json` match across arms.
+**Tests:** config loads; `run_meta` serialises completely.
+**Done when:** `git log` has the initial commit and `python main.py --help` runs.
 
-### Etapa 2 — Bucle agéntico (1.1–1.9)
-Empieza verificando tool calling en el modelo médico elegido (§6.2): sin eso no
-hay bucle y el resto de la etapa no tiene sentido.
-Luego `tools.py` con el equivalente a `delegate`, `state.py`, `nodes.py`,
-`graph.py`, `routing.py`, `prompts.py` con la composición de skills (1.7) y
-recursos (1.8). Perfil de paciente con el bloque `persona` ya en el esquema
-aunque vacío (1.9). Sin informe todavía: la consulta termina y vuelca el
+### Stage 2 — Agentic loop (1.1–1.9)
+It starts by verifying tool calling on the chosen doctor model (§6.2): without
+that there is no loop and the rest of the stage makes no sense.
+Then `tools.py` with the equivalent of `delegate`, `state.py`, `nodes.py`,
+`graph.py`, `routing.py`, `prompts.py` with the composition of skills (1.7) and
+resources (1.8). Patient profile with the `persona` block already in the schema
+even if empty (1.9). No report yet: the consultation ends and dumps the
 transcript.
-**Tests:** aislamiento de §3.1 (obligatorio a partir de aquí); el médico cierra;
-el tope de turnos corta; el cargador de prompts resuelve ficheros, compone skills
-y calcula hashes; **dos skills opuestas producen transcripts observablemente
-distintos** (§5.1) — que se concatene no prueba que el modelo obedezca.
-**Humo:** 1 paciente × 1 corrida, perfil local.
-**Hecho cuando:** una consulta de 10–15 turnos con turnos libres, cerrada por el
-médico, y el test de aislamiento en verde.
+**Tests:** §3.1's isolation (mandatory from here on); the doctor closes; the turn
+cap cuts; the prompt loader resolves files, composes skills and computes hashes;
+**two opposite skills produce observably different transcripts** (§5.1) —
+concatenation does not prove the model obeys.
+**Smoke:** 1 patient × 1 run, local profile.
+**Done when:** a 10–15 turn consultation with free turns, closed by the doctor,
+and the isolation test green.
 
-### Etapa 3 — Informe y rúbrica (1.10, 1.11, 1.12, 1.13, 2.1, 2.2, 2.3, 4.4)
-`report.py` completo: esquema, parseo, validación, reintento. Rúbrica de anclas
-del médico (2.2). Sondeo por ambigüedad con `coverage_hint` (§4.1). Confianza
-declarada (2.3).
-**Tests:** parser con informes bien y mal formados; política NA (nunca un valor
-por defecto); orden `evidence → reasoning → score` presente; el reintento se
-dispara y se rinde tras 2.
-**Humo:** 2 pacientes × 1 corrida.
-**Hecho cuando:** ambos producen un `Report` válido, con NA donde corresponda.
+### Stage 3 — Report and rubric (1.10, 1.11, 1.12, 1.13, 2.1, 2.2, 2.3, 4.4)
+`report.py` complete: schema, parsing, validation, retry. The doctor's anchor
+rubric (2.2). Ambiguity probing with `coverage_hint` (§4.1). Declared confidence
+(2.3).
+**Tests:** the parser with well- and badly-formed reports; the NA policy (never a
+default value); the `evidence → reasoning → score` order present; the retry fires
+and gives up after 2.
+**Smoke:** 2 patients × 1 run.
+**Done when:** both produce a valid `Report`, with NA where appropriate.
 
-### Etapa 4 — Robustez (3.1, 3.3, 3.4)
-Reintentos de transporte en `llm.py`, `run_batch.py`, log de `events`,
+### Stage 4 — Robustness (3.1, 3.3, 3.4)
+Transport retries in `llm.py`, `run_batch.py`, the `events` log,
 `reproducibility.py`.
-**Tests:** reintento ante respuesta vacía y ante error de servidor; `events`
-registra todo fallo; el corpus se marca utilizable/no utilizable (3.4).
-**Humo:** 10 pacientes × 2 corridas.
-**Hecho cuando:** la tanda sale sin turnos vacíos ni informes perdidos.
+**Tests:** retry on an empty reply and on a server error; `events` records every
+failure; the corpus is marked usable/not usable (3.4).
+**Smoke:** 10 patients × 2 runs.
+**Done when:** the batch comes out with no empty turns and no lost reports.
 
-### Etapa 5 — Evaluación (4.1, 4.2, 4.3, 4.5, 4.6)
-Portar `evaluation.py` y `causes/`. Ground truth desde `patients/*.json` y de
-ningún otro sitio.
-**Tests:** métricas contra valores calculados a mano; el cargador de ground truth
-rechaza cualquier fuente que no sea el perfil; causas con texto que contenga
-`<br/>` y asteriscos (regresión del bug del parser viejo).
-**Humo:** reusa la tanda de la etapa 4.
-**Hecho cuando:** tabla de MAE, sesgo por dimensión y cobertura de causas.
+### Stage 5 — Evaluation (4.1, 4.2, 4.3, 4.5, 4.6)
+Port `evaluation.py` and `causes/`. Ground truth from `patients/*.json` and
+nowhere else.
+**Tests:** metrics against hand-computed values; the ground truth loader rejects
+any source other than the profile; causes with text containing `<br/>` and
+asterisks (a regression of the old parser's bug).
+**Smoke:** reuses stage 4's batch.
+**Done when:** a table of MAE, per-dimension bias and causes coverage.
 
-### Etapa 6 — Cobertura y confianza (3.2, 2.4, 2.5, 2.6)
-`coverage.py` con el mapa dimensión × paciente y la verificación de citas.
-Dispersión entre corridas y discriminación entre pacientes, siempre juntas.
-**Tests:** una cita inventada se detecta; una dimensión sin sondear sale como
-hueco; dispersión y discriminación sobre datos sintéticos conocidos.
-**Humo:** 10 × 5.
-**Hecho cuando:** sale el mapa de calor y la confianza declarada está cruzada
-contra la dispersión observada.
+### Stage 6 — Coverage and confidence (3.2, 2.4, 2.5, 2.6)
+`coverage.py` with the dimension × patient map and quote verification. Spread
+between runs and discrimination between patients, always together.
+**Tests:** an invented quote is detected; an unprobed dimension comes out as a
+hole; spread and discrimination over known synthetic data.
+**Smoke:** 10 × 5.
+**Done when:** the heat map comes out and declared confidence has been crossed
+against the observed spread.
 
-### Etapa 7 — Brazos de comparación (5.1, 5.2, 5.4, 5.5)
-Suelo ciego, techo por elicitación, tests de artefacto, brazo sin claves
-conductuales. Se representan, no emiten veredicto.
-**Tests:** el transcript cruzado degrada el MAE (si no, hay fuga); el suelo ciego
-no ve la conversación.
-**Humo:** 10 × 10 como línea base, más los brazos.
-**Hecho cuando:** una gráfica sitúa el brazo de inferencia entre suelo y techo.
+### Stage 7 — Comparison arms (5.1, 5.2, 5.4, 5.5)
+Blind floor, elicitation ceiling, artefact tests, the arm with no behavioural
+cues. They are presented, they deliver no verdict.
+**Tests:** the crossed transcript degrades the MAE (if not, there is a leak); the
+blind floor does not see the conversation.
+**Smoke:** 10 × 10 as a baseline, plus the arms.
+**Done when:** a chart places the inference arm between floor and ceiling.
 
-**5.3 (referencia humana)** no es código: es coordinación con clínicos. Se lanza
-en paralelo a esta etapa, sobre los transcripts ya limpios de la 4. Lo único que
-hay que construir es el formulario de puntuación y el cálculo de acuerdo
-interevaluador.
+**5.3 (human reference)** is not code: it is coordination with clinicians. It is
+launched in parallel with this stage, over the already clean transcripts from
+stage 4. All that has to be built is the scoring form and the inter-rater
+agreement calculation.
 
-### Etapa 8 — Intervenciones (6.1–6.5)
-Una variable por corrida, N=5 para cribar y N=10 para confirmar. 6.5 es cargar
-estilos como skills, no comparar estilos.
-**Hecho cuando:** cada intervención tiene su delta medido contra la línea base.
+### Stage 8 — Interventions (6.1–6.5)
+One variable per run, N=5 to screen and N=10 to confirm. 6.5 is loading styles as
+skills, not comparing styles.
+**Done when:** each intervention has its delta measured against the baseline.
 
-### Etapa 9 — Corpus y cierre (7.1, 7.2)
-Ampliar el corpus con perfiles intermedios y pacientes que ocultan emociones
-(usa el bloque `persona` de §5.2). Reescribir la sección 6 del informe con los
-números reales.
-**Hecho cuando:** el corpus ampliado pasa 3.4 y el informe está actualizado.
+### Stage 9 — Corpus and closing (7.1, 7.2)
+Extend the corpus with mid-range profiles and patients who hide emotions (uses
+§5.2's `persona` block). Rewrite section 6 of the report with the real numbers.
+**Done when:** the extended corpus passes 3.4 and the report is up to date.
 
 ---
 
-## 9. Ciclo de trabajo por etapa
+## 9. Working cycle per stage
 
-Seis roles. Tú implementas; yo asisto donde lo pidas.
+Six roles. You implement; I assist where asked.
 
-| # | Rol | Qué produce | Quién |
+| # | Role | What it produces | Who |
 |---|---|---|---|
-| 1 | **Planner** | Descompone la etapa en tareas pequeñas, define criterio de "hecho" | Yo propongo, tú apruebas |
-| 2 | **Implementador** | Escribe el código | **Tú**, con mi ayuda |
-| 3 | **Reviewer** | Revisa Clean Code, SOLID, duplicación, complejidad | Yo |
-| 4 | **Tester** | Escribe y ejecuta tests, verifica comportamiento | Yo propongo, tú ejecutas |
-| 5 | **Refactorer** | Mejora estructura sin cambiar comportamiento | Yo propongo, tú decides |
-| 6 | **Security/Quality** | Config, secretos, manejo de errores, calidad global | Yo |
+| 1 | **Planner** | Breaks the stage into small tasks, defines the "done" criterion | I propose, you approve |
+| 2 | **Implementer** | Writes the code | **You**, with my help |
+| 3 | **Reviewer** | Reviews Clean Code, SOLID, duplication, complexity | Me |
+| 4 | **Tester** | Writes and runs tests, verifies behaviour | I propose, you run |
+| 5 | **Refactorer** | Improves structure without changing behaviour | I propose, you decide |
+| 6 | **Security/Quality** | Config, secrets, error handling, overall quality | Me |
 
-**Regla de paso:** una etapa no se cierra hasta pasar por los seis. El punto 5
-solo actúa con los tests del 4 en verde, para poder distinguir un refactor de un
-cambio de comportamiento.
+**Passing rule:** a stage does not close until it has been through all six. Point
+5 only acts with point 4's tests green, so a refactor can be told apart from a
+change of behaviour.
 
-### Invariantes que revisa el Reviewer en cada etapa
+### The invariants the Reviewer checks at every stage
 
-1. `profile` no entra en el contexto del médico (3.1).
-2. Ningún valor por defecto sustituye a un fallo — siempre NA (4.4).
-3. El ground truth se lee solo de `patients/*.json` (4.1).
-4. `evidence` antes que `score` en el esquema y en el prompt (2.1).
-5. `evaluation.py`, `coverage.py`, `reproducibility.py`, `artifacts.py` y
-   `causes/` no importan de `nodes`/`graph`.
-6. Ningún prompt embebido en `.py` — todo en `prompts/` o `skills/`.
-7. Cada corrida escribe su `run_meta` (0.4).
-8. Ninguna llamada a un endpoint remoto. Todo local (§6).
+1. `profile` does not enter the doctor's context (3.1).
+2. No default value replaces a failure — always NA (4.4).
+3. Ground truth is read only from `patients/*.json` (4.1).
+4. `evidence` before `score` in the schema and in the prompt (2.1).
+5. `evaluation.py`, `coverage.py`, `reproducibility.py`, `artifacts.py` and
+   `causes/` do not import from `nodes`/`graph`.
+6. No prompt embedded in a `.py` — everything in `prompts/` or `skills/`.
+7. Every run writes its `run_meta` (0.4).
+8. No calls to a remote endpoint. Everything local (§6).
 
-### Tipos de test
+### Kinds of test
 
-Los tests concretos van etapa por etapa en §8. Las cuatro categorías:
+The concrete tests go stage by stage in §8. The four categories:
 
-- **Unitarios** — lógica pura, sin LLM: parser, política NA, métricas.
-- **Integración** — consulta completa con el perfil local.
-- **Invariante** — los ocho de arriba, en cada etapa desde la 2.
-- **Regresión** — una tanda pequeña fija, para detectar deriva entre etapas.
-
----
-
-## 10. Ampliaciones de benchmark (opcionales)
-
-Lo previsto en TASKS.md cubre lo básico. Estas añadidas son baratas y encajan sin
-tocar la arquitectura. **Ninguna emite veredicto**; se representan, como 5.1/5.2.
-
-### Métricas de acuerdo, no solo de error
-
-- **ICC (correlación intraclase)** — el estándar en estudios clínicos de acuerdo.
-  Su valor es que se compara **directamente** con el acuerdo entre los clínicos
-  de 5.3: pone al modelo y a los humanos en la misma escala.
-- **Spearman** junto a Pearson. Pearson supone linealidad; Spearman solo mide si
-  el orden se conserva. Si Spearman es alto y Pearson bajo, el modelo ordena bien
-  a los pacientes pero tiene la escala desplazada — que es un problema muy
-  distinto, y se arregla con calibración (6.3) en vez de con más sondeo.
-- **Bland-Altman** — gráfica estándar de comparación de métodos en medicina:
-  muestra si el sesgo cambia con la magnitud. Diría, por ejemplo, si el modelo
-  solo se equivoca en los valores extremos o también en los medios.
-- **Acuerdo dicotomizado** — partir cada dimensión en alto/bajo y reportar
-  concordancia. Es la lectura clínicamente accionable: para intervenir sobre un
-  paciente importa si tiene baja adherencia percibida, no si es 3.2 o 3.8.
-
-### Detección automática de problemas
-
-- **Verificación de citas** (en `coverage.py`) — comprobar que cada `Evidence.quote`
-  aparece literalmente en el transcript. Detecta fabricación de evidencia de forma
-  automática y barata. Antes se comprobó a mano y el hallazgo fue que el modelo no
-  inventaba citas sino que las clasificaba mal; como puerta automática, vigila que
-  eso siga siendo cierto.
-- **Contradicción evidencia↔puntuación** — un segundo modelo lee solo la cita y el
-  razonamiento, sin ver el número, y predice la puntuación. Divergencia grande =
-  el número no se sigue de la evidencia. Es la versión automática de 5.4.
-- **Deriva entre corridas** — misma configuración, corridas separadas en el tiempo:
-  detecta cambios del endpoint que no son culpa del código.
-
-### Métricas de la conversación
-
-Ninguna necesita ground truth y todas salen del transcript:
-
-- Turnos hasta el cierre, y su dispersión entre pacientes.
-- Diversidad de preguntas: ¿el médico varía o repite un guion?
-- Reparto del habla médico/paciente.
-- Cobertura temporal: en qué momento de la consulta se toca cada dimensión — si
-  `causes` siempre sale en el último turno, está de relleno.
+- **Unit** — pure logic, no LLM: the parser, the NA policy, the metrics.
+- **Integration** — a full consultation with the local profile.
+- **Invariant** — the eight above, at every stage from 2 on.
+- **Regression** — a small fixed batch, to detect drift between stages.
 
 ---
 
-## 11. Versión en inglés
+## 10. Benchmark extensions (optional)
 
-**Sí, y con `ARCHITECTURE.md` en inglés como versión canónica.** El hilo del
-proyecto (Christina, el PI) va en inglés, así que este documento es el que van a
-leer otros. `TASKS.md` puede quedarse en español: es documento de trabajo interno.
+What TASKS.md plans covers the basics. These additions are cheap and fit without
+touching the architecture. **None of them delivers a verdict**; they are
+presented, like 5.1/5.2.
 
-Cuándo: **no ahora**. Traducir mientras el diseño se mueve garantiza dos versiones
-divergentes. El momento es al cerrar la etapa 3, cuando el bucle agéntico y el
-contrato del informe ya no van a cambiar. A partir de ahí, inglés es la fuente y
-el español —si se mantiene— se regenera.
+### Agreement metrics, not just error
+
+- **ICC (intraclass correlation)** — the standard in clinical agreement studies.
+  Its value is that it compares **directly** with the agreement between 5.3's
+  clinicians: it puts the model and the humans on the same scale.
+- **Spearman** alongside Pearson. Pearson assumes linearity; Spearman only
+  measures whether the order is preserved. If Spearman is high and Pearson low,
+  the model ranks the patients well but the scale is shifted — a very different
+  problem, and one fixed with calibration (6.3) rather than with more probing.
+- **Bland-Altman** — the standard method-comparison plot in medicine: it shows
+  whether the bias changes with magnitude. It would say, for instance, whether
+  the model only gets the extremes wrong or the mid-range too.
+- **Dichotomised agreement** — split each dimension into high/low and report
+  concordance. It is the clinically actionable reading: to intervene on a patient
+  what matters is whether their perceived adherence is low, not whether it is 3.2
+  or 3.8.
+
+### Automatic problem detection
+
+- **Quote verification** (in `coverage.py`) — check that every `Evidence.quote`
+  appears verbatim in the transcript. It detects evidence fabrication
+  automatically and cheaply. It was checked by hand before and the finding was
+  that the model did not invent quotes but misclassified them; as an automatic
+  gate, it watches that this stays true.
+- **Evidence↔score contradiction** — a second model reads only the quote and the
+  reasoning, without seeing the number, and predicts the score. A large
+  divergence = the number does not follow from the evidence. It is the automatic
+  version of 5.4.
+- **Drift between runs** — the same configuration, runs separated in time: it
+  detects endpoint changes that are not the code's fault.
+
+### Conversation metrics
+
+None of these needs ground truth and all come out of the transcript:
+
+- Turns to closing, and their spread across patients.
+- Question diversity: does the doctor vary or repeat a script?
+- The doctor/patient share of the talking.
+- Temporal coverage: at what point in the consultation each dimension is
+  touched — if `causes` always comes up in the last turn, it is filler.
 
 ---
 
-## 12. Riesgos conocidos
+## 11. Language
 
-| Riesgo | Mitigación |
+**English, and this document is the canonical version.** The project thread
+(Christina, the PI) runs in English, so this is the one other people will read.
+
+The plan was to translate on closing stage 3, when the agentic loop and the
+report contract would no longer change, because translating while the design
+moves guarantees two diverging versions.
+
+**Done on 2026-09-01**, and it went further than this section planned: every
+document is now in English — README, ARCHITECTURE, TASKS, STATUS, PENDING, TESTS,
+INHERITED_ISSUES, RUN and `skills/styles/README.md`. There is no Spanish version
+to keep in sync, which is the point: two versions is how they diverge.
+
+Note that this section used to say `TASKS.md` could stay in Spanish as an
+internal working document. That exception is retired — the split was what made it
+possible to forget which one was authoritative.
+
+---
+
+## 12. Known risks
+
+| Risk | Mitigation |
 |---|---|
-| El médico no cierra nunca la consulta | Tope de turnos como red de seguridad (1.5) |
-| El informe se degrada en consultas largas | Validación + reintento (1.13); es lo que perdió CLL-004 |
-| La rúbrica del médico acaba siendo el espejo de la del paciente | Escribirla desde criterios clínicos; medirlo con 5.5 |
-| Temperatura implícita: un servidor que aplica su propio valor por defecto cambia los resultados sin avisar | Enviarla **siempre** explícita y registrarla en `run_meta` |
-| Carga lenta desde GPFS que aborta la primera llamada | Calentamiento antes de medir y timeout ≥300 s (§6.1) |
-| Reescribir el frontend en vez de adaptarlo | Congelar los endpoints de §7 antes de tocar `App.tsx` |
-| **Contaminación entre pacientes.** En `simulation.rb` el agente médico se crea **una vez** fuera del bucle de pacientes y se reinicia con `doctor.start`. Si el reinicio no es completo, el paciente N ve residuos del N−1 | Crear el agente médico **dentro** del bucle, uno por consulta. Test: dos consultas seguidas no comparten ni un mensaje |
-| Dejar la evaluación para el final y descubrir que el corpus no sirve | Corridas de humo por etapa (§8) y la puerta de 3.4 |
-| **Automatizar un juicio que la literatura sitúa en 60-80% y leerlo como si fuera exacto** | §13: lo verificable se verifica, lo interpretable se valida contra etiquetas antes de decidir nada |
-| **Dos documentos nombran una línea base distinta.** `STATUS.md` trata `e4-1` como el corpus vivo y el README de `runs/historic/` la da por superada. Mientras dure, una cifra de `e4-1` puede leerse como línea base sin serlo | Aplazado a la Fase 8 de TASKS (8.11), a propósito: se reconcilia con una tanda nueva delante, no reescribiendo ahora. Hasta entonces toda cifra de `e4-1` se reporta con la nota |
+| The doctor never closes the consultation | The turn cap as a safety net (1.5) |
+| The report degrades on long consultations | Validation + retry (1.13); it is what lost CLL-004 |
+| The doctor's rubric ends up mirroring the patient's | Write it from clinical criteria; measure it with 5.5 |
+| Implicit temperature: a server applying its own default changes results without warning | Send it **always** explicitly and record it in `run_meta` |
+| A slow load from GPFS aborting the first call | Warm up before measuring and a timeout ≥300 s (§6.1) |
+| Rewriting the frontend instead of adapting it | Freeze §7's endpoints before touching `App.tsx` |
+| **Contamination between patients.** In `simulation.rb` the doctor agent is created **once** outside the patient loop and reset with `doctor.start`. If the reset is not complete, patient N sees residue from N−1 | Create the doctor agent **inside** the loop, one per consultation. Test: two consecutive consultations share not one message |
+| Leaving evaluation to the end and discovering the corpus is unusable | Smoke runs per stage (§8) and 3.4's gate |
+| **Automating a judgement the literature puts at 60-80% and reading it as if it were exact** | §13: what is verifiable gets verified, what is interpretable gets validated against labels before deciding anything |
+| **Two documents name a different baseline.** `STATUS.md` treats `e4-1` as the live corpus and `runs/historic/`'s README calls it superseded. While that lasts, an `e4-1` figure can be read as a baseline without being one | Deferred to TASKS Phase 8 (8.11), on purpose: it gets reconciled with a new batch in front of us, not by rewriting now. Until then every `e4-1` figure is reported with the note |
+| **A retry that cannot succeed.** An identical request at temperature 0 gets the identical reply, so retrying an empty report reproduced the failure three times instead of recovering from it (N10) | Fixed on 2026-09-01: the body is rebuilt per attempt and an empty reply raises the temperature floor. A transport failure still repeats the identical request — the two cases are different and the code now says so |
 
 ---
 
-## 13. Cobertura: capas, y qué respalda cada una
+## 13. Coverage: layers, and what backs each one
 
-`coverage.py` no es un módulo con una métrica: son **capas con fiabilidades muy
-distintas**, y mezclarlas es lo que convierte una medida en una impresión. El
-orden va de lo que se comprueba a lo que se interpreta, y cada capa valida a la
-siguiente.
+`coverage.py` is not a module with one metric: it is **layers with very different
+reliabilities**, and mixing them is what turns a measurement into an impression.
+The order runs from what is checked to what is interpreted, and each layer
+validates the next.
 
-### 13.1 Las tres capas
+### 13.1 The three layers
 
-| | Qué decide | Cómo | Fiabilidad |
+| | What it decides | How | Reliability |
 |---|---|---|---|
-| **L0** | ¿existe la cita, en ese turno, dicha por el paciente? | comparación de cadenas | exacta |
-| **L1** | ¿preguntó el médico por esta dimensión? | juicio tipo **checklist** | alta, medible |
-| **L2** | ¿la cita **sostiene** esa dimensión? | juicio de **atribución** | 60-80%, ver 13.4 |
+| **L0** | does the quote exist, in that turn, said by the patient? | string comparison | exact |
+| **L1** | did the doctor ask about this dimension? | a **checklist**-type judgement | high, measurable |
+| **L2** | does the quote **support** that dimension? | an **attribution** judgement | 60-80%, see 13.4 |
 
-**L0 está hecho** y da tres comprobaciones separadas —literal, turno declarado,
-línea del paciente—, los cuatro estados de puntuación × evidencia, y la
-dispersión entre repeticiones. Sin modelo, sin etiquetas y ciego a la verdad.
+**L0 is done** and gives three separate checks — verbatim, the named turn, a
+patient's line — the four states of score × evidence, and the spread across
+repeats. No model, no labels, blind to the truth.
 
-**Que las tres comprobaciones vayan separadas no es cosmético.** Al correr sobre
-`e4-1` salió `verbatim 95% · turno 93% · del paciente 0%`, y ese cero exacto
-delató un fallo de código —un turno es un intercambio, y médico y paciente
-comparten número— que un único `verified` habría presentado como «el médico no
-fundamenta nada».
+**That the three checks are kept separate is not cosmetic.** Running over `e4-1`
+it came out as `verbatim 95% · turn 93% · from the patient 0%`, and that exact
+zero exposed a code bug — a turn is an exchange, and doctor and patient share a
+number — that a single `verified` would have presented as "the doctor grounds
+nothing".
 
-### 13.2 Los cuatro estados
+### 13.2 The four states
 
-|  | evidencia verificada = 0 | ≥ 1 |
+|  | verified evidence = 0 | ≥ 1 |
 |---|---|---|
-| **sin puntuar** | `SILENT` | `CITED_UNSCORED` — citó y se negó a puntuar |
-| **puntuado** | **`UNGROUNDED`** — un número sin nada detrás | `GROUNDED` |
+| **unscored** | `SILENT` | `CITED_UNSCORED` — it quoted and declined to score |
+| **scored** | **`UNGROUNDED`** — a number with nothing behind it | `GROUNDED` |
 
-`UNGROUNDED` es la celda que justifica el módulo, y tiene nombre en la
-literatura: es el *citation recall* de **ALCE** en el caso de conjunto de citas
-vacío. Lo que **no** se toma de ALCE es el método — ellos resuelven con un modelo
-NLI sobre identificadores de pasaje; aquí el médico emite citas literales y eso
-lo decide `str.find`. Citar ALCE como respaldo de la comparación de cadenas
-sería falso.
+`UNGROUNDED` is the cell that justifies the module, and it has a name in the
+literature: it is **ALCE**'s *citation recall* in the empty-citation-set case.
+What is **not** taken from ALCE is the method — they solve it with an NLI model
+over passage identifiers; here the doctor emits verbatim quotes and `str.find`
+decides. Citing ALCE as backing for string comparison would be false.
 
-### 13.3 Lo que L0 no puede ver, por construcción
+### 13.3 What L0 cannot see, by construction
 
-Una cita **inventada por el paciente** es una cita real del transcript: verifica
-y sale `GROUNDED`. La integridad de la cita y la fidelidad al perfil son cosas
-distintas, y por eso **3.5 es un módulo hermano y no una capa de cobertura**:
-leería el perfil y rompería la ceguera a la verdad que hace que cobertura valga
-para cualquier brazo.
+A quote **invented by the patient** is a real quote from the transcript: it
+verifies and comes out `GROUNDED`. Quote integrity and fidelity to the profile
+are different things, and that is why **3.5 is a sibling module and not a
+coverage layer**: it would read the profile and break the blindness to the truth
+that makes coverage valid for any arm.
 
-No es teórico. En la línea base, el paciente afirmó tratamiento activo en 3 de 5
-repeticiones de un paciente en watch-and-wait, y el médico lo aceptó — con lo que
-`specific_necessity` y `specific_concerns` se puntuaron sobre un fármaco
-inexistente.
+This is not theoretical. In the baseline, the patient asserted active treatment in
+3 of 5 repeats of a patient on watch-and-wait, and the doctor accepted it — so
+`specific_necessity` and `specific_concerns` were scored over a drug that does
+not exist.
 
-**Y es el único sitio donde una lista de palabras es legítima.** Buscar
-*Ritalin* no es un proxy: el fármaco es el hecho. Buscar *trabajo* para decidir
-si se exploró `consequences` sí lo es. Entender por qué una vale y la otra no es
-lo que marca la frontera de L1.
+**And it is the only place where a word list is legitimate.** Searching for
+*Ritalin* is not a proxy: the drug is the fact. Searching for *work* to decide
+whether `consequences` was explored is one. Understanding why one is valid and
+the other is not is what marks L1's boundary.
 
-### 13.4 Restricción de método para L2
+### 13.4 A constraint of method for L2
 
-De **AttributionBench** (arXiv 2402.15089), que mide la atribución automática
-como clasificación binaria sobre siete conjuntos:
+From **AttributionBench** (arXiv 2402.15089), which measures automatic
+attribution as binary classification over seven sets:
 
-- GPT-4 zero-shot con CoT: **73.3%** de macro-F1. GPT-3.5 afinado: **~80%**. En
-  dominio especializado, **por debajo del 60%** — y un diálogo clínico lo es.
-- **Los LLM grandes rinden por debajo de modelos NLI pequeños afinados**
-  (FLAN-T5 3B, y en algún conjunto el de 770M).
-- **El prompt no es la palanca**: cuatro prompts cada vez más elaborados movieron
-  el F1 de 73.2 a 74.0. Lo que cambia es el reparto entre falsos positivos y
-  negativos, no el acierto.
-- **Más contexto empeora**: añadir la pregunta y la respuesta completas degradó
-  el resultado, porque el modelo acaba juzgando utilidad en vez de atribución.
+- GPT-4 zero-shot with CoT: **73.3%** macro-F1. Fine-tuned GPT-3.5: **~80%**. In
+  a specialised domain, **below 60%** — and a clinical dialogue is one.
+- **Large LLMs perform below small fine-tuned NLI models** (FLAN-T5 3B, and on
+  some sets the 770M one).
+- **The prompt is not the lever**: four increasingly elaborate prompts moved F1
+  from 73.2 to 74.0. What changes is the split between false positives and
+  negatives, not the accuracy.
+- **More context makes it worse**: adding the full question and answer degraded
+  the result, because the model ends up judging usefulness rather than
+  attribution.
 
-Consecuencias, si se llega a L2:
+Consequences, if L2 is reached:
 
-1. Un **modelo NLI**, no el modelo del médico con un prompt cuidado. ALCE usa
-   `google/t5_xxl_true_nli_mixture` y su implementación cabe en ocho líneas:
-   componer `"premise: {pasaje} hypothesis: {afirmación}"` y leer si devuelve `1`.
-2. **Entrada mínima**: la cita y la definición de la dimensión, sin el transcript
-   alrededor.
-3. La cita es un fragmento —*«Bien.»*, *«No sé.»*— cuyo significado solo existe
-   en su turno, así que antes hay que convertirla en proposición autónoma. Es la
-   **explicatura** de AIS, y sin ese paso el juicio es incoherente.
-4. Expectativa en 70-80%, no en «resuelto».
+1. An **NLI model**, not the doctor's model with a careful prompt. ALCE uses
+   `google/t5_xxl_true_nli_mixture` and its implementation fits in eight lines:
+   compose `"premise: {passage} hypothesis: {claim}"` and read whether it returns
+   `1`.
+2. **Minimal input**: the quote and the dimension's definition, without the
+   transcript around it.
+3. The quote is a fragment — *"Fine."*, *"I don't know."* — whose meaning only
+   exists in its turn, so it first has to be turned into a self-contained
+   proposition. That is AIS's **explicature**, and without that step the
+   judgement is incoherent.
+4. Expect 70-80%, not "solved".
 
-**L1 y L2 no son el mismo problema y no van encadenadas.** L1 es tipo checklist,
-y ahí el estudio del OSCE francés mide ICC 0.85 —frente a ~0 en juicios de
-calidad lingüística, donde además los humanos tampoco coincidían entre sí—. L2 es
-atribución, y es el terreno malo. Tratarlas como una sola escalera fue un error
-de la primera versión de este plan.
+**L1 and L2 are not the same problem and are not chained.** L1 is
+checklist-shaped, and there the French OSCE study measures ICC 0.85 — against ~0
+on judgements of linguistic quality, where the humans did not agree with each
+other either. L2 is attribution, and that is the bad ground. Treating them as a
+single ladder was a mistake in the first version of this plan.
 
-### 13.5 La forma del conjunto etiquetado
+### 13.5 The shape of the labelled set
 
-Cuando haga falta validar L1 o L2, el esquema ya existe: es el de **AIS**, y su
-repositorio publica los datos con esa forma.
+When L1 or L2 need validating, the schema already exists: it is **AIS**'s, and
+its repository publishes the data in that shape.
 
-- **Dos fases, en orden.** Primero `INT` —¿es interpretable la frase en su
-  contexto?—; la atribución **solo se anota si `INT = 1`**. Nunca se pregunta lo
-  segundo sin haber contestado lo primero.
-- **Acuerdo registrado**, no supuesto: cuántos anotadores coincidieron.
-- **Una salida `Flagged`** para la tarea imposible de juzgar. La abstención es un
-  valor, igual que el NA de 4.4.
-- Las guías completas están en el **paper**, no en el repositorio.
+- **Two phases, in order.** First `INT` — is the sentence interpretable in its
+  context? — and attribution is **only annotated if `INT = 1`**. The second
+  question is never asked without having answered the first.
+- **Agreement recorded**, not assumed: how many annotators agreed.
+- **A `Flagged` output** for a task that cannot be judged. Abstention is a value,
+  the same way 4.4's NA is.
+- The full guidelines are in the **paper**, not in the repository.
 
-Y un aviso del propio AttributionBench: el **11.2%** de sus casos de error
-resultaron ser fallos de la etiqueta humana. Etiquetar mal es un riesgo medido.
+And a warning from AttributionBench itself: **11.2%** of its error cases turned
+out to be failures of the human label. Labelling badly is a measured risk.
 
-### 13.6 Validar sin etiquetas
+### 13.6 Validating without labels
 
-Dos comprobaciones que no cuestan anotación y conviene hacer antes de pedirla:
+Two checks that cost no annotation and are worth doing before asking for it:
 
-- **Degradación deliberada** (método del OSCE francés): estropear al médico a
-  propósito y comprobar que la cobertura cae. La maquinaria ya existe — son los
-  brazos de estilo.
-- **Acuerdo entre dos modelos** sobre las mismas conversaciones. No demuestra que
-  ninguno acierte, pero el desacuerdo marca el techo del método.
+- **Deliberate degradation** (the French OSCE's method): break the doctor on
+  purpose and check that coverage drops. The machinery already exists — it is the
+  style arms.
+- **Agreement between two models** over the same conversations. It does not prove
+  either is right, but disagreement marks the ceiling of the method.
 
-Ninguna da *accuracy*. Sin etiquetas no hay accuracy, y no hay truco que lo evite.
+Neither gives *accuracy*. Without labels there is no accuracy, and there is no
+trick that avoids it.
 
-### 13.7 Restricciones heredadas de la codificación de diálogo clínico
+### 13.7 Constraints inherited from clinical dialogue coding
 
-De **RIAS**, que lleva desde 2002 codificando interacción médico-paciente:
+From **RIAS**, which has been coding doctor-patient interaction since 2002:
 
-- La unidad de codificación es **el pensamiento**, no el turno. El nuestro es aún
-  más grueso —un intercambio entero, médico y paciente bajo el mismo número— y
-  los estilos apilan varias preguntas en un turno.
-- **No deducir la pregunta de la respuesta.** L1 y la presencia de información
-  tienen que ser juicios independientes, o el 2×2 se colapsa solo.
-- **Las palabras clave no bastan** para identificar el tipo de pregunta. Es,
-  publicado hace veinte años, la misma conclusión que cerró el lector de puertas
-  el 2026-08-27.
+- The coding unit is **the thought**, not the turn. Ours is coarser still — a
+  whole exchange, doctor and patient under the same number — and the styles stack
+  several questions into one turn.
+- **Do not infer the question from the answer.** L1 and the presence of
+  information have to be independent judgements, or the 2×2 collapses on its own.
+- **Keywords are not enough** to identify the type of question. That is, published
+  twenty years ago, the same conclusion that closed the gate reader on
+  2026-08-27.
 
-Y de **AMIE**: una rúbrica no se inventa, se deriva de instrumentos publicados y
-se refina con clínicos.
+And from **AMIE**: a rubric is not invented, it is derived from published
+instruments and refined with clinicians.
 
-### 13.8 Lo que no tiene respaldo, y hay que decirlo
+### 13.8 What has no backing, and has to be said
 
-Dos piezas no se apoyan en nada de la literatura reunida, y el informe tiene que
-declararlo en vez de colgarlas de una cita que dice otra cosa:
+Two pieces rest on nothing in the assembled literature, and the report has to
+declare it rather than hang them off a citation that says something else:
 
-- **La comparación de cadenas de L0** no es el método de ALCE aunque comparta el
-  nombre de la métrica.
-- **3.5, la fidelidad del paciente**, mide algo que ninguno de los siete papers
-  mide. El *information recall* del OSCE francés es lo más cercano y va al revés:
-  comprueba si el paciente **suelta** los ítems de su ficha, no si **inventa** los
-  que no tiene. Es métrica nuestra.
+- **L0's string comparison** is not ALCE's method even though it shares the name
+  of the metric.
+- **3.5, patient fidelity**, measures something none of the seven papers measures.
+  The French OSCE's *information recall* is the closest and runs the other way: it
+  checks whether the patient **volunteers** the items on their card, not whether
+  they **invent** the ones they do not have. It is our own metric.

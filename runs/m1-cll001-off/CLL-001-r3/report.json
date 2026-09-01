@@ -1,0 +1,272 @@
+{
+  "patient_id": "CLL-001",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "CLL-001",
+    "clinical_summary": "The patient presents with persistent fatigue that doesn't improve with rest, fluctuating neck swelling, and nighttime hot flashes with dizziness. They've been managing these symptoms on their own for 'the last few years' without seeking medical care. They attribute the symptoms to stress from 20 years at a stressful job and environmental exposure to a chemical plant, but also consider aging as a factor. They feel their body is 'losing ground' and generally weaker than it used to, with slower recovery from illness. They are open to treatment and have expressed trust in the clinician's judgment. They have no current medications aside from occasional pain relievers for headaches.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "It's really been affecting my day-to-day life - work's been slow, and I haven't had the energy to do things with my family like I used to.",
+            "turn": 1
+          },
+          {
+            "quote": "I just don't have the same energy as before, and even little things can seem really draining.",
+            "turn": 7
+          },
+          {
+            "quote": "It's not just about managing these specific symptoms, but feeling like my body is generally weaker than it should be.",
+            "turn": 7
+          }
+        ],
+        "reasoning": "The patient has lost energy, can't do family activities, work is affected, and even small things feel draining. They feel their body is weaker and recovery is slower, indicating significant impact on daily functioning.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "I've been working at the same company for over 20 years now, and the last few years have been particularly stressful.",
+            "turn": 4
+          },
+          {
+            "quote": "It's not just that I'm getting older - it's that I feel like my body is slowly losing ground, you know?",
+            "turn": 5
+          },
+          {
+            "quote": "when I get sick - whether it's a cold or something else - it takes longer for me to recover now.",
+            "turn": 7
+          }
+        ],
+        "reasoning": "They perceive this as something that developed over time (20 years at same job, last few years particularly stressful) and is progressive ('slowly losing ground'). They don't expect it to end soon.",
+        "score": 8.0,
+        "confidence": 0.7
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I've just been trying my best to manage them as they come up.",
+            "turn": 3
+          },
+          {
+            "quote": "I don't think I've had any other significant exposures to environmental hazards outside of the chemical plant.",
+            "turn": 5
+          },
+          {
+            "quote": "Sometimes I feel like I'm really exhausted no matter where I am.",
+            "turn": 5
+          },
+          {
+            "quote": "I'm ready for some answers and willing to do whatever it takes to get there.",
+            "turn": 9
+          }
+        ],
+        "reasoning": "They've been managing on their own without seeking medical care. They acknowledge environmental factors they can't change. They express willingness to do whatever it takes for treatment, but haven't taken active steps to control the illness beyond managing symptoms.",
+        "score": 4.0,
+        "confidence": 0.6
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "But I'm definitely open to starting something if it could help me with all of this.",
+            "turn": 3
+          },
+          {
+            "quote": "If we could find out the cause - whether it's an illness or something else entirely - I think that would be a huge relief.",
+            "turn": 8
+          },
+          {
+            "quote": "And then, of course, knowing what it is opens up possibilities for treatment or management plans.",
+            "turn": 8
+          },
+          {
+            "quote": "I'm ready for some answers and willing to do whatever it takes to get there.",
+            "turn": 9
+          },
+          {
+            "quote": "I trust your judgment on this.",
+            "turn": 9
+          }
+        ],
+        "reasoning": "They are open to treatment and believe it would help, but they haven't had treatment yet. They trust the clinician's judgment and see treatment as something that would come after finding the cause.",
+        "score": 6.0,
+        "confidence": 0.5
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "I've been feeling really tired lately. Not just normal everyday tiredness, but more like a constant fatigue that doesn't go away even after a good night's sleep.",
+            "turn": 1
+          },
+          {
+            "quote": "sometimes I get these hot flashes during the night that seem to come out of nowhere.",
+            "turn": 1
+          },
+          {
+            "quote": "the swelling in my neck is more constant, though it does fluctuate some days.",
+            "turn": 2
+          },
+          {
+            "quote": "the fact that it fluctuates is definitely concerning. It's not something I would have ever expected to experience",
+            "turn": 6
+          }
+        ],
+        "reasoning": "They have multiple symptoms (fatigue, neck swelling, hot flashes) that they attribute to their condition. These are daily and noticeable, and they find the neck swelling particularly concerning.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "It's really been affecting my day-to-day life - work's been slow, and I haven't had the energy to do things with my family like I used to.",
+            "turn": 1
+          },
+          {
+            "quote": "Everything just feels so overwhelming at times.",
+            "turn": 2
+          },
+          {
+            "quote": "the fact that it fluctuates is definitely concerning. It's not something I would have ever expected to experience, and it makes me nervous that there might be something else going on beyond just fatigue and hot flashes.",
+            "turn": 6
+          },
+          {
+            "quote": "It feels like everything is so uncertain right now, and that uncertainty is really stressful.",
+            "turn": 8
+          },
+          {
+            "quote": "If we could find out the cause - whether it's an illness or something else entirely - I think that would be a huge relief.",
+            "turn": 8
+          }
+        ],
+        "reasoning": "They are concerned about the neck swelling specifically, feel overwhelmed, and uncertainty is stressful. They want answers to reduce uncertainty, indicating frequent worry that affects their emotional state.",
+        "score": 8.0,
+        "confidence": 0.7
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "My understanding is that it could be due to stress and my work environment. I've been working at the same company for over 20 years now, and the last few years have been particularly stressful.",
+            "turn": 4
+          },
+          {
+            "quote": "Plus, we know there are some environmental hazards near where I live - I used to work in an office right by a chemical plant.",
+            "turn": 4
+          },
+          {
+            "quote": "But at the same time, it all just feels so unpredictable.",
+            "turn": 4
+          },
+          {
+            "quote": "Sometimes I feel like maybe I'm just getting older, you know?",
+            "turn": 4
+          },
+          {
+            "quote": "But then other times, especially when I notice my neck swelling or get hit with one of those hot flashes, I know that something more is going on.",
+            "turn": 4
+          },
+          {
+            "quote": "It's not just that I'm getting older - it's that I feel like my body is slowly losing ground, you know?",
+            "turn": 5
+          },
+          {
+            "quote": "I don't think I've had any other significant exposures to environmental hazards outside of the chemical plant.",
+            "turn": 5
+          },
+          {
+            "quote": "But overall, it definitely feels like there's something more going on than just aging.",
+            "turn": 5
+          }
+        ],
+        "reasoning": "They have some understanding of potential causes (stress, environment, aging) but find it confusing and unpredictable. They're trying to make sense of it but acknowledge uncertainty.",
+        "score": 6.0,
+        "confidence": 0.6
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "Everything just feels so overwhelming at times.",
+            "turn": 2
+          },
+          {
+            "quote": "It feels like everything is so uncertain right now, and that uncertainty is really stressful.",
+            "turn": 8
+          },
+          {
+            "quote": "If we could find out the cause - whether it's an illness or something else entirely - I think that would be a huge relief.",
+            "turn": 8
+          },
+          {
+            "quote": "I really appreciate your help, and I'm looking forward to getting started on this journey towards feeling better.",
+            "turn": 10
+          }
+        ],
+        "reasoning": "They feel overwhelmed, uncertainty is stressful, and they're looking forward to feeling better. The emotional response is prominent and affects how they speak about their situation.",
+        "score": 8.0,
+        "confidence": 0.7
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [],
+        "reasoning": "The patient has no current prescribed medication and has not yet experienced taking medication, so there is no evidence to assess this dimension.",
+        "score": null,
+        "confidence": 0.0
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [],
+        "reasoning": "The patient has no current prescribed medication and has not expressed any concerns about it, so there is no evidence to assess this dimension.",
+        "score": null,
+        "confidence": 0.0
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [],
+        "reasoning": "The patient never raised concerns about medicines as a class, and has no experience with regular medication, so there is no evidence to assess this dimension.",
+        "score": null,
+        "confidence": 0.0
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "The patient never raised concerns about doctors prescribing too readily, and expressed trust in the clinician's judgment, so there is no evidence to assess this dimension.",
+        "score": null,
+        "confidence": 0.0
+      }
+    },
+    "causes": [
+      "stress and work environment",
+      "environmental hazards (chemical plant)",
+      "aging"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "My understanding is that it could be due to stress and my work environment. I've been working at the same company for over 20 years now, and the last few years have been particularly stressful.",
+        "turn": 4
+      },
+      {
+        "quote": "Plus, we know there are some environmental hazards near where I live - I used to work in an office right by a chemical plant.",
+        "turn": 4
+      },
+      {
+        "quote": "Sometimes I feel like maybe I'm just getting older, you know?",
+        "turn": 4
+      },
+      {
+        "quote": "It's not just that I'm getting older - it's that I feel like my body is slowly losing ground, you know?",
+        "turn": 5
+      }
+    ]
+  }
+}

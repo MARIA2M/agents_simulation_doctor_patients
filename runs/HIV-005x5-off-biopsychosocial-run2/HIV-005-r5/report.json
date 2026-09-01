@@ -1,0 +1,330 @@
+{
+  "patient_id": "HIV-005",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "HIV-005",
+    "clinical_summary": "The patient has been on Triumeq (abacavir/dolutegravir/lamivudine) for three years but reports inconsistent adherence, including missed doses and drug holidays, primarily due to side effects and questioning whether the effort is worth it. They are experiencing increased fatigue, occasional headaches, and mood swings (anxiety, sadness). HIV significantly disrupts work, relationships, and leisure, and they struggle with internalized stigma and isolation. They have a supportive network and use self-care strategies, and they accept HIV as a lifelong condition while trying not to let it define them.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "Work, relationships, and leisure are all noticeably affected.",
+            "turn": 5
+          },
+          {
+            "quote": "There are days when getting out of bed feels like an accomplishment — let alone going to work or meeting friends.",
+            "turn": 5
+          },
+          {
+            "quote": "my illness significantly disrupts my life",
+            "turn": 5
+          }
+        ],
+        "reasoning": "The patient describes significant disruption across multiple domains (work, relationships, leisure) and notes that basic tasks like getting out of bed are accomplishments, aligning with an 8 where a major role is lost or substantially reduced.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "I've come to accept HIV as a lifelong reality. It's not something that I think will ever fully go away.",
+            "turn": 8
+          },
+          {
+            "quote": "Moving forward, I'm hoping that maybe there will be new treatment options or advancements that can help make living with HIV a bit easier",
+            "turn": 8
+          },
+          {
+            "quote": "But for now, it's about managing the day-to-day challenges as best as I can",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient explicitly states HIV is a lifelong reality that will not go away and is planning day-to-day management, aligning with an 8 where arrangements are built around it continuing.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I'm trying to manage things by taking breaks when needed and focusing on staying consistent with my medication.",
+            "turn": 2
+          },
+          {
+            "quote": "I sometimes wonder if it's worth all the effort.",
+            "turn": 3
+          },
+          {
+            "quote": "there are times when I feel like maybe I could just live without it.",
+            "turn": 3
+          },
+          {
+            "quote": "I'm trying to do better with that.",
+            "turn": 3
+          },
+          {
+            "quote": "I'm trying to stay consistent with my medication.",
+            "turn": 2
+          },
+          {
+            "quote": "I'm trying my best to remain positive and stay focused on taking care of myself as best as I can.",
+            "turn": 5
+          }
+        ],
+        "reasoning": "The patient is actively trying to manage but also questions the effort and considers not taking medication, indicating active attempts with significant doubt about whether it's worth it.",
+        "score": 5.0,
+        "confidence": 0.6
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "I know how important it is to keep my viral load under control.",
+            "turn": 3
+          },
+          {
+            "quote": "since you've said that I haven't developed resistance so far and that the medication should help keep things under control, it helps me stay focused on trying to be more consistent with my regimen.",
+            "turn": 4
+          },
+          {
+            "quote": "I know you've emphasized the importance of consistent adherence",
+            "turn": 3
+          }
+        ],
+        "reasoning": "The patient acknowledges the importance of viral load control and trusts the doctor's reassurance about effectiveness, using this to stay focused on adherence.",
+        "score": 5.0,
+        "confidence": 0.6
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "As for how I feel about myself, there are times when I can't help but wonder if others see me differently because of my illness.",
+            "turn": 5
+          },
+          {
+            "quote": "It's not something that I talk openly about with everyone, so sometimes it can be a bit isolating.",
+            "turn": 5
+          },
+          {
+            "quote": "I try not to let it define me completely.",
+            "turn": 8
+          },
+          {
+            "quote": "I still want to enjoy things and take part in activities like everyone else.",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient experiences symptoms (fatigue, headaches, mood changes) and has internalized stigma concerns, actively trying not to let it define them, aligning with a 6 where several symptoms are present most days, noticed but worked around.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "I've been feeling a bit off lately",
+            "turn": 1
+          },
+          {
+            "quote": "sometimes feeling anxious or sad without any specific reason",
+            "turn": 2
+          },
+          {
+            "quote": "these episodes have been more frequent lately",
+            "turn": 2
+          },
+          {
+            "quote": "I do wonder if maybe my body has built up some resistance, or if there's something else going on.",
+            "turn": 4
+          },
+          {
+            "quote": "I sometimes wonder if it's worth all the effort.",
+            "turn": 3
+          },
+          {
+            "quote": "there are times when I feel like maybe I could just live without it.",
+            "turn": 3
+          },
+          {
+            "quote": "I know that my illness significantly affects my life",
+            "turn": 5
+          },
+          {
+            "quote": "sometimes it can be a bit isolating",
+            "turn": 5
+          },
+          {
+            "quote": "It's a bit like an underlying tension that's always there in the background",
+            "turn": 6
+          }
+        ],
+        "reasoning": "The patient has frequent mood changes, worries about resistance, questions the effort of treatment, and describes an underlying tension, aligning with an 8 where worry is frequent and intrudes into matters unrelated to the illness.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I can tell when I've missed a dose or taken a break from my medication.",
+            "turn": 4
+          },
+          {
+            "quote": "My energy levels might drop more suddenly, and sometimes I'll get headaches that seem to last longer than usual.",
+            "turn": 4
+          },
+          {
+            "quote": "It's hard for me to know if these changes are directly due to the missed doses or just coincidental",
+            "turn": 4
+          },
+          {
+            "quote": "I do wonder if maybe my body has built up some resistance, or if there's something else going on.",
+            "turn": 4
+          },
+          {
+            "quote": "I know you've said that I haven't developed resistance so far and that the medication should help keep things under control",
+            "turn": 4
+          }
+        ],
+        "reasoning": "The patient can sense when they miss doses and notices physical changes, but they are uncertain about causes and have gaps in understanding, aligning with a 6 where they give a rough account with gaps.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "sometimes feeling anxious or sad without any specific reason",
+            "turn": 2
+          },
+          {
+            "quote": "these episodes have been more frequent lately",
+            "turn": 2
+          },
+          {
+            "quote": "It's a bit like an underlying tension that's always there in the background, sometimes bubbling up into something more pronounced.",
+            "turn": 6
+          },
+          {
+            "quote": "I know that my illness significantly affects my life",
+            "turn": 5
+          },
+          {
+            "quote": "sometimes it can be a bit isolating",
+            "turn": 5
+          },
+          {
+            "quote": "I try my best to remain positive and stay focused on taking care of myself as best as I can.",
+            "turn": 5
+          }
+        ],
+        "reasoning": "The patient experiences frequent anxiety and sadness, describes an underlying tension, and notes emotional impact on their life, aligning with an 8 where emotion is prominent and affects what they do.",
+        "score": 8.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "I know how important it is to keep my viral load under control.",
+            "turn": 3
+          },
+          {
+            "quote": "I know you've emphasized the importance of consistent adherence",
+            "turn": 3
+          },
+          {
+            "quote": "I'm trying to do better with that.",
+            "turn": 3
+          },
+          {
+            "quote": "I'm trying to stay consistent with my medication.",
+            "turn": 2
+          },
+          {
+            "quote": "I'm trying to manage things by taking breaks when needed and focusing on staying consistent with my medication.",
+            "turn": 2
+          },
+          {
+            "quote": "I sometimes wonder if it's worth all the effort.",
+            "turn": 3
+          },
+          {
+            "quote": "there are times when I feel like maybe I could just live without it.",
+            "turn": 3
+          }
+        ],
+        "reasoning": "The patient acknowledges the importance of treatment and is trying to be more consistent, but they also question whether it's worth the effort and consider not taking it, indicating active attempts with significant doubt.",
+        "score": 3.5,
+        "confidence": 0.6
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "The medication can cause side effects like headaches",
+            "turn": 3
+          },
+          {
+            "quote": "I sometimes wonder if it's worth all the effort.",
+            "turn": 3
+          },
+          {
+            "quote": "there are times when I feel like maybe I could just live without it.",
+            "turn": 3
+          },
+          {
+            "quote": "I do wonder if maybe my body has built up some resistance, or if there's something else going on.",
+            "turn": 4
+          },
+          {
+            "quote": "I can tell when I've missed a dose or taken a break from my medication",
+            "turn": 4
+          },
+          {
+            "quote": "I sometimes wonder if it's worth all the effort",
+            "turn": 3
+          },
+          {
+            "quote": "there are times when I feel like maybe I could just live without it",
+            "turn": 3
+          }
+        ],
+        "reasoning": "The patient has concerns about side effects, questions the effort, considers not taking medication, and worries about resistance, and these concerns have led to drug holidays and missed doses, aligning with a 4 where concerns recur unprompted and have changed behavior.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "there are times when I feel like maybe I could just live without it",
+            "turn": 3
+          },
+          {
+            "quote": "I sometimes wonder if it's worth all the effort",
+            "turn": 3
+          }
+        ],
+        "reasoning": "The patient has considered not taking medication, suggesting some concern about medication harm or burden, but this is not clearly articulated as a general belief about medicines as a class.",
+        "score": 2.0,
+        "confidence": 0.5
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "No evidence to assess this dimension.",
+        "score": null,
+        "confidence": 0.0
+      }
+    },
+    "causes": [],
+    "causes_evidence": []
+  }
+}

@@ -1,0 +1,322 @@
+{
+  "patient_id": "CLL-001",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "CLL-001",
+    "clinical_summary": "Patient with CLL experiencing significant fatigue and night sweats that impact daily life, work, family, and emotional well-being. New medication causing headaches and side effects. Patient engages in self-care practices but recognizes limits. Believes CLL is slow-moving and may not need treatment, but still feels uncertain and worried about progression. Values treatment for monitoring and reassurance, but has concerns about long-term effects and whether it's worth it. Sees medicines as generally helpful but cautious about side effects and interactions. Believes doctors can be quick to reach for medication.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "some days it feels like I'm barely treading water",
+            "turn": 1
+          },
+          {
+            "quote": "The fatigue is ever-present and the occasional night sweats keep me up at night",
+            "turn": 1
+          },
+          {
+            "quote": "this illness is relentless in its impact on my daily life",
+            "turn": 2
+          },
+          {
+            "quote": "I used to be able to work long hours and stay up late when I wanted to, but now even getting through the day feels like a struggle",
+            "turn": 2
+          },
+          {
+            "quote": "My energy levels are constantly low, and that affects everything from my ability to cook meals for the family to my patience when helping the kids with their homework",
+            "turn": 2
+          },
+          {
+            "quote": "this disease has taken over my life",
+            "turn": 1
+          },
+          {
+            "quote": "It's a constant balancing act, trying to make time for work, family, and self-care while also staying on top of the regular blood draws you mentioned",
+            "turn": 1
+          }
+        ],
+        "reasoning": "Patient describes significant impact on daily life - can no longer work long hours, stay up late, cook meals, or help with kids as they used to. They need to balance work, family, and self-care just to get through the day. This shows a major role is lost or substantially reduced.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "On some level, I understand that CLL is a relatively slow-moving disease and that I may never even need treatment",
+            "turn": 2
+          },
+          {
+            "quote": "But at the same time, it feels like an uphill fight just to stay where you are in your own body",
+            "turn": 2
+          },
+          {
+            "quote": "I can't help worrying about how things will progress",
+            "turn": 2
+          },
+          {
+            "quote": "there's a sense of uncertainty that still lingers",
+            "turn": 5
+          },
+          {
+            "quote": "I don't know if I'll ever fully shake that feeling",
+            "turn": 5
+          }
+        ],
+        "reasoning": "Patient understands CLL is slow-moving and may not need treatment, which is reassuring. However, they're still worried about progression and uncertain about the future. They hold both endings open and plan for neither.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I've found that focusing on some key self-care practices has been really helpful in managing my condition. Those include trying to get regular exercise (even if just a short walk most days), getting enough sleep, eating reasonably well and staying engaged with activities I enjoy.",
+            "turn": 6
+          },
+          {
+            "quote": "But at the same time, it can feel like there's only so much I can control. There are limits to how much lifestyle changes or self-care practices can influence my situation — especially when you factor in the underlying impact of this disease on my body.",
+            "turn": 6
+          },
+          {
+            "quote": "That said, I do think that maintaining a positive mindset and focusing on what I can do rather than what I can't does make a difference — even if it's just small differences. It helps me feel more empowered, less overwhelmed by everything happening at once.",
+            "turn": 6
+          }
+        ],
+        "reasoning": "Patient actively engages in self-care practices and believes they make a difference, but recognizes limits due to the disease. They credit their actions with some effect alongside the treatment.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "I think I appreciate the value of having some form of treatment — even if it's just to monitor my condition. It does give me a bit of reassurance that there are steps being taken to manage things.",
+            "turn": 3
+          },
+          {
+            "quote": "You've reassured me that my symptoms might be related to adjusting to a new medication or simply part of managing the disease",
+            "turn": 2
+          },
+          {
+            "quote": "I can't help worrying about how things will progress",
+            "turn": 2
+          }
+        ],
+        "reasoning": "Patient sees treatment as providing reassurance and monitoring, but they're still worried about progression. They allow that treatment does something but it's not clear how much it helps.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "When I think about what's causing my situation, CLL definitely comes to mind.",
+            "turn": 5
+          },
+          {
+            "quote": "It's hard not to see the impact it has on my life — from the fatigue to the impact on work and family.",
+            "turn": 5
+          },
+          {
+            "quote": "this illness is relentless in its impact on my daily life",
+            "turn": 2
+          },
+          {
+            "quote": "this disease has taken over my life",
+            "turn": 1
+          }
+        ],
+        "reasoning": "Patient clearly identifies CLL as the cause and describes multiple symptoms (fatigue, night sweats) that they attribute to it. Symptoms are daily and intrusive, interrupting their life.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "That emotional weight does make it hard sometimes — there are moments when I wonder if it's all worth it.",
+            "turn": 2
+          },
+          {
+            "quote": "I can't help worrying about how things will progress.",
+            "turn": 2
+          },
+          {
+            "quote": "there's a sense of uncertainty that still lingers",
+            "turn": 5
+          },
+          {
+            "quote": "On one hand, you've reassured me that it's a slow-moving disease and I may never even need treatment. That brings some comfort. But at the same time, it feels like an uphill battle just to stay where you are in your own body.",
+            "turn": 5
+          },
+          {
+            "quote": "I think there's also an emotional aspect here. It's hard not to feel like this illness is a constant source of stress or worry — something that's always hanging over me.",
+            "turn": 5
+          },
+          {
+            "quote": "I don't know if I'll ever fully shake that feeling",
+            "turn": 5
+          },
+          {
+            "quote": "there are moments when I wonder if it's all worth it",
+            "turn": 6
+          }
+        ],
+        "reasoning": "Patient worries about progression, wonders if it's worth it, feels constant stress and worry, and can't shake the feeling. Worry is frequent and intrudes into matters unrelated to the illness.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "On some level, I understand that CLL is a relatively slow-moving disease and that I may never even need treatment.",
+            "turn": 2
+          },
+          {
+            "quote": "But at the same time, it feels like an uphill fight just to stay where you are in your own body.",
+            "turn": 2
+          },
+          {
+            "quote": "there's a sense of uncertainty that still lingers",
+            "turn": 5
+          },
+          {
+            "quote": "I don't know if I'll ever fully shake that feeling",
+            "turn": 5
+          },
+          {
+            "quote": "I'm doing what I can to manage it day-to-day and find some moments of peace within the chaos.",
+            "turn": 5
+          }
+        ],
+        "reasoning": "Patient understands the disease is slow-moving and may not need treatment, but they still feel uncertain and struggle to find peace. They give a rough account of what's happening and why, with gaps.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "That emotional weight does make it hard sometimes",
+            "turn": 2
+          },
+          {
+            "quote": "there are moments when I wonder if it's all worth it",
+            "turn": 2
+          },
+          {
+            "quote": "I can't help worrying about how things will progress",
+            "turn": 2
+          },
+          {
+            "quote": "there's a sense of uncertainty that still lingers",
+            "turn": 5
+          },
+          {
+            "quote": "I think there's also an emotional aspect here. It's hard not to feel like this illness is a constant source of stress or worry — something that's always hanging over me.",
+            "turn": 5
+          },
+          {
+            "quote": "I don't know if I'll ever fully shake that feeling",
+            "turn": 5
+          },
+          {
+            "quote": "It would be naive to say there aren't days when all of this feels like an uphill battle",
+            "turn": 6
+          }
+        ],
+        "reasoning": "Patient describes emotional weight, wondering if it's worth it, constant worry, stress, and feeling like it's always hanging over them. Emotion is prominent and affects what they do.",
+        "score": 8.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "I think I appreciate the value of having some form of treatment — even if it's just to monitor my condition. It does give me a bit of reassurance that there are steps being taken to manage things.",
+            "turn": 3
+          },
+          {
+            "quote": "But at the same time, the new medication has been tough. Those headaches you mentioned have really thrown me off balance.",
+            "turn": 3
+          },
+          {
+            "quote": "I worry sometimes about whether it's worth it, or if there might be side effects down the line.",
+            "turn": 3
+          },
+          {
+            "quote": "There's a part of me that wonders if I'll ever be able to get off medication entirely, or even just reduce the dosage as time goes on.",
+            "turn": 3
+          }
+        ],
+        "reasoning": "Patient appreciates the value of treatment and monitoring, but they're worried about side effects and whether it's worth it. They wonder about getting off medication entirely or reducing dosage.",
+        "score": 3.0,
+        "confidence": 0.7
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "But at the same time, the new medication has been tough. Those headaches you mentioned have really thrown me off balance.",
+            "turn": 3
+          },
+          {
+            "quote": "I worry sometimes about whether it's worth it, or if there might be side effects down the line.",
+            "turn": 3
+          },
+          {
+            "quote": "There's a part of me that wonders if I'll ever be able to get off medication entirely, or even just reduce the dosage as time goes on.",
+            "turn": 3
+          },
+          {
+            "quote": "It feels like yet another uncertainty to grapple with when so much about this disease is already unpredictable.",
+            "turn": 3
+          }
+        ],
+        "reasoning": "Patient is worried about side effects (headaches), whether it's worth it, and long-term effects. They wonder about getting off medication entirely or reducing dosage. Concerns recur unprompted and they've thought about reducing the dose.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "I think I tend to see medicines in general as something that can be really helpful — necessary even. It's hard to overstate how much of an impact they've had on so many people's lives. But at the same time, there's definitely an element of caution there. You hear stories about side effects or interactions with other medications and it makes you wonder.",
+            "turn": 4
+          }
+        ],
+        "reasoning": "Patient sees medicines as generally helpful and necessary, but there's caution due to stories of side effects and interactions. This represents mild generalised caution about taking things long-term.",
+        "score": 3.0,
+        "confidence": 0.7
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [
+          {
+            "quote": "As for doctors deciding treatment, I think sometimes it can feel like they're quick to reach for medication. It might be because they've seen so many patients who benefit from it, but it also makes me a bit anxious. There are times when I wonder if my concerns about medication are legitimate or if I'm just being overly cautious.",
+            "turn": 4
+          }
+        ],
+        "reasoning": "Patient thinks doctors can be quick to reach for medication, which makes them anxious. They wonder if their concerns are legitimate or if they're being overly cautious. This represents holding that doctors reach for medication too quickly as a general pattern.",
+        "score": 4.0,
+        "confidence": 0.8
+      }
+    },
+    "causes": [
+      "CLL (Chronic Lymphocytic Leukemia)"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "When I think about what's causing my situation, CLL definitely comes to mind.",
+        "turn": 5
+      }
+    ]
+  }
+}

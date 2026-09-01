@@ -1,0 +1,245 @@
+{
+  "patient_id": "CLL-003",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "CLL-003",
+    "clinical_summary": "Patient with CLL for 5 years, currently not on active treatment and in monitoring phase with routine blood tests every 3 months. Presents with increased fatigue over past couple of weeks and new neck lump (1 week). Lump does not hurt or itch. Patient has good understanding of condition, trusts hematologist, and is generally not very worried. Engaged in self-monitoring by staying informed and asking questions. Wants to feel more in control through lifestyle factors.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "It's generally pretty mild — I can work, socialize, and function almost normally most days.",
+            "turn": 2
+          },
+          {
+            "quote": "I can still work, socialize, and spend time with family pretty much as usual.",
+            "turn": 5
+          }
+        ],
+        "reasoning": "Patient maintains usual roles and activities with minimal adaptation; increased fatigue noted but does not prevent functioning. Aligns with score 4.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "we're still pretty early in this journey!",
+            "turn": 3
+          },
+          {
+            "quote": "I'm still processing the fact that this is a part of my life right now.",
+            "turn": 4
+          },
+          {
+            "quote": "watch and wait approach",
+            "turn": 8
+          },
+          {
+            "quote": "we'll see what happens down the line.",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient does not expect immediate urgency; in monitoring phase and will start treatment when needed. Holds both endings open and plans for neither. Aligns with score 6.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I keep an eye on things myself as best I can by staying informed about what's going on and asking questions when I see the doctor.",
+            "turn": 6
+          },
+          {
+            "quote": "I'm relying a lot on their expertise to help guide us through these kinds of situations.",
+            "turn": 6
+          },
+          {
+            "quote": "lifestyle factors can play a role in managing CLL somehow? That's just me wondering if there might be some ways to feel even more in control.",
+            "turn": 9
+          }
+        ],
+        "reasoning": "Patient takes some action (staying informed, asking questions) but relies heavily on hematologist's expertise. Wants to feel more in control through lifestyle factors. Aligns with score 4.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "I trust the hematologist who explained that we're keeping a close eye on things with regular appointments and blood tests, and will start treatment if and when needed.",
+            "turn": 4
+          },
+          {
+            "quote": "I think I've been feeling pretty neutral about treatment in general — it's something that could be useful if and when needed.",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient trusts treatment would be helpful if needed but is not currently on medication and does not attribute current state to treatment. Aligns with score 2.",
+        "score": 2.0,
+        "confidence": 0.6
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "It's generally pretty mild — I can work, socialize, and function almost normally most days.",
+            "turn": 2
+          },
+          {
+            "quote": "I can still work, socialize, and spend time with family pretty much as usual.",
+            "turn": 5
+          },
+          {
+            "quote": "having CLL doesn't usually dominate my thoughts or daily life.",
+            "turn": 5
+          },
+          {
+            "quote": "it's always there somewhere.",
+            "turn": 5
+          }
+        ],
+        "reasoning": "Patient does not define self by illness; can function normally and does not let illness dominate thoughts. Aligns with score 2.",
+        "score": 2.0,
+        "confidence": 0.8
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "that lump in my neck is something new to me.",
+            "turn": 2
+          },
+          {
+            "quote": "that's part of why this lump has me a bit worried.",
+            "turn": 3
+          },
+          {
+            "quote": "I've been handling things pretty okay on the emotional side lately.",
+            "turn": 7
+          },
+          {
+            "quote": "if something new or more challenging were to come up, that could change!",
+            "turn": 7
+          },
+          {
+            "quote": "I'd imagine there would be some worries or concerns, just because change can always feel a bit daunting.",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient worried about new lump but generally not very concerned about CLL. Trusts doctors and handles emotionally. Worry tied to specific moments. Aligns with score 4.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I think my understanding of CLL is pretty good, thanks in large part to the hematologist's explanations.",
+            "turn": 9
+          },
+          {
+            "quote": "It's a bit of an abstract concept when you think about it at a really basic level — I mean, it involves things like white blood cells and immune system functions!",
+            "turn": 9
+          },
+          {
+            "quote": "I feel like I'm more or less on top of things so far.",
+            "turn": 9
+          }
+        ],
+        "reasoning": "Patient has good understanding of condition and can explain what it involves. Aligns with score 8.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "I've been handling things pretty okay on the emotional side lately.",
+            "turn": 7
+          },
+          {
+            "quote": "it's not like I'm completely detached from any of this.",
+            "turn": 7
+          },
+          {
+            "quote": "if something new or more challenging were to come up, that could change!",
+            "turn": 7
+          },
+          {
+            "quote": "it's more like 'a watched pot never boils' sort of thing — just keeping an eye on everything and taking things one step at a time.",
+            "turn": 7
+          }
+        ],
+        "reasoning": "Patient handles things emotionally well; emotion acknowledged and contained. Aligns with score 4.",
+        "score": 4.0,
+        "confidence": 0.7
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "I'm not taking any medications specifically for the CLL yet.",
+            "turn": 3
+          },
+          {
+            "quote": "I think I've been feeling pretty neutral about treatment in general — it's something that could be useful if and when needed.",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient not currently on medication; neutral about treatment and does not see it as necessary right now. Aligns with score 2.0.",
+        "score": 2.0,
+        "confidence": 0.6
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "that's part of why this lump has me a bit worried.",
+            "turn": 3
+          },
+          {
+            "quote": "I'd imagine there would be some worries or concerns, just because change can always feel a bit daunting.",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient worried about new lump but not specifically about medication. Acknowledges concerns about starting treatment. Aligns with score 2.0.",
+        "score": 2.0,
+        "confidence": 0.6
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [],
+        "reasoning": "Patient never discussed general beliefs about medicines as a class.",
+        "score": null,
+        "confidence": 0.0
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "Patient never discussed general beliefs about doctors prescribing too readily.",
+        "score": null,
+        "confidence": 0.0
+      }
+    },
+    "causes": [
+      "reaction to infection",
+      "part of having CLL in general"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "the hematologist did say that sometimes a reaction to infection can cause lymph nodes to enlarge.",
+        "turn": 6
+      },
+      {
+        "quote": "it could be something like that, or maybe just part of having CLL in general.",
+        "turn": 6
+      }
+    ]
+  }
+}

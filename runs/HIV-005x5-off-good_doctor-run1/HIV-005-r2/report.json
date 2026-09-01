@@ -1,0 +1,287 @@
+{
+  "patient_id": "HIV-005",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "HIV-005",
+    "clinical_summary": "A patient with a chronic illness (diagnosed 3 years ago, symptoms likely started earlier) experiencing significant fatigue and headaches that make simple tasks 'insurmountable' on some days. They struggle to maintain work and family responsibilities. They have inconsistent adherence to Triumeq due to practical difficulties and specific concerns about long-term harm and side effects. They understand how the medication works but worry about unforeseen consequences. They have mixed views on the future—some hope for breakthroughs but also feel it will always be a struggle. They recognize some control over medication adherence but feel out of control regarding illness progression and emotional impact.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "my life has been pretty dominated by this chronic illness I have. It's been affecting everything I do",
+            "turn": 1
+          },
+          {
+            "quote": "there are times when the fatigue gets so overwhelming that even simple tasks become insurmountable",
+            "turn": 3
+          },
+          {
+            "quote": "I've been trying my best to keep up with work and family responsibilities despite all this",
+            "turn": 3
+          }
+        ],
+        "reasoning": "The patient describes their life as 'dominated' by the illness and affecting 'everything I do.' They experience fatigue that makes 'simple tasks become insurmountable' and are struggling to maintain work and family responsibilities.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "I was diagnosed about three years ago, but looking back, I'm pretty sure the symptoms started showing up even before then",
+            "turn": 4
+          },
+          {
+            "quote": "Part of me still holds onto hope that maybe one day there'll be some kind of breakthrough, and I can find out that this illness isn't an ongoing struggle anymore... But then there are times when it feels like this is just how things will always be",
+            "turn": 9
+          }
+        ],
+        "reasoning": "They acknowledge the illness has been present for at least 3 years with symptoms starting earlier. They express mixed views on the future—some hope for breakthroughs, but also a sense that 'this is just how things will always be.'",
+        "score": 8.0,
+        "confidence": 0.7
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I think I have quite a bit of say over how well I manage my medication — whether I remember to take it every day, how honest I am with myself about missing doses or taking drug holidays",
+            "turn": 7
+          },
+          {
+            "quote": "there's so much that feels out of my hands: the progression of the illness itself, the potential side effects of medications, the reactions of friends and family when they find out",
+            "turn": 7
+          },
+          {
+            "quote": "no matter how hard I try to manage it all, things will never really get better",
+            "turn": 8
+          }
+        ],
+        "reasoning": "They recognize they have some control over medication adherence, but feel 'out of my hands' regarding illness progression, side effects, and reactions of others. They express hopelessness about being able to improve their situation.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "I think I generally understand that Triumeq keeps my viral load under control, which helps protect my immune system",
+            "turn": 6
+          },
+          {
+            "quote": "If I stopped taking it or skipped doses regularly, I'm afraid that the viral load would start climbing again, and I might become more susceptible to opportunistic infections",
+            "turn": 6
+          },
+          {
+            "quote": "I know that Triumeq has been prescribed to me for quite a few years now without issue",
+            "turn": 5
+          }
+        ],
+        "reasoning": "They understand how the medication works and recognize its importance. They can explain the consequences of non-adherence. They acknowledge it has been working for years without issue.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "there are times when the fatigue gets so overwhelming that even simple tasks become insurmountable",
+            "turn": 3
+          },
+          {
+            "quote": "there are these headaches that come and go. They're not crippling or anything, but they make it hard to concentrate and irritate me throughout the day",
+            "turn": 3
+          },
+          {
+            "quote": "I still sometimes find it hard to accept that this is my reality now",
+            "turn": 4
+          }
+        ],
+        "reasoning": "They experience fatigue and headaches daily, which they attribute to the illness. They struggle to accept the illness as their reality, suggesting these symptoms are part of their identity.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "I've been feeling so stressed about my inconsistent adherence to the Triumeq regimen",
+            "turn": 2
+          },
+          {
+            "quote": "I'm also worried about potential side effects or long-term consequences of taking this medication",
+            "turn": 2
+          },
+          {
+            "quote": "If I stopped taking it or skipped doses regularly, I'm afraid that the viral load would start climbing again, and I might become more susceptible to opportunistic infections. It's a scary thought",
+            "turn": 6
+          },
+          {
+            "quote": "the weight of this illness just crushes me down",
+            "turn": 8
+          },
+          {
+            "quote": "everything is just an uphill battle",
+            "turn": 8
+          },
+          {
+            "quote": "things will never really get better",
+            "turn": 8
+          }
+        ],
+        "reasoning": "They express significant worry about adherence, side effects, long-term consequences, and what would happen if they don't take the medication. They describe the illness as 'crushing' and feel like everything is an 'uphill battle' with no hope of improvement.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I think I generally understand that Triumeq keeps my viral load under control, which helps protect my immune system",
+            "turn": 6
+          },
+          {
+            "quote": "If I stopped taking it or skipped doses regularly, I'm afraid that the viral load would start climbing again, and I might become more susceptible to opportunistic infections",
+            "turn": 6
+          },
+          {
+            "quote": "I was diagnosed about three years ago, but looking back, I'm pretty sure the symptoms started showing up even before then",
+            "turn": 4
+          }
+        ],
+        "reasoning": "They can explain how the medication works, what it does, and the consequences of non-adherence. They have a good understanding of their illness timeline and treatment mechanism.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "my life has been pretty dominated by this chronic illness I have",
+            "turn": 1
+          },
+          {
+            "quote": "it's been a real rollercoaster ride lately",
+            "turn": 8
+          },
+          {
+            "quote": "the weight of this illness just crushes me down",
+            "turn": 8
+          },
+          {
+            "quote": "everything is just an uphill battle",
+            "turn": 8
+          },
+          {
+            "quote": "things will never really get better",
+            "turn": 8
+          },
+          {
+            "quote": "There's a lot of frustration, sadness, and even anger mixed in with those feelings of exhaustion",
+            "turn": 8
+          },
+          {
+            "quote": "I can't help but wonder what might have been if I hadn't gotten sick in the first place",
+            "turn": 9
+          }
+        ],
+        "reasoning": "They describe their emotional response as a 'rollercoaster' with times when the illness 'crushes' them. They experience frustration, sadness, anger, and exhaustion. They express hopelessness about the future and wonder about what might have been.",
+        "score": 8.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "I know you've told me how important it is to stick to the schedule",
+            "turn": 2
+          },
+          {
+            "quote": "I think I generally understand that Triumeq keeps my viral load under control, which helps protect my immune system",
+            "turn": 6
+          },
+          {
+            "quote": "If I stopped taking it or skipped doses regularly, I'm afraid that the viral load would start climbing again",
+            "turn": 6
+          },
+          {
+            "quote": "I'm looking forward to working with you more and finding ways to better manage this illness in my life",
+            "turn": 12
+          }
+        ],
+        "reasoning": "They recognize the medication is important and understand how it works. They can explain the consequences of not taking it. They're actively seeking help to manage their illness, which suggests they see the medication as necessary.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "I'm also worried about potential side effects or long-term consequences of taking this medication",
+            "turn": 2
+          },
+          {
+            "quote": "I still can't shake off the feeling that it might not be entirely safe",
+            "turn": 5
+          },
+          {
+            "quote": "I wonder if there could be any unforeseen consequences down the line",
+            "turn": 5
+          },
+          {
+            "quote": "sometimes when the fatigue hits me hard, I wonder if the medication could be making me feel like this... even though I know it's not the case",
+            "turn": 6
+          }
+        ],
+        "reasoning": "They have specific concerns about long-term harm, unforeseen consequences, and whether the medication could be causing their symptoms. These concerns have led to inconsistent adherence and worry about stopping the medication.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "I've heard of some potential health risks associated with certain antiretroviral drugs",
+            "turn": 5
+          },
+          {
+            "quote": "sometimes when I hear about all the different medications people are taking, it does make me wonder if there might be an oversupply of prescriptions going around",
+            "turn": 10
+          }
+        ],
+        "reasoning": "They express concern about potential health risks associated with antiretroviral drugs and wonder about the general practice of prescribing medications. However, they specifically trust their clinician and have no evidence of avoiding medications as a class.",
+        "score": 3.0,
+        "confidence": 0.6
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [
+          {
+            "quote": "sometimes when I hear about all the different medications people are taking, it does make me wonder if there might be an oversupply of prescriptions going around",
+            "turn": 10
+          }
+        ],
+        "reasoning": "They express general concern about the number of medications people are taking and wonder if there's an oversupply of prescriptions. However, they specifically trust their clinician and have no evidence of avoiding new prescriptions.",
+        "score": 3.0,
+        "confidence": 0.6
+      }
+    },
+    "causes": [
+      "previous partner who didn't disclose his status",
+      "bad luck"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "I've always suspected that it might have been due to a previous partner who didn't disclose his status",
+        "turn": 4
+      },
+      {
+        "quote": "sometimes I just feel like it was bad luck or something — you know, one of those things that just happens and there's not much anyone can do about it",
+        "turn": 4
+      }
+    ]
+  }
+}

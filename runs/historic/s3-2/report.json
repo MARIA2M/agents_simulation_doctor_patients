@@ -1,0 +1,232 @@
+{
+  "patient_id": "CLL-003",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "CLL-003",
+    "clinical_summary": "The patient has Chronic Lymphocytic Leukemia (CLL) and is currently on a 'watch and wait' approach. They're generally feeling well, maintaining full-time work and family routines. They've presented with two new symptoms: a pea-sized lump in their neck (found by their wife) and mild headaches that started a few months ago. They're waiting on blood test results and have some anxiety about the uncertainty. They're comfortable with the watch-and-wait approach but have some curiosity about what more active treatment might involve. They're trying to maintain normalcy and not let uncertainty dominate their life.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "I still work full-time, try to keep up with the family, and maintain most of my usual routine.",
+            "turn": 5
+          },
+          {
+            "quote": "I'm doing pretty well.",
+            "turn": 8
+          },
+          {
+            "quote": "nothing out of the ordinary compared to what I've experienced before or since my diagnosis.",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient is maintaining all their usual roles and activities without significant adaptation. They describe feeling well and not having their daily life disrupted.",
+        "score": 2.0,
+        "confidence": 0.9
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "I understand that my blood counts being mildly abnormal might indicate some activity from the CLL.",
+            "turn": 9
+          },
+          {
+            "quote": "watch and wait",
+            "turn": 5
+          },
+          {
+            "quote": "watch and wait",
+            "turn": 6
+          },
+          {
+            "quote": "watch and wait",
+            "turn": 8
+          },
+          {
+            "quote": "There's always some uncertainty with CLL.",
+            "turn": 9
+          }
+        ],
+        "reasoning": "They acknowledge CLL is a chronic condition they'll be managing, but they're currently in a stable phase with no immediate treatment needed. They're uncertain about the future but not planning as if it will end soon.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I'm doing my best to be patient and wait for the results.",
+            "turn": 4
+          },
+          {
+            "quote": "I'm trying not to let myself get too caught up in worrying about what may or may not happen down the line.",
+            "turn": 9
+          },
+          {
+            "quote": "I'm focusing on just taking things one day at a time.",
+            "turn": 9
+          }
+        ],
+        "reasoning": "They're taking some control by staying informed, being patient, and trying to maintain normalcy. They're not actively managing their CLL beyond routine monitoring.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "my hematologist said we could watch and wait without any intervention.",
+            "turn": 5
+          },
+          {
+            "quote": "I understand that it means we're keeping a close eye on things without necessarily jumping into treatment right away.",
+            "turn": 6
+          },
+          {
+            "quote": "I'm comfortable with the approach because it allows us to not intervene unless necessary.",
+            "turn": 6
+          }
+        ],
+        "reasoning": "They trust their hematologist's judgment about when intervention is needed. They don't currently see treatment as something they can control directly.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "the lump isn't painful or causing any discomfort at all, so in some ways it feels more like an annoyance than anything else.",
+            "turn": 4
+          },
+          {
+            "quote": "apart from the lump in my neck that we just discussed, there really haven't been any other new symptoms cropping up recently.",
+            "turn": 8
+          }
+        ],
+        "reasoning": "They have one new symptom (lump) that they describe as an annoyance, not a defining symptom. They don't attribute many symptoms to their CLL.",
+        "score": 2.0,
+        "confidence": 0.8
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "I have to admit I've been feeling a bit anxious about what the test results might show.",
+            "turn": 3
+          },
+          {
+            "quote": "the uncertainty is weighing on me a little more than usual.",
+            "turn": 3
+          },
+          {
+            "quote": "having this new symptom pop up and potentially be related to the disease is a bit of a reminder that it's still a part of my life right now.",
+            "turn": 4
+          }
+        ],
+        "reasoning": "They acknowledge some anxiety about the new symptoms and waiting for results. The lump is a reminder of their illness but they don't seem overly concerned.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I understand that my blood counts being mildly abnormal might indicate some activity from the CLL.",
+            "turn": 9
+          },
+          {
+            "quote": "watch and wait",
+            "turn": 5
+          },
+          {
+            "quote": "watch and wait",
+            "turn": 6
+          },
+          {
+            "quote": "watch and wait",
+            "turn": 8
+          },
+          {
+            "quote": "I understand that it means we're keeping a close eye on things without necessarily jumping into treatment right away.",
+            "turn": 6
+          }
+        ],
+        "reasoning": "They understand their CLL diagnosis, the watch-and-wait approach, and what blood count changes mean. They have a good understanding of their current situation.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "I have to admit I've been feeling a bit anxious about what the test results might show.",
+            "turn": 3
+          },
+          {
+            "quote": "the uncertainty is weighing on me a little more than usual.",
+            "turn": 3
+          },
+          {
+            "quote": "having this new symptom pop up and potentially be related to the disease is a bit of a reminder that it's still a part of my life right now.",
+            "turn": 4
+          }
+        ],
+        "reasoning": "They acknowledge some anxiety about the new symptoms and waiting for results. They're trying to manage their emotional response by focusing on the present.",
+        "score": 4.0,
+        "confidence": 0.7
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [],
+        "reasoning": "The patient is not currently taking any medication for CLL, so this dimension does not directly apply. They understand that treatment would be necessary if intervention becomes required.",
+        "score": null,
+        "confidence": 0.9
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "I would probably just have a general concern about the potential side effects and how they might impact my day-to-day life.",
+            "turn": 7
+          }
+        ],
+        "reasoning": "They have some concerns about potential side effects of treatment, but these are theoretical since they're not currently on treatment.",
+        "score": 2.0,
+        "confidence": 0.7
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "I would probably just have a general concern about the potential side effects and how they might impact my day-to-day life.",
+            "turn": 7
+          }
+        ],
+        "reasoning": "They're cautious about medicines in general because of concerns about side effects, but this is based on theoretical treatment rather than personal experience.",
+        "score": 3.0,
+        "confidence": 0.6
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "They never raised this topic.",
+        "score": null,
+        "confidence": 0.9
+      }
+    },
+    "causes": [
+      "CLL diagnosis"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "my diagnosis of Chronic Lymphocytic Leukemia",
+        "turn": 1
+      }
+    ]
+  }
+}

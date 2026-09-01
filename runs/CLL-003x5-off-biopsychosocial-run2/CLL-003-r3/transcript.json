@@ -1,0 +1,262 @@
+{
+  "patient_id": "CLL-003",
+  "turns": 12,
+  "stop_reason": "doctor",
+  "conversation": [
+    {
+      "role": "doctor",
+      "content": "Hello, thank you for coming in today. I\u2019m glad you could make the time. What brings you along to see me?",
+      "turn": 1
+    },
+    {
+      "role": "patient",
+      "content": "Oh, doctor, it's nothing too serious, but my wife actually noticed a small lump in my neck recently, and I've been feeling a bit more tired than usual after work. It's not terrible, but I thought I should get it checked out before things get worse.",
+      "turn": 1
+    },
+    {
+      "role": "doctor",
+      "content": "Thank you for sharing that with me. I\u2019m glad you and your wife noticed it. Can you tell me a bit more about the lump? When did you first notice it, and have you had any other changes around your neck\u2014like pain, swelling, or anything that feels different?",
+      "turn": 2
+    },
+    {
+      "role": "patient",
+      "content": "The lump is something my wife found when she was giving me a massage a couple of weeks ago. I hadn't really noticed it myself before then. It's not too big, maybe about the size of a pea, and doesn't really hurt or cause any discomfort. To be honest, we both thought it might just be a lymph node that got enlarged for some reason, but I wanted to play it safe and see what you think.",
+      "turn": 2
+    },
+    {
+      "role": "doctor",
+      "content": "That sounds like a sensible approach. Lymph nodes can sometimes swell for reasons that aren't serious\u2014like a minor infection or just the body reacting to something\u2014but it\u2019s absolutely right to get it looked at. You mentioned feeling more tired than usual after work. When did that start, and have you noticed any other changes in your energy levels or how you feel day to day?",
+      "turn": 3
+    },
+    {
+      "role": "patient",
+      "content": "The tiredness started about a month ago, I'd say. It's not like I'm exhausted all the time, but there are days when I just don't have the same amount of pep in my step as usual. I put it down to maybe just being run down or getting older. Nothing too drastic, just feeling a bit more sluggish than before.",
+      "turn": 3
+    },
+    {
+      "role": "doctor",
+      "content": "It\u2019s good that you\u2019re thinking about what might be going on rather than just dismissing it. I wonder if you\u2019ve had any other symptoms in the last month\u2014like fevers, night sweats, weight changes, or any cough or trouble swallowing? And have you been around anyone who\u2019s been sick lately?",
+      "turn": 4
+    },
+    {
+      "role": "patient",
+      "content": "No, nothing like that. No fevers or chills, no night sweats, and I haven't really lost or gained any weight that I can tell. My appetite's about the same as always. I don't remember the last time I had a cough\u2014maybe once in a while when I have a cold\u2014but nothing persistent. And I'm pretty sure I've been swallowing fine. As for being around sick people, not really. We\u2019ve mostly been staying home and avoiding crowds since the pandemic started, so I haven't really been exposed to anyone who\u2019s been sick lately.",
+      "turn": 4
+    },
+    {
+      "role": "doctor",
+      "content": "That\u2019s reassuring to hear\u2014no obvious signs of infection there. You\u2019ve been pretty careful about your health since the pandemic started. I\u2019m curious, have you been under any unusual stress lately at work or at home? And I\u2019d also like to know if you\u2019re taking any regular medications, including over-the-counter pain relief or supplements, because those can sometimes affect how we feel.",
+      "turn": 5
+    },
+    {
+      "role": "patient",
+      "content": "Work has been pretty hectic lately, with a big project coming up and all. It's not the most stressful thing in my life, but it\u2019s definitely keeping me on my toes. As for medication, I take some fish oil supplements every now and then\u2014nothing too fancy. But aside from that, no regular medications or anything like that.",
+      "turn": 5
+    },
+    {
+      "role": "doctor",
+      "content": "It makes sense that work stress can take a toll\u2014especially with a big project in the mix. That might be part of the picture. I\u2019d like to ask a bit more about the lump and about your overall health history: have you had any lumps or swellings in the past, or any other areas of your neck or body that have felt different? And do you have any family history of thyroid issues or other thyroid-related conditions?",
+      "turn": 6
+    },
+    {
+      "role": "patient",
+      "content": "To be honest, doctor, I can't think of any similar incidents from before. No other lumps or anything like that. As for my family history, my father had something called Hashimoto's thyroiditis\u2014whatever that is\u2014and he was on medication for it for a while, but as far as I know, there hasn't been any mention of it in the family since.",
+      "turn": 6
+    },
+    {
+      "role": "doctor",
+      "content": "That\u2019s really helpful information. Hashimoto\u2019s thyroiditis is something I\u2019ll want to keep in mind. It can sometimes cause the thyroid to enlarge or feel lumpy, and it can also lead to tiredness and other symptoms. Has anyone in the family mentioned any thyroid problems for you, or do you know if you\u2019ve had thyroid function checked in the past?",
+      "turn": 7
+    },
+    {
+      "role": "patient",
+      "content": "No one has mentioned any thyroid issues specifically for me, but like I said, my father had Hashimoto's. As far as I know, I haven't had my thyroid function checked before\u2014assuming it hasn't been necessary up until now.",
+      "turn": 7
+    },
+    {
+      "role": "doctor",
+      "content": "It\u2019s not uncommon for thyroid issues to run in families, so we\u2019ll definitely want to look into that. I\u2019d like to ask about your overall health routine: how often do you see a doctor when you\u2019re feeling well, and have you had any routine blood work or check-ups in the last couple of years? And just to round things out\u2014any other areas of your body that feel different lately, like changes in your skin or hair?",
+      "turn": 8
+    },
+    {
+      "role": "patient",
+      "content": "I try to come in for a check-up once every six months or so, just to make sure everything's going well. Last time I was here was about a year and a half ago, if memory serves. As far as blood work goes, the last time I had that done was maybe two years ago? My skin and hair have been pretty much the same as always\u2014nothing too out of the ordinary that I can think of.",
+      "turn": 8
+    },
+    {
+      "role": "doctor",
+      "content": "It sounds like you\u2019re pretty proactive about staying on top of your health. Now that we\u2019ve talked about what\u2019s going on, I\u2019m curious about your perspective on it all. How have you been feeling about having this lump and the tiredness? Have you found yourself worrying about what it might be, or are you more on the \u201cwait and see\u201d side of things?",
+      "turn": 9
+    },
+    {
+      "role": "patient",
+      "content": "Well, to be honest, doctor, I\u2019ve been trying not to let myself get too worked up over it. It's hard not to worry a bit\u2014I mean, any time something like this comes up, you can't help but think the worst, right? But at the same time, I know that you're here to help and guide me through all of this. So for now, I'm definitely more on the \u201cwait and see\u201d side of things\u2014just trying to take it one step at a time and get back to you with whatever updates come up.",
+      "turn": 9
+    },
+    {
+      "role": "doctor",
+      "content": "That\u2019s a very reasonable approach. It\u2019s completely normal to have some worries when something new shows up, but you\u2019re right that we\u2019re here together to figure it out. Given the lump and the fatigue, I\u2019d like to outline what I\u2019m thinking we might want to look into. First, I\u2019d like to examine the lump more closely and probably recommend some blood tests to check your thyroid function and look at a few other things. Does that sound okay to you?",
+      "turn": 10
+    },
+    {
+      "role": "patient",
+      "content": "Absolutely, doctor. Anything you think is necessary to figure out what\u2019s going on\u2014I\u2019m all for it. Let's do whatever needs to be done to get to the bottom of this.",
+      "turn": 10
+    },
+    {
+      "role": "doctor",
+      "content": "Great. I\u2019ll do a physical exam of the area and then arrange some blood work. I think we\u2019ll want to check your thyroid hormones, maybe some basic blood counts, and maybe look at other things that can cause tiredness. I\u2019ll also want to follow up with you in a week or so to discuss the results and next steps. Is there anything else on your mind right now\u2014any questions about what might be going on, or anything else you\u2019d like me to address today?",
+      "turn": 11
+    },
+    {
+      "role": "patient",
+      "content": "Not at the moment, doctor. Thank you for explaining everything so thoroughly\u2014I think I have a good idea of what we\u2019re looking at. Just promise me that you'll let me know as soon as you hear anything about the blood tests, okay? I'm trying not to get too anxious about this, but it's definitely on my mind.",
+      "turn": 11
+    },
+    {
+      "role": "doctor",
+      "content": "Absolutely\u2014I\u2019ll make sure to get back to you with the results and walk you through what they mean. We\u2019ll take this step by step together. Thank you for coming in today, and I\u2019ll see you soon. Take care.",
+      "turn": 12
+    },
+    {
+      "role": "patient",
+      "content": "Thank you, doctor. It means a lot to have someone like you helping me out. I'll see you soon too\u2014take care.",
+      "turn": 12
+    }
+  ],
+  "coverage_hint": {},
+  "working_notes": [],
+  "events": [],
+  "usage": [
+    {
+      "role": "doctor",
+      "eval_tokens": 108,
+      "prompt_tokens": 1531
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 57,
+      "prompt_tokens": 1188
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 136,
+      "prompt_tokens": 1699
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 89,
+      "prompt_tokens": 1312
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 160,
+      "prompt_tokens": 1927
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 73,
+      "prompt_tokens": 1486
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 150,
+      "prompt_tokens": 2163
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 119,
+      "prompt_tokens": 1631
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 168,
+      "prompt_tokens": 2435
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 70,
+      "prompt_tokens": 1836
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 180,
+      "prompt_tokens": 2676
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 78,
+      "prompt_tokens": 2004
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 165,
+      "prompt_tokens": 2937
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 50,
+      "prompt_tokens": 2164
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 182,
+      "prompt_tokens": 3155
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 89,
+      "prompt_tokens": 2313
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 207,
+      "prompt_tokens": 3429
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 116,
+      "prompt_tokens": 2487
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 182,
+      "prompt_tokens": 3755
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 39,
+      "prompt_tokens": 2707
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 175,
+      "prompt_tokens": 3979
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 70,
+      "prompt_tokens": 2854
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 121,
+      "prompt_tokens": 4227
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 29,
+      "prompt_tokens": 2980
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 1266,
+      "prompt_tokens": 4380
+    },
+    {
+      "role": "report",
+      "eval_tokens": 3468,
+      "prompt_tokens": 10238
+    }
+  ]
+}

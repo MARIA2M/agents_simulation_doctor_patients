@@ -1,0 +1,202 @@
+{
+  "patient_id": "CLL-004",
+  "turns": 9,
+  "stop_reason": "doctor",
+  "conversation": [
+    {
+      "role": "doctor",
+      "content": "Hello. What brings you in to see me today?",
+      "turn": 1
+    },
+    {
+      "role": "patient",
+      "content": "Well, doctor, it's mostly because my Chronic Lymphocytic Leukemia is just so all-encompassing these days. I'm finding it hard to keep up with work, let alone spending time with the family. The fatigue just won't let up and I've been dealing with recurrent infections quite a bit too. Plus, there are these swollen lymph nodes that have become sort of a constant now. And then there's this weight loss I didn't really expect or want. It's all quite overwhelming, really.",
+      "turn": 1
+    },
+    {
+      "role": "doctor",
+      "content": "Have you been receiving any treatment for your CLL, and have you had any recent blood work or clinic visits to check on your disease?",
+      "turn": 2
+    },
+    {
+      "role": "patient",
+      "content": "Yes, doctor. I've been taking Venetoclax 400 mg daily along with Obinutuzumab as per my treatment plan. The initial cycles of Obinutuzumab are completed and now I'm just on maintenance Venetoclax. I also have monthly blood work to keep an eye on things, and my last clinic visit was about a month ago. My physician has been cautiously optimistic but we've also discussed the possibility of needing additional lines of therapy down the line.",
+      "turn": 2
+    },
+    {
+      "role": "doctor",
+      "content": "How are you doing on the Venetoclax? Are you experiencing any side effects from the medication? And have your symptoms\u2014fatigue, swollen lymph nodes, weight loss\u2014improved, stayed the same, or worsened since starting this maintenance dose?",
+      "turn": 3
+    },
+    {
+      "role": "patient",
+      "content": "To be honest, doctor, I've been getting these terrible headaches ever since I started the Venetoclax. They're quite bothersome and sometimes it's hard for me to focus on anything else. As far as my other symptoms go, the fatigue is still present and the swollen lymph nodes haven't really gone away. In fact, they might even have grown a bit larger. And the weight loss\u2014well, I've lost about 5 kg in the past year and it's been mostly unintentional.",
+      "turn": 3
+    },
+    {
+      "role": "doctor",
+      "content": "When did you switch to the maintenance Venetoclax dose, and how long have you been on this maintenance dose now? And regarding the headaches\u2014do you have any history of migraines or other headache types, and what typically helps relieve them?",
+      "turn": 4
+    },
+    {
+      "role": "patient",
+      "content": "I switched to the maintenance Venetoclax dose about six months ago. As for the headaches, they started shortly after I began taking the medication. In terms of my medical history, I used to get tension headaches quite often before I was diagnosed with CLL. For relief, I usually just take some over-the-counter painkillers when the headache first hits. If it persists, I might try a hot towel or some gentle stretching exercises to see if that helps.",
+      "turn": 4
+    },
+    {
+      "role": "doctor",
+      "content": "What did your last blood work show\u2014specifically your complete blood count and any markers like LDH or beta-2 microglobulin that your doctor would monitor for CLL activity?",
+      "turn": 5
+    },
+    {
+      "role": "patient",
+      "content": "I don't have the exact numbers, but my understanding is that my lymphocyte count has dropped significantly. That's one of the good signs, as per my doctor's explanation. However, we're still not in complete remission. As for LDH and beta-2 microglobulin, I'm not sure about those specific markers. But if it helps, I know I've been feeling more tired than usual lately despite getting plenty of rest, so that might indicate something.",
+      "turn": 5
+    },
+    {
+      "role": "doctor",
+      "content": "Can you describe the swollen lymph nodes you mentioned\u2014are they in a particular area like the neck or armpit, and how large would you say they are? Also, are there any other symptoms or concerns that you'd like to discuss today?",
+      "turn": 6
+    },
+    {
+      "role": "patient",
+      "content": "The swollen lymph nodes are mostly in my neck, but I've noticed them also in my armpits and groin. They're about the size of a pea, if that gives you an idea. It's not painful when I touch them, it's more like they're just there\u2014noticeable, persistent. As for other concerns, I guess I'm just generally worried about how things are going to progress with this illness. The uncertainty is hard to handle at times.",
+      "turn": 6
+    },
+    {
+      "role": "doctor",
+      "content": "Given your symptoms and the fact that you're not in complete remission, your physician will likely want to review your disease status more closely\u2014possibly with imaging or additional blood work\u2014to see if your treatment strategy needs adjustment. The headaches from Venetoclax are a known side effect, and your doctor can discuss options for managing them. I'd recommend following up with your care team soon to address these concerns. Is there anything else you'd like to discuss today?",
+      "turn": 7
+    },
+    {
+      "role": "patient",
+      "content": "I appreciate that advice, doctor. It's reassuring to know there's a plan in place for monitoring things more closely. As for anything else to discuss\u2014well, I guess it's just the constant worry about what this disease is going to do next. The fear of the unknown is tough to shake off sometimes.",
+      "turn": 7
+    },
+    {
+      "role": "doctor",
+      "content": "That's understandable. Managing the uncertainty of a chronic condition like CLL is challenging. We'll continue to monitor your response to treatment and adjust as needed. Make sure to keep your follow-up appointments and let your care team know if your symptoms worsen between visits. Take care.",
+      "turn": 8
+    },
+    {
+      "role": "patient",
+      "content": "Thank you, doctor. I appreciate your help and understanding. I'll definitely keep up with my appointments and keep you updated on any changes in my condition.",
+      "turn": 8
+    },
+    {
+      "role": "doctor",
+      "content": "Thank you for your time today. Take care of yourself, and don't hesitate to reach out if you have any concerns between appointments.",
+      "turn": 9
+    },
+    {
+      "role": "patient",
+      "content": "You too, doctor. Have a good day.",
+      "turn": 9
+    }
+  ],
+  "coverage_hint": {},
+  "working_notes": [],
+  "events": [],
+  "usage": [
+    {
+      "role": "doctor",
+      "eval_tokens": 78,
+      "prompt_tokens": 1527
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 107,
+      "prompt_tokens": 1295
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 187,
+      "prompt_tokens": 1715
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 102,
+      "prompt_tokens": 1438
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 145,
+      "prompt_tokens": 2007
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 104,
+      "prompt_tokens": 1601
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 206,
+      "prompt_tokens": 2259
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 94,
+      "prompt_tokens": 1764
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 166,
+      "prompt_tokens": 2562
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 97,
+      "prompt_tokens": 1903
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 261,
+      "prompt_tokens": 2828
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 96,
+      "prompt_tokens": 2058
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 239,
+      "prompt_tokens": 3188
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 64,
+      "prompt_tokens": 2256
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 114,
+      "prompt_tokens": 3494
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 32,
+      "prompt_tokens": 2384
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 646,
+      "prompt_tokens": 3643
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 11,
+      "prompt_tokens": 2452
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 557,
+      "prompt_tokens": 4303
+    },
+    {
+      "role": "report",
+      "eval_tokens": 4289,
+      "prompt_tokens": 8772
+    }
+  ]
+}

@@ -1,0 +1,302 @@
+{
+  "patient_id": "CLL-005",
+  "turns": 14,
+  "stop_reason": "doctor",
+  "conversation": [
+    {
+      "role": "doctor",
+      "content": "Hello, and thanks for coming in today. I'd like to hear what brings you to the clinic. How can I help you?",
+      "turn": 1
+    },
+    {
+      "role": "patient",
+      "content": "Well, doctor, it's been a bit of an uphill battle lately. My energy just doesn't seem to be where it should be and those night sweats have been popping up more often than not. Plus, my neck feels a bit tender when I run my fingers over these lumps. It's all rather concerning, don't you think?",
+      "turn": 1
+    },
+    {
+      "role": "doctor",
+      "content": "I'm sorry to hear things have been difficult for you. Night sweats and neck discomfort can be unsettling, especially when they seem to be happening more frequently. When did you first notice these symptoms starting to change? And how are you feeling about the lump you've noticed?",
+      "turn": 2
+    },
+    {
+      "role": "patient",
+      "content": "The fatigue started about six months ago, but it was so mild at first that I didn't think much of it. But now, I can barely get through some days. As for the lumps, they've been present for a while, too. It's scary to think this might be linked to my illness. I'm worried about what all this means and if there's more going on than we know right now.",
+      "turn": 2
+    },
+    {
+      "role": "doctor",
+      "content": "It makes sense that you'd feel unsettled when things seem to be shifting, especially with fatigue getting harder to manage. You mentioned being worried about \"more going on than we know right now.\" Have you been diagnosed with anything specific before, or is this something you're still trying to figure out? How would you describe what you think might be happening in your body right now?",
+      "turn": 3
+    },
+    {
+      "role": "patient",
+      "content": "No, I haven't been officially diagnosed with anything else. This is all quite new and alarming to me. As for what's happening, it feels like my body is at war with itself \u2014 tiredness always dragging me down but lumps and sweats telling me something else might be going on too. It's a confusing, scary place to be in.",
+      "turn": 3
+    },
+    {
+      "role": "doctor",
+      "content": "It's understandable that you'd feel that way when your body seems to be sending conflicting signals. When you think about what might be behind these changes \u2014 the fatigue, the night sweats, the neck lumps \u2014 do you have any ideas or theories about what could be causing them? And how has this uncertainty been affecting your day-to-day life and your mood?",
+      "turn": 4
+    },
+    {
+      "role": "patient",
+      "content": "I've been trying to make sense of it all, but I'm not sure where these symptoms are coming from. It's hard to point to one specific cause. But I think stress might have something to do with it; my job has always been high-pressure, and maybe that's finally caught up with me. As for how this uncertainty affects me, every day feels like a struggle. It's difficult to focus on anything else when I'm so worried about what might be happening inside of me. My mood has been all over the place \u2014 sometimes feeling sad or angry, other times just exhausted and numb.",
+      "turn": 4
+    },
+    {
+      "role": "doctor",
+      "content": "Stress is a real burden, especially in a high-pressure job, and it makes sense that it might be adding to how your body is feeling. It's also understandable that feeling uncertain about what's going on inside can make even small daily tasks feel like they require so much energy. When you think about what we might do to help you feel better \u2014 whether that's tests, medication, or something else \u2014 do you feel like there are clear answers coming your way, or does that part feel just as confusing?",
+      "turn": 5
+    },
+    {
+      "role": "patient",
+      "content": "Honestly, doctor, I don't have a clue what will make me feel better. Part of me wants to believe that taking care of my stress might be the answer, but deep down, I know it's more than that. I'm not sure what kind of tests you might run or what medications could help. It all feels so uncertain and overwhelming. But I do trust you and your team to guide me through this as best you can.",
+      "turn": 5
+    },
+    {
+      "role": "doctor",
+      "content": "Thank you for trusting us to help you navigate this. It's a lot to carry not knowing what's coming next, especially when you already feel like you're struggling. As you think about getting answers \u2014 whether through tests or other treatments \u2014 how confident do you feel that these medical approaches will actually get you back to feeling like yourself again? And do you feel like there are things you can do yourself, outside of the clinic, that might make a difference?",
+      "turn": 6
+    },
+    {
+      "role": "patient",
+      "content": "To be honest, doctor, I'm not sure if any tests or treatments will take me back to feeling completely like myself. It's hard to imagine what that even looks like anymore. As for what I can do on my own, I've been trying to eat healthier and get more sleep, but it often feels like an uphill battle. Sometimes I wonder if there's anything else I could be doing differently, but honestly, at this point, I'm just so tired of feeling this way that I'd welcome any help I can get.",
+      "turn": 6
+    },
+    {
+      "role": "doctor",
+      "content": "It sounds like you've been doing what you can with the energy you have, even when it feels like it's not making a big difference. That's a lot to carry. When you think about the future \u2014 if this continues the way it has been, or if things might start to improve \u2014 do you see a path where you'll be able to live a more normal life again, or does it feel like this is something you'll be managing for a long time? And if we talk about treatment, are there any particular worries that come up for you about what might be recommended?",
+      "turn": 7
+    },
+    {
+      "role": "patient",
+      "content": "I hope to get back to living a more normal life someday. It's hard to imagine what that would look like right now, but I hold onto the hope that things will improve. As for treatments, I'm worried about side effects and whether they'll make me feel worse before they help. But at this point, if there's a chance that something might alleviate these symptoms, I'm willing to try it out. It just feels like such an uphill battle right now.",
+      "turn": 7
+    },
+    {
+      "role": "doctor",
+      "content": "It's good that you're holding onto hope for a more normal life again. That's an important source of strength. When you think about how long this might take, or whether this is something that will eventually settle down on its own, do you imagine it might improve with time, or do you feel like it's something you'll need to work with for a long time? And do you feel like you understand what's happening inside your body, or are there still a lot of questions for you?",
+      "turn": 8
+    },
+    {
+      "role": "patient",
+      "content": "I'm not sure if this will ever completely settle down on its own. It might take some time before we find the right treatment plan that works for me. There are still so many questions swirling around in my head about what's happening inside my body, and it's hard to sort through everything without feeling more lost than anything else. I'm doing my best to stay informed, but there's always something new to learn or consider.",
+      "turn": 8
+    },
+    {
+      "role": "doctor",
+      "content": "It's understandable that there are still so many questions when you're trying to piece together what's going on. When you think about what's happening to you \u2014 like if you had to describe it in your own words, without medical jargon \u2014 how would you put it? And when you hear about taking medication to help, are there any other worries beyond side effects that come to mind \u2014 like whether it could become something you rely on too heavily, or anything along those lines?",
+      "turn": 9
+    },
+    {
+      "role": "patient",
+      "content": "I guess I'd describe what's happening as my body kind of rebelling against itself. It feels like it's constantly at war with everything else, and no matter how hard I try to get some peace, it keeps fighting me back. As for medication, I worry about becoming too reliant on it, or if there might come a day where it doesn't help anymore. But that fear is balanced by the hope that it could make a real difference in my life right now.",
+      "turn": 9
+    },
+    {
+      "role": "doctor",
+      "content": "That's a powerful way to describe it \u2014 your body feeling like it's rebelling and at war with you. That must feel exhausting. When you think about how doctors approach treatment, do you ever wonder whether medications are being prescribed too easily, or whether there might be other approaches that don't involve pills? And as you consider whether medication could help you, how do you balance that hope with the worry about relying on it too much?",
+      "turn": 10
+    },
+    {
+      "role": "patient",
+      "content": "Sometimes I wonder if more alternative treatments could be explored first, like maybe some therapies or lifestyle changes. But at the same time, I'm also aware of how serious this condition is and how important it might be to have a strong medication plan in place. It's all about finding that balance between trying new things while still keeping up with what the doctors recommend. And I know you'll guide me through these decisions \u2014 which helps alleviate some of my worries.",
+      "turn": 10
+    },
+    {
+      "role": "doctor",
+      "content": "Finding that balance between exploring alternatives and following medical recommendations is a tough spot to be in, especially when you're already feeling like you're struggling. When you think about your illness as a whole \u2014 the fatigue, the night sweats, the neck lumps, and how it makes you feel emotionally \u2014 what's the dominant emotion for you most of the time? And as you think about the things you can control in your situation \u2014 like your daily habits, your mindset, or how you manage stress \u2014 do you feel like those things have any real power to change how you're feeling?",
+      "turn": 11
+    },
+    {
+      "role": "patient",
+      "content": "The dominant emotion I feel is a mix of uncertainty and fear. It's scary not knowing what might be happening inside me, and there's always this underlying worry about where the illness might take me in the future. As for controlling my situation, it's hard when so much feels out of my hands. But I do try to focus on things like staying active as much as possible, eating healthy, and trying to stay positive through all of this. It doesn't always feel like enough, but it helps keep me moving forward.",
+      "turn": 11
+    },
+    {
+      "role": "doctor",
+      "content": "Thank you for being so open about all of this. It sounds like uncertainty and fear have been running in the background for a while now, and that's an incredibly heavy thing to carry. You've also been trying to stay active and focused on healthy habits, which shows real determination even when things feel out of your control. Before we move forward, let me summarize what I'm hearing: you're experiencing fatigue, night sweats, and neck lumps that have been gradually worsening over the last six months. You're hopeful but uncertain about what the future holds, and you're balancing concerns about medication with the need to get answers. Does that capture what you've been experiencing?",
+      "turn": 12
+    },
+    {
+      "role": "patient",
+      "content": "Yes, doctor, that does capture it quite well. It's not an easy situation to be in, but I'm trying my best to stay strong through it all. And I appreciate your understanding and help as we navigate this together.",
+      "turn": 12
+    },
+    {
+      "role": "doctor",
+      "content": "You're doing your best, and that's what matters. Going forward, we'd likely want to do some tests to get a clearer picture \u2014 things like blood work and possibly imaging of the neck area \u2014 so we can understand what's behind these symptoms. In the meantime, I'd encourage you to continue with the healthy habits you're already doing, but also be realistic about what you can manage right now. We'll work together to find the right path for you, and I'm here to answer any questions as they come up. Is there anything else you'd like to cover before we wrap up?",
+      "turn": 13
+    },
+    {
+      "role": "patient",
+      "content": "I think that covers it all for now, doctor. Thank you so much for your time today and for helping me sort through these confusing symptoms and feelings. It's reassuring to know I'm not alone in this journey. Please let me know when I should expect the results of the tests or if there are any next steps we need to take.",
+      "turn": 13
+    },
+    {
+      "role": "doctor",
+      "content": "You're very welcome. I'll make sure to let you know when the test results are in and we can discuss what they mean together. For now, take care of yourself as best you can, and don't hesitate to reach out if anything changes before then. I'm glad we could have this conversation, and I appreciate you trusting me with your concerns. Take care.",
+      "turn": 14
+    },
+    {
+      "role": "patient",
+      "content": "Thank you so much, doctor. I truly appreciate it. You too, stay well.",
+      "turn": 14
+    }
+  ],
+  "coverage_hint": {},
+  "working_notes": [],
+  "events": [],
+  "usage": [
+    {
+      "role": "doctor",
+      "eval_tokens": 118,
+      "prompt_tokens": 1531
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 71,
+      "prompt_tokens": 1213
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 187,
+      "prompt_tokens": 1723
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 86,
+      "prompt_tokens": 1348
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 187,
+      "prompt_tokens": 1999
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 73,
+      "prompt_tokens": 1519
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 167,
+      "prompt_tokens": 2262
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 123,
+      "prompt_tokens": 1674
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 208,
+      "prompt_tokens": 2555
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 90,
+      "prompt_tokens": 1909
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 191,
+      "prompt_tokens": 2856
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 109,
+      "prompt_tokens": 2100
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 250,
+      "prompt_tokens": 3159
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 96,
+      "prompt_tokens": 2336
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 286,
+      "prompt_tokens": 3508
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 88,
+      "prompt_tokens": 2542
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 250,
+      "prompt_tokens": 3885
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 97,
+      "prompt_tokens": 2735
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 223,
+      "prompt_tokens": 4235
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 92,
+      "prompt_tokens": 2929
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 271,
+      "prompt_tokens": 4553
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 107,
+      "prompt_tokens": 3147
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 283,
+      "prompt_tokens": 4934
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 48,
+      "prompt_tokens": 3399
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 174,
+      "prompt_tokens": 5268
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 70,
+      "prompt_tokens": 3577
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 116,
+      "prompt_tokens": 5515
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 19,
+      "prompt_tokens": 3731
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 44,
+      "prompt_tokens": 5653
+    },
+    {
+      "role": "report",
+      "eval_tokens": 4057,
+      "prompt_tokens": 11014
+    }
+  ]
+}

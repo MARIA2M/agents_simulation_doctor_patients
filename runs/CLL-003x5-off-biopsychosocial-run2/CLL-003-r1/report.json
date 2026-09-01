@@ -1,0 +1,321 @@
+{
+  "patient_id": "CLL-003",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "CLL-003",
+    "clinical_summary": "The patient has been diagnosed with Chronic Lymphocytic Leukemia (CLL) in early stage and is on medication that they believe is important for managing the disease. They experience significant functional impairment - can barely get out of bed, missing work, unable to concentrate, and small tasks feel overwhelming. They have developed constant pressure-type headaches starting about a week after beginning medication, which they haven't mentioned to their hematologist due to fear of being a burden. They also experience severe fatigue that feels different from normal tiredness. They view CLL as a chronic condition they will 'always be managing' and attribute it to genetics (father had it). Their emotional response is described as a 'rollercoaster' between optimism and feeling overwhelmed/down. They feel limited personal control ('no say in any of it') and have significant concerns about medication side effects and long-term efficacy. They rely on routine and family support for coping.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "some days I can barely get out of bed",
+            "turn": 1
+          },
+          {
+            "quote": "It feels like this disease has taken over everything — my work, my time with the kids, everything",
+            "turn": 1
+          },
+          {
+            "quote": "I've been missing work more than usual",
+            "turn": 2
+          },
+          {
+            "quote": "even small tasks feel overwhelming at times",
+            "turn": 2
+          },
+          {
+            "quote": "my life has been so drastically changed by this illness",
+            "turn": 5
+          },
+          {
+            "quote": "things that I used to be able to do without a second thought, but now they're huge challenges",
+            "turn": 5
+          }
+        ],
+        "reasoning": "The patient describes significant functional impairment - can barely get out of bed, missing work, unable to concentrate, small tasks overwhelming, life drastically changed, things that used to be easy are now huge challenges. This aligns with an 8 on the scale (major role lost or substantially reduced).",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "I definitely see this disease as something I'll always be managing in some way",
+            "turn": 8
+          },
+          {
+            "quote": "It's not something that I think will just go away and be done with",
+            "turn": 8
+          },
+          {
+            "quote": "As for hope, there are days when I feel pretty optimistic — like when the hematologist reassures me that many people live normal lifespans despite having CLL",
+            "turn": 8
+          },
+          {
+            "quote": "But then there are other times when things feel really bleak, especially if I start to experience more symptoms or my counts start to shift in a concerning way",
+            "turn": 8
+          }
+        ],
+        "reasoning": "They clearly see CLL as something they will 'always be managing' and 'not something that will just go away.' They have some hope for normal lifespans but this is fragile and fluctuates. This aligns with an 8 (plans on the assumption it stays).",
+        "score": 8.0,
+        "confidence": 0.85
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "Sometimes I feel like I have no say in any of it",
+            "turn": 1
+          },
+          {
+            "quote": "It feels like I'm just along for the ride while my body goes through this disease",
+            "turn": 7
+          },
+          {
+            "quote": "There are things I can do to take care of myself, like eating right and getting enough sleep, but there's only so much I feel like I can control",
+            "turn": 7
+          },
+          {
+            "quote": "it feels like all I can do is sit back and wait for things to happen",
+            "turn": 7
+          }
+        ],
+        "reasoning": "They feel very limited control - 'no say,' 'just along for the ride,' 'only so much I can control,' 'sit back and wait.' They can do basic self-care but feel the disease is driving things forward. This aligns with an 8 (no control at all).",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "I know it's important for managing the disease and keeping it in check",
+            "turn": 3
+          },
+          {
+            "quote": "I'm still wary about whether this medication will actually work for me in the long term",
+            "turn": 6
+          },
+          {
+            "quote": "It's hard not to worry that it might stop working at some point, or that the disease could just keep progressing despite my best efforts",
+            "turn": 6
+          }
+        ],
+        "reasoning": "They believe the medication is important for 'keeping the disease in check' (necessity), but they're 'wary' about whether it will work long-term and worry it might stop working. They don't attribute their current state to the treatment working - they're uncertain about its efficacy. This aligns with a 4 (allows that it does something, but not enough to matter much).",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "Chronic Lymphocytic Leukemia, which is a type of cancer that affects the blood cells",
+            "turn": 2
+          },
+          {
+            "quote": "It's in an early stage right now, but it's still a concern for me and my family",
+            "turn": 2
+          },
+          {
+            "quote": "my body is constantly fighting this disease",
+            "turn": 4
+          },
+          {
+            "quote": "my life has been so drastically changed by this illness",
+            "turn": 5
+          }
+        ],
+        "reasoning": "They clearly identify with CLL as a cancer affecting blood cells. They describe their body as 'constantly fighting this disease' and say their life has been 'drastically changed by this illness.' They have multiple symptoms (headaches, fatigue) that they attribute to the illness. This aligns with an 8 (symptoms daily and intrusive).",
+        "score": 8.0,
+        "confidence": 0.85
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "I've been getting these terrible headaches since I started, and I keep wondering if it's really worth it",
+            "turn": 1
+          },
+          {
+            "quote": "I haven't mentioned the headaches to my hematologist yet. I didn't want to worry him or make him think that there was a problem with the treatment",
+            "turn": 3
+          },
+          {
+            "quote": "There are definitely some worries there, doctor. I've heard horror stories about some of the potential side effects of CLL medication",
+            "turn": 6
+          },
+          {
+            "quote": "I'm still wary about whether this medication will actually work for me in the long term",
+            "turn": 6
+          },
+          {
+            "quote": "It's hard not to worry that it might stop working at some point, or that the disease could just keep progressing despite my best efforts",
+            "turn": 6
+          },
+          {
+            "quote": "sometimes it can feel like there are things he knows that he isn't telling me, or things I'm too scared to ask about yet",
+            "turn": 8
+          }
+        ],
+        "reasoning": "They have significant concerns - about headaches, wondering if it's 'really worth it,' fear of side effects from 'horror stories,' being 'wary' about long-term efficacy, worrying it might stop working, and feeling 'too scared to ask' about things. These concerns have led them to hesitate to tell their doctor about headaches. This aligns with an 8 (worry is frequent and intrudes into matters unrelated to the illness).",
+        "score": 8.0,
+        "confidence": 0.85
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "Chronic Lymphocytic Leukemia, which is a type of cancer that affects the blood cells",
+            "turn": 2
+          },
+          {
+            "quote": "It's in an early stage right now, but it's still a concern for me and my family",
+            "turn": 2
+          },
+          {
+            "quote": "my body is constantly fighting this disease",
+            "turn": 4
+          },
+          {
+            "quote": "I know that it's genetic — my father had it too, so there might have been some hereditary factor",
+            "turn": 4
+          },
+          {
+            "quote": "But beyond that, I'm not really sure what triggers it or why it happens to be honest",
+            "turn": 4
+          },
+          {
+            "quote": "It's just something I've been living with and trying to manage as best I can",
+            "turn": 4
+          }
+        ],
+        "reasoning": "They know the label (CLL, cancer affecting blood cells) and understand it's genetic (father had it). They describe their body as 'constantly fighting this disease' and understand it's affecting them. However, they're 'not really sure what triggers it or why it happens' and say 'it's just something I've been living with and trying to manage.' This is a mix - they have some understanding but significant gaps. This aligns with a 6 (gives a rough account of what is happening and why, with gaps).",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "It's definitely been a rollercoaster emotionally, doctor",
+            "turn": 5
+          },
+          {
+            "quote": "Some days I feel really upbeat and optimistic, like I'm making progress in managing the disease",
+            "turn": 5
+          },
+          {
+            "quote": "But then there are other times when everything feels overwhelming, and I get really down on myself",
+            "turn": 5
+          },
+          {
+            "quote": "The frustration is there too — it's hard to accept that my life has been so drastically changed by this illness",
+            "turn": 5
+          },
+          {
+            "quote": "there are days when I feel pretty optimistic",
+            "turn": 8
+          },
+          {
+            "quote": "But then there are other times when things feel really bleak",
+            "turn": 8
+          }
+        ],
+        "reasoning": "They describe their emotional response as a 'rollercoaster' - sometimes upbeat/optimistic, sometimes overwhelmed/down on themselves, sometimes feeling 'really bleak.' The emotion is prominent and affects how they feel about their life. This aligns with an 8 (emotion is prominent and affects what they do).",
+        "score": 8.0,
+        "confidence": 0.85
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "I know it's important for managing the disease and keeping it in check",
+            "turn": 3
+          },
+          {
+            "quote": "I know you said the medication should help",
+            "turn": 1
+          },
+          {
+            "quote": "I think the thing that helps most is just having a sense of routine",
+            "turn": 9
+          },
+          {
+            "quote": "being able to talk to you and other medical professionals helps me stay informed about the disease and any potential treatment options",
+            "turn": 9
+          }
+        ],
+        "reasoning": "They clearly believe the medication is 'important for managing the disease and keeping it in check' and they know it 'should help.' They organize their routine around it and use it as part of their management strategy. This aligns with a 4 (treats it as important and organises around it: routines, travel, supplies).",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "I've been getting these terrible headaches since I started, and I keep wondering if it's really worth it",
+            "turn": 1
+          },
+          {
+            "quote": "I haven't mentioned the headaches to my hematologist yet. I didn't want to worry him or make him think that there was a problem with the treatment",
+            "turn": 3
+          },
+          {
+            "quote": "There are definitely some worries there, doctor. I've heard horror stories about some of the potential side effects of CLL medication",
+            "turn": 6
+          },
+          {
+            "quote": "I'm still wary about whether this medication will actually work for me in the long term",
+            "turn": 6
+          },
+          {
+            "quote": "It's hard not to worry that it might stop working at some point, or that the disease could just keep progressing despite my best efforts",
+            "turn": 6
+          },
+          {
+            "quote": "sometimes it can feel like there are things he knows that he isn't telling me, or things I'm too scared to ask about yet",
+            "turn": 8
+          }
+        ],
+        "reasoning": "They have significant concerns - about headaches, wondering if it's 'really worth it,' fear of side effects from 'horror stories,' being 'wary' about long-term efficacy, worrying it might stop working, and feeling 'too scared to ask' about things. These concerns have led them to hesitate to tell their doctor about headaches. This aligns with a 4 (concerns recur unprompted; they have raised them, or thought about reducing the dose).",
+        "score": 4.0,
+        "confidence": 0.85
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "I've heard horror stories about some of the potential side effects of CLL medication — things like severe nausea and vomiting, or even worse",
+            "turn": 6
+          }
+        ],
+        "reasoning": "They've heard 'horror stories' about potential side effects of CLL medication, which suggests they hold some general concern about medications as a class. However, they haven't explicitly stated a general belief about medicines being harmful. This is a mild generalised caution. This aligns with a 3 (mild generalised caution about taking things long-term).",
+        "score": 3.0,
+        "confidence": 0.7
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "No evidence of this belief. They have a good rapport with their hematologist and trust him to listen and answer questions. They don't express general distrust of prescribing.",
+        "score": null,
+        "confidence": 0.0
+      }
+    },
+    "causes": [
+      "genetics/heredity (father had it)"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "I know that it's genetic — my father had it too, so there might have been some hereditary factor",
+        "turn": 4
+      },
+      {
+        "quote": "But beyond that, I'm not really sure what triggers it or why it happens to be honest",
+        "turn": 4
+      }
+    ]
+  }
+}

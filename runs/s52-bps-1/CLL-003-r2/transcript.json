@@ -1,0 +1,362 @@
+{
+  "patient_id": "CLL-003",
+  "turns": 17,
+  "stop_reason": "doctor",
+  "conversation": [
+    {
+      "role": "doctor",
+      "content": "Hello, and thank you for coming in today. I'm Dr. [Name]. How are you feeling, and what brings you to the clinic?",
+      "turn": 1
+    },
+    {
+      "role": "patient",
+      "content": "Thank you for seeing me, Doctor. To be honest, I've been feeling a bit more tired than usual lately after work, and recently my wife noticed a small lump in my neck that's causing some concern. I'm hoping you can help shed some light on what might be going on.",
+      "turn": 1
+    },
+    {
+      "role": "doctor",
+      "content": "I'm glad you came in. A neck lump is something we always take seriously, so let's start there. When did your wife first notice it, and have you noticed any changes \u2014 size, pain, tenderness, or anything else?",
+      "turn": 2
+    },
+    {
+      "role": "patient",
+      "content": "She noticed the lump about two weeks ago. It hasn't gotten any bigger that I've noticed, but it does seem slightly tender when I touch it. That's pretty much it, though. Nothing else seems out of the ordinary.",
+      "turn": 2
+    },
+    {
+      "role": "doctor",
+      "content": "Two weeks is a short time, but tenderness can be a clue. Can you tell me a bit more about where the lump is \u2014 is it in the front of your neck near your throat, or more to the side? And have you noticed anything else unusual lately \u2014 fever, sore throat, weight changes, or any lumps elsewhere?",
+      "turn": 3
+    },
+    {
+      "role": "patient",
+      "content": "The lump is towards the side of my neck, closer to my shoulder. I haven't noticed any other symptoms like a sore throat or fever, but I do feel more tired than usual after work these days. No significant changes in appetite or weight that I'm aware of, and I don't notice any other lumps at the moment.",
+      "turn": 3
+    },
+    {
+      "role": "doctor",
+      "content": "That location makes sense for swollen lymph nodes, which can happen with infections or other conditions. I'm still interested in that fatigue you mentioned \u2014 when did that start, and does it affect how you get through your workday or your evenings at home?",
+      "turn": 4
+    },
+    {
+      "role": "patient",
+      "content": "The fatigue started about a month ago, right around the time my wife noticed the lump. It's been somewhat constant since then. It doesn't necessarily make my day-to-day tasks impossible to complete, but I do feel like I have less energy than usual and need more breaks throughout the day. In the evenings, I tend to just go to bed early rather than trying to stay up to do anything else.",
+      "turn": 4
+    },
+    {
+      "role": "doctor",
+      "content": "It's interesting that both the lump and the fatigue started around the same time. Have you had any recent illnesses, colds, or infections \u2014 maybe a sore throat or ear infection that you might have brushed off? Or any other symptoms like night sweats or feeling overheated?",
+      "turn": 5
+    },
+    {
+      "role": "patient",
+      "content": "No, I haven't had any significant illnesses recently. I'm generally in good health, and I try to take care of myself by exercising regularly and eating well. As for the fatigue, I can't really connect it with anything specific. It just seems more persistent these days. And as far as overheating or night sweats go, I haven't noticed any changes like that either.",
+      "turn": 5
+    },
+    {
+      "role": "doctor",
+      "content": "That's good to hear that you're generally healthy and active. What does your work involve, and is there anything about your daily routine or stress levels that might be contributing to the fatigue? And have you been diagnosed with any chronic conditions that we should be aware of?",
+      "turn": 6
+    },
+    {
+      "role": "patient",
+      "content": "I'm a software developer, so my job involves mostly sitting at a desk in front of a computer all day. I try to take breaks and stretch every now and then, but I think the sedentary nature of my work might be contributing to some of the fatigue. As for stress levels, they can vary \u2014 some days are more stressful than others, but it's generally manageable. I don't have any other chronic conditions that I'm aware of, although my father had a form of leukemia years ago.",
+      "turn": 6
+    },
+    {
+      "role": "doctor",
+      "content": "A desk job can definitely take a toll, and it's good that you're mindful of breaks. The leukemia in your father's history is something we'll keep in mind, though it doesn't directly explain these symptoms. Have you had this lump checked out before, or is this the first time you've noticed it? And have you been referred for any imaging or blood work yet?",
+      "turn": 7
+    },
+    {
+      "role": "patient",
+      "content": "This is actually the first time I've noticed the lump and the increased fatigue, so we haven't had a chance to check these symptoms out medically just yet. The hematologist who handles my father's condition mentioned that there could be a genetic component at play, but again, it doesn't explain much in terms of symptoms right now. My primary care physician suggested I come in for further evaluation.",
+      "turn": 7
+    },
+    {
+      "role": "doctor",
+      "content": "So we're starting fresh with this evaluation. That hematologist's comment about a genetic component is interesting \u2014 was there anything specific they mentioned, or was it more general? And aside from the fatigue and the lump, how are you sleeping, and are you taking any medications regularly?",
+      "turn": 8
+    },
+    {
+      "role": "patient",
+      "content": "The hematologist didn't mention anything too specific; it was just a passing comment. They said that CLL runs in families and that my father's history might increase my risk slightly, but they didn't think it was anything to be overly concerned about at this point. I'm generally a good sleeper \u2014 I usually get seven or eight hours each night \u2014 but the fatigue has been affecting even my sleep lately. As for medications, aside from an occasional over-the-counter pain reliever for minor aches and pains, I don't take any medications regularly.",
+      "turn": 8
+    },
+    {
+      "role": "doctor",
+      "content": "That's helpful context. Beyond your father's leukemia, does anyone else in your family have a history of cancer, blood disorders, or autoimmune conditions? And as we wrap up the physical side of things, what's most on your mind right now \u2014 just getting clarity on the lump, or wondering about the fatigue as well?",
+      "turn": 9
+    },
+    {
+      "role": "patient",
+      "content": "My mother had breast cancer years ago, but aside from that and my father's leukemia, I don't know of anyone else in my immediate family with a history of cancer or blood disorders. As we wrap up today's appointment, I think getting clarity on both the lump and the fatigue would be most important to me. It would be helpful to know what might be going on so that we can address it appropriately.",
+      "turn": 9
+    },
+    {
+      "role": "doctor",
+      "content": "Thank you for sharing that about your family history. That does give us something to consider. Let me summarize what we've talked about so far \u2014 a new lump on the side of your neck that's been there for about two weeks, and fatigue that started around the same time about a month ago. You're generally healthy, but you're clearly worried about what might be going on. When you think about those possibilities, what's the most scary thought for you \u2014 or what are you most afraid you might have?",
+      "turn": 10
+    },
+    {
+      "role": "patient",
+      "content": "I suppose the most scary thought would probably be that it could be cancer of some sort. I know how important it is to catch these things early, and the uncertainty of not knowing exactly what's going on is definitely taking a toll on me emotionally. But at the same time, I'm trying to stay hopeful and trust in your expertise and knowledge as my doctor.",
+      "turn": 10
+    },
+    {
+      "role": "doctor",
+      "content": "I completely understand that uncertainty. It's natural to worry when something new and unfamiliar shows up in your body, especially with those family history factors. Let me explain what I'm thinking we'll do today. First, I'd like to examine the lump and maybe some lymph nodes in the rest of your neck and underarms. Then I'd want to order some blood work \u2014 a full blood count and some other markers \u2014 to see if there are any clues. Depending on what we find, you may need an ultrasound or possibly a biopsy. For the fatigue, we'll look for connections to the lump or consider other causes. Does that sound like a reasonable plan?",
+      "turn": 11
+    },
+    {
+      "role": "patient",
+      "content": "It does, and I appreciate your thorough approach. Examining the lump and checking some blood work is definitely a good first step. I understand there might be more tests if needed, but I'm willing to do whatever it takes to get answers. And of course we'll keep talking about how the fatigue fits into all this as well.",
+      "turn": 11
+    },
+    {
+      "role": "doctor",
+      "content": "Let's take a look at that lump and some of the surrounding area. I'll examine it and check a few other lymph nodes to get a better picture of what we're dealing with. Could you please tilt your head slightly to the side so I can get a good look?",
+      "turn": 12
+    },
+    {
+      "role": "patient",
+      "content": "(Adjusts head as asked)",
+      "turn": 12
+    },
+    {
+      "role": "doctor",
+      "content": "I can see the lump on the side of your neck. It's about the size of a small grape, soft to firm, and tender when I press on it. The skin over it looks normal \u2014 no redness or changes in color. I'm also going to check your lymph nodes in your neck, under your jaw, and in your armpits and groin to see if there are any others that might be enlarged. This will help us understand if this is isolated or part of a broader pattern.",
+      "turn": 13
+    },
+    {
+      "role": "patient",
+      "content": "(Allows the doctor to continue checking various areas)",
+      "turn": 13
+    },
+    {
+      "role": "doctor",
+      "content": "Good, I'm not seeing any other enlarged lymph nodes beyond the one you pointed out \u2014 the ones under your jaw, in your armpits, and groin all feel normal. Your thyroid and other structures in your neck look fine. So far, the picture is consistent with a reactive lymph node \u2014 something that may have swollen in response to a minor infection, but we still need to confirm that with blood work. Does that feel right so far?",
+      "turn": 14
+    },
+    {
+      "role": "patient",
+      "content": "Yes, that makes sense, given my symptoms and how I'm feeling. It's reassuring to know that there might not be anything too serious going on. But at the same time, I'm still concerned about the fatigue as well. Do you think it could be related in any way?",
+      "turn": 14
+    },
+    {
+      "role": "doctor",
+      "content": "That's a great question. There are a few possibilities. The lump could be reacting to a low-grade infection \u2014 something so mild you didn't even notice \u2014 and that infection could also be causing the fatigue. Alternatively, the fatigue could be independent, related to your work, or a combination of both. The blood work will help us see if there's any sign of infection or other issues. We'll also want to follow up with you in a week or so to see if the lump changes or if the fatigue improves \u2014 that will give us more clues. Does that help with the uncertainty?",
+      "turn": 15
+    },
+    {
+      "role": "patient",
+      "content": "It does, and I appreciate your thorough explanation. Taking a step-by-step approach makes me feel more confident about the process. And yes, having more information in a week would definitely be helpful to see if anything changes or improves.",
+      "turn": 15
+    },
+    {
+      "role": "doctor",
+      "content": "Excellent. To recap what we've done today: I examined the lump and several lymph nodes \u2014 it appears to be an isolated, possibly reactive node. I want to order blood work to check for signs of infection or other issues, and I'll send you for an ultrasound to get a clearer picture of the lump. We'll see you back in about a week to review the results and see if anything has changed. In the meantime, keep an eye on the lump \u2014 if it grows, gets harder, or if you develop new symptoms like fever, night sweats, or unexplained weight loss, let us know right away. And we'll keep talking about the fatigue as we go along. Anything else on your mind before we wrap up?",
+      "turn": 16
+    },
+    {
+      "role": "patient",
+      "content": "No, that all makes sense to me, and I appreciate your attention to detail. Thank you for your help today \u2014 I feel more at ease knowing there's a plan in place to get answers. We'll stay in touch over the next week, and I look forward to our follow-up appointment.",
+      "turn": 16
+    },
+    {
+      "role": "doctor",
+      "content": "You're very welcome. It sounds like you're in good hands with this plan, and I appreciate your patience and cooperation. We'll take good care of you. Good luck with the blood work and the ultrasound, and I look forward to seeing you in a week. Take care.",
+      "turn": 17
+    },
+    {
+      "role": "patient",
+      "content": "Thank you, Dr. [Name]. Have a great day.",
+      "turn": 17
+    }
+  ],
+  "coverage_hint": {},
+  "working_notes": [],
+  "events": [],
+  "usage": [
+    {
+      "role": "doctor",
+      "eval_tokens": 107,
+      "prompt_tokens": 1531
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 60,
+      "prompt_tokens": 1192
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 164,
+      "prompt_tokens": 1701
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 48,
+      "prompt_tokens": 1310
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 194,
+      "prompt_tokens": 1916
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 69,
+      "prompt_tokens": 1436
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 221,
+      "prompt_tokens": 2182
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 83,
+      "prompt_tokens": 1564
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 231,
+      "prompt_tokens": 2489
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 79,
+      "prompt_tokens": 1712
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 226,
+      "prompt_tokens": 2802
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 104,
+      "prompt_tokens": 1854
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 252,
+      "prompt_tokens": 3135
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 80,
+      "prompt_tokens": 2044
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 215,
+      "prompt_tokens": 3470
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 111,
+      "prompt_tokens": 2189
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 284,
+      "prompt_tokens": 3799
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 84,
+      "prompt_tokens": 2374
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 311,
+      "prompt_tokens": 4170
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 74,
+      "prompt_tokens": 2570
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 253,
+      "prompt_tokens": 4558
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 68,
+      "prompt_tokens": 2786
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 101,
+      "prompt_tokens": 4882
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 8,
+      "prompt_tokens": 2919
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 139,
+      "prompt_tokens": 4994
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 11,
+      "prompt_tokens": 3038
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 126,
+      "prompt_tokens": 5147
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 59,
+      "prompt_tokens": 3148
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 340,
+      "prompt_tokens": 5335
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 47,
+      "prompt_tokens": 3335
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 265,
+      "prompt_tokens": 5725
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 61,
+      "prompt_tokens": 3540
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 93,
+      "prompt_tokens": 6054
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 14,
+      "prompt_tokens": 3667
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 1099,
+      "prompt_tokens": 6164
+    },
+    {
+      "role": "report",
+      "eval_tokens": 3529,
+      "prompt_tokens": 12547
+    }
+  ]
+}

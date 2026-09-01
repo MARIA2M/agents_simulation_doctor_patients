@@ -1,0 +1,209 @@
+{
+  "patient_id": "HIV-005",
+  "turns": 9,
+  "stop_reason": "doctor",
+  "conversation": [
+    {
+      "role": "doctor",
+      "content": "Hello, it's good to see you today. How can I help you? What brings you in for your appointment?",
+      "turn": 1
+    },
+    {
+      "role": "patient",
+      "content": "Thank you for seeing me, doctor. To be honest, I've been feeling really tired and run down lately. I think it might be because of my HIV medication, but I'm not sure. It's hard to keep track of all the symptoms and how they relate to each other.",
+      "turn": 1
+    },
+    {
+      "role": "doctor",
+      "content": "I'm sorry to hear you're feeling this way. Fatigue can really affect how you're getting on day to day. When you say you've been feeling tired and run down, how long has this been going on? And can you tell me a bit more about what \"run down\" feels like for you\u2014is it like you're just lacking energy, or are there other symptoms like feeling weak, or having trouble concentrating?",
+      "turn": 2
+    },
+    {
+      "role": "patient",
+      "content": "The fatigue started building up gradually over the past few months. I've always been tired to some extent because of my illness, but lately it's been more intense and harder to shake off. When I say \"run down,\" it's not just about a lack of energy\u2014it's like everything is an effort. Even small tasks feel like they're taking so much out of me. I'm also having trouble focusing sometimes, which doesn't help with work or anything else really.",
+      "turn": 2
+    },
+    {
+      "role": "doctor",
+      "content": "I can hear how much this is affecting you\u2014feeling like even small tasks are an effort is really draining, especially when it's impacting your work too. How has this been affecting your ability to get through the day? And since you mentioned wondering about your HIV medication, when did you start taking it? And what do you understand it's supposed to do for you?",
+      "turn": 3
+    },
+    {
+      "role": "patient",
+      "content": "It's been a struggle to just keep up with everyday things. I'm having trouble keeping my usual schedule and getting as much done at work as I used to. I feel like everything is piling up, even though I'm trying to take it slow and not overdo it.\n\nI started taking Triumeq about three years ago. It's a combination pill that helps suppress the virus. But ever since I started missing doses now and then\u2014and sometimes taking drug holidays when I feel well\u2014I've been feeling these headaches and this persistent fatigue. I'm worried that maybe I should change something about my medication routine or maybe even switch medications altogether, but I don't really know what to do.",
+      "turn": 3
+    },
+    {
+      "role": "doctor",
+      "content": "It's understandable that you're feeling overwhelmed when you're dealing with both the illness and the medication side effects. You've been on Triumeq for three years now, which is a good amount of time for the virus to be under control. I'm wondering\u2014when you mentioned missing doses or taking drug holidays, what was your thinking behind that at the time? And how do you feel about the medication now\u2014do you still think it's helping you keep the virus suppressed, or are you starting to doubt whether it's the right choice for you?",
+      "turn": 4
+    },
+    {
+      "role": "patient",
+      "content": "I started missing doses because I'd get these terrible headaches when I took the pill. It would be a splitting headache that would last all day and make me feel really nauseous. So, I thought maybe if I missed a dose here and there or even took a few days off, it might help. But then I started feeling more tired than usual too.\n\nI still think the medication is helping keep the virus under control, but at the same time, I can't shake this feeling that it's not doing enough for me. Maybe my expectations are just really high, or maybe I'm overthinking things, but it feels like there's something missing. I don't know if it's worth continuing as-is or if we should consider some adjustments to your regimen or explore other options.",
+      "turn": 4
+    },
+    {
+      "role": "doctor",
+      "content": "It sounds like those headaches and nausea have been really difficult to deal with, and it makes sense that you'd try to find a way to manage that. You've been doing a lot of thinking about whether the medication is truly working for you, and that's an important question to consider. \n\nI'm curious\u2014when you think about living with HIV, what does that mean to you? Do you see it as something that's always going to be part of your life, or do you think there might be a time when it's less of a focus? And how do you feel about the future\u2014what would feel like \"enough\" for you in terms of how the illness affects you?",
+      "turn": 5
+    },
+    {
+      "role": "patient",
+      "content": "Honestly, I see living with HIV as something that's always going to be part of my life. I know there's no cure right now, so it feels like a lifelong reality. It's been hard coming to terms with that, but at the same time, I've learned to manage and live around it. As for what would feel like \"enough\"\u2014I think just being able to live my life without feeling constantly exhausted and overwhelmed would be a huge step forward. Of course, I'd also love to have a better handle on the medication so that I don't keep experiencing these side effects.",
+      "turn": 5
+    },
+    {
+      "role": "doctor",
+      "content": "It takes a lot of courage to accept that HIV will be part of your life, and it sounds like you've done a lot of work to manage it. I can see why feeling constantly exhausted and overwhelmed would make that management feel much harder. You're right that feeling like you can live your life more fully\u2014and not having to worry about constant fatigue\u2014would be a big improvement.\n\nYou've been thoughtful about whether the current medication is working for you, and about wanting to find a way to take it without those side effects. I'm wondering\u2014when you think about medications in general, how do you feel about them? Do you see them as something that can help you live better, or do you worry about long-term effects or other downsides? And do you ever feel like doctors might prescribe things too readily?",
+      "turn": 6
+    },
+    {
+      "role": "patient",
+      "content": "I have mixed feelings about medications in general. On one hand, I know they're important for managing the illness and keeping the virus under control. But on the other hand, there are these side effects that can be really challenging to deal with. I worry a bit about what the long-term effects of taking all these medicines might be.\n\nAnd yes, sometimes I wonder if doctors might prescribe things too readily. It's not that I don't trust your judgment\u2014I do\u2014but it feels like there could be more hesitation or exploration before reaching for a new medication. But at the same time, I know it can be tough to find the right balance between managing symptoms and minimizing potential harm from medications.",
+      "turn": 6
+    },
+    {
+      "role": "doctor",
+      "content": "It sounds like you have a really balanced perspective\u2014understanding that medicines can be essential but also being cautious about potential downsides. And I appreciate you sharing that you do trust my judgment; that's really helpful.\n\nYou've mentioned missing doses and taking drug holidays in the past. I'm wondering\u2014when you do take Triumeq, do you notice a difference in how you feel compared to when you don't take it? And when you think about sticking with the medication regularly, what would help you feel more confident about doing that? Would it be knowing it's working better, or finding ways to manage the side effects, or something else?",
+      "turn": 7
+    },
+    {
+      "role": "patient",
+      "content": "When I do take Triumeq as prescribed, I notice that my viral load is generally under control. But the fatigue and headaches are still there, which makes it harder for me to feel like it's really doing its job.\n\nIf I were going to commit to sticking with the medication more consistently, finding ways to manage those side effects would be key. Maybe there's a way to adjust my dosing schedule or try different pills to see if we can find a better match that minimizes the fatigue and headaches while still keeping the virus under control. It might also help to have clearer guidelines on what good adherence looks like, so I'm not constantly second-guessing whether I'm taking enough medicine or taking drug holidays too often.",
+      "turn": 7
+    },
+    {
+      "role": "doctor",
+      "content": "Thank you for sharing so much today\u2014it's really helpful to understand your experience with the medication and how it's affecting your life. To summarise what you've told me: you've been managing HIV for some time, but you're struggling with more intense fatigue and headaches, which are making it hard to keep up with daily tasks and work. You know Triumeq is helping keep your virus under control when you take it, but the side effects are making you question whether it's the right fit for you.\n\nBased on what you've shared, I think the next step would be to address those side effects. There are options we could explore\u2014like adjusting your dosing schedule or considering a different combination that might work better for you. We'd also want to work on finding a routine that feels manageable so you can stick with it without feeling constantly second-guessing yourself. \n\nWould you be comfortable with exploring those options? And is there anything else you'd like to talk about before we wrap up today?",
+      "turn": 8
+    },
+    {
+      "role": "patient",
+      "content": "Thank you for summarizing and for the suggestion of exploring different options. I do think it would help to address these side effects so that managing my medication feels more like a partnership rather than a constant struggle.\n\nBefore we finish, is there anything else you'd like me to expand on or clarify? Or if there's any other aspect of your health or life you're worried about, feel free to bring it up. I'm here to help and support you in any way I can.",
+      "turn": 8
+    },
+    {
+      "role": "doctor",
+      "content": "You've covered everything really well today. I think we've got a good picture of what you're dealing with and what you'd like to explore going forward. We'll look at some options for managing those side effects and help you find a routine that feels sustainable. \n\nI'll make sure the next steps are clear for you, and we can schedule a follow-up to see how things are going. Take care of yourself in the meantime, and don't hesitate to reach out if you need anything before then. I'm glad you came in today.",
+      "turn": 9
+    },
+    {
+      "role": "patient",
+      "content": "Thank you so much, doctor. That means a lot to me. I appreciate your help and support. I'll make sure to keep in touch if I have any questions or concerns. Take care of yourself too, and I look forward to our next session.",
+      "turn": 9
+    }
+  ],
+  "coverage_hint": {},
+  "working_notes": [],
+  "events": [
+    {
+      "event": "llm_retry",
+      "role": "doctor",
+      "attempt": 1,
+      "failure": "HTTPStatusError: Server error '500 Internal Server Error' for url 'http://127.0.0.1:11500/api/chat'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500"
+    }
+  ],
+  "usage": [
+    {
+      "role": "doctor",
+      "eval_tokens": 143,
+      "prompt_tokens": 1583
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 59,
+      "prompt_tokens": 1298
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 201,
+      "prompt_tokens": 1788
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 96,
+      "prompt_tokens": 1452
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 189,
+      "prompt_tokens": 2088
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 140,
+      "prompt_tokens": 1632
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 324,
+      "prompt_tokens": 2420
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 158,
+      "prompt_tokens": 1892
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 375,
+      "prompt_tokens": 2905
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 122,
+      "prompt_tokens": 2199
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 388,
+      "prompt_tokens": 3405
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 139,
+      "prompt_tokens": 2494
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 293,
+      "prompt_tokens": 3935
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 148,
+      "prompt_tokens": 2772
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 535,
+      "prompt_tokens": 4379
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 98,
+      "prompt_tokens": 3132
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 182,
+      "prompt_tokens": 5015
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 53,
+      "prompt_tokens": 3349
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 746,
+      "prompt_tokens": 5253
+    },
+    {
+      "role": "report",
+      "eval_tokens": 4222,
+      "prompt_tokens": 10860
+    }
+  ]
+}

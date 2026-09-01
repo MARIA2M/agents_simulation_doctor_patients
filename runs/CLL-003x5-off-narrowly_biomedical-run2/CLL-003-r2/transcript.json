@@ -1,0 +1,302 @@
+{
+  "patient_id": "CLL-003",
+  "turns": 14,
+  "stop_reason": "doctor",
+  "conversation": [
+    {
+      "role": "doctor",
+      "content": "Hello, and thank you for coming in. What brings you to see me today?",
+      "turn": 1
+    },
+    {
+      "role": "patient",
+      "content": "Hi there, doctor. I've been feeling a bit more tired than usual lately after work, and my wife also noticed a small lump in my neck recently. I'm not too worried, but I thought it would be best to have a professional check it out.",
+      "turn": 1
+    },
+    {
+      "role": "doctor",
+      "content": "How long have you been feeling this fatigue, and does it happen every day or only on certain days?",
+      "turn": 2
+    },
+    {
+      "role": "patient",
+      "content": "The fatigue has been ongoing for about two weeks now. It's more of a general tiredness that lingers throughout the day, but it doesn't really hit me at any specific time. It's just always there in some degree.",
+      "turn": 2
+    },
+    {
+      "role": "doctor",
+      "content": "When did your wife first notice the lump in your neck, and have you noticed any changes in its size or tenderness since then?",
+      "turn": 3
+    },
+    {
+      "role": "patient",
+      "content": "My wife noticed the lump about a week ago during a casual conversation when she was helping me with my tie. I'm not sure if it's gotten bigger or more tender since then because I haven't really been monitoring it closely, to be honest.",
+      "turn": 3
+    },
+    {
+      "role": "doctor",
+      "content": "Have you experienced any other symptoms in the neck area, such as hoarseness, difficulty swallowing, or any lumps elsewhere in your body?",
+      "turn": 4
+    },
+    {
+      "role": "patient",
+      "content": "No, not at all. Aside from the lump in my neck, I haven't noticed anything unusual like hoarseness or difficulty swallowing. And to my knowledge, there aren't any other lumps present on my body.",
+      "turn": 4
+    },
+    {
+      "role": "doctor",
+      "content": "Do you have any known medical conditions or take any regular medications?",
+      "turn": 5
+    },
+    {
+      "role": "patient",
+      "content": "I don't have any known medical conditions, and I'm not taking any regular medications at the moment. However, I do follow a healthy lifestyle as much as possible, including regular exercise and maintaining a balanced diet.",
+      "turn": 5
+    },
+    {
+      "role": "doctor",
+      "content": "Does anyone in your family have a history of thyroid problems, lymph node issues, or any cancers?",
+      "turn": 6
+    },
+    {
+      "role": "patient",
+      "content": "Yes, my father had Chronic Lymphocytic Leukemia, which is a type of cancer that affects the immune system. He's been managing it well with regular check-ups and monitoring, but I'm not on any medication for it myself.",
+      "turn": 6
+    },
+    {
+      "role": "doctor",
+      "content": "I'd like to examine the lump in your neck to assess its size, texture, and mobility. Would you be comfortable with that?",
+      "turn": 7
+    },
+    {
+      "role": "patient",
+      "content": "Of course, go ahead. I want to make sure everything is okay and address any concerns I might have.",
+      "turn": 7
+    },
+    {
+      "role": "doctor",
+      "content": "I'm going to feel around the lump now. Please let me know if you feel any pain or discomfort.",
+      "turn": 8
+    },
+    {
+      "role": "patient",
+      "content": "[Assistant describes feeling the lump being examined] It feels a bit tender, but not excruciatingly so. The doctor's touch is gentle, and I trust their expertise.",
+      "turn": 8
+    },
+    {
+      "role": "doctor",
+      "content": "Does the lump feel like something that's been there for a while and you just didn't notice, or does it feel like it developed more recently?",
+      "turn": 9
+    },
+    {
+      "role": "patient",
+      "content": "From what I can tell, it feels like something that may have been present for a little while but has grown in size over time. The doctor seems to be taking it seriously, which is reassuring.",
+      "turn": 9
+    },
+    {
+      "role": "doctor",
+      "content": "Have you noticed any changes in your weight, experienced night sweats, or had any fevers in the past few weeks?",
+      "turn": 10
+    },
+    {
+      "role": "patient",
+      "content": "No, I haven't experienced any significant changes in my weight recently, and I haven't had any night sweats or fevers. But then again, I can't say for certain if there have been subtle changes that I'm not aware of.",
+      "turn": 10
+    },
+    {
+      "role": "doctor",
+      "content": "On a scale of 1 to 10, how would you rate your current energy level compared to how you felt a few weeks ago?",
+      "turn": 11
+    },
+    {
+      "role": "patient",
+      "content": "I would say it's around a 5 or so. It's definitely lower than what it used to be, but not at the point where I'm feeling completely exhausted all the time.",
+      "turn": 11
+    },
+    {
+      "role": "doctor",
+      "content": "Given the lump in your neck that's grown over time and is tender, along with your family history, I'd like to arrange for a specialist to examine it and possibly do a biopsy to determine what it is. How do you feel about that plan?",
+      "turn": 12
+    },
+    {
+      "role": "patient",
+      "content": "I understand that this might be necessary given my situation and family history. While it's a bit concerning, I trust the expertise of the specialists and want to make sure everything is taken care of. So, if that's what you think is best, then I'm on board with that plan.",
+      "turn": 12
+    },
+    {
+      "role": "doctor",
+      "content": "To summarize, you've been experiencing mild fatigue for about two weeks, and your wife noticed a tender lump in your neck that appears to have grown over time. There's no hoarseness, difficulty swallowing, weight changes, night sweats, or fevers. You have no current medications and follow a healthy lifestyle. There's a family history of CLL, which makes the neck lump more concerning.\n\nI'm arranging for you to see a specialist who can examine the lump and, if needed, perform a biopsy. In the meantime, keep monitoring for any new symptoms like hoarseness, difficulty swallowing, or significant changes in energy level.\n\nIs there anything else you'd like to discuss before we wrap up?",
+      "turn": 13
+    },
+    {
+      "role": "patient",
+      "content": "No, I think that covers everything for now. Thank you, doctor, for taking the time to listen and address my concerns. I appreciate your help and expertise.",
+      "turn": 13
+    },
+    {
+      "role": "doctor",
+      "content": "You're welcome. I appreciate you coming in today. We'll follow up with the specialist soon. Take care.",
+      "turn": 14
+    },
+    {
+      "role": "patient",
+      "content": "Thank you. Take care too.",
+      "turn": 14
+    }
+  ],
+  "coverage_hint": {},
+  "working_notes": [],
+  "events": [],
+  "usage": [
+    {
+      "role": "doctor",
+      "eval_tokens": 175,
+      "prompt_tokens": 1527
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 54,
+      "prompt_tokens": 1179
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 112,
+      "prompt_tokens": 1759
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 48,
+      "prompt_tokens": 1263
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 103,
+      "prompt_tokens": 1922
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 51,
+      "prompt_tokens": 1347
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 97,
+      "prompt_tokens": 2079
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 46,
+      "prompt_tokens": 1436
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 60,
+      "prompt_tokens": 2225
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 44,
+      "prompt_tokens": 1504
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 99,
+      "prompt_tokens": 2332
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 51,
+      "prompt_tokens": 1577
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 111,
+      "prompt_tokens": 2485
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 23,
+      "prompt_tokens": 1664
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 50,
+      "prompt_tokens": 2622
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 37,
+      "prompt_tokens": 1718
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 105,
+      "prompt_tokens": 2712
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 41,
+      "prompt_tokens": 1794
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 104,
+      "prompt_tokens": 2861
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 51,
+      "prompt_tokens": 1869
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 96,
+      "prompt_tokens": 3019
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 39,
+      "prompt_tokens": 1957
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 152,
+      "prompt_tokens": 3157
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 60,
+      "prompt_tokens": 2056
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 511,
+      "prompt_tokens": 3372
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 34,
+      "prompt_tokens": 2267
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 102,
+      "prompt_tokens": 3920
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 8,
+      "prompt_tokens": 2333
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 551,
+      "prompt_tokens": 4033
+    },
+    {
+      "role": "report",
+      "eval_tokens": 4622,
+      "prompt_tokens": 8516
+    }
+  ]
+}

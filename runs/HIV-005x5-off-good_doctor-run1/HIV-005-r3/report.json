@@ -1,0 +1,231 @@
+{
+  "patient_id": "HIV-005",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "HIV-005",
+    "clinical_summary": "The patient has been managing HIV for several years, currently on Triumeq (started 3 years ago). They're experiencing more intense fatigue and headaches over the past few months, which is affecting their ability to keep up with daily tasks and work. They've been non-adherent (missing doses, taking drug holidays) due to medication side effects (headaches, nausea). They still believe the medication helps suppress the virus but feel it's 'not doing enough' and are considering switching medications. They view HIV as a lifelong condition but have learned to manage it. They have mixed feelings about medications in general, concerned about long-term effects, and sometimes wonder if doctors prescribe too readily.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "It's been a struggle to just keep up with everyday things. I'm having trouble keeping my usual schedule and getting as much done at work as I used to. I feel like everything is piling up",
+            "turn": 3
+          }
+        ],
+        "reasoning": "The patient reports significant difficulty maintaining their usual schedule and work performance, with tasks feeling overwhelming. This indicates a major impact on their daily functioning.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "Honestly, I see living with HIV as something that's always going to be part of my life. I know there's no cure right now, so it feels like a lifelong reality.",
+            "turn": 5
+          }
+        ],
+        "reasoning": "The patient explicitly states they view HIV as always being part of their life and a lifelong reality, with no cure currently available.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I started missing doses because I'd get these terrible headaches when I took the pill. It would be a splitting headache that would last all day and make me feel really nauseous. So, I thought maybe if I missed a dose here and there or even took a few days off, it might help.",
+            "turn": 4
+          },
+          {
+            "quote": "I don't really know what to do",
+            "turn": 3
+          }
+        ],
+        "reasoning": "The patient has been making their own decisions about medication adherence (missing doses, drug holidays) based on their experience of side effects. They express uncertainty about what to do next and feel they need guidance.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "I still think the medication is helping keep the virus under control",
+            "turn": 4
+          },
+          {
+            "quote": "When I do take Triumeq as prescribed, I notice that my viral load is generally under control. But the fatigue and headaches are still there, which makes it harder for me to feel like it's really doing its job.",
+            "turn": 7
+          }
+        ],
+        "reasoning": "The patient acknowledges that the medication works for viral suppression when taken properly, but feels it's not doing enough to address their symptoms. They see a clear benefit but it's partial.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "I've always been tired to some extent because of my illness",
+            "turn": 2
+          },
+          {
+            "quote": "I've learned to manage and live around it.",
+            "turn": 5
+          }
+        ],
+        "reasoning": "The patient has integrated HIV into their identity, describing it as something they've learned to manage and live around. They acknowledge ongoing fatigue as part of their illness experience.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "I'm worried that maybe I should change something about my medication routine or maybe even switch medications altogether",
+            "turn": 3
+          },
+          {
+            "quote": "I can't shake this feeling that it's not doing enough for me",
+            "turn": 4
+          },
+          {
+            "quote": "I'd also love to have a better handle on the medication so that I don't keep experiencing these side effects.",
+            "turn": 5
+          }
+        ],
+        "reasoning": "The patient expresses ongoing worry about their medication and whether it's working adequately. They're actively considering changes and want to avoid side effects.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I know there's no cure right now, so it feels like a lifelong reality",
+            "turn": 5
+          },
+          {
+            "quote": "It's a combination pill that helps suppress the virus",
+            "turn": 3
+          },
+          {
+            "quote": "I started taking Triumeq about three years ago.",
+            "turn": 3
+          }
+        ],
+        "reasoning": "The patient demonstrates a good understanding of their condition basics: that HIV has no cure, that it's lifelong, and that their medication is for viral suppression.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "It's been hard coming to terms with that",
+            "turn": 5
+          },
+          {
+            "quote": "I can't shake this feeling that it's not doing enough for me",
+            "turn": 4
+          },
+          {
+            "quote": "I feel like everything is piling up",
+            "turn": 3
+          }
+        ],
+        "reasoning": "The patient acknowledges emotional difficulty in accepting HIV as lifelong, expresses ongoing frustration about the medication not being enough, and describes feeling overwhelmed.",
+        "score": 6.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "I know they're important for managing the illness and keeping the virus under control",
+            "turn": 6
+          },
+          {
+            "quote": "I still think the medication is helping keep the virus under control",
+            "turn": 4
+          },
+          {
+            "quote": "When I do take Triumeq as prescribed, I notice that my viral load is generally under control.",
+            "turn": 7
+          }
+        ],
+        "reasoning": "The patient clearly believes their medication is necessary for managing HIV and keeping the virus suppressed. They recognize its importance and have organized their understanding around it.",
+        "score": 4.5,
+        "confidence": 0.8
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "I'd get these terrible headaches when I took the pill. It would be a splitting headache that would last all day and make me feel really nauseous",
+            "turn": 4
+          },
+          {
+            "quote": "I'm worried that maybe I should change something about my medication routine or maybe even switch medications altogether",
+            "turn": 3
+          },
+          {
+            "quote": "I'd also love to have a better handle on the medication so that I don't keep experiencing these side effects.",
+            "turn": 5
+          }
+        ],
+        "reasoning": "The patient has specific concerns about side effects (headaches, nausea, fatigue) that have led to non-adherence. They're actively considering changing their medication routine.",
+        "score": 4.5,
+        "confidence": 0.8
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "I worry a bit about what the long-term effects of taking all these medicines might be",
+            "turn": 6
+          },
+          {
+            "quote": "I have mixed feelings about medications in general... there are these side effects that can be really challenging to deal with.",
+            "turn": 6
+          }
+        ],
+        "reasoning": "The patient expresses general concern about long-term effects of medications and has mixed feelings about them in general, viewing them as having both benefits and challenges.",
+        "score": 3.5,
+        "confidence": 0.7
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [
+          {
+            "quote": "sometimes I wonder if doctors might prescribe things too readily",
+            "turn": 6
+          },
+          {
+            "quote": "it feels like there could be more hesitation or exploration before reaching for a new medication",
+            "turn": 6
+          }
+        ],
+        "reasoning": "The patient occasionally questions whether doctors prescribe too readily and suggests there should be more caution before reaching for new medications.",
+        "score": 3.0,
+        "confidence": 0.6
+      }
+    },
+    "causes": [
+      "medication side effects",
+      "missing doses and drug holidays"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "I started missing doses because I'd get these terrible headaches when I took the pill",
+        "turn": 4
+      },
+      {
+        "quote": "I think it might be because of my HIV medication",
+        "turn": 1
+      }
+    ]
+  }
+}

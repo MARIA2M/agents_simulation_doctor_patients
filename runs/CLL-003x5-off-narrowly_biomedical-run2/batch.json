@@ -1,0 +1,92 @@
+{
+  "batch_id": "CLL-003x5-off-narrowly_biomedical-run2",
+  "repeats": 5,
+  "consultations": [
+    {
+      "run": "CLL-003-r1",
+      "patient_id": "CLL-003",
+      "repeat": 1,
+      "status": "ok",
+      "turns": 20,
+      "stop_reason": "turn_cap",
+      "events": 1,
+      "report_parsed": true,
+      "report_attempts": 1,
+      "na": [
+        "specific_concerns",
+        "specific_necessity",
+        "treatment_control"
+      ]
+    },
+    {
+      "run": "CLL-003-r2",
+      "patient_id": "CLL-003",
+      "repeat": 2,
+      "status": "ok",
+      "turns": 14,
+      "stop_reason": "doctor",
+      "events": 0,
+      "report_parsed": true,
+      "report_attempts": 1,
+      "na": [
+        "general_harm",
+        "general_overuse",
+        "specific_concerns",
+        "specific_necessity"
+      ]
+    },
+    {
+      "run": "CLL-003-r3",
+      "patient_id": "CLL-003",
+      "repeat": 3,
+      "status": "ok",
+      "turns": 11,
+      "stop_reason": "doctor",
+      "events": 1,
+      "report_parsed": true,
+      "report_attempts": 1,
+      "na": [
+        "general_harm",
+        "general_overuse",
+        "specific_necessity",
+        "treatment_control"
+      ]
+    },
+    {
+      "run": "CLL-003-r4",
+      "patient_id": "CLL-003",
+      "repeat": 4,
+      "status": "ok",
+      "turns": 15,
+      "stop_reason": "doctor",
+      "events": 0,
+      "report_parsed": true,
+      "report_attempts": 1,
+      "na": [
+        "general_harm",
+        "general_overuse",
+        "specific_concerns",
+        "specific_necessity"
+      ]
+    },
+    {
+      "run": "CLL-003-r5",
+      "patient_id": "CLL-003",
+      "repeat": 5,
+      "status": "ok",
+      "turns": 18,
+      "stop_reason": "doctor",
+      "events": 0,
+      "report_parsed": true,
+      "report_attempts": 1,
+      "na": [
+        "general_harm",
+        "general_overuse",
+        "specific_concerns",
+        "specific_necessity",
+        "timeline",
+        "treatment_control"
+      ]
+    }
+  ]
+}

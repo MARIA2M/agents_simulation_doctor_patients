@@ -1,0 +1,24 @@
+{
+  "batch_id": "timing-1",
+  "repeats": 1,
+  "consultations": [
+    {
+      "run": "CLL-001-r1",
+      "patient_id": "CLL-001",
+      "repeat": 1,
+      "status": "ok",
+      "turns": 18,
+      "stop_reason": "doctor",
+      "events": 0,
+      "report_parsed": true,
+      "report_attempts": 1,
+      "na": [
+        "general_harm",
+        "general_overuse",
+        "specific_concerns",
+        "specific_necessity",
+        "treatment_control"
+      ]
+    }
+  ]
+}

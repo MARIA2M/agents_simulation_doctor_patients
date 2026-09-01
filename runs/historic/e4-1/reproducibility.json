@@ -1,0 +1,116 @@
+{
+  "batch_id": "e4-1",
+  "patients": 10,
+  "repeats": 2,
+  "dimensions": {
+    "consequences": {
+      "dimension": "consequences",
+      "dispersion": 0.778,
+      "discrimination": 1.029,
+      "scored": 20,
+      "na": 0,
+      "ratio": 1.3226221079691516
+    },
+    "timeline": {
+      "dimension": "timeline",
+      "dispersion": 0.99,
+      "discrimination": 0.675,
+      "scored": 20,
+      "na": 0,
+      "ratio": 0.6818181818181819
+    },
+    "personal_control": {
+      "dimension": "personal_control",
+      "dispersion": 0.778,
+      "discrimination": 1.165,
+      "scored": 20,
+      "na": 0,
+      "ratio": 1.4974293059125965
+    },
+    "treatment_control": {
+      "dimension": "treatment_control",
+      "dispersion": 0.849,
+      "discrimination": 1.174,
+      "scored": 20,
+      "na": 0,
+      "ratio": 1.3828032979976443
+    },
+    "identity": {
+      "dimension": "identity",
+      "dispersion": 0.707,
+      "discrimination": 1.22,
+      "scored": 20,
+      "na": 0,
+      "ratio": 1.7256011315417257
+    },
+    "concern": {
+      "dimension": "concern",
+      "dispersion": 0.495,
+      "discrimination": 0.643,
+      "scored": 20,
+      "na": 0,
+      "ratio": 1.2989898989898991
+    },
+    "coherence": {
+      "dimension": "coherence",
+      "dispersion": 0.566,
+      "discrimination": 1.006,
+      "scored": 20,
+      "na": 0,
+      "ratio": 1.777385159010601
+    },
+    "emotional_response": {
+      "dimension": "emotional_response",
+      "dispersion": 0.424,
+      "discrimination": 1.059,
+      "scored": 20,
+      "na": 0,
+      "ratio": 2.4976415094339623
+    },
+    "specific_necessity": {
+      "dimension": "specific_necessity",
+      "dispersion": 0.495,
+      "discrimination": 0.654,
+      "scored": 20,
+      "na": 0,
+      "ratio": 1.3212121212121213
+    },
+    "specific_concerns": {
+      "dimension": "specific_concerns",
+      "dispersion": 0.177,
+      "discrimination": 0.212,
+      "scored": 20,
+      "na": 0,
+      "ratio": 1.1977401129943503
+    },
+    "general_harm": {
+      "dimension": "general_harm",
+      "dispersion": 0.455,
+      "discrimination": 0.377,
+      "scored": 17,
+      "na": 3,
+      "ratio": 0.8285714285714285
+    },
+    "general_overuse": {
+      "dimension": "general_overuse",
+      "dispersion": 0.354,
+      "discrimination": 1.308,
+      "scored": 10,
+      "na": 10,
+      "ratio": 3.6949152542372885
+    }
+  },
+  "per_patient": {
+    "CLL-001": 0.354,
+    "CLL-002": 0.289,
+    "CLL-003": 1.066,
+    "CLL-004": 0.44,
+    "CLL-005": 0.247,
+    "HIV-001": 0.707,
+    "HIV-002": 0.477,
+    "HIV-003": 0.287,
+    "HIV-004": 0.601,
+    "HIV-005": 0.359
+  },
+  "underpowered": true
+}

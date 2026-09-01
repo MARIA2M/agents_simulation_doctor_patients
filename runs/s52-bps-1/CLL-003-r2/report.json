@@ -1,0 +1,244 @@
+{
+  "patient_id": "CLL-003",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "CLL-003",
+    "clinical_summary": "A 30-something software developer presents with a new, tender neck lump (2 weeks) and fatigue (1 month) that started around the same time. No recent infections, fever, or weight change. Sedentary work, some stress but manageable. Family history: father with leukemia, mother with breast cancer. Physical exam shows an isolated, possibly reactive lymph node. Plan: blood work, ultrasound, follow-up in 1 week.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "I've been feeling a bit more tired than usual lately after work",
+            "turn": 1
+          },
+          {
+            "quote": "I do feel like I have less energy than usual and need more breaks throughout the day",
+            "turn": 4
+          },
+          {
+            "quote": "In the evenings, I tend to just go to bed early rather than trying to stay up to do anything else",
+            "turn": 4
+          },
+          {
+            "quote": "The uncertainty of not knowing exactly what's going on is definitely taking a toll on me emotionally",
+            "turn": 10
+          }
+        ],
+        "reasoning": "The patient reports decreased energy, need for more breaks, and going to bed early, but can still complete day-to-day tasks. Uncertainty is emotionally taxing. This represents a moderate impact on daily life and emotional well-being.",
+        "score": 5.0,
+        "confidence": 0.7
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "The lump is about two weeks",
+            "turn": 2
+          },
+          {
+            "quote": "The fatigue started about a month ago",
+            "turn": 4
+          },
+          {
+            "quote": "I think getting clarity on both the lump and the fatigue would be most important to me",
+            "turn": 9
+          },
+          {
+            "quote": "We'll see you back in about a week",
+            "turn": 16
+          }
+        ],
+        "reasoning": "The patient is treating these as new, temporary symptoms and is planning for follow-up in a week. No indication of expecting a chronic or permanent course.",
+        "score": 3.0,
+        "confidence": 0.8
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I'm trying to stay hopeful and trust in your expertise and knowledge as my doctor",
+            "turn": 10
+          },
+          {
+            "quote": "I'm willing to do whatever it takes to get answers",
+            "turn": 11
+          },
+          {
+            "quote": "Taking a step-by-step approach makes me feel more confident about the process",
+            "turn": 15
+          }
+        ],
+        "reasoning": "The patient relies on medical expertise and is willing to follow the recommended plan, but does not describe any self-management strategies or actions they believe will significantly change the course of their illness.",
+        "score": 2.0,
+        "confidence": 0.8
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "I'm trying to stay hopeful and trust in your expertise and knowledge as my doctor",
+            "turn": 10
+          },
+          {
+            "quote": "I understand there might be more tests if needed, but I'm willing to do whatever it takes to get answers",
+            "turn": 11
+          },
+          {
+            "quote": "I feel more at ease knowing there's a plan in place to get answers",
+            "turn": 16
+          }
+        ],
+        "reasoning": "The patient trusts the medical system and believes evaluation and testing will provide answers. They are not expressing doubt about treatment effectiveness but also do not attribute their current state to treatment working.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "a small lump in my neck",
+            "turn": 1
+          },
+          {
+            "quote": "The lump is towards the side of my neck",
+            "turn": 3
+          },
+          {
+            "quote": "I do feel more tired than usual after work",
+            "turn": 3
+          },
+          {
+            "quote": "The fatigue started about a month ago",
+            "turn": 4
+          }
+        ],
+        "reasoning": "The patient describes two specific symptoms—a neck lump and fatigue—but neither is described as severe or intrusive. No illness label is used.",
+        "score": 3.0,
+        "confidence": 0.8
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "my wife noticed a small lump in my neck that's causing some concern",
+            "turn": 1
+          },
+          {
+            "quote": "The most scary thought would probably be that it could be cancer of some sort",
+            "turn": 10
+          },
+          {
+            "quote": "The uncertainty of not knowing exactly what's going on is definitely taking a toll on me emotionally",
+            "turn": 10
+          },
+          {
+            "quote": "I'm still concerned about the fatigue as well",
+            "turn": 14
+          }
+        ],
+        "reasoning": "The patient is clearly worried about cancer and the uncertainty is emotionally taxing. They actively seek answers and are concerned about both symptoms.",
+        "score": 7.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I'm hoping you can help shed some light on what might be going on",
+            "turn": 1
+          },
+          {
+            "quote": "I think getting clarity on both the lump and the fatigue would be most important to me",
+            "turn": 9
+          },
+          {
+            "quote": "Taking a step-by-step approach makes me feel more confident about the process",
+            "turn": 15
+          },
+          {
+            "quote": "I feel more at ease knowing there's a plan in place to get answers",
+            "turn": 16
+          }
+        ],
+        "reasoning": "The patient is seeking understanding and appreciates a structured, step-by-step approach. They are not confused about what's happening but also do not explain the mechanism or reason for the plan.",
+        "score": 5.0,
+        "confidence": 0.7
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "The uncertainty of not knowing exactly what's going on is definitely taking a toll on me emotionally",
+            "turn": 10
+          },
+          {
+            "quote": "I'm trying to stay hopeful and trust in your expertise and knowledge as my doctor",
+            "turn": 10
+          },
+          {
+            "quote": "I feel more at ease knowing there's a plan in place to get answers",
+            "turn": 16
+          }
+        ],
+        "reasoning": "Uncertainty is affecting the patient emotionally, but they are managing it by staying hopeful and trusting the process. The emotion is present but not overwhelming.",
+        "score": 4.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [],
+        "reasoning": "The patient is not on any regular medication, so there is no specific belief about their own prescribed medication.",
+        "score": null,
+        "confidence": 1.0
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [],
+        "reasoning": "The patient is not on any regular medication, so there are no specific concerns about their own prescribed medication.",
+        "score": null,
+        "confidence": 1.0
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [],
+        "reasoning": "This dimension was never explored in the consultation.",
+        "score": null,
+        "confidence": 1.0
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "This dimension was never explored in the consultation.",
+        "score": null,
+        "confidence": 1.0
+      }
+    },
+    "causes": [
+      "genetic/familial factors",
+      "father's leukemia",
+      "mother's breast cancer"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "my father had a form of leukemia years ago",
+        "turn": 6
+      },
+      {
+        "quote": "The hematologist... mentioned that there could be a genetic component at play",
+        "turn": 7
+      },
+      {
+        "quote": "They said that CLL runs in families and that my father's history might increase my risk slightly",
+        "turn": 8
+      },
+      {
+        "quote": "My mother had breast cancer years ago",
+        "turn": 9
+      }
+    ]
+  }
+}

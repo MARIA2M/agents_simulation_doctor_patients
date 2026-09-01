@@ -1,0 +1,21 @@
+{
+  "batch_id": "e4-smoke",
+  "repeats": 1,
+  "consultations": [
+    {
+      "run": "CLL-003-r1",
+      "patient_id": "CLL-003",
+      "repeat": 1,
+      "status": "ok",
+      "turns": 11,
+      "stop_reason": "doctor",
+      "events": 1,
+      "report_parsed": true,
+      "report_attempts": 1,
+      "na": [
+        "general_harm",
+        "general_overuse"
+      ]
+    }
+  ]
+}

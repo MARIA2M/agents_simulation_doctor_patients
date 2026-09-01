@@ -1,0 +1,294 @@
+{
+  "patient_id": "CLL-005",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "CLL-005",
+    "clinical_summary": "A 63-year-old patient presents with fatigue and growing cervical lymphadenopathy for several months. They have hypertension treated with an unspecified medication. They are anxious about the lumps, particularly concerned about cancer given family history of breast cancer. The fatigue significantly impacts their ability to work and perform daily activities. They have not had recent blood tests or imaging, and their blood pressure control is unknown.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "even simple tasks like doing the dishes or taking a short walk can leave me feeling exhausted and drained",
+            "turn": 18
+          },
+          {
+            "quote": "the fatigue has definitely affected my ability to work and do my daily activities",
+            "turn": 19
+          },
+          {
+            "quote": "I'm finding that even though I'm trying to maintain my usual routine, it's getting harder and harder to keep up with everything",
+            "turn": 19
+          }
+        ],
+        "reasoning": "The patient describes significant functional impairment - simple tasks cause exhaustion, work is affected, and they're struggling to maintain their routine. This is substantial impact on daily functioning.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "I first felt the lumps a few months ago",
+            "turn": 2
+          },
+          {
+            "quote": "they haven't gone away",
+            "turn": 2
+          },
+          {
+            "quote": "they do seem to be growing in size",
+            "turn": 6
+          },
+          {
+            "quote": "I think it was around the same time as my last doctor's appointment — a few months ago",
+            "turn": 6
+          },
+          {
+            "quote": "I think the last time I saw my doctor specifically for it was around three months ago",
+            "turn": 7
+          }
+        ],
+        "reasoning": "The patient has had these symptoms for several months, and they're growing. They don't express a clear expectation about duration - they're focused on the present concern about cancer. They haven't expressed a belief about whether this will resolve or continue.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I haven't had them checked out yet because I didn't think much of it at first",
+            "turn": 4
+          },
+          {
+            "quote": "I haven't told anyone else about it yet because I didn't want to worry them unnecessarily",
+            "turn": 7
+          },
+          {
+            "quote": "I'm not sure if my blood pressure is well-controlled or not — like I said earlier, I can't remember the last time I had it checked",
+            "turn": 17
+          },
+          {
+            "quote": "I'm not sure what the name of my blood pressure medication is — it's been a few months since I was prescribed it",
+            "turn": 14
+          }
+        ],
+        "reasoning": "The patient has been passive about seeking care, delayed evaluation, doesn't know their medication name, doesn't know if their blood pressure is controlled, and hasn't taken action beyond what was prescribed. They don't express active management or belief in their own ability to influence the outcome.",
+        "score": 2.0,
+        "confidence": 0.8
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "I'm on some sort of pill that the doctor gave me to help with my blood pressure. I can't remember the name right now, but I've been taking it as directed",
+            "turn": 5
+          },
+          {
+            "quote": "I've been taking it as directed",
+            "turn": 5
+          },
+          {
+            "quote": "I'm not sure if my blood pressure is well-controlled or not — like I said earlier, I can't remember the last time I had it checked",
+            "turn": 17
+          }
+        ],
+        "reasoning": "The patient takes their medication as directed but doesn't know what it is, doesn't know if it's working, and doesn't express belief in its effectiveness. They're passive about treatment.",
+        "score": 2.0,
+        "confidence": 0.7
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "I've been feeling really tired lately — not like the usual kind of tired, but more like my energy is just completely drained all the time",
+            "turn": 1
+          },
+          {
+            "quote": "I noticed these little lumps on the sides of my neck too",
+            "turn": 1
+          },
+          {
+            "quote": "Aside from the fatigue and the lumps in my neck, I've been pretty much feeling normal",
+            "turn": 3
+          },
+          {
+            "quote": "I can't think of anything else that's out of the ordinary",
+            "turn": 12
+          },
+          {
+            "quote": "I haven't noticed anything out of the ordinary in those areas",
+            "turn": 17
+          }
+        ],
+        "reasoning": "The patient identifies two main symptoms: fatigue and neck lumps. They don't use a specific illness label but describe these as their primary concerns. The symptoms are significant enough to be their main focus.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "It's been making me a bit anxious, to be honest",
+            "turn": 1
+          },
+          {
+            "quote": "now I'm really worried about it",
+            "turn": 2
+          },
+          {
+            "quote": "they do seem to be growing in size, which is making me even more worried",
+            "turn": 6
+          },
+          {
+            "quote": "ever since I found out about these lumps, I've been really scared and worried that they could be something serious like cancer",
+            "turn": 11
+          },
+          {
+            "quote": "I haven't told anyone else about it yet because I didn't want to worry them unnecessarily",
+            "turn": 7
+          }
+        ],
+        "reasoning": "The patient expresses significant worry and fear, particularly about cancer. They're anxious about the lumps growing and haven't shared this with others. The worry is prominent and affects their emotional state.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I first felt the lumps a few months ago, but I thought it was just because I'd been sleeping on my pillow wrong or something",
+            "turn": 2
+          },
+          {
+            "quote": "I can't remember exactly when it was, but I think it was around the same time as my last doctor's appointment — a few months ago",
+            "turn": 6
+          },
+          {
+            "quote": "I think the last time I saw my doctor specifically for it was around three months ago",
+            "turn": 7
+          },
+          {
+            "quote": "I'm not sure what the name of my blood pressure medication is — it's been a few months since I was prescribed it",
+            "turn": 14
+          },
+          {
+            "quote": "I'm not sure if my blood pressure is well-controlled or not — like I said earlier, I can't remember the last time I had it checked",
+            "turn": 17
+          },
+          {
+            "quote": "I don't know what's considered normal for me at this point",
+            "turn": 17
+          }
+        ],
+        "reasoning": "The patient has significant gaps in understanding - they don't know when they last had their blood pressure checked, don't know if it's controlled, don't know their medication name, don't know what's normal for them, and initially attributed the lumps to sleeping position. They have a vague timeline but no clear understanding of what's happening.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "It's been making me a bit anxious, to be honest",
+            "turn": 1
+          },
+          {
+            "quote": "now I'm really worried about it",
+            "turn": 2
+          },
+          {
+            "quote": "they do seem to be growing in size, which is making me even more worried",
+            "turn": 6
+          },
+          {
+            "quote": "ever since I found out about these lumps, I've been really scared and worried that they could be something serious like cancer",
+            "turn": 11
+          },
+          {
+            "quote": "I haven't told anyone else about it yet because I didn't want to worry them unnecessarily",
+            "turn": 7
+          },
+          {
+            "quote": "I can't seem to get enough rest",
+            "turn": 18
+          },
+          {
+            "quote": "it's like I'm running on fumes",
+            "turn": 18
+          }
+        ],
+        "reasoning": "The patient expresses anxiety, worry, and fear about the lumps, particularly about cancer. They're emotionally affected by the situation and have difficulty sleeping. They're also trying to manage their emotions by not sharing with others.",
+        "score": 8.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "I'm on some sort of pill that the doctor gave me to help with my blood pressure. I can't remember the name right now, but I've been taking it as directed",
+            "turn": 5
+          },
+          {
+            "quote": "I've been taking it as directed",
+            "turn": 5
+          },
+          {
+            "quote": "I'm not sure what the name of my blood pressure medication is — it's been a few months since I was prescribed it",
+            "turn": 14
+          }
+        ],
+        "reasoning": "The patient takes their medication as directed but doesn't know what it is, doesn't express belief in its necessity, and doesn't know if it's working. They're passive about treatment.",
+        "score": 2.0,
+        "confidence": 0.7
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "Aside from the occasional night sweat that I mentioned earlier, which I think might be related to my blood pressure medication, I haven't had any unexplained itching recently",
+            "turn": 16
+          }
+        ],
+        "reasoning": "The patient mentions a possible side effect (night sweats) but attributes it to the medication. They don't express significant concerns about the medication beyond this. They haven't raised concerns unprompted.",
+        "score": 2.0,
+        "confidence": 0.6
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [],
+        "reasoning": "The patient never expressed a general view about medicines as a class. They only mentioned their specific medication.",
+        "score": null,
+        "confidence": 0.0
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "The patient never expressed a view about whether doctors prescribe too readily. They accepted their prescription without questioning.",
+        "score": null,
+        "confidence": 0.0
+      }
+    },
+    "causes": [
+      "sleeping on pillow wrong",
+      "family history of breast cancer",
+      "cancer"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "I first felt the lumps a few months ago, but I thought it was just because I'd been sleeping on my pillow wrong or something",
+        "turn": 2
+      },
+      {
+        "quote": "there is a family history of breast cancer on my mother's side",
+        "turn": 11
+      },
+      {
+        "quote": "ever since I found out about these lumps, I've been really scared and worried that they could be something serious like cancer",
+        "turn": 11
+      }
+    ]
+  }
+}

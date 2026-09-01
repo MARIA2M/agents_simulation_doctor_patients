@@ -1,0 +1,154 @@
+{
+  "patient_id": "HIV-005",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "HIV-005",
+    "clinical_summary": "Patient with HIV on Triumeq for 3 years, currently with detectable viral load (340 copies/mL) after previously being undetectable. Adherence issues: 2-3 missed doses per week and occasional drug holidays. Patient attributes viral load increase to decreased adherence. Occasional headaches believed stress-related, no concerning symptoms of opportunistic infection. Patient acknowledges importance of consistent treatment but expresses concerns about side effects and indefinite nature of treatment.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "I've been feeling quite run down lately",
+            "turn": 1
+          }
+        ],
+        "reasoning": "Patient reports some symptoms (fatigue, run down) but no evidence of major role loss or functional impairment beyond these symptoms.",
+        "score": 2.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "I'm just taking this pill indefinitely without any end in sight",
+            "turn": 7
+          }
+        ],
+        "reasoning": "Patient explicitly states they understand HIV treatment is lifelong, showing they plan on it continuing indefinitely.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I believe this coincided with me being less consistent with my medication regimen",
+            "turn": 3
+          }
+        ],
+        "reasoning": "Patient recognizes the link between their own medication adherence and viral load outcomes, and is willing to change behavior.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "I know it's crucial for my health and to avoid resistance",
+            "turn": 7
+          }
+        ],
+        "reasoning": "Patient believes treatment is important and necessary for health outcomes.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "I assumed they were just stress-related or due to my job",
+            "turn": 5
+          }
+        ],
+        "reasoning": "Patient attributes symptoms (headaches, fatigue) to work stress rather than HIV, showing minimal symptom attribution to illness.",
+        "score": 2.0,
+        "confidence": 0.8
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "I'm concerned about the recent increase",
+            "turn": 1
+          }
+        ],
+        "reasoning": "Patient expresses specific concern about viral load increase, showing worry about the illness.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I believe this coincided with me being less consistent with my medication regimen",
+            "turn": 3
+          }
+        ],
+        "reasoning": "Patient understands the connection between their medication adherence and viral load outcomes.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "I get worried about potential side effects or feel like I'm just taking this pill indefinitely without any end in sight",
+            "turn": 7
+          }
+        ],
+        "reasoning": "Patient expresses worry about side effects and existential concern about indefinite treatment, showing emotional response.",
+        "score": 4.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "I know it's crucial for my health and to avoid resistance",
+            "turn": 7
+          }
+        ],
+        "reasoning": "Patient believes treatment is necessary for health and to prevent resistance, and is willing to organize around it.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "I get worried about potential side effects or how my body will handle it",
+            "turn": 4
+          }
+        ],
+        "reasoning": "Patient expresses concerns about side effects that have led to missed doses and drug holidays.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "I get worried about potential side effects or feel like I'm just taking this pill indefinitely without any end in sight",
+            "turn": 7
+          }
+        ],
+        "reasoning": "Patient expresses concern about long-term effects of medication, showing mild generalised caution.",
+        "score": 3.0,
+        "confidence": 0.8
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "Patient never raised any concerns about whether doctors prescribe too readily.",
+        "score": null,
+        "confidence": 1.0
+      }
+    },
+    "causes": [],
+    "causes_evidence": []
+  }
+}

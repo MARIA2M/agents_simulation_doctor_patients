@@ -1,0 +1,239 @@
+{
+  "patient_id": "CLL-003",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "CLL-003",
+    "clinical_summary": "The patient presents with persistent tiredness for a few weeks that has been gradually worsening, described as lethargy that persists even after resting. They also have a pea-sized lump on one side of their neck that has been present longer than they realized (wife just noticed it). Additional symptoms include eating more than usual, feeling warmer than usual, and difficulty sleeping. They have a family history of CLL (father died from complications). They are not on any regular medications, only occasional OTC pain relief. They trust doctors and follow recommendations, believing doctors are appropriately cautious about prescribing.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "It's quite an inconvenience to be here today",
+            "turn": 1
+          },
+          {
+            "quote": "It's more like an overall feeling of lethargy that I carry with me even after coming home and resting",
+            "turn": 3
+          },
+          {
+            "quote": "Even in the evenings, once I finally sit down or go to bed, it takes a lot of effort to get myself going again",
+            "turn": 3
+          },
+          {
+            "quote": "It's just become increasingly harder for me to muster up the energy to do things after work",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The tiredness is affecting their evenings and ability to get going after work. They describe it as an inconvenience and it's becoming harder to muster energy. However, they're still able to work and function, just with reduced energy.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "The tiredness has been with me for a few weeks now",
+            "turn": 3
+          },
+          {
+            "quote": "it's been more of a gradual change rather than something that started suddenly",
+            "turn": 8
+          },
+          {
+            "quote": "I'm not exactly sure when the lump started growing",
+            "turn": 7
+          },
+          {
+            "quote": "My father had CLL, but he was diagnosed quite late in life and passed away shortly after his diagnosis",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The tiredness has been gradual over a few weeks. The lump has been present longer than they realized. They don't have a clear sense of how long this will continue.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I've been trying to stay proactive about my health and schedule regular checkups",
+            "turn": 9
+          },
+          {
+            "quote": "there have been times when I've put things off until a problem seemed more pressing or urgent",
+            "turn": 9
+          },
+          {
+            "quote": "I believe in the importance of following professional medical advice",
+            "turn": 10
+          }
+        ],
+        "reasoning": "They're trying to be proactive with checkups but sometimes procrastinate. They trust doctors and follow recommendations rather than taking active control themselves.",
+        "score": 4.0,
+        "confidence": 0.6
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "I generally trust doctors and believe that they're doing their best to help me based on their expertise",
+            "turn": 10
+          },
+          {
+            "quote": "I believe in the importance of following professional medical advice",
+            "turn": 10
+          },
+          {
+            "quote": "I think they're appropriately cautious in their approach",
+            "turn": 11
+          }
+        ],
+        "reasoning": "They trust doctors and believe they're doing their best. They follow recommendations. However, they haven't really engaged with treatment yet since they're not on any regular medication.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "I have this persistent feeling of tiredness after work",
+            "turn": 1
+          },
+          {
+            "quote": "a small lump in my neck",
+            "turn": 1
+          },
+          {
+            "quote": "I don't recall ever feeling anything unusual in that area",
+            "turn": 7
+          }
+        ],
+        "reasoning": "They haven't given their symptoms a clear label. They describe them as tiredness and a lump, but don't have a specific illness identity.",
+        "score": 2.0,
+        "confidence": 0.8
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "I am definitely concerned and worried about both of them",
+            "turn": 7
+          },
+          {
+            "quote": "It's been quite unsettling to notice these changes in my body",
+            "turn": 7
+          },
+          {
+            "quote": "It's definitely something that has been on my mind given his history with the illness",
+            "turn": 9
+          }
+        ],
+        "reasoning": "They are clearly concerned and worried about both symptoms. The family history of CLL adds to their concern. They find it unsettling.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I remember my hematologist mentioning that a slightly low blood count is not unusual and could be related to aging",
+            "turn": 6
+          },
+          {
+            "quote": "I don't recall her expressing much concern about it at the time, so I haven't given it too much thought since then",
+            "turn": 6
+          },
+          {
+            "quote": "I'm hoping we can get to the bottom of it all with your help",
+            "turn": 7
+          }
+        ],
+        "reasoning": "They have some understanding of the low blood count as age-related, but haven't given it much thought. They're trying to understand what's happening but don't have a clear picture.",
+        "score": 4.0,
+        "confidence": 0.6
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "It's quite an inconvenience to be here today",
+            "turn": 1
+          },
+          {
+            "quote": "It's been quite unsettling to notice these changes in my body",
+            "turn": 7
+          },
+          {
+            "quote": "I am definitely concerned and worried about both of them",
+            "turn": 7
+          }
+        ],
+        "reasoning": "They find it unsettling and are concerned. They're not overly emotional but do express worry and concern.",
+        "score": 6.0,
+        "confidence": 0.7
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [],
+        "reasoning": "The patient is not on any regular medication, so there is no specific belief about their own prescribed medication to assess.",
+        "score": null,
+        "confidence": 1.0
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [],
+        "reasoning": "The patient is not on any regular medication, so there are no specific concerns about their own prescribed medication to assess.",
+        "score": null,
+        "confidence": 1.0
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "I'm aware that there may be potential side effects to medications",
+            "turn": 11
+          }
+        ],
+        "reasoning": "The patient is aware of potential side effects but does not believe medications are inherently harmful. They judge each medicine on its own terms.",
+        "score": 2.0,
+        "confidence": 0.7
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [
+          {
+            "quote": "I think they're appropriately cautious in their approach",
+            "turn": 11
+          }
+        ],
+        "reasoning": "The patient believes doctors are appropriately cautious about prescribing medication.",
+        "score": 2.0,
+        "confidence": 0.6
+      }
+    },
+    "causes": [
+      "menopausal symptoms",
+      "aging",
+      "low blood count",
+      "family history of CLL"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "I put it down to menopausal symptoms since she's gone through them recently",
+        "turn": 4
+      },
+      {
+        "quote": "a slightly low blood count is not unusual and could be related to aging",
+        "turn": 6
+      },
+      {
+        "quote": "My father had CLL",
+        "turn": 8
+      }
+    ]
+  }
+}

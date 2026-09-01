@@ -1,0 +1,275 @@
+{
+  "patient_id": "CLL-001",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "CLL-001",
+    "clinical_summary": "The patient has a diagnosed blood disorder affecting daily functioning — unable to get out of bed on some days, work and family time impacted. Symptoms include fatigue, occasional night sweats, and persistent lymph nodes in the neck. They report headaches as a side effect of the prescribed medication, which they are following but question whether it is worth it. They feel uncertain about the illness's long-term course, worry about it keeping them up at night, and describe it as a 'waiting game'.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "some days I can barely get out of bed",
+            "turn": 1
+          },
+          {
+            "quote": "It feels like this disease has taken over everything — my work, my time with the kids, everything",
+            "turn": 1
+          },
+          {
+            "quote": "The rest of the symptoms are pretty much what you'd expect with this condition: lots of fatigue, occasional night sweats, and these lymph nodes in my neck that don't seem to be going away. It's a real struggle, doctor.",
+            "turn": 2
+          }
+        ],
+        "reasoning": "The patient describes substantial impairment in daily functioning — inability to get out of bed, work and family time affected, and multiple ongoing symptoms. This goes beyond adaptation to a major role loss or reduction.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "I guess it's been a few months since the diagnosis",
+            "turn": 3
+          },
+          {
+            "quote": "The idea that I may be dealing with this for years, maybe even decades... it's hard to wrap my head around",
+            "turn": 5
+          },
+          {
+            "quote": "not knowing when or if treatment might become necessary is really unsettling",
+            "turn": 5
+          },
+          {
+            "quote": "it might just be a waiting game",
+            "turn": 4
+          }
+        ],
+        "reasoning": "Although the diagnosis is a few months old, the patient explicitly thinks about a long-term future (years, decades), describes uncertainty about when treatment might become necessary, and frames the situation as a 'waiting game', suggesting they are planning for the illness to continue.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I feel like I'm doing all I can to take care of myself",
+            "turn": 4
+          },
+          {
+            "quote": "I've been trying to get enough rest when I can, eating healthily, and staying away from stress as much as possible — but honestly, sometimes it feels like those things don't make much difference",
+            "turn": 4
+          },
+          {
+            "quote": "I know you doctors have a lot more tools at your disposal than I do, so in many ways I feel like this is mostly up to you",
+            "turn": 4
+          },
+          {
+            "quote": "But I also appreciate that there's only so much anyone can do right now; it might just be a waiting game",
+            "turn": 4
+          }
+        ],
+        "reasoning": "The patient actively attempts self-care strategies but feels they don't make much difference. They explicitly state that the doctors have more tools and that 'this is mostly up to you', and frame it as a 'waiting game', indicating low personal control.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "I know you doctors have a lot more tools at your disposal than I do",
+            "turn": 4
+          },
+          {
+            "quote": "I'm trusting your judgment",
+            "turn": 6
+          },
+          {
+            "quote": "doing my best to keep up with the medication schedule as you've laid out",
+            "turn": 6
+          },
+          {
+            "quote": "I believe that over time, things may start to change",
+            "turn": 6
+          }
+        ],
+        "reasoning": "The patient trusts the doctors' tools and judgment, follows the medication schedule, and sees some benefit (headaches less frequent), but still waits for 'something more substantial to take effect', indicating a partial but clear benefit.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "some kind of blood disorder",
+            "turn": 3
+          },
+          {
+            "quote": "The rest of the symptoms are pretty much what you'd expect with this condition: lots of fatigue, occasional night sweats, and these lymph nodes in my neck that don't seem to be going away",
+            "turn": 2
+          }
+        ],
+        "reasoning": "The patient identifies the illness as a blood disorder and describes multiple daily symptoms (fatigue, night sweats, lymph nodes) that they attribute to the condition, indicating an identity built around these symptoms.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "I'm definitely worried about the illness itself",
+            "turn": 5
+          },
+          {
+            "quote": "The idea that I may be dealing with this for years, maybe even decades... it's hard to wrap my head around",
+            "turn": 5
+          },
+          {
+            "quote": "not knowing when or if treatment might become necessary is really unsettling",
+            "turn": 5
+          },
+          {
+            "quote": "It's the illness itself that keeps me up at night, wondering what its long-term effects might be",
+            "turn": 5
+          }
+        ],
+        "reasoning": "The patient explicitly states worry about the illness, worries about long-term effects, and reports the illness keeps them up at night, showing frequent, intrusive worry about the illness.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I still feel like there's a lot of mystery around this condition",
+            "turn": 3
+          },
+          {
+            "quote": "I understand that it's some kind of blood disorder, but beyond that... well, I'm not sure I have a clear picture in my head",
+            "turn": 3
+          },
+          {
+            "quote": "It sounds complex and difficult to manage",
+            "turn": 3
+          }
+        ],
+        "reasoning": "The patient acknowledges uncertainty and mystery about the condition, understands it is a blood disorder but lacks a clear picture beyond that, and describes it as complex and difficult to manage, indicating gaps in understanding.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "It feels like this disease has taken over everything — my work, my time with the kids, everything",
+            "turn": 1
+          },
+          {
+            "quote": "It's a real struggle, doctor",
+            "turn": 2
+          },
+          {
+            "quote": "The idea that I may be dealing with this for years, maybe even decades... it's hard to wrap my head around",
+            "turn": 5
+          },
+          {
+            "quote": "It's the illness itself that keeps me up at night",
+            "turn": 5
+          },
+          {
+            "quote": "I try not to dwell too much on the medication itself. Instead, I focus on trying to maintain some sense of stability and normalcy in my life",
+            "turn": 7
+          }
+        ],
+        "reasoning": "The patient describes feeling overwhelmed ('taken over everything'), calls it a 'real struggle', worries about long-term effects affecting sleep, and tries to maintain stability, showing emotional impact on mood, sleep, and daily functioning.",
+        "score": 8.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "I appreciate that the medication could help",
+            "turn": 6
+          },
+          {
+            "quote": "The headaches have been happening less often since I started taking it, which is a good sign",
+            "turn": 6
+          },
+          {
+            "quote": "doing my best to keep up with the medication schedule as you've laid out",
+            "turn": 6
+          },
+          {
+            "quote": "if it helps manage the illness and the symptoms, then it's worth taking",
+            "turn": 7
+          }
+        ],
+        "reasoning": "The patient sees the medication as potentially helpful, notes it is reducing headaches, follows the schedule, and frames it as worth taking if it helps manage symptoms, indicating they treat it as important but not necessarily non-negotiable.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "I've been getting these terrible headaches since I started",
+            "turn": 1
+          },
+          {
+            "quote": "I keep wondering if it's really worth it",
+            "turn": 1
+          },
+          {
+            "quote": "there are worries about side effects or what might happen if I stop taking it suddenly",
+            "turn": 7
+          },
+          {
+            "quote": "It's a lot to balance",
+            "turn": 7
+          }
+        ],
+        "reasoning": "The patient has experienced side effects (headaches), worries about whether it is worth it, and has concerns about stopping suddenly. These concerns have led them to question the treatment's value and think about the balance of risks and benefits.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "there are worries about side effects or what might happen if I stop taking it suddenly",
+            "turn": 7
+          },
+          {
+            "quote": "As for long-term medication, it feels like something of a double-edged sword",
+            "turn": 7
+          }
+        ],
+        "reasoning": "The patient expresses concern about side effects and long-term medication, describing it as a 'double-edged sword', suggesting some general caution about medicines as a class, though not extreme avoidance.",
+        "score": 3.0,
+        "confidence": 0.6
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [
+          {
+            "quote": "It seems like there's always going to be some gray area in whether a certain medicine is really necessary or not",
+            "turn": 7
+          },
+          {
+            "quote": "I believe you doctors do the best you can with the information available",
+            "turn": 7
+          }
+        ],
+        "reasoning": "The patient acknowledges uncertainty about whether certain medicines are necessary but trusts that doctors are doing their best, indicating mild doubt about necessity but not a strong belief that prescribing is excessive.",
+        "score": 2.0,
+        "confidence": 0.6
+      }
+    },
+    "causes": [],
+    "causes_evidence": []
+  }
+}

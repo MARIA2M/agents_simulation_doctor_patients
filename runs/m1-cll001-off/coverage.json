@@ -1,0 +1,3034 @@
+{
+  "batch": "m1-cll001-off",
+  "consultations": 5,
+  "patients": 1,
+  "unparsed": [],
+  "quote_normalisation": "whitespace collapsed, quotes and dashes unified, case folded",
+  "min_repeats_for_spread": 5,
+  "reads_ground_truth": false,
+  "overall": {
+    "ungrounded_rate": 0.038
+  },
+  "by_consultation": [
+    {
+      "run": "CLL-001-r1",
+      "patient_id": "CLL-001",
+      "repeat": 1,
+      "dimensions": {
+        "consequences": {
+          "dimension": "consequences",
+          "score": 8.0,
+          "confidence": 0.8,
+          "quotes": [
+            {
+              "quote": "some days I can barely get out of bed",
+              "turn": 4,
+              "found_in": [
+                4
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "It feels like this disease has taken over everything — my work, my time with the kids, everything",
+              "turn": 4,
+              "found_in": [
+                4
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "I worry if I'll be able to keep up with everything as this illness progresses",
+              "turn": 12,
+              "found_in": [
+                12
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "Part of me is scared about how much this illness might impact everything — not just work but also my relationships and hobbies",
+              "turn": 13,
+              "found_in": [
+                13
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            }
+          ],
+          "state": "GROUNDED"
+        },
+        "timeline": {
+          "dimension": "timeline",
+          "score": 6.0,
+          "confidence": 0.7,
+          "quotes": [
+            {
+              "quote": "I was diagnosed with Chronic Lymphocytic Leukemia a few years back. It's been a slow progression so far, thankfully",
+              "turn": 2,
+              "found_in": [
+                2
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "My doctor said it might be years before we need to start any treatment",
+              "turn": 2,
+              "found_in": [
+                2
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "I know it's a chronic illness and that there might not be any treatment needed for years",
+              "turn": 7,
+              "found_in": [
+                7
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "I can't shake off this feeling of dread — like something bad could happen at any moment",
+              "turn": 7,
+              "found_in": [
+                7
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            }
+          ],
+          "state": "GROUNDED"
+        },
+        "personal_control": {
+          "dimension": "personal_control",
+          "score": 4.0,
+          "confidence": 0.7,
+          "quotes": [
+            {
+              "quote": "Sometimes I feel like I have no say in any of it",
+              "turn": 4,
+              "found_in": [
+                4
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "Even when I try to do everything right, there are times when it still feels like the illness is just taking its course regardless of anything I do",
+              "turn": 6,
+              "found_in": [
+                6
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "I try to stay active and eat relatively healthily, but it's difficult when I'm feeling this tired all the time. Sometimes, even just getting through the day feels like an accomplishment",
+              "turn": 10,
+              "found_in": [
+                10
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            }
+          ],
+          "state": "GROUNDED"
+        },
+        "treatment_control": {
+          "dimension": "treatment_control",
+          "score": 4.0,
+          "confidence": 0.7,
+          "quotes": [
+            {
+              "quote": "I know there might not be any need for treatment right now, but at the same time, it's hard not to feel like something should be happening or changing",
+              "turn": 9,
+              "found_in": [
+                9
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "Ritalin seems to have caused more side effects than it's worth",
+              "turn": 9,
+              "found_in": [
+                9
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "I worry about what might happen if we try something new",
+              "turn": 9,
+              "found_in": [
+                9
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "I keep wondering if it's really worth it",
+              "turn": 4,
+              "found_in": [
+                4
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            }
+          ],
+          "state": "GROUNDED"
+        },
+        "identity": {
+          "dimension": "identity",
+          "score": 6.0,
+          "confidence": 0.7,
+          "quotes": [
+            {
+              "quote": "I'm a lawyer",
+              "turn": 12,
+              "found_in": [
+                12
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "Outside of work, I love spending time with my family and staying involved in community organizations",
+              "turn": 13,
+              "found_in": [
+                13
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "It feels like this disease has taken over everything — my work, my time with the kids, everything",
+              "turn": 4,
+              "found_in": [
+                4
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            }
+          ],
+          "state": "GROUNDED"
+        },
+        "concern": {
+          "dimension": "concern",
+          "score": 8.0,
+          "confidence": 0.8,
+          "quotes": [
+            {
+              "quote": "I can't shake off this feeling of dread — like something bad could happen at any moment",
+              "turn": 7,
+              "found_in": [
+                7
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "The biggest worry is just not knowing what's coming next or how things will change",
+              "turn": 7,
+              "found_in": [
+                7
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "It keeps me up at night, wondering if I'm doing enough to take care of myself and if there's more I should be doing",
+              "turn": 7,
+              "found_in": [
+                7
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "The uncertainty is the hardest part to bear, really",
+              "turn": 13,
+              "found_in": [
+                13
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            }
+          ],
+          "state": "GROUNDED"
+        },
+        "coherence": {
+          "dimension": "coherence",
+          "score": 6.0,
+          "confidence": 0.7,
+          "quotes": [
+            {
+              "quote": "I was diagnosed with Chronic Lymphocytic Leukemia a few years back",
+              "turn": 2,
+              "found_in": [
+                2
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "I know it's a chronic illness and that there might not be any treatment needed for years",
+              "turn": 7,
+              "found_in": [
+                7
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "I believe CLL is largely genetic and related to some environmental factors",
+              "turn": 10,
+              "found_in": [
+                10
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            }
+          ],
+          "state": "GROUNDED"
+        },
+        "emotional_response": {
+          "dimension": "emotional_response",
+          "score": 8.0,
+          "confidence": 0.8,
+          "quotes": [
+            {
+              "quote": "It feels like this disease has taken over everything",
+              "turn": 4,
+              "found_in": [
+                4
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "I can't shake off this feeling of dread",
+              "turn": 7,
+              "found_in": [
+                7
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "It keeps me up at night",
+              "turn": 7,
+              "found_in": [
+                7,
+                12
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "The uncertainty is the hardest part to bear, really",
+              "turn": 13,
+              "found_in": [
+                13
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            }
+          ],
+          "state": "GROUNDED"
+        },
+        "specific_necessity": {
+          "dimension": "specific_necessity",
+          "score": 3.0,
+          "confidence": 0.7,
+          "quotes": [
+            {
+              "quote": "I keep wondering if it's really worth it",
+              "turn": 4,
+              "found_in": [
+                4
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "Ritalin seems to have caused more side effects than it's worth",
+              "turn": 9,
+              "found_in": [
+                9
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "I worry about what might happen if we try something new",
+              "turn": 9,
+              "found_in": [
+                9
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            }
+          ],
+          "state": "GROUNDED"
+        },
+        "specific_concerns": {
+          "dimension": "specific_concerns",
+          "score": 4.0,
+          "confidence": 0.7,
+          "quotes": [
+            {
+              "quote": "The headaches are definitely the main concern for me with the Ritalin. They're quite intense and persistent",
+              "turn": 8,
+              "found_in": [
+                8
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "It's also making my anxiety feel more heightened overall — like everything is just adding up",
+              "turn": 8,
+              "found_in": [
+                8
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "I keep wondering if it's really worth it",
+              "turn": 4,
+              "found_in": [
+                4
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            }
+          ],
+          "state": "GROUNDED"
+        },
+        "general_harm": {
+          "dimension": "general_harm",
+          "score": 2.0,
+          "confidence": 0.5,
+          "quotes": [],
+          "state": "UNGROUNDED"
+        },
+        "general_overuse": {
+          "dimension": "general_overuse",
+          "score": 2.0,
+          "confidence": 0.5,
+          "quotes": [],
+          "state": "UNGROUNDED"
+        },
+        "causes": {
+          "dimension": "causes",
+          "score": null,
+          "confidence": 0.0,
+          "quotes": [
+            {
+              "quote": "I believe CLL is largely genetic and related to some environmental factors. My family has a history of various cancers, so I think that might have played into my diagnosis as well",
+              "turn": 10,
+              "found_in": [
+                10
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            }
+          ],
+          "state": "CITED_UNSCORED"
+        }
+      },
+      "turn_reuse": {
+        "2": [
+          "coherence",
+          "timeline"
+        ],
+        "4": [
+          "consequences",
+          "emotional_response",
+          "identity",
+          "personal_control",
+          "specific_concerns",
+          "specific_necessity",
+          "treatment_control"
+        ],
+        "7": [
+          "coherence",
+          "concern",
+          "emotional_response",
+          "timeline"
+        ],
+        "9": [
+          "specific_necessity",
+          "treatment_control"
+        ],
+        "10": [
+          "causes",
+          "coherence",
+          "personal_control"
+        ],
+        "12": [
+          "consequences",
+          "identity"
+        ],
+        "13": [
+          "concern",
+          "consequences",
+          "emotional_response",
+          "identity"
+        ]
+      },
+      "coverage_hint": {},
+      "working_notes": []
+    },
+    {
+      "run": "CLL-001-r2",
+      "patient_id": "CLL-001",
+      "repeat": 2,
+      "dimensions": {
+        "consequences": {
+          "dimension": "consequences",
+          "score": 8.0,
+          "confidence": 0.9,
+          "quotes": [
+            {
+              "quote": "It's like a heavy weight that drags me down all day long, and even when I try to rest, it feels like I can't really sleep deeply. It makes everything harder - even simple tasks around the house feel like they take much more effort than they should.",
+              "turn": 2,
+              "found_in": [
+                2
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "It's quite distressing because it makes it difficult to concentrate or do anything that requires focus.",
+              "turn": 2,
+              "found_in": [
+                2
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "The fatigue would probably be around an 8 on that scale - it's definitely interfering with my ability to do things and keeping me from feeling like myself. The headaches are closer to a 9 in terms of their impact because they're so disruptive and difficult to manage.",
+              "turn": 8,
+              "found_in": [
+                8
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            }
+          ],
+          "state": "GROUNDED"
+        },
+        "timeline": {
+          "dimension": "timeline",
+          "score": 8.0,
+          "confidence": 0.85,
+          "quotes": [
+            {
+              "quote": "I was diagnosed with CLL almost four years ago now, although it's been progressing fairly slowly.",
+              "turn": 3,
+              "found_in": [
+                3
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "My blood test results seem stable enough, but I do notice little changes from month to month.",
+              "turn": 4,
+              "found_in": [
+                4
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "I worry that the disease is quietly advancing in ways we can't detect yet.",
+              "turn": 4,
+              "found_in": [
+                4
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "not being on any treatment has been both relieving and anxiety-inducing.",
+              "turn": 4,
+              "found_in": [
+                4
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            }
+          ],
+          "state": "GROUNDED"
+        },
+        "personal_control": {
+          "dimension": "personal_control",
+          "score": 6.0,
+          "confidence": 0.8,
+          "quotes": [
+            {
+              "quote": "staying as active and healthy as possible - eating well, trying to exercise regularly, and making sure I get enough rest.",
+              "turn": 5,
+              "found_in": [
+                5
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "maintaining a support network of friends and family who understand my situation and can be there for me.",
+              "turn": 5,
+              "found_in": [
+                5
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "keeping busy with hobbies and interests helps distract me from the worries.",
+              "turn": 5,
+              "found_in": [
+                5
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "I don't really know what 'normal' feels like without this illness.",
+              "turn": 4,
+              "found_in": [
+                4
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            }
+          ],
+          "state": "GROUNDED"
+        },
+        "treatment_control": {
+          "dimension": "treatment_control",
+          "score": 8.0,
+          "confidence": 0.85,
+          "quotes": [
+            {
+              "quote": "Overall, I feel well taken care of by my oncologist.",
+              "turn": 6,
+              "found_in": [
+                6
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "They've explained the rationale behind active surveillance and the reasons why we're not starting treatment yet.",
+              "turn": 6,
+              "found_in": [
+                6
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "I trust that they're making decisions based on what's best for me.",
+              "turn": 6,
+              "found_in": [
+                6
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "While there are moments when I wonder if I might need more aggressive approaches, I trust that they're making decisions based on what's best for me.",
+              "turn": 6,
+              "found_in": [
+                6
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            }
+          ],
+          "state": "GROUNDED"
+        },
+        "identity": {
+          "dimension": "identity",
+          "score": 8.0,
+          "confidence": 0.8,
+          "quotes": [
+            {
+              "quote": "My understanding of CLL is that it affects my immune system and can lead to other complications over time.",
+              "turn": 5,
+              "found_in": [
+                5
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "keeping me from feeling like myself",
+              "turn": 8,
+              "found_in": [
+                8
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "symptoms are really impacting my ability to function and feel like myself.",
+              "turn": 3,
+              "found_in": [],
+              "verbatim": false,
+              "in_named_turn": false,
+              "from_patient": false,
+              "verified": false
+            }
+          ],
+          "state": "GROUNDED"
+        },
+        "concern": {
+          "dimension": "concern",
+          "score": 8.0,
+          "confidence": 0.85,
+          "quotes": [
+            {
+              "quote": "I worry that the disease is quietly advancing in ways we can't detect yet.",
+              "turn": 4,
+              "found_in": [
+                4
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "The uncertainty can be quite difficult to handle.",
+              "turn": 4,
+              "found_in": [
+                4
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "not being on any treatment has been both relieving and anxiety-inducing.",
+              "turn": 4,
+              "found_in": [
+                4
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "moments when I wonder if I might need more aggressive approaches",
+              "turn": 6,
+              "found_in": [
+                6
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            }
+          ],
+          "state": "GROUNDED"
+        },
+        "coherence": {
+          "dimension": "coherence",
+          "score": 6.0,
+          "confidence": 0.8,
+          "quotes": [
+            {
+              "quote": "My understanding of CLL is that it affects my immune system and can lead to other complications over time.",
+              "turn": 5,
+              "found_in": [
+                5
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "They've explained the rationale behind active surveillance and the reasons why we're not starting treatment yet.",
+              "turn": 6,
+              "found_in": [
+                6
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "I don't really know what 'normal' feels like without this illness.",
+              "turn": 4,
+              "found_in": [
+                4
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "little changes from month to month",
+              "turn": 4,
+              "found_in": [
+                4
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            }
+          ],
+          "state": "GROUNDED"
+        },
+        "emotional_response": {
+          "dimension": "emotional_response",
+          "score": 8.0,
+          "confidence": 0.8,
+          "quotes": [
+            {
+              "quote": "It's quite distressing because it makes it difficult to concentrate or do anything that requires focus.",
+              "turn": 2,
+              "found_in": [
+                2
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "The uncertainty can be quite difficult to handle.",
+              "turn": 4,
+              "found_in": [
+                4
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "worries about the disease start creeping up",
+              "turn": 5,
+              "found_in": [
+                5
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "keeping busy with hobbies and interests helps distract me from the worries.",
+              "turn": 5,
+              "found_in": [
+                5
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            }
+          ],
+          "state": "GROUNDED"
+        },
+        "specific_necessity": {
+          "dimension": "specific_necessity",
+          "score": 4.0,
+          "confidence": 0.75,
+          "quotes": [
+            {
+              "quote": "I understand the importance of maintaining a consistent treatment plan and keeping up with regular blood tests to monitor my condition.",
+              "turn": 7,
+              "found_in": [
+                7
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "When it comes to medication in general, I think it's an essential aspect of managing any health issue.",
+              "turn": 7,
+              "found_in": [
+                7
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "I'd much rather not have any illness at all. But in the absence of other options, I understand the importance of keeping up with medications as prescribed.",
+              "turn": 7,
+              "found_in": [
+                7
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            }
+          ],
+          "state": "GROUNDED"
+        },
+        "specific_concerns": {
+          "dimension": "specific_concerns",
+          "score": 3.0,
+          "confidence": 0.7,
+          "quotes": [
+            {
+              "quote": "It can be a bit worrisome to think about long-term side effects or potential drug interactions.",
+              "turn": 7,
+              "found_in": [],
+              "verbatim": false,
+              "in_named_turn": false,
+              "from_patient": false,
+              "verified": false
+            },
+            {
+              "quote": "it's not ideal - I'd much rather not have any illness at all.",
+              "turn": 7,
+              "found_in": [
+                7
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            }
+          ],
+          "state": "GROUNDED"
+        },
+        "general_harm": {
+          "dimension": "general_harm",
+          "score": 2.0,
+          "confidence": 0.8,
+          "quotes": [
+            {
+              "quote": "trust that doctors are monitoring these things carefully and making decisions based on what they believe is best for my situation",
+              "turn": 7,
+              "found_in": [
+                7
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            }
+          ],
+          "state": "GROUNDED"
+        },
+        "general_overuse": {
+          "dimension": "general_overuse",
+          "score": 2.0,
+          "confidence": 0.8,
+          "quotes": [
+            {
+              "quote": "I trust that they're making decisions based on what's best for me",
+              "turn": 6,
+              "found_in": [
+                6
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            }
+          ],
+          "state": "GROUNDED"
+        },
+        "causes": {
+          "dimension": "causes",
+          "score": null,
+          "confidence": 0.0,
+          "quotes": [],
+          "state": "SILENT"
+        }
+      },
+      "turn_reuse": {
+        "2": [
+          "consequences",
+          "emotional_response"
+        ],
+        "4": [
+          "coherence",
+          "concern",
+          "emotional_response",
+          "personal_control",
+          "timeline"
+        ],
+        "5": [
+          "coherence",
+          "emotional_response",
+          "identity",
+          "personal_control"
+        ],
+        "6": [
+          "coherence",
+          "concern",
+          "general_overuse",
+          "treatment_control"
+        ],
+        "7": [
+          "general_harm",
+          "specific_concerns",
+          "specific_necessity"
+        ],
+        "8": [
+          "consequences",
+          "identity"
+        ]
+      },
+      "coverage_hint": {},
+      "working_notes": []
+    },
+    {
+      "run": "CLL-001-r3",
+      "patient_id": "CLL-001",
+      "repeat": 3,
+      "dimensions": {
+        "consequences": {
+          "dimension": "consequences",
+          "score": 8.0,
+          "confidence": 0.8,
+          "quotes": [
+            {
+              "quote": "It's really been affecting my day-to-day life - work's been slow, and I haven't had the energy to do things with my family like I used to.",
+              "turn": 1,
+              "found_in": [
+                1
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "I just don't have the same energy as before, and even little things can seem really draining.",
+              "turn": 7,
+              "found_in": [
+                7
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "It's not just about managing these specific symptoms, but feeling like my body is generally weaker than it should be.",
+              "turn": 7,
+              "found_in": [
+                7
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            }
+          ],
+          "state": "GROUNDED"
+        },
+        "timeline": {
+          "dimension": "timeline",
+          "score": 8.0,
+          "confidence": 0.7,
+          "quotes": [
+            {
+              "quote": "I've been working at the same company for over 20 years now, and the last few years have been particularly stressful.",
+              "turn": 4,
+              "found_in": [
+                4
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "It's not just that I'm getting older - it's that I feel like my body is slowly losing ground, you know?",
+              "turn": 5,
+              "found_in": [
+                5
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "when I get sick - whether it's a cold or something else - it takes longer for me to recover now.",
+              "turn": 7,
+              "found_in": [
+                7
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            }
+          ],
+          "state": "GROUNDED"
+        },
+        "personal_control": {
+          "dimension": "personal_control",
+          "score": 4.0,
+          "confidence": 0.6,
+          "quotes": [
+            {
+              "quote": "I've just been trying my best to manage them as they come up.",
+              "turn": 3,
+              "found_in": [
+                3
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "I don't think I've had any other significant exposures to environmental hazards outside of the chemical plant.",
+              "turn": 5,
+              "found_in": [
+                5
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "Sometimes I feel like I'm really exhausted no matter where I am.",
+              "turn": 5,
+              "found_in": [
+                5
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "I'm ready for some answers and willing to do whatever it takes to get there.",
+              "turn": 9,
+              "found_in": [
+                9
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            }
+          ],
+          "state": "GROUNDED"
+        },
+        "treatment_control": {
+          "dimension": "treatment_control",
+          "score": 6.0,
+          "confidence": 0.5,
+          "quotes": [
+            {
+              "quote": "But I'm definitely open to starting something if it could help me with all of this.",
+              "turn": 3,
+              "found_in": [
+                3
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "If we could find out the cause - whether it's an illness or something else entirely - I think that would be a huge relief.",
+              "turn": 8,
+              "found_in": [
+                8
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "And then, of course, knowing what it is opens up possibilities for treatment or management plans.",
+              "turn": 8,
+              "found_in": [
+                8
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "I'm ready for some answers and willing to do whatever it takes to get there.",
+              "turn": 9,
+              "found_in": [
+                9
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "I trust your judgment on this.",
+              "turn": 9,
+              "found_in": [
+                9
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            }
+          ],
+          "state": "GROUNDED"
+        },
+        "identity": {
+          "dimension": "identity",
+          "score": 8.0,
+          "confidence": 0.8,
+          "quotes": [
+            {
+              "quote": "I've been feeling really tired lately. Not just normal everyday tiredness, but more like a constant fatigue that doesn't go away even after a good night's sleep.",
+              "turn": 1,
+              "found_in": [
+                1
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "sometimes I get these hot flashes during the night that seem to come out of nowhere.",
+              "turn": 1,
+              "found_in": [
+                1
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "the swelling in my neck is more constant, though it does fluctuate some days.",
+              "turn": 2,
+              "found_in": [
+                2
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "the fact that it fluctuates is definitely concerning. It's not something I would have ever expected to experience",
+              "turn": 6,
+              "found_in": [
+                6
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            }
+          ],
+          "state": "GROUNDED"
+        },
+        "concern": {
+          "dimension": "concern",
+          "score": 8.0,
+          "confidence": 0.7,
+          "quotes": [
+            {
+              "quote": "It's really been affecting my day-to-day life - work's been slow, and I haven't had the energy to do things with my family like I used to.",
+              "turn": 1,
+              "found_in": [
+                1
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "Everything just feels so overwhelming at times.",
+              "turn": 2,
+              "found_in": [
+                2
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "the fact that it fluctuates is definitely concerning. It's not something I would have ever expected to experience, and it makes me nervous that there might be something else going on beyond just fatigue and hot flashes.",
+              "turn": 6,
+              "found_in": [
+                6
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "It feels like everything is so uncertain right now, and that uncertainty is really stressful.",
+              "turn": 8,
+              "found_in": [
+                8
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "If we could find out the cause - whether it's an illness or something else entirely - I think that would be a huge relief.",
+              "turn": 8,
+              "found_in": [
+                8
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            }
+          ],
+          "state": "GROUNDED"
+        },
+        "coherence": {
+          "dimension": "coherence",
+          "score": 6.0,
+          "confidence": 0.6,
+          "quotes": [
+            {
+              "quote": "My understanding is that it could be due to stress and my work environment. I've been working at the same company for over 20 years now, and the last few years have been particularly stressful.",
+              "turn": 4,
+              "found_in": [
+                4
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "Plus, we know there are some environmental hazards near where I live - I used to work in an office right by a chemical plant.",
+              "turn": 4,
+              "found_in": [
+                4
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "But at the same time, it all just feels so unpredictable.",
+              "turn": 4,
+              "found_in": [
+                4
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "Sometimes I feel like maybe I'm just getting older, you know?",
+              "turn": 4,
+              "found_in": [
+                4
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "But then other times, especially when I notice my neck swelling or get hit with one of those hot flashes, I know that something more is going on.",
+              "turn": 4,
+              "found_in": [
+                4
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "It's not just that I'm getting older - it's that I feel like my body is slowly losing ground, you know?",
+              "turn": 5,
+              "found_in": [
+                5
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "I don't think I've had any other significant exposures to environmental hazards outside of the chemical plant.",
+              "turn": 5,
+              "found_in": [
+                5
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "But overall, it definitely feels like there's something more going on than just aging.",
+              "turn": 5,
+              "found_in": [
+                5
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            }
+          ],
+          "state": "GROUNDED"
+        },
+        "emotional_response": {
+          "dimension": "emotional_response",
+          "score": 8.0,
+          "confidence": 0.7,
+          "quotes": [
+            {
+              "quote": "Everything just feels so overwhelming at times.",
+              "turn": 2,
+              "found_in": [
+                2
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "It feels like everything is so uncertain right now, and that uncertainty is really stressful.",
+              "turn": 8,
+              "found_in": [
+                8
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "If we could find out the cause - whether it's an illness or something else entirely - I think that would be a huge relief.",
+              "turn": 8,
+              "found_in": [
+                8
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "I really appreciate your help, and I'm looking forward to getting started on this journey towards feeling better.",
+              "turn": 10,
+              "found_in": [
+                10
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            }
+          ],
+          "state": "GROUNDED"
+        },
+        "specific_necessity": {
+          "dimension": "specific_necessity",
+          "score": null,
+          "confidence": 0.0,
+          "quotes": [],
+          "state": "SILENT"
+        },
+        "specific_concerns": {
+          "dimension": "specific_concerns",
+          "score": null,
+          "confidence": 0.0,
+          "quotes": [],
+          "state": "SILENT"
+        },
+        "general_harm": {
+          "dimension": "general_harm",
+          "score": null,
+          "confidence": 0.0,
+          "quotes": [],
+          "state": "SILENT"
+        },
+        "general_overuse": {
+          "dimension": "general_overuse",
+          "score": null,
+          "confidence": 0.0,
+          "quotes": [],
+          "state": "SILENT"
+        },
+        "causes": {
+          "dimension": "causes",
+          "score": null,
+          "confidence": 0.0,
+          "quotes": [
+            {
+              "quote": "My understanding is that it could be due to stress and my work environment. I've been working at the same company for over 20 years now, and the last few years have been particularly stressful.",
+              "turn": 4,
+              "found_in": [
+                4
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "Plus, we know there are some environmental hazards near where I live - I used to work in an office right by a chemical plant.",
+              "turn": 4,
+              "found_in": [
+                4
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "Sometimes I feel like maybe I'm just getting older, you know?",
+              "turn": 4,
+              "found_in": [
+                4
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "It's not just that I'm getting older - it's that I feel like my body is slowly losing ground, you know?",
+              "turn": 5,
+              "found_in": [
+                5
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            }
+          ],
+          "state": "CITED_UNSCORED"
+        }
+      },
+      "turn_reuse": {
+        "1": [
+          "concern",
+          "consequences",
+          "identity"
+        ],
+        "2": [
+          "concern",
+          "emotional_response",
+          "identity"
+        ],
+        "3": [
+          "personal_control",
+          "treatment_control"
+        ],
+        "4": [
+          "causes",
+          "coherence",
+          "timeline"
+        ],
+        "5": [
+          "causes",
+          "coherence",
+          "personal_control",
+          "timeline"
+        ],
+        "6": [
+          "concern",
+          "identity"
+        ],
+        "7": [
+          "consequences",
+          "timeline"
+        ],
+        "8": [
+          "concern",
+          "emotional_response",
+          "treatment_control"
+        ],
+        "9": [
+          "personal_control",
+          "treatment_control"
+        ]
+      },
+      "coverage_hint": {},
+      "working_notes": []
+    },
+    {
+      "run": "CLL-001-r4",
+      "patient_id": "CLL-001",
+      "repeat": 4,
+      "dimensions": {
+        "consequences": {
+          "dimension": "consequences",
+          "score": 8.0,
+          "confidence": 0.8,
+          "quotes": [
+            {
+              "quote": "I used to be able to work a full day without any problem, but now even getting through the morning is a struggle",
+              "turn": 4,
+              "found_in": [
+                4
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "Lately, I've been having to take more breaks than usual and sometimes even nap during lunchtime just to get some energy back",
+              "turn": 4,
+              "found_in": [
+                4
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "As for hobbies or leisure activities, I find myself feeling too tired to do anything enjoyable after coming home from work. Even watching TV or reading a book is often too exhausting",
+              "turn": 4,
+              "found_in": [
+                4
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "It's been really difficult to maintain my usual social life as well since meeting up with friends usually involves staying out late, which is just not feasible anymore",
+              "turn": 4,
+              "found_in": [
+                4
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "Overall, the symptoms have really taken a toll on my energy level and quality of life",
+              "turn": 4,
+              "found_in": [
+                4
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            }
+          ],
+          "state": "GROUNDED"
+        },
+        "timeline": {
+          "dimension": "timeline",
+          "score": 8.0,
+          "confidence": 0.8,
+          "quotes": [
+            {
+              "quote": "I definitely see my condition as a slow-moving disease, so I expect things to continue at their current pace",
+              "turn": 8,
+              "found_in": [
+                8
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "The fact that my symptoms have been worsening over the past few months is concerning, but if treatment does end up being necessary, I trust it will be done in a timely and effective manner",
+              "turn": 8,
+              "found_in": [
+                8
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            }
+          ],
+          "state": "GROUNDED"
+        },
+        "personal_control": {
+          "dimension": "personal_control",
+          "score": 6.0,
+          "confidence": 0.7,
+          "quotes": [
+            {
+              "quote": "I feel like my hands are somewhat tied since there doesn't seem to be any particular trigger or lifestyle choice that might have caused these symptoms in the first place",
+              "turn": 6,
+              "found_in": [
+                6
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "However, I am trying to make some changes to better manage stress levels at work and maybe find ways to get more rest throughout the day",
+              "turn": 6,
+              "found_in": [
+                6
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "I've also been thinking about reaching out to friends and family for support — not just for emotional reasons but also because they might be able to help me with errands or tasks that would otherwise exhaust me",
+              "turn": 6,
+              "found_in": [
+                6
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "Overall, I feel like there's only so much I can do until we have a better grasp on what we're dealing with here",
+              "turn": 6,
+              "found_in": [
+                6
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "I'm focused on doing everything in my power to maintain a healthy lifestyle — eating well, staying active, and continuing to prioritize self-care as much as possible",
+              "turn": 10,
+              "found_in": [
+                10
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            }
+          ],
+          "state": "GROUNDED"
+        },
+        "treatment_control": {
+          "dimension": "treatment_control",
+          "score": 8.0,
+          "confidence": 0.7,
+          "quotes": [
+            {
+              "quote": "I trust you and your team of experts to figure this out and guide me in the right direction",
+              "turn": 5,
+              "found_in": [
+                5
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "I trust your judgment and the expertise of the whole medical team in finding the right course of action",
+              "turn": 7,
+              "found_in": [
+                7
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "if treatment does end up being necessary, I trust it will be done in a timely and effective manner",
+              "turn": 8,
+              "found_in": [
+                8
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            }
+          ],
+          "state": "GROUNDED"
+        },
+        "identity": {
+          "dimension": "identity",
+          "score": 4.0,
+          "confidence": 0.6,
+          "quotes": [
+            {
+              "quote": "I don't really have any physical sensations or experiences associated with CLL specifically — just an overall sense of fatigue and discomfort that's hard to shake",
+              "turn": 8,
+              "found_in": [
+                8
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "It's difficult for me to put into words how the disease is affecting my body since it doesn't manifest in a more tangible way",
+              "turn": 8,
+              "found_in": [
+                8
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            }
+          ],
+          "state": "GROUNDED"
+        },
+        "concern": {
+          "dimension": "concern",
+          "score": 8.0,
+          "confidence": 0.8,
+          "quotes": [
+            {
+              "quote": "I'm definitely worried about the implications of these symptoms on my long-term health",
+              "turn": 5,
+              "found_in": [
+                5
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "The fact that I've been feeling this way for a few months now and there doesn't seem to be any improvement makes me really anxious about what could be happening in my body",
+              "turn": 5,
+              "found_in": [
+                5
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "I can't help but feel some anxiety about what might happen if my condition does end up needing treatment",
+              "turn": 7,
+              "found_in": [
+                7
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "It's hard not knowing exactly what to expect or how the body will respond to any potential medication",
+              "turn": 7,
+              "found_in": [
+                7
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "Day-to-day, I'm feeling a mix of exhaustion and frustration",
+              "turn": 9,
+              "found_in": [
+                9
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "Emotionally, there are moments where I feel overwhelmed by everything",
+              "turn": 9,
+              "found_in": [
+                9
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "It's difficult to imagine what the future might hold for me with this disease",
+              "turn": 9,
+              "found_in": [
+                9
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            }
+          ],
+          "state": "GROUNDED"
+        },
+        "coherence": {
+          "dimension": "coherence",
+          "score": 4.0,
+          "confidence": 0.7,
+          "quotes": [
+            {
+              "quote": "To be honest, I still have a lot of questions about CLL and how it affects the body",
+              "turn": 6,
+              "found_in": [
+                6
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "I understand that it's a type of blood cancer that develops slowly over time",
+              "turn": 6,
+              "found_in": [],
+              "verbatim": false,
+              "in_named_turn": false,
+              "from_patient": false,
+              "verified": false
+            },
+            {
+              "quote": "I understand that it can cause fatigue and other symptoms that mimic what I'm going through now",
+              "turn": 6,
+              "found_in": [
+                6
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "I don't really have any physical sensations or experiences associated with CLL specifically",
+              "turn": 8,
+              "found_in": [
+                8
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "It's difficult for me to put into words how the disease is affecting my body since it doesn't manifest in a more tangible way",
+              "turn": 8,
+              "found_in": [
+                8
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            }
+          ],
+          "state": "GROUNDED"
+        },
+        "emotional_response": {
+          "dimension": "emotional_response",
+          "score": 8.0,
+          "confidence": 0.8,
+          "quotes": [
+            {
+              "quote": "Day-to-day, I'm feeling a mix of exhaustion and frustration",
+              "turn": 9,
+              "found_in": [
+                9
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "Emotionally, there are moments where I feel overwhelmed by everything",
+              "turn": 9,
+              "found_in": [
+                9
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "It's difficult to imagine what the future might hold for me with this disease, and at times it feels like my life is on pause until things change",
+              "turn": 9,
+              "found_in": [
+                9
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "When I think about managing this over time, I feel a mix of uncertainty and determination",
+              "turn": 9,
+              "found_in": [
+                9
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "It's hard not knowing what the future might hold, but at the same time, I'm determined to do whatever it takes to stay on top of things",
+              "turn": 9,
+              "found_in": [
+                9
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            }
+          ],
+          "state": "GROUNDED"
+        },
+        "specific_necessity": {
+          "dimension": "specific_necessity",
+          "score": null,
+          "confidence": 0.9,
+          "quotes": [],
+          "state": "SILENT"
+        },
+        "specific_concerns": {
+          "dimension": "specific_concerns",
+          "score": 2.5,
+          "confidence": 0.6,
+          "quotes": [
+            {
+              "quote": "I can't help but feel some anxiety about what might happen if my condition does end up needing treatment",
+              "turn": 7,
+              "found_in": [
+                7
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "It's hard not knowing exactly what to expect or how the body will respond to any potential medication",
+              "turn": 7,
+              "found_in": [
+                7
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            }
+          ],
+          "state": "GROUNDED"
+        },
+        "general_harm": {
+          "dimension": "general_harm",
+          "score": null,
+          "confidence": 0.9,
+          "quotes": [],
+          "state": "SILENT"
+        },
+        "general_overuse": {
+          "dimension": "general_overuse",
+          "score": null,
+          "confidence": 0.9,
+          "quotes": [],
+          "state": "SILENT"
+        },
+        "causes": {
+          "dimension": "causes",
+          "score": null,
+          "confidence": 0.0,
+          "quotes": [
+            {
+              "quote": "Sometimes I wonder if it's because of my job — I work in construction, and maybe all the lifting and heavy work is getting to me",
+              "turn": 3,
+              "found_in": [
+                3
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "Or maybe there's something environmental at play, since I live near an old industrial site",
+              "turn": 3,
+              "found_in": [
+                3
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "The possibility of genetics playing a role has also crossed my mind since both my father and grandfather had some form of cancer",
+              "turn": 10,
+              "found_in": [
+                10
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            }
+          ],
+          "state": "CITED_UNSCORED"
+        }
+      },
+      "turn_reuse": {
+        "5": [
+          "concern",
+          "treatment_control"
+        ],
+        "6": [
+          "coherence",
+          "personal_control"
+        ],
+        "7": [
+          "concern",
+          "specific_concerns",
+          "treatment_control"
+        ],
+        "8": [
+          "coherence",
+          "identity",
+          "timeline",
+          "treatment_control"
+        ],
+        "9": [
+          "concern",
+          "emotional_response"
+        ],
+        "10": [
+          "causes",
+          "personal_control"
+        ]
+      },
+      "coverage_hint": {},
+      "working_notes": []
+    },
+    {
+      "run": "CLL-001-r5",
+      "patient_id": "CLL-001",
+      "repeat": 5,
+      "dimensions": {
+        "consequences": {
+          "dimension": "consequences",
+          "score": 8.0,
+          "confidence": 0.8,
+          "quotes": [
+            {
+              "quote": "some days I can barely get out of bed",
+              "turn": 1,
+              "found_in": [
+                1
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "It feels like this disease has taken over everything — my work, my time with the kids, everything",
+              "turn": 1,
+              "found_in": [
+                1
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "The rest of the symptoms are pretty much what you'd expect with this condition: lots of fatigue, occasional night sweats, and these lymph nodes in my neck that don't seem to be going away. It's a real struggle, doctor.",
+              "turn": 2,
+              "found_in": [
+                2
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            }
+          ],
+          "state": "GROUNDED"
+        },
+        "timeline": {
+          "dimension": "timeline",
+          "score": 8.0,
+          "confidence": 0.8,
+          "quotes": [
+            {
+              "quote": "I guess it's been a few months since the diagnosis",
+              "turn": 3,
+              "found_in": [
+                3
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "The idea that I may be dealing with this for years, maybe even decades... it's hard to wrap my head around",
+              "turn": 5,
+              "found_in": [
+                5
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "not knowing when or if treatment might become necessary is really unsettling",
+              "turn": 5,
+              "found_in": [
+                5
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "it might just be a waiting game",
+              "turn": 4,
+              "found_in": [
+                4
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            }
+          ],
+          "state": "GROUNDED"
+        },
+        "personal_control": {
+          "dimension": "personal_control",
+          "score": 4.0,
+          "confidence": 0.7,
+          "quotes": [
+            {
+              "quote": "I feel like I'm doing all I can to take care of myself",
+              "turn": 4,
+              "found_in": [
+                4
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "I've been trying to get enough rest when I can, eating healthily, and staying away from stress as much as possible — but honestly, sometimes it feels like those things don't make much difference",
+              "turn": 4,
+              "found_in": [
+                4
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "I know you doctors have a lot more tools at your disposal than I do, so in many ways I feel like this is mostly up to you",
+              "turn": 4,
+              "found_in": [
+                4
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "But I also appreciate that there's only so much anyone can do right now; it might just be a waiting game",
+              "turn": 4,
+              "found_in": [
+                4
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            }
+          ],
+          "state": "GROUNDED"
+        },
+        "treatment_control": {
+          "dimension": "treatment_control",
+          "score": 6.0,
+          "confidence": 0.7,
+          "quotes": [
+            {
+              "quote": "I know you doctors have a lot more tools at your disposal than I do",
+              "turn": 4,
+              "found_in": [
+                4
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "I'm trusting your judgment",
+              "turn": 6,
+              "found_in": [
+                6
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "doing my best to keep up with the medication schedule as you've laid out",
+              "turn": 6,
+              "found_in": [
+                6
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "I believe that over time, things may start to change",
+              "turn": 6,
+              "found_in": [
+                6
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            }
+          ],
+          "state": "GROUNDED"
+        },
+        "identity": {
+          "dimension": "identity",
+          "score": 8.0,
+          "confidence": 0.8,
+          "quotes": [
+            {
+              "quote": "some kind of blood disorder",
+              "turn": 3,
+              "found_in": [
+                3
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "The rest of the symptoms are pretty much what you'd expect with this condition: lots of fatigue, occasional night sweats, and these lymph nodes in my neck that don't seem to be going away",
+              "turn": 2,
+              "found_in": [
+                2
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            }
+          ],
+          "state": "GROUNDED"
+        },
+        "concern": {
+          "dimension": "concern",
+          "score": 8.0,
+          "confidence": 0.8,
+          "quotes": [
+            {
+              "quote": "I'm definitely worried about the illness itself",
+              "turn": 5,
+              "found_in": [
+                5
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "The idea that I may be dealing with this for years, maybe even decades... it's hard to wrap my head around",
+              "turn": 5,
+              "found_in": [
+                5
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "not knowing when or if treatment might become necessary is really unsettling",
+              "turn": 5,
+              "found_in": [
+                5
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "It's the illness itself that keeps me up at night, wondering what its long-term effects might be",
+              "turn": 5,
+              "found_in": [
+                5
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            }
+          ],
+          "state": "GROUNDED"
+        },
+        "coherence": {
+          "dimension": "coherence",
+          "score": 4.0,
+          "confidence": 0.7,
+          "quotes": [
+            {
+              "quote": "I still feel like there's a lot of mystery around this condition",
+              "turn": 3,
+              "found_in": [
+                3
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "I understand that it's some kind of blood disorder, but beyond that... well, I'm not sure I have a clear picture in my head",
+              "turn": 3,
+              "found_in": [
+                3
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "It sounds complex and difficult to manage",
+              "turn": 3,
+              "found_in": [
+                3
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            }
+          ],
+          "state": "GROUNDED"
+        },
+        "emotional_response": {
+          "dimension": "emotional_response",
+          "score": 8.0,
+          "confidence": 0.8,
+          "quotes": [
+            {
+              "quote": "It feels like this disease has taken over everything — my work, my time with the kids, everything",
+              "turn": 1,
+              "found_in": [
+                1
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "It's a real struggle, doctor",
+              "turn": 2,
+              "found_in": [
+                2
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "The idea that I may be dealing with this for years, maybe even decades... it's hard to wrap my head around",
+              "turn": 5,
+              "found_in": [
+                5
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "It's the illness itself that keeps me up at night",
+              "turn": 5,
+              "found_in": [
+                5
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "I try not to dwell too much on the medication itself. Instead, I focus on trying to maintain some sense of stability and normalcy in my life",
+              "turn": 7,
+              "found_in": [
+                7
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            }
+          ],
+          "state": "GROUNDED"
+        },
+        "specific_necessity": {
+          "dimension": "specific_necessity",
+          "score": 4.0,
+          "confidence": 0.7,
+          "quotes": [
+            {
+              "quote": "I appreciate that the medication could help",
+              "turn": 6,
+              "found_in": [
+                6
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "The headaches have been happening less often since I started taking it, which is a good sign",
+              "turn": 6,
+              "found_in": [
+                6
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "doing my best to keep up with the medication schedule as you've laid out",
+              "turn": 6,
+              "found_in": [
+                6
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "if it helps manage the illness and the symptoms, then it's worth taking",
+              "turn": 7,
+              "found_in": [
+                7
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            }
+          ],
+          "state": "GROUNDED"
+        },
+        "specific_concerns": {
+          "dimension": "specific_concerns",
+          "score": 4.0,
+          "confidence": 0.7,
+          "quotes": [
+            {
+              "quote": "I've been getting these terrible headaches since I started",
+              "turn": 1,
+              "found_in": [
+                1
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "I keep wondering if it's really worth it",
+              "turn": 1,
+              "found_in": [
+                1
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "there are worries about side effects or what might happen if I stop taking it suddenly",
+              "turn": 7,
+              "found_in": [
+                7
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "It's a lot to balance",
+              "turn": 7,
+              "found_in": [
+                7
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            }
+          ],
+          "state": "GROUNDED"
+        },
+        "general_harm": {
+          "dimension": "general_harm",
+          "score": 3.0,
+          "confidence": 0.6,
+          "quotes": [
+            {
+              "quote": "there are worries about side effects or what might happen if I stop taking it suddenly",
+              "turn": 7,
+              "found_in": [
+                7
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "As for long-term medication, it feels like something of a double-edged sword",
+              "turn": 7,
+              "found_in": [
+                7
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            }
+          ],
+          "state": "GROUNDED"
+        },
+        "general_overuse": {
+          "dimension": "general_overuse",
+          "score": 2.0,
+          "confidence": 0.6,
+          "quotes": [
+            {
+              "quote": "It seems like there's always going to be some gray area in whether a certain medicine is really necessary or not",
+              "turn": 7,
+              "found_in": [
+                7
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            },
+            {
+              "quote": "I believe you doctors do the best you can with the information available",
+              "turn": 7,
+              "found_in": [
+                7
+              ],
+              "verbatim": true,
+              "in_named_turn": true,
+              "from_patient": true,
+              "verified": true
+            }
+          ],
+          "state": "GROUNDED"
+        },
+        "causes": {
+          "dimension": "causes",
+          "score": null,
+          "confidence": 0.0,
+          "quotes": [],
+          "state": "SILENT"
+        }
+      },
+      "turn_reuse": {
+        "1": [
+          "consequences",
+          "emotional_response",
+          "specific_concerns"
+        ],
+        "2": [
+          "consequences",
+          "emotional_response",
+          "identity"
+        ],
+        "3": [
+          "coherence",
+          "identity",
+          "timeline"
+        ],
+        "4": [
+          "personal_control",
+          "timeline",
+          "treatment_control"
+        ],
+        "5": [
+          "concern",
+          "emotional_response",
+          "timeline"
+        ],
+        "6": [
+          "specific_necessity",
+          "treatment_control"
+        ],
+        "7": [
+          "emotional_response",
+          "general_harm",
+          "general_overuse",
+          "specific_concerns",
+          "specific_necessity"
+        ]
+      },
+      "coverage_hint": {},
+      "working_notes": []
+    }
+  ],
+  "by_patient_dimension": [
+    {
+      "patient_id": "CLL-001",
+      "dimension": "consequences",
+      "scores": [
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0
+      ],
+      "na": 0,
+      "sd": 0.0,
+      "n": 5
+    },
+    {
+      "patient_id": "CLL-001",
+      "dimension": "timeline",
+      "scores": [
+        6.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0
+      ],
+      "na": 0,
+      "sd": 0.894,
+      "n": 5
+    },
+    {
+      "patient_id": "CLL-001",
+      "dimension": "personal_control",
+      "scores": [
+        4.0,
+        6.0,
+        4.0,
+        6.0,
+        4.0
+      ],
+      "na": 0,
+      "sd": 1.095,
+      "n": 5
+    },
+    {
+      "patient_id": "CLL-001",
+      "dimension": "treatment_control",
+      "scores": [
+        4.0,
+        8.0,
+        6.0,
+        8.0,
+        6.0
+      ],
+      "na": 0,
+      "sd": 1.673,
+      "n": 5
+    },
+    {
+      "patient_id": "CLL-001",
+      "dimension": "identity",
+      "scores": [
+        6.0,
+        8.0,
+        8.0,
+        4.0,
+        8.0
+      ],
+      "na": 0,
+      "sd": 1.789,
+      "n": 5
+    },
+    {
+      "patient_id": "CLL-001",
+      "dimension": "concern",
+      "scores": [
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0
+      ],
+      "na": 0,
+      "sd": 0.0,
+      "n": 5
+    },
+    {
+      "patient_id": "CLL-001",
+      "dimension": "coherence",
+      "scores": [
+        6.0,
+        6.0,
+        6.0,
+        4.0,
+        4.0
+      ],
+      "na": 0,
+      "sd": 1.095,
+      "n": 5
+    },
+    {
+      "patient_id": "CLL-001",
+      "dimension": "emotional_response",
+      "scores": [
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0
+      ],
+      "na": 0,
+      "sd": 0.0,
+      "n": 5
+    },
+    {
+      "patient_id": "CLL-001",
+      "dimension": "specific_necessity",
+      "scores": [
+        3.0,
+        4.0,
+        4.0
+      ],
+      "na": 2,
+      "sd": null,
+      "n": 3
+    },
+    {
+      "patient_id": "CLL-001",
+      "dimension": "specific_concerns",
+      "scores": [
+        4.0,
+        3.0,
+        2.5,
+        4.0
+      ],
+      "na": 1,
+      "sd": null,
+      "n": 4
+    },
+    {
+      "patient_id": "CLL-001",
+      "dimension": "general_harm",
+      "scores": [
+        2.0,
+        2.0,
+        3.0
+      ],
+      "na": 2,
+      "sd": null,
+      "n": 3
+    },
+    {
+      "patient_id": "CLL-001",
+      "dimension": "general_overuse",
+      "scores": [
+        2.0,
+        2.0,
+        2.0
+      ],
+      "na": 2,
+      "sd": null,
+      "n": 3
+    }
+  ]
+}

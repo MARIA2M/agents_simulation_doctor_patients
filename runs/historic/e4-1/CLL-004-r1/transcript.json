@@ -1,0 +1,208 @@
+{
+  "patient_id": "CLL-004",
+  "turns": 9,
+  "stop_reason": "doctor",
+  "conversation": [
+    {
+      "role": "doctor",
+      "content": "Hello there, thank you for coming in to see me today. I hope you're doing as well as you can be. What brings you in to see me today?",
+      "turn": 1
+    },
+    {
+      "role": "patient",
+      "content": "Thank you for having me, doctor. To be honest, my chronic illness is really getting in the way of my daily life. It's affecting my energy levels, causing recurrent infections, and leaving me feeling extremely tired all the time. I've been taking my medications as prescribed, but I'm still struggling with these symptoms. My swollen lymph nodes have also been quite uncomfortable lately.\n\nI understand that I might have to deal with this chronic illness for a long time, if not permanently. It's quite overwhelming emotionally, and I feel powerless against it. The treatment does seem to help a little bit, but I can't say I'm fully convinced that it makes a major difference in my overall condition. \n\nI believe the illness was caused by bad luck, though I know some of my behaviors might have played a role as well \u2014 like smoking for many years. It's really difficult to manage at times, and I worry about how it's impacting my life and the lives of those around me.\n\nAs much as I'm grateful for your care, doctor, these symptoms are taking a toll on me. And while I understand the importance of medication, I can't help but wonder if its risks might sometimes outweigh the benefits \u2014 especially given that you doctors tend to over-prescribe at times.",
+      "turn": 1
+    },
+    {
+      "role": "doctor",
+      "content": "I can hear how much this is affecting you \u2014 the fatigue, the infections, the swollen lymph nodes \u2014 and I'm glad you've been sticking with your medications as prescribed, even when you're not seeing the results you hoped for. That takes real commitment.\n\nYou mentioned feeling powerless against this. When you think about what this illness means for your day-to-day life, what does that look like? I'm curious \u2014 what are the hardest parts of living with it, for you?",
+      "turn": 2
+    },
+    {
+      "role": "patient",
+      "content": "The fatigue is one of the most challenging aspects for me, doctor. It's like a constant weight on my body, making even simple tasks feel overwhelmingly difficult at times. And then there are recurrent infections that require antibiotics multiple times a year \u2014 it's not just about physical discomfort but also the mental burden of always having to stay on top of things.\n\nThe swollen lymph nodes aren't helping either; they're quite uncomfortable and make me self-conscious about my appearance. Losing weight unintentionally over the past year has been another difficulty, given how much I value my physical wellbeing.\n\nAnd then there are these early satiety issues that leave me feeling full too quickly \u2014 it's almost like I'm dealing with a form of enlargement in my spleen. It's quite unsettling and adds to the overall impact this illness has on my life.\n\nIt's not just the symptoms, though; it's also the constant worry about the future and what might happen if new treatments don't work or if the disease progresses. All these aspects make the situation extremely overwhelming, to be honest with you, doctor.",
+      "turn": 2
+    },
+    {
+      "role": "doctor",
+      "content": "You're describing quite a lot \u2014 the physical toll, the mental burden of managing infections, the worry about your appearance, the weight loss, the early satiety. It sounds like you've really had to adapt to a lot of changes in your life.\n\nYou mentioned earlier that you believe the illness was caused by bad luck, though you acknowledge some of your own behaviors might have played a role. How do you make sense of that? When you think about what's happened to you, do you ever feel like you've done something to deserve this, or is there more to the story?",
+      "turn": 3
+    },
+    {
+      "role": "patient",
+      "content": "It's true that sometimes I wonder if my past habits may have contributed to this disease. The smoking, in particular, seems like a significant factor. But at the same time, there are many factors beyond our control \u2014 genetic predispositions, environmental exposures. So while I may feel some guilt or regret for not having made different choices earlier in life, I try not to dwell on that too much.\n\nAt the end of the day, I believe it was a combination of things, both under my control and outside of it. The illness feels like a heavy burden to bear, but I've learned to accept it as part of my reality. It's been a challenging journey, but I try to find solace in learning to live with it rather than constantly questioning whether I deserved it or not.",
+      "turn": 3
+    },
+    {
+      "role": "doctor",
+      "content": "That's a thoughtful perspective \u2014 recognising both what might have been within your control and what wasn't, while also trying not to get stuck in guilt. It sounds like you've been working hard to find a way to live with this rather than letting it consume you.\n\nI'm also curious about your feelings regarding the treatment plan. You mentioned earlier that the medication helps a little bit, but you're not fully convinced it makes a major difference. When you think about your treatment, do you ever feel like there are things you could be doing differently \u2014 outside of taking the pills \u2014 to manage your condition better? Or do you feel like the treatment itself is the main thing you can rely on?",
+      "turn": 4
+    },
+    {
+      "role": "patient",
+      "content": "I appreciate your insight into how I perceive my treatment. While I am grateful for the medications and their potential benefits, I have a certain level of skepticism about them. I guess part of that stems from the fact that they don't seem to fully address all the symptoms you described earlier \u2014 like the fatigue or early satiety.\n\nIn terms of doing things differently outside of taking pills, it's tricky because so much of this illness seems out of my control. I try to maintain a healthy diet and exercise when possible, but those things only go so far. It would be great if there were more tangible ways to impact the situation, but for now, I'm trying to focus on the treatments as the main approach.",
+      "turn": 4
+    },
+    {
+      "role": "doctor",
+      "content": "I can see why you'd feel that way \u2014 when you're dealing with persistent fatigue and other symptoms that medications don't seem to touch, it's natural to wonder if there's more that could be done. And when you feel like your own efforts at diet and exercise only go so far, it makes sense that you'd rely on the treatment as your main approach.\n\nYou mentioned earlier that you sometimes wonder if the risks of medication might outweigh the benefits, and that you feel doctors tend to over-prescribe. What specifically worries you about taking these medications long-term? Are there particular side effects or concerns that come to mind when you think about staying on them?",
+      "turn": 5
+    },
+    {
+      "role": "patient",
+      "content": "One thing that keeps me worried is the possibility of developing new health issues from the long-term use of these medicines, given what I've read about their potential side effects. While I understand they're essential for managing this illness and are prescribed with care, it's hard not to feel some concern.\n\nBut then again, when I compare taking these medications to living with an untreated chronic illness, it becomes a fairly straightforward decision \u2014 I'll take the meds if it means having a better quality of life. It's a delicate balance, but one that I'm navigating as best I can right now.",
+      "turn": 5
+    },
+    {
+      "role": "doctor",
+      "content": "It sounds like you're really trying to weigh things carefully \u2014 the concern about long-term effects versus the reality that untreated chronic illness would be worse. That's a tough balance to strike, especially when you're dealing with symptoms that medications don't seem to fully solve.\n\nBefore we wrap up, I'd like to check in on how you've been feeling today. When you think about your overall experience living with this condition \u2014 the good days and the harder days \u2014 where would you say you fall on the scale of emotional well-being right now? And is there anything specific you'd like to focus on or address today that I haven't yet covered?",
+      "turn": 6
+    },
+    {
+      "role": "patient",
+      "content": "Honestly, doctor, some days are easier than others. Today has been a bit difficult just because we've had this conversation about the challenges I'm facing. But in terms of overall emotional well-being, I suppose I can say I've been coping fairly well.\n\nOne thing that's been particularly hard to manage is the uncertainty \u2014 not knowing what the future holds or how my condition might progress. It would be helpful to have more clarity on those things, if possible.\n\nIn terms of addressing anything else today, I think we covered most of it. But thank you for your patience and understanding, doctor. It means a lot that you're taking the time to listen and support me in navigating this illness.",
+      "turn": 6
+    },
+    {
+      "role": "doctor",
+      "content": "Thank you for being so open with me today. It's clear that you've been carrying a lot \u2014 both the physical symptoms and the emotional weight of uncertainty. I appreciate you sharing what's on your mind.\n\nTo summarise what you've told me: you're dealing with a chronic illness that's affecting your energy, causing recurrent infections, and bringing on fatigue, swollen lymph nodes, weight loss, and early satiety. You've been taking your medications as prescribed, but you're not seeing the full improvement you hoped for, and you have some legitimate concerns about long-term medication use.\n\nI hear that you feel a sense of powerlessness, and that you're balancing worry about the future with trying to find ways to live with this as best you can. You've also recognised your own role in the illness while trying not to be consumed by guilt.\n\nWe've touched on a lot of ground today. Is there anything else you'd like to add before we conclude?",
+      "turn": 7
+    },
+    {
+      "role": "patient",
+      "content": "No, I think that covers it all for now, doctor. Thank you again for taking the time to listen and offer your support. It's made a real difference just having someone understand what I'm going through. And who knows \u2014 maybe someday things will change, and I'll no longer need to deal with this illness. But until then, I appreciate everything you're doing to help me navigate my way forward.",
+      "turn": 7
+    },
+    {
+      "role": "doctor",
+      "content": "I'm glad this conversation has been helpful for you. You've been very thoughtful in exploring your situation, and I appreciate your trust in sharing these things with me.\n\nOur plan going forward will be to continue monitoring your symptoms \u2014 particularly the swollen lymph nodes, weight loss, and early satiety \u2014 and to stay open about how you're feeling with the medications. If you're noticing any new side effects or want to discuss your concerns about long-term use, we can talk about those. It's also worth reviewing your lifestyle factors like diet and exercise, as you mentioned those limitations, to see if there's anything we can adjust together.\n\nTake care of yourself in the meantime, and please don't hesitate to reach out if you need anything between appointments. I'll be thinking of you.",
+      "turn": 8
+    },
+    {
+      "role": "patient",
+      "content": "Thank you for your understanding and support, doctor. It means a lot that you're so attentive to my needs and concerns. I will definitely keep you posted on any changes or issues that come up. And thank you for looking out for me \u2014 it's comforting to know there are caring professionals like yourself around when dealing with these challenges.\n\nIt was truly helpful talking things through today, and I appreciate the time we've spent together. Take care of your own well-being too, doctor. It's a collaborative process, after all.",
+      "turn": 8
+    },
+    {
+      "role": "doctor",
+      "content": "Thank you so much for your kind words \u2014 it's a privilege to care for you. I'll look forward to seeing you at our next appointment, and I hope we can continue to work together to find the best path forward for you. Take care, and I hope you have a good rest of your day.",
+      "turn": 9
+    },
+    {
+      "role": "patient",
+      "content": "Thank you, doctor. You too, take care and stay well. Looking forward to our next session.",
+      "turn": 9
+    }
+  ],
+  "coverage_hint": {},
+  "events": [
+    {
+      "event": "llm_retry",
+      "role": "doctor",
+      "attempt": 1,
+      "failure": "HTTPStatusError: Server error '500 Internal Server Error' for url 'http://127.0.0.1:11500/api/chat'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500"
+    }
+  ],
+  "usage": [
+    {
+      "role": "doctor",
+      "prompt_tokens": 1449,
+      "eval_tokens": 127
+    },
+    {
+      "role": "patient",
+      "prompt_tokens": 1314,
+      "eval_tokens": 258
+    },
+    {
+      "role": "doctor",
+      "prompt_tokens": 1837,
+      "eval_tokens": 424
+    },
+    {
+      "role": "patient",
+      "prompt_tokens": 1678,
+      "eval_tokens": 218
+    },
+    {
+      "role": "doctor",
+      "prompt_tokens": 2482,
+      "eval_tokens": 375
+    },
+    {
+      "role": "patient",
+      "prompt_tokens": 2024,
+      "eval_tokens": 160
+    },
+    {
+      "role": "doctor",
+      "prompt_tokens": 3020,
+      "eval_tokens": 293
+    },
+    {
+      "role": "patient",
+      "prompt_tokens": 2332,
+      "eval_tokens": 145
+    },
+    {
+      "role": "doctor",
+      "prompt_tokens": 3461,
+      "eval_tokens": 336
+    },
+    {
+      "role": "patient",
+      "prompt_tokens": 2618,
+      "eval_tokens": 119
+    },
+    {
+      "role": "doctor",
+      "prompt_tokens": 3919,
+      "eval_tokens": 341
+    },
+    {
+      "role": "patient",
+      "prompt_tokens": 2875,
+      "eval_tokens": 141
+    },
+    {
+      "role": "doctor",
+      "prompt_tokens": 4404,
+      "eval_tokens": 741
+    },
+    {
+      "role": "patient",
+      "prompt_tokens": 3220,
+      "eval_tokens": 84
+    },
+    {
+      "role": "doctor",
+      "prompt_tokens": 5232,
+      "eval_tokens": 204
+    },
+    {
+      "role": "patient",
+      "prompt_tokens": 3471,
+      "eval_tokens": 107
+    },
+    {
+      "role": "doctor",
+      "prompt_tokens": 5546,
+      "eval_tokens": 118
+    },
+    {
+      "role": "patient",
+      "prompt_tokens": 3650,
+      "eval_tokens": 22
+    },
+    {
+      "role": "doctor",
+      "prompt_tokens": 5689,
+      "eval_tokens": 779
+    },
+    {
+      "role": "report",
+      "prompt_tokens": 11593,
+      "eval_tokens": 4445
+    }
+  ]
+}

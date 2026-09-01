@@ -1,0 +1,317 @@
+{
+  "patient_id": "CLL-004",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "CLL-004",
+    "clinical_summary": "Male patient with history of Chronic Lymphocytic Leukemia (CLL) and Agent Orange exposure is on maintenance Venetoclax 400 mg daily. He reports significant symptoms including fatigue, recurrent infections, swollen lymph nodes, night sweats, early satiety, and unintentional weight loss. He takes Venetoclax consistently as prescribed but experiences headaches and occasional nausea as side effects. The illness has substantially impacted his daily activities, social life, and routines, forcing him to stay home more often and modify how he manages tasks. He understands CLL as a chronic, lifelong condition and anticipates ongoing treatment, but feels a significant loss of control and expresses emotional distress about uncertainty and potential disease progression.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "The fatigue has made it difficult to keep up with my regular activities",
+            "turn": 2
+          },
+          {
+            "quote": "Recurrent infections have also forced me to stay home more often than I'd like, missing out on time spent with family and friends",
+            "turn": 2
+          },
+          {
+            "quote": "the unintentional weight loss is making it difficult for me to keep up with my meals, which adds to the fatigue",
+            "turn": 2
+          },
+          {
+            "quote": "I've had to learn how to prioritize tasks and rest more often than I used to",
+            "turn": 7
+          }
+        ],
+        "reasoning": "The patient has had to significantly modify his daily activities, social life, and routines due to symptoms. He has had to stay home more often, miss time with family, and change how he manages daily tasks. This represents substantial impact on his life.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "I know it's a chronic condition and that treatment can help manage it but not necessarily cure it completely",
+            "turn": 3
+          },
+          {
+            "quote": "it feels like this is something I'm just going to have to live with for the rest of my life",
+            "turn": 3
+          },
+          {
+            "quote": "additional lines of therapy will need to be considered",
+            "turn": 5
+          },
+          {
+            "quote": "there's always the possibility of new developments or complications arising",
+            "turn": 6
+          }
+        ],
+        "reasoning": "The patient clearly understands CLL as a chronic, lifelong condition. He anticipates ongoing treatment and potential future complications, planning with the assumption that this will continue.",
+        "score": 8.0,
+        "confidence": 0.95
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "it feels like some control was taken away from me",
+            "turn": 3
+          },
+          {
+            "quote": "I'm never quite in complete control over what's happening with my body",
+            "turn": 6
+          },
+          {
+            "quote": "I've had to learn how to prioritize tasks and rest more often than I used to",
+            "turn": 7
+          },
+          {
+            "quote": "I try to focus on the moments where I feel like things are going okay",
+            "turn": 7
+          }
+        ],
+        "reasoning": "The patient feels a significant loss of control, attributing it to Agent Orange exposure and the illness. He describes having to adapt his routine rather than actively managing his health. He focuses on small moments rather than feeling in control.",
+        "score": 2.0,
+        "confidence": 0.85
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "I understand that the Venetoclax is essential for managing my CLL and keeping things stable",
+            "turn": 4
+          },
+          {
+            "quote": "I'm not sure if it's helping me feel more in control, since there are still so many symptoms to deal with",
+            "turn": 4
+          },
+          {
+            "quote": "I've been taking Venetoclax daily as prescribed",
+            "turn": 5
+          },
+          {
+            "quote": "It feels like there's always something else I need to remember or be mindful about with this treatment",
+            "turn": 5
+          }
+        ],
+        "reasoning": "The patient believes Venetoclax is essential for stability but doesn't feel it gives him control. He takes it consistently but describes it as a mental burden. He acknowledges it helps manage the disease but doesn't attribute his current state to it working.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "I've been dealing with a lot of fatigue lately",
+            "turn": 1
+          },
+          {
+            "quote": "recurrent infections that require antibiotics",
+            "turn": 1
+          },
+          {
+            "quote": "My lymph nodes have also been swollen",
+            "turn": 1
+          },
+          {
+            "quote": "I get night sweats quite often now too",
+            "turn": 1
+          },
+          {
+            "quote": "I feel full quickly even after small meals",
+            "turn": 1
+          },
+          {
+            "quote": "the unintentional weight loss is making it difficult for me to keep up with my meals",
+            "turn": 2
+          }
+        ],
+        "reasoning": "The patient reports multiple symptoms that he attributes to his CLL - fatigue, infections, swollen lymph nodes, night sweats, early satiety, and weight loss. These are daily and intrusive.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "It's concerning because I've been dealing with a lot of fatigue lately",
+            "turn": 1
+          },
+          {
+            "quote": "It's emotionally overwhelming at times",
+            "turn": 3
+          },
+          {
+            "quote": "I can't help but worry about potential side effects or complications",
+            "turn": 4
+          },
+          {
+            "quote": "my biggest worry right now is whether or not additional lines of therapy will need to be considered",
+            "turn": 5
+          },
+          {
+            "quote": "The idea of needing more treatment options is scary",
+            "turn": 6
+          },
+          {
+            "quote": "It can make me feel anxious at times",
+            "turn": 6
+          },
+          {
+            "quote": "Overall, I'm feeling a mix of exhaustion and worry",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient expresses significant worry about multiple aspects - symptoms, side effects, additional treatment, and disease progression. His worry is frequent and shapes his decisions about seeking support.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I know it's a chronic condition and that treatment can help manage it but not necessarily cure it completely",
+            "turn": 3
+          },
+          {
+            "quote": "From my understanding, additional therapy might involve other types of medication or even a bone marrow transplant if needed",
+            "turn": 6
+          },
+          {
+            "quote": "While I have a grasp on the basics of CLL and the treatments available, there's always the possibility of new developments or complications arising",
+            "turn": 6
+          }
+        ],
+        "reasoning": "The patient has a good understanding of his condition and treatment options. He understands CLL is chronic, that Venetoclax is for maintenance, and what additional treatment might involve. He acknowledges uncertainty but has a solid grasp of the basics.",
+        "score": 6.0,
+        "confidence": 0.85
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "It's emotionally overwhelming at times",
+            "turn": 3
+          },
+          {
+            "quote": "It's difficult to accept that my body isn't functioning as it should",
+            "turn": 3
+          },
+          {
+            "quote": "it feels like some control was taken away from me",
+            "turn": 3
+          },
+          {
+            "quote": "I can't help but worry about potential side effects or complications",
+            "turn": 4
+          },
+          {
+            "quote": "It feels like there's always something else I need to remember or be mindful about with this treatment, which can add an extra layer of stress at times",
+            "turn": 5
+          },
+          {
+            "quote": "The idea of needing more treatment options is scary",
+            "turn": 6
+          },
+          {
+            "quote": "It can make me feel anxious at times",
+            "turn": 6
+          },
+          {
+            "quote": "Overall, I'm feeling a mix of exhaustion and worry",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient expresses significant emotional distress - overwhelming feelings, difficulty accepting his condition, worry about side effects and additional treatment, anxiety about uncertainty, and exhaustion. His emotions are prominent and affect what he does.",
+        "score": 8.0,
+        "confidence": 0.9
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "I understand that the Venetoclax is essential for managing my CLL and keeping things stable",
+            "turn": 4
+          },
+          {
+            "quote": "I've been taking Venetoclax daily as prescribed",
+            "turn": 5
+          },
+          {
+            "quote": "It feels like there's always something else I need to remember or be mindful about with this treatment",
+            "turn": 5
+          }
+        ],
+        "reasoning": "The patient clearly believes Venetoclax is essential for managing his CLL and keeping things stable. He takes it daily as prescribed. He describes it as a mental burden but doesn't question its necessity.",
+        "score": 5.0,
+        "confidence": 0.9
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "I can't help but worry about potential side effects or complications",
+            "turn": 4
+          },
+          {
+            "quote": "I've been experiencing some headaches and a bit of nausea occasionally since starting the medication",
+            "turn": 5
+          },
+          {
+            "quote": "my biggest worry right now is whether or not additional lines of therapy will need to be considered",
+            "turn": 5
+          },
+          {
+            "quote": "The idea of needing more treatment options is scary",
+            "turn": 6
+          },
+          {
+            "quote": "It can make me feel anxious at times",
+            "turn": 6
+          },
+          {
+            "quote": "the need for more support in managing all these symptoms",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient has specific concerns about side effects (headaches, nausea), complications, and additional treatment. These concerns recur unprompted and have led him to seek support and discuss side effect management.",
+        "score": 4.0,
+        "confidence": 0.85
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [],
+        "reasoning": "Never explored this dimension.",
+        "score": null,
+        "confidence": 0.0
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "Never explored this dimension.",
+        "score": null,
+        "confidence": 0.0
+      }
+    },
+    "causes": [
+      "Agent Orange exposure during military service in Vietnam",
+      "loss of control over his health"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "especially given my history with Agent Orange exposure during military service in Vietnam",
+        "turn": 3
+      },
+      {
+        "quote": "it feels like some control was taken away from me",
+        "turn": 3
+      }
+    ]
+  }
+}

@@ -1,0 +1,330 @@
+{
+  "patient_id": "HIV-002",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "HIV-002",
+    "clinical_summary": "The patient has been diagnosed with HIV 5 months ago and is on Dovato (dolutegravir + lamivudine), one tablet daily. They report good progress in lab results (viral load and CD4 trending in the right direction) but are experiencing headaches that are less frequent but still bothersome. They describe the illness as having a major impact on their life - affecting work, time with children, and causing constant anxiety and uncertainty. They feel they have limited control over their health and worry about long-term complications like AIDS-related dementia. They believe the causes were a combination of factors including hormonal imbalances, work and relationship stress, and personal choices that put them at risk. They view the medication as crucial but feel they have less control over it than they'd like.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "some days I can barely get out of bed",
+            "turn": 1
+          },
+          {
+            "quote": "this disease has taken over everything -- my work, my time with the kids, everything",
+            "turn": 1
+          },
+          {
+            "quote": "it feels like this condition is just always there in the background — taking up more space when I'm already feeling run down",
+            "turn": 2
+          },
+          {
+            "quote": "It's not just the physical symptoms; it's also an ongoing emotional weight",
+            "turn": 3
+          },
+          {
+            "quote": "Day-to-day, it might mean prioritizing rest more than I used to, or having to take breaks when things feel especially overwhelming",
+            "turn": 3
+          }
+        ],
+        "reasoning": "The patient describes significant impact on daily functioning - unable to get out of bed on some days, work and family time affected, emotional burden, need to prioritize rest and take breaks. This aligns with an 8 on the scale (a major role is lost or substantially reduced).",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "How long will this disease continue to affect me?",
+            "turn": 6
+          },
+          {
+            "quote": "What other health issues might arise as a result?",
+            "turn": 6
+          },
+          {
+            "quote": "It's always in the background, like a cloud that doesn't quite lift completely",
+            "turn": 3
+          },
+          {
+            "quote": "focusing on the present: on living as full a life as possible right now, and taking each day one step at a time",
+            "turn": 6
+          }
+        ],
+        "reasoning": "The patient is uncertain about the future trajectory and asks 'How long will this disease continue to affect me?' They acknowledge uncertainty and are trying to focus on the present, but the 'always in the background' metaphor suggests an enduring presence. This aligns with a 6 (genuinely uncertain, holds both endings open and plans for neither).",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "Sometimes I feel like I have no say in any of it",
+            "turn": 1
+          },
+          {
+            "quote": "wonder how much control I really have over my health",
+            "turn": 3
+          },
+          {
+            "quote": "only so many things you can do to protect yourself",
+            "turn": 6
+          },
+          {
+            "quote": "it feels like the medication is also something I have less control over than I'd like",
+            "turn": 5
+          },
+          {
+            "quote": "There's a balance between trusting your professional opinion and feeling like I could be making more choices about how this disease affects my life",
+            "turn": 5
+          }
+        ],
+        "reasoning": "The patient consistently expresses feeling they have little control over their health and the medication. They acknowledge wanting more choices but feel limited. They take medication (acting) but express doubt about whether their actions change the course. This aligns with a 4 - they do what's asked but doubt it changes the course.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "I do feel reassured that you've mentioned my viral load and CD4 count are trending in the right direction",
+            "turn": 4
+          },
+          {
+            "quote": "It helps knowing that I'm doing better than when I was initially diagnosed",
+            "turn": 4
+          },
+          {
+            "quote": "I think the medication is crucial to managing this disease — it helps keep my immune system functioning as well as possible",
+            "turn": 5
+          },
+          {
+            "quote": "without the medicine, things would likely be much worse",
+            "turn": 5
+          }
+        ],
+        "reasoning": "The patient acknowledges that the treatment is working (lab results improving, immune system functioning better) and believes it's crucial. They see a clear benefit that is partial (not fully resolved). This aligns with a 6 (sees a clear benefit that is nonetheless partial).",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "I've been diagnosed with HIV",
+            "turn": 2
+          },
+          {
+            "quote": "this disease has taken over everything",
+            "turn": 1
+          },
+          {
+            "quote": "It's not just the physical symptoms; it's also an ongoing emotional weight",
+            "turn": 3
+          },
+          {
+            "quote": "It's always in the background, like a cloud that doesn't quite lift completely",
+            "turn": 3
+          },
+          {
+            "quote": "the possibility of developing AIDS-related dementia or some other severe condition related to HIV",
+            "turn": 6
+          }
+        ],
+        "reasoning": "The patient identifies with having HIV and describes it as having taken over their life. They experience physical symptoms and emotional weight from the condition. This aligns with an 8 (symptoms daily and intrusive: they interrupt what the person is doing).",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "it's scary and overwhelming",
+            "turn": 3
+          },
+          {
+            "quote": "the anxiety of dealing with this condition long-term",
+            "turn": 3
+          },
+          {
+            "quote": "wonder how much control I really have over my health",
+            "turn": 3
+          },
+          {
+            "quote": "One worry that comes up often is the possibility of developing AIDS-related dementia or some other severe condition related to HIV",
+            "turn": 6
+          },
+          {
+            "quote": "It's hard not knowing what the future holds",
+            "turn": 6
+          },
+          {
+            "quote": "feeling like there are only so many things you can do to protect yourself",
+            "turn": 6
+          },
+          {
+            "quote": "constant feeling of being in a battle",
+            "turn": 6
+          },
+          {
+            "quote": "constantly grappling with anxiety and uncertainty",
+            "turn": 6
+          }
+        ],
+        "reasoning": "The patient expresses significant worry about the future, including severe complications like AIDS-related dementia. They describe constant anxiety and uncertainty, and the worry recurs unprompted. This aligns with an 8 (worry is frequent and intrudes into matters unrelated to the illness).",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I think I'm still coming to terms with what having HIV means for me",
+            "turn": 3
+          },
+          {
+            "quote": "It's not something I would have ever expected to face",
+            "turn": 2
+          },
+          {
+            "quote": "How long will this disease continue to affect me?",
+            "turn": 6
+          },
+          {
+            "quote": "What other health issues might arise as a result?",
+            "turn": 6
+          },
+          {
+            "quote": "focusing on the present: on living as full a life as possible right now, and taking each day one step at a time",
+            "turn": 6
+          }
+        ],
+        "reasoning": "The patient is still processing and coming to terms with the diagnosis. They express uncertainty about the future trajectory and what it means for them. They're trying to focus on the present but still have many questions. This aligns with a 6 (gives a rough account of what is happening and why, with gaps).",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "it's scary and overwhelming",
+            "turn": 3
+          },
+          {
+            "quote": "ongoing emotional weight",
+            "turn": 3
+          },
+          {
+            "quote": "the anxiety of dealing with this condition long-term",
+            "turn": 3
+          },
+          {
+            "quote": "constant feeling of being in a battle",
+            "turn": 6
+          },
+          {
+            "quote": "constantly grappling with anxiety and uncertainty",
+            "turn": 6
+          },
+          {
+            "quote": "It's hard not knowing what the future holds",
+            "turn": 6
+          },
+          {
+            "quote": "feeling like there are only so many things you can do to protect yourself",
+            "turn": 6
+          },
+          {
+            "quote": "carrying a lot emotionally",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient describes significant emotional impact - anxiety, overwhelm, feeling like they're in a battle, constant grappling with uncertainty. The emotion is prominent and affects what they do. This aligns with an 8 (emotion is prominent and affects what they do).",
+        "score": 8.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "I think the medication is crucial to managing this disease",
+            "turn": 5
+          },
+          {
+            "quote": "It's a daily reminder of what I'm up against and an essential part of maintaining some sense of normalcy",
+            "turn": 5
+          },
+          {
+            "quote": "without the medicine, things would likely be much worse",
+            "turn": 5
+          },
+          {
+            "quote": "I appreciate what it does for me even when it comes with side effects",
+            "turn": 5
+          }
+        ],
+        "reasoning": "The patient views the medication as crucial and essential, and believes they would be much worse off without it. They take it daily and it's part of their routine. This aligns with a 5.0 (non-negotiable. Stopping is not something they would consider).",
+        "score": 5.0,
+        "confidence": 0.8
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "I've been getting these terrible headaches since I started",
+            "turn": 1
+          },
+          {
+            "quote": "I keep wondering if it's really worth it",
+            "turn": 1
+          },
+          {
+            "quote": "The headaches make me wonder if there might be something wrong with how the medication's affecting me",
+            "turn": 4
+          },
+          {
+            "quote": "headaches are still bothersome and you're wondering if they're affecting you in a way you're not comfortable with",
+            "turn": 8
+          },
+          {
+            "quote": "they tend to last a few hours and can be quite intense",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient has concerns about the medication's side effects (headaches) and wonders if there might be something wrong with how it's affecting them. They've raised these concerns and they've affected their comfort with the treatment. This aligns with a 4.0 (concerns recur unprompted; they have raised them, or thought about reducing the dose).",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [],
+        "reasoning": "The patient never expressed a general view about medicines as a class. They only discussed their specific medication.",
+        "score": null,
+        "confidence": 0.5
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "The patient didn't express any general distrust of prescribing as a practice. They acknowledged that doctors balance empathy and professionalism, and that addressing lab results is necessary.",
+        "score": null,
+        "confidence": 0.5
+      }
+    },
+    "causes": [
+      "hormonal imbalances",
+      "stress from work and relationships",
+      "choices I made that put me at risk"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "I believe it was a combination of factors. Hormonal imbalances and stress from work and relationships may have played a role, combined with some choices I made that put me at risk.",
+        "turn": 7
+      }
+    ]
+  }
+}

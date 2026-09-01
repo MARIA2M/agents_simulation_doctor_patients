@@ -1,0 +1,276 @@
+{
+  "patient_id": "CLL-001",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "CLL-001",
+    "clinical_summary": "Patient has had Chronic Lymphocytic Leukemia for five years, currently on watch-and-wait with stable blood tests. They experience fatigue, night sweats, and have reduced work capacity and missed family events. They actively engage in lifestyle changes (diet, exercise, meditation) but doubt their direct impact on the illness. They are balancing hope with significant worry about the future and uncertainty about when treatment might become necessary.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "I used to be able to work long hours without any issues, but now even a full day's work leaves me feeling exhausted. There are days when I can barely make it through the afternoon without needing to rest.",
+            "turn": 7
+          },
+          {
+            "quote": "I've also been missing out on a lot of things with my kids since I started dealing with this illness — birthdays, recitals, even just going out for dinner sometimes.",
+            "turn": 7
+          },
+          {
+            "quote": "I'd say CLL affects pretty much everything in one way or another, doctor.",
+            "turn": 7
+          }
+        ],
+        "reasoning": "The patient has had to reduce their work capacity significantly (from long hours to barely getting through afternoons) and is missing out on important family events. They explicitly state it affects 'pretty much everything.' This represents a major role reduction in work and family life.",
+        "score": 8.0,
+        "confidence": 0.85
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "My understanding is that it might never need treatment but can get worse over time.",
+            "turn": 2
+          },
+          {
+            "quote": "I know that CLL can be slow to progress and that there may be years before treatment is needed.",
+            "turn": 11
+          },
+          {
+            "quote": "there's always a chance that it could suddenly take a turn for the worse.",
+            "turn": 11
+          }
+        ],
+        "reasoning": "The patient holds both possibilities open — years of stability before treatment might be needed, but also acknowledges unpredictability and the possibility of sudden progression. They are genuinely uncertain about the future course.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I eat healthier now and have cut back on alcohol. I try to exercise regularly, even if it's just going for short walks. I've also started meditating more, which helps with the stress.",
+            "turn": 4
+          },
+          {
+            "quote": "there are days when I feel like all of this is just a drop in the bucket — that no matter how healthy I am, CLL will continue its own path regardless.",
+            "turn": 4
+          },
+          {
+            "quote": "I don't think they have any direct impact on my illness itself.",
+            "turn": 4
+          }
+        ],
+        "reasoning": "The patient actively engages in lifestyle changes (diet, exercise, meditation) but doubts their effectiveness, feeling they are 'just a drop in the bucket' and that CLL will progress regardless. They recognize their actions don't directly impact the illness.",
+        "score": 4.0,
+        "confidence": 0.75
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "I've been on watch and wait for the past two years since my diagnosis, which basically means no treatment but regular blood tests to monitor things.",
+            "turn": 5
+          },
+          {
+            "quote": "I trust that the doctors prescribing the meds know what they're doing and will only recommend things that are safe and necessary.",
+            "turn": 8
+          },
+          {
+            "quote": "I understand that treatment could potentially improve my quality of life and help keep the CLL in check.",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient is currently on watch and wait, trusting the medical team's judgment. They believe treatment when indicated would be beneficial and appropriate.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "I don't want CLL to define me — I still see myself as the same person I always was before my diagnosis.",
+            "turn": 10
+          },
+          {
+            "quote": "it's hard not to feel like it's become a part of who I am now.",
+            "turn": 10
+          },
+          {
+            "quote": "it's impossible not to feel like it's shaped me in certain ways — both in terms of how I see myself and how others might see me as well.",
+            "turn": 10
+          }
+        ],
+        "reasoning": "The patient experiences tension between wanting to maintain their pre-diagnosis identity and recognizing that CLL has become an inherent part of them and shaped how they see themselves and are perceived by others.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "I'd say I'm mostly worried, doctor.",
+            "turn": 3
+          },
+          {
+            "quote": "I can't help returning to the fears about what might happen.",
+            "turn": 3
+          },
+          {
+            "quote": "I'm still very worried about how this will play out in my life.",
+            "turn": 3
+          },
+          {
+            "quote": "sometimes these worries can keep me up at night or make it hard to focus on other things in my life.",
+            "turn": 12
+          },
+          {
+            "quote": "I can't help but feel anxious when I think too much about what might come down the road.",
+            "turn": 11
+          }
+        ],
+        "reasoning": "The patient reports frequent worry and anxiety about the future, with worries affecting sleep and focus. They describe it as a 'difficult balancing act' between wanting to do what's necessary and feeling anxious.",
+        "score": 8.0,
+        "confidence": 0.85
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "It's a type of blood cancer where too many B cells are produced.",
+            "turn": 2
+          },
+          {
+            "quote": "My understanding is that it might never need treatment but can get worse over time.",
+            "turn": 2
+          },
+          {
+            "quote": "I've done some reading on it, doctor.",
+            "turn": 2
+          },
+          {
+            "quote": "I know that CLL can be slow to progress and that there may be years before treatment is needed.",
+            "turn": 11
+          }
+        ],
+        "reasoning": "The patient has actively researched CLL and understands it involves excessive B cells, recognizes it may progress unpredictably, and understands their current watch-and-wait approach.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "It's always a bit uneasy coming in, but I'm managing.",
+            "turn": 1
+          },
+          {
+            "quote": "I'd say I'm mostly worried, doctor.",
+            "turn": 3
+          },
+          {
+            "quote": "sometimes these worries can keep me up at night or make it hard to focus on other things in my life.",
+            "turn": 12
+          },
+          {
+            "quote": "I try to stay proactive by taking care of myself as best I can, but sometimes the worry gets the better of me.",
+            "turn": 12
+          }
+        ],
+        "reasoning": "The patient experiences unease, worry, and anxiety that affects sleep and focus. They acknowledge these emotions and try to manage them, but sometimes worry gets the better of them.",
+        "score": 6.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "I definitely believe medication is essential for managing CLL, doctor.",
+            "turn": 8
+          },
+          {
+            "quote": "I wouldn't even consider stopping my current treatment under any circumstances.",
+            "turn": 8
+          },
+          {
+            "quote": "I think medication is absolutely essential for keeping my illness in check, even if it's not always easy dealing with the side effects.",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient strongly believes medication is essential for managing CLL and would not consider stopping treatment. They view it as absolutely necessary for keeping the illness in check.",
+        "score": 5.0,
+        "confidence": 0.85
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "there are times when I do worry a bit about potential side effects or long-term consequences.",
+            "turn": 8
+          },
+          {
+            "quote": "my main worries would revolve around how my body would react and whether there would be any long-term effects.",
+            "turn": 9
+          },
+          {
+            "quote": "it's hard not to worry about potential side effects or how this might change things for me down the line.",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient has specific concerns about potential side effects, long-term effects, and how treatment might change things. These concerns are acknowledged and affect their thinking about treatment.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "I trust that the doctors prescribing the meds know what they're doing and will only recommend things that are safe and necessary.",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient does not view medications as inherently harmful. They trust that doctors will only prescribe safe and necessary treatments.",
+        "score": 2.0,
+        "confidence": 0.75
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [
+          {
+            "quote": "I've also seen instances where people are put on medication unnecessarily or without being fully informed about potential side effects and alternatives.",
+            "turn": 13
+          },
+          {
+            "quote": "I do think there's always room for more education and awareness around responsible medication use.",
+            "turn": 13
+          }
+        ],
+        "reasoning": "The patient is aware of potential overprescribing and believes in more education and awareness around responsible medication use. They recognize a balance is needed.",
+        "score": 3.0,
+        "confidence": 0.75
+      }
+    },
+    "causes": [
+      "genetics",
+      "environmental exposure (old industrial site)",
+      "stress from work"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "From what I understand, genetics play a role in developing CLL — apparently, there are specific genes and blood markers that are more common among people with the condition.",
+        "turn": 6
+      },
+      {
+        "quote": "Another factor could be environmental exposures over time; when I was younger, I lived near an old industrial site, so who knows if that played any part in it.",
+        "turn": 6
+      },
+      {
+        "quote": "And then there's stress from work — I've held a demanding job for many years, and maybe that had something to do with it too.",
+        "turn": 6
+      }
+    ]
+  }
+}

@@ -1,0 +1,202 @@
+{
+  "patient_id": "CLL-003",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "CLL-003",
+    "clinical_summary": "Patient presents with a solitary, painless lymph node below the jawline that appeared about a week ago, and increased fatigue for a few weeks. No systemic symptoms (fever, night sweats, weight loss, easy bruising, bleeding). Family history of CLL (father diagnosed and confirmed). No current prescription medications, occasional ibuprofen, daily multivitamin for 10+ years. Examination reveals a 1 cm mobile, firm but not hard, non-tender lymph node with no other lymphadenopathy or pallor.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "it's definitely impacting my daily activities now",
+            "turn": 4
+          },
+          {
+            "quote": "I'm finding it more difficult to complete all the tasks I usually manage in a day",
+            "turn": 10
+          },
+          {
+            "quote": "It's been affecting my overall productivity and concentration levels",
+            "turn": 10
+          }
+        ],
+        "reasoning": "Patient reports that fatigue is impacting daily activities, making it more difficult to complete usual tasks, and affecting productivity and concentration. This suggests a moderate to high impact on their life.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "I first noticed the lump about a week ago",
+            "turn": 2
+          },
+          {
+            "quote": "the fatigue has been more pronounced and lasting longer than usual",
+            "turn": 4
+          },
+          {
+            "quote": "I'm hoping it might be something simple like anemia",
+            "turn": 5
+          }
+        ],
+        "reasoning": "Patient is focused on the recent onset of symptoms and is hoping for a simple explanation (anemia). They don't express a long-term perspective on the illness.",
+        "score": 2.0,
+        "confidence": 0.8
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I haven't made any significant changes to my sleep, diet, or activity levels lately",
+            "turn": 5
+          },
+          {
+            "quote": "I'm hoping it might be something simple like anemia",
+            "turn": 5
+          }
+        ],
+        "reasoning": "Patient hasn't made any significant changes to their lifestyle and is hoping for a simple explanation. They don't express a sense of active control over their illness.",
+        "score": 2.0,
+        "confidence": 0.7
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [],
+        "reasoning": "Patient is not currently on any prescription medications, so there is no treatment to evaluate.",
+        "score": null,
+        "confidence": 1.0
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "a small lump in my neck",
+            "turn": 1
+          },
+          {
+            "quote": "feeling a bit more tired than usual after work",
+            "turn": 1
+          },
+          {
+            "quote": "the fatigue has been more pronounced and lasting longer than usual",
+            "turn": 4
+          }
+        ],
+        "reasoning": "Patient identifies two main symptoms: a neck lump and increased fatigue. These are the symptoms they carry and attribute to their current situation.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "We're both a bit concerned about it",
+            "turn": 1
+          },
+          {
+            "quote": "given my family history, I do worry about other possibilities",
+            "turn": 5
+          },
+          {
+            "quote": "I'm just hopeful we can figure out what's causing this lump and the increased fatigue so I can get back to feeling like myself again",
+            "turn": 18
+          }
+        ],
+        "reasoning": "Patient expresses concern about the lump and fatigue, particularly given the family history of CLL. They are focused on finding an explanation and returning to their normal state.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I'm hoping it might be something simple like anemia",
+            "turn": 5
+          },
+          {
+            "quote": "I can't pinpoint an exact time when it started getting worse",
+            "turn": 4
+          },
+          {
+            "quote": "I'm not sure if it's grown in size or changed in appearance since I first noticed it as my wife is the one who pointed it out to me",
+            "turn": 2
+          }
+        ],
+        "reasoning": "Patient is trying to understand what's happening but doesn't have a clear explanation. They're hoping for a simple explanation (anemia) but are uncertain about the timeline and progression of symptoms.",
+        "score": 4.0,
+        "confidence": 0.6
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "We're both a bit concerned about it",
+            "turn": 1
+          },
+          {
+            "quote": "I'm just hopeful we can figure out what's causing this lump and the increased fatigue so I can get back to feeling like myself again",
+            "turn": 18
+          }
+        ],
+        "reasoning": "Patient expresses concern and hope, but doesn't show strong emotional distress. They're focused on finding an explanation and returning to their normal state.",
+        "score": 2.0,
+        "confidence": 0.7
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [],
+        "reasoning": "Patient is not currently on any prescription medications, so there is no specific medication to evaluate.",
+        "score": null,
+        "confidence": 1.0
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [],
+        "reasoning": "Patient is not currently on any prescription medications, so there are no specific concerns to evaluate.",
+        "score": null,
+        "confidence": 1.0
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "I occasionally take some pain relievers for minor aches and ibuprofen if needed",
+            "turn": 13
+          },
+          {
+            "quote": "I do take a multivitamin every day to help with my diet",
+            "turn": 13
+          }
+        ],
+        "reasoning": "Patient occasionally takes ibuprofen and takes a daily multivitamin but doesn't express concerns about medicines in general.",
+        "score": 2.0,
+        "confidence": 0.6
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "Patient doesn't express any concerns about prescribing practices. They're focused on their current symptoms and family history.",
+        "score": 2.0,
+        "confidence": 0.5
+      }
+    },
+    "causes": [
+      "family history of CLL"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "since my father had Chronic Lymphocytic Leukemia (CLL) and passed away from complications related to it",
+        "turn": 1
+      },
+      {
+        "quote": "my father was diagnosed with CLL several years before he passed away",
+        "turn": 12
+      }
+    ]
+  }
+}

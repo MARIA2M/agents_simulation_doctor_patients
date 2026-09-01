@@ -1,0 +1,242 @@
+{
+  "patient_id": "HIV-004",
+  "turns": 11,
+  "stop_reason": "doctor",
+  "conversation": [
+    {
+      "role": "doctor",
+      "content": "Hello, I'm Dr. Chen. What brings you in to see me today?",
+      "turn": 1
+    },
+    {
+      "role": "patient",
+      "content": "Hi, doctor. I've been feeling really tired all the time lately and I have this nagging worry at the back of my mind that something's not right. My friend suggested I come talk to you about it.",
+      "turn": 1
+    },
+    {
+      "role": "doctor",
+      "content": "How long have you been feeling this tiredness? And have you noticed any other symptoms \u2014 like shortness of breath, chest discomfort, or changes in your appetite or weight?",
+      "turn": 2
+    },
+    {
+      "role": "patient",
+      "content": "I've been feeling really run down for a few months now. I can't pinpoint exactly when it started. As for other symptoms, nothing else really comes to mind. Just this constant tiredness that's hard to shake off.",
+      "turn": 2
+    },
+    {
+      "role": "doctor",
+      "content": "Has this fatigue been affecting your daily activities \u2014 like work, exercise, or household chores? And have you had any recent infections or changes in your energy levels that you can recall?",
+      "turn": 3
+    },
+    {
+      "role": "patient",
+      "content": "Yes, it's definitely getting in the way of things. I'm having a hard time keeping up with my job and even simple tasks around the house are feeling more difficult than usual. As for infections, I got a cold a few weeks ago but it went away on its own after a week or so. And my energy levels have always been pretty steady, as far as I can remember.",
+      "turn": 3
+    },
+    {
+      "role": "doctor",
+      "content": "Do you have any medical conditions that have been diagnosed, and are you currently taking any medications or supplements? Have you had any blood work or other tests done recently?",
+      "turn": 4
+    },
+    {
+      "role": "patient",
+      "content": "I don't really have any known medical conditions, aside from maybe occasional allergies. I take an multivitamin every day but nothing else. I've gone to the doctor a few times for this tiredness and they haven't found anything conclusive yet. They did some blood work a while ago, but it came back normal as far as I know.",
+      "turn": 4
+    },
+    {
+      "role": "doctor",
+      "content": "Have you had any tests specifically for thyroid function or iron levels? And how would you describe your sleep \u2014 do you get seven to eight hours most nights, and do you wake up feeling rested?",
+      "turn": 5
+    },
+    {
+      "role": "patient",
+      "content": "I don't think they checked my thyroid or iron levels. As for sleep, I usually manage about six hours a night. I often feel restless even after sleeping, like I'm not fully getting the rest I need. Sometimes I'll take a nap during the day to try and make up for it but that doesn't always help.",
+      "turn": 5
+    },
+    {
+      "role": "doctor",
+      "content": "Given the persistent fatigue and restless sleep, it would be reasonable to check your thyroid function and iron studies. Have you had any recent stressors \u2014 changes in work, major life events \u2014 that might be contributing to these symptoms?",
+      "turn": 6
+    },
+    {
+      "role": "patient",
+      "content": "I think checking those things could be really helpful. And yeah, I've had a few stressors recently \u2014 my job has been more demanding than usual, and I'm dealing with some personal stuff as well. It's all coming at me from different directions, and it's hard to find time for myself in the midst of everything.",
+      "turn": 6
+    },
+    {
+      "role": "doctor",
+      "content": "Understood. I can order thyroid function tests and iron studies. Are there any other symptoms that have developed recently \u2014 like palpitations, cold hands or feet, weight changes, or hair thinning? These can help narrow things down.",
+      "turn": 7
+    },
+    {
+      "role": "patient",
+      "content": "Not really, besides the tiredness and a bit of anxiety, nothing else stands out to me. I mean, sometimes my heart feels like it's racing but that doesn't happen very often. And my hands and feet don't feel particularly cold or anything. As for weight changes and hair thinning, I think I've been maintaining about the same weight, though maybe not as active as before. My hair still looks okay to me, just a bit frizzy at times.",
+      "turn": 7
+    },
+    {
+      "role": "doctor",
+      "content": "You mentioned occasional heart racing \u2014 how often does that happen, and does it feel like it comes out of nowhere or is it tied to anything specific like exercise or stress?",
+      "turn": 8
+    },
+    {
+      "role": "patient",
+      "content": "It's not too frequent but when it happens, it feels sudden and intense. It doesn't seem related to exercise or stress specifically; sometimes it just happens while I'm sitting at my desk or lying down in bed. It can be a bit alarming because it feels like something isn't right.",
+      "turn": 8
+    },
+    {
+      "role": "doctor",
+      "content": "Sudden palpitations at rest are something we should take seriously. I'll order an ECG and also thyroid and iron studies. Before we wrap up, do you have any other concerns or questions I can address?",
+      "turn": 9
+    },
+    {
+      "role": "patient",
+      "content": "I'm a bit worried about all of this, to be honest. It's hard to know what might be going on with my body and how long it will take to find out. But I trust your judgment, doctor. Do you think there's anything else that could be causing these symptoms? And is there anything I can do in the meantime while we're figuring things out?",
+      "turn": 9
+    },
+    {
+      "role": "doctor",
+      "content": "We'll start with ECG, thyroid function, and iron studies. Those tests should give us a clearer picture. In the meantime, try to maintain your usual routine as much as possible. If palpitations become frequent or severe, or if you experience chest pain, shortness of breath, or fainting, come back right away. I'll have the results in a few days and we can go from there.",
+      "turn": 10
+    },
+    {
+      "role": "patient",
+      "content": "Thank you for taking the time to listen and understand my concerns. I really appreciate it. I'll make sure to keep an eye on things and come back if anything changes. Take care, doctor.",
+      "turn": 10
+    },
+    {
+      "role": "doctor",
+      "content": "You're welcome. I'll see you in a few days with the test results. Take care.",
+      "turn": 11
+    },
+    {
+      "role": "patient",
+      "content": "Goodbye for now.",
+      "turn": 11
+    }
+  ],
+  "coverage_hint": {},
+  "working_notes": [],
+  "events": [],
+  "usage": [
+    {
+      "role": "doctor",
+      "eval_tokens": 125,
+      "prompt_tokens": 1527
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 45,
+      "prompt_tokens": 1271
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 113,
+      "prompt_tokens": 1700
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 47,
+      "prompt_tokens": 1360
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 109,
+      "prompt_tokens": 1863
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 80,
+      "prompt_tokens": 1452
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 113,
+      "prompt_tokens": 2055
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 71,
+      "prompt_tokens": 1574
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 137,
+      "prompt_tokens": 2242
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 68,
+      "prompt_tokens": 1693
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 129,
+      "prompt_tokens": 2450
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 68,
+      "prompt_tokens": 1815
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 130,
+      "prompt_tokens": 2650
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 97,
+      "prompt_tokens": 1939
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 107,
+      "prompt_tokens": 2880
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 60,
+      "prompt_tokens": 2079
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 121,
+      "prompt_tokens": 3050
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 77,
+      "prompt_tokens": 2191
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 182,
+      "prompt_tokens": 3251
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 41,
+      "prompt_tokens": 2360
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 158,
+      "prompt_tokens": 3477
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 6,
+      "prompt_tokens": 2430
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 850,
+      "prompt_tokens": 3644
+    },
+    {
+      "role": "report",
+      "eval_tokens": 5642,
+      "prompt_tokens": 8417
+    }
+  ]
+}

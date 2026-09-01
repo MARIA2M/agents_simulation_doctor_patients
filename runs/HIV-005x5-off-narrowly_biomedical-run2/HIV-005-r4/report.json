@@ -1,0 +1,211 @@
+{
+  "patient_id": "HIV-005",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "HIV-005",
+    "clinical_summary": "Freelance writer diagnosed with HIV 3 years ago, on Triumeq once daily. Reports fatigue (2 months) and headaches (2 weeks, 5/10). Viral load 340 copies/mL (detectable), CD4 410 cells/uL. Inconsistent adherence - sometimes misses doses, sometimes takes two at once, has taken drug holidays. Works from home, takes care of children, takes medication with breakfast around 8:00 AM. Identifies stress as potential contributor to symptoms. Views HIV as lifelong condition requiring consistent management.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "I'm worried about what this could mean for my overall health",
+            "turn": 1
+          },
+          {
+            "quote": "I do feel a noticeable increase in fatigue lately, which can make it more challenging to get through the day",
+            "turn": 10
+          },
+          {
+            "quote": "I'm concerned about how these symptoms could be impacting my health and well-being in the long run",
+            "turn": 10
+          }
+        ],
+        "reasoning": "Patient reports fatigue that makes daily functioning more challenging and expresses concern about long-term health impact. Symptoms are noticeable and affect daily life, though work and childcare remain manageable.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "I currently view my HIV infection as a lifelong condition that I will need to manage consistently",
+            "turn": 14
+          }
+        ],
+        "reasoning": "Patient explicitly states HIV is a lifelong condition requiring consistent management, indicating they plan around it continuing indefinitely.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I think taking my medication consistently is crucial for improving my health outcomes",
+            "turn": 15
+          },
+          {
+            "quote": "I also feel like there are other aspects of managing my condition that I have control over - such as stress management, maintaining a healthy lifestyle, and engaging in regular check-ups with healthcare professionals",
+            "turn": 15
+          }
+        ],
+        "reasoning": "Patient believes medication adherence is crucial and identifies multiple areas of personal control (stress management, healthy lifestyle, regular check-ups), viewing management as collaborative with healthcare team.",
+        "score": 8.0,
+        "confidence": 0.85
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "Triumeq is a combination medication that helps control HIV by preventing the virus from replicating. The three drugs in the regimen work together to inhibit different stages of the virus's life cycle",
+            "turn": 11
+          },
+          {
+            "quote": "I understand that even with effective treatment, it can be difficult for the immune system to fully suppress the virus, particularly if adherence to medication is inconsistent or suboptimal",
+            "turn": 11
+          }
+        ],
+        "reasoning": "Patient demonstrates detailed understanding of how Triumeq works and how adherence affects viral suppression, attributing their condition to treatment effectiveness.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "I think it might be related to my HIV infection",
+            "turn": 1
+          },
+          {
+            "quote": "I've been feeling quite tired lately and have had some headaches as well",
+            "turn": 1
+          }
+        ],
+        "reasoning": "Patient identifies symptoms as related to HIV infection and carries the illness label in their self-description.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "it's concerning to me because it suggests that my immune system might not be fully suppressing the virus",
+            "turn": 9
+          },
+          {
+            "quote": "My main concern is that if left unaddressed, the viral load could continue to rise and potentially lead to more significant health complications in the future",
+            "turn": 9
+          }
+        ],
+        "reasoning": "Patient expresses concern about detectable viral load and potential future complications, showing worry that recurs unprompted.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "Triumeq is a combination medication that helps control HIV by preventing the virus from replicating. The three drugs in the regimen work together to inhibit different stages of the virus's life cycle",
+            "turn": 11
+          },
+          {
+            "quote": "I understand that even with effective treatment, it can be difficult for the immune system to fully suppress the virus, particularly if adherence to medication is inconsistent or suboptimal",
+            "turn": 11
+          }
+        ],
+        "reasoning": "Patient provides accurate explanation of medication mechanism and relationship between adherence and viral suppression.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "I've been feeling a bit guilty about that recently",
+            "turn": 1
+          },
+          {
+            "quote": "I'm hopeful that ongoing research may lead to new treatments or potential cures in the future",
+            "turn": 14
+          }
+        ],
+        "reasoning": "Patient experiences guilt about missed doses and expresses hope about future treatments, showing emotional engagement with their condition.",
+        "score": 6.0,
+        "confidence": 0.75
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "I know that consistent treatment is important for managing the virus and keeping my immune system strong",
+            "turn": 2
+          },
+          {
+            "quote": "I understand that maintaining a consistent treatment regimen is crucial for keeping those numbers stable or even improving them over time",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient believes medication is necessary for managing HIV and maintaining immune system, has established routine and is concerned about missing doses.",
+        "score": 4.5,
+        "confidence": 0.8
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "I've also had some concerns in the past about potential long-term side effects or a possible dependence on medication",
+            "turn": 12
+          },
+          {
+            "quote": "these concerns sometimes make me hesitant to fully trust that the medicine is doing more good than harm over time",
+            "turn": 12
+          }
+        ],
+        "reasoning": "Patient expresses concerns about long-term side effects and dependence, but these concerns haven't led to behavioral changes.",
+        "score": 3.5,
+        "confidence": 0.7
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "I've also had some concerns in the past about potential long-term side effects or a possible dependence on medication",
+            "turn": 12
+          }
+        ],
+        "reasoning": "Patient holds mild generalised caution about long-term effects of medications, though balanced against recognition of medication's importance.",
+        "score": 3.0,
+        "confidence": 0.7
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "No evidence of belief that doctors prescribe too readily. Patient seeks and follows professional guidance and trusts healthcare team recommendations.",
+        "score": null,
+        "confidence": 0.0
+      }
+    },
+    "causes": [
+      "HIV infection",
+      "inconsistent medication adherence",
+      "stress"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "I think it might be related to my HIV infection",
+        "turn": 1
+      },
+      {
+        "quote": "it's possible that missing doses or taking drug holidays could have contributed to the increase in symptoms",
+        "turn": 4
+      },
+      {
+        "quote": "I believe that stress might be a significant factor contributing to my recent symptoms",
+        "turn": 13
+      }
+    ]
+  }
+}

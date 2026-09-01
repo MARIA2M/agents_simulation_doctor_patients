@@ -1,0 +1,221 @@
+{
+  "patient_id": "CLL-005",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "CLL-005",
+    "clinical_summary": "The patient presents with fatigue (present for several months, gradually worsening) and neck lumps (appeared about a month ago, slowly increasing in size). They have no pain or discomfort from the lumps. They've noticed their fatigue affecting their ability to handle their usual workload and have had to reduce their activity level. They've tentatively adopted CLL as a working hypothesis based on information from their doctor and online research. They understand CLL is a type of cancer affecting B lymphocytes and that watchful waiting may be an option with regular monitoring. They're already thinking about lifestyle factors they can control and are balancing that with trust in the medical team. They have specific concerns about chemotherapy and its potential side effects but are open to doing what's necessary for their health if treatment becomes needed.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "Yes, the fatigue has definitely been affecting my daily life. I used to be able to handle my usual workload with relative ease, but lately, even simple tasks have become more difficult and require extra effort.",
+            "turn": 3
+          },
+          {
+            "quote": "As for things I enjoy doing, it's mostly been a case of taking it easy - I don't push myself as much as before.",
+            "turn": 3
+          }
+        ],
+        "reasoning": "The patient describes how fatigue has affected their ability to handle their usual workload and has forced them to reduce their activity level. They've had to 'take it easy' and not push themselves as much, indicating a significant impact on their daily life and activities.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "As for how long this has been going on... I think the fatigue may have started a few months ago, as you asked earlier. The lumps in my neck are more of a new development, having appeared only in the last month or so.",
+            "turn": 4
+          },
+          {
+            "quote": "As for treatment, it sounds like watchful waiting might be an option right now - keeping an eye on things and doing regular blood tests to see if anything changes.",
+            "turn": 5
+          }
+        ],
+        "reasoning": "The patient understands CLL as a condition with slow progression and watchful waiting as an option. They're aware of ongoing monitoring but don't seem to expect an acute crisis. They're planning for the condition to continue with monitoring.",
+        "score": 8.0,
+        "confidence": 0.7
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I think there might be some things I can do to help manage my end of things. For instance, I've been thinking about trying to keep a healthy lifestyle - eating right, getting regular exercise when I'm feeling up to it, and doing what I can to reduce stress.",
+            "turn": 6
+          },
+          {
+            "quote": "But at the same time, I know this is largely in the hands of the doctors and medical professionals. It's reassuring to think that there are experts who understand this condition better than anyone else and can guide me through it.",
+            "turn": 6
+          }
+        ],
+        "reasoning": "The patient recognizes they can influence their health through lifestyle factors but clearly understands that medical management is primarily in the hands of professionals. This is a balanced view.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "As for treatment, it sounds like watchful waiting might be an option right now - keeping an eye on things and doing regular blood tests to see if anything changes.",
+            "turn": 5
+          },
+          {
+            "quote": "But at the same time, if it turns out to be necessary, I want to do what needs doing in order to get better.",
+            "turn": 7
+          }
+        ],
+        "reasoning": "The patient understands that treatment options exist and that they can help, but they're not attributing their current state to treatment working (since they're still in the watchful waiting phase). They recognize treatment can help but don't seem to have strong personal experience with it yet.",
+        "score": 4.0,
+        "confidence": 0.6
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "Based on what my doctor has told me and some of the things I've read online... it sounds like these symptoms might be related to something like Chronic Lymphocytic Leukemia.",
+            "turn": 4
+          },
+          {
+            "quote": "I think I'm still trying to piece together a lot of it. The fatigue and neck lumps are clearly linked to something, but the specifics about what that might be and how to manage it are still coming into focus.",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient has tentatively adopted CLL as a working hypothesis but hasn't fully integrated this identity into their self-concept. They're still 'trying to piece together' what's happening. They recognize their limitations but don't seem to be defining themselves by the illness.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "Emotionally, I'm feeling quite stressed about the whole situation. It's hard not to worry when you're experiencing these changes in your body.",
+            "turn": 3
+          },
+          {
+            "quote": "But it's still cancer, and it can be scary to think about.",
+            "turn": 5
+          },
+          {
+            "quote": "I guess one thing that makes me a bit nervous is the idea of chemotherapy. I know it's not the only option and it might not even be necessary at this point, but my understanding is that it can have some pretty significant side effects.",
+            "turn": 7
+          },
+          {
+            "quote": "It's just a bit scary to think about going through something like that.",
+            "turn": 7
+          }
+        ],
+        "reasoning": "The patient expresses understandable worry about having cancer and about potential treatments. Their primary specific concern is chemotherapy and its potential side effects. They're balancing concern with a willingness to do what's necessary. The worry is tied to specific moments (results, appointments, new symptoms) and shapes some decisions.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "From what I understand, CLL is a type of cancer that affects blood cells called B lymphocytes.",
+            "turn": 5
+          },
+          {
+            "quote": "As for treatment, it sounds like watchful waiting might be an option right now - keeping an eye on things and doing regular blood tests to see if anything changes.",
+            "turn": 5
+          },
+          {
+            "quote": "I think I'm still trying to piece together a lot of it. The fatigue and neck lumps are clearly linked to something, but the specifics about what that might be and how to manage it are still coming into focus.",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient has moderate coherence - they understand some aspects of their situation (symptoms, potential diagnosis, general treatment approach) but recognize they still have a lot to learn and make sense of. They're actively trying to understand and are appreciative of being able to talk through things.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "Emotionally, I'm feeling quite stressed about the whole situation. It's hard not to worry when you're experiencing these changes in your body.",
+            "turn": 3
+          },
+          {
+            "quote": "At the same time, though, I also feel a sense of resilience - knowing that I've been able to handle these changes and still manage to keep going despite everything is reassuring in its own way.",
+            "turn": 10
+          }
+        ],
+        "reasoning": "The patient feels stressed about the situation but also experiences resilience. They're humbled by having to confront their limitations but find reassurance in their ability to keep going. Their emotional response appears mixed but ultimately manageable.",
+        "score": 6.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "As for treatment, it sounds like watchful waiting might be an option right now - keeping an eye on things and doing regular blood tests to see if anything changes.",
+            "turn": 5
+          },
+          {
+            "quote": "But at the same time, if it turns out to be necessary, I want to do what needs doing in order to get better.",
+            "turn": 7
+          },
+          {
+            "quote": "But again, if it turns out that they're necessary to manage my condition, I want to stay informed and do what makes sense for me.",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient recognizes that treatments may be necessary if the condition progresses, but also understands that watchful waiting might be appropriate at their current stage. They're not currently taking any medication, so this is about their beliefs about treatment necessity in general.",
+        "score": 3.0,
+        "confidence": 0.6
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "I guess one thing that makes me a bit nervous is the idea of chemotherapy. I know it's not the only option and it might not even be necessary at this point, but my understanding is that it can have some pretty significant side effects.",
+            "turn": 7
+          },
+          {
+            "quote": "It's just a bit scary to think about going through something like that.",
+            "turn": 7
+          }
+        ],
+        "reasoning": "The patient has specific concerns about chemotherapy and its potential side effects. They acknowledge this is not the only option and may not be necessary at this point, but the fear of significant side effects is real. This concern has not yet changed their behavior (they're not avoiding treatment), but it's a genuine worry.",
+        "score": 3.0,
+        "confidence": 0.7
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "In a way, I've had mixed feelings about medications and treatments. On one hand, when something like CLL comes up, it's reassuring to know there are options available. It would be comforting to think that taking medication could make a real difference.",
+            "turn": 8
+          },
+          {
+            "quote": "On the other hand, it's all a bit complicated - figuring out what's best for you and navigating potential side effects can be tricky. So I guess I do have some concerns in general about medications and treatments.",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient has mixed feelings about medications and treatments - they see benefits but acknowledge the complexity and potential risks involved in navigating treatment options. They're cautious about medicines in general.",
+        "score": 3.0,
+        "confidence": 0.7
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "The patient never expressed any concerns about doctors prescribing too readily.",
+        "score": null,
+        "confidence": 0.0
+      }
+    },
+    "causes": [
+      "CLL (Chronic Lymphocytic Leukemia) - a type of cancer affecting B lymphocytes"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "From what I understand, CLL is a type of cancer that affects blood cells called B lymphocytes.",
+        "turn": 5
+      }
+    ]
+  }
+}

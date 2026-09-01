@@ -1,0 +1,249 @@
+{
+  "patient_id": "CLL-003",
+  "turns": 11,
+  "stop_reason": "doctor",
+  "conversation": [
+    {
+      "role": "doctor",
+      "content": "Hello. Thank you for coming in. What brings you to see me today?",
+      "turn": 1
+    },
+    {
+      "role": "patient",
+      "content": "Hi, doctor. It's actually my wife who insisted I come. She noticed a small lump in my neck recently, and we both got worried because my father had something similar. I've been feeling a bit more tired than usual after work too, but I'm not sure if that's related or just stress from work.",
+      "turn": 1
+    },
+    {
+      "role": "doctor",
+      "content": "How long have you had this lump in your neck, and have you noticed any changes in size?",
+      "turn": 2
+    },
+    {
+      "role": "patient",
+      "content": "The lump is quite new, only appeared about two weeks ago. It hasn't grown significantly since then, but it's still there. My wife says it was about the size of a pea when she first felt it.",
+      "turn": 2
+    },
+    {
+      "role": "doctor",
+      "content": "You mentioned your father had something similar \u2014 do you know what that was? And when did you first start noticing the fatigue?",
+      "turn": 3
+    },
+    {
+      "role": "patient",
+      "content": "My dad had Chronic Lymphocytic Leukemia, which runs in our family. As for the fatigue, I've been feeling more tired than usual after work for a few months now, but it's mostly been attributed to my job and the stress that comes with it. The lump in my neck is making me wonder if there might be some connection.",
+      "turn": 3
+    },
+    {
+      "role": "doctor",
+      "content": "Have you noticed any other enlarged lymph nodes in your body, anywhere else in your neck, armpits, or groin? And have you had any weight loss or night sweats?",
+      "turn": 4
+    },
+    {
+      "role": "patient",
+      "content": "No, I haven't noticed any other swollen lymph nodes. I'm actually quite diligent about keeping track of my physical health, so I would have mentioned anything else by now. As for weight loss and night sweats, I can't say that either has been a noticeable issue for me recently.",
+      "turn": 4
+    },
+    {
+      "role": "doctor",
+      "content": "Have you had any blood tests done recently, and do you know if you have any family history of CLL beyond your father?",
+      "turn": 5
+    },
+    {
+      "role": "patient",
+      "content": "I haven't had any blood tests done specifically related to this lump or the fatigue, but I did have a routine checkup last year that came back clean. As for family history, my dad was the only one with CLL, but there's also a history of other types of cancer on both sides of the family.",
+      "turn": 5
+    },
+    {
+      "role": "doctor",
+      "content": "Are you currently taking any medications, including any supplements or over-the-counter drugs?",
+      "turn": 6
+    },
+    {
+      "role": "patient",
+      "content": "I take a daily multivitamin and occasionally some ibuprofen for minor headaches. Nothing related to CLL or my lymph nodes. My wife buys me those supplements from the health store near our home.",
+      "turn": 6
+    },
+    {
+      "role": "doctor",
+      "content": "Let me have a quick look at the lump in your neck. I'll just use my fingers to feel it.",
+      "turn": 7
+    },
+    {
+      "role": "patient",
+      "content": "Sure, go ahead. It's right here under my jawline on the left side.",
+      "turn": 7
+    },
+    {
+      "role": "doctor",
+      "content": "Please turn your head slightly to the right so I can examine it properly. Can you tell me if it's tender to the touch?",
+      "turn": 8
+    },
+    {
+      "role": "patient",
+      "content": "Yes, it is a bit tender when you press on it. But it wasn't painful or uncomfortable before my wife pointed it out.",
+      "turn": 8
+    },
+    {
+      "role": "doctor",
+      "content": "It's movable and soft, which is reassuring. Based on what you've described \u2014 a new, tender lymph node under your jaw, with your father's history of CLL and the fatigue \u2014 we need to investigate this further. I'd like to arrange for blood work and likely a biopsy of the lymph node. Would you be able to come in for a follow-up appointment this week?",
+      "turn": 9
+    },
+    {
+      "role": "patient",
+      "content": "Yes, that sounds reasonable. I'm glad you're taking this seriously. Let's schedule an appointment for Thursday morning at 10 am if that works for you.",
+      "turn": 9
+    },
+    {
+      "role": "doctor",
+      "content": "Thursday at 10 am works. I'll arrange for blood tests first thing in the morning \u2014 a complete blood count and other relevant markers. I'll also arrange for an ultrasound or biopsy of the lymph node. In the meantime, keep an eye on the lump \u2014 if it grows or becomes more painful, contact us right away. Is there anything else you'd like me to address today?",
+      "turn": 10
+    },
+    {
+      "role": "patient",
+      "content": "No, that's all for now. Thank you very much, doctor, for your time and concern. I appreciate it.",
+      "turn": 10
+    },
+    {
+      "role": "doctor",
+      "content": "You're welcome. I'll send the referral and blood work orders to the lab. See you Thursday morning.",
+      "turn": 11
+    },
+    {
+      "role": "patient",
+      "content": "Sounds good. Have a great day!",
+      "turn": 11
+    }
+  ],
+  "coverage_hint": {},
+  "working_notes": [],
+  "events": [
+    {
+      "event": "llm_retry",
+      "role": "doctor",
+      "attempt": 1,
+      "failure": "HTTPStatusError: Server error '500 Internal Server Error' for url 'http://127.0.0.1:11500/api/chat'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500"
+    }
+  ],
+  "usage": [
+    {
+      "role": "doctor",
+      "eval_tokens": 103,
+      "prompt_tokens": 1527
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 66,
+      "prompt_tokens": 1178
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 123,
+      "prompt_tokens": 1699
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 45,
+      "prompt_tokens": 1273
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 103,
+      "prompt_tokens": 1870
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 73,
+      "prompt_tokens": 1352
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 127,
+      "prompt_tokens": 2049
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 60,
+      "prompt_tokens": 1471
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 129,
+      "prompt_tokens": 2239
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 65,
+      "prompt_tokens": 1565
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 97,
+      "prompt_tokens": 2436
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 41,
+      "prompt_tokens": 1655
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 122,
+      "prompt_tokens": 2577
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 19,
+      "prompt_tokens": 1728
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 81,
+      "prompt_tokens": 2721
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 28,
+      "prompt_tokens": 1783
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 133,
+      "prompt_tokens": 2833
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 34,
+      "prompt_tokens": 1897
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 118,
+      "prompt_tokens": 3003
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 26,
+      "prompt_tokens": 2018
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 83,
+      "prompt_tokens": 3150
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 9,
+      "prompt_tokens": 2075
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 546,
+      "prompt_tokens": 3245
+    },
+    {
+      "role": "report",
+      "eval_tokens": 4616,
+      "prompt_tokens": 7454
+    }
+  ]
+}

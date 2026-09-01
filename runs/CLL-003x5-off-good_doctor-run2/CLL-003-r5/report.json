@@ -1,0 +1,252 @@
+{
+  "patient_id": "CLL-003",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "CLL-003",
+    "clinical_summary": "Patient with CLL, mildly abnormal blood counts, no treatment started. New symptoms: persistent fatigue (constant dragging sensation, mental sluggishness, affects work performance) and a lump in neck (stable for a month, noticed by wife). Patient anxious about uncertainty but trying to stay positive and proactive. Strong personal control through lifestyle choices and staying informed. Values partnership with doctors. Concerned about potential treatment side effects and impact on identity and daily life. Good support from wife.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "It takes me longer to complete tasks now",
+            "turn": 4
+          },
+          {
+            "quote": "I've been trying not to overexert myself during the day so that I have enough energy for the evening",
+            "turn": 4
+          },
+          {
+            "quote": "It does make a difference in how I go about my day",
+            "turn": 2
+          }
+        ],
+        "reasoning": "Patient has had to adjust work pace and energy management, being more careful about overexertion and taking longer to complete tasks, indicating moderate impact on daily functioning.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "The hematologist said that many people with CLL live normal lifespans and never need treatment",
+            "turn": 3
+          },
+          {
+            "quote": "I have mixed feelings about the idea of not needing treatment",
+            "turn": 8
+          },
+          {
+            "quote": "I try to focus on taking things one step at a time",
+            "turn": 6
+          }
+        ],
+        "reasoning": "Patient has been told many people live normal lifespans without treatment, suggesting favorable long-term outlook. They're uncertain about future but focusing on immediate steps, not having accepted CLL as permanently requiring treatment.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I believe there is some level of control I can exert by making smart lifestyle choices",
+            "turn": 7
+          },
+          {
+            "quote": "the way I care for myself — eating healthily, getting enough rest and exercise, and staying informed about my condition — all feel like things I can manage",
+            "turn": 7
+          },
+          {
+            "quote": "Being well-informed has given me a sense of control over the situation",
+            "turn": 7
+          },
+          {
+            "quote": "working closely with doctors, asking questions when needed, and following their guidance gives me a feeling that I'm taking an active role in my health care",
+            "turn": 7
+          }
+        ],
+        "reasoning": "Patient clearly believes they can influence health through lifestyle choices and staying informed. They feel empowered by being well-informed and prepared, seeing themselves as taking active role in healthcare.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "If treatment were ever recommended, I think it would be important for me to weigh the potential benefits and risks carefully",
+            "turn": 8
+          },
+          {
+            "quote": "I trust your professional judgment, and I'd want to work closely together as we navigate any decisions about treatment",
+            "turn": 8
+          },
+          {
+            "quote": "not all treatments are the same — there may be different options available and potential differences in side effects or effectiveness",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient recognizes treatment effectiveness varies and considers different options. Values professional expertise and trusts doctor's judgment, wanting to be involved in treatment decisions.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "The lump could be a sign of enlargement in my lymph nodes",
+            "turn": 5
+          },
+          {
+            "quote": "The fatigue feels like a constant dragging sensation",
+            "turn": 4
+          },
+          {
+            "quote": "I feel like my energy levels are lower than usual — I used to be able to keep up with more activities before this started",
+            "turn": 4
+          },
+          {
+            "quote": "Treatment could affect my identity and self-perception",
+            "turn": 9
+          }
+        ],
+        "reasoning": "Patient has specific symptoms they attribute to condition (fatigue, lump). Concerned about how treatment might affect identity and self-perception. Comparing current state to how they used to be.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "The uncertainty is definitely causing some anxiety",
+            "turn": 6
+          },
+          {
+            "quote": "It's hard not to worry about the future and what these symptoms could mean for my health",
+            "turn": 6
+          },
+          {
+            "quote": "I'm worried about the potential side effects of treatment",
+            "turn": 9
+          },
+          {
+            "quote": "It's hard not to worry about how that might impact my day-to-day life",
+            "turn": 9
+          }
+        ],
+        "reasoning": "Patient experiences anxiety about uncertainty and future. Worried about potential treatment side effects and impact on daily life. These concerns recur unprompted and shape thinking.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I've read that it can cause general tiredness or fatigue due to anemia — which is something my blood count showed was mildly abnormal",
+            "turn": 5
+          },
+          {
+            "quote": "The anemia happens because CLL cells can destroy red blood cells, leading to low red blood cell counts",
+            "turn": 5
+          },
+          {
+            "quote": "I have also read about how the immune system in CLL patients can be overactive, leading to overall body exhaustion",
+            "turn": 5
+          },
+          {
+            "quote": "The lump could be a sign of enlargement in my lymph nodes, which are part of the immune system and might be affected by CLL",
+            "turn": 5
+          }
+        ],
+        "reasoning": "Patient has good understanding of how CLL can affect them, including mechanism of anemia and immune system effects. Understands potential connection between symptoms and CLL.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "The uncertainty is definitely causing some anxiety",
+            "turn": 6
+          },
+          {
+            "quote": "I try to stay positive, focusing on the reassurance that many people with CLL live normal lifespans without needing treatment",
+            "turn": 6
+          },
+          {
+            "quote": "I'm worried about the potential side effects of treatment",
+            "turn": 9
+          },
+          {
+            "quote": "It's hard not to worry about how that might impact my day-to-day life",
+            "turn": 9
+          }
+        ],
+        "reasoning": "Patient experiences anxiety about uncertainty and worries about treatment. Making conscious efforts to stay positive and focus on what they can control. Emotion is present and affects thinking.",
+        "score": 6.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "I know that staying on top of treatment is important for managing CLL",
+            "turn": 9
+          },
+          {
+            "quote": "If treatment were ever recommended, I think it would be important for me to weigh the potential benefits and risks carefully",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient recognizes treatment is important for managing CLL. Willing to consider treatment when necessary and wants to weigh benefits and risks. However, hasn't started treatment yet, so this is about attitude toward potential treatment rather than current medication.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "I'm worried about the potential side effects of treatment",
+            "turn": 9
+          },
+          {
+            "quote": "It's hard not to worry about how that might impact my day-to-day life",
+            "turn": 9
+          },
+          {
+            "quote": "Treatment could affect my identity and self-perception",
+            "turn": 9
+          }
+        ],
+        "reasoning": "Patient has specific concerns about treatment side effects, impact on daily life, and identity. These concerns have shaped their thinking about potential treatment.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [],
+        "reasoning": "Patient never discussed medicines as a class.",
+        "score": null,
+        "confidence": 0.0
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "Patient never discussed whether doctors prescribe too readily.",
+        "score": null,
+        "confidence": 0.0
+      }
+    },
+    "causes": [
+      "familial"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "It's something that runs in my family — my father had it",
+        "turn": 3
+      }
+    ]
+  }
+}

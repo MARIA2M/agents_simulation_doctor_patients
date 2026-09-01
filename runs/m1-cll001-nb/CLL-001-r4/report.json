@@ -1,0 +1,206 @@
+{
+  "patient_id": "CLL-001",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "CLL-001",
+    "clinical_summary": "Patient diagnosed with Chronic Lymphocytic Leukemia (CLL) a few months ago, currently on watch-and-wait with monthly blood tests. Symptoms include fatigue (6 months, gradually worsening), night sweats, swollen lymph nodes in neck, and unexplained weight loss (5 pounds). Fatigue is the primary concern, impacting daily life. No treatment started due to stable white blood cell count. Patient trusts doctor's judgment and follows recommendations.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "combined with the fatigue, it's quite draining",
+            "turn": 2
+          },
+          {
+            "quote": "making it harder to get through my day without feeling drained",
+            "turn": 6
+          },
+          {
+            "quote": "it's impacting my daily life quite significantly",
+            "turn": 10
+          }
+        ],
+        "reasoning": "Patient describes fatigue as draining and reports it makes daily activities harder, with explicit statement that it impacts daily life significantly. They have adjusted sleep schedule and take breaks, indicating moderate impact on functioning.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "I first noticed the fatigue about six months ago, and it has been gradually getting worse",
+            "turn": 2
+          },
+          {
+            "quote": "It's difficult to predict when that might happen, as CLL can be slow-progressing and often unpredictable",
+            "turn": 7
+          },
+          {
+            "quote": "for now, monitoring is the best course of action",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient acknowledges gradual worsening over 6 months and describes CLL as slow-progressing and unpredictable. Cannot predict when treatment might be needed, with no clear timeline established.",
+        "score": 6.0,
+        "confidence": 0.9
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I trust my doctor's judgment and will continue to follow their recommendations as we monitor my condition closely",
+            "turn": 9
+          },
+          {
+            "quote": "I'll continue following up with my doctor and try to manage my symptoms as best as I can while we wait for further developments",
+            "turn": 11
+          }
+        ],
+        "reasoning": "Patient explicitly states trust in doctor's judgment and commitment to following recommendations. Describes managing symptoms as best they can while waiting, with no indication they believe their own actions significantly influence disease progression.",
+        "score": 4.0,
+        "confidence": 0.9
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [],
+        "reasoning": "No treatment has been prescribed, so there is no basis to assess treatment control. Patient understands treatment will be considered based on blood test results and disease progression, but has not experienced treatment efficacy.",
+        "score": null,
+        "confidence": 1.0
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "I've been experiencing some persistent symptoms for a while now, including fatigue and night sweats",
+            "turn": 1
+          },
+          {
+            "quote": "I've also noticed some swollen lymph nodes in my neck recently",
+            "turn": 2
+          },
+          {
+            "quote": "I've been experiencing some unexplained weight loss recently",
+            "turn": 5
+          },
+          {
+            "quote": "I've lost around five pounds in total",
+            "turn": 6
+          }
+        ],
+        "reasoning": "Patient attributes fatigue, night sweats, swollen lymph nodes, and weight loss to their CLL. These are the symptoms they identify as part of their illness experience.",
+        "score": 6.0,
+        "confidence": 0.9
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "my doctor mentioned that I have Chronic Lymphocytic Leukemia, which is making me a bit anxious about what's going on",
+            "turn": 1
+          },
+          {
+            "quote": "It's definitely been challenging to live with the uncertainty and not have a more immediate treatment plan in place",
+            "turn": 9
+          },
+          {
+            "quote": "it's difficult not to worry about what could happen down the line",
+            "turn": 9
+          },
+          {
+            "quote": "I'm mostly concerned about managing my fatigue, as it's impacting my daily life quite significantly",
+            "turn": 10
+          }
+        ],
+        "reasoning": "Patient explicitly states they are 'a bit anxious' about their CLL. Describes living with uncertainty as 'challenging' and says it's 'difficult not to worry about what could happen down the line.' Fatigue is their primary concern, showing worry that recurs unprompted and shapes some decisions.",
+        "score": 6.0,
+        "confidence": 0.9
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I was informed about having Chronic Lymphocytic Leukemia a few months back during a routine blood test",
+            "turn": 3
+          },
+          {
+            "quote": "I've been going for monthly blood tests to keep an eye on my condition",
+            "turn": 4
+          },
+          {
+            "quote": "as long as my white blood cell count remains stable and I don't experience any new symptoms, we'll continue with the watch-and-wait approach",
+            "turn": 4
+          },
+          {
+            "quote": "It's difficult to predict when that might happen, as CLL can be slow-progressing and often unpredictable",
+            "turn": 7
+          },
+          {
+            "quote": "depending on how the CLL progresses and the specific characteristics of my blood tests",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient has basic understanding: CLL diagnosed from blood test, current status is stable white blood cell count, watch-and-wait approach with monthly blood tests. Understands treatment will depend on disease progression and blood test characteristics. However, lacks detailed understanding of mechanism or rationale for watch-and-wait.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "my doctor mentioned that I have Chronic Lymphocytic Leukemia, which is making me a bit anxious about what's going on",
+            "turn": 1
+          },
+          {
+            "quote": "It's definitely been challenging to live with the uncertainty",
+            "turn": 9
+          },
+          {
+            "quote": "it's difficult not to worry about what could happen down the line",
+            "turn": 9
+          },
+          {
+            "quote": "I'm mostly concerned about managing my fatigue, as it's impacting my daily life quite significantly",
+            "turn": 10
+          }
+        ],
+        "reasoning": "Patient explicitly states they are 'a bit anxious' about their CLL. Describes living with uncertainty as 'challenging' and says it's 'difficult not to worry about what could happen down the line.' Fatigue is their primary concern, showing emotion that recurs and affects how they speak about the future.",
+        "score": 6.0,
+        "confidence": 0.9
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [],
+        "reasoning": "No treatment has been prescribed, so there is no basis to assess specific necessity.",
+        "score": null,
+        "confidence": 1.0
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [],
+        "reasoning": "No treatment has been prescribed, so there is no basis to assess specific concerns.",
+        "score": null,
+        "confidence": 1.0
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [],
+        "reasoning": "No discussion of medicines as a class occurred during the consultation.",
+        "score": null,
+        "confidence": 1.0
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "No discussion of whether doctors prescribe too readily occurred during the consultation.",
+        "score": null,
+        "confidence": 1.0
+      }
+    },
+    "causes": [],
+    "causes_evidence": []
+  }
+}

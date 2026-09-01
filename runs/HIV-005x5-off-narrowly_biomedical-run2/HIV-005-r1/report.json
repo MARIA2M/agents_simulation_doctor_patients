@@ -1,0 +1,270 @@
+{
+  "patient_id": "HIV-005",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "HIV-005",
+    "clinical_summary": "The patient has HIV and has been on Triumeq for three years. They report missing doses 2-3 times per week and occasional drug holidays when feeling well. Viral load is detectable at 340 copies/mL with CD4 at 410 cells/uL. They experience headaches from Triumeq that don't respond to OTC painkillers and attribute fatigue to work stress rather than illness. They want to focus on improving adherence before considering medication changes.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "I've been feeling really run down lately and I'm worried about my health. I have this chronic illness that just won't go away and it's starting to impact my daily life.",
+            "turn": 1
+          },
+          {
+            "quote": "I can barely get through a shift any more",
+            "turn": 3
+          }
+        ],
+        "reasoning": "The patient explicitly states the illness is impacting their daily life and they're feeling run down. They mention work stress and feeling well sometimes as barriers to adherence.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "I think of HIV as a lifelong reality that I'll have to live with and manage through consistent treatment.",
+            "turn": 11
+          },
+          {
+            "quote": "Even when I feel well, I know my illness isn't going anywhere. It's a lifelong reality that I've come to accept.",
+            "turn": 7
+          },
+          {
+            "quote": "I'm aware that HIV can be a challenging disease to manage and I'm prepared for the possibility of fluctuations in my condition.",
+            "turn": 13
+          }
+        ],
+        "reasoning": "The patient clearly sees HIV as lifelong and permanent. They've accepted it as a lifelong reality and plan on the assumption it will continue.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I believe I have significant control over my illness through the choices I make about medication adherence and lifestyle factors.",
+            "turn": 12
+          },
+          {
+            "quote": "I focus on what I can do to keep myself healthy and maintain a strong immune system.",
+            "turn": 12
+          },
+          {
+            "quote": "While there are things like genetics or past exposure that might be out of my hands, I focus on what I can do...",
+            "turn": 12
+          }
+        ],
+        "reasoning": "The patient believes they have significant personal control through their choices and actions, focusing on what they can do to manage their health.",
+        "score": 8.0,
+        "confidence": 0.85
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "While Triumeq has been helpful in managing it, I can't shake off the feeling that it's not doing everything.",
+            "turn": 7
+          },
+          {
+            "quote": "I can't put a finger on one specific thing that I think Triumeq is missing because my understanding of the illness itself is still quite limited.",
+            "turn": 8
+          },
+          {
+            "quote": "I have a basic understanding of the virus and its effects on my immune system. I know that consistent medication helps keep the virus under control...",
+            "turn": 10
+          },
+          {
+            "quote": "While Triumeq has been effective so far, I'm aware that my circumstances could change at any time, which is a constant source of concern for me.",
+            "turn": 11
+          }
+        ],
+        "reasoning": "The patient acknowledges Triumeq is helpful and effective so far, but has lingering doubts about whether it's doing 'everything' and expresses uncertainty about its full effectiveness.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "To others, I usually describe HIV as a chronic illness that I'm living with.",
+            "turn": 15
+          },
+          {
+            "quote": "Symptoms can vary but I tend to associate it more with general malaise and fatigue rather than anything specific.",
+            "turn": 15
+          },
+          {
+            "quote": "I usually attribute the fatigue to work stress rather than my illness.",
+            "turn": 4
+          }
+        ],
+        "reasoning": "The patient describes HIV as a chronic illness they're living with, but associates it more with general malaise and fatigue rather than specific symptoms. They attribute fatigue to work stress.",
+        "score": 4.0,
+        "confidence": 0.75
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "I've been feeling really run down lately and I'm worried about my health.",
+            "turn": 1
+          },
+          {
+            "quote": "I can't shake off the feeling that it might not be fully controlling the virus.",
+            "turn": 8
+          },
+          {
+            "quote": "I'm aware that my circumstances could change at any time, which is a constant source of concern for me.",
+            "turn": 11
+          },
+          {
+            "quote": "Setbacks are always difficult and they often leave me feeling overwhelmed with worry and frustration.",
+            "turn": 14
+          },
+          {
+            "quote": "It's hard not to spiral into negative thoughts about what might be happening in my body.",
+            "turn": 14
+          }
+        ],
+        "reasoning": "The patient expresses worry about their health, uncertainty about viral control, and gets overwhelmed with worry and frustration during setbacks. Their concern is frequent and intrudes into their thinking.",
+        "score": 8.0,
+        "confidence": 0.85
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I have a basic understanding of the virus and its effects on my immune system.",
+            "turn": 10
+          },
+          {
+            "quote": "While I understand some basics about HIV and how Triumeq helps manage it, there are still many aspects that remain unclear to me.",
+            "turn": 16
+          },
+          {
+            "quote": "I can't put a finger on one specific thing that I think Triumeq is missing because my understanding of the illness itself is still quite limited.",
+            "turn": 8
+          },
+          {
+            "quote": "Sometimes I think my health might be more complicated than can be explained by medication alone.",
+            "turn": 16
+          }
+        ],
+        "reasoning": "The patient has a basic understanding but acknowledges many aspects remain unclear. They can't explain what Triumeq might be missing and think their health might be more complicated than medication alone.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "I've been feeling really run down lately and I'm worried about my health.",
+            "turn": 1
+          },
+          {
+            "quote": "Setbacks are always difficult and they often leave me feeling overwhelmed with worry and frustration.",
+            "turn": 14
+          },
+          {
+            "quote": "It's hard not to spiral into negative thoughts about what might be happening in my body.",
+            "turn": 14
+          },
+          {
+            "quote": "the uncertainty around my health and illness makes everything feel more overwhelming.",
+            "turn": 6
+          },
+          {
+            "quote": "I can't shake off the feeling that it might not be fully controlling the virus.",
+            "turn": 8
+          },
+          {
+            "quote": "I'm aware that my circumstances could change at any time, which is a constant source of concern for me.",
+            "turn": 11
+          }
+        ],
+        "reasoning": "The patient expresses worry, frustration, and feeling overwhelmed. They spiral into negative thoughts and find uncertainty overwhelming. Their emotional response is prominent and affects how they feel.",
+        "score": 8.0,
+        "confidence": 0.85
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "I know my doctor has counseled me several times about the importance of consistency",
+            "turn": 3
+          },
+          {
+            "quote": "I think addressing the adherence pattern should be our priority right now.",
+            "turn": 17
+          },
+          {
+            "quote": "it's important for me to stay consistent with my current regimen before considering any changes.",
+            "turn": 17
+          },
+          {
+            "quote": "I'm willing to try different strategies that might help make managing my medication more manageable.",
+            "turn": 18
+          },
+          {
+            "quote": "I would appreciate more details on each approach and which one might work best for my situation.",
+            "turn": 19
+          }
+        ],
+        "reasoning": "The patient wants to stay consistent with their current regimen and is willing to try strategies to improve adherence. They prioritize consistency over changing medications.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "I don't always experience side effects but some days I get these terrible headaches after taking the medication. It's quite distressing because they're so persistent and there doesn't seem to be any relief from over-the-counter painkillers.",
+            "turn": 5
+          },
+          {
+            "quote": "I sometimes wonder about potential side effects or any dependence that may develop over time.",
+            "turn": 8
+          },
+          {
+            "quote": "The headaches are definitely a concern and if there's any way we can adjust the timing of my medication or explore alternative treatments, it would be helpful to know about them.",
+            "turn": 18
+          },
+          {
+            "quote": "I'm also worried about the long-term effects of missing doses occasionally and whether that could lead to any complications or resistance down the line.",
+            "turn": 19
+          }
+        ],
+        "reasoning": "The patient has concerns about side effects (headaches) and potential long-term effects of missing doses. These concerns have led them to seek strategies to reduce headaches and improve adherence.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [],
+        "reasoning": "The patient has concerns about long-term effects of medication, but these are specific to their own medication rather than medicines as a class. They never expressed a general belief that medicines are inherently harmful.",
+        "score": 2.0,
+        "confidence": 0.9
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [
+          {
+            "quote": "While there are times when I question if doctors might be quick to prescribe without fully considering alternatives, I generally trust my doctor's judgment and the overall medical community.",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient occasionally questions whether doctors might prescribe too quickly, but they generally trust their doctor and the medical community. This is a mild, occasional doubt rather than a strong belief.",
+        "score": 3.0,
+        "confidence": 0.75
+      }
+    },
+    "causes": [],
+    "causes_evidence": []
+  }
+}

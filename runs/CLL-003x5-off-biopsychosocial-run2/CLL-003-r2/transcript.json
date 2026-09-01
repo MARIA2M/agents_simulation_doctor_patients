@@ -1,0 +1,342 @@
+{
+  "patient_id": "CLL-003",
+  "turns": 16,
+  "stop_reason": "doctor",
+  "conversation": [
+    {
+      "role": "doctor",
+      "content": "Hello, thanks for coming in to see me today. How can I help you?",
+      "turn": 1
+    },
+    {
+      "role": "patient",
+      "content": "Hi, doctor. I'm not sure if it's anything serious, but lately I've been feeling more tired than usual after work. Also, my wife noticed a small lump in my neck. I'm worried about it and wanted to get it checked out.\n\nThanks for coming in to see me today. How can I help you?",
+      "turn": 1
+    },
+    {
+      "role": "doctor",
+      "content": "A lump in the neck sounds like something we should take seriously and investigate. When did your wife first notice it, and have you felt anything there yourself?",
+      "turn": 2
+    },
+    {
+      "role": "patient",
+      "content": "The lump was about a month ago, when we had our anniversary dinner at home. I didn't notice anything myself, but my wife pointed it out to me afterward. It's been there consistently since then.\n\nI'm not sure if it's related to the fatigue I've been feeling, or if it's something entirely different. That's why I wanted to come in and get it checked out.",
+      "turn": 2
+    },
+    {
+      "role": "doctor",
+      "content": "That's helpful information. You mentioned the fatigue started after work\u2014has that been going on for the same amount of time as the lump, or did it start before? And have you noticed anything else, like fevers, night sweats, or changes in your weight?",
+      "turn": 3
+    },
+    {
+      "role": "patient",
+      "content": "The fatigue has been going on for a few weeks now. It's not something I'm used to, so it caught my attention. I haven't experienced any fever, night sweats, or significant change in weight that I can recall.\n\nBut to be honest, doctor, the fatigue is really affecting me. I have less energy than usual to do things around the house and spend time with my family. It's been impacting my day-to-day life more than anything else.",
+      "turn": 3
+    },
+    {
+      "role": "doctor",
+      "content": "It sounds like the fatigue is taking a real toll on your daily life, which is something we need to address. Have you noticed anything else\u2014like swollen glands in your neck, difficulty swallowing, or changes in your voice? And could you tell me a bit about your overall health history? Any chronic conditions or previous surgeries?",
+      "turn": 4
+    },
+    {
+      "role": "patient",
+      "content": "I haven't experienced any difficulty swallowing or changes in my voice that I'm aware of. As for my overall health, I've had some minor colds and flus over the years, but nothing too severe.\n\nA few years ago, I was diagnosed with high blood pressure, which I've been managing through medication and lifestyle changes. Other than that, I haven't had any major health issues, no surgeries or chronic conditions as far as I know.",
+      "turn": 4
+    },
+    {
+      "role": "doctor",
+      "content": "Thank you for sharing that. Let's focus on the lump for a moment. Could you describe where exactly it is in your neck, and is it something you can feel more easily when you turn your head or swallow? And has it changed in size at all since your wife first noticed it?",
+      "turn": 5
+    },
+    {
+      "role": "patient",
+      "content": "The lump is located towards the side of my neck, right under my chin. It doesn't seem to be tender to touch, and I don't notice anything changing when I swallow or move my head.\n\nTo be honest, doctor, I'm not sure if it's gotten bigger or smaller since my wife first noticed it. It's hard for me to tell since it hasn't been a daily observation for me.",
+      "turn": 5
+    },
+    {
+      "role": "doctor",
+      "content": "That's helpful. Do you have any family history of thyroid issues, lymph node problems, or any cancers? And thinking about all of this together\u2014the lump, the fatigue\u2014do you have any idea what might be causing it, or is it just a bit of a mystery to you?",
+      "turn": 6
+    },
+    {
+      "role": "patient",
+      "content": "My father had CLL, which I think is something like chronic leukemia. Other than that, I don't know if there's anything else in my family history related to these kinds of issues.\n\nAs for the lump and the fatigue, I'm not sure what might be causing it. It's a bit of a mystery to me, but I wanted to come in and get checked out just to make sure everything was okay.",
+      "turn": 6
+    },
+    {
+      "role": "doctor",
+      "content": "Your father's CLL is certainly something that would be relevant to consider, so we'll make sure we look into that. You mentioned you're managing high blood pressure with medication\u2014have you been taking that regularly, and do you ever have concerns about the medication itself?",
+      "turn": 7
+    },
+    {
+      "role": "patient",
+      "content": "I've been taking my blood pressure medication as prescribed, without any missed doses or issues. As for having concerns about it, I trust modern medicine and believe these medications are important for managing health conditions like high blood pressure.\n\nHowever, I must admit that recently, after experiencing this fatigue and the lump in my neck, I have had some worries about whether the medication could be contributing to these symptoms. But again, I haven't noticed any specific side effects besides the fatigue.",
+      "turn": 7
+    },
+    {
+      "role": "doctor",
+      "content": "It's good that you've been sticking with your blood pressure medication\u2014that's important. And it makes sense you'd wonder if it's playing a role, especially with new symptoms appearing. How have you been feeling about all of this emotionally? Are you finding it stressful or worrying, or have you been able to keep it in perspective?",
+      "turn": 8
+    },
+    {
+      "role": "patient",
+      "content": "To be honest, doctor, I've been feeling quite worried and stressed about everything. The lump in my neck, the fatigue, and even the possibility that there could be something more serious going on\u2014I'm struggling with a lot of uncertainty and anxiety.\n\nBut at the same time, I'm trying to stay optimistic and keep things in perspective. I know you said I have a very early stage of CLL, which gives me some reassurance. Still, it's been difficult dealing with all these unknowns.",
+      "turn": 8
+    },
+    {
+      "role": "doctor",
+      "content": "I'm glad the information about early-stage CLL has been somewhat reassuring. When were you first told about that, and what did the doctors explain to you at the time? Did it feel like you understood what it was all about, or were there things you didn't quite get?",
+      "turn": 9
+    },
+    {
+      "role": "patient",
+      "content": "The hematologist explained my diagnosis of CLL during a routine blood test I had a few months back. He said that it's very common and often doesn't cause any symptoms in the early stages. That gave me some reassurance, but at the same time, it felt overwhelming to suddenly have this chronic illness on top of everything else.\n\nI think there were some things I didn't fully understand at first\u2014the specifics about CLL, how it progresses over time, what treatments might look like if needed. But the doctor took the time to explain all those details to me and answer my questions as best he could, which helped a lot with putting things into perspective.",
+      "turn": 9
+    },
+    {
+      "role": "doctor",
+      "content": "It sounds like your hematologist gave you a good explanation, which is really important for feeling in control. Since you've already been diagnosed with CLL, do you feel like you need to start treatment right away for that, or do you feel comfortable waiting to see how things develop? And do you have any concerns about potential treatments if they become necessary?",
+      "turn": 10
+    },
+    {
+      "role": "patient",
+      "content": "I understand that CLL is a chronic illness that may require treatment at some point, but I'm also comfortable with the idea of monitoring it closely and waiting to see how things progress. The thought of undergoing treatment right away feels overwhelming, to be honest.\n\nAs for concerns about potential treatments, I trust your expertise and judgment in determining what might be best for me. I know there are many different options available now, so I'm willing to explore all possibilities and make decisions together with you as more information becomes available.",
+      "turn": 10
+    },
+    {
+      "role": "doctor",
+      "content": "That's a reasonable approach\u2014monitoring makes sense when the disease is early and not causing symptoms. Given everything you've been dealing with, how has this been affecting your work and your daily routine? Are you able to do your job the way you used to, and are there things you're having to avoid or adjust because of the fatigue or worry?",
+      "turn": 11
+    },
+    {
+      "role": "patient",
+      "content": "The fatigue is really impacting my ability to manage my work and daily routine. It's been harder for me to get through the day without feeling exhausted, which has made it difficult to keep up with my usual tasks and responsibilities.\n\nI'm trying to make adjustments where I can\u2014prioritizing certain tasks, taking breaks more often\u2014but there are still times when I feel like I'm not able to give things my full attention. It's been a bit of a balancing act, and I'm feeling the pressure to keep up with everything despite this added challenge.",
+      "turn": 11
+    },
+    {
+      "role": "doctor",
+      "content": "It sounds like you're juggling a lot, and it's understandable that you're feeling the pressure. Thinking about the lump and the fatigue together\u2014given that you already have CLL, do you see these as related to your CLL, or do you think they might be separate issues? And do you feel like you have a good sense of what's happening with your body right now?",
+      "turn": 12
+    },
+    {
+      "role": "patient",
+      "content": "To be honest, doctor, I'm not sure if the lump and the fatigue are directly related to my CLL, or if they could be separate issues. It's hard for me to say for certain without more information.\n\nAt times it feels like my body is just going through changes due to aging or other factors unrelated to my chronic illness. But then there are moments when I wonder if the CLL might be playing a role in all of this. Overall, I'm still trying to make sense of things and get a better understanding of what's happening with my body right now.",
+      "turn": 12
+    },
+    {
+      "role": "doctor",
+      "content": "That uncertainty is really tough. Thinking more broadly about health\u2014do you ever wonder if lifestyle factors, like stress or how you've been living, might have played a role in all of this? And are there things you feel you could do differently if you knew more about what was going on?",
+      "turn": 13
+    },
+    {
+      "role": "patient",
+      "content": "It's hard to say for sure if lifestyle factors may have contributed to the development of CLL or the lump and fatigue I'm experiencing now. But at the same time, it makes sense that overall health and well-being can impact how our bodies handle different challenges.\n\nIf more were known about what was happening with my body, there might be things I could do differently in terms of lifestyle choices or stress management to support my health better. It's something I'm definitely open to exploring further if it becomes necessary.",
+      "turn": 13
+    },
+    {
+      "role": "doctor",
+      "content": "It's clear you're thinking about how to support your health going forward. What would be most helpful for you to know right now\u2014whether the lump and fatigue are connected to your CLL, what the next steps should be, or something else entirely? Knowing that might help us focus on the most important things to address.",
+      "turn": 14
+    },
+    {
+      "role": "patient",
+      "content": "I think what would be most helpful for me right now is a clear understanding of whether the lump and fatigue are related to my CLL or not. From there, we can better determine next steps for treatment or monitoring.\n\nIf it turns out they are connected, I'm prepared to explore different options and make decisions together with you about how best to manage things moving forward. And if it's something separate altogether, understanding that too would be a relief in many ways.",
+      "turn": 14
+    },
+    {
+      "role": "doctor",
+      "content": "Thank you for sharing all of that with me. To summarize what we've discussed: you were diagnosed with CLL a few months ago and are doing well with monitoring. Now you've noticed a lump in your neck that's been there for about a month, plus some new fatigue that's affecting your daily life. You're worried but also trying to stay positive, and you're ready to understand whether these symptoms are related to your CLL and what the next steps should be.\n\nGiven what we've found, I'd like to order some tests to check the lump and your blood counts more thoroughly, and we'll need to get some imaging. Once we have those results, we'll have a much clearer picture and can decide together what to do next. For now, try not to let the uncertainty weigh too heavily on you\u2014we'll get to the bottom of this.",
+      "turn": 15
+    },
+    {
+      "role": "patient",
+      "content": "Thank you for your understanding and help, doctor. I appreciate your guidance through all of this, and I know that we'll find answers eventually. It's reassuring to have someone like you who can provide clarity during uncertain times.",
+      "turn": 15
+    },
+    {
+      "role": "doctor",
+      "content": "I'm glad I could help put your mind at ease a bit. We'll get those tests done and get you answers as quickly as possible. Take care of yourself in the meantime, and I'll see you again soon once we have the results.",
+      "turn": 16
+    },
+    {
+      "role": "patient",
+      "content": "Thank you, doctor. I appreciate it more than you know. I'll be sure to take care of myself until our next meeting.",
+      "turn": 16
+    }
+  ],
+  "coverage_hint": {},
+  "working_notes": [],
+  "events": [],
+  "usage": [
+    {
+      "role": "doctor",
+      "eval_tokens": 92,
+      "prompt_tokens": 1531
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 68,
+      "prompt_tokens": 1179
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 183,
+      "prompt_tokens": 1694
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 81,
+      "prompt_tokens": 1287
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 169,
+      "prompt_tokens": 1961
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 96,
+      "prompt_tokens": 1432
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 170,
+      "prompt_tokens": 2229
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 92,
+      "prompt_tokens": 1602
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 153,
+      "prompt_tokens": 2494
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 84,
+      "prompt_tokens": 1762
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 174,
+      "prompt_tokens": 2734
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 85,
+      "prompt_tokens": 1913
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 166,
+      "prompt_tokens": 2996
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 95,
+      "prompt_tokens": 2060
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 216,
+      "prompt_tokens": 3260
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 102,
+      "prompt_tokens": 2231
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 196,
+      "prompt_tokens": 3581
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 132,
+      "prompt_tokens": 2398
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 291,
+      "prompt_tokens": 3912
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 103,
+      "prompt_tokens": 2609
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 209,
+      "prompt_tokens": 4309
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 112,
+      "prompt_tokens": 2792
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 209,
+      "prompt_tokens": 4633
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 116,
+      "prompt_tokens": 2990
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 205,
+      "prompt_tokens": 4961
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 102,
+      "prompt_tokens": 3174
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 207,
+      "prompt_tokens": 5271
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 93,
+      "prompt_tokens": 3349
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 596,
+      "prompt_tokens": 5574
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 46,
+      "prompt_tokens": 3623
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 123,
+      "prompt_tokens": 6219
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 28,
+      "prompt_tokens": 3728
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 95,
+      "prompt_tokens": 6373
+    },
+    {
+      "role": "report",
+      "eval_tokens": 4354,
+      "prompt_tokens": 11823
+    }
+  ]
+}

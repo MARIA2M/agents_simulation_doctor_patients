@@ -1,0 +1,356 @@
+{
+  "patient_id": "HIV-003",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "HIV-003",
+    "clinical_summary": "Patient has been managing HIV with Tivicay and Descovy for two years. Recently experiencing worsening chronic fatigue, joint pain, concentration difficulties, plus new persistent headaches and diarrhea. Uncertain whether symptoms are medication-related or illness progression. Patient expresses frustration and feeling overwhelmed, with times of emotional distress. Believes medication has helped maintain stability but recognizes limits. Has concerns about long-term side effects and is considering dosage adjustment. Sees illness as part of identity and ongoing challenge. Acknowledges injection drug use as factor but uncertain about other causes.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "My chronic fatigue has gotten worse",
+            "turn": 1
+          },
+          {
+            "quote": "trouble concentrating too, which is really impacting my work at the office",
+            "turn": 1
+          },
+          {
+            "quote": "The headaches are mostly causing me to feel extremely lethargic, almost like I'm dragging bricks behind me",
+            "turn": 2
+          },
+          {
+            "quote": "I've noticed myself making more mistakes at work recently",
+            "turn": 2
+          },
+          {
+            "quote": "It's really impacting my ability to get through my daily tasks efficiently",
+            "turn": 2
+          },
+          {
+            "quote": "feeling constantly drained",
+            "turn": 3
+          },
+          {
+            "quote": "overwhelming weight on your shoulders that never goes away",
+            "turn": 3
+          },
+          {
+            "quote": "big wave of exhaustion washing over you",
+            "turn": 3
+          },
+          {
+            "quote": "always just running in place, trying to keep up with everything that needs doing",
+            "turn": 3
+          }
+        ],
+        "reasoning": "The patient is experiencing significant impact on their work (making mistakes, trouble concentrating), daily tasks, and overall energy levels. They describe feeling constantly drained, overwhelmed, and unable to keep up. This is more than just minor inconvenience - it's affecting their ability to function at work and manage daily life.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "unfortunately just part of living with a chronic illness",
+            "turn": 3
+          },
+          {
+            "quote": "It's not unexpected to have these sorts of issues crop up over time",
+            "turn": 3
+          },
+          {
+            "quote": "this is what living with a chronic illness looks like for me right now",
+            "turn": 3
+          },
+          {
+            "quote": "all I can do is try to manage it as best as I can",
+            "turn": 3
+          }
+        ],
+        "reasoning": "The patient clearly sees this as a chronic, ongoing condition that will continue. They use phrases like 'part of living with a chronic illness' and 'what living with a chronic illness looks like for me right now' - indicating they're planning on this continuing. They're resigned to it being ongoing.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "all I can do is try to manage it as best as I can",
+            "turn": 3
+          },
+          {
+            "quote": "sense of responsibility or ownership over my own health and wellbeing",
+            "turn": 8
+          },
+          {
+            "quote": "working hard to manage what I can - both through medical treatment and day-to-day habits",
+            "turn": 8
+          },
+          {
+            "quote": "doing my best to stay positive about the future overall",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient clearly believes they have some control through managing their health, but they also acknowledge limits. They talk about managing what they can, taking responsibility, and working hard. However, they also recognize they can't control everything and that there are limits to what they can do.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "my medication has definitely been helping me maintain control over my health",
+            "turn": 5
+          },
+          {
+            "quote": "having a consistent treatment plan in place has helped me feel more stable overall",
+            "turn": 5
+          },
+          {
+            "quote": "medical treatment can only do so much on its own",
+            "turn": 5
+          },
+          {
+            "quote": "limits to what medication can do",
+            "turn": 5
+          }
+        ],
+        "reasoning": "The patient clearly sees medication as helpful and important for maintaining control and stability. However, they also recognize there are limits to what treatment can do. They're grateful for the help but acknowledge it's not a complete solution.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "living with a chronic illness feels like something that's become part of who I am at this point in my life",
+            "turn": 8
+          },
+          {
+            "quote": "It's not something I can just shake off or ignore",
+            "turn": 8
+          },
+          {
+            "quote": "an ongoing challenge and something that impacts many different aspects of my daily life",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient clearly identifies with having a chronic illness - it's become part of who they are and impacts many aspects of their life. They can't shake it off or ignore it.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "quite frustrating and disheartening",
+            "turn": 3
+          },
+          {
+            "quote": "worries me most is the uncertainty about whether my symptoms are related to my medication or just another part of living with my chronic illness",
+            "turn": 6
+          },
+          {
+            "quote": "hard not knowing for sure and feeling like there might be an underlying issue that we're missing",
+            "turn": 6
+          },
+          {
+            "quote": "nervous about the possibility of having to make changes to my treatment plan",
+            "turn": 6
+          },
+          {
+            "quote": "daunting to have yet another thing in my life that's unpredictable and out of control",
+            "turn": 6
+          },
+          {
+            "quote": "times when it feels like everything is just piling up on me",
+            "turn": 6
+          },
+          {
+            "quote": "hard not to get overwhelmed by it all",
+            "turn": 6
+          }
+        ],
+        "reasoning": "The patient expresses significant worry about uncertainty, potential changes to treatment, and feeling overwhelmed. They're concerned about missing underlying issues and feeling out of control. This worry is frequent and shapes their emotional response.",
+        "score": 8.0,
+        "confidence": 0.85
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "You know something is wrong, but you can't put your finger on exactly what it is or why it's happening",
+            "turn": 3
+          },
+          {
+            "quote": "uncertainty about whether my symptoms are related to my medication or just another part of living with my chronic illness",
+            "turn": 6
+          },
+          {
+            "quote": "uncertainty about what's causing them",
+            "turn": 9
+          },
+          {
+            "quote": "there are still some unanswered questions there",
+            "turn": 8
+          },
+          {
+            "quote": "uncertainty around how everything else came together as well",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient clearly acknowledges uncertainty about what's happening and why. They can't put their finger on exactly what's wrong or why, and they express uncertainty about causes and symptom relationships. However, they do have some understanding - they know injection drug use was a factor, they understand the general concept of multiple contributing factors, and they're trying to stay informed.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "quite frustrating and disheartening",
+            "turn": 3
+          },
+          {
+            "quote": "feeling constantly drained",
+            "turn": 3
+          },
+          {
+            "quote": "overwhelming weight on your shoulders that never goes away",
+            "turn": 3
+          },
+          {
+            "quote": "big wave of exhaustion washing over you",
+            "turn": 3
+          },
+          {
+            "quote": "always just running in place, trying to keep up with everything that needs doing",
+            "turn": 3
+          },
+          {
+            "quote": "times when it feels like everything is just piling up on me",
+            "turn": 6
+          },
+          {
+            "quote": "hard not to get overwhelmed by it all",
+            "turn": 6
+          },
+          {
+            "quote": "doing my best to stay positive and hopeful",
+            "turn": 6
+          }
+        ],
+        "reasoning": "The patient expresses significant emotional distress - frustration, disheartenment, feeling overwhelmed, and constantly drained. They describe physical sensations of emotional weight and exhaustion. However, they also show resilience by trying to stay positive and hopeful.",
+        "score": 8.0,
+        "confidence": 0.85
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "I understand the importance of taking medication for a chronic condition like this",
+            "turn": 7
+          },
+          {
+            "quote": "It's not something I take lightly",
+            "turn": 7
+          },
+          {
+            "quote": "the medications I'm on are helping me manage my illness and giving me a better quality of life overall",
+            "turn": 7
+          },
+          {
+            "quote": "I try to stay as informed as possible about my medications",
+            "turn": 7
+          },
+          {
+            "quote": "keep a dialogue going with you to make sure we're always exploring what might work best for me",
+            "turn": 7
+          }
+        ],
+        "reasoning": "The patient clearly sees medication as important and necessary for managing their condition. They take it seriously, understand its importance, and are actively engaged in managing it. They wouldn't consider stopping it.",
+        "score": 4.5,
+        "confidence": 0.8
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "can't help but feel somewhat wary about being on medication long term",
+            "turn": 7
+          },
+          {
+            "quote": "There are definite concerns out there about potential side effects or other issues that can come up with prolonged use",
+            "turn": 7
+          },
+          {
+            "quote": "most concerned about potential long-term side effects",
+            "turn": 7
+          },
+          {
+            "quote": "difficult to weigh the benefits and risks of staying on medication long term",
+            "turn": 7
+          },
+          {
+            "quote": "wondering if maybe my dosage has become too much for my body to handle",
+            "turn": 4
+          },
+          {
+            "quote": "wondering if we could adjust my dosage",
+            "turn": 1
+          }
+        ],
+        "reasoning": "The patient has specific concerns about long-term side effects and is actively considering whether their dosage might be too much. They're weighing benefits vs risks and have thought about adjusting their treatment. This shows active concern that has influenced their thinking about their medication.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "There are definite concerns out there about potential side effects or other issues that can come up with prolonged use",
+            "turn": 7
+          },
+          {
+            "quote": "it's just a reminder every day that my body is dealing with this chronic illness",
+            "turn": 7
+          }
+        ],
+        "reasoning": "The patient expresses general concern about potential side effects and issues from prolonged medication use. They acknowledge that medicines can have negative effects. This shows some general wariness about medicines as a class.",
+        "score": 3.5,
+        "confidence": 0.75
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "The patient never expressed any belief that doctors prescribe too readily.",
+        "score": null,
+        "confidence": 0.0
+      }
+    },
+    "causes": [
+      "injection drug use",
+      "genetic predispositions",
+      "environmental exposures",
+      "lifestyle choices"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "While I know that injection drug use was a major factor for me in my younger years",
+        "turn": 8
+      },
+      {
+        "quote": "there are just so many different factors at play with these kinds of illnesses - genetic predispositions, environmental exposures, lifestyle choices, and more all can contribute to the bigger picture",
+        "turn": 8
+      },
+      {
+        "quote": "So while I know that some things like injection drug use contributed to my condition, there's still a lot of uncertainty around how everything else came together as well",
+        "turn": 8
+      }
+    ]
+  }
+}

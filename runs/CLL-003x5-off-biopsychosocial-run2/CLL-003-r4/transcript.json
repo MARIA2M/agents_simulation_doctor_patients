@@ -1,0 +1,262 @@
+{
+  "patient_id": "CLL-003",
+  "turns": 12,
+  "stop_reason": "doctor",
+  "conversation": [
+    {
+      "role": "doctor",
+      "content": "Hello, it's good to see you today. I understand you've come in to talk about something related to your health \u2014 can you tell me what brings you in, and how you've been feeling recently?",
+      "turn": 1
+    },
+    {
+      "role": "patient",
+      "content": "Thank you for seeing me today. Well, to be honest, doctor, some days I can barely get out of bed. It feels like this disease has taken over everything \u2014 my work, my time with the kids, everything. And I know you said the medication should help, but I've been getting these terrible headaches since I started, and I keep wondering if it's really worth it. Sometimes I feel like I have no say in any of it.",
+      "turn": 1
+    },
+    {
+      "role": "doctor",
+      "content": "I can hear how overwhelming this has become for you. It sounds like the illness is significantly affecting your daily life and your role as a parent. You mentioned headaches from the medication \u2014 can you tell me more about those, how long they've been going on, and what else you've noticed in terms of how your body is reacting? Also, when you say the disease has taken over, what does that look like for you day to day?",
+      "turn": 2
+    },
+    {
+      "role": "patient",
+      "content": "The headaches started a few weeks after I began my treatment. They're usually in the morning, right after I wake up, and they last all day. Sometimes they get so bad I have to take an extra painkiller, but even then it's hard to focus on anything else. As for other reactions, I've noticed that I'm getting tired more easily than usual after work, which makes it harder to spend quality time with my kids or do the things I used to enjoy. It feels like everything is a struggle these days.",
+      "turn": 2
+    },
+    {
+      "role": "doctor",
+      "content": "It sounds like the headaches and fatigue are really interfering with how you get through your days and with being present for your children. You mentioned you're taking extra painkillers on top of your prescribed treatment \u2014 I want to understand what's happening for you. When you say these headaches and tiredness started after you began treatment, do you think the medication is what's causing them, or is there something else going on? And more broadly, what do you understand about what's happening with your body that brought you to this point?",
+      "turn": 3
+    },
+    {
+      "role": "patient",
+      "content": "To be honest, doctor, I'm not sure if it's the medication or if it's just part of dealing with CLL. My understanding of my illness is that it affects everyone differently and I know there can be side effects from treatment. But at the same time, I feel like I used to have more energy before starting this journey. It's hard for me to separate what's due to the illness itself and what might be from the medication.",
+      "turn": 3
+    },
+    {
+      "role": "doctor",
+      "content": "It makes sense that it's hard to separate the effects of the illness from those of treatment when you're in the middle of it. You mentioned CLL \u2014 can you tell me what you understand about what that means for you? How long have you been dealing with this, and what have you been told about what the treatment is supposed to do? And do you happen to know anyone else who's been through something similar, or have you read anything about it that's helped you make sense of it?",
+      "turn": 4
+    },
+    {
+      "role": "patient",
+      "content": "I've been living with CLL for about a year now. It was detected during a routine blood test and has been monitored since then. The hematologist explained that my condition is very early stage and I'm not currently on any medication, but I need to have follow-up appointments every three months or so to keep an eye on the blood count. They've reassured me that many people with CLL can live normal lifespans and never need treatment, which has been a relief. As for knowing anyone else going through something similar, it's mostly just online support groups where I've seen others share their experiences.",
+      "turn": 4
+    },
+    {
+      "role": "doctor",
+      "content": "I see \u2014 so you're not currently on CLL treatment, which is helpful context. You mentioned starting something a few weeks ago and getting headaches \u2014 was that a different kind of treatment, or were you perhaps trying something for the headaches themselves? And it's encouraging that your doctors have told you many people with early-stage CLL can live normal lives without treatment \u2014 has that information affected how you think about things, or do you still find yourself worrying about what's to come?",
+      "turn": 5
+    },
+    {
+      "role": "patient",
+      "content": "That was my first time on any medication related to CLL. The hematologist prescribed me something to help manage the symptoms and keep an eye on the blood count. But because of the headaches, I've been wondering if that might have been too much for my body all at once. As for what's to come, it can be scary not knowing exactly how this will play out, but hearing that many people with early-stage CLL can live normal lives without treatment has given me some reassurance. It's still on my mind, though \u2014 I often worry about what might happen down the line.",
+      "turn": 5
+    },
+    {
+      "role": "doctor",
+      "content": "So you started your first CLL-related medication a few weeks ago and now you're dealing with those headaches and the extra painkillers. I can see why you'd wonder if that's been too much for your body all at once. How would you describe the effect of this medication so far \u2014 has it helped with the CLL symptoms, or is it feeling like it's mostly been adding to the burden? And what would you like to see change in the next few weeks or months as we move forward?",
+      "turn": 6
+    },
+    {
+      "role": "patient",
+      "content": "Honestly, doctor, I'm not sure if the medication has helped with the CLL symptoms yet because my energy levels are still low and I've been dealing with these headaches. It's hard for me to say at this point whether it's helping or adding to the burden. As for what I would like to see change, I think I just want to find a way to manage these symptoms so that day-to-day life feels more manageable again. If the medication could help with those headaches and give me back some of the energy I used to have, that would be a good start.",
+      "turn": 6
+    },
+    {
+      "role": "doctor",
+      "content": "It makes sense that you're not seeing clear benefit yet when you're still dealing with new symptoms. Those headaches are a significant burden to carry on top of everything else \u2014 do you have any sense of why the medication might be causing them, or have you talked to anyone about whether there might be other ways to manage your CLL symptoms that don't come with this kind of side effect? And when you think about \"managing\" everything, what does that look like to you \u2014 is it about finding the right balance, or is it about having more say in what happens to you?",
+      "turn": 7
+    },
+    {
+      "role": "patient",
+      "content": "I haven't talked specifically with the hematologist about the medication causing the headaches. It's something I've considered on my own and it makes sense to me given how they started after starting the treatment. As for finding other ways to manage CLL symptoms, that would definitely be of interest to me if there are options out there that don't come with these side effects. In terms of managing everything, I think it's about finding the right balance between taking care of my health and still being able to live a fulfilling life. It's also about having more say in how we approach this \u2014 feeling like I'm an active participant rather than just reacting to what's happening.",
+      "turn": 7
+    },
+    {
+      "role": "doctor",
+      "content": "It sounds like you've been thinking through this quite carefully on your own. Have you felt comfortable bringing up these headaches and concerns with your hematologist, or has it felt like something you're managing on your own? And how are you finding the emotional side of all of this \u2014 it sounds like a lot to carry by yourself, especially given how much you value being an active participant in your own care.",
+      "turn": 8
+    },
+    {
+      "role": "patient",
+      "content": "Honestly, doctor, I've been hesitant to bring up these headaches with my hematologist because I don't want to seem ungrateful for the help and support they've already provided. It's a difficult balance between wanting to share everything so that we can work through it together and not wanting to add more to their plate. That said, if you think it would be helpful, I'm open to discussing these concerns with them. On the emotional side of things, it has definitely been an uphill battle at times \u2014 it's hard not to feel overwhelmed by everything. But as you mentioned earlier, support from loved ones and talking through my worries have helped keep me grounded and focused on what really matters.",
+      "turn": 8
+    },
+    {
+      "role": "doctor",
+      "content": "I really appreciate you sharing that. It's very common to feel that way \u2014 wanting to be grateful for the help and not wanting to add to anyone's workload \u2014 but your health and quality of life are exactly what the care team is there for, so bringing up these concerns would be the right thing to do. It sounds like you have a strong support system with your family and friends, and that's really important. What do they say that helps you most, and when you think about what would make you feel more in control of this situation, what would that look like for you?",
+      "turn": 9
+    },
+    {
+      "role": "patient",
+      "content": "My wife is incredibly supportive \u2014 she listens to me vent my frustrations and worries, and she reminds me of all the things we're grateful for. My friends have been a great source of emotional support as well, and I've found talking through everything with them very helpful. As for feeling more in control, I think it would be about having better information \u2014 understanding more about the science behind CLL, knowing what to expect from treatment, and being able to make informed decisions that align with my values and priorities. That way, even if things don't go exactly as planned, I can feel confident in the choices we've made together.",
+      "turn": 9
+    },
+    {
+      "role": "doctor",
+      "content": "That's really insightful \u2014 feeling confident in the choices you've made together, even when things don't go exactly as planned, is such an important part of managing a chronic illness. It sounds like you want to be well-informed and feel like you're part of the decision-making process rather than just following along. What aspects of CLL would you like to understand better? And is there anything else on your mind that you haven't had a chance to bring up today that you'd like to discuss?",
+      "turn": 10
+    },
+    {
+      "role": "patient",
+      "content": "I think understanding more about how the disease progresses and what factors might influence its course would be helpful. It's also important for me to continue learning about treatment options \u2014 not just for my current situation, but for any future scenarios we might face. As for anything else on my mind, I guess I'll have to see how things go from here. But for now, it feels good to have had this conversation and to know that there's a plan in place to help manage these symptoms and navigate what's ahead.",
+      "turn": 10
+    },
+    {
+      "role": "doctor",
+      "content": "Thank you for sharing all of that with me. It sounds like you're dealing with a lot, but you're also thoughtful about what you need and how you want to approach this. Let me summarize what we've talked about: you're living with early-stage CLL, you started a new medication a few weeks ago that's causing headaches and fatigue, and you're feeling overwhelmed by how much this is affecting your daily life and your role as a parent. You want to understand more about how CLL progresses and what to expect, and you'd like to feel more involved in decisions about your care rather than just reacting to what's happening.\n\nGoing forward, I think it would really help to connect with your hematologist about those headaches and concerns \u2014 that's the right thing to do, and they'll want to know how you're feeling. We can also work on getting you some good information about CLL and its course, and thinking together about what balance looks like for you between managing your health and still living a fulfilling life. You don't have to carry all of this alone, and taking small steps like bringing up those concerns with your team can make a big difference.\n\nIs there anything else you'd like to address before we wrap up?",
+      "turn": 11
+    },
+    {
+      "role": "patient",
+      "content": "Thank you so much for listening and for offering that support. I appreciate it more than you know. As for right now, I think I'm okay \u2014 I just want to take things one step at a time and see how everything goes moving forward. So, no need to address anything else in this moment.",
+      "turn": 11
+    },
+    {
+      "role": "doctor",
+      "content": "You're very welcome. That's a good approach \u2014 taking things one step at a time and focusing on what you can control right now. I'm glad we had a chance to talk, and I appreciate you sharing your experience with me. Take care, and I hope you're able to get some relief from those headaches soon. Feel free to reach out if you need anything else.",
+      "turn": 12
+    },
+    {
+      "role": "patient",
+      "content": "Thank you for your kind words and support. I'll definitely keep that in mind and thank you again for today. It's been a comfort having this conversation with you. Have a great day, doctor!",
+      "turn": 12
+    }
+  ],
+  "coverage_hint": {},
+  "working_notes": [],
+  "events": [],
+  "usage": [
+    {
+      "role": "doctor",
+      "eval_tokens": 175,
+      "prompt_tokens": 1531
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 93,
+      "prompt_tokens": 1204
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 281,
+      "prompt_tokens": 1802
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 108,
+      "prompt_tokens": 1395
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 288,
+      "prompt_tokens": 2194
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 91,
+      "prompt_tokens": 1618
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 280,
+      "prompt_tokens": 2576
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 123,
+      "prompt_tokens": 1818
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 320,
+      "prompt_tokens": 2982
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 119,
+      "prompt_tokens": 2044
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 370,
+      "prompt_tokens": 3424
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 117,
+      "prompt_tokens": 2273
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 266,
+      "prompt_tokens": 3914
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 134,
+      "prompt_tokens": 2516
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 237,
+      "prompt_tokens": 4317
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 141,
+      "prompt_tokens": 2740
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 289,
+      "prompt_tokens": 4698
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 127,
+      "prompt_tokens": 3008
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 250,
+      "prompt_tokens": 5116
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 104,
+      "prompt_tokens": 3244
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 618,
+      "prompt_tokens": 5473
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 63,
+      "prompt_tokens": 3604
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 134,
+      "prompt_tokens": 6157
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 42,
+      "prompt_tokens": 3753
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 664,
+      "prompt_tokens": 6336
+    },
+    {
+      "role": "report",
+      "eval_tokens": 4084,
+      "prompt_tokens": 12378
+    }
+  ]
+}

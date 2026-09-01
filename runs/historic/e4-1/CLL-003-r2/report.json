@@ -1,0 +1,305 @@
+{
+  "patient_id": "CLL-003",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "CLL-003",
+    "clinical_summary": "The patient reports significant impact on daily functioning, with some days unable to get out of bed. The illness has taken over work and family time. They experience persistent pain/discomfort, headaches as a side effect of medication, and emotional distress including sadness, frustration, and exhaustion. They recognize medication importance but have concerns about side effects and long-term use. They feel limited control beyond exercise and healthy eating.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "some days I can barely get out of bed",
+            "turn": 1
+          },
+          {
+            "quote": "It feels like this disease has taken over everything — my work, my time with the kids, everything",
+            "turn": 1
+          }
+        ],
+        "reasoning": "The patient describes being unable to get out of bed on some days and feeling the disease has taken over their work and family life, indicating major impact on daily functioning and major roles.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "It doesn't feel like it's going away anytime soon",
+            "turn": 2
+          },
+          {
+            "quote": "It's part of me now",
+            "turn": 2
+          },
+          {
+            "quote": "It's a reminder that my condition isn't going away anytime soon",
+            "turn": 4
+          }
+        ],
+        "reasoning": "The patient clearly expects the condition to continue long-term, viewing it as integrated into their identity and planning around it continuing.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "Sometimes I feel like I have no say in any of it",
+            "turn": 1
+          },
+          {
+            "quote": "it can be tough to find things within my control when the illness is so persistent",
+            "turn": 5
+          },
+          {
+            "quote": "I suppose there's a fair amount of exercise and healthy eating that I can do for myself, which helps me feel like I'm taking some proactive steps",
+            "turn": 5
+          }
+        ],
+        "reasoning": "The patient acknowledges some limited control through exercise and healthy eating, but overall feels they have no say and the illness dominates, indicating moderate control.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "I've been getting these terrible headaches since I started",
+            "turn": 1
+          },
+          {
+            "quote": "I keep wondering if it's really worth it",
+            "turn": 1
+          },
+          {
+            "quote": "I can't say for sure if the headaches are related to the medication or something else entirely",
+            "turn": 3
+          },
+          {
+            "quote": "My gut feeling is that it must be some side effect of the medicine since they were prescribed specifically to help with my symptoms",
+            "turn": 3
+          },
+          {
+            "quote": "I worry whether this discomfort might mean there's an underlying issue that isn't being addressed or if maybe I'm reacting badly to the medication",
+            "turn": 3
+          }
+        ],
+        "reasoning": "The patient is experiencing side effects from the medication and questioning its value, indicating limited belief in treatment efficacy.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "It's part of me now",
+            "turn": 2
+          },
+          {
+            "quote": "Day-to-day, it feels like managing a persistent pain or discomfort — always there",
+            "turn": 2
+          }
+        ],
+        "reasoning": "The patient has integrated the illness into their identity and describes persistent symptoms that are always present.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "I keep wondering if it's really worth it",
+            "turn": 1
+          },
+          {
+            "quote": "Sometimes I feel like I have no say in any of it",
+            "turn": 1
+          },
+          {
+            "quote": "It's all quite concerning and a bit stressful honestly",
+            "turn": 3
+          },
+          {
+            "quote": "There's always a part of me worried about potential side effects or long-term implications on my body",
+            "turn": 4
+          },
+          {
+            "quote": "It's a reminder that my condition isn't going away anytime soon and that I'm constantly fighting against it",
+            "turn": 4
+          },
+          {
+            "quote": "It can be confusing to navigate that uncertainty",
+            "turn": 2
+          },
+          {
+            "quote": "the uncertainty around what might have led to this only adds to the emotional burden",
+            "turn": 6
+          }
+        ],
+        "reasoning": "The patient expresses frequent worry about side effects, long-term implications, uncertainty about causes, and whether the treatment is worth it, with concerns recurring unprompted.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I understand what's happening with my body through regular check-ups and tests",
+            "turn": 2
+          },
+          {
+            "quote": "But sometimes, like when the headaches started after starting medication, it doesn't feel so straightforward anymore",
+            "turn": 2
+          },
+          {
+            "quote": "It can be confusing to navigate that uncertainty",
+            "turn": 2
+          },
+          {
+            "quote": "I try to stay informed as best I can",
+            "turn": 2
+          },
+          {
+            "quote": "I think the medical team I've seen has been quite understanding and knowledgeable about my condition, but it can feel like they don't fully grasp the full extent of what I'm going through on a daily basis",
+            "turn": 7
+          },
+          {
+            "quote": "there are so many nuances to living with this illness that sometimes get lost in those interactions",
+            "turn": 7
+          }
+        ],
+        "reasoning": "The patient tries to stay informed and understands their condition through medical interactions, but feels confused by new symptoms and believes there are nuances that get lost in medical visits.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "Sometimes I feel like I have no say in any of it",
+            "turn": 1
+          },
+          {
+            "quote": "It's all quite concerning and a bit stressful honestly",
+            "turn": 3
+          },
+          {
+            "quote": "sometimes sadness or frustration takes over",
+            "turn": 5
+          },
+          {
+            "quote": "other times I'm just feeling tired and worn out",
+            "turn": 5
+          },
+          {
+            "quote": "There are days where it feels like a real struggle to stay positive and focused on the good things",
+            "turn": 5
+          },
+          {
+            "quote": "the uncertainty around what might have led to this only adds to the emotional burden",
+            "turn": 6
+          }
+        ],
+        "reasoning": "The patient experiences sadness, frustration, exhaustion, and difficulty staying positive, with their emotional state clearly affected by the illness and uncertainty.",
+        "score": 8.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "I understand how important these medicines are in managing my symptoms and keeping me stable overall",
+            "turn": 4
+          },
+          {
+            "quote": "I think they're necessary for maintaining some level of quality of life",
+            "turn": 4
+          },
+          {
+            "quote": "I try not to dwell too much on those fears because, ultimately, I think they're necessary",
+            "turn": 4
+          }
+        ],
+        "reasoning": "The patient recognizes the importance of medication for symptom management and quality of life, and views it as necessary.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "I've been getting these terrible headaches since I started",
+            "turn": 1
+          },
+          {
+            "quote": "I keep wondering if it's really worth it",
+            "turn": 1
+          },
+          {
+            "quote": "I can't say for sure if the headaches are related to the medication or something else entirely",
+            "turn": 3
+          },
+          {
+            "quote": "My gut feeling is that it must be some side effect of the medicine since they were prescribed specifically to help with my symptoms",
+            "turn": 3
+          },
+          {
+            "quote": "I worry whether this discomfort might mean there's an underlying issue that isn't being addressed or if maybe I'm reacting badly to the medication",
+            "turn": 3
+          },
+          {
+            "quote": "There's always a part of me worried about potential side effects or long-term implications on my body",
+            "turn": 4
+          },
+          {
+            "quote": "sometimes the thought of taking medication long-term can be quite daunting",
+            "turn": 4
+          }
+        ],
+        "reasoning": "The patient has specific concerns about side effects (headaches), whether they're reacting badly to the medication, and long-term implications.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "sometimes the thought of taking medication long-term can be quite daunting",
+            "turn": 4
+          },
+          {
+            "quote": "It's a reminder that my condition isn't going away anytime soon",
+            "turn": 4
+          },
+          {
+            "quote": "There's always a part of me worried about potential side effects or long-term implications on my body",
+            "turn": 4
+          }
+        ],
+        "reasoning": "The patient expresses general concern about long-term medication use and potential harm to their body.",
+        "score": 3.0,
+        "confidence": 0.7
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "This dimension was never explored in the consultation.",
+        "score": null,
+        "confidence": 0.0
+      }
+    },
+    "causes": [
+      "genetics (father had similar issue)"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "Genetics could potentially play a role since my father had a similar issue",
+        "turn": 6
+      }
+    ]
+  }
+}

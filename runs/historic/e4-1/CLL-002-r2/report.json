@@ -1,0 +1,298 @@
+{
+  "patient_id": "CLL-002",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "CLL-002",
+    "clinical_summary": "A 60-year-old woman with chronic lymphocytic leukemia (CLL) reports persistent fatigue, recurrent infections, and occasional bruising. She takes 420 mg ibrutinib once daily after breakfast and has developed a consistent routine. She has a collaborative care team including primary care physician, hematologist, and oncologist. She describes her illness as chronic and lifelong, integrated into her identity, with significant impact on work and social functioning. She expresses high concern about future uncertainty and emotional struggle, though she trusts her healthcare team and believes her medications are essential.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "it still impacts my work and social life",
+            "turn": 2
+          },
+          {
+            "quote": "hard to focus or be as productive as before",
+            "turn": 2
+          },
+          {
+            "quote": "days when the symptoms just hit me hard",
+            "turn": 4
+          },
+          {
+            "quote": "fatigue feels almost unbearable",
+            "turn": 4
+          },
+          {
+            "quote": "pain from the occasional bruising feels overwhelming",
+            "turn": 4
+          }
+        ],
+        "reasoning": "The patient describes significant impact on work and social life, difficulty focusing and being productive, and symptoms that can be unbearable or overwhelming. This indicates a high level of impact on daily functioning.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "something that's always going to be there",
+            "turn": 2
+          },
+          {
+            "quote": "what's around the corner",
+            "turn": 4
+          },
+          {
+            "quote": "up and downs",
+            "turn": 1
+          },
+          {
+            "quote": "as bad as it's ever going to get",
+            "turn": 4
+          }
+        ],
+        "reasoning": "The patient clearly views her illness as chronic and lifelong ('always going to be there') and expresses uncertainty about the future ('what's around the corner'). She does not expect it to end.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "sometimes, even doing all that, it still feels like a constant battle",
+            "turn": 2
+          },
+          {
+            "quote": "worry about how I will manage as time goes on",
+            "turn": 4
+          },
+          {
+            "quote": "hopeful that with each passing day, I'll become better at handling the ups and downs of my illness",
+            "turn": 4
+          }
+        ],
+        "reasoning": "The patient takes actions (medication routine, self-care) but feels limited control - symptoms still hit hard and she worries about managing in the future. She has some hope but also significant doubt.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "The medications are absolutely essential for me - without them, I'd be in a much worse state",
+            "turn": 3
+          },
+          {
+            "quote": "They've made a significant difference",
+            "turn": 3
+          },
+          {
+            "quote": "regular check-ups and staying in touch with my healthcare team gives me some comfort",
+            "turn": 4
+          },
+          {
+            "quote": "knowing there are professionals who are tracking my condition and can help navigate any new challenges",
+            "turn": 4
+          }
+        ],
+        "reasoning": "The patient clearly believes the medications are essential and have made a significant difference. She also trusts her healthcare team to track and manage her condition.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "like having an old friend who's always around but not necessarily in a good way",
+            "turn": 2
+          },
+          {
+            "quote": "part of me now",
+            "turn": 2
+          },
+          {
+            "quote": "persistent fatigue",
+            "turn": 1
+          },
+          {
+            "quote": "fatigue feels almost unbearable",
+            "turn": 4
+          },
+          {
+            "quote": "pain from the occasional bruising",
+            "turn": 4
+          }
+        ],
+        "reasoning": "The patient has integrated the illness into her identity ('part of me now') and describes multiple symptoms (fatigue, infections, bruising) that are significant and intrusive.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "what worries me most about the future with this condition is not knowing what's around the corner",
+            "turn": 4
+          },
+          {
+            "quote": "It's that uncertainty that makes my worry for my health a constant companion in my life",
+            "turn": 4
+          },
+          {
+            "quote": "doubt creeps in",
+            "turn": 4
+          },
+          {
+            "quote": "It can be really difficult to stay positive",
+            "turn": 5
+          }
+        ],
+        "reasoning": "The patient expresses high concern about the future, uncertainty, and the emotional toll. Worry is described as a 'constant companion' and affects her ability to stay positive.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I think stress might have contributed to my condition",
+            "turn": 2
+          },
+          {
+            "quote": "When my husband passed away a few years ago, my immune system was already weakened",
+            "turn": 2
+          },
+          {
+            "quote": "I believe it just made me more susceptible to whatever led to my diagnosis",
+            "turn": 2
+          },
+          {
+            "quote": "I understand the importance of taking care of myself",
+            "turn": 2
+          },
+          {
+            "quote": "regular check-ups and staying in touch with my healthcare team gives me some comfort",
+            "turn": 4
+          }
+        ],
+        "reasoning": "The patient can explain what she believes caused her illness (stress + weakened immune system) and understands the importance of self-care and medical management.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "It's quite challenging day-to-day",
+            "turn": 2
+          },
+          {
+            "quote": "It does feel like a constant battle",
+            "turn": 4
+          },
+          {
+            "quote": "worry for my health a constant companion in my life",
+            "turn": 4
+          },
+          {
+            "quote": "doubt creeps in",
+            "turn": 4
+          },
+          {
+            "quote": "It can be really difficult to stay positive",
+            "turn": 5
+          },
+          {
+            "quote": "It's been a real comfort just to talk about everything that I'm experiencing",
+            "turn": 6
+          }
+        ],
+        "reasoning": "The patient describes emotional struggle ('constant battle'), worry as a constant companion, doubt, and difficulty staying positive. She also acknowledges the emotional toll and seeks comfort in conversation.",
+        "score": 8.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "The medications are absolutely essential for me - without them, I'd be in a much worse state",
+            "turn": 3
+          },
+          {
+            "quote": "They've made a significant difference",
+            "turn": 3
+          },
+          {
+            "quote": "overall consistency is crucial for me",
+            "turn": 3
+          }
+        ],
+        "reasoning": "The patient clearly states the medications are 'absolutely essential' and that they've made a significant difference. She also emphasizes consistency as crucial.",
+        "score": 4.5,
+        "confidence": 0.7
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "I do worry about any side effects",
+            "turn": 3
+          },
+          {
+            "quote": "Sometimes, I get these terrible headaches after taking my medication, which is concerning",
+            "turn": 3
+          },
+          {
+            "quote": "there's always the concern about becoming dependent on them or long-term safety implications",
+            "turn": 3
+          }
+        ],
+        "reasoning": "The patient has specific concerns about side effects (headaches), dependence, and long-term safety. These concerns are active and have been raised.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "I also understand that it's a delicate balance and not something to take lightly",
+            "turn": 3
+          }
+        ],
+        "reasoning": "The patient acknowledges the 'delicate balance' of medication use, suggesting some general caution about medicines as a class.",
+        "score": 3.0,
+        "confidence": 0.6
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "The patient never mentioned any general beliefs about overuse of medicines as a class.",
+        "score": null,
+        "confidence": 0.0
+      }
+    },
+    "causes": [
+      "stress from losing her husband",
+      "weakened immune system"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "I think stress might have contributed to my condition",
+        "turn": 2
+      },
+      {
+        "quote": "When my husband passed away a few years ago, my immune system was already weakened",
+        "turn": 2
+      },
+      {
+        "quote": "I believe it just made me more susceptible to whatever led to my diagnosis",
+        "turn": 2
+      }
+    ]
+  }
+}

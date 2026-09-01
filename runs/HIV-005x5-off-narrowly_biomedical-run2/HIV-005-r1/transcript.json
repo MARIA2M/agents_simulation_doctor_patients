@@ -1,0 +1,412 @@
+{
+  "patient_id": "HIV-005",
+  "turns": 20,
+  "stop_reason": "turn_cap",
+  "conversation": [
+    {
+      "role": "doctor",
+      "content": "Hello. What brings you in today?",
+      "turn": 1
+    },
+    {
+      "role": "patient",
+      "content": "Hi doctor, I've been feeling really run down lately and I'm worried about my health. I have this chronic illness that just won't go away and it's starting to impact my daily life. I was hoping we could discuss some treatment options or adjustments to my current regimen.",
+      "turn": 1
+    },
+    {
+      "role": "doctor",
+      "content": "What chronic illness are we talking about, and what treatment are you currently on?",
+      "turn": 2
+    },
+    {
+      "role": "patient",
+      "content": "I'm living with HIV. It's been a persistent struggle for me. My doctor has prescribed Triumeq as my daily medication, but I've been having some trouble staying consistent with my dosage due to work stress and feeling well sometimes.",
+      "turn": 2
+    },
+    {
+      "role": "doctor",
+      "content": "How long have you been on Triumeq, and how consistently are you taking it these days? Are you missing doses regularly or just occasionally?",
+      "turn": 3
+    },
+    {
+      "role": "patient",
+      "content": "I've been on Triumeq for about three years now. I admit that I miss doses 2-3 times a week and sometimes even take drug holidays when I feel particularly well. I know my doctor has counseled me several times about the importance of consistency, but it's been difficult to manage.",
+      "turn": 3
+    },
+    {
+      "role": "doctor",
+      "content": "Have you had your viral load or CD4 count checked recently, and are you experiencing any new symptoms since you started missing doses?",
+      "turn": 4
+    },
+    {
+      "role": "patient",
+      "content": "My last viral load was 340 copies/mL which indicates a detectable but low level. My CD4 count is at 410 cells/uL. I've not developed any resistance so far. As for symptoms, I still experience occasional headaches and low-grade fatigue. But I usually attribute the fatigue to work stress rather than my illness.",
+      "turn": 4
+    },
+    {
+      "role": "doctor",
+      "content": "Do you experience any side effects from Triumeq that might be making it harder to take it consistently? And when you feel well, how long do your drug holidays typically last?",
+      "turn": 5
+    },
+    {
+      "role": "patient",
+      "content": "I don't always experience side effects but some days I get these terrible headaches after taking the medication. It's quite distressing because they're so persistent and there doesn't seem to be any relief from over-the-counter painkillers. My drug holidays usually last a few days, just long enough for me to feel like I'm in control again before restarting my medication.",
+      "turn": 5
+    },
+    {
+      "role": "doctor",
+      "content": "When you restart after a drug holiday, how do you get back into your regular schedule? And how much of your work stress are you attributing to missing doses versus other factors?",
+      "turn": 6
+    },
+    {
+      "role": "patient",
+      "content": "I usually try to set a reminder on my phone or calendar for when I need to take the medication. This helps me stay consistent once I've returned from a drug holiday. As for work stress, it's difficult to say how much of it is directly related to missing doses. But what I can tell you for certain is that the uncertainty around my health and illness makes everything feel more overwhelming.",
+      "turn": 6
+    },
+    {
+      "role": "doctor",
+      "content": "When you feel well, do you feel like your HIV is under control or that you might not need treatment some of the time? And have you discussed with your doctor what the risks might be if you continue this pattern?",
+      "turn": 7
+    },
+    {
+      "role": "patient",
+      "content": "Even when I feel well, I know my illness isn't going anywhere. It's a lifelong reality that I've come to accept. While Triumeq has been helpful in managing it, I can't shake off the feeling that it's not doing everything. As for discussing risks with my doctor, we have had conversations about how inconsistent medication could lead to resistance and potential complications down the line.",
+      "turn": 7
+    },
+    {
+      "role": "doctor",
+      "content": "What specifically do you feel Triumeq isn't doing, and what concerns do you have about long-term medication use beyond resistance?",
+      "turn": 8
+    },
+    {
+      "role": "patient",
+      "content": "I can't put a finger on one specific thing that I think Triumeq is missing because my understanding of the illness itself is still quite limited. But there's always this lingering worry at the back of my mind that it might not be fully controlling the virus. As for long-term medication use, I sometimes wonder about potential side effects or any dependence that may develop over time.",
+      "turn": 8
+    },
+    {
+      "role": "doctor",
+      "content": "Do you feel that doctors sometimes prescribe medications too readily, or have you had other experiences with medications that raised concerns for you?",
+      "turn": 9
+    },
+    {
+      "role": "patient",
+      "content": "While there are times when I question if doctors might be quick to prescribe without fully considering alternatives, I generally trust my doctor's judgment and the overall medical community. My concerns more often stem from personal uncertainties rather than any specific negative experience with medications.",
+      "turn": 9
+    },
+    {
+      "role": "doctor",
+      "content": "How well do you understand how HIV works and why daily medication is necessary, versus what happens if you take it inconsistently?",
+      "turn": 10
+    },
+    {
+      "role": "patient",
+      "content": "I have a basic understanding of the virus and its effects on my immune system. I know that consistent medication helps keep the virus under control and prevents it from damaging my immune system further. When I miss doses or go on drug holidays, I worry about the potential for resistance and complications due to inconsistent treatment.",
+      "turn": 10
+    },
+    {
+      "role": "doctor",
+      "content": "Do you think of HIV as something that will always be with you and require ongoing treatment, or do you see it as something that might eventually go away or become manageable without daily medication?",
+      "turn": 11
+    },
+    {
+      "role": "patient",
+      "content": "I think of HIV as a lifelong reality that I'll have to live with and manage through consistent treatment. While there are times when I feel well enough to believe the illness has gone into remission, I know deep down that it will always be lurking in the background. And while Triumeq has been effective so far, I'm aware that my circumstances could change at any time, which is a constant source of concern for me.",
+      "turn": 11
+    },
+    {
+      "role": "doctor",
+      "content": "How much do you feel you can personally influence your HIV management through your daily choices and actions?",
+      "turn": 12
+    },
+    {
+      "role": "patient",
+      "content": "I believe I have significant control over my illness through the choices I make about medication adherence and lifestyle factors. While there are things like genetics or past exposure that might be out of my hands, I focus on what I can do to keep myself healthy and maintain a strong immune system. This includes making sure I take Triumeq as prescribed and taking care of my mental health by seeking support when needed.",
+      "turn": 12
+    },
+    {
+      "role": "doctor",
+      "content": "When you think about living with HIV, do you expect it to remain stable with good treatment, or do you anticipate periods of improvement followed by setbacks?",
+      "turn": 13
+    },
+    {
+      "role": "patient",
+      "content": "I'm aware that HIV can be a challenging disease to manage and I'm prepared for the possibility of fluctuations in my condition. While I hope for stability and consistent progress with treatment, I understand that setbacks might occur due to various factors like stress, missed doses or even changes in medication. What's important is staying committed to managing it as best as I can.",
+      "turn": 13
+    },
+    {
+      "role": "doctor",
+      "content": "When you have setbacks or periods when you feel your health isn't improving, how do you generally feel about that?",
+      "turn": 14
+    },
+    {
+      "role": "patient",
+      "content": "Setbacks are always difficult and they often leave me feeling overwhelmed with worry and frustration. It's hard not to spiral into negative thoughts about what might be happening in my body. But I try to remind myself of the importance of maintaining a positive outlook and continuing to work with my doctor to find solutions to improve my condition.",
+      "turn": 14
+    },
+    {
+      "role": "doctor",
+      "content": "How do you typically describe HIV to other people \u2014 as an illness, a condition, something else \u2014 and what symptoms do you associate with it?",
+      "turn": 15
+    },
+    {
+      "role": "patient",
+      "content": "To others, I usually describe HIV as a chronic illness that I'm living with. I try to be honest about the daily challenges that come with managing it while also emphasizing how important adherence is for long-term health. Symptoms can vary but I tend to associate it more with general malaise and fatigue rather than anything specific.",
+      "turn": 15
+    },
+    {
+      "role": "doctor",
+      "content": "Given your basic understanding of HIV and your current treatment, do you feel you have a clear picture of what's happening in your body and why your treatment is working the way it is?",
+      "turn": 16
+    },
+    {
+      "role": "patient",
+      "content": "While I understand some basics about HIV and how Triumeq helps manage it, there are still many aspects that remain unclear to me. Sometimes I think my health might be more complicated than can be explained by medication alone. But overall, I trust in my doctor's expertise and their guidance on managing this chronic illness.",
+      "turn": 16
+    },
+    {
+      "role": "doctor",
+      "content": "To summarize: your viral load is detectable at 340 copies/mL with CD4 at 410, and you're missing 2-3 doses per week plus occasional drug holidays despite headaches from Triumeq. The detectable virus and inconsistent adherence are the main concerns. Have you discussed with your doctor about other medication options that might have fewer side effects, or would you like to address the adherence pattern first?",
+      "turn": 17
+    },
+    {
+      "role": "patient",
+      "content": "I think addressing the adherence pattern should be our priority right now. While I understand there may be other medication options available, it's important for me to stay consistent with my current regimen before considering any changes. It's a delicate balance between managing my health and maintaining my daily life, but I'm open to discussing new strategies or adjustments that could help improve my adherence.",
+      "turn": 17
+    },
+    {
+      "role": "doctor",
+      "content": "Given your schedule and the headaches, we could explore strategies like timing medication with other daily routines, using multiple reminders, or discussing whether the current side effects warrant a regimen change. Would you like me to provide some practical suggestions for improving consistency, or would you prefer to discuss specific concerns first?",
+      "turn": 18
+    },
+    {
+      "role": "patient",
+      "content": "I would appreciate any practical suggestions you have for improving my adherence. I'm willing to try different strategies that might help make managing my medication more manageable. The headaches are definitely a concern and if there's any way we can adjust the timing of my medication or explore alternative treatments, it would be helpful to know about them.",
+      "turn": 18
+    },
+    {
+      "role": "doctor",
+      "content": "Some practical options include: 1) Linking Triumeq to a daily routine like brushing teeth or breakfast, 2) Using phone alarms plus a medication organizer, 3) Taking medication with food to potentially reduce headaches, 4) Discussing whether switching to a different regimen might be appropriate given the side effects. Would you like me to elaborate on any of these, or do you have other specific concerns about your management plan?",
+      "turn": 19
+    },
+    {
+      "role": "patient",
+      "content": "All those options sound like good starting points for improving my adherence. I would appreciate more details on each approach and which one might work best for my situation. As for specific concerns, I'm also worried about the long-term effects of missing doses occasionally and whether that could lead to any complications or resistance down the line. Would you say those are valid concerns, and if so, how might we mitigate them?",
+      "turn": 19
+    },
+    {
+      "role": "doctor",
+      "content": "1) Routine linking: Take Triumeq with breakfast or another daily habit \u2014 this builds automaticity. 2) Multiple reminders: Set alarms plus a weekly pill organizer. 3) Food timing: Taking with food may reduce headaches. 4) Regimen change: If side effects persist, switching to a different combination might be an option. Regarding resistance: occasional missed doses don't usually cause immediate resistance, but weekly irregularity and drug holidays significantly increase this risk, which could limit future treatment options. Stabilizing adherence now is the best way to prevent complications. Would you like me to provide any additional information or do you have other questions?",
+      "turn": 20
+    }
+  ],
+  "coverage_hint": {},
+  "working_notes": [],
+  "events": [
+    {
+      "event": "turn_cap",
+      "turns": 20
+    }
+  ],
+  "usage": [
+    {
+      "role": "doctor",
+      "eval_tokens": 86,
+      "prompt_tokens": 1527
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 57,
+      "prompt_tokens": 1282
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 80,
+      "prompt_tokens": 1673
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 49,
+      "prompt_tokens": 1364
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 113,
+      "prompt_tokens": 1805
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 64,
+      "prompt_tokens": 1451
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 99,
+      "prompt_tokens": 1985
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 68,
+      "prompt_tokens": 1550
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 111,
+      "prompt_tokens": 2156
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 75,
+      "prompt_tokens": 1663
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 105,
+      "prompt_tokens": 2345
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 80,
+      "prompt_tokens": 1783
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 108,
+      "prompt_tokens": 2533
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 80,
+      "prompt_tokens": 1916
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 84,
+      "prompt_tokens": 2724
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 77,
+      "prompt_tokens": 2031
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 93,
+      "prompt_tokens": 2888
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 50,
+      "prompt_tokens": 2142
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 97,
+      "prompt_tokens": 3034
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 62,
+      "prompt_tokens": 2226
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 84,
+      "prompt_tokens": 3196
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 88,
+      "prompt_tokens": 2334
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 75,
+      "prompt_tokens": 3371
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 81,
+      "prompt_tokens": 2450
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 80,
+      "prompt_tokens": 3530
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 73,
+      "prompt_tokens": 2570
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 70,
+      "prompt_tokens": 3686
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 65,
+      "prompt_tokens": 2675
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 78,
+      "prompt_tokens": 3824
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 65,
+      "prompt_tokens": 2778
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 106,
+      "prompt_tokens": 3970
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 64,
+      "prompt_tokens": 2889
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 138,
+      "prompt_tokens": 4143
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 74,
+      "prompt_tokens": 3045
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 104,
+      "prompt_tokens": 4358
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 65,
+      "prompt_tokens": 3186
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 130,
+      "prompt_tokens": 4530
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 82,
+      "prompt_tokens": 3348
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 178,
+      "prompt_tokens": 4745
+    },
+    {
+      "role": "report",
+      "eval_tokens": 4822,
+      "prompt_tokens": 9993
+    }
+  ]
+}

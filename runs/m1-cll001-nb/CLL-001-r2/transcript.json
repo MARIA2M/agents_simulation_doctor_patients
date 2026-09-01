@@ -1,0 +1,242 @@
+{
+  "patient_id": "CLL-001",
+  "turns": 11,
+  "stop_reason": "doctor",
+  "conversation": [
+    {
+      "role": "doctor",
+      "content": "Good morning. What brings you in today?",
+      "turn": 1
+    },
+    {
+      "role": "patient",
+      "content": "Good morning, doctor. I've been feeling really tired lately, even after a full night's sleep. On top of that, I've been experiencing some headaches too. It's not like me at all and I just can't seem to shake it off. I'm worried about what might be causing this change in my health.",
+      "turn": 1
+    },
+    {
+      "role": "doctor",
+      "content": "How long have you had these symptoms? Have you noticed anything else unusual \u2014 dizziness, changes in appetite, trouble concentrating, or any other symptoms?",
+      "turn": 2
+    },
+    {
+      "role": "patient",
+      "content": "I've been feeling tired for a few weeks now. The headaches started about the same time. To be honest, I haven't really noticed any change in appetite, but I do find it harder to concentrate at work. When I'm trying to read something or write reports, my mind seems to wander more than usual. As for dizziness, no, I haven't experienced that.",
+      "turn": 2
+    },
+    {
+      "role": "doctor",
+      "content": "Do you have any medical conditions we should know about? Are you currently taking any medications or supplements? Any recent infections, travel, or exposure to anyone who's been ill?",
+      "turn": 3
+    },
+    {
+      "role": "patient",
+      "content": "I've had a few colds this winter, but nothing out of the ordinary. I don't remember having any major illnesses before. As for medication, I take some vitamins and an occasional over-the-counter pain reliever. But that's about it. No prescription medications or supplements. I haven't been traveling lately, my work keeps me pretty much at home these days.",
+      "turn": 3
+    },
+    {
+      "role": "doctor",
+      "content": "Does anyone in your family have hypertension, diabetes, or other chronic medical conditions? Have you had any fevers, vision changes, or any headaches that are unusually severe, throbbing, or start suddenly?",
+      "turn": 4
+    },
+    {
+      "role": "patient",
+      "content": "My mother has been diagnosed with hypertension, but I'm not sure about my father. I haven't really talked to him about it much. I don't think anyone in my family has diabetes or other chronic conditions.\n\nAbout fevers, no, I haven't had any. But these headaches are bothering me quite a bit and they do feel throbbing at times. They usually start gradually, not suddenly.",
+      "turn": 4
+    },
+    {
+      "role": "doctor",
+      "content": "Where exactly do your headaches tend to be located? How long do they usually last, and do they get better with rest or change when you move around?",
+      "turn": 5
+    },
+    {
+      "role": "patient",
+      "content": "The headaches seem to cover my entire head, but they are more intense at the front and on the sides. They can last anywhere from a few hours to a full day. When I try to sleep it off, I usually feel somewhat better after resting. Changing positions or moving around doesn't really make much of a difference either way.",
+      "turn": 5
+    },
+    {
+      "role": "doctor",
+      "content": "Do you notice any sensitivity to light or sound with your headaches, or any nausea or neck pain? Have you been under any unusual stress at work or home recently?",
+      "turn": 6
+    },
+    {
+      "role": "patient",
+      "content": "No, I don't have any sensitivity to light or sound that I'm aware of when I have a headache. As for nausea, no, I haven't experienced any, thankfully. I do notice some mild stiffness in my neck every now and then, but I can't say it's directly related to the headaches.\n\nAs for stress, work has been quite demanding lately. I've had several big projects at the office, which have kept me busy and a bit on edge. But nothing out of the ordinary, really. The headaches started before things got too crazy at work though.",
+      "turn": 6
+    },
+    {
+      "role": "doctor",
+      "content": "How would you rate the quality of your sleep overall \u2014 do you feel rested in the mornings, or do you still feel tired even after sleeping? Have you noticed any changes in your appetite or weight over the past few weeks?",
+      "turn": 7
+    },
+    {
+      "role": "patient",
+      "content": "My sleep quality has been fairly good overall, but I do find myself waking up more frequently than usual. Even with a full night's rest, I still wake up feeling a bit groggy and not entirely rested. As for my appetite, I haven't really noticed any changes or increase in hunger. In fact, if anything, I've been eating less than usual. But that could be because I'm just not feeling as energetic.",
+      "turn": 7
+    },
+    {
+      "role": "doctor",
+      "content": "Based on what you've described, we're looking at a combination of persistent headaches and fatigue lasting about three weeks. The headaches are throbbing and affect both sides of your head, while the fatigue is making it harder to concentrate at work. The neck stiffness and some sleep disturbance also fit this picture.\n\nBefore we settle on next steps, I want to rule out anything that would require more thorough investigation. Have you experienced any weight loss unintentionally, or have you noticed any bleeding gums, easy bruising, or unexplained bruising anywhere on your body?",
+      "turn": 8
+    },
+    {
+      "role": "patient",
+      "content": "No, I haven't experienced any weight loss unintentionally. As for bleeding gums or easy bruising, I can't say that I've noticed anything like that either. But then again, I'm not the most attentive person when it comes to my appearance. So there might be things I'm missing too.",
+      "turn": 8
+    },
+    {
+      "role": "doctor",
+      "content": "That's helpful. Without any concerning signs like weight loss or easy bruising, we can focus on the symptoms themselves.\n\nBased on what you've told me, my impression is that you have tension-type headaches with associated fatigue and difficulty concentrating. The fact that they started a few weeks ago and improve with rest, combined with the neck stiffness and sleep disturbance, points in that direction. The fatigue and difficulty concentrating could also be related to the stress from work, though it's worth noting they began before that stress escalated.\n\nI'd like to order some basic blood work to rule out any underlying issues \u2014 thyroid, iron levels, blood count, and some metabolic markers. If those come back normal, we can discuss management options for the headaches and fatigue, which might include medication and lifestyle changes. Does that sound reasonable?",
+      "turn": 9
+    },
+    {
+      "role": "patient",
+      "content": "Yes, that sounds perfectly reasonable. I trust your judgement, doctor. Let's go ahead with the blood work. It's about time I get to the bottom of these symptoms anyway. Thank you for your help.",
+      "turn": 9
+    },
+    {
+      "role": "doctor",
+      "content": "Great. I'll order the blood work today. If you don't hear back within a few days, please give us a call. If you develop any new or worsening symptoms \u2014 fever, severe headache, vision changes, or anything else that concerns you \u2014 come in right away. Is there anything else you'd like to address today?",
+      "turn": 10
+    },
+    {
+      "role": "patient",
+      "content": "No, I think we covered everything for now. Thank you again for your time and guidance, doctor. I'll be sure to give you a call if anything comes up. Take care.",
+      "turn": 10
+    },
+    {
+      "role": "doctor",
+      "content": "You're welcome. I'll see you after the blood work results come back, and we can discuss what those show and what we should do next. Take care.",
+      "turn": 11
+    },
+    {
+      "role": "patient",
+      "content": "Bye for now.",
+      "turn": 11
+    }
+  ],
+  "coverage_hint": {},
+  "working_notes": [],
+  "events": [],
+  "usage": [
+    {
+      "role": "doctor",
+      "eval_tokens": 92,
+      "prompt_tokens": 1527
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 67,
+      "prompt_tokens": 1197
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 106,
+      "prompt_tokens": 1689
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 78,
+      "prompt_tokens": 1303
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 125,
+      "prompt_tokens": 1876
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 76,
+      "prompt_tokens": 1425
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 128,
+      "prompt_tokens": 2080
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 82,
+      "prompt_tokens": 1551
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 114,
+      "prompt_tokens": 2293
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 68,
+      "prompt_tokens": 1673
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 148,
+      "prompt_tokens": 2478
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 118,
+      "prompt_tokens": 1783
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 145,
+      "prompt_tokens": 2747
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 89,
+      "prompt_tokens": 1955
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 323,
+      "prompt_tokens": 2984
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 63,
+      "prompt_tokens": 2164
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 292,
+      "prompt_tokens": 3373
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 44,
+      "prompt_tokens": 2398
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 117,
+      "prompt_tokens": 3712
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 39,
+      "prompt_tokens": 2518
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 75,
+      "prompt_tokens": 3871
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 6,
+      "prompt_tokens": 2599
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 807,
+      "prompt_tokens": 3955
+    },
+    {
+      "role": "report",
+      "eval_tokens": 6399,
+      "prompt_tokens": 8919
+    }
+  ]
+}

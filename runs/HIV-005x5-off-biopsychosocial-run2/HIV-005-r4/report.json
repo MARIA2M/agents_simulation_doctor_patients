@@ -1,0 +1,354 @@
+{
+  "patient_id": "HIV-005",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "HIV-005",
+    "clinical_summary": "Patient presents with fatigue and worsening headaches, describing the illness as taking over their life and feeling like a constant weight. They have been on Triumeq for some time but struggle with adherence, sometimes skipping doses or taking breaks when feeling okay. They express worry about long-term harm from the medication and whether it will remain effective. They trust their doctors but feel confused about how HIV affects them day to day and worry about the future as they age.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "It's like the illness is taking over my life",
+            "turn": 1
+          },
+          {
+            "quote": "It makes everything feel like such a struggle",
+            "turn": 2
+          },
+          {
+            "quote": "The fatigue is so hard to put into words. It just feels like a constant weight on me",
+            "turn": 4
+          },
+          {
+            "quote": "Sometimes it feels like this illness is just a really unwelcome guest at my table",
+            "turn": 8
+          },
+          {
+            "quote": "Day to day, it feels like this illness is always there, like a constant undercurrent to everything else",
+            "turn": 9
+          },
+          {
+            "quote": "Living with HIV has changed me in so many ways — it's something I have to factor into every decision and consideration",
+            "turn": 9
+          }
+        ],
+        "reasoning": "Patient describes profound impact on daily life - taking over their life, making everything a struggle, feeling like a constant weight, an unwelcome guest, and a constant undercurrent. They state it has changed them in many ways and they must factor it into every decision.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "I guess I see my illness as something that's always going to be around",
+            "turn": 2
+          },
+          {
+            "quote": "It feels like it's a part of me now",
+            "turn": 2
+          },
+          {
+            "quote": "Sometimes it feels like this illness is just a really unwelcome guest at my table, and no matter what I do, it's still going to be there",
+            "turn": 8
+          },
+          {
+            "quote": "Day to day, it feels like this illness is always there",
+            "turn": 9
+          },
+          {
+            "quote": "It's an aspect of my life that never goes away",
+            "turn": 9
+          }
+        ],
+        "reasoning": "Patient consistently describes the illness as always going to be around, a part of them, and something that never goes away. They don't express any expectation of it ending or being temporary.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I definitely try to stay active and manage my health as best I can",
+            "turn": 3
+          },
+          {
+            "quote": "But sometimes, the feeling of being drained is just so overwhelming. It's like no matter what I do, I can't shake it off",
+            "turn": 3
+          },
+          {
+            "quote": "Honestly, doctor, I feel like I have some control over my health. I try to eat as well as I can and get enough sleep when I can, but sometimes work or life gets in the way of that",
+            "turn": 8
+          },
+          {
+            "quote": "And with stress... Well, there's only so much you can do about that",
+            "turn": 8
+          },
+          {
+            "quote": "Sometimes it feels like this illness is just a really unwelcome guest at my table, and no matter what I do, it's still going to be there",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient acknowledges they try to manage their health and have some control, but also expresses that no matter what they do, they can't shake off the fatigue and the illness remains. They recognize external factors limit their control.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "I know I shouldn't do that, but it's hard not to get a bit hopeful that maybe I can beat this thing for a little while",
+            "turn": 5
+          },
+          {
+            "quote": "I know how important this medication is for controlling the HIV",
+            "turn": 6
+          },
+          {
+            "quote": "Lately, I've been more worried about potential long-term harm from taking Triumeq. Sometimes I wonder if my body is just getting too used to it and not fighting the virus as effectively anymore",
+            "turn": 6
+          },
+          {
+            "quote": "Even when I'm feeling okay and my viral load is undetectable, there's still this nagging worry in the back of my mind about what might be happening with Triumeq over time",
+            "turn": 10
+          },
+          {
+            "quote": "I know I should stay consistent with my medication",
+            "turn": 10
+          }
+        ],
+        "reasoning": "Patient acknowledges the medication is important for controlling HIV, but worries about long-term effectiveness and whether the body is getting 'too used to it.' They express hope of 'beating' the illness when feeling okay, suggesting they don't fully attribute their current state to the treatment.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "It feels like it's a part of me now",
+            "turn": 2
+          },
+          {
+            "quote": "The fatigue is so hard to put into words. It just feels like a constant weight on me",
+            "turn": 4
+          },
+          {
+            "quote": "Day to day, it feels like this illness is always there, like a constant undercurrent to everything else",
+            "turn": 9
+          },
+          {
+            "quote": "Living with HIV has changed me in so many ways — it's something I have to factor into every decision and consideration",
+            "turn": 9
+          },
+          {
+            "quote": "It's an aspect of my life that never goes away",
+            "turn": 9
+          }
+        ],
+        "reasoning": "Patient describes the illness as being 'a part of me now' and says it has 'changed me in so many ways.' They have to factor it into every decision and it's 'an aspect of my life that never goes away.' The fatigue is described as a constant weight and undercurrent.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "I'm worried about how this HIV infection is affecting me",
+            "turn": 1
+          },
+          {
+            "quote": "The fatigue is so hard to put into words. It just feels like a constant weight on me",
+            "turn": 4
+          },
+          {
+            "quote": "Lately, I've been more worried about potential long-term harm from taking Triumeq",
+            "turn": 6
+          },
+          {
+            "quote": "It's a scary thought because I know how important this medication is for controlling the HIV",
+            "turn": 6
+          },
+          {
+            "quote": "Future worries do creep in from time to time",
+            "turn": 9
+          },
+          {
+            "quote": "It's hard not to wonder what might happen as I get older and my body goes through changes",
+            "turn": 9
+          },
+          {
+            "quote": "Even when I'm feeling okay and my viral load is undetectable, there's still this nagging worry in the back of my mind about what might be happening with Triumeq over time",
+            "turn": 10
+          },
+          {
+            "quote": "It's hard to shake off that fear, even on good days",
+            "turn": 10
+          }
+        ],
+        "reasoning": "Patient expresses worry about how HIV is affecting them, worries about long-term harm from medication, worries about the future as they get older, and has a 'nagging worry' that persists even on good days. The worry is described as 'scary' and 'hard to shake off.'",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I know it's caused by a virus that attacks the immune system",
+            "turn": 2
+          },
+          {
+            "quote": "Honestly, doctor, I know the basics from all the conversations we've had, but I still feel pretty confused about some parts",
+            "turn": 4
+          },
+          {
+            "quote": "I know it's caused by a virus that attacks the immune system, but beyond that... I'm not sure",
+            "turn": 4
+          },
+          {
+            "quote": "And when it comes to how it affects me day to day, sometimes I think it's in my head and other times I wonder if it's something else entirely",
+            "turn": 4
+          }
+        ],
+        "reasoning": "Patient knows the basic cause (virus attacking immune system) but feels 'confused about some parts' and is unsure about how it affects them day to day. They sometimes wonder if symptoms are 'in my head' or something else entirely.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "It's like the illness is taking over my life",
+            "turn": 1
+          },
+          {
+            "quote": "It makes everything feel like such a struggle",
+            "turn": 2
+          },
+          {
+            "quote": "The fatigue is so hard to put into words. It just feels like a constant weight on me",
+            "turn": 4
+          },
+          {
+            "quote": "Sometimes it feels like this illness is just a really unwelcome guest at my table",
+            "turn": 8
+          },
+          {
+            "quote": "Day to day, it feels like this illness is always there, like a constant undercurrent to everything else",
+            "turn": 9
+          },
+          {
+            "quote": "It's hard to shake off that fear, even on good days",
+            "turn": 10
+          }
+        ],
+        "reasoning": "Patient describes the illness as a 'struggle,' a 'constant weight,' an 'unwelcome guest,' and a 'constant undercurrent.' They express that it's hard to shake off fear even on good days. The emotional burden is described as ongoing and pervasive.",
+        "score": 8.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "sometimes I forget to take it or go on short drug breaks when I feel okay",
+            "turn": 1
+          },
+          {
+            "quote": "I know I shouldn't do that, but it's hard not to get a bit hopeful that maybe I can beat this thing for a little while",
+            "turn": 5
+          },
+          {
+            "quote": "I know how important this medication is for controlling the HIV",
+            "turn": 6
+          },
+          {
+            "quote": "I know I should stay consistent with my medication, but it can be really tempting to take a break when things are going well",
+            "turn": 10
+          },
+          {
+            "quote": "I guess the worry never fully goes away, no matter how I'm feeling at the moment",
+            "turn": 10
+          }
+        ],
+        "reasoning": "Patient knows the medication is important for controlling HIV and knows they 'should stay consistent,' but they still skip doses or take breaks when feeling okay. They express hope of 'beating' the illness, suggesting they don't fully see the medication as necessary for their ongoing health.",
+        "score": 3.0,
+        "confidence": 0.6
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "But I'm always worried about whether missing doses might lead to problems",
+            "turn": 5
+          },
+          {
+            "quote": "Lately, I've been more worried about potential long-term harm from taking Triumeq",
+            "turn": 6
+          },
+          {
+            "quote": "Sometimes I wonder if my body is just getting too used to it and not fighting the virus as effectively anymore",
+            "turn": 6
+          },
+          {
+            "quote": "It's a scary thought because I know how important this medication is for controlling the HIV",
+            "turn": 6
+          },
+          {
+            "quote": "Even when I'm feeling okay and my viral load is undetectable, there's still this nagging worry in the back of my mind about what might be happening with Triumeq over time",
+            "turn": 10
+          },
+          {
+            "quote": "It's hard to shake off that fear, even on good days",
+            "turn": 10
+          }
+        ],
+        "reasoning": "Patient expresses worry about missing doses, long-term harm, and whether the body is getting 'too used to it' and losing effectiveness. They describe this as a 'scary thought' and a 'nagging worry' that persists even on good days. These concerns have led them to skip doses or take breaks.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "As for medications in general, I think they can definitely be helpful when used correctly",
+            "turn": 7
+          },
+          {
+            "quote": "But with HIV specifically, it's such a complex thing and the side effects can sometimes feel like too much to handle",
+            "turn": 7
+          }
+        ],
+        "reasoning": "Patient says medications in general 'can definitely be helpful when used correctly' and expresses concern about side effects specifically with HIV medications. They don't express a general belief that medicines are inherently harmful.",
+        "score": 2.0,
+        "confidence": 0.7
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [
+          {
+            "quote": "I trust the judgment of doctors and I know they're doing their best to help me",
+            "turn": 7
+          },
+          {
+            "quote": "But sometimes I can't help but wonder if there might be other treatments out there that could work better for me",
+            "turn": 7
+          }
+        ],
+        "reasoning": "Patient explicitly states they 'trust the judgment of doctors' and that doctors are 'doing their best to help me.' They express some curiosity about other treatments but don't suggest doctors prescribe too readily.",
+        "score": 2.0,
+        "confidence": 0.8
+      }
+    },
+    "causes": [
+      "virus that attacks the immune system"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "I know it's caused by a virus that attacks the immune system",
+        "turn": 2
+      }
+    ]
+  }
+}

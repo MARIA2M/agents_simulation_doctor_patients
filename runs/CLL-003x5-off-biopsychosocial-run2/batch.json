@@ -1,0 +1,81 @@
+{
+  "batch_id": "CLL-003x5-off-biopsychosocial-run2",
+  "repeats": 5,
+  "consultations": [
+    {
+      "run": "CLL-003-r1",
+      "patient_id": "CLL-003",
+      "repeat": 1,
+      "status": "ok",
+      "turns": 12,
+      "stop_reason": "doctor",
+      "events": 1,
+      "report_parsed": true,
+      "report_attempts": 1,
+      "na": [
+        "general_overuse"
+      ]
+    },
+    {
+      "run": "CLL-003-r2",
+      "patient_id": "CLL-003",
+      "repeat": 2,
+      "status": "ok",
+      "turns": 16,
+      "stop_reason": "doctor",
+      "events": 0,
+      "report_parsed": true,
+      "report_attempts": 1,
+      "na": [
+        "general_harm",
+        "general_overuse"
+      ]
+    },
+    {
+      "run": "CLL-003-r3",
+      "patient_id": "CLL-003",
+      "repeat": 3,
+      "status": "ok",
+      "turns": 12,
+      "stop_reason": "doctor",
+      "events": 0,
+      "report_parsed": true,
+      "report_attempts": 1,
+      "na": [
+        "general_harm",
+        "general_overuse",
+        "specific_concerns",
+        "specific_necessity"
+      ]
+    },
+    {
+      "run": "CLL-003-r4",
+      "patient_id": "CLL-003",
+      "repeat": 4,
+      "status": "ok",
+      "turns": 12,
+      "stop_reason": "doctor",
+      "events": 0,
+      "report_parsed": true,
+      "report_attempts": 1,
+      "na": [
+        "general_harm",
+        "general_overuse"
+      ]
+    },
+    {
+      "run": "CLL-003-r5",
+      "patient_id": "CLL-003",
+      "repeat": 5,
+      "status": "ok",
+      "turns": 12,
+      "stop_reason": "doctor",
+      "events": 0,
+      "report_parsed": true,
+      "report_attempts": 1,
+      "na": [
+        "specific_necessity"
+      ]
+    }
+  ]
+}

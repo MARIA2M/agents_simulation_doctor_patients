@@ -1,0 +1,202 @@
+{
+  "patient_id": "CLL-001",
+  "turns": 9,
+  "stop_reason": "doctor",
+  "conversation": [
+    {
+      "role": "doctor",
+      "content": "Hello. Thank you for coming in. What brings you to the clinic today?",
+      "turn": 1
+    },
+    {
+      "role": "patient",
+      "content": "Thank you for having me. To be honest, doctor, some days I can barely get out of bed. It feels like this disease has taken over everything \u2014 my work, my time with the kids, everything. And I know you said the medication should help, but I've been getting these terrible headaches since I started, and I keep wondering if it's really worth it. Sometimes I feel like I have no say in any of it.",
+      "turn": 1
+    },
+    {
+      "role": "doctor",
+      "content": "I hear you. Let me clarify a few things. What diagnosis were you given, and what medication are you currently taking? When did you start it, and how long have these headaches been going on?",
+      "turn": 2
+    },
+    {
+      "role": "patient",
+      "content": "I was diagnosed with Chronic Lymphocytic Leukemia (CLL) a few months back. I'm not on any medication right now; my doctor said the disease is in its early stages, so we're just monitoring things for now. The headaches started about two weeks after starting the treatment.",
+      "turn": 2
+    },
+    {
+      "role": "doctor",
+      "content": "I want to make sure I have this right. You mentioned medication earlier, but you're saying you're not on anything yet? Is there a specific treatment plan, or are you currently not on any medication for CLL?",
+      "turn": 3
+    },
+    {
+      "role": "patient",
+      "content": "That's correct. My doctor informed me that the CLL is still in its early stages and that we'll be following an 'active surveillance' approach for now, which means I won't be taking any medications at this time. We're just having my blood drawn monthly to monitor things. The headaches began after starting the watchful waiting period instead of from taking a medication specifically.",
+      "turn": 3
+    },
+    {
+      "role": "doctor",
+      "content": "I see. So you're in the monitoring phase with regular blood draws, and the headaches started during that time. Can you tell me more about the headaches \u2014 how severe they are, how often they occur, and whether they're accompanied by any other symptoms like fever, night sweats, or weight loss?",
+      "turn": 4
+    },
+    {
+      "role": "patient",
+      "content": "The headaches have been fairly severe \u2014 I'd rate them as a 7 out of 10 on average. They occur daily, and sometimes it feels like my entire head is tightly wrapped in a vice. I haven't experienced any other symptoms accompanying the headaches, so far as I'm aware.",
+      "turn": 4
+    },
+    {
+      "role": "doctor",
+      "content": "Daily severe headaches at that level warrant attention. Has anyone evaluated these headaches since they started? And have you noticed any other symptoms related to CLL \u2014 fatigue, swollen lymph nodes, or any other changes in your body?",
+      "turn": 5
+    },
+    {
+      "role": "patient",
+      "content": "I haven't had a chance to consult with a specialist about the headaches yet, but I've been keeping track of them for my own sake. As far as other symptoms go, besides the occasional night sweats that you might consider expected given my condition, I don't notice any significant changes. Fatigue comes and goes, but it doesn't feel out of the ordinary compared to what I've experienced living with CLL.",
+      "turn": 5
+    },
+    {
+      "role": "doctor",
+      "content": "You should get those headaches checked out. Daily severe headaches aren't something to manage on your own, especially with CLL. I'd recommend discussing them at your next appointment or seeing your doctor sooner if they're that debilitating. Let me ask about your overall situation \u2014 what does your doctor say about the outlook for CLL in your case, and how often are you seeing them for follow-up?",
+      "turn": 6
+    },
+    {
+      "role": "patient",
+      "content": "Thank you for your concern. My understanding is that my CLL has been relatively stable so far, but my doctor has mentioned that it may be years before treatment is even needed, as it's a slow-progressing disease. As for appointments, I'm scheduled to come in every three months for blood draws and check-ins, which my doctor says should be sufficient at this stage.",
+      "turn": 6
+    },
+    {
+      "role": "doctor",
+      "content": "I want to make sure we address the headaches before you leave. Can you tell me how much the headaches are interfering with your daily activities \u2014 getting out of bed, working, or caring for your kids? And what about those night sweats \u2014 are they enough to wake you up, or are you able to continue sleeping through the night?",
+      "turn": 7
+    },
+    {
+      "role": "patient",
+      "content": "The headaches have been significantly impacting my daily life. It's hard to focus on anything else when I'm constantly dealing with pain. Even simple tasks become more difficult when I can't concentrate properly. As for the night sweats, they've been happening frequently enough that it disrupts my sleep. It feels like I'm drenched in sweat and have difficulty getting comfortable.",
+      "turn": 7
+    },
+    {
+      "role": "doctor",
+      "content": "These symptoms are significant and should be discussed at your next appointment, especially the headaches which are affecting your concentration and daily tasks. Your doctor can order appropriate tests to rule out other causes. Is there anything else on your mind that you'd like to address before we end today?",
+      "turn": 8
+    },
+    {
+      "role": "patient",
+      "content": "Honestly, I don't have much more to add for now. It's just been such a burden dealing with the headaches lately, and it feels like they're taking up most of my energy to deal with them. As always, though, I appreciate your care and understanding. Thank you for listening.",
+      "turn": 8
+    },
+    {
+      "role": "doctor",
+      "content": "I've noted the severe daily headaches and frequent night sweats. At your next appointment, please mention these symptoms specifically \u2014 your doctor can examine you and order tests if needed. It's important to get these addressed so they don't continue to interfere with your daily life. Thank you for coming in today.",
+      "turn": 9
+    },
+    {
+      "role": "patient",
+      "content": "Thank you for understanding, doctor. I will make sure to raise these issues at my next appointment. Appreciate the advice, and I'll take care. Goodbye for now.",
+      "turn": 9
+    }
+  ],
+  "coverage_hint": {},
+  "working_notes": [],
+  "events": [],
+  "usage": [
+    {
+      "role": "doctor",
+      "eval_tokens": 193,
+      "prompt_tokens": 1532
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 90,
+      "prompt_tokens": 1160
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 247,
+      "prompt_tokens": 1818
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 62,
+      "prompt_tokens": 1300
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 169,
+      "prompt_tokens": 2130
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 76,
+      "prompt_tokens": 1415
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 222,
+      "prompt_tokens": 2378
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 60,
+      "prompt_tokens": 1562
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 188,
+      "prompt_tokens": 2663
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 85,
+      "prompt_tokens": 1674
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 217,
+      "prompt_tokens": 2939
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 76,
+      "prompt_tokens": 1845
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 215,
+      "prompt_tokens": 3235
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 75,
+      "prompt_tokens": 1998
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 208,
+      "prompt_tokens": 3528
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 61,
+      "prompt_tokens": 2137
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 171,
+      "prompt_tokens": 3800
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 37,
+      "prompt_tokens": 2268
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 684,
+      "prompt_tokens": 4011
+    },
+    {
+      "role": "report",
+      "eval_tokens": 5296,
+      "prompt_tokens": 8589
+    }
+  ]
+}

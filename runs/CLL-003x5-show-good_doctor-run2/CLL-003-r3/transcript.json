@@ -1,0 +1,402 @@
+{
+  "patient_id": "CLL-003",
+  "turns": 19,
+  "stop_reason": "doctor",
+  "conversation": [
+    {
+      "role": "doctor",
+      "content": "Hello, it's good to see you today. How can I help you? What brings you in?",
+      "turn": 1
+    },
+    {
+      "role": "patient",
+      "content": "Hello doctor. It's been a while since my last appointment, but I'm feeling a bit more tired than usual after work these days. My wife also noticed a small lump in my neck recently. I'm worried about it and thought it would be best to check up on it with you.",
+      "turn": 1
+    },
+    {
+      "role": "doctor",
+      "content": "Thank you for coming in, and I'm glad you mentioned that lump so we can have a look at it. Can you tell me a bit more about when your wife noticed it? Was it just today, or has she been pointing it out for a while now?",
+      "turn": 2
+    },
+    {
+      "role": "patient",
+      "content": "The lump, well my wife pointed it out to me about two weeks ago during one of our conversations. She said it was tender to the touch and seemed to be growing slowly over time. I didn't want to worry too much until I got an opportunity to see you, so I've been monitoring it closely on my own but it's still there.",
+      "turn": 2
+    },
+    {
+      "role": "doctor",
+      "content": "Two weeks is a good amount of time to keep an eye on it. Have you been feeling any other changes, like any swelling elsewhere, or has it felt harder or softer over time as it's grown? And how has it been affecting you physically - any soreness beyond just when you touch it?",
+      "turn": 3
+    },
+    {
+      "role": "patient",
+      "content": "No, nothing else in terms of swelling or changes in consistency that I've noticed. It's still just this small lump in my neck. As for physical effects, there isn't really anything else besides the mild discomfort when my wife and I touch it gently. I'm mostly worried about what might be causing it and whether it could have any implications related to my chronic illness.",
+      "turn": 3
+    },
+    {
+      "role": "doctor",
+      "content": "It sounds like you've been staying very attentive to it, which is good. You mentioned wondering if it could be related to your chronic illness - can you tell me a bit more about that illness and what you understand about it? How long have you been managing it?",
+      "turn": 4
+    },
+    {
+      "role": "patient",
+      "content": "I was diagnosed with Chronic Lymphocytic Leukemia (CLL) a few years ago, after finding out my blood counts were slightly abnormal. The doctors told me to watch and wait at the time, as I was in an early stage with minimal symptoms. Since then, I've been coming for regular check-ups and blood tests, but everything has been fairly stable so far. While I understand that CLL is a chronic condition and may never go away completely, it hasn't really affected my daily life much up until now. The occasional fatigue after work has been the most noticeable change, which is why this lump showing up was a bit of a surprise.",
+      "turn": 4
+    },
+    {
+      "role": "doctor",
+      "content": "That's helpful context. So you've been following the standard approach of monitoring with regular check-ups and blood tests, which sounds like a very sensible way to stay on top of things. You mentioned feeling tired after work - has that been a change from before your diagnosis, or has it been going on for a while? And when you're monitoring the lump, are you checking it on your own, or are you just waiting to see your doctor?",
+      "turn": 5
+    },
+    {
+      "role": "patient",
+      "content": "The fatigue I've been experiencing lately feels somewhat different from my usual post-work tiredness. It's more of an overall feeling of sluggishness that lasts throughout the day. This isn't something new though - ever since my diagnosis, I've been more aware of how much energy I have and try to manage it accordingly. As for checking the lump, I've been doing so on my own when I remember, but I'm definitely waiting to get your professional opinion on it during this appointment.",
+      "turn": 5
+    },
+    {
+      "role": "doctor",
+      "content": "It sounds like you've become quite attuned to your body since your diagnosis, which is really valuable. Now, about the lump itself - when you've been checking it, has it changed in size since your wife first noticed it? And how does it feel to you emotionally when you think about it - is it something that keeps you up at night, or is it more of a background worry that you carry with you?",
+      "turn": 6
+    },
+    {
+      "role": "patient",
+      "content": "I haven't noticed any changes in the lump's size myself, but my wife said it seemed larger and tenderer over time. When I touch it myself, it does feel slightly lumpy, but not painfully so. Emotionally, it's definitely something that has been on my mind a fair bit. It's not keeping me up at night, per se, but it is causing me to worry about the possibility of complications or connections to my CLL. I'm hoping you can help alleviate some of those concerns during today's appointment.",
+      "turn": 6
+    },
+    {
+      "role": "doctor",
+      "content": "I'm glad you mentioned that to me. It's understandable that you're thinking about how it might connect to your CLL, especially when something new shows up. Before we take a look, how long has it been since your last blood test? And is there anything else on your mind that you'd like to bring up, or any other symptoms that have been bothering you lately?",
+      "turn": 7
+    },
+    {
+      "role": "patient",
+      "content": "It's been about three months since my last blood test, so I think it's time for another one. Besides the lump and the occasional fatigue, I haven't really experienced anything new in terms of symptoms lately. But I do appreciate your willingness to discuss any concerns or questions I have - it helps me stay informed and better able to manage my condition overall.",
+      "turn": 7
+    },
+    {
+      "role": "doctor",
+      "content": "Three months is a good interval for a check-up, so we'll make sure to get that blood test done today. Now let me take a look at that lump in your neck so I can get a better sense of it. Could you sit back a little, and I'll have a look.",
+      "turn": 8
+    },
+    {
+      "role": "patient",
+      "content": "Sure, please go ahead. Let's see what we've got here.",
+      "turn": 8
+    },
+    {
+      "role": "doctor",
+      "content": "I can see it here in your neck. It's a small, firm lump that's slightly tender to the touch. I'll need to check a few things to get a better sense of it. Can you turn your head to the left and then to the right? And can you swallow some water while I'm looking?",
+      "turn": 9
+    },
+    {
+      "role": "patient",
+      "content": "Of course, here you go. Swallowing some water now.",
+      "turn": 9
+    },
+    {
+      "role": "doctor",
+      "content": "Thank you. I can see that the lump moves with your neck movements and doesn't appear to be attached to the lymph nodes deeper in the neck when you swallow. It's a small, firm lump that's tender to touch, but otherwise looks benign. Can you turn your head back to center?",
+      "turn": 10
+    },
+    {
+      "role": "patient",
+      "content": "Alright, here you go. Centering my head now.",
+      "turn": 10
+    },
+    {
+      "role": "doctor",
+      "content": "I've had a good look at the lump. It's a small, firm, tender lump that moves with your neck movements and doesn't appear to be attached to deeper structures when you swallow. This is most likely an enlarged lymph node, which is something that can happen with CLL or sometimes just as part of your body's normal immune response. The good news is it doesn't feel concerning on examination, but we'll want to keep an eye on it and possibly do some imaging if it grows or if you have any other symptoms.\n\nNow, I'd like to talk a bit more about your CLL and how you've been managing it. You mentioned the \"watch and wait\" approach - can you tell me what that means to you? What do you understand about why you're not on active treatment at the moment?",
+      "turn": 11
+    },
+    {
+      "role": "patient",
+      "content": "The watch and wait approach, as far as I understand it, is a way of monitoring my condition without intervening with aggressive treatments right away. Since my CLL is in an early stage and isn't showing many signs of progression yet, the doctors have advised against starting medication or any other active treatment. Instead, we're just keeping an eye on my blood counts at regular intervals to see if there are any significant changes.\n\nI've been living with this approach for a few years now, which has given me some time to adjust and learn more about CLL. It's reassuring in some ways because it feels like I'm not undergoing intense treatments unless they're really needed. But it can also be challenging at times when I experience new symptoms or worry about what might happen down the line.\n\nYou've been a great help so far, doctor. Thank you for taking the time to listen and offer guidance.",
+      "turn": 11
+    },
+    {
+      "role": "doctor",
+      "content": "That's a really good understanding of the watch and wait approach. It's a delicate balance - you're being proactive about monitoring, but avoiding unnecessary treatment, which is absolutely the right approach for someone in your situation. The fact that you're being mindful of your energy and learning about CLL shows you're engaging with your condition in a thoughtful way.\n\nLet me address the lump we found. Given that you're in early-stage CLL and have an enlarged lymph node, I'd like to get a baseline image of it and compare it to future examinations. We'll do an ultrasound today, and then we'll monitor it over the next few weeks to see if it grows or changes. If it does, we'll adjust our plan accordingly.\n\nI also want to address your fatigue. Since you've been feeling more sluggish throughout the day, we should make sure your blood work today gives us a complete picture. Sometimes fatigue in CLL can be related to the disease itself or other factors, and we want to rule those out.\n\nIs there anything else you'd like to discuss about your condition or this lump before we move on to the ultrasound?",
+      "turn": 12
+    },
+    {
+      "role": "patient",
+      "content": "Not at the moment, doctor. I appreciate your thorough approach and your willingness to keep an eye on everything. It's reassuring that you're taking these steps to understand what's going on with the lump and my fatigue. Thank you for all of it.",
+      "turn": 12
+    },
+    {
+      "role": "doctor",
+      "content": "I'm glad you're feeling reassured. To wrap up, here's what we're going to do: we'll get your blood work today, and I'll send you for an ultrasound of that lymph node to establish a baseline. We'll see you back in about 3-4 weeks to review everything and compare the images. If the lymph node grows or if you develop any other symptoms, we'll revisit the treatment plan together.\n\nAbout your CLL - I want to acknowledge that it's normal to feel worried when new symptoms appear, especially when you've been doing so well for so long. The watch and wait approach means you're not on the constant pressure of daily medication, which can be a relief, but it also means you're more aware of your body and any changes. That awareness can sometimes feel unsettling, but it also shows you're taking a responsible role in your health.\n\nIs there anything else you'd like to talk about before we finish today?",
+      "turn": 13
+    },
+    {
+      "role": "patient",
+      "content": "No, I think that covers everything for now. Thank you again for your time and expertise, doctor. It's reassuring to know I'm in good hands.",
+      "turn": 13
+    },
+    {
+      "role": "doctor",
+      "content": "You're very welcome. You're doing a great job managing your CLL, and I'm confident we'll keep things stable. Take care of yourself, and don't hesitate to reach out if you notice any changes in the lump or if you're concerned about your fatigue before your follow-up. Take care.",
+      "turn": 14
+    },
+    {
+      "role": "patient",
+      "content": "Thank you so much, doctor. I appreciate it. Have a great day!",
+      "turn": 14
+    },
+    {
+      "role": "doctor",
+      "content": "You're very welcome. Take care of yourself, and don't hesitate to reach out if you notice any changes in the lump or if you're concerned about your fatigue before your follow-up. Take care.",
+      "turn": 15
+    },
+    {
+      "role": "patient",
+      "content": "Thank you so much, doctor. I appreciate it. Have a great day!",
+      "turn": 15
+    },
+    {
+      "role": "doctor",
+      "content": "You're very welcome. Take care, and we'll see you in about 3-4 weeks. Have a great day.",
+      "turn": 16
+    },
+    {
+      "role": "patient",
+      "content": "Thank you, doctor. You too. Goodbye.",
+      "turn": 16
+    },
+    {
+      "role": "doctor",
+      "content": "You're very welcome. Take care, and we'll see you in about 3-4 weeks. Have a great day.",
+      "turn": 17
+    },
+    {
+      "role": "patient",
+      "content": "Thank you, doctor. You too. Goodbye.",
+      "turn": 17
+    },
+    {
+      "role": "doctor",
+      "content": "You're very welcome. Take care, and we'll see you in about 3-4 weeks. Have a great day.",
+      "turn": 18
+    },
+    {
+      "role": "patient",
+      "content": "Thank you, doctor. You too. Goodbye.",
+      "turn": 18
+    },
+    {
+      "role": "doctor",
+      "content": "You're very welcome. Take care, and we'll see you in about 3-4 weeks. Have a great day.",
+      "turn": 19
+    },
+    {
+      "role": "patient",
+      "content": "Thank you, doctor. You too. Goodbye.",
+      "turn": 19
+    }
+  ],
+  "coverage_hint": {},
+  "working_notes": [],
+  "events": [],
+  "usage": [
+    {
+      "role": "doctor",
+      "eval_tokens": 78,
+      "prompt_tokens": 1651
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 60,
+      "prompt_tokens": 1183
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 197,
+      "prompt_tokens": 1836
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 72,
+      "prompt_tokens": 1306
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 184,
+      "prompt_tokens": 2152
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 76,
+      "prompt_tokens": 1448
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 203,
+      "prompt_tokens": 2459
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 134,
+      "prompt_tokens": 1587
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 324,
+      "prompt_tokens": 2843
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 99,
+      "prompt_tokens": 1820
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 225,
+      "prompt_tokens": 3313
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 109,
+      "prompt_tokens": 2013
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 263,
+      "prompt_tokens": 3694
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 73,
+      "prompt_tokens": 2207
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 200,
+      "prompt_tokens": 4077
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 16,
+      "prompt_tokens": 2349
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 109,
+      "prompt_tokens": 4340
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 15,
+      "prompt_tokens": 2439
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 94,
+      "prompt_tokens": 4511
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 13,
+      "prompt_tokens": 2523
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 314,
+      "prompt_tokens": 4665
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 179,
+      "prompt_tokens": 2709
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 471,
+      "prompt_tokens": 5205
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 52,
+      "prompt_tokens": 3122
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 471,
+      "prompt_tokens": 5775
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 33,
+      "prompt_tokens": 3377
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 383,
+      "prompt_tokens": 6326
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 17,
+      "prompt_tokens": 3480
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 90,
+      "prompt_tokens": 6773
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 17,
+      "prompt_tokens": 3547
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 80,
+      "prompt_tokens": 6927
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 12,
+      "prompt_tokens": 3599
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 85,
+      "prompt_tokens": 7066
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 12,
+      "prompt_tokens": 3646
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 85,
+      "prompt_tokens": 7210
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 12,
+      "prompt_tokens": 3693
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 85,
+      "prompt_tokens": 7354
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 12,
+      "prompt_tokens": 3740
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 556,
+      "prompt_tokens": 7498
+    },
+    {
+      "role": "report",
+      "eval_tokens": 3791,
+      "prompt_tokens": 13349
+    }
+  ]
+}

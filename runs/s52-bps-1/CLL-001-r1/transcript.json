@@ -1,0 +1,269 @@
+{
+  "patient_id": "CLL-001",
+  "turns": 12,
+  "stop_reason": "doctor",
+  "conversation": [
+    {
+      "role": "doctor",
+      "content": "Hello, thank you for coming in. I'm glad you could make it. What brings you to see me today? What can I help you with?",
+      "turn": 1
+    },
+    {
+      "role": "patient",
+      "content": "Thank you for seeing me, doctor. To be honest, my energy levels have been really low lately and I've also noticed some new symptoms that are quite concerning me. I think it's time to get them checked out.",
+      "turn": 1
+    },
+    {
+      "role": "doctor",
+      "content": "I'm sorry to hear you've been feeling this way. It sounds like you're dealing with some real fatigue and some new symptoms that are worrying you. Can you tell me a bit more about what these new symptoms are? And how long have you been feeling this way?",
+      "turn": 2
+    },
+    {
+      "role": "patient",
+      "content": "The symptoms started about two months ago, I think. They include some occasional night sweats and some discomfort in my neck when I touch it. It's not too painful, but just feels different than before. The fatigue has also been getting worse over time. Even though I'm trying to maintain my usual routine, it's becoming harder and harder to keep up with everything.",
+      "turn": 2
+    },
+    {
+      "role": "doctor",
+      "content": "Thank you for sharing that with me. Two months is a fair amount of time for these symptoms to be building up. The night sweats can be quite unsettling, and the neck discomfort you're describing - can you tell me a bit more about what it feels like? Is it more of a sensation of fullness, or do you notice any changes in the size or texture of your neck? And how has this fatigue been affecting your daily life - are you able to work and do your usual activities?",
+      "turn": 3
+    },
+    {
+      "role": "patient",
+      "content": "The discomfort in my neck doesn't really feel like fullness. It's more like a kind of tension that doesn't seem to go away, even when I'm resting or sleeping. It can sometimes feel tender if I press on it, but there isn't any swelling or noticeable change in size.\n\nAs for the fatigue, it's been affecting me quite significantly - it's harder and harder to get through my usual workday without feeling exhausted. Even when I try to rest, I just don't seem to be getting the energy back that I used to have. It's making everything feel more difficult than it should be.",
+      "turn": 3
+    },
+    {
+      "role": "doctor",
+      "content": "I appreciate you describing that tension in your neck. It's unusual for it to persist even when you're resting, and the fact that it's tender when you press on it is something we'll want to take a closer look at. The fatigue sounds like it's really having an impact on your daily life and work, which is understandably frustrating. Have you noticed any other changes over the past couple of months - anything like weight changes, changes in appetite, or feeling hot or cold more than usual? And have you seen anyone else or had any tests done before coming to see me?",
+      "turn": 4
+    },
+    {
+      "role": "patient",
+      "content": "To be honest, doctor, I haven't noticed any significant weight changes or changes in my appetite. But I do remember feeling a bit colder than usual recently - it's been quite chilly here and I thought it was just the weather. As for seeing anyone else or having tests done, no, I haven't had the chance to do that yet. My primary care physician suggested I come see you as they felt these symptoms might be best addressed by someone with more specialized knowledge.",
+      "turn": 4
+    },
+    {
+      "role": "doctor",
+      "content": "Thank you for clarifying. It's interesting you mentioned feeling colder than usual - sometimes that can be a subtle sign of something going on, though you're right that our environment can play a role too. I'm glad your GP was able to refer you to me, and it sounds like we'll be able to work through this together.\n\nBefore we dive deeper, I'd like to understand your medical history better. Have you been diagnosed with any chronic conditions or illnesses in the past? And are you currently taking any medications? This will help me get a fuller picture of what might be going on.",
+      "turn": 5
+    },
+    {
+      "role": "patient",
+      "content": "I've actually been diagnosed with Chronic Lymphocytic Leukemia, doctor. It's something I've been living with for quite some time now - it was diagnosed about five years ago. I'm currently on watch and wait status, so I don't take any medication at the moment, but I do have monthly blood draws to monitor my condition. Other than that, I believe my medical history is fairly straightforward.",
+      "turn": 5
+    },
+    {
+      "role": "doctor",
+      "content": "Thank you for sharing that. I'm sorry to hear you've been managing CLL for five years - that's a significant period of time, and I know it can come with its own emotional weight and uncertainty. The fact that you're currently on watch and wait is good to know, and the monthly blood draws show you're staying on top of things.\n\nGiven that you've been stable for so long, I'm wondering what your understanding is of what these new symptoms might mean. Have you discussed with your GP what they think these changes could be, or have you had any thoughts about what might be going on? Sometimes having a sense of what's happening can help us address things together.",
+      "turn": 6
+    },
+    {
+      "role": "patient",
+      "content": "I haven't really discussed the new symptoms with my GP yet - this is actually my first appointment to specifically address them. As for what they might mean... I'm not sure, doctor. My understanding of CLL is that it can sometimes have unexpected effects on other parts of the body. The night sweats and neck discomfort could potentially be related, though I know that's not a given. I guess part of me is just worried that something new might be developing, which is scary to think about.",
+      "turn": 6
+    },
+    {
+      "role": "doctor",
+      "content": "It's understandable that you're feeling a bit uncertain, especially when dealing with something like CLL over the past five years. The fact that you're staying in touch with your GP and being proactive by coming in today shows you're thinking about things carefully.\n\nI'm curious - how have you generally felt about managing your CLL over the years? Have you felt like you have a good sense of what to expect, or has the uncertainty around it been challenging at times? And when you think about these new symptoms, do you feel like you have much control over what happens next, or does it feel like something that's just happening to you?",
+      "turn": 7
+    },
+    {
+      "role": "patient",
+      "content": "Managing CLL has definitely had its ups and downs. On one hand, I'm grateful for the stability in my condition so far - I know that not everyone with CLL has such a slow progression. But on the other hand, it's difficult to live with the uncertainty of what might happen down the line.\n\nAs for these new symptoms, it's hard to say how much control I have over them. Part of me feels like they're just part of living with CLL - after all, you mentioned that CLL can have unexpected effects on other parts of the body. But at the same time, I feel frustrated and worried because I didn't expect them to start happening now. It's hard not to feel a bit out of control sometimes.",
+      "turn": 7
+    },
+    {
+      "role": "doctor",
+      "content": "It sounds like you've found a balance between gratitude for the stability you've had and the worry that comes with the uncertainty. That's a really common experience when living with a chronic illness - trying to hold onto the good while also preparing for what might come.\n\nI'm wondering how you've been coping with that uncertainty over the years. Have you had any support - whether from friends, family, or any mental health resources - to help you manage those feelings? And what are your hopes for today's appointment? What would make you feel like we've addressed things well?",
+      "turn": 8
+    },
+    {
+      "role": "patient",
+      "content": "Having support has definitely helped me manage the uncertainty of living with CLL. My partner and my close friends have been incredibly understanding and supportive, and I've also considered reaching out to mental health resources in the past when I was feeling particularly overwhelmed.\n\nAs for today's appointment, I guess I'm hoping that we can figure out what might be causing these new symptoms - whether it's something related to CLL or something else entirely. If you're able to rule out any more serious concerns and provide me with some guidance on how best to manage these symptoms, I think that would go a long way towards helping me feel more in control again.\n\nI also appreciate your approach to treating the person as a whole - taking into account not only the physical symptoms but also the emotional impact of living with an illness like this. It's clear that you're someone who really cares about your patients and their well-being, which means a lot to me.",
+      "turn": 8
+    },
+    {
+      "role": "doctor",
+      "content": "I'm glad to hear you have such a strong support system around you. Having people who understand can make a real difference when you're dealing with something like this, especially on days when you're feeling particularly uncertain.\n\nIt makes sense that you want to get to the bottom of these symptoms and feel more in control again. The neck discomfort is one of the things we'll definitely want to focus on today, both from a physical exam perspective and to understand what might be going on. Have you noticed whether the neck tension is worse at certain times of day - for example, when you're working at your computer, or in the evening when you're trying to relax? And have you noticed anything in your lymph nodes in other parts of your body, like your armpits or groin?",
+      "turn": 9
+    },
+    {
+      "role": "patient",
+      "content": "I haven't really noticed any patterns in my neck tension - it seems to be more consistent throughout the day. But I definitely notice that I'm more tired when I've been sitting at my computer for a while.\n\nAs for the rest of my lymph nodes, I think I have just been feeling more aware of them since discussing CLL with my doctor. I haven't noticed anything particularly enlarged or painful in my armpits or groin - if anything, it's really just this discomfort in my neck that's been catching my attention lately.",
+      "turn": 9
+    },
+    {
+      "role": "doctor",
+      "content": "That's really helpful information. The fact that the neck tension seems consistent throughout the day, and that you notice increased fatigue when you've been sitting at the computer for a while, gives us some useful clues. It could be that the neck tension is contributing to your fatigue, or there might be something else going on that we'll need to investigate.\n\nIt's also really good that you're staying aware of your body and monitoring for any changes. When we do a physical exam today, I'll be checking your neck area carefully, and we may also want to look at some other areas. Based on what you've described, I'm thinking we might want to do some blood work today to get a baseline and see if there are any changes in your blood counts or markers that could give us more information. How does that sound to you?",
+      "turn": 10
+    },
+    {
+      "role": "patient",
+      "content": "That sounds like a good plan to me, doctor. If it can help us figure out what's going on, I'm definitely open to doing some additional testing. And I appreciate the way you're taking all of this into account - not just the physical symptoms but also how everything is impacting my daily life and emotional well-being. It feels like a more holistic approach, which I really value.",
+      "turn": 10
+    },
+    {
+      "role": "doctor",
+      "content": "I appreciate you being so open to this approach. It really does help me to understand the full picture when I can see how symptoms are affecting your daily life and your emotional state alongside the physical changes.\n\nTo summarize what we've covered today: you've had persistent fatigue and new symptoms including night sweats and neck tension over the past couple of months, on top of your five-year history of CLL. We'll do a physical exam focusing on your neck and lymph nodes today, along with blood work to get a clearer picture. And we'll talk through what those results might mean and what your options are going forward.\n\nIs there anything else you'd like to add or any other concerns you'd like to address before we get started?",
+      "turn": 11
+    },
+    {
+      "role": "patient",
+      "content": "Thank you for summarizing that, doctor. I think I've covered everything on my end for now. I'm just really grateful for this opportunity to talk things through and figure out what's going on. It can be scary when new symptoms start cropping up, so having someone like you who is compassionate and knowledgeable is really reassuring.",
+      "turn": 11
+    },
+    {
+      "role": "doctor",
+      "content": "You're very welcome. I'm glad you felt able to share everything with me today, and I appreciate your trust in me. I think we've got a good plan to work through this together. We'll do the physical exam now, followed by some blood work, and then I'll review everything with you and we can discuss the next steps based on what we find.\n\nYou've been really thoughtful throughout this process, and that's going to help us get to the bottom of what's going on. Take your time, and we'll get started.",
+      "turn": 12
+    },
+    {
+      "role": "patient",
+      "content": "Thank you, doctor. I appreciate your care and attention to detail. Let's get started now so we can move closer to some answers.",
+      "turn": 12
+    }
+  ],
+  "coverage_hint": {},
+  "working_notes": [],
+  "events": [
+    {
+      "event": "llm_retry",
+      "role": "report",
+      "attempt": 1,
+      "failure": "empty reply"
+    }
+  ],
+  "usage": [
+    {
+      "role": "doctor",
+      "eval_tokens": 97,
+      "prompt_tokens": 1531
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 46,
+      "prompt_tokens": 1219
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 143,
+      "prompt_tokens": 1677
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 76,
+      "prompt_tokens": 1329
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 222,
+      "prompt_tokens": 1899
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 126,
+      "prompt_tokens": 1515
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 259,
+      "prompt_tokens": 2250
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 96,
+      "prompt_tokens": 1767
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 236,
+      "prompt_tokens": 2608
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 85,
+      "prompt_tokens": 1992
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 308,
+      "prompt_tokens": 2932
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 101,
+      "prompt_tokens": 2224
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 286,
+      "prompt_tokens": 3344
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 148,
+      "prompt_tokens": 2461
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 338,
+      "prompt_tokens": 3781
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 186,
+      "prompt_tokens": 2732
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 327,
+      "prompt_tokens": 4308
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 108,
+      "prompt_tokens": 3084
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 330,
+      "prompt_tokens": 4746
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 80,
+      "prompt_tokens": 3369
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 222,
+      "prompt_tokens": 5159
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 67,
+      "prompt_tokens": 3604
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 183,
+      "prompt_tokens": 5451
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 29,
+      "prompt_tokens": 3791
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 864,
+      "prompt_tokens": 5666
+    },
+    {
+      "role": "report",
+      "eval_tokens": 4659,
+      "prompt_tokens": 11907
+    }
+  ]
+}

@@ -1,0 +1,221 @@
+{
+  "patient_id": "HIV-005",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "HIV-005",
+    "clinical_summary": "Patient with HIV for 5 years, on Triumeq for 3+ years, presents with fatigue and occasional headaches for 2-3 months. Viral load is detectable at 340 copies/mL indicating virologic failure. Patient struggles with medication adherence due to work stress and personal issues, though they understand the importance of viral suppression and have made efforts to improve consistency.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "I've been feeling quite unwell recently. My energy levels are low",
+            "turn": 1
+          },
+          {
+            "quote": "The fatigue and headaches have been ongoing for about two to three months now",
+            "turn": 3
+          },
+          {
+            "quote": "I understand that keeping my viral load undetectable helps protect my immune system and prevents the virus from causing damage to my body",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient reports low energy and occasional headaches for 2-3 months, understands the importance of viral suppression for immune protection, but hasn't described significant functional impairment beyond fatigue. Still managing daily life with challenges.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "I've had HIV for about 5 years now",
+            "turn": 2
+          },
+          {
+            "quote": "I understand that keeping my viral load undetectable helps protect my immune system and prevents the virus from causing damage to my body",
+            "turn": 8
+          },
+          {
+            "quote": "I'm aware that there are risks associated with a detectable viral load, such as developing opportunistic infections or cancers",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient has had HIV for 5 years and recognizes it as a condition requiring long-term management. Understands importance of maintaining viral suppression to prevent complications. No expectation of temporary or curable course.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I'm still finding it challenging to take Triumeq every day, as sometimes I forget or lose track of time",
+            "turn": 4
+          },
+          {
+            "quote": "There are days when remembering to take my medication feels like an extra task on top of everything else",
+            "turn": 9
+          },
+          {
+            "quote": "But I know that maintaining consistency is important for my health, so I'm trying my best to stay on track",
+            "turn": 9
+          }
+        ],
+        "reasoning": "Patient recognizes importance of adherence but feels external factors (work stress, personal issues) limit their ability to maintain it. Describes challenges and occasional forgetfulness but makes effort. Recognizes actions matter but feels constrained.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "The doctor reassured me that it's not too high and that consistency in adherence is key",
+            "turn": 4
+          },
+          {
+            "quote": "They also checked whether it was safe for me to switch to a different medication or adjust the current one",
+            "turn": 4
+          },
+          {
+            "quote": "I understand that keeping my viral load undetectable helps protect my immune system",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient trusts medical team and accepts treatment can be adjusted. Understands treatment (viral suppression) can protect immune system. However, hasn't explicitly attributed current state to treatment working or not working.",
+        "score": 6.0,
+        "confidence": 0.6
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "I've been feeling quite unwell recently. My energy levels are low and I've been getting occasional headaches. I'm worried it might be related to my HIV infection",
+            "turn": 1
+          },
+          {
+            "quote": "The fatigue and headaches have been ongoing for about two to three months now",
+            "turn": 3
+          }
+        ],
+        "reasoning": "Patient attributes symptoms (fatigue, headaches) to HIV infection. Has 2-3 symptoms that are intermittent but noticeable. Not constant or severely limiting.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "I'm worried it might be related to my HIV infection",
+            "turn": 1
+          },
+          {
+            "quote": "I understand that's not great because it means the virus is still there, even if just in small amounts",
+            "turn": 3
+          },
+          {
+            "quote": "I'm aware that there are risks associated with a detectable viral load, such as developing opportunistic infections or cancers",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient expresses worry about HIV and detectable viral load. Understands risks (opportunistic infections, cancers). However, concern appears tied to specific moments (results, appointments) rather than constant preoccupation.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I understand that keeping my viral load undetectable helps protect my immune system and prevents the virus from causing damage to my body",
+            "turn": 8
+          },
+          {
+            "quote": "I'm aware that there are risks associated with a detectable viral load, such as developing opportunistic infections or cancers",
+            "turn": 8
+          },
+          {
+            "quote": "While I have some understanding of these things, I must admit that HIV is still quite complex for me to fully grasp at times",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient has functional understanding of why viral suppression is important and what risks are associated with detectable viral load. However, acknowledges HIV is complex and doesn't fully grasp it. Understands mechanism but not full complexity.",
+        "score": 6.0,
+        "confidence": 0.6
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "I'm worried it might be related to my HIV infection",
+            "turn": 1
+          },
+          {
+            "quote": "I'm finding it challenging right now because of my workload and personal issues",
+            "turn": 9
+          },
+          {
+            "quote": "There are days when remembering to take my medication feels like an extra task on top of everything else",
+            "turn": 9
+          }
+        ],
+        "reasoning": "Patient expresses worry about HIV and acknowledges stress from work and personal issues. However, doesn't describe significant emotional impact on mood, sleep, or future outlook beyond practical challenges. Emotion appears contained and practical.",
+        "score": 4.0,
+        "confidence": 0.7
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "I understand that keeping my viral load undetectable helps protect my immune system",
+            "turn": 8
+          },
+          {
+            "quote": "But I know that maintaining consistency is important for my health, so I'm trying my best to stay on track",
+            "turn": 9
+          },
+          {
+            "quote": "I usually take Triumeq about 30 minutes before my breakfast, so it's not right after waking up",
+            "turn": 6
+          },
+          {
+            "quote": "I find that taking it earlier helps me remember to take it consistently",
+            "turn": 6
+          }
+        ],
+        "reasoning": "Patient recognizes importance of Triumeq for health and has organized routine around it (taking before breakfast). However, still struggles with consistency and has missed doses in past. Making effort but hasn't demonstrated non-negotiable stance.",
+        "score": 3.0,
+        "confidence": 0.6
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "As for side effects, there have been times when I've experienced a metallic taste in my mouth, but nothing too severe",
+            "turn": 6
+          }
+        ],
+        "reasoning": "Patient reports minor side effect (metallic taste) but doesn't express concern about it. Main challenge is adherence, not worry about medication. Hasn't raised concerns unprompted or indicated consideration of reducing dose.",
+        "score": 2.0,
+        "confidence": 0.8
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [],
+        "reasoning": "This dimension was never explored in the consultation.",
+        "score": null,
+        "confidence": 0.0
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "This dimension was never explored in the consultation.",
+        "score": null,
+        "confidence": 0.0
+      }
+    },
+    "causes": [],
+    "causes_evidence": []
+  }
+}

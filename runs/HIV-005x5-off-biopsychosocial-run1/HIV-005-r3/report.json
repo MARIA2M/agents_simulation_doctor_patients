@@ -1,0 +1,358 @@
+{
+  "patient_id": "HIV-005",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "HIV-005",
+    "clinical_summary": "Patient diagnosed with HIV three years ago, currently on Triumeq. Reports occasional missed doses and drug holidays when feeling well. Experiences ongoing symptoms including headaches and fatigue. Currently worried about viral load becoming detectable again after being undetectable, which is causing significant anxiety and affecting daily functioning. Has developed good understanding of condition and importance of treatment, but struggles with consistency in adherence and managing anxiety about long-term outcomes.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "I've been struggling with the day-to-day impact of living with this chronic illness",
+            "turn": 1
+          },
+          {
+            "quote": "Day-to-day activities might involve more planning and preparation than they would for someone without this condition",
+            "turn": 6
+          },
+          {
+            "quote": "It can be a bit exhausting at times",
+            "turn": 6
+          },
+          {
+            "quote": "Day-to-day, this worry can make it difficult for me to focus on other things or find joy in everyday activities",
+            "turn": 9
+          },
+          {
+            "quote": "It's like this constant cloud hanging over me, making everything feel more challenging than it should be",
+            "turn": 9
+          }
+        ],
+        "reasoning": "Patient describes substantial impact on daily life including increased planning, exhaustion, difficulty focusing, reduced joy, and feeling that everything is more challenging. This represents significant adaptation and impact on functioning.",
+        "score": 7.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "I've been taking Triumeq for the past three years",
+            "turn": 2
+          },
+          {
+            "quote": "It's a journey without an endpoint",
+            "turn": 8
+          },
+          {
+            "quote": "my life will never be completely free of its impact",
+            "turn": 7
+          },
+          {
+            "quote": "I see myself continuing to educate myself, advocate for my health, and support others in similar situations",
+            "turn": 8
+          },
+          {
+            "quote": "It's a journey without an endpoint",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient clearly views HIV as a lifelong condition with no endpoint, planning for ongoing management and seeing themselves continuing to manage this long-term.",
+        "score": 9.0,
+        "confidence": 0.9
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I've come to understand that living with HIV means taking charge of my health - being proactive about testing, managing my treatment regimen",
+            "turn": 7
+          },
+          {
+            "quote": "It's a partnership between myself and my healthcare team, where I'm an active participant in managing the condition",
+            "turn": 7
+          },
+          {
+            "quote": "I see myself continuing to educate myself, advocate for my health",
+            "turn": 8
+          },
+          {
+            "quote": "as long as I'm moving forward - both in managing the condition and in learning about new developments - I feel like I'm making progress",
+            "turn": 8
+          },
+          {
+            "quote": "I know how important consistency is in managing this condition",
+            "turn": 2
+          },
+          {
+            "quote": "I've occasionally missed my doses or even taken a drug holiday when I felt well",
+            "turn": 2
+          }
+        ],
+        "reasoning": "Patient has developed strong sense of agency and sees themselves as active participant in managing health. However, admits to inconsistent adherence (missed doses, drug holidays) despite understanding importance of consistency.",
+        "score": 7.0,
+        "confidence": 0.7
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "I know how important it is for my overall well-being",
+            "turn": 8
+          },
+          {
+            "quote": "I know how important consistency is in managing this condition",
+            "turn": 2
+          },
+          {
+            "quote": "I worry about potential long-term effects of taking medication, but at the same time, I understand that it might be necessary",
+            "turn": 8
+          },
+          {
+            "quote": "I know how important it is to keep taking the medication as prescribed by my doctor",
+            "turn": 5
+          }
+        ],
+        "reasoning": "Patient clearly understands importance of treatment for health outcomes and recognizes connection between treatment and well-being. However, expresses concerns about long-term effects and dependence, showing some uncertainty about treatment's long-term benefits.",
+        "score": 7.0,
+        "confidence": 0.7
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "I've been struggling with the day-to-day impact of living with this chronic illness",
+            "turn": 1
+          },
+          {
+            "quote": "Despite being on treatment, I still have occasional headaches and some fatigue that I can't shake off entirely",
+            "turn": 1
+          },
+          {
+            "quote": "I worry about the potential impact on our future and whether we'll be able to have children",
+            "turn": 6
+          },
+          {
+            "quote": "Day-to-day activities might involve more planning and preparation than they would for someone without this condition",
+            "turn": 6
+          },
+          {
+            "quote": "It can be a bit exhausting at times",
+            "turn": 6
+          }
+        ],
+        "reasoning": "Patient experiences ongoing symptoms (headaches, fatigue) despite treatment and describes how HIV affects daily life, planning, and energy levels. These symptoms are present and impact daily functioning.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "I've been feeling a bit worried lately about my viral load coming back detectable after it was undetectable for so long",
+            "turn": 1
+          },
+          {
+            "quote": "It's been causing me a lot of stress and anxiety",
+            "turn": 1
+          },
+          {
+            "quote": "I worry that having a higher viral load might mean my immune system is weaker or more vulnerable to other infections",
+            "turn": 3
+          },
+          {
+            "quote": "I'm also concerned about the potential for developing resistance to the medication",
+            "turn": 3
+          },
+          {
+            "quote": "It's hard not to feel like I'm constantly balancing on this tightrope, never knowing what could be around the next corner",
+            "turn": 3
+          },
+          {
+            "quote": "It makes me anxious and sometimes feels like it's taking over my life",
+            "turn": 3
+          },
+          {
+            "quote": "That uncertainty is something that's been weighing on me quite a bit lately",
+            "turn": 3
+          },
+          {
+            "quote": "The worry about my viral load going up has been causing me a lot of stress and anxiety lately",
+            "turn": 9
+          },
+          {
+            "quote": "Day-to-day, this worry can make it difficult for me to focus on other things or find joy in everyday activities",
+            "turn": 9
+          },
+          {
+            "quote": "It's like this constant cloud hanging over me, making everything feel more challenging than it should be",
+            "turn": 9
+          }
+        ],
+        "reasoning": "Patient expresses frequent, intrusive worry about viral load, health impacts, and future uncertainty. This worry affects daily functioning, focus, and ability to find joy. Described as 'weighing on me,' 'taking over my life,' and a 'constant cloud.'",
+        "score": 9.0,
+        "confidence": 0.9
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I've come to understand that living with HIV means taking charge of my health - being proactive about testing, managing my treatment regimen, and staying informed about any updates in research or guidelines",
+            "turn": 7
+          },
+          {
+            "quote": "It's a partnership between myself and my healthcare team, where I'm an active participant in managing the condition",
+            "turn": 7
+          },
+          {
+            "quote": "Compared to when I first learned about it, I now have more empathy for others living with HIV and a greater appreciation of just how complex this condition can be",
+            "turn": 7
+          },
+          {
+            "quote": "I know how important consistency is in managing this condition",
+            "turn": 2
+          },
+          {
+            "quote": "I know how important it is to keep taking the medication as prescribed by my doctor",
+            "turn": 5
+          },
+          {
+            "quote": "I understand that it might be necessary",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient demonstrates good understanding of condition, importance of treatment, and how to manage it. Talks about being proactive, staying informed, and understanding connection between treatment and health outcomes. Has developed more sophisticated understanding over time.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "It was a shock to say the least",
+            "turn": 1
+          },
+          {
+            "quote": "It's difficult carrying this diagnosis, but over the years, I've learned to accept it as a part of my life",
+            "turn": 4
+          },
+          {
+            "quote": "It's not something I ever thought would happen to me, and there are times when it still feels like a heavy burden",
+            "turn": 4
+          },
+          {
+            "quote": "It makes me anxious and sometimes feels like it's taking over my life",
+            "turn": 3
+          },
+          {
+            "quote": "That uncertainty is something that's been weighing on me quite a bit lately",
+            "turn": 3
+          },
+          {
+            "quote": "The worry about my viral load going up has been causing me a lot of stress and anxiety lately",
+            "turn": 9
+          },
+          {
+            "quote": "Day-to-day, this worry can make it difficult for me to focus on other things or find joy in everyday activities",
+            "turn": 9
+          },
+          {
+            "quote": "It's like this constant cloud hanging over me, making everything feel more challenging than it should be",
+            "turn": 9
+          }
+        ],
+        "reasoning": "Patient experiences significant emotional impact - shock initially, ongoing burden, anxiety, and stress. Worry about viral load causes emotional distress that affects daily functioning and ability to find joy. Emotion is prominent and affects what they do.",
+        "score": 8.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "I know how important consistency is in managing this condition",
+            "turn": 2
+          },
+          {
+            "quote": "I know how important it is to keep taking the medication as prescribed by my doctor",
+            "turn": 5
+          },
+          {
+            "quote": "I know how important it is for my overall well-being",
+            "turn": 8
+          },
+          {
+            "quote": "I understand that it might be necessary",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient clearly recognizes necessity of medication for health and well-being. Understands importance for managing condition and maintaining overall health. However, also expresses concerns about long-term effects and dependence, showing some ambivalence.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "I'm definitely concerned about potential side effects from Triumeq. Sometimes I get these headaches that feel like they might be related to the medication, although I can't say for sure",
+            "turn": 5
+          },
+          {
+            "quote": "there's always this nagging worry in the back of my mind about being dependent on medication long-term and what that could mean for my overall health",
+            "turn": 5
+          },
+          {
+            "quote": "I worry about potential long-term effects of taking medication",
+            "turn": 8
+          },
+          {
+            "quote": "It's a balancing act between wanting to feel 'normal' without compromising my treatment plan",
+            "turn": 5
+          }
+        ],
+        "reasoning": "Patient has specific concerns about side effects, long-term dependence, and overall health effects. These concerns have led them to think about feeling 'normal' without compromising treatment, suggesting they've considered implications of these concerns.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "I worry about potential long-term effects of taking medication",
+            "turn": 8
+          },
+          {
+            "quote": "there's always this nagging worry in the back of my mind about being dependent on medication long-term and what that could mean for my overall health",
+            "turn": 5
+          }
+        ],
+        "reasoning": "Patient expresses concern about long-term effects of medication, suggesting some general belief that medications may have harmful effects over time. However, they also recognize necessity of treatment, so this concern is balanced.",
+        "score": 3.0,
+        "confidence": 0.6
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "This dimension was never explored in the consultation.",
+        "score": null,
+        "confidence": 0.0
+      }
+    },
+    "causes": [
+      "previous partner who didn't disclose his status",
+      "bad luck"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "I believe that my HIV might have been contracted from a previous partner who didn't disclose his status",
+        "turn": 4
+      },
+      {
+        "quote": "I also think bad luck could have played a role since I tested regularly but just happened to catch it at the wrong time",
+        "turn": 4
+      }
+    ]
+  }
+}

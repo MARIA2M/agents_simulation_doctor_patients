@@ -1,0 +1,275 @@
+{
+  "patient_id": "HIV-005",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "HIV-005",
+    "clinical_summary": "A 30-something patient living with HIV for six years, diagnosed after frequent tests to rule out other issues. They've been on Triumeq (abacavir/dolutegravir/lamivudine) for three years with an undetectable viral load. They've been struggling with medication adherence, missing doses and taking 'drug holidays' when feeling well or busy with work/family. They've recognized the importance of consistency and are now motivated to improve adherence through practical strategies like alarms and pill boxes.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "I've been feeling alright most days. It's mostly just occasional headaches and some low-grade fatigue that I attribute to work stress rather than my illness.",
+            "turn": 1
+          },
+          {
+            "quote": "It's been prescribed for three years now and has generally been helping me maintain an undetectable viral load.",
+            "turn": 3
+          },
+          {
+            "quote": "skipping doses could potentially lead to an increase in my viral load or the development of resistance.",
+            "turn": 5
+          },
+          {
+            "quote": "without it, my condition could take a turn for the worse — and that's something I'm not willing to risk.",
+            "turn": 7
+          }
+        ],
+        "reasoning": "The patient describes occasional symptoms but attributes them to work stress, not the illness. They maintain an undetectable viral load and are generally feeling 'alright most days.' They recognize potential serious consequences (viral load increase, resistance) but these haven't materially impacted their daily functioning yet. They haven't had to give up major roles or activities.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "I've been living with my chronic illness for six years now... It's been a bit of a rollercoaster ride since then — some days are better than others, and I've had my share of ups and downs.",
+            "turn": 2
+          },
+          {
+            "quote": "consistency and adherence are key to successfully managing chronic conditions like mine.",
+            "turn": 4
+          },
+          {
+            "quote": "even if I'm feeling well or not experiencing symptoms, skipping doses could potentially lead to an increase in my viral load or the development of resistance.",
+            "turn": 5
+          },
+          {
+            "quote": "It's an ongoing journey, but one where I'm learning more with each passing day.",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient has lived with the condition for six years and describes it as ongoing. They recognize it as a chronic condition requiring ongoing management. They don't express an expectation that it will end soon, and they're planning for continued treatment.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I've already done enough work managing it.",
+            "turn": 4
+          },
+          {
+            "quote": "It reminds me that I have some say in how my story with this illness unfolds.",
+            "turn": 6
+          },
+          {
+            "quote": "I still believe it's essential to stick with my medication regimen and stay consistent.",
+            "turn": 7
+          },
+          {
+            "quote": "I try to live my life as normally as possible while still managing my illness.",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient initially believed they had 'done enough work managing it' when feeling well, but now recognizes they have 'some say in how my story unfolds.' They actively manage their condition and are taking steps to improve adherence. They're not passive; they're actively working on strategies.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "It's been prescribed for three years now and has generally been helping me maintain an undetectable viral load.",
+            "turn": 3
+          },
+          {
+            "quote": "There's a sense of security knowing that I'm doing everything I can to manage the illness and keep my viral load under control.",
+            "turn": 6
+          },
+          {
+            "quote": "I still believe it's essential to stick with my medication regimen and stay consistent.",
+            "turn": 7
+          },
+          {
+            "quote": "part of me feels at peace knowing that there are professionals out there who do and that they're helping guide me in the right direction.",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient clearly attributes their undetectable viral load to the treatment working. They feel security and control when taking medication. They see the treatment as essential and effective.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "It's mostly just occasional headaches and some low-grade fatigue that I attribute to work stress rather than my illness.",
+            "turn": 1
+          },
+          {
+            "quote": "I think having this condition fits into my identity in a way that's both present and manageable. It's part of who I am, but it doesn't define me entirely. There are days when it feels more prominent than others, but overall, I try to live my life as normally as possible while still managing my illness.",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient describes occasional symptoms but attributes them to work stress. They integrate the condition into their identity as 'part of who I am' but emphasize it 'doesn't define me entirely.' They're trying to live normally while managing the illness.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "I wanted to see you today because I'm worried about the impact of these missed doses on my condition.",
+            "turn": 1
+          },
+          {
+            "quote": "skipping doses could potentially lead to an increase in my viral load or the development of resistance. It's a risk that I'm definitely not willing to take anymore.",
+            "turn": 5
+          },
+          {
+            "quote": "Thinking about the potential consequences of missing doses and not adhering to my treatment plan does worry me. It's scary to think about what might happen if I don't stay consistent.",
+            "turn": 6
+          },
+          {
+            "quote": "There's always the worry that the treatment might stop working or develop resistance over time.",
+            "turn": 7
+          }
+        ],
+        "reasoning": "The patient expresses worry about consequences of missed doses, resistance, and treatment stopping working. They describe it as 'scary' and 'definitely not willing to take' those risks. The worry is tied to specific concerns (adherence, resistance, treatment efficacy) and shapes their decisions about medication.",
+        "score": 6.0,
+        "confidence": 0.85
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "To be honest, I don't have a very deep understanding of how my body responds to the skipped doses.",
+            "turn": 5
+          },
+          {
+            "quote": "So while I don't fully understand the ins and outs of it all, I know enough to recognize that adherence is key.",
+            "turn": 5
+          },
+          {
+            "quote": "As for understanding what's happening with my body, that's always been a bit of a puzzle. Even after all this time, there's still so much about my condition that I don't fully comprehend.",
+            "turn": 9
+          },
+          {
+            "quote": "But part of me feels at peace knowing that there are professionals out there who do and that they're helping guide me in the right direction.",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient admits they don't have a deep understanding of how their body responds to skipped doses. They recognize enough to know adherence is key but acknowledge gaps in understanding. They rely on professionals to guide them.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "I've been feeling alright most days.",
+            "turn": 1
+          },
+          {
+            "quote": "Thinking about the potential consequences of missing doses and not adhering to my treatment plan does worry me. It's scary to think about what might happen if I don't stay consistent.",
+            "turn": 6
+          },
+          {
+            "quote": "But when I am taking my medication as prescribed and feeling in control of my condition, it feels like a weight has been lifted off my shoulders. There's a sense of security knowing that I'm doing everything I can to manage the illness and keep my viral load under control.",
+            "turn": 6
+          },
+          {
+            "quote": "There are days when it feels more prominent than others, but overall, I try to live my life as normally as possible while still managing my illness.",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient expresses worry and describes it as 'scary' when thinking about consequences. When adhering, they feel relief and security. They generally try to live normally and manage the illness. The emotion is present but not overwhelming.",
+        "score": 4.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "I recognize how important it is to adhere to my treatment plan.",
+            "turn": 3
+          },
+          {
+            "quote": "I know now that even if I'm feeling well or not experiencing symptoms, skipping doses could potentially lead to an increase in my viral load or the development of resistance.",
+            "turn": 5
+          },
+          {
+            "quote": "I still believe it's essential to stick with my medication regimen and stay consistent. After all, without it, my condition could take a turn for the worse — and that's something I'm not willing to risk.",
+            "turn": 7
+          },
+          {
+            "quote": "I'd love to work on some simple reminders, perhaps setting an alarm or using a pill box to make sure I'm taking the right doses at the correct times.",
+            "turn": 10
+          }
+        ],
+        "reasoning": "The patient clearly believes the medication is essential and non-negotiable. They recognize the serious consequences of not taking it and are actively working on strategies to adhere. They've organized around the medication (planning to use alarms and pill boxes).",
+        "score": 4.5,
+        "confidence": 0.85
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "There's always the worry that the treatment might stop working or develop resistance over time.",
+            "turn": 7
+          },
+          {
+            "quote": "It can be hard not to think about those what-ifs when you're taking the same pill every single day.",
+            "turn": 7
+          },
+          {
+            "quote": "Of course, there are always concerns and worries that come up when you're taking any kind of medicine day in and day out.",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient has specific concerns about resistance and treatment stopping working. These concerns recur unprompted and they've thought about them ('what-ifs'). However, these concerns haven't led to behavior change yet (they're still missing doses), though they're motivated to address them.",
+        "score": 3.5,
+        "confidence": 0.75
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "I believe that as long as one stays consistent with their treatment plan, taking medication for a chronic condition over an extended period is generally a good idea.",
+            "turn": 8
+          },
+          {
+            "quote": "Of course, there are always concerns and worries that come up when you're taking any kind of medicine day in and day out.",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient believes taking medication for chronic conditions over extended periods is generally a good idea. They acknowledge there are concerns but don't express a general belief that medicines are harmful. They see it as beneficial when used appropriately.",
+        "score": 2.0,
+        "confidence": 0.8
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [
+          {
+            "quote": "As far as doctors go, I think they do an excellent job prescribing medication for chronic conditions considering all the variables at play.",
+            "turn": 8
+          },
+          {
+            "quote": "But generally speaking, I trust in their expertise and guidance when it comes to managing my condition through treatment.",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient trusts doctors' prescribing decisions and believes they do an excellent job. They don't express any general distrust of prescribing as a practice.",
+        "score": 1.0,
+        "confidence": 0.85
+      }
+    },
+    "causes": [],
+    "causes_evidence": []
+  }
+}

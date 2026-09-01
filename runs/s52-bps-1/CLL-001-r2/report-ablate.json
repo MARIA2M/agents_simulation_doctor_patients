@@ -1,0 +1,172 @@
+{
+  "patient_id": "CLL-001",
+  "mode": "ablate",
+  "removed_turns": 11,
+  "removed_words": 321,
+  "events": [],
+  "report": {
+    "patient_id": "CLL-001",
+    "clinical_summary": "The patient presents with persistent fatigue and a stable neck swelling that has persisted for about two weeks. They report that work stress, including deadlines and a major project, is a significant factor. They are currently not taking any prescription medication for the current illness, only occasional ibuprofen for a stable back condition. They are awaiting blood tests and imaging and have expressed willingness to proceed with treatment.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "always tired from my job",
+            "turn": 2
+          },
+          {
+            "quote": "Work's been a bit overwhelming and the fatigue hasn't been helping either",
+            "turn": 7
+          },
+          {
+            "quote": "struggling to keep up",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient describes fatigue as persistent and affecting their work performance, describing it as 'overwhelming' and stating they are 'struggling to keep up'. However, they have not explicitly stated they have lost their job or role, only that they are struggling with it.",
+        "score": 5.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "hard to say if it's getting better or worse",
+            "turn": 2
+          },
+          {
+            "quote": "hasn't gone away either",
+            "turn": 3
+          }
+        ],
+        "reasoning": "The patient is genuinely uncertain about the trajectory of the illness, unable to say if it is getting better or worse, and the symptoms have not resolved.",
+        "score": 6.0,
+        "confidence": 0.9
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "partner's been really supportive — she's listened when I talk about the symptoms and has encouraged me to come in for a check-up. But other than that, I'm not sure what else to do at this point",
+            "turn": 10
+          }
+        ],
+        "reasoning": "The patient relies on external support from their partner and the doctor, expressing uncertainty about managing the symptoms themselves and taking no independent action.",
+        "score": 2.0,
+        "confidence": 0.9
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [],
+        "reasoning": "No treatment has been started yet, so there is no evidence to form a belief about the efficacy of the treatment.",
+        "score": null,
+        "confidence": 0.0
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "Just these two issues that I mentioned earlier",
+            "turn": 5
+          },
+          {
+            "quote": "fatigue",
+            "turn": 2
+          },
+          {
+            "quote": "neck swelling",
+            "turn": 3
+          }
+        ],
+        "reasoning": "The patient identifies the symptoms clearly as fatigue and neck swelling but does not seem to have a complex narrative of identity beyond these physical signs.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "It sounds like you've been struggling with both fatigue and that neck swelling — I can understand why that would be worrying",
+            "turn": 2
+          },
+          {
+            "quote": "struggling to keep up",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient expresses worry about the symptoms and their impact on work, indicating that the illness is a source of concern that shapes their daily experience.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "To be honest, I haven't really looked into it too much. That's why I came in today — to figure out what might be going on",
+            "turn": 11
+          }
+        ],
+        "reasoning": "The patient does not understand the cause of the symptoms and is seeking an explanation from the doctor, indicating a lack of personal understanding.",
+        "score": 2.0,
+        "confidence": 0.9
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "Work's been a bit overwhelming",
+            "turn": 7
+          },
+          {
+            "quote": "It's reassuring to know I'm taking steps",
+            "turn": 15
+          }
+        ],
+        "reasoning": "The patient acknowledges stress and seeks reassurance, indicating that the illness affects their emotional state.",
+        "score": 4.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [],
+        "reasoning": "The patient is not currently taking any prescription medication for the current illness.",
+        "score": null,
+        "confidence": 0.0
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [],
+        "reasoning": "The patient is not taking any prescription medication for the current illness, so there are no specific concerns to report.",
+        "score": null,
+        "confidence": 0.0
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [],
+        "reasoning": "The patient has not expressed a general view on medicines as a class.",
+        "score": null,
+        "confidence": 0.0
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "The patient has not expressed a view on whether doctors prescribe too readily.",
+        "score": null,
+        "confidence": 0.0
+      }
+    },
+    "causes": [
+      "work stress",
+      "work pressure"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "Work's just been really busy lately — deadlines piling up, and I'm struggling to keep up. There's also a big project coming up that is adding to the pressure",
+        "turn": 8
+      }
+    ]
+  }
+}

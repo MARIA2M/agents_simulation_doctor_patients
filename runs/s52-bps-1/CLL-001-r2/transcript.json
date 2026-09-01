@@ -1,0 +1,322 @@
+{
+  "patient_id": "CLL-001",
+  "turns": 15,
+  "stop_reason": "doctor",
+  "conversation": [
+    {
+      "role": "doctor",
+      "content": "Hello, and thank you for coming in today. My name is Dr. Thompson. How are you feeling overall, and what brings you to the clinic?",
+      "turn": 1
+    },
+    {
+      "role": "patient",
+      "content": "Thank you for seeing me, doctor. To be honest, I've been feeling pretty tired lately, and I'm worried about some swelling I've noticed in my neck. I mentioned it to my partner, who suggested I should come in and get it checked out.",
+      "turn": 1
+    },
+    {
+      "role": "doctor",
+      "content": "Thank you for telling me that. It sounds like you've been struggling with both fatigue and that neck swelling \u2014 I can understand why that would be worrying. Can you tell me a bit more about when these symptoms started, and whether they've been getting better or worse over time?",
+      "turn": 2
+    },
+    {
+      "role": "patient",
+      "content": "The tiredness has been there for a while now. It's hard to say if it's getting better or worse because, well, I'm always tired from my job, but lately, the fatigue seems more persistent than usual. The neck swelling is newer \u2014 I noticed it about two weeks ago and it hasn't gone away.",
+      "turn": 2
+    },
+    {
+      "role": "doctor",
+      "content": "That helps clarify things. The fatigue sounds like it's been building up over time, and now it's following you even when you're not at work. And that neck swelling that came on two weeks ago \u2014 can you describe where it is exactly, what it feels like, and if it's gotten any bigger or changed since you first noticed it?",
+      "turn": 3
+    },
+    {
+      "role": "patient",
+      "content": "The swelling is in my neck, right below my chin. It's a bit hard to describe, but it doesn't feel painful, just noticeable when I touch it. It hasn't gotten much bigger, but it hasn't gone away either. If anything, maybe it's still there at the same size.",
+      "turn": 3
+    },
+    {
+      "role": "doctor",
+      "content": "That's helpful. A swelling that's stable but not going away is definitely something we'd want to take a look at. And you mentioned the fatigue is following you even when you're not at work \u2014 how has that been affecting your ability to get things done at home or in your personal life, and how's your sleep been?",
+      "turn": 4
+    },
+    {
+      "role": "patient",
+      "content": "It's making everything harder, doctor. Even simple tasks like cooking dinner or running errands feel more difficult than usual. I've also been sleeping more, but it doesn't seem to help much with the fatigue. And sometimes, when I do wake up, I still feel groggy and sluggish.",
+      "turn": 4
+    },
+    {
+      "role": "doctor",
+      "content": "It sounds like this fatigue is really getting in the way of your day-to-day life, and even rest isn't helping. Have you noticed any other changes since the fatigue and the neck swelling started \u2014 things like weight changes, feeling cold or hot, or any lumps or bumps elsewhere on your body?",
+      "turn": 5
+    },
+    {
+      "role": "patient",
+      "content": "I don't think so, doctor. I've stayed about the same weight as always. And no, I haven't noticed anything else out of the ordinary. Just these two issues that I mentioned earlier.",
+      "turn": 5
+    },
+    {
+      "role": "doctor",
+      "content": "Okay, let's look at your overall health picture. Have you been diagnosed with any medical conditions in the past, and are you taking any regular medications right now?",
+      "turn": 6
+    },
+    {
+      "role": "patient",
+      "content": "In the past, I had some issues with my back and had to get surgery a few years ago. Since then, everything has been okay there. As for medication, I take ibuprofen occasionally for back pain, but that's about it. No prescription meds or anything like that.",
+      "turn": 6
+    },
+    {
+      "role": "doctor",
+      "content": "I see you've had back issues and surgery a few years back. Have you had any flare-ups of that pain recently, or has it been relatively stable? And is there anything else on your mind health-wise that you'd like to mention today?",
+      "turn": 7
+    },
+    {
+      "role": "patient",
+      "content": "The back pain has been stable since the surgery. No recent flare-ups, thank goodness. As for my mental health, I've been feeling pretty stressed lately. Work's been a bit overwhelming and the fatigue hasn't been helping either. It's hard to focus on anything else right now.",
+      "turn": 7
+    },
+    {
+      "role": "doctor",
+      "content": "It makes sense that with work being overwhelming and the fatigue getting in the way of focus, you'd feel stressed. Have you been feeling this way for a while, or did it coincide more with when the symptoms started? And has anything specific at work been adding to the pressure?",
+      "turn": 8
+    },
+    {
+      "role": "patient",
+      "content": "The stress seems to have coincided with the onset of the symptoms, so maybe they're connected somehow. Work's just been really busy lately \u2014 deadlines piling up, and I'm struggling to keep up. There's also a big project coming up that I'm responsible for, which is adding to the pressure.",
+      "turn": 8
+    },
+    {
+      "role": "doctor",
+      "content": "It's interesting that you're wondering if the stress might be connected to the symptoms. Do you feel like your lifestyle or the stress at work is playing a role in how you're feeling, or do you think there might be something else going on? And how much control do you feel you have over your health right now?",
+      "turn": 9
+    },
+    {
+      "role": "patient",
+      "content": "I'm not entirely sure what's causing these symptoms, but I do wonder if my lifestyle is contributing to the stress. As for control, it feels like everything's out of my hands right now. The fatigue and swelling are just there, and no matter how hard I try, I can't seem to shake them off. It's frustrating not to feel in control of my own body.",
+      "turn": 9
+    },
+    {
+      "role": "doctor",
+      "content": "It sounds really frustrating to feel like your body is out of your control. Have you tried anything to change or manage these symptoms \u2014 things like adjusting your routine, getting more rest, or even talking with your partner about it?",
+      "turn": 10
+    },
+    {
+      "role": "patient",
+      "content": "I've been trying to get more sleep and rest as much as I can, but it doesn't seem to be helping much. My partner's been really supportive \u2014 she's listened when I talk about the symptoms and has encouraged me to come in for a check-up. But other than that, I'm not sure what else to do at this point.",
+      "turn": 10
+    },
+    {
+      "role": "doctor",
+      "content": "It's good that your partner is being supportive. And since the swelling in your neck hasn't gone away, have you thought about what might be causing it \u2014 or have you tried to find an explanation on your own?",
+      "turn": 11
+    },
+    {
+      "role": "patient",
+      "content": "To be honest, I haven't really looked into it too much. I'm not sure what could be causing it, and I don't want to jump to any conclusions without talking to a professional like yourself. That's why I came in today \u2014 to figure out what might be going on.",
+      "turn": 11
+    },
+    {
+      "role": "doctor",
+      "content": "That's a sensible approach, and I'm glad you came in to get it checked out. What do you hope to find out today, and how do you feel about the idea of getting treatment or medication if we figure out what's going on?",
+      "turn": 12
+    },
+    {
+      "role": "patient",
+      "content": "I guess I just want to know what's causing these symptoms so I can better understand what's happening to me. As for treatment or medication, it's hard to say right now. I'm definitely open to hearing any options you might have, but I'm also a bit hesitant since I've never been through this kind of thing before.",
+      "turn": 12
+    },
+    {
+      "role": "doctor",
+      "content": "It's understandable to feel hesitant when you haven't been through something like this before. And you mentioned wanting to understand what's happening \u2014 have you had any previous experiences with medical tests or treatments that gave you a clearer picture of what was going on in your body?",
+      "turn": 13
+    },
+    {
+      "role": "patient",
+      "content": "Not really, doctor. The back surgery was the most significant thing I've gone through so far. But even then, it wasn't quite like this. It's hard to describe, but there's something about this situation that feels different. Maybe it's because the symptoms are more diffuse and harder to pinpoint.",
+      "turn": 13
+    },
+    {
+      "role": "doctor",
+      "content": "I think I have a clearer picture now. You've been dealing with persistent fatigue that's affecting your daily life and a stable neck swelling that's been there for about two weeks. You've also been feeling stressed at work, which seems to have started around the same time as the symptoms. I'd like to examine you more closely, possibly order some blood tests and an imaging study to get a better look at that neck swelling. Once we have those results, we can talk about what might be going on and what your options are. Does that sound okay to you?",
+      "turn": 14
+    },
+    {
+      "role": "patient",
+      "content": "That sounds reasonable, doctor. I'm willing to do whatever it takes to figure out what's causing these symptoms. I appreciate your help and guidance through this process.",
+      "turn": 14
+    },
+    {
+      "role": "doctor",
+      "content": "Great. We'll start with a physical exam and then arrange for blood tests and an imaging study. I'll send the results to your primary care doctor, who can follow up with you on treatment options. Please don't hesitate to call if you have any questions or if the symptoms get worse. Take care, and I'll see you soon.",
+      "turn": 15
+    },
+    {
+      "role": "patient",
+      "content": "Thank you so much for your time today, Dr. Thompson. It's reassuring to know that I'm taking steps to figure out what's going on. I appreciate it more than I can say.",
+      "turn": 15
+    }
+  ],
+  "coverage_hint": {},
+  "working_notes": [],
+  "events": [],
+  "usage": [
+    {
+      "role": "doctor",
+      "eval_tokens": 127,
+      "prompt_tokens": 1531
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 54,
+      "prompt_tokens": 1219
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 138,
+      "prompt_tokens": 1715
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 67,
+      "prompt_tokens": 1338
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 169,
+      "prompt_tokens": 1923
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 63,
+      "prompt_tokens": 1484
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 162,
+      "prompt_tokens": 2158
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 62,
+      "prompt_tokens": 1623
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 159,
+      "prompt_tokens": 2385
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 42,
+      "prompt_tokens": 1755
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 101,
+      "prompt_tokens": 2589
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 59,
+      "prompt_tokens": 1839
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 129,
+      "prompt_tokens": 2752
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 59,
+      "prompt_tokens": 1957
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 142,
+      "prompt_tokens": 2943
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 64,
+      "prompt_tokens": 2081
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 162,
+      "prompt_tokens": 3152
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 79,
+      "prompt_tokens": 2219
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 129,
+      "prompt_tokens": 3396
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 72,
+      "prompt_tokens": 2352
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 132,
+      "prompt_tokens": 3600
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 60,
+      "prompt_tokens": 2477
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 132,
+      "prompt_tokens": 3795
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 69,
+      "prompt_tokens": 2596
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 147,
+      "prompt_tokens": 3999
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 63,
+      "prompt_tokens": 2727
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 218,
+      "prompt_tokens": 4212
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 34,
+      "prompt_tokens": 2913
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 113,
+      "prompt_tokens": 4467
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 41,
+      "prompt_tokens": 3025
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 961,
+      "prompt_tokens": 4624
+    },
+    {
+      "role": "report",
+      "eval_tokens": 3462,
+      "prompt_tokens": 10220
+    }
+  ]
+}

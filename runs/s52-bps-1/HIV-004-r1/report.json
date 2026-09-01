@@ -1,0 +1,243 @@
+{
+  "patient_id": "HIV-004",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "HIV-004",
+    "clinical_summary": "Patient diagnosed with HIV four weeks ago, currently on Biktarvy daily. Experiencing persistent fatigue, brain fog, appetite changes, and daily morning nausea since starting medication. Nausea disrupts breakfast routine and energy levels. Also experiencing anxiety, difficulty sleeping, and emotional distress (fear, anger, sadness, despair). Patient has implemented coping strategies (phone reminders, visible pill bottle, light exercise, meditation) but feels limited by symptoms and that illness is 'a bigger force' than their actions. Patient has moderate understanding of HIV mechanism and treatment rationale, but worries about long-term effects and drug resistance. Trusts medical team but occasionally questions medication appropriateness.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "It's not just the usual cold or flu — this feels more persistent and is taking a toll on my day-to-day life.",
+            "turn": 1
+          },
+          {
+            "quote": "The nausea has definitely disrupted my routine. It's harder for me to eat breakfast as I usually feel too queasy, so that's affected my energy levels throughout the day.",
+            "turn": 4
+          },
+          {
+            "quote": "In terms of other changes, it feels like anxiety and difficulty sleeping have become more prominent lately.",
+            "turn": 4
+          }
+        ],
+        "reasoning": "Patient describes persistent symptoms (fatigue, brain fog, nausea, appetite changes) that are disrupting routine, affecting energy levels, and causing anxiety and sleep problems. Symptoms are affecting multiple aspects of daily functioning.",
+        "score": 7.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "It's hard to come to terms with the fact that this is something I'll likely have to manage for the rest of my life.",
+            "turn": 9
+          }
+        ],
+        "reasoning": "Patient explicitly states they believe they will 'likely have to manage for the rest of my life,' indicating they are planning on the assumption it stays.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "Honestly, it feels like my lifestyle choices are the main thing I can have some control over.",
+            "turn": 7
+          },
+          {
+            "quote": "Of course, that's limited by how much fatigue or other symptoms are affecting me.",
+            "turn": 7
+          },
+          {
+            "quote": "But overall, it feels like my illness is a bigger force in my life right now than anything else I can do much about.",
+            "turn": 7
+          }
+        ],
+        "reasoning": "Patient identifies lifestyle choices as main control but acknowledges limitations due to symptoms. Feels illness is 'a bigger force' than their actions, suggesting lower perceived control than desired.",
+        "score": 5.0,
+        "confidence": 0.8
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "The doctors have explained that early treatment offers the best long-term prognosis, which is reassuring.",
+            "turn": 5
+          },
+          {
+            "quote": "They said that an undetectable viral load should be expected within 3-6 months of being on this medication.",
+            "turn": 5
+          },
+          {
+            "quote": "knowing that the treatment can help control the disease gives me some hope.",
+            "turn": 5
+          }
+        ],
+        "reasoning": "Patient has hope in treatment effectiveness, understands the goal (undetectable viral load), and trusts the medical team. Sees treatment as helpful for controlling the disease.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "I've noticed I get this constant fatigue that doesn't seem to go away even after a full night's sleep.",
+            "turn": 2
+          },
+          {
+            "quote": "my head feels foggy and it's hard to focus on anything for too long.",
+            "turn": 2
+          },
+          {
+            "quote": "nagging nausea in the mornings since I started taking my medication.",
+            "turn": 2
+          },
+          {
+            "quote": "anxiety and difficulty sleeping have become more prominent lately.",
+            "turn": 4
+          }
+        ],
+        "reasoning": "Patient describes multiple persistent symptoms (fatigue, brain fog, nausea, anxiety, sleep problems) that are affecting daily life. These are daily and intrusive.",
+        "score": 7.0,
+        "confidence": 0.9
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "I'm worried about what might be causing it.",
+            "turn": 1
+          },
+          {
+            "quote": "There's a constant worry about my diagnosis, which makes it hard to relax or sleep well at night.",
+            "turn": 4
+          },
+          {
+            "quote": "It's hard not to feel worried about my condition, especially since this has come so unexpectedly in my life.",
+            "turn": 11
+          },
+          {
+            "quote": "It feels like a constant presence right now",
+            "turn": 11
+          },
+          {
+            "quote": "overall, it's a significant source of concern for me.",
+            "turn": 11
+          }
+        ],
+        "reasoning": "Patient describes constant worry, anxiety, and says it's 'a constant presence' and 'a significant source of concern.' Worry is frequent and intrudes into daily life.",
+        "score": 7.0,
+        "confidence": 0.9
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "The doctors have explained to me that HIV weakens the immune system by destroying specific white blood cells called CD4+ T cells.",
+            "turn": 10
+          },
+          {
+            "quote": "This makes it more difficult for my body to fight off infections.",
+            "turn": 10
+          },
+          {
+            "quote": "The Biktarvy I'm taking is a combination of three different medications that each work in their own way to stop the virus from replicating and damaging my immune system further.",
+            "turn": 10
+          },
+          {
+            "quote": "While I don't have all the details, I feel like I have a basic understanding of how these things interact, and it helps me understand why this treatment plan is so important for managing the disease.",
+            "turn": 10
+          }
+        ],
+        "reasoning": "Patient explains the mechanism (HIV destroys CD4+ T cells, making it harder to fight infections) and how the medication works (combination that stops viral replication). Has basic understanding and can connect it to why treatment is important.",
+        "score": 6.0,
+        "confidence": 0.85
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "I've been grappling with a lot of emotions — fear, anger, sadness, and despair at times.",
+            "turn": 9
+          },
+          {
+            "quote": "It's hard to come to terms with the fact that this is something I'll likely have to manage for the rest of my life.",
+            "turn": 9
+          },
+          {
+            "quote": "There's a constant worry about my diagnosis, which makes it hard to relax or sleep well at night.",
+            "turn": 4
+          },
+          {
+            "quote": "anxiety and difficulty sleeping have become more prominent lately.",
+            "turn": 4
+          }
+        ],
+        "reasoning": "Patient describes significant emotional distress (fear, anger, sadness, despair) and says it's hard to come to terms with diagnosis. Also mentions anxiety and sleep problems. Emotion is prominent and affects what they do (worry affects relaxation and sleep), though they also show resilience.",
+        "score": 7.0,
+        "confidence": 0.85
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "I know how important it is for me to stay on track with my treatment plan.",
+            "turn": 6
+          }
+        ],
+        "reasoning": "Patient recognizes importance of staying on track with treatment and is actively managing adherence with reminders and visible pill bottle. Treats it as important and organizes around it.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "The nausea has been happening every day since I started the medication and it's quite bothersome, especially in the mornings when it's hard to eat or drink anything.",
+            "turn": 3
+          },
+          {
+            "quote": "Yes, I have some concerns about potential long-term effects. I've heard about people developing drug resistance and wondering if there might be any impact on my overall health in the future.",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient has specific concerns about morning nausea (bothersome, affects ability to eat/drink) and long-term effects/drug resistance. These concerns have led them to seek strategies to manage the nausea.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "Yes, I have some concerns about potential long-term effects. I've heard about people developing drug resistance and wondering if there might be any impact on my overall health in the future.",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient expresses concern about long-term effects of antiretrovirals and drug resistance, suggesting some general caution about medicines as a class.",
+        "score": 3.0,
+        "confidence": 0.75
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [
+          {
+            "quote": "I have to admit, there are moments where I wonder if my doctors are prescribing the right medications for me.",
+            "turn": 12
+          },
+          {
+            "quote": "But ultimately, I trust their knowledge and expertise in managing this condition.",
+            "turn": 12
+          }
+        ],
+        "reasoning": "Patient occasionally questions whether doctors are prescribing the right medications, but ultimately trusts their expertise. This is occasional doubt rather than a general pattern.",
+        "score": 2.0,
+        "confidence": 0.75
+      }
+    },
+    "causes": [],
+    "causes_evidence": []
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "patient_id": "CLL-001",
+  "turns": 1,
+  "stop_reason": "doctor",
+  "conversation": [
+    {
+      "role": "doctor",
+      "content": "Good morning, I'd like to start our consultation today and get a better understanding of how you're feeling about your condition.",
+      "turn": 1
+    },
+    {
+      "role": "patient",
+      "content": "Good morning, doctor. To be honest, I'm feeling somewhat concerned. The idea that I have this chronic illness is quite unsettling. It's impacting my work life, relationships, and leisure time, so it's not easy to manage. I know the treatment might not be needed for years, if at all, but it still feels like a lifelong reality I need to adjust to.",
+      "turn": 1
+    }
+  ],
+  "events": [],
+  "usage": [
+    {
+      "role": "doctor",
+      "prompt_tokens": 692,
+      "eval_tokens": 43
+    },
+    {
+      "role": "patient",
+      "prompt_tokens": 717,
+      "eval_tokens": 78
+    },
+    {
+      "role": "doctor",
+      "prompt_tokens": 710,
+      "eval_tokens": 109
+    }
+  ]
+}

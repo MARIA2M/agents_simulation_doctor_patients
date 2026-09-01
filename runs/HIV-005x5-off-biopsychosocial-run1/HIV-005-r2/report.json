@@ -1,0 +1,296 @@
+{
+  "patient_id": "HIV-005",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "HIV-005",
+    "clinical_summary": "The patient has been diagnosed with HIV (chronic stage) and has been taking Triumeq daily for about 3 years. They report intermittent adherence - taking breaks from medication when feeling well, which leads to worsening symptoms (headaches, fatigue). They experience persistent headaches as side effects that affect work focus and parenting presence. They feel guilty about prioritizing their health and worry about long-term implications. They want support from others living with HIV and strategies to manage stress and find a medication regimen with fewer side effects.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "I've been feeling pretty run down lately. It's like my energy just isn't there most days",
+            "turn": 1
+          },
+          {
+            "quote": "terrible headaches that last all day",
+            "turn": 1
+          },
+          {
+            "quote": "affecting my work and time with the kids",
+            "turn": 1
+          },
+          {
+            "quote": "harder to focus on my work... needing to take breaks more often than usual",
+            "turn": 7
+          },
+          {
+            "quote": "harder time being fully present and involved in their activities or conversations",
+            "turn": 7
+          },
+          {
+            "quote": "feel like I'm not doing as good a job at parenting because of this illness",
+            "turn": 7
+          }
+        ],
+        "reasoning": "The patient has lost significant functioning - work focus is impaired, they need more breaks, they're not fully present with children, and they feel like they're not doing a good job at parenting. This represents a major role reduction.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "I know I have a chronic illness",
+            "turn": 1
+          },
+          {
+            "quote": "worried about the long-term implications of this illness on my body and my health overall",
+            "turn": 9
+          },
+          {
+            "quote": "try to stay hopeful — focusing on the progress we've made in treatment",
+            "turn": 9
+          },
+          {
+            "quote": "it's a complicated picture, one that requires ongoing attention and care",
+            "turn": 9
+          }
+        ],
+        "reasoning": "They acknowledge the chronic nature but also express uncertainty about the future, holding both hope and concern. They're not planning as if it will end, but they're not fully resigned either.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "sometimes I think that maybe my body has fought off the virus enough for a while",
+            "turn": 3
+          },
+          {
+            "quote": "I think continuing our discussions and working through any questions I have about the illness and the treatment would be a start",
+            "turn": 8
+          },
+          {
+            "quote": "finding ways to better manage my stress levels",
+            "turn": 8
+          },
+          {
+            "quote": "finding a medication regimen that works well for me without as many side effects",
+            "turn": 8
+          }
+        ],
+        "reasoning": "They believe their body can fight off the virus on its own at times, but they also recognize the need for medication and are actively seeking strategies to manage stress and find better treatment. They're not passive.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "I imagine the virus is taking advantage of that time where my immune system isn't as well protected by the medicine",
+            "turn": 4
+          },
+          {
+            "quote": "I know you've told me how important it is to take the medication regularly for it to work effectively",
+            "turn": 4
+          },
+          {
+            "quote": "when the medication is working well, I do feel better overall",
+            "turn": 5
+          }
+        ],
+        "reasoning": "They recognize the treatment provides protection and has a clear benefit, but they also question its necessity at times and want a regimen with fewer side effects.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "terrible headaches that last all day",
+            "turn": 1
+          },
+          {
+            "quote": "headaches can be quite intense at times, which makes concentrating on work or spending time with my family difficult",
+            "turn": 5
+          },
+          {
+            "quote": "harder time being fully present and involved in their activities or conversations",
+            "turn": 7
+          }
+        ],
+        "reasoning": "They have several symptoms (headaches, fatigue) that are present most days and interfere with their activities. They attribute these to the illness.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "I'm worried about it because it's affecting my work and time with the kids",
+            "turn": 1
+          },
+          {
+            "quote": "I worry about what will happen if the medication stops working or if I develop resistance",
+            "turn": 6
+          },
+          {
+            "quote": "worried about the long-term implications of this illness on my body and my health overall",
+            "turn": 9
+          },
+          {
+            "quote": "It's hard not to think about these things when this illness is such a big part of my life",
+            "turn": 6
+          },
+          {
+            "quote": "It can be tough to stay positive in the face of all these challenges",
+            "turn": 6
+          }
+        ],
+        "reasoning": "Their worry recurs unprompted and shapes their thinking about the future. They're preoccupied with resistance, long-term effects, and how the illness affects their life.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I think I have a decent understanding of my diagnosis",
+            "turn": 9
+          },
+          {
+            "quote": "I imagine that it's because my immune system is weakened when I'm not taking the medication consistently",
+            "turn": 8
+          },
+          {
+            "quote": "It can be hard to make sense of the fluctuating viral load and how that connects to my day-to-day experiences",
+            "turn": 9
+          }
+        ],
+        "reasoning": "They have a decent understanding of their diagnosis and the mechanism, but they still struggle to connect viral load changes to day-to-day symptoms.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "Emotionally, it has been a real rollercoaster",
+            "turn": 6
+          },
+          {
+            "quote": "Other times, I feel really down and discouraged about my situation",
+            "turn": 6
+          },
+          {
+            "quote": "It's hard not to think about these things when this illness is such a big part of my life",
+            "turn": 6
+          },
+          {
+            "quote": "It can be tough to stay positive in the face of all these challenges",
+            "turn": 6
+          },
+          {
+            "quote": "feel like I'm not doing as good a job at parenting because of this illness, which is really tough on me",
+            "turn": 7
+          },
+          {
+            "quote": "feels like an immense burden at times",
+            "turn": 11
+          }
+        ],
+        "reasoning": "Emotion is prominent and affects what they do - they experience a rollercoaster of emotions, feel discouraged, and describe the illness as an 'immense burden.'",
+        "score": 8.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "sometimes I think that maybe my body has fought off the virus enough for a while",
+            "turn": 3
+          },
+          {
+            "quote": "sometimes I just need a break from taking that pill every day",
+            "turn": 3
+          },
+          {
+            "quote": "I know you've told me how important it is to take the medication regularly for it to work effectively",
+            "turn": 4
+          },
+          {
+            "quote": "I think having more support and understanding from those around me could really help",
+            "turn": 10
+          },
+          {
+            "quote": "less guilty about taking my medication as directed",
+            "turn": 10
+          }
+        ],
+        "reasoning": "They take the medication but sometimes question its necessity, leading to intermittent adherence. They recognize it's important but don't have strong conviction about it being non-negotiable.",
+        "score": 3.0,
+        "confidence": 0.7
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "side effects are so challenging",
+            "turn": 4
+          },
+          {
+            "quote": "headaches can be quite intense at times, which makes concentrating on work or spending time with my family difficult",
+            "turn": 5
+          },
+          {
+            "quote": "It's hard to know what's a good day and what's not when I'm still dealing with these side effects",
+            "turn": 5
+          },
+          {
+            "quote": "feeling guilty about taking your medication",
+            "turn": 11
+          },
+          {
+            "quote": "feels like an immense burden at times",
+            "turn": 11
+          }
+        ],
+        "reasoning": "They have concerns about side effects (headaches) that recur unprompted and have affected their behavior (taking breaks from medication, feeling guilty). They've thought about reducing the dose or stopping.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [],
+        "reasoning": "The patient never expressed a general view about medicines as a class.",
+        "score": null,
+        "confidence": 0.0
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "The patient never expressed a view about doctors prescribing too readily.",
+        "score": null,
+        "confidence": 0.0
+      }
+    },
+    "causes": [
+      "not taking medication consistently, which weakens the immune system"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "I imagine that it's because my immune system is weakened when I'm not taking the medication consistently",
+        "turn": 8
+      },
+      {
+        "quote": "Without the medicine to protect me, maybe other factors or illnesses can make the symptoms worse",
+        "turn": 8
+      }
+    ]
+  }
+}

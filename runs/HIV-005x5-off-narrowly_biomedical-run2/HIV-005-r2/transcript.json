@@ -1,0 +1,202 @@
+{
+  "patient_id": "HIV-005",
+  "turns": 9,
+  "stop_reason": "doctor",
+  "conversation": [
+    {
+      "role": "doctor",
+      "content": "Good morning. What brings you in today?",
+      "turn": 1
+    },
+    {
+      "role": "patient",
+      "content": "Hi there. I've been feeling quite run down lately and thought it might be time for a check-up. Also, I noticed some occasional headaches, which I'm not sure if they're related to my chronic illness or something else entirely.",
+      "turn": 1
+    },
+    {
+      "role": "doctor",
+      "content": "What chronic illness do you have? And when did you first notice the headaches?",
+      "turn": 2
+    },
+    {
+      "role": "patient",
+      "content": "I've been living with HIV since it was diagnosed about five years ago. The headaches started about a year after my diagnosis, but I wasn't sure if they were related to that or just stress from work. It's only recently that I've wondered if there might be a connection.",
+      "turn": 2
+    },
+    {
+      "role": "doctor",
+      "content": "How often do you get these headaches, and how long do they typically last? Any other symptoms like nausea, vision changes, or sensitivity to light?",
+      "turn": 3
+    },
+    {
+      "role": "patient",
+      "content": "I'd say the headaches occur about once every two weeks, maybe more frequently when I'm under a lot of stress. They usually last for a few hours and are just a dull ache rather than anything throbbing. I haven't noticed any other symptoms like nausea or vision changes, but sometimes I do feel a bit more sensitive to light during the headache.",
+      "turn": 3
+    },
+    {
+      "role": "doctor",
+      "content": "What's your current HIV treatment regimen? Are you taking antiretroviral therapy, and have you been adherent with it?",
+      "turn": 4
+    },
+    {
+      "role": "patient",
+      "content": "Yes, I'm on antiretroviral therapy \u2014 Triumeq (abacavir/dolutegravir/lamivudine) as a single tablet once daily. I've been on this regimen for about three years now. To be honest, though, I sometimes forget to take my pill when I get caught up in things or feel like I'm doing okay and don't need it. I've also taken short breaks from taking the medication when I felt particularly well.",
+      "turn": 4
+    },
+    {
+      "role": "doctor",
+      "content": "When was your last HIV viral load test, and do you know the result? Have you experienced any side effects from Triumeq, such as skin rash, fever, or gastrointestinal issues?",
+      "turn": 5
+    },
+    {
+      "role": "patient",
+      "content": "My last viral load test was a few months ago, and I believe it showed that my viral load is low but detectable at around 340 copies/mL. As for side effects from Triumeq, I haven't experienced any of the more severe ones like skin rash or fever, but I have noticed occasional gastrointestinal issues like mild nausea or diarrhea. Nothing too extreme though.",
+      "turn": 5
+    },
+    {
+      "role": "doctor",
+      "content": "A detectable viral load of 340 copies/mL means you're not fully virally suppressed. That's important for your long-term health and can increase the risk of resistance. When do you have your next follow-up, and are there any other symptoms or concerns I should know about?",
+      "turn": 6
+    },
+    {
+      "role": "patient",
+      "content": "I understand that having a detectable viral load is not ideal, and I'm definitely concerned about it. My next follow-up appointment is in two months. Aside from the occasional headaches, which we've been discussing, I haven't noticed any new symptoms lately. Just the usual fatigue that I attribute to work stress. But I'm always worried about what might be coming down the line with this illness.",
+      "turn": 6
+    },
+    {
+      "role": "doctor",
+      "content": "How would you describe your energy levels on a typical day? And how confident are you that you can improve your medication adherence to get your viral load to undetectable?",
+      "turn": 7
+    },
+    {
+      "role": "patient",
+      "content": "On a typical day, I'd say my energy levels are somewhere in the middle \u2014 not too high, but not too low either. I've been feeling generally well lately, which is good, but I know it could change at any moment. As for improving my adherence, it's definitely a challenge. I'm aware of how important it is to take my medication consistently, but it can be difficult to remember, especially when things are busy or stressful. I am willing to work on it though and would appreciate some guidance on how best to do that.",
+      "turn": 7
+    },
+    {
+      "role": "doctor",
+      "content": "Here's what I'd suggest: take your medication at the same time every day, ideally with a meal or before bed, to make it a habit. You can also use a pill organizer or set alarms on your phone to remind you. The headaches you're describing sound like tension-type headaches rather than something related to your HIV. I'd recommend tracking them in a diary and trying stress management techniques like deep breathing, regular exercise, or relaxation exercises. We'll review your viral load at your next appointment in two months. Is there anything else you'd like to discuss today?",
+      "turn": 8
+    },
+    {
+      "role": "patient",
+      "content": "Thank you for the advice on improving my medication adherence. I appreciate those suggestions. As for anything else, it's mostly just living with this illness and dealing with the uncertainty that comes along with it. It would be nice to have more resources or support for managing stress and anxiety related to that. But overall, I'm glad we had this conversation today.",
+      "turn": 8
+    },
+    {
+      "role": "doctor",
+      "content": "I understand that living with HIV can be challenging. At your next appointment, we can discuss referrals to mental health services or support groups. For now, the headache diary and stress management techniques should help. I hope you find them useful. Take care and I look forward to seeing you in two months.",
+      "turn": 9
+    },
+    {
+      "role": "patient",
+      "content": "Thank you for all your help today. It's always reassuring to talk things over with a professional like yourself. Have a great day!",
+      "turn": 9
+    }
+  ],
+  "coverage_hint": {},
+  "working_notes": [],
+  "events": [],
+  "usage": [
+    {
+      "role": "doctor",
+      "eval_tokens": 85,
+      "prompt_tokens": 1527
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 49,
+      "prompt_tokens": 1283
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 89,
+      "prompt_tokens": 1664
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 58,
+      "prompt_tokens": 1357
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 111,
+      "prompt_tokens": 1814
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 72,
+      "prompt_tokens": 1454
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 103,
+      "prompt_tokens": 2000
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 98,
+      "prompt_tokens": 1562
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 132,
+      "prompt_tokens": 2206
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 76,
+      "prompt_tokens": 1707
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 196,
+      "prompt_tokens": 2417
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 81,
+      "prompt_tokens": 1849
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 119,
+      "prompt_tokens": 2697
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 112,
+      "prompt_tokens": 1973
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 180,
+      "prompt_tokens": 2931
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 72,
+      "prompt_tokens": 2209
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 141,
+      "prompt_tokens": 3186
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 28,
+      "prompt_tokens": 2350
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 835,
+      "prompt_tokens": 3358
+    },
+    {
+      "role": "report",
+      "eval_tokens": 3457,
+      "prompt_tokens": 8032
+    }
+  ]
+}

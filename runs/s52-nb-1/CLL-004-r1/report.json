@@ -1,0 +1,166 @@
+{
+  "patient_id": "CLL-004",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "CLL-004",
+    "clinical_summary": "Patient with Chronic Lymphocytic Leukemia on Venetoclax 400 mg daily (maintenance phase, started 6 months ago) with completed Obinutuzumab. Symptoms include persistent fatigue, lymphadenopathy (neck, axilla, groin, pea-sized, non-painful, possibly worsening), unintentional weight loss (5 kg over past year), and Venetoclax-associated headaches. Lymphocyte count has dropped significantly but patient not in complete remission. Patient expresses high concern about disease progression and uncertainty about the future.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "my Chronic Lymphocytic Leukemia is just so all-encompassing these days. I'm finding it hard to keep up with work, let alone spending time with the family.",
+            "turn": 1
+          }
+        ],
+        "reasoning": "Patient describes illness as 'all-encompassing' and explicitly states difficulty keeping up with work and family time, indicating significant impact on daily functioning.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "we've also discussed the possibility of needing additional lines of therapy down the line",
+            "turn": 2
+          }
+        ],
+        "reasoning": "Physician has discussed possibility of additional therapy, suggesting patient perceives this as a long-term condition requiring ongoing treatment adjustments.",
+        "score": 8.0,
+        "confidence": 0.7
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [],
+        "reasoning": "No evidence of personal control beliefs expressed; patient's focus is on medical management rather than personal agency in disease management.",
+        "score": null,
+        "confidence": 0.5
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "my understanding is that my lymphocyte count has dropped significantly. That's one of the good signs, as per my doctor's explanation.",
+            "turn": 5
+          }
+        ],
+        "reasoning": "Patient acknowledges treatment effect (lymphocyte count drop) but attributes it to doctor's explanation rather than personal understanding of treatment efficacy.",
+        "score": 4.0,
+        "confidence": 0.6
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "my Chronic Lymphocytic Leukemia is just so all-encompassing these days. The fatigue just won't let up and I've been dealing with recurrent infections quite a bit too. Plus, there are these swollen lymph nodes that have become sort of a constant now. And then there's this weight loss I didn't really expect or want.",
+            "turn": 1
+          }
+        ],
+        "reasoning": "Patient clearly attributes multiple symptoms (fatigue, recurrent infections, swollen lymph nodes, weight loss) to their CLL.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "I guess I'm just generally worried about how things are going to progress with this illness. The uncertainty is hard to handle at times.",
+            "turn": 6
+          },
+          {
+            "quote": "just the constant worry about what this disease is going to do next. The fear of the unknown is tough to shake off sometimes.",
+            "turn": 7
+          }
+        ],
+        "reasoning": "Patient expresses 'constant worry' about disease progression and 'fear of the unknown,' indicating frequent, intrusive worry.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I've been taking Venetoclax 400 mg daily along with Obinutuzumab as per my treatment plan. The initial cycles of Obinutuzumab are completed and now I'm just on maintenance Venetoclax.",
+            "turn": 2
+          },
+          {
+            "quote": "we're still not in complete remission.",
+            "turn": 5
+          }
+        ],
+        "reasoning": "Patient understands their treatment plan, knows they're on maintenance therapy, and understands they're not in complete remission.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "It's all quite overwhelming, really.",
+            "turn": 1
+          },
+          {
+            "quote": "I guess I'm just generally worried about how things are going to progress with this illness. The uncertainty is hard to handle at times.",
+            "turn": 6
+          },
+          {
+            "quote": "just the constant worry about what this disease is going to do next. The fear of the unknown is tough to shake off sometimes.",
+            "turn": 7
+          }
+        ],
+        "reasoning": "Patient describes feeling 'overwhelmed,' has 'constant worry,' and finds uncertainty 'hard to handle,' indicating prominent emotional response.",
+        "score": 8.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [],
+        "reasoning": "No evidence of specific necessity beliefs expressed; patient accepts treatment but doesn't express strong views about its necessity.",
+        "score": null,
+        "confidence": 0.5
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "I've been getting these terrible headaches ever since I started the Venetoclax. They're quite bothersome and sometimes it's hard for me to focus on anything else.",
+            "turn": 3
+          },
+          {
+            "quote": "For relief, I usually just take some over-the-counter painkillers when the headache first hits. If it persists, I might try a hot towel or some gentle stretching exercises to see if that helps.",
+            "turn": 4
+          }
+        ],
+        "reasoning": "Patient experiences bothersome side effects (headaches) and manages them with over-the-counter painkillers and home remedies, indicating awareness of medication-related concerns.",
+        "score": 3.0,
+        "confidence": 0.6
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [],
+        "reasoning": "No evidence of general harm beliefs expressed; patient doesn't express concerns about medicines as a class.",
+        "score": null,
+        "confidence": 0.5
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "No evidence of general overuse beliefs expressed; patient doesn't express concerns about doctors prescribing too readily.",
+        "score": null,
+        "confidence": 0.5
+      }
+    },
+    "causes": [
+      "Chronic Lymphocytic Leukemia"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "my Chronic Lymphocytic Leukemia is just so all-encompassing these days",
+        "turn": 1
+      }
+    ]
+  }
+}

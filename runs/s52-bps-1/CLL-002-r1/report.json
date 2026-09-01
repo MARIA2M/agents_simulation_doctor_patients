@@ -1,0 +1,166 @@
+{
+  "patient_id": "CLL-002",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "CLL-002",
+    "clinical_summary": "A 6-month history of fatigue, weakness (especially in arms and legs), orthostatic lightheadedness, sleep difficulties with panic-like symptoms (chest tightness, sensation of being 'wrapped in a tight band', difficulty breathing), and decreased appetite. Symptoms began around the time of her husband's death and have increased in frequency. She has not had any regular prescription medications and has primarily relied on over-the-counter sleep aids. She expresses hope but also anxiety about uncertainty and has some periods of hopelessness. She is open to testing and treatment and trusts that modern medicine can help.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "It's been harder to keep up with everything, doctor. Even just going for a walk around the block leaves me feeling so exhausted. I used to be able to handle all my chores and social activities, but now it feels like such an effort to get through the day. Some days, I can't even muster the energy to do anything — I end up just sitting on the couch or in bed for hours.",
+            "turn": 6
+          }
+        ],
+        "reasoning": "The patient has given up significant activities (walking, chores, social activities) and now spends much of her time sitting on the couch or in bed. This represents a major reduction in her usual roles and activities.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "I don't know what the future holds. On one hand, I'm hopeful that we can find some treatment or therapy that could help me get back to feeling like myself again. But on the other hand, given how much this illness has disrupted my life and the uncertainty surrounding it all, it's hard not to feel a bit anxious about what might come next.",
+            "turn": 16
+          }
+        ],
+        "reasoning": "She expresses genuine uncertainty and holds both hope for improvement and the possibility of long-term management. She doesn't have a clear expectation about the future.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "It feels like my body has just given up on me. I've been trying to take care of myself by eating well and getting some exercise, but it just doesn't seem like enough.",
+            "turn": 11
+          }
+        ],
+        "reasoning": "She describes her body as having 'given up' and notes that her self-care efforts haven't been sufficient. She doesn't feel she can influence the course of the illness.",
+        "score": 2.0,
+        "confidence": 0.85
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "I trust modern medicine, and if you were to recommend a medication or treatment plan, I would be willing to try it out.",
+            "turn": 13
+          }
+        ],
+        "reasoning": "She expresses trust in modern medicine and is willing to try treatment, but she hasn't yet experienced treatment working for her. She's hopeful but hasn't seen evidence of benefit.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "I feel weak all over, especially my arms and legs. Even just standing up for short periods leaves me feeling drained. I've also been having trouble sleeping; it feels like the darkness is suffocating me and I can't escape, even when I'm finally able to doze off. As for appetite changes, I suppose I could say that I don't have much of an appetite anymore — I just don't feel hungry most of the time.",
+            "turn": 4
+          }
+        ],
+        "reasoning": "She describes multiple daily symptoms: weakness, fatigue, sleep difficulties with panic-like symptoms, and decreased appetite. These are intrusive and affect her daily life.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "It's terrifying when it happens because it's so sudden and intense.",
+            "turn": 9
+          },
+          {
+            "quote": "I'm hard not to feel a bit anxious about what might come next.",
+            "turn": 16
+          }
+        ],
+        "reasoning": "She describes the panic-like episodes as 'terrifying' and expresses anxiety about the future. The worry is frequent and affects her emotional state.",
+        "score": 8.0,
+        "confidence": 0.85
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I've considered that maybe it's a combination of the grief from losing my husband and this chronic tiredness. But at the same time, I can't shake the feeling that there might be something physically wrong with me as well — some underlying health issue that just hasn't been diagnosed yet. It could very well be a mix of both, but it's hard to say for sure without more information or testing.",
+            "turn": 14
+          }
+        ],
+        "reasoning": "She is actively trying to make sense of what's happening and offers a view that the symptoms may represent a 'mix' of grief and an underlying health issue. She recognizes that more information and testing are needed to understand the cause.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "Emotionally, doctor, it's been a rollercoaster. Some days, I feel like giving up — like my energy is just gone and there's nothing left to hold onto. But other times, I feel angry at myself for not being able to shake this exhaustion.",
+            "turn": 7
+          }
+        ],
+        "reasoning": "She describes emotional swings between hopelessness and anger at herself. The emotion is prominent and affects her mood and self-perception.",
+        "score": 8.0,
+        "confidence": 0.9
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "I understand that medications can have side effects and that there's always some risk involved. But at the same time, I trust modern medicine, and if you were to recommend a medication or treatment plan, I would be willing to try it out.",
+            "turn": 13
+          }
+        ],
+        "reasoning": "She is open to taking medications if recommended, indicating she believes her prescribed medication would be needed for her health. She frames this as an acceptable part of seeking improvement.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "I understand that medications can have side effects and that there's always some risk involved.",
+            "turn": 13
+          }
+        ],
+        "reasoning": "She is aware of potential side effects and risks but does not express strong personal concerns about the medication itself. She mentions that she trusts modern medicine.",
+        "score": 2.0,
+        "confidence": 0.8
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "I trust modern medicine",
+            "turn": 13
+          }
+        ],
+        "reasoning": "She holds a generally positive view of modern medicine, seeing it as a source of help rather than inherent harm.",
+        "score": 1.0,
+        "confidence": 0.7
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "She has no prior experience with regular medication, so she has not formed beliefs about whether doctors prescribe too readily.",
+        "score": null,
+        "confidence": 0.0
+      }
+    },
+    "causes": [
+      "grief from losing her husband",
+      "underlying health issue"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "Losing my husband and dealing with grief has certainly been a big factor in all of this. But at the same time, I can't shake the feeling that there might be something physically wrong with me as well — some underlying health issue that just hasn't been diagnosed yet.",
+        "turn": 14
+      }
+    ]
+  }
+}

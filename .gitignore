@@ -1,40 +1,25 @@
-# ── Python ───────────────────────────────────
+# The two interpreters, rebuilt per machine from requirements.txt.
+# venv-hpc.lock is tracked: it is what records the versions that produced
+# the existing runs.
+venv-local/
+venv-hpc/
+
 __pycache__/
 *.py[cod]
 .pytest_cache/
-*.egg-info/
 
-# ── Environments ─────────────────────────────
-venv*/
-.venv/
-.env
-
-# ── Run outputs ──────────────────────────────
-# Every run carries its own run_meta.json with the git commit that produced
-# it (§3.2), so outputs do not need to live in the repository. The directory
-# itself is kept so a fresh clone can write runs without creating it first.
-runs/*
-!runs/.gitkeep
-
-# ── Frontend ─────────────────────────────────
-node_modules/
-dist/
-
-# ── OS ───────────────────────────────────────
-.DS_Store
-
-# Los logs de SLURM: un fichero por trabajo, ninguno reproducible.
+# Written by the queue, one file per job.
 logs/
-
-# Código de terceros que se lee como referencia, no se versiona aquí.
-reference_projects/
-
-# Salidas de GREASY, todas bajo el mismo techo: las listas de tareas y los
-# ficheros de reinicio que escribe él al lado de cada una. El generador sí se
-# versiona (make_greasy_tasks.sh); lo generado no, porque se rehace solo y
-# porque si no cada tanda deja el árbol sucio — y así run_batch aborta.
 greasy_tasks/
-# GREASY escribe el fichero de reinicio en el directorio de trabajo y con el
-# basename de la lista, no al lado de ella, así que se escapa del directorio
-# de arriba.
-*.rst
+
+# runs/ is deliberately NOT ignored: the batches ship with the repo so the
+# viewer works on a fresh clone. Two consequences, both from the code:
+#
+#   1. run_batch.py refuses to start on a dirty tree, and a batch dirties the
+#      tree as it writes. Launching now needs --allow-dirty, or a commit of
+#      the previous batch first.
+#   2. metadata.py reads git_commit and dirty from `git status --porcelain`
+#      with a 60 s timeout — its own comment measures 24.7 s on GPFS for 20
+#      files. With every transcript tracked that call gets slower, and on
+#      timeout _command_output returns None and the run records no provenance
+#      without saying so. Check metadata.json: git_commit null means this.

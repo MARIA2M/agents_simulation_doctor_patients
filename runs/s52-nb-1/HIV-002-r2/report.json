@@ -1,0 +1,297 @@
+{
+  "patient_id": "HIV-002",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "HIV-002",
+    "clinical_summary": "Patient with HIV on Dovato (dolutegravir + lamivudine) for 5 months reports fatigue, loss of appetite, vivid dreams, mild anxiety-related insomnia, and occasional nausea. Viral load dropped from 45,000 to 120 copies/mL, CD4 stable at 480 cells/μL. Symptoms started a few weeks after treatment began and haven't improved significantly. Patient takes medication once daily in the morning, adheres to regimen, and discusses symptoms with doctor who explained vivid dreams are a common dolutegravir side effect with options if symptoms continue. Patient trusts doctor's expertise and focuses on self-care practices.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "I've been feeling really run down lately, with no energy to do anything, and I've lost my appetite",
+            "turn": 1
+          },
+          {
+            "quote": "The vivid dreams make it hard to fully relax and get a deep rest, so I tend to wake up feeling somewhat tired even if I did manage to sleep for a few hours",
+            "turn": 6
+          },
+          {
+            "quote": "some tasks require more focus than usual",
+            "turn": 6
+          },
+          {
+            "quote": "I can still function fairly well during the day",
+            "turn": 6
+          }
+        ],
+        "reasoning": "Patient reports fatigue, loss of appetite, and sleep disturbances that affect daily functioning. They mention waking up tired and needing more focus for some tasks, but can still function fairly well. This indicates moderate impact on life with adaptation and some limitations.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "There is no cure for HIV",
+            "turn": 11
+          },
+          {
+            "quote": "my doctor has told me that it might take a few more months before it reaches an undetectable level",
+            "turn": 8
+          },
+          {
+            "quote": "As long as I continue taking my medications as prescribed, my doctor expects that my viral load will eventually become undetectable",
+            "turn": 11
+          },
+          {
+            "quote": "it's hard for her to say exactly what the future holds since so much depends on factors like adherence to treatment, potential drug resistance, and any unforeseen complications",
+            "turn": 11
+          }
+        ],
+        "reasoning": "Patient understands HIV is chronic with no cure but expects viral load to become undetectable within a few months. They acknowledge uncertainty about the future but have a clear expectation of eventual control.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I'm doing everything I can to manage this illness",
+            "turn": 4
+          },
+          {
+            "quote": "I do feel more informed about my condition and more empowered to take control of my health through proper self-care practices like good nutrition, regular exercise, and mental health management",
+            "turn": 12
+          },
+          {
+            "quote": "adhering to my medication regimen as prescribed is the most important thing",
+            "turn": 13
+          },
+          {
+            "quote": "I'm focusing on maintaining a balanced diet, getting regular exercise, practicing stress management techniques like meditation",
+            "turn": 13
+          }
+        ],
+        "reasoning": "Patient actively manages health through medication adherence, self-care practices, and staying informed. They feel empowered and take control through these actions.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "my doctor has told me that it might take a few more months before it reaches an undetectable level",
+            "turn": 8
+          },
+          {
+            "quote": "she's been pleased with how well my treatment is working overall and expects that I'll reach that goal within the next couple of months",
+            "turn": 8
+          },
+          {
+            "quote": "As long as I continue taking my medications as prescribed, my doctor expects that my viral load will eventually become undetectable",
+            "turn": 11
+          },
+          {
+            "quote": "early intervention and proper management can significantly improve my long-term outlook",
+            "turn": 11
+          }
+        ],
+        "reasoning": "Patient believes treatment is effective and will achieve the goal of undetectable viral load. They attribute their current good response (viral load drop) to the treatment.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "I have HIV",
+            "turn": 1
+          },
+          {
+            "quote": "I'm wondering if the treatment might be affecting me this way or if there's something else going on",
+            "turn": 1
+          },
+          {
+            "quote": "I still experience some fatigue and occasional nausea",
+            "turn": 12
+          },
+          {
+            "quote": "nothing out of the ordinary for someone living with HIV",
+            "turn": 12
+          }
+        ],
+        "reasoning": "Patient identifies with having HIV and reports symptoms commonly associated with HIV. They don't describe severe or intrusive symptoms, but they do have symptoms they attribute to their condition.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "I'm worried about it because I have HIV",
+            "turn": 1
+          },
+          {
+            "quote": "I'm concerned because I've read that some people experience side effects from their medications",
+            "turn": 2
+          },
+          {
+            "quote": "I feel quite overwhelmed by the whole situation",
+            "turn": 4
+          },
+          {
+            "quote": "It's hard to stay positive with so much uncertainty about what the future holds",
+            "turn": 4
+          },
+          {
+            "quote": "I've been wondering if the vivid dreams could be related to stress or anxiety",
+            "turn": 13
+          }
+        ],
+        "reasoning": "Patient expresses worry about their condition, side effects, and the future. They feel overwhelmed and have uncertainty about what the future holds. This is a moderate level of concern that affects their mood and decision-making.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "To stay healthy and manage my HIV, I understand that adhering to my medication regimen as prescribed is the most important thing",
+            "turn": 13
+          },
+          {
+            "quote": "I also need to continue monitoring my viral load and CD4 count regularly so that I can make any necessary adjustments to my treatment plan",
+            "turn": 13
+          },
+          {
+            "quote": "my doctor has told me that while there is no cure for HIV, the goal of antiretroviral therapy like Dovato is to help me maintain a healthy immune system and control my viral load",
+            "turn": 11
+          },
+          {
+            "quote": "early intervention and proper management can significantly improve my long-term outlook",
+            "turn": 11
+          }
+        ],
+        "reasoning": "Patient has a clear understanding of their condition, treatment goals, and what they need to do to manage it. They understand the purpose of their medication and monitoring.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "I feel quite overwhelmed by the whole situation",
+            "turn": 4
+          },
+          {
+            "quote": "It's hard to stay positive with so much uncertainty about what the future holds",
+            "turn": 4
+          },
+          {
+            "quote": "I do feel more hopeful about managing the illness overall",
+            "turn": 9
+          },
+          {
+            "quote": "That sense of agency has been a positive change in my overall outlook on life",
+            "turn": 12
+          },
+          {
+            "quote": "It's reassuring to know that there are options if these side effects continue or worsen",
+            "turn": 14
+          }
+        ],
+        "reasoning": "Patient experiences emotional responses to their condition - feeling overwhelmed, uncertainty about the future, but also feeling hopeful and empowered. The emotion is prominent and affects their outlook, though they maintain a positive perspective through self-care and agency.",
+        "score": 6.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "I take it once daily as directed",
+            "turn": 3
+          },
+          {
+            "quote": "As long as I continue taking my medications as prescribed, my doctor expects that my viral load will eventually become undetectable",
+            "turn": 11
+          },
+          {
+            "quote": "adhering to my medication regimen as prescribed is the most important thing",
+            "turn": 13
+          },
+          {
+            "quote": "I'll be sure to keep up with my medication regimen and self-care practices",
+            "turn": 15
+          }
+        ],
+        "reasoning": "Patient takes medication as prescribed and clearly understands it's essential for achieving treatment goals. They organize their life around adherence and consider it the most important thing they can do.",
+        "score": 5.0,
+        "confidence": 0.9
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "I'm concerned because I've read that some people experience side effects from their medications",
+            "turn": 2
+          },
+          {
+            "quote": "The vivid dreams have been the most disruptive side effect for me",
+            "turn": 4
+          },
+          {
+            "quote": "I've been wondering if the vivid dreams could be related to stress or anxiety",
+            "turn": 13
+          },
+          {
+            "quote": "I've been trying those out [relaxation techniques], but they haven't made a huge difference yet",
+            "turn": 10
+          }
+        ],
+        "reasoning": "Patient has concerns about side effects, particularly vivid dreams. They've raised these concerns with their doctor and tried relaxation techniques, but symptoms persist. This is a moderate level of specific concerns that have led to some behavioral changes.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [],
+        "reasoning": "Patient never expressed any general concern about medicines as a class.",
+        "score": null,
+        "confidence": 0.0
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "Patient never expressed any concern about doctors prescribing too readily.",
+        "score": null,
+        "confidence": 0.0
+      }
+    },
+    "causes": [
+      "HIV",
+      "medication side effects"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "I have HIV",
+        "turn": 1
+      },
+      {
+        "quote": "I'm wondering if the treatment might be affecting me this way or if there's something else going on",
+        "turn": 1
+      },
+      {
+        "quote": "The fatigue and loss of appetite started a few weeks after I began my treatment for HIV",
+        "turn": 2
+      },
+      {
+        "quote": "I've read that some people experience side effects from their medications",
+        "turn": 2
+      }
+    ]
+  }
+}

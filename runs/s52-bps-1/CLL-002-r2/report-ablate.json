@@ -1,0 +1,136 @@
+{
+  "patient_id": "CLL-002",
+  "mode": "ablate",
+  "removed_turns": 5,
+  "removed_words": 691,
+  "events": [],
+  "report": {
+    "patient_id": "CLL-002",
+    "clinical_summary": "The patient presents with Chronic Lymphocytic Leukemia (CLL) and reports significant emotional and mental exhaustion alongside physical tiredness. They describe the illness as a constant reminder of what is happening inside them. They express a belief that lifestyle choices and open communication play a significant role in managing their health. They are currently in partial remission on ibrutinib but focus on hope and resilience rather than specific worries about the future or the medication.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "It's not just physical tiredness — there's an emotional and mental exhaustion that comes along with it too.",
+            "turn": 2
+          }
+        ],
+        "reasoning": "The patient describes significant impact on their state, noting emotional and mental exhaustion that requires processing.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [],
+        "reasoning": "The patient did not express a specific belief about how long the illness will last.",
+        "score": null,
+        "confidence": 0.9
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I believe they play a significant role.",
+            "turn": 3
+          }
+        ],
+        "reasoning": "The patient explicitly states that lifestyle choices and communication play a significant role in managing their health.",
+        "score": 8.0,
+        "confidence": 0.7
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "Open communication helps us better understand what's happening inside my body and make decisions together about managing my health.",
+            "turn": 3
+          }
+        ],
+        "reasoning": "The patient focuses on the process of management and communication rather than explicitly attributing their condition to the efficacy of the treatment.",
+        "score": 4.0,
+        "confidence": 0.6
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "It's not painful, but it's a constant reminder of what's happening inside me.",
+            "turn": 2
+          }
+        ],
+        "reasoning": "The patient identifies the illness as a constant, intrusive presence in their life.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "But despite all of that, I'm trying to stay hopeful and optimistic.",
+            "turn": 4
+          }
+        ],
+        "reasoning": "When asked about worries, the patient deflects the question by focusing on hope, providing no explicit evidence of worry.",
+        "score": null,
+        "confidence": 0.9
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "It's not just physical tiredness — there's an emotional and mental exhaustion that comes along with it too.",
+            "turn": 2
+          }
+        ],
+        "reasoning": "The patient provides a coherent account of their symptoms, distinguishing between physical and emotional exhaustion.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "It's not just physical tiredness — there's an emotional and mental exhaustion that comes along with it too.",
+            "turn": 2
+          }
+        ],
+        "reasoning": "The patient explicitly mentions emotional exhaustion and the need to process emotions, indicating a prominent emotional impact.",
+        "score": 8.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [],
+        "reasoning": "The patient did not discuss the necessity of their medication.",
+        "score": null,
+        "confidence": 0.9
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [],
+        "reasoning": "The patient did not express concerns about their medication.",
+        "score": null,
+        "confidence": 0.9
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [],
+        "reasoning": "The patient did not express a general view on the harm of medicines.",
+        "score": null,
+        "confidence": 0.9
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "The patient did not express a view on whether doctors prescribe too readily.",
+        "score": null,
+        "confidence": 0.9
+      }
+    },
+    "causes": [],
+    "causes_evidence": []
+  }
+}

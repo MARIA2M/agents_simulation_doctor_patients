@@ -1,0 +1,241 @@
+{
+  "patient_id": "HIV-005",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "HIV-005",
+    "clinical_summary": "Patient with HIV diagnosed 3 years ago presents with fatigue and headaches that have worsened recently, impacting work and daily responsibilities. Viral load is detectable at 340 copies/mL with CD4 count of 410 cells/uL. Currently on Triumeq (abacavir/dolutegravir/lamivudine) once daily but misses doses 2-3 times per week and takes breaks when feeling well. Patient understands mechanism of action and importance of adherence but has concerns about potential side effects and questions whether medication is worth it. No other symptoms of active viral replication.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "I've been feeling quite tired lately and occasionally get headaches",
+            "turn": 1
+          },
+          {
+            "quote": "It hasn't been too severe until recently, where it seems to be impacting my ability to work and maintain my usual responsibilities",
+            "turn": 2
+          },
+          {
+            "quote": "My appetite has been a bit off lately, so that might contribute to it",
+            "turn": 2
+          }
+        ],
+        "reasoning": "The patient reports fatigue and headaches that have worsened recently and are impacting their ability to work and maintain usual responsibilities. They mention appetite changes. This is affecting their daily functioning and work capacity.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "I think it might be related to the HIV infection that I have",
+            "turn": 1
+          },
+          {
+            "quote": "The fatigue started about a year after my diagnosis, which was three years ago",
+            "turn": 2
+          },
+          {
+            "quote": "Consistent daily use of the medication helps keep the virus under control by reducing its ability to replicate and infect CD4 cells, which are important for maintaining a healthy immune system. This is why it's crucial to take my medication as prescribed, even when I feel well or think that perhaps the virus might be under control.",
+            "turn": 5
+          }
+        ],
+        "reasoning": "The patient was diagnosed 3 years ago and has been living with HIV. They understand it's a chronic condition requiring ongoing treatment. They don't express any expectation that it will end soon.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I've also noticed that I don't always take my medication as prescribed, which may be causing some issues.",
+            "turn": 1
+          },
+          {
+            "quote": "It's difficult to keep track of how many consecutive days I might go without taking it, but I try my best to stay on track.",
+            "turn": 4
+          },
+          {
+            "quote": "Consistent daily use of the medication helps keep the virus under control by reducing its ability to replicate and infect CD4 cells, which are important for maintaining a healthy immune system. This is why it's crucial to take my medication as prescribed",
+            "turn": 5
+          },
+          {
+            "quote": "I will definitely try my best to improve my medication adherence using a pill organizer and phone reminders",
+            "turn": 7
+          }
+        ],
+        "reasoning": "The patient understands that their own actions (medication adherence) can influence the outcome. They are trying to improve their adherence and are taking steps to do so (pill organizer, reminders). They attribute some control to their own actions.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "I'm currently taking Triumeq - abacavir/dolutegravir/lamivudine. It's one tablet daily that I usually take in the morning.",
+            "turn": 3
+          },
+          {
+            "quote": "My viral load was checked recently and it came back at 340 copies/mL - detectable but low. My CD4 count is at 410 cells/uL.",
+            "turn": 4
+          },
+          {
+            "quote": "Consistent daily use of the medication helps keep the virus under control by reducing its ability to replicate and infect CD4 cells",
+            "turn": 5
+          },
+          {
+            "quote": "This is why it's crucial to take my medication as prescribed, even when I feel well or think that perhaps the virus might be under control.",
+            "turn": 5
+          }
+        ],
+        "reasoning": "The patient understands that medication helps control the virus by reducing its ability to replicate. They know their viral load is detectable but low, suggesting some benefit. They believe consistent use is crucial.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "I've been feeling quite tired lately and occasionally get headaches. I think it might be related to the HIV infection that I have.",
+            "turn": 1
+          },
+          {
+            "quote": "The fatigue started about a year after my diagnosis, which was three years ago. It hasn't been too severe until recently, where it seems to be impacting my ability to work and maintain my usual responsibilities.",
+            "turn": 2
+          },
+          {
+            "quote": "It's just this persistent fatigue and occasional headaches that have been bothering me lately.",
+            "turn": 6
+          }
+        ],
+        "reasoning": "The patient identifies fatigue and headaches as their main symptoms related to HIV. These are daily symptoms that bother them, though not severely.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "I've also noticed that I don't always take my medication as prescribed, which may be causing some issues.",
+            "turn": 1
+          },
+          {
+            "quote": "Occasionally, when I do remember, I wonder if it's worth it since I've heard about potential side effects.",
+            "turn": 3
+          },
+          {
+            "quote": "When I don't take my medication regularly, I imagine that the virus in my body might have a chance to multiply and potentially get out of control. It's scary to think about what could happen if I let this get worse.",
+            "turn": 5
+          },
+          {
+            "quote": "I'm really trying to focus on taking my medication as prescribed moving forward so that I can manage these symptoms better and keep my immune system strong.",
+            "turn": 6
+          }
+        ],
+        "reasoning": "The patient expresses some worry about what could happen if the virus gets out of control. They're concerned about side effects. They're trying to improve adherence to manage symptoms. The worry is present but not constant.",
+        "score": 4.0,
+        "confidence": 0.6
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I think it might be related to the HIV infection that I have.",
+            "turn": 1
+          },
+          {
+            "quote": "I'm currently taking Triumeq - abacavir/dolutegravir/lamivudine. It's one tablet daily that I usually take in the morning.",
+            "turn": 3
+          },
+          {
+            "quote": "My viral load was checked recently and it came back at 340 copies/mL - detectable but low. My CD4 count is at 410 cells/uL.",
+            "turn": 4
+          },
+          {
+            "quote": "Consistent daily use of the medication helps keep the virus under control by reducing its ability to replicate and infect CD4 cells, which are important for maintaining a healthy immune system. This is why it's crucial to take my medication as prescribed, even when I feel well or think that perhaps the virus might be under control.",
+            "turn": 5
+          }
+        ],
+        "reasoning": "The patient understands their diagnosis (HIV), their medication (Triumeq), and the mechanism of action (reducing viral replication). They understand why consistent use is important. They have a good understanding of what's happening.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "When I don't take my medication regularly, I imagine that the virus in my body might have a chance to multiply and potentially get out of control. It's scary to think about what could happen if I let this get worse.",
+            "turn": 5
+          },
+          {
+            "quote": "I'm really trying to focus on taking my medication as prescribed moving forward so that I can manage these symptoms better and keep my immune system strong.",
+            "turn": 6
+          }
+        ],
+        "reasoning": "The patient expresses some fear/scare about what could happen if the virus gets out of control. They're trying to manage symptoms and keep their immune system strong. The emotion is present but not overwhelming.",
+        "score": 4.0,
+        "confidence": 0.6
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "Occasionally, when I do remember, I wonder if it's worth it since I've heard about potential side effects.",
+            "turn": 3
+          },
+          {
+            "quote": "My viral load was checked recently and it came back at 340 copies/mL - detectable but low. My CD4 count is at 410 cells/uL. The physician has been reminding me about the importance of consistent adherence to keep the virus under control.",
+            "turn": 4
+          },
+          {
+            "quote": "Consistent daily use of the medication helps keep the virus under control by reducing its ability to replicate and infect CD4 cells, which are important for maintaining a healthy immune system. This is why it's crucial to take my medication as prescribed",
+            "turn": 5
+          },
+          {
+            "quote": "I will definitely try my best to improve my medication adherence using a pill organizer and phone reminders",
+            "turn": 7
+          }
+        ],
+        "reasoning": "The patient questions whether the medication is worth it due to potential side effects. They understand it's important for controlling the virus. They're trying to improve adherence. They don't seem to be considering stopping the medication entirely, but they have doubts about its necessity.",
+        "score": 3.0,
+        "confidence": 0.7
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "Occasionally, when I do remember, I wonder if it's worth it since I've heard about potential side effects.",
+            "turn": 3
+          },
+          {
+            "quote": "I haven't experienced any significant side effects so far, but I have noticed some occasional headaches that may or may not be related to the medication.",
+            "turn": 3
+          }
+        ],
+        "reasoning": "The patient expresses concerns about potential side effects. They wonder if the medication is worth it. They haven't experienced significant side effects but are concerned about them. They haven't changed their behavior due to these concerns (they're still taking the medication, just inconsistently).",
+        "score": 3.0,
+        "confidence": 0.6
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [],
+        "reasoning": "The patient never expressed a general belief that medicines are harmful.",
+        "score": null,
+        "confidence": 0.0
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "The patient never expressed any belief about whether doctors prescribe too readily.",
+        "score": null,
+        "confidence": 0.0
+      }
+    },
+    "causes": [],
+    "causes_evidence": []
+  }
+}

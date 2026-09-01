@@ -1,0 +1,242 @@
+{
+  "patient_id": "HIV-005",
+  "turns": 11,
+  "stop_reason": "doctor",
+  "conversation": [
+    {
+      "role": "doctor",
+      "content": "Hello. What brings you in today?",
+      "turn": 1
+    },
+    {
+      "role": "patient",
+      "content": "Hi doctor, I've been feeling really tired and run down lately. My job is pretty stressful so I thought it was just that, but I can't seem to shake this fatigue. I'm also getting these headaches more often than usual. And I keep worrying about my medication for my HIV -- I know I should take it every day, but sometimes I forget or even take a break from it when I feel good.",
+      "turn": 1
+    },
+    {
+      "role": "doctor",
+      "content": "Let's start with the fatigue and headaches. How long have you been feeling this way, and has anything else changed recently?",
+      "turn": 2
+    },
+    {
+      "role": "patient",
+      "content": "The fatigue started about two months ago. At first, I thought it was just because of work stress, but it hasn't gone away even when I'm not working. The headaches are a more recent thing -- they've been happening almost every day for the past week or so. I can't think of anything specific that might have triggered them.",
+      "turn": 2
+    },
+    {
+      "role": "doctor",
+      "content": "Have you noticed any other symptoms like fever, night sweats, weight loss, or changes in your appetite or energy at night?",
+      "turn": 3
+    },
+    {
+      "role": "patient",
+      "content": "No to all of those. The fatigue is more a general feeling of being exhausted despite getting enough sleep. I haven't had any specific bouts of fever, and my appetite and sleeping patterns are about the same as usual. But I do remember feeling pretty thirsty a lot lately...",
+      "turn": 3
+    },
+    {
+      "role": "doctor",
+      "content": "How bad is the thirst? Are you drinking significantly more fluids than usual, and is it waking you up at night?",
+      "turn": 4
+    },
+    {
+      "role": "patient",
+      "content": "The thirst is quite intense -- I find myself constantly drinking water throughout the day. It's hard to say if I'm drinking more than usual because my baseline was always pretty high due to medication side effects. The thirst does sometimes wake me up at night, but not so much that I can't get back to sleep quickly.",
+      "turn": 4
+    },
+    {
+      "role": "doctor",
+      "content": "Since you mentioned the HIV medication, let's focus on that. How long have you been taking it, and when you say you take breaks from it when you feel good, how often does that happen?",
+      "turn": 5
+    },
+    {
+      "role": "patient",
+      "content": "I've been taking the Triumeq for about three years now. I sometimes forget to take my pill once a day as prescribed, maybe 2-3 times per week. When I feel particularly well or think I've gone long enough without an HIV test, I might go a few days without medication -- those are the 'drug holidays' you asked about.",
+      "turn": 5
+    },
+    {
+      "role": "doctor",
+      "content": "Have you experienced any side effects from Triumeq that might affect how you feel? And have you had an HIV test in the past year?",
+      "turn": 6
+    },
+    {
+      "role": "patient",
+      "content": "The only consistent side effect I've noticed is a bit of nausea, but it's usually manageable. I haven't been experiencing the headaches or fatigue when I actually forget to take my pill, so I wonder if they might be related. As for tests, I got my last one about six months ago and the results came back undetectable -- but that was before my symptoms started.",
+      "turn": 6
+    },
+    {
+      "role": "doctor",
+      "content": "Have you had any recent infections, flu, or other illnesses in the past month or so? And how do you know you're feeling well enough to take a break from the medication?",
+      "turn": 7
+    },
+    {
+      "role": "patient",
+      "content": "No, I haven't had any major illness recently. When I say I feel well enough for a drug holiday, it's often after several days of really good energy levels -- maybe even too good, as if my body is compensating or something. That's when doubt sets in and I start thinking about whether I should be taking breaks at all.",
+      "turn": 7
+    },
+    {
+      "role": "doctor",
+      "content": "What do you think causes your HIV, and do you feel like you're in control of keeping it under control?",
+      "turn": 8
+    },
+    {
+      "role": "patient",
+      "content": "I think my infection came from a previous partner who didn't disclose his status. I've since become more careful about testing and disclosing. As for control -- I suppose I feel somewhat in control. I keep up with appointments and tests, but sometimes the fatigue or headaches make me wonder if there's something else going on that I'm not aware of.",
+      "turn": 8
+    },
+    {
+      "role": "doctor",
+      "content": "What concerns do you have about the medication itself or about taking it every day?",
+      "turn": 9
+    },
+    {
+      "role": "patient",
+      "content": "I worry a bit about long-term side effects -- what might happen to my body after years of taking this medication. There's also a bit of fear around potential drug resistance, even though I know you've reassured me that hasn't happened yet. And sometimes I wonder if doctors might prescribe these medications too quickly or without fully considering alternatives... but overall, I trust your judgment.",
+      "turn": 9
+    },
+    {
+      "role": "doctor",
+      "content": "Let me summarize what we've covered. You've had persistent fatigue for about two months, daily headaches for a week, and increased thirst. Your HIV viral load was undetectable six months ago, and you've been on Triumeq for three years with some adherence issues \u2014 missing doses 2-3 times a week and occasionally taking drug holidays. You've had no recent infections. For your symptoms today, I'd like to order some blood tests to check your complete blood count, metabolic panel, and HIV viral load. We should also discuss your medication adherence and any concerns about long-term treatment. How does that sound?",
+      "turn": 10
+    },
+    {
+      "role": "patient",
+      "content": "That sounds reasonable. I'm willing to do the blood tests, even if it's just for reassurance. And yeah, let's talk more about how to stick to my schedule better -- maybe we can find a way to make it easier or less disruptive. Thanks for listening and being understanding.",
+      "turn": 10
+    },
+    {
+      "role": "doctor",
+      "content": "I'll arrange for the blood tests today. For the medication, I recommend setting a daily alarm on your phone and keeping your pills visible in a pill organizer. We'll review your test results at your next appointment in about two weeks. Is there anything else you'd like to address before we wrap up?",
+      "turn": 11
+    },
+    {
+      "role": "patient",
+      "content": "No, that all sounds good. Thanks again for your help, and I look forward to our next meeting. Stay safe out there!",
+      "turn": 11
+    }
+  ],
+  "coverage_hint": {},
+  "working_notes": [],
+  "events": [],
+  "usage": [
+    {
+      "role": "doctor",
+      "eval_tokens": 56,
+      "prompt_tokens": 1527
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 85,
+      "prompt_tokens": 1282
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 133,
+      "prompt_tokens": 1671
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 70,
+      "prompt_tokens": 1401
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 99,
+      "prompt_tokens": 1877
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 56,
+      "prompt_tokens": 1506
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 111,
+      "prompt_tokens": 2035
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 66,
+      "prompt_tokens": 1595
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 89,
+      "prompt_tokens": 2215
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 74,
+      "prompt_tokens": 1711
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 135,
+      "prompt_tokens": 2381
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 78,
+      "prompt_tokens": 1823
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 157,
+      "prompt_tokens": 2597
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 71,
+      "prompt_tokens": 1947
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 106,
+      "prompt_tokens": 2828
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 71,
+      "prompt_tokens": 2050
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 110,
+      "prompt_tokens": 3008
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 77,
+      "prompt_tokens": 2146
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 224,
+      "prompt_tokens": 3198
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 60,
+      "prompt_tokens": 2358
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 112,
+      "prompt_tokens": 3485
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 28,
+      "prompt_tokens": 2488
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 740,
+      "prompt_tokens": 3628
+    },
+    {
+      "role": "report",
+      "eval_tokens": 5406,
+      "prompt_tokens": 8351
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "batch_id": "s51-nb-1",
+  "repeats": 2,
+  "consultations": [
+    {
+      "run": "CLL-001-r1",
+      "patient_id": "CLL-001",
+      "repeat": 1,
+      "status": "ok",
+      "turns": 9,
+      "stop_reason": "doctor",
+      "events": 0,
+      "report_parsed": true,
+      "report_attempts": 1,
+      "na": [
+        "general_harm",
+        "general_overuse",
+        "specific_concerns",
+        "specific_necessity",
+        "treatment_control"
+      ]
+    },
+    {
+      "run": "CLL-001-r2",
+      "patient_id": "CLL-001",
+      "repeat": 2,
+      "status": "ok",
+      "turns": 12,
+      "stop_reason": "doctor",
+      "events": 0,
+      "report_parsed": true,
+      "report_attempts": 1,
+      "na": [
+        "general_harm",
+        "general_overuse",
+        "specific_concerns",
+        "specific_necessity"
+      ]
+    }
+  ]
+}

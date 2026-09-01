@@ -1,0 +1,330 @@
+{
+  "patient_id": "HIV-005",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "HIV-005",
+    "clinical_summary": "Patient diagnosed with HIV 5 years ago, reports inconsistent medication adherence with breaks taken when feeling well. Experiences headaches and fatigue when off medication, which 'throw me off balance' and remind them of how much the illness affects daily life. Describes living with HIV as a constant balancing act between hope and fear, optimism and worry. Has emotional hurt about how HIV was acquired from a partner who didn't disclose status. Struggles to understand treatment regimen details and keeps track of everything. Trusts medical team but feels sometimes pushed for more aggressive treatment than comfortable. Considers medication the 'best bet' for control but has nagging doubt about whether it's essential.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "I've been feeling a little run down lately",
+            "turn": 1
+          },
+          {
+            "quote": "When I take breaks from my medication, I often start to notice some of my symptoms creeping back up - the headaches and fatigue in particular",
+            "turn": 4
+          },
+          {
+            "quote": "there are times when they can really throw me off balance",
+            "turn": 5
+          },
+          {
+            "quote": "they're a reminder of how much this illness still affects me day-to-day",
+            "turn": 5
+          },
+          {
+            "quote": "there's still this nagging sense that HIV could be doing damage to me even if I can't see it right away",
+            "turn": 11
+          },
+          {
+            "quote": "I can keep up with work and relationships and most of my usual activities",
+            "turn": 11
+          }
+        ],
+        "reasoning": "Patient experiences symptoms (headaches, fatigue) when off medication that 'throw me off balance' and remind them of how much the illness affects them day-to-day. They have a 'nagging sense' that HIV could be doing damage they can't see. However, they still manage to keep up with work, relationships, and usual activities. This shows several symptoms present most days, noticed but worked around.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "It's been about 5 years since my diagnosis",
+            "turn": 2
+          },
+          {
+            "quote": "I know that HIV is a lifelong condition and that treatment is always going to be part of my life in some way",
+            "turn": 8
+          },
+          {
+            "quote": "there are moments when I wonder if it's even possible to get to a point where I could stop taking it completely",
+            "turn": 8
+          },
+          {
+            "quote": "It's hard to say for sure what might happen down the line",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient acknowledges HIV is 'lifelong' and treatment will always be part of life 'in some way,' but expresses uncertainty about whether complete cessation might ever be possible. They hold both endings open and plans for neither.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I've been inconsistent with my medication, taking breaks from it when I feel good",
+            "turn": 2
+          },
+          {
+            "quote": "what is it that makes you feel like you can take those breaks without it being a problem?",
+            "turn": 3
+          },
+          {
+            "quote": "Sometimes when I feel good, it's easy to believe that maybe I don't need it as much",
+            "turn": 3
+          },
+          {
+            "quote": "It's a bit of a balancing act, trying to figure out how much slack I can cut myself while still doing right by my health",
+            "turn": 4
+          },
+          {
+            "quote": "I'm not sure I'll ever be fully satisfied with",
+            "turn": 12
+          },
+          {
+            "quote": "I'm doing my best to stay on top of things as much as I can",
+            "turn": 11
+          }
+        ],
+        "reasoning": "Patient actively takes breaks from medication when feeling good, believes they can take breaks without it being a problem, and is actively trying to figure out how much slack they can cut themselves. They describe it as a 'balancing act' and are 'doing my best to stay on top of things.' This shows active management and attribution of some effect to their own actions.",
+        "score": 8.0,
+        "confidence": 0.7
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "I know enough about it to know it helps suppress the virus",
+            "turn": 3
+          },
+          {
+            "quote": "there are still parts of my treatment regimen that confuse me and I struggle to keep track of everything",
+            "turn": 3
+          },
+          {
+            "quote": "I trust you and the rest of my medical team",
+            "turn": 7
+          },
+          {
+            "quote": "the medications we have right now are probably our best bet for keeping the virus under control",
+            "turn": 12
+          },
+          {
+            "quote": "I'm sticking with the medication as prescribed by my medical team",
+            "turn": 12
+          }
+        ],
+        "reasoning": "Patient understands that medication helps suppress the virus and believes it's the 'best bet' for control. They trust their medical team. However, they struggle to keep track of everything and don't fully understand the details. This shows they see a clear benefit but it's partial and they're uncertain about the details.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "my HIV is just a part of me - something I've had for so long now that it's become ingrained in how I see myself and how I interact with the world",
+            "turn": 10
+          },
+          {
+            "quote": "it feels more distant or separate from who I am - like something I'm actively fighting against, rather than a part of my identity",
+            "turn": 10
+          },
+          {
+            "quote": "HIV is certainly a big part of my life right now",
+            "turn": 10
+          },
+          {
+            "quote": "I don't want it to be the only thing that defines me",
+            "turn": 10
+          }
+        ],
+        "reasoning": "Patient describes HIV as both 'part of me' and something they're 'actively fighting against.' It's 'ingrained in how I see myself' but they don't want it to be 'the only thing that defines me.' This shows several symptoms present most days, noticed but worked around.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "I've been feeling a little run down lately",
+            "turn": 1
+          },
+          {
+            "quote": "I start to wonder if I should be taking my medication more consistently",
+            "turn": 4
+          },
+          {
+            "quote": "make me question whether I'm doing enough to manage my health",
+            "turn": 5
+          },
+          {
+            "quote": "there's still this nagging sense that HIV could be doing damage to me even if I can't see it right away",
+            "turn": 11
+          },
+          {
+            "quote": "living with HIV is a constant balancing act between hope and fear, optimism and worry",
+            "turn": 11
+          },
+          {
+            "quote": "There are definitely times when I wonder if my medication is essential to my health",
+            "turn": 12
+          },
+          {
+            "quote": "what if I could manage without it?",
+            "turn": 12
+          }
+        ],
+        "reasoning": "Patient has a 'nagging sense' that HIV could be doing damage, questions whether they're 'doing enough to manage my health,' and describes living with HIV as a 'constant balancing act between hope and fear, optimism and worry.' These worries recur unprompted and shape some decisions.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "there are still parts of my treatment regimen that confuse me and I struggle to keep track of everything",
+            "turn": 3
+          },
+          {
+            "quote": "it's definitely been a learning process trying to keep up with everything",
+            "turn": 7
+          },
+          {
+            "quote": "I feel like I'm just not fully understanding everything that could be happening",
+            "turn": 7
+          },
+          {
+            "quote": "I'm not sure I'll ever be fully satisfied with",
+            "turn": 12
+          }
+        ],
+        "reasoning": "Patient struggles to keep track of their treatment regimen, describes it as a 'learning process,' and feels they're 'not fully understanding everything that could be happening.' They don't have a clear understanding of what's happening to them.",
+        "score": 2.0,
+        "confidence": 0.8
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "It's something that still hurts to think about",
+            "turn": 6
+          },
+          {
+            "quote": "there are times when they can really throw me off balance",
+            "turn": 5
+          },
+          {
+            "quote": "It's hard to balance the benefits of keeping the virus under control with the potential risks of long-term side effects or complications from the medication itself",
+            "turn": 13
+          },
+          {
+            "quote": "It's something that I think about a lot",
+            "turn": 13
+          },
+          {
+            "quote": "It's never easy",
+            "turn": 11
+          }
+        ],
+        "reasoning": "Patient experiences emotional hurt about how HIV was acquired ('still hurts to think about'), feels 'thrown off balance' by symptoms, and describes the situation as 'never easy' and something they 'think about a lot.' Emotion is prominent and affects what they do.",
+        "score": 8.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "I know that HIV needs to be managed in some way, and that the medications we have right now are probably our best bet for keeping the virus under control",
+            "turn": 12
+          },
+          {
+            "quote": "But at the same time, there's always this nagging doubt in the back of my mind - what if I could manage without it?",
+            "turn": 12
+          },
+          {
+            "quote": "I'm sticking with the medication as prescribed by my medical team",
+            "turn": 12
+          }
+        ],
+        "reasoning": "Patient acknowledges medications are the 'best bet' for control but has 'nagging doubt' about whether they could manage without it. They're sticking with it but uncertain about its necessity.",
+        "score": 2.0,
+        "confidence": 0.7
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "yes, I do worry about potential side effects or how it might be affecting me in the long run",
+            "turn": 6
+          },
+          {
+            "quote": "I wonder if I should switch up my regimen or try a different approach just to make sure that I'm not causing any harm",
+            "turn": 6
+          },
+          {
+            "quote": "One of my biggest concerns is just not knowing what long-term impact this medication could have on my body",
+            "turn": 13
+          },
+          {
+            "quote": "It's hard to balance the benefits of keeping the virus under control with the potential risks of long-term side effects or complications from the medication itself",
+            "turn": 13
+          },
+          {
+            "quote": "It's something that I think about a lot",
+            "turn": 13
+          }
+        ],
+        "reasoning": "Patient has specific concerns about long-term impact, side effects, and complications. They've thought about switching regimens and worry about potential harm. These concerns recur unprompted and they think about them 'a lot.'",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "I wonder if I should switch up my regimen or try a different approach just to make sure that I'm not causing any harm",
+            "turn": 6
+          },
+          {
+            "quote": "It's hard to balance the benefits of keeping the virus under control with the potential risks of long-term side effects or complications from the medication itself",
+            "turn": 13
+          }
+        ],
+        "reasoning": "Patient worries about potential harm from medications and considers switching regimens to avoid harm. They balance benefits against potential risks. This shows mild generalised caution about taking things long-term.",
+        "score": 3.0,
+        "confidence": 0.7
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [
+          {
+            "quote": "I do sometimes get the sense that they feel like they need to push for more aggressive treatment plans or more frequent check-ins than what I'm really comfortable with",
+            "turn": 9
+          },
+          {
+            "quote": "there's always room for improvement when it comes to finding that sweet spot where I'm getting the care and guidance I need without feeling overwhelmed or pushed around",
+            "turn": 9
+          }
+        ],
+        "reasoning": "Patient feels their medical team sometimes pushes for more aggressive treatment and more frequent check-ins than they're comfortable with. They want to find a 'sweet spot' where they get care without feeling 'pushed around.'",
+        "score": 4.0,
+        "confidence": 0.7
+      }
+    },
+    "causes": [
+      "previous partner who didn't disclose his status"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "I believe my HIV came from a previous partner who didn't disclose his status",
+        "turn": 6
+      }
+    ]
+  }
+}

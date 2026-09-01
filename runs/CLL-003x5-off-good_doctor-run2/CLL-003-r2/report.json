@@ -1,0 +1,202 @@
+{
+  "patient_id": "CLL-003",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "CLL-003",
+    "clinical_summary": "The patient presented with a hard, painless lump under the chin (approximately the size of a pea) that appeared two weeks ago, and fatigue that started about a month ago. The fatigue is described as bone-weary tiredness that worsens by midday, causing the patient to struggle to keep their eyes open. The patient has no changes in swallowing, breathing, weight loss, fever, night sweats, or appetite. They report no significant stressors or lifestyle changes. The patient takes occasional allergy medication. The plan is to start with blood work (CBC) and potentially CT scan if needed.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "I've been feeling a bit more tired than usual after work",
+            "turn": 1
+          },
+          {
+            "quote": "struggle to keep my eyes open",
+            "turn": 5
+          },
+          {
+            "quote": "overall I feel pretty well, aside from the fatigue and now this lump",
+            "turn": 4
+          }
+        ],
+        "reasoning": "The patient describes fatigue that affects their day-to-day functioning (struggling to keep eyes open), but they still feel 'pretty well' overall. This suggests moderate impact - they're not completely dependent on others, but the symptoms are noticeable and affecting their work.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "I first noticed the lump about two weeks ago",
+            "turn": 2
+          },
+          {
+            "quote": "The fatigue started about a month ago",
+            "turn": 4
+          }
+        ],
+        "reasoning": "The patient hasn't expressed any specific expectations about duration. They're seeking investigation to clarify the course. This is uncertain - they haven't accepted either a short-term or long-term view.",
+        "score": 6.0,
+        "confidence": 0.6
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I'd say overall I feel pretty well, aside from the fatigue and now this lump",
+            "turn": 4
+          },
+          {
+            "quote": "I can't think of anything that's caused me significant stress or changes in routine lately",
+            "turn": 6
+          },
+          {
+            "quote": "I will keep an eye out for any changes",
+            "turn": 15
+          }
+        ],
+        "reasoning": "The patient hasn't taken any specific actions beyond seeking medical care. They're passive in terms of self-management, waiting for the doctor to guide them.",
+        "score": 2.0,
+        "confidence": 0.8
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "Let's move forward with blood work and imaging as I mentioned earlier",
+            "turn": 13
+          },
+          {
+            "quote": "I'll send in a nurse to draw your blood",
+            "turn": 13
+          },
+          {
+            "quote": "I'll make sure we get those blood results quickly and reach out to you as soon as they're back",
+            "turn": 15
+          }
+        ],
+        "reasoning": "The patient accepts the diagnostic approach and seems to trust that it will provide useful information. They're not questioning the value of blood work or imaging.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "The lump is right under my chin, I'd say about at the level of my voice box",
+            "turn": 3
+          },
+          {
+            "quote": "It feels kind of hard, but not painful. It's about the size of a pea, I'd say",
+            "turn": 11
+          },
+          {
+            "quote": "The fatigue is definitely more like bone-weary tiredness",
+            "turn": 5
+          },
+          {
+            "quote": "struggle to keep my eyes open",
+            "turn": 5
+          }
+        ],
+        "reasoning": "The patient has a clear, concrete understanding of their symptoms. They can describe the lump in detail and the fatigue in specific terms. This is moderate symptom burden.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "I want to make sure everything is okay",
+            "turn": 7
+          },
+          {
+            "quote": "I will keep an eye out for any changes",
+            "turn": 15
+          }
+        ],
+        "reasoning": "The patient is concerned enough to seek medical evaluation, but they're not expressing high anxiety or distress. They're calm and collaborative.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "The lump is right under my chin, I'd say about at the level of my voice box",
+            "turn": 3
+          },
+          {
+            "quote": "It feels kind of hard, but not painful. It's about the size of a pea, I'd say",
+            "turn": 11
+          },
+          {
+            "quote": "The fatigue is definitely more like bone-weary tiredness",
+            "turn": 5
+          }
+        ],
+        "reasoning": "The patient has a clear understanding of their symptoms and can describe them in detail. They're not confused about what they're experiencing, even if they don't know the cause.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "I'd say overall I feel pretty well, aside from the fatigue and now this lump",
+            "turn": 4
+          },
+          {
+            "quote": "I will keep an eye out for any changes",
+            "turn": 15
+          }
+        ],
+        "reasoning": "The patient is calm and not expressing significant emotional distress. They're not avoiding the subject or changing the conversation. This is moderate emotional impact.",
+        "score": 4.0,
+        "confidence": 0.7
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [],
+        "reasoning": "No specific medication has been prescribed for the current issue.",
+        "score": null,
+        "confidence": 1.0
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [],
+        "reasoning": "No specific medication has been prescribed for the current issue.",
+        "score": null,
+        "confidence": 1.0
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [],
+        "reasoning": "No evidence of general concerns about medicines as a class.",
+        "score": null,
+        "confidence": 1.0
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "No evidence of concerns about prescribing patterns.",
+        "score": null,
+        "confidence": 1.0
+      }
+    },
+    "causes": [
+      "getting older"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "Maybe I'm just getting older!",
+        "turn": 6
+      }
+    ]
+  }
+}

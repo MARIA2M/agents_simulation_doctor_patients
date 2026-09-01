@@ -1,0 +1,191 @@
+{
+  "patient_id": "CLL-003",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "CLL-003",
+    "clinical_summary": "The patient presents with fatigue and a new cervical lymphadenopathy (left-sided neck lump below jawline, walnut-sized, firm, slightly tender). They have a family history of CLL (father diagnosed 6 months ago) and have been under hematologist care for 6 months with mild blood count elevation consistent with early-stage CLL. They have not mentioned the new lump to their hematologist yet. They understand CLL as a chronic blood cancer affecting B lymphocytes, with symptoms including fatigue, lymphadenopathy, and infection risk. They are concerned about future impact on quality of life but are trying to remain rational and are willing to follow medical advice.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "I worry about what the future holds for me and if this condition will impact my quality of life significantly as time goes on",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient explicitly expresses worry about how the condition will impact their quality of life in the future. They are concerned about what the future holds, indicating they perceive the illness as having potential consequences for their life.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "It's considered a chronic condition, meaning it may not go away entirely but can be managed with regular check-ups and sometimes treatment as needed",
+            "turn": 8
+          },
+          {
+            "quote": "I've been living with the understanding that CLL is something I have to monitor throughout my life",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient understands CLL as a chronic condition that may not go away entirely and requires lifelong monitoring. They plan their life around this understanding, indicating they expect the condition to persist.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I've been living with the understanding that CLL is something I have to monitor throughout my life, which has prompted me to take care of myself and maintain a healthy lifestyle",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient actively monitors their condition and takes responsibility for their health by maintaining a healthy lifestyle. They see themselves as responsible for monitoring and taking care of themselves.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "They reassured me that many people with CLL live normal lifespans and never need treatment, so I've been monitoring the situation closely since then",
+            "turn": 6
+          },
+          {
+            "quote": "moving forward with treatment if needed",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient understands that treatment may be needed but not necessarily. They are monitoring closely and are open to treatment if needed, indicating they accept that treatment can help but don't expect it to be necessary for everyone.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "I've been feeling pretty tired lately, more than usual after work",
+            "turn": 1
+          },
+          {
+            "quote": "I do get tired more easily now",
+            "turn": 3
+          },
+          {
+            "quote": "It often presents with symptoms like fatigue, swollen lymph nodes",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient reports fatigue as a symptom and is aware of lymphadenopathy as a potential symptom. They are not reporting many severe or intrusive symptoms, indicating they have a limited symptom burden.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "I'm worried about it because my father had Chronic Lymphocytic Leukemia (CLL)",
+            "turn": 1
+          },
+          {
+            "quote": "it's naturally raised some concern in me",
+            "turn": 9
+          },
+          {
+            "quote": "I worry about what the future holds for me and if this condition will impact my quality of life significantly as time goes on",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient expresses concern about the condition, particularly about future impact on quality of life. They are worried about what the future holds, indicating their concern is not just about immediate symptoms but about long-term implications.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "From my understanding, CLL is a type of blood cancer that affects white blood cells called B lymphocytes",
+            "turn": 8
+          },
+          {
+            "quote": "It's considered a chronic condition, meaning it may not go away entirely but can be managed with regular check-ups and sometimes treatment as needed",
+            "turn": 8
+          },
+          {
+            "quote": "It often presents with symptoms like fatigue, swollen lymph nodes, and increased risk of infections due to weakened immune system",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient has a good understanding of CLL - what it is (blood cancer affecting B lymphocytes), how it's managed (chronic condition requiring regular check-ups and sometimes treatment), and typical symptoms (fatigue, lymphadenopathy, infection risk). They can explain the mechanism and the reason for monitoring.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "it's naturally raised some concern in me",
+            "turn": 9
+          },
+          {
+            "quote": "I worry about what the future holds for me",
+            "turn": 9
+          },
+          {
+            "quote": "I'm trying not to jump to conclusions",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient acknowledges concern and worry about the future, but they are trying to remain rational and not jump to conclusions. The emotion is present but they are managing it, indicating they are not overwhelmed by the emotional impact.",
+        "score": 4.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [],
+        "reasoning": "No specific CLL medication has been discussed in the consultation. The patient has hypertension medication that is well managed, but this is separate from their CLL care.",
+        "score": null,
+        "confidence": 0.5
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [],
+        "reasoning": "No specific concerns about medication have been raised by the patient. They mention treatment may be needed but do not express concerns about medication side effects or other issues.",
+        "score": null,
+        "confidence": 0.5
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [],
+        "reasoning": "No general view on medicines as a class was expressed by the patient. They did not discuss whether medicines are inherently harmful or beneficial.",
+        "score": null,
+        "confidence": 0.5
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "No view on prescribing practices was expressed by the patient. They did not discuss whether doctors prescribe too readily or not.",
+        "score": null,
+        "confidence": 0.5
+      }
+    },
+    "causes": [
+      "family history/genetics",
+      "father had CLL"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "my father had Chronic Lymphocytic Leukemia (CLL)",
+        "turn": 1
+      },
+      {
+        "quote": "since I found out that my father had CLL",
+        "turn": 5
+      }
+    ]
+  }
+}

@@ -1,0 +1,261 @@
+{
+  "patient_id": "HIV-003",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "HIV-003",
+    "clinical_summary": "Patient with HIV diagnosed 5 years ago, currently on Tivicay and Descovy once daily with generally good adherence (occasional lapses when fatigued/down). Persistent symptoms include constant joint pain (dull ache), worsening peripheral neuropathy (burning/tingling in feet), fatigue, and sleep difficulties. Has lost weight. CD4 count 385 cells/uL (improved but not normal), viral load undetectable. No additional medications for pain/neuropathy. Functional impact: symptoms affecting ability to do things that used to be manageable. No recent regimen changes. Regular monitoring but no specific investigations yet.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "my life has been really turned upside down by this chronic illness",
+            "turn": 1
+          },
+          {
+            "quote": "even things that used to be no problem are exhausting me completely",
+            "turn": 8
+          },
+          {
+            "quote": "It's just not easy living like this",
+            "turn": 2
+          }
+        ],
+        "reasoning": "Patient describes their life as 'turned upside down' and notes that even previously manageable tasks are now exhausting, indicating significant impact on daily functioning.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "The symptoms started about five years ago",
+            "turn": 2
+          },
+          {
+            "quote": "it wasn't until more recently that things got really severe",
+            "turn": 2
+          }
+        ],
+        "reasoning": "Patient describes a 5-year history with recent worsening but doesn't express a clear expectation about duration or future course.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I've been trying really hard to stay on top of things and take my meds as prescribed",
+            "turn": 3
+          },
+          {
+            "quote": "I keep my pills in a little container that I take with me everywhere",
+            "turn": 4
+          },
+          {
+            "quote": "sometimes, if I'm feeling really down or exhausted from the illness itself, it can be hard to remember to take them",
+            "turn": 4
+          },
+          {
+            "quote": "I used to be able to handle more before all this, but now even things that used to be no problem are exhausting me completely",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient takes active steps to manage medication (pill container, carrying it everywhere) but acknowledges that illness-related fatigue and emotional states affect adherence. Describes current state as something they're struggling with rather than actively managing.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "my viral load remains undetectable",
+            "turn": 6
+          },
+          {
+            "quote": "CD4 count has gone up to 385 cells/uL, which is an improvement from where it was",
+            "turn": 6
+          },
+          {
+            "quote": "The doctors just check in on me regularly to make sure everything's going okay",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient acknowledges treatment is working (undetectable viral load, improved CD4) but doesn't explicitly attribute their current state to treatment. Focused on managing symptoms rather than treatment efficacy.",
+        "score": 6.0,
+        "confidence": 0.6
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "my life has been really turned upside down by this chronic illness",
+            "turn": 1
+          },
+          {
+            "quote": "The fatigue is just relentless",
+            "turn": 1
+          },
+          {
+            "quote": "my joints hurt all the time",
+            "turn": 2
+          },
+          {
+            "quote": "the neuropathy in my feet — that burning, tingling feeling — has been getting worse lately",
+            "turn": 5
+          },
+          {
+            "quote": "I've lost a lot of weight",
+            "turn": 2
+          }
+        ],
+        "reasoning": "Patient identifies multiple symptoms (fatigue, joint pain, neuropathy, weight loss) as central to their experience of the illness.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "my life has been really turned upside down by this chronic illness",
+            "turn": 1
+          },
+          {
+            "quote": "it's tough dealing with all of it",
+            "turn": 1
+          },
+          {
+            "quote": "which has been really hard to come to terms with",
+            "turn": 2
+          },
+          {
+            "quote": "It's just not easy living like this",
+            "turn": 2
+          },
+          {
+            "quote": "It's been a real struggle trying to juggle everything",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient expresses significant difficulty coping with their illness and describes it as a major life disruption, using words like 'tough,' 'not easy,' and 'struggle.'",
+        "score": 8.0,
+        "confidence": 0.7
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "they told me I have HIV",
+            "turn": 2
+          },
+          {
+            "quote": "my viral load remains undetectable",
+            "turn": 6
+          },
+          {
+            "quote": "CD4 count has gone up to 385 cells/uL",
+            "turn": 6
+          },
+          {
+            "quote": "The doctors just check in on me regularly to make sure everything's going okay",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient understands their diagnosis and some basic lab results but doesn't explain the mechanism or reason for their treatment plan. Focused on current management rather than understanding the underlying process.",
+        "score": 4.0,
+        "confidence": 0.6
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "my life has been really turned upside down by this chronic illness",
+            "turn": 1
+          },
+          {
+            "quote": "it's tough dealing with all of it",
+            "turn": 1
+          },
+          {
+            "quote": "which has been really hard to come to terms with",
+            "turn": 2
+          },
+          {
+            "quote": "It's just not easy living like this",
+            "turn": 2
+          },
+          {
+            "quote": "I do feel like they're really listening to me and trying to help though, which is a relief",
+            "turn": 7
+          },
+          {
+            "quote": "It's been a real struggle trying to juggle everything",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient expresses emotional difficulty ('hard to come to terms with,' 'tough,' 'struggle') and acknowledges relief at feeling heard by doctors.",
+        "score": 6.0,
+        "confidence": 0.7
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "I've been trying really hard to stay on top of things and take my meds as prescribed",
+            "turn": 3
+          },
+          {
+            "quote": "I keep my pills in a little container that I take with me everywhere",
+            "turn": 4
+          },
+          {
+            "quote": "sometimes, if I'm feeling really down or exhausted from the illness itself, it can be hard to remember to take them",
+            "turn": 4
+          },
+          {
+            "quote": "I know it's important",
+            "turn": 3
+          }
+        ],
+        "reasoning": "Patient takes active steps to ensure adherence (pill container, carrying it everywhere) and explicitly states they know it's important. However, they acknowledge occasional lapses when fatigued/down, suggesting some doubt about necessity.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "I've had some struggles with side effects before, like when I was on Atripla, but those went away after switching",
+            "turn": 3
+          },
+          {
+            "quote": "sometimes, if I'm feeling really down or exhausted from the illness itself, it can be hard to remember to take them",
+            "turn": 4
+          }
+        ],
+        "reasoning": "Patient mentions past side effects but notes they went away after switching. The only 'concern' mentioned is about remembering to take meds when fatigued/down, which is more about adherence than medication-specific concerns.",
+        "score": 2.0,
+        "confidence": 0.6
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [],
+        "reasoning": "Patient never expressed any general concerns about medicines as a class.",
+        "score": null,
+        "confidence": 0.5
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "Patient never expressed any concerns about doctors prescribing too readily.",
+        "score": null,
+        "confidence": 0.5
+      }
+    },
+    "causes": [],
+    "causes_evidence": []
+  }
+}

@@ -1,0 +1,309 @@
+{
+  "patient_id": "HIV-004",
+  "turns": 14,
+  "stop_reason": "doctor",
+  "conversation": [
+    {
+      "role": "doctor",
+      "content": "Hello, I'm glad you could make it to see me today. What brings you in for your appointment?",
+      "turn": 1
+    },
+    {
+      "role": "patient",
+      "content": "Oh, thank you for seeing me. To be honest, doctor, I've been feeling really unwell lately. It's not just the usual cold or flu \u2014 this feels more persistent and is taking a toll on my day-to-day life. I'm worried about what might be causing it.",
+      "turn": 1
+    },
+    {
+      "role": "doctor",
+      "content": "I understand this has been worrying you. Can you tell me a bit more about what you've been experiencing? How long has this been going on, and what does it feel like on a typical day for you?",
+      "turn": 2
+    },
+    {
+      "role": "patient",
+      "content": "Well, it started about four weeks ago now. I've noticed I get this constant fatigue that doesn't seem to go away even after a full night's sleep. It's not just tiredness, but more like feeling weak all over. On top of that, my head feels foggy and it's hard to focus on anything for too long. My appetite has also been off \u2014 sometimes I'm ravenously hungry, other times I don't feel like eating at all. And there's this nagging nausea in the mornings since I started taking my medication.",
+      "turn": 2
+    },
+    {
+      "role": "doctor",
+      "content": "I see. You've been dealing with this for about four weeks now. You mentioned you've been on some medication \u2014 can you tell me what condition you were diagnosed with and what you're taking? Also, you mentioned nausea in the mornings since starting the medication \u2014 does that happen every day, and does it bother you much?",
+      "turn": 3
+    },
+    {
+      "role": "patient",
+      "content": "Yes, I was diagnosed with Human Immunodeficiency Virus (HIV) about four weeks ago. I'm currently on Biktarvy (bictegravir/emtricitabine/tenofovir alafenamide), one tablet daily. The nausea has been happening every day since I started the medication and it's quite bothersome, especially in the mornings when it's hard to eat or drink anything.",
+      "turn": 3
+    },
+    {
+      "role": "doctor",
+      "content": "I'm sorry to hear you were diagnosed just four weeks ago \u2014 that's a lot to take in all at once. And I hear that the nausea is making mornings really difficult. How has this been affecting your routine? Are you able to manage the nausea, and have you noticed any other changes in your life since starting the medication?",
+      "turn": 4
+    },
+    {
+      "role": "patient",
+      "content": "The nausea has definitely disrupted my routine. It's harder for me to eat breakfast as I usually feel too queasy, so that's affected my energy levels throughout the day. In terms of other changes, it feels like anxiety and difficulty sleeping have become more prominent lately. There's a constant worry about my diagnosis, which makes it hard to relax or sleep well at night.",
+      "turn": 4
+    },
+    {
+      "role": "doctor",
+      "content": "That sounds really tough \u2014 starting something new when your body isn't reacting well, and then adding anxiety and sleep problems on top of it. How much do you understand about HIV itself? Have you had a chance to talk with anyone about what it means for you, how it's treated, and what to expect going forward?",
+      "turn": 5
+    },
+    {
+      "role": "patient",
+      "content": "The doctors have explained that early treatment offers the best long-term prognosis, which is reassuring. They said that an undetectable viral load should be expected within 3-6 months of being on this medication. I know there will still be challenges ahead, but knowing that the treatment can help control the disease gives me some hope. At the same time, it's hard not to feel overwhelmed by the changes in my life right now and what the future might hold.",
+      "turn": 5
+    },
+    {
+      "role": "doctor",
+      "content": "It's good that you have that hope to hold onto, especially when things feel overwhelming. I want to ask about your daily routine \u2014 you mentioned the nausea makes it hard to eat breakfast. How do you manage taking your medication when you don't feel like eating first thing? Are you able to keep up with it every day, or does it sometimes slip your mind or feel like a burden?",
+      "turn": 6
+    },
+    {
+      "role": "patient",
+      "content": "It's definitely been challenging to remember to take my medication every day, especially when I'm feeling nauseous in the mornings. But I've set reminders on my phone and have placed the pill bottle in an easily accessible spot so I don't forget. It can be frustrating at times, but I know how important it is for me to stay on track with my treatment plan.",
+      "turn": 6
+    },
+    {
+      "role": "doctor",
+      "content": "Those strategies are smart \u2014 reminders and having the bottle visible can make a real difference. I'm curious, as you think about your health and this condition, what do you feel like you have the most control over? For example, do you feel like your daily choices, stress levels, or something else play a big role in how you're doing?",
+      "turn": 7
+    },
+    {
+      "role": "patient",
+      "content": "Honestly, it feels like my lifestyle choices are the main thing I can have some control over. Eating well and trying to get regular exercise, even if it's just light stretching at home, helps me feel a little better. Of course, that's limited by how much fatigue or other symptoms are affecting me. I also try to manage stress as best I can \u2014 doing meditation or going for walks outside when the weather allows. But overall, it feels like my illness is a bigger force in my life right now than anything else I can do much about.",
+      "turn": 7
+    },
+    {
+      "role": "doctor",
+      "content": "It's clear you're trying to be proactive with your lifestyle, but I understand it's frustrating when symptoms limit what you can do. Speaking of the medication, aside from the nausea, do you have any other worries about Biktarvy? For example, are you concerned about side effects further down the road, or about long-term effects of being on antiretrovirals?",
+      "turn": 8
+    },
+    {
+      "role": "patient",
+      "content": "Yes, I have some concerns about potential long-term effects. I've heard about people developing drug resistance and wondering if there might be any impact on my overall health in the future. It's a lot to take in, but I trust that you and the rest of my medical team are keeping an eye on things and will address anything that comes up along the way.",
+      "turn": 8
+    },
+    {
+      "role": "doctor",
+      "content": "It's natural to think about the long term when you're starting something important like this. How are you feeling about your overall health and your future since the diagnosis? Have you noticed any changes in how you see yourself or how you move through the world since this happened?",
+      "turn": 9
+    },
+    {
+      "role": "patient",
+      "content": "Since my diagnosis, I've been grappling with a lot of emotions \u2014 fear, anger, sadness, and despair at times. It's hard to come to terms with the fact that this is something I'll likely have to manage for the rest of my life. But I'm also determined not to let it define me or hold me back from living as full a life as possible. It's been an adjustment, but I feel like I'm slowly finding ways to navigate these changes and keep moving forward.",
+      "turn": 9
+    },
+    {
+      "role": "doctor",
+      "content": "It sounds like you're carrying a lot emotionally, and I appreciate you sharing that with me. How much do you understand about what HIV actually is and how it affects the body? For instance, do you have a clear picture of how the virus works and why the medication works the way it does?",
+      "turn": 10
+    },
+    {
+      "role": "patient",
+      "content": "The doctors have explained to me that HIV weakens the immune system by destroying specific white blood cells called CD4+ T cells. This makes it more difficult for my body to fight off infections. The Biktarvy I'm taking is a combination of three different medications that each work in their own way to stop the virus from replicating and damaging my immune system further. While I don't have all the details, I feel like I have a basic understanding of how these things interact, and it helps me understand why this treatment plan is so important for managing the disease.",
+      "turn": 10
+    },
+    {
+      "role": "doctor",
+      "content": "That's a good level of understanding, and it makes sense that knowing the mechanism helps you see why the treatment is designed that way. When you think about your health overall and your future, how much do you worry about your condition? Is it something that's constantly on your mind, or do you find yourself able to set it aside at times?",
+      "turn": 11
+    },
+    {
+      "role": "patient",
+      "content": "It's hard not to feel worried about my condition, especially since this has come so unexpectedly in my life. It feels like a constant presence right now, but I'm trying to focus on taking things one step at a time and finding ways to manage the symptoms as best I can. There are times when it's easier to set it aside and just try to enjoy the present moment, but overall, it's a significant source of concern for me.",
+      "turn": 11
+    },
+    {
+      "role": "doctor",
+      "content": "I can hear how much this has turned your life upside down, and I think it's admirable that you're focusing on one step at a time. One more question \u2014 when you think about how doctors and medication fit into all of this, do you ever feel like your doctors might be prescribing things too readily, or do you generally trust that they know what they're doing?",
+      "turn": 12
+    },
+    {
+      "role": "patient",
+      "content": "I have to admit, there are moments where I wonder if my doctors are prescribing the right medications for me. But ultimately, I trust their knowledge and expertise in managing this condition. They've explained the reasoning behind each medication and how it's expected to help control the disease, so that helps give me confidence in what they're recommending.",
+      "turn": 12
+    },
+    {
+      "role": "doctor",
+      "content": "Thank you for being so open about all of this \u2014 it's clear you're thinking deeply about what you're going through, and I appreciate your honesty. To recap what you've shared: you were diagnosed with HIV four weeks ago and are on Biktarvy, though the morning nausea is making it hard to get through your day. You're managing with reminders and coping strategies, but you're also dealing with anxiety, sleep problems, and a lot of emotional adjustment. You understand the basics of how HIV affects your immune system and why your medication works, but you're worried about long-term effects and whether you'll be able to sustain everything as you go forward.\n\nBased on what you've told me, I'd like to discuss a few things with you today. First, we should address that nausea \u2014 it's important to see if we can make it more manageable so you can stay on track with your treatment. Second, I want to talk about how you're feeling emotionally and whether there are additional supports that might help with the anxiety and sleep concerns. And finally, I'd like to make sure you feel confident in your plan going forward and answer any questions you still have.\n\nDoes that sound like a good approach?",
+      "turn": 13
+    },
+    {
+      "role": "patient",
+      "content": "Yes, it sounds like a good approach. Thank you for understanding my situation and for being willing to help guide me through this process.",
+      "turn": 13
+    },
+    {
+      "role": "doctor",
+      "content": "Great. Based on what you've told me, I think we should focus on finding ways to ease that nausea \u2014 perhaps by timing your medication differently or adjusting when you take it, which might help with the morning routine and your energy levels. We can also explore some gentle approaches to help with your sleep and anxiety, like timing activities or talking about what's on your mind before bed.\n\nIf you're agreeable, I'll arrange for us to follow up in about two weeks to see how you're doing with the nausea and to review your overall progress. In the meantime, please don't hesitate to reach out if anything changes or if you have any questions before then.\n\nTake care for now.",
+      "turn": 14
+    },
+    {
+      "role": "patient",
+      "content": "Thank you so much, I appreciate your help. It's reassuring to know that there are strategies we can try together. I'll be sure to keep in touch and will look forward to our follow-up appointment in two weeks.",
+      "turn": 14
+    }
+  ],
+  "coverage_hint": {},
+  "working_notes": [],
+  "events": [
+    {
+      "event": "llm_retry",
+      "role": "doctor",
+      "attempt": 1,
+      "failure": "HTTPStatusError: Server error '500 Internal Server Error' for url 'http://127.0.0.1:11500/api/chat'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500"
+    }
+  ],
+  "usage": [
+    {
+      "role": "doctor",
+      "eval_tokens": 90,
+      "prompt_tokens": 1531
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 60,
+      "prompt_tokens": 1276
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 147,
+      "prompt_tokens": 1684
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 114,
+      "prompt_tokens": 1388
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 173,
+      "prompt_tokens": 1948
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 84,
+      "prompt_tokens": 1577
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 199,
+      "prompt_tokens": 2208
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 76,
+      "prompt_tokens": 1737
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 168,
+      "prompt_tokens": 2486
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 94,
+      "prompt_tokens": 1887
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 207,
+      "prompt_tokens": 2751
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 76,
+      "prompt_tokens": 2069
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 165,
+      "prompt_tokens": 3037
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 112,
+      "prompt_tokens": 2224
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 199,
+      "prompt_tokens": 3317
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 74,
+      "prompt_tokens": 2421
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 137,
+      "prompt_tokens": 3593
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 101,
+      "prompt_tokens": 2558
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 194,
+      "prompt_tokens": 3834
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 115,
+      "prompt_tokens": 2728
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 190,
+      "prompt_tokens": 4146
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 91,
+      "prompt_tokens": 2922
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 191,
+      "prompt_tokens": 4430
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 68,
+      "prompt_tokens": 3097
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 325,
+      "prompt_tokens": 4692
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 28,
+      "prompt_tokens": 3418
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 210,
+      "prompt_tokens": 5048
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 46,
+      "prompt_tokens": 3594
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 708,
+      "prompt_tokens": 5307
+    },
+    {
+      "role": "report",
+      "eval_tokens": 4655,
+      "prompt_tokens": 11154
+    }
+  ]
+}

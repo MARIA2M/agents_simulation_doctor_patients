@@ -1,0 +1,270 @@
+{
+  "patient_id": "CLL-001",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "CLL-001",
+    "clinical_summary": "Patient presents with persistent fatigue for 6 months and enlarged lymph nodes in the neck. Fatigue is constant, impacting daily functioning and work productivity. Patient has tried lifestyle changes (sleep, exercise, stress reduction) but seen no improvement. Primary care doctor offered active surveillance for lymph nodes and lifestyle recommendations, but patient is frustrated by lack of concrete treatment plan. Patient is emotionally affected, experiencing frustration, anger, worry, and uncertainty. Patient is open to further testing and specialist referral but concerned about side effects, dependence, and long-term implications of medications.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "can barely get through each day",
+            "turn": 1
+          },
+          {
+            "quote": "cut back on my work hours because I just don't have the energy to put in a full day's work anymore",
+            "turn": 2
+          },
+          {
+            "quote": "impacting my productivity and my ability to keep up with things, both at work and at home",
+            "turn": 2
+          },
+          {
+            "quote": "affecting my quality of life",
+            "turn": 3
+          },
+          {
+            "quote": "causing me a lot of stress",
+            "turn": 3
+          }
+        ],
+        "reasoning": "Patient has had to cut back on work hours, can barely get through the day, and everything takes more effort. This represents a major role reduction and significant impact on daily functioning.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "The fatigue started about six months ago, I think. It's been pretty constant since then",
+            "turn": 2
+          },
+          {
+            "quote": "I'm not sure if I'll ever have all the pieces figured out",
+            "turn": 12
+          }
+        ],
+        "reasoning": "Patient has had symptoms for 6 months with no sign of improvement, and expresses uncertainty about ever having the situation resolved, suggesting a chronic/ongoing perspective.",
+        "score": 8.0,
+        "confidence": 0.7
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I've been trying to eat well and get enough rest, but it just doesn't seem to be helping much",
+            "turn": 4
+          },
+          {
+            "quote": "I'm not sure how much I can do to figure it out on my own",
+            "turn": 8
+          },
+          {
+            "quote": "feeling so out of control about everything",
+            "turn": 6
+          }
+        ],
+        "reasoning": "Patient has tried lifestyle changes but they haven't helped, and they feel out of control and uncertain about what they can do to manage their condition.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "haven't seen much improvement yet",
+            "turn": 5
+          },
+          {
+            "quote": "frustrated that there hasn't been more of a concrete plan or specific recommendations for treatment",
+            "turn": 5
+          },
+          {
+            "quote": "not sure how much faith I have in any specific treatment until we know what's causing all of this",
+            "turn": 9
+          }
+        ],
+        "reasoning": "Patient has tried the recommended treatments (lifestyle changes) but hasn't seen improvement, and lacks faith in treatment efficacy until the cause is known.",
+        "score": 2.0,
+        "confidence": 0.8
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "ongoing tiredness",
+            "turn": 1
+          },
+          {
+            "quote": "fatigue",
+            "turn": 2
+          },
+          {
+            "quote": "this illness",
+            "turn": 3
+          }
+        ],
+        "reasoning": "Patient describes their symptoms but hasn't given the illness a specific label or identity beyond general terms like 'fatigue' or 'tiredness'.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "definitely worried there might be something more going on",
+            "turn": 4
+          },
+          {
+            "quote": "worried about any possibility that might have serious implications",
+            "turn": 11
+          },
+          {
+            "quote": "not knowing is really taking a toll on me",
+            "turn": 8
+          },
+          {
+            "quote": "constant reminder of something potentially serious going on in my body",
+            "turn": 13
+          }
+        ],
+        "reasoning": "Patient is worried about serious implications and the uncertainty is taking a toll on them, with the lymph nodes serving as a constant reminder of potential seriousness.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I'm not entirely sure what's causing my fatigue",
+            "turn": 4
+          },
+          {
+            "quote": "I've been so confused and overwhelmed that I don't really know where to start",
+            "turn": 6
+          },
+          {
+            "quote": "It's definitely something that's hard to piece together",
+            "turn": 12
+          },
+          {
+            "quote": "I feel like there's just so much I don't know",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient is confused, overwhelmed, and doesn't know where to start. They cannot piece together what's happening to them.",
+        "score": 2.0,
+        "confidence": 0.8
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "rollercoaster",
+            "turn": 3
+          },
+          {
+            "quote": "frustrated and angry",
+            "turn": 3
+          },
+          {
+            "quote": "worried and uncertain",
+            "turn": 3
+          },
+          {
+            "quote": "exhausted — mentally and physically",
+            "turn": 3
+          },
+          {
+            "quote": "hard to find hope when things feel so out of control",
+            "turn": 14
+          },
+          {
+            "quote": "determined not to let this beat me down completely",
+            "turn": 14
+          }
+        ],
+        "reasoning": "Patient describes a range of emotions including frustration, anger, worry, uncertainty, and exhaustion. They struggle to find hope and are emotionally affected by the situation.",
+        "score": 8.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [],
+        "reasoning": "Patient has not been prescribed any medication yet, so there is no specific belief about their own medication.",
+        "score": null,
+        "confidence": 1.0
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "I do have some concerns about medications and treatments, mostly around potential side effects",
+            "turn": 10
+          },
+          {
+            "quote": "worried about potentially becoming dependent on any medication or treatment",
+            "turn": 10
+          },
+          {
+            "quote": "worried about the long-term implications",
+            "turn": 10
+          }
+        ],
+        "reasoning": "Patient expresses concerns about side effects, dependence, and long-term implications of medications, but these are general concerns rather than specific to their own prescription.",
+        "score": 3.0,
+        "confidence": 0.7
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "I do have some concerns about medications and treatments, mostly around potential side effects",
+            "turn": 10
+          },
+          {
+            "quote": "worried about potentially becoming dependent on any medication or treatment",
+            "turn": 10
+          },
+          {
+            "quote": "worried about the long-term implications",
+            "turn": 10
+          }
+        ],
+        "reasoning": "Patient expresses mild generalised caution about medications as a class, particularly regarding side effects, dependence, and long-term harm.",
+        "score": 3.0,
+        "confidence": 0.7
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "Patient has not expressed any views about whether doctors prescribe too readily.",
+        "score": null,
+        "confidence": 1.0
+      }
+    },
+    "causes": [
+      "infection",
+      "autoimmune disorders",
+      "cancer"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "could be an infection or something like that",
+        "turn": 6
+      },
+      {
+        "quote": "something more serious — something I can't control or fix on my own",
+        "turn": 6
+      },
+      {
+        "quote": "infection, autoimmune disorders, cancer, and others",
+        "turn": 11
+      }
+    ]
+  }
+}

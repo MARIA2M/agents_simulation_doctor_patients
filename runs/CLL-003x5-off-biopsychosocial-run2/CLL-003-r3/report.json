@@ -1,0 +1,203 @@
+{
+  "patient_id": "CLL-003",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "CLL-003",
+    "clinical_summary": "The patient presents with a painless pea-sized lump in the neck discovered by their wife about two weeks ago, and mild fatigue that started about a month ago. They have no other concerning symptoms (no fever, night sweats, weight changes, cough, or recent infection exposure). They have a family history of Hashimoto's thyroiditis in their father. They're experiencing some worry but trying to manage it, and are willing to follow recommended tests. They have no prescribed medication at this time.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "It's not terrible, but I thought I should get it checked out before things get worse.",
+            "turn": 1
+          },
+          {
+            "quote": "It's not like I'm exhausted all the time, but there are days when I just don't have the same amount of pep in my step as usual.",
+            "turn": 3
+          },
+          {
+            "quote": "Nothing too drastic, just feeling a bit more sluggish than before.",
+            "turn": 3
+          }
+        ],
+        "reasoning": "The patient describes symptoms as 'not terrible' and 'nothing too drastic.' They're still able to work and function, though with some fatigue. They haven't had to give up major roles or activities. The impact is mild to moderate - they're experiencing some fatigue and have a lump, but it's not severely limiting their daily life.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "I'm definitely more on the 'wait and see' side of things—just trying to take it one step at a time",
+            "turn": 9
+          },
+          {
+            "quote": "I thought I should get it checked out before things get worse",
+            "turn": 1
+          }
+        ],
+        "reasoning": "The patient doesn't have a clear expectation about how long this will last. They're taking a 'wait and see' approach and 'one step at a time,' which suggests uncertainty rather than a clear expectation of duration. They're not planning for the illness to continue long-term, but they're not expecting it to resolve quickly either.",
+        "score": 6.0,
+        "confidence": 0.6
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I've been trying not to let myself get too worked up over it",
+            "turn": 9
+          },
+          {
+            "quote": "I thought I should get it checked out before things get worse",
+            "turn": 1
+          },
+          {
+            "quote": "Anything you think is necessary to figure out what's going on—I'm all for it",
+            "turn": 10
+          }
+        ],
+        "reasoning": "The patient is taking some action - seeking medical care, trying to manage their worry. They're also somewhat passive, waiting for medical updates and results. They don't seem to believe their own actions will significantly change the course of the illness, but they're not completely passive either.",
+        "score": 4.0,
+        "confidence": 0.6
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "I know that you're here to help and guide me through all of this",
+            "turn": 9
+          },
+          {
+            "quote": "Anything you think is necessary to figure out what's going on—I'm all for it",
+            "turn": 10
+          },
+          {
+            "quote": "I'll make sure to get back to you with the results and walk you through what they mean",
+            "turn": 12
+          }
+        ],
+        "reasoning": "The patient trusts the doctor's guidance and is willing to follow recommended tests. They express confidence in the medical approach ('you're here to help and guide me'). However, they haven't yet experienced any treatment effect, so their belief in treatment efficacy is based on trust rather than personal experience.",
+        "score": 6.0,
+        "confidence": 0.5
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "we both thought it might just be a lymph node that got enlarged for some reason",
+            "turn": 2
+          },
+          {
+            "quote": "my father had something called Hashimoto's thyroiditis—whatever that is",
+            "turn": 6
+          }
+        ],
+        "reasoning": "The patient doesn't have a clear illness identity. They speculate it might be an enlarged lymph node, and they know about Hashimoto's in their father but don't understand what it is. They haven't assigned a clear identity to their own condition.",
+        "score": 2.0,
+        "confidence": 0.7
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "It's hard not to worry a bit—I mean, any time something like this comes up, you can't help but think the worst, right?",
+            "turn": 9
+          },
+          {
+            "quote": "I'm trying not to get too anxious about this, but it's definitely on my mind",
+            "turn": 11
+          }
+        ],
+        "reasoning": "The patient acknowledges they do worry a bit and that it's 'on their mind,' but they're actively trying to manage it. The worry appears to be tied to specific moments (results, appointments) rather than being constant and intrusive.",
+        "score": 4.0,
+        "confidence": 0.6
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "my father had something called Hashimoto's thyroiditis—whatever that is",
+            "turn": 6
+          },
+          {
+            "quote": "I haven't had my thyroid function checked before—assuming it hasn't been necessary up until now",
+            "turn": 7
+          },
+          {
+            "quote": "I think I have a good idea of what we're looking at",
+            "turn": 11
+          }
+        ],
+        "reasoning": "The patient knows about Hashimoto's in their father but doesn't understand what it is. They haven't had thyroid function checked. They have some understanding of what's being looked at but limited knowledge about the mechanism. They don't have a clear explanation of what's happening to them.",
+        "score": 2.0,
+        "confidence": 0.6
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "It's hard not to worry a bit",
+            "turn": 9
+          },
+          {
+            "quote": "I'm trying not to get too anxious about this, but it's definitely on my mind",
+            "turn": 11
+          },
+          {
+            "quote": "Thank you, doctor. It means a lot to have someone like you helping me out",
+            "turn": 12
+          }
+        ],
+        "reasoning": "The patient acknowledges worry and anxiety, but is actively trying to manage it. They express gratitude and appreciation for the doctor's help, which suggests some emotional engagement but not overwhelming distress. The emotion is present but contained.",
+        "score": 4.0,
+        "confidence": 0.6
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [],
+        "reasoning": "No prescribed medication has been discussed, so no specific beliefs about necessity can be formed.",
+        "score": null,
+        "confidence": 0.0
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [],
+        "reasoning": "No prescribed medication has been discussed, so no specific concerns about medication can be formed.",
+        "score": null,
+        "confidence": 0.0
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [],
+        "reasoning": "This dimension was never explored in the consultation.",
+        "score": null,
+        "confidence": 0.0
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "This dimension was never explored in the consultation.",
+        "score": null,
+        "confidence": 0.0
+      }
+    },
+    "causes": [
+      "being run down or getting older",
+      "family history of Hashimoto's thyroiditis"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "I put it down to maybe just being run down or getting older",
+        "turn": 3
+      },
+      {
+        "quote": "my father had something called Hashimoto's thyroiditis",
+        "turn": 6
+      }
+    ]
+  }
+}

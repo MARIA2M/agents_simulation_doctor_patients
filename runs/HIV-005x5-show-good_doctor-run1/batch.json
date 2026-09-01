@@ -1,0 +1,66 @@
+{
+  "batch_id": "HIV-005x5-show-good_doctor-run1",
+  "repeats": 5,
+  "consultations": [
+    {
+      "run": "HIV-005-r1",
+      "patient_id": "HIV-005",
+      "repeat": 1,
+      "status": "ok",
+      "turns": 10,
+      "stop_reason": "doctor",
+      "events": 1,
+      "report_parsed": true,
+      "report_attempts": 1,
+      "na": []
+    },
+    {
+      "run": "HIV-005-r2",
+      "patient_id": "HIV-005",
+      "repeat": 2,
+      "status": "ok",
+      "turns": 15,
+      "stop_reason": "doctor",
+      "events": 0,
+      "report_parsed": true,
+      "report_attempts": 1,
+      "na": []
+    },
+    {
+      "run": "HIV-005-r3",
+      "patient_id": "HIV-005",
+      "repeat": 3,
+      "status": "ok",
+      "turns": 12,
+      "stop_reason": "doctor",
+      "events": 0,
+      "report_parsed": true,
+      "report_attempts": 1,
+      "na": []
+    },
+    {
+      "run": "HIV-005-r4",
+      "patient_id": "HIV-005",
+      "repeat": 4,
+      "status": "ok",
+      "turns": 13,
+      "stop_reason": "doctor",
+      "events": 0,
+      "report_parsed": true,
+      "report_attempts": 1,
+      "na": []
+    },
+    {
+      "run": "HIV-005-r5",
+      "patient_id": "HIV-005",
+      "repeat": 5,
+      "status": "ok",
+      "turns": 14,
+      "stop_reason": "doctor",
+      "events": 0,
+      "report_parsed": true,
+      "report_attempts": 1,
+      "na": []
+    }
+  ]
+}

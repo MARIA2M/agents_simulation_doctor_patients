@@ -1,0 +1,222 @@
+{
+  "patient_id": "CLL-001",
+  "turns": 10,
+  "stop_reason": "doctor",
+  "conversation": [
+    {
+      "role": "doctor",
+      "content": "Hello, thanks for coming in. What brings you to the clinic today?",
+      "turn": 1
+    },
+    {
+      "role": "patient",
+      "content": "Hi doctor, I've been feeling really tired lately and have noticed some swollen lymph nodes in my neck. I'm worried something might be wrong. I've heard about Chronic Lymphocytic Leukemia (CLL) and thought it might be best to check if that's what it could be.",
+      "turn": 1
+    },
+    {
+      "role": "doctor",
+      "content": "You've mentioned CLL specifically. Do you have any reason to suspect that's what it is, or is that just what you've heard about? And how long have these symptoms been going on?",
+      "turn": 2
+    },
+    {
+      "role": "patient",
+      "content": "I'm not entirely sure what's causing my symptoms, but I've heard CLL can cause fatigue and swollen lymph nodes, so I thought it might be worth checking. These symptoms have been ongoing for a few months now, though the fatigue has always been there at some level. The swollen nodes are more noticeable recently.",
+      "turn": 2
+    },
+    {
+      "role": "doctor",
+      "content": "How would you describe the fatigue \u2014 is it just being tired, or does it feel like you're running out of energy more easily? And have you had any other symptoms like fevers, night sweats, weight loss, or easy bruising?",
+      "turn": 3
+    },
+    {
+      "role": "patient",
+      "content": "The fatigue feels more like a constant drain on my energy. Even after getting good sleep, I still feel tired throughout the day. It's harder to find the motivation for things that usually energize me. As for other symptoms, I have noticed some night sweats but haven't experienced any fevers or significant weight loss. I don't recall having easy bruising, though I guess it's possible I've just not noticed.",
+      "turn": 3
+    },
+    {
+      "role": "doctor",
+      "content": "Do you have any known medical conditions, or have you been diagnosed with anything before? And have you had any recent blood tests or been on any medications that might explain these symptoms?",
+      "turn": 4
+    },
+    {
+      "role": "patient",
+      "content": "I've been relatively healthy in the past, but a few years ago I was diagnosed with mild hypertension. I'm currently taking medication for it and managing well. As for blood tests, my last one showed no significant abnormalities, but I believe you'll be running some more tests to check for anything related to CLL or other potential causes of these symptoms.",
+      "turn": 4
+    },
+    {
+      "role": "doctor",
+      "content": "When you say no significant abnormalities on your last blood test, do you know if they checked your complete blood count, liver function, or anything like that? And have you had any infections, autoimmune conditions, or been in close contact with anyone who's been ill recently?",
+      "turn": 5
+    },
+    {
+      "role": "patient",
+      "content": "I'm not sure exactly what tests were done, but I remember the doctor mentioning my white blood cell count was slightly on the high side. As for infections and autoimmune conditions, I can't think of anything specific that might have triggered these symptoms. Lately, I've mostly been trying to avoid close contact with people due to the pandemic.",
+      "turn": 5
+    },
+    {
+      "role": "doctor",
+      "content": "Can you show me where the swollen lymph nodes are? Are they painful to the touch, or just swollen? Are there any others, or just these in your neck? And have they grown larger or changed in any way since you first noticed them?",
+      "turn": 6
+    },
+    {
+      "role": "patient",
+      "content": "The swollen lymph nodes are located right under my jawline and at the base of my neck. They're not painful but do feel slightly firm to the touch. As far as I know, there aren't any other noticeable swollen areas besides these two. Since I've started noticing them a few months ago, they haven't grown larger or changed much in appearance, although they are still present and palpable.",
+      "turn": 6
+    },
+    {
+      "role": "doctor",
+      "content": "What blood pressure medication are you taking, and have you noticed any side effects from it? And do you have any allergies to medications or other substances?",
+      "turn": 7
+    },
+    {
+      "role": "patient",
+      "content": "I'm on Amlodipine for my hypertension, which has been helping with managing my blood pressure. I don't recall experiencing any significant side effects from it. As for allergies, I believe I might be allergic to penicillin, but that's about all I can remember regarding any medication or substance sensitivities.",
+      "turn": 7
+    },
+    {
+      "role": "doctor",
+      "content": "Have you had a physical exam recently, or have you noticed any other physical changes like enlarged spleen or liver? And are there any other concerns you'd like to address today?",
+      "turn": 8
+    },
+    {
+      "role": "patient",
+      "content": "I think the last physical exam I had was when my hypertension was diagnosed a few years back. I don't recall noticing any unusual changes since then besides these symptoms we've been discussing. As for other concerns, I'm hoping we can get to the bottom of these symptoms so I know how best to manage my health going forward.",
+      "turn": 8
+    },
+    {
+      "role": "doctor",
+      "content": "Based on what you've described \u2014 the fatigue, swollen lymph nodes in your neck, and slightly elevated white blood cell count \u2014 I'd like to do a physical exam and order some blood tests, including a complete blood count and metabolic panel. If the lymph nodes need further evaluation, we may consider a biopsy. This will help us determine the underlying cause and plan appropriate treatment. Does that sound reasonable?",
+      "turn": 9
+    },
+    {
+      "role": "patient",
+      "content": "Yes, that sounds like a good plan to me. I want to get to the bottom of these symptoms so I can better manage my health. Let's go ahead with the exam and blood tests. Thank you for your help, doctor.",
+      "turn": 9
+    },
+    {
+      "role": "doctor",
+      "content": "Great. I'll review your chart, order the tests, and we can discuss the results at your next visit. In the meantime, if you notice any worsening symptoms \u2014 like fevers, more swelling, or difficulty breathing \u2014 please contact us right away. Take care.",
+      "turn": 10
+    },
+    {
+      "role": "patient",
+      "content": "Thank you so much for your time today. I'll keep in touch if anything changes. Have a great day!",
+      "turn": 10
+    }
+  ],
+  "coverage_hint": {},
+  "working_notes": [],
+  "events": [],
+  "usage": [
+    {
+      "role": "doctor",
+      "eval_tokens": 97,
+      "prompt_tokens": 1527
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 62,
+      "prompt_tokens": 1203
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 185,
+      "prompt_tokens": 1689
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 64,
+      "prompt_tokens": 1313
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 144,
+      "prompt_tokens": 1941
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 87,
+      "prompt_tokens": 1436
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 144,
+      "prompt_tokens": 2175
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 71,
+      "prompt_tokens": 1568
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 134,
+      "prompt_tokens": 2393
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 69,
+      "prompt_tokens": 1702
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 149,
+      "prompt_tokens": 2599
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 82,
+      "prompt_tokens": 1830
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 173,
+      "prompt_tokens": 2833
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 66,
+      "prompt_tokens": 1951
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 132,
+      "prompt_tokens": 3075
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 67,
+      "prompt_tokens": 2062
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 191,
+      "prompt_tokens": 3277
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 49,
+      "prompt_tokens": 2218
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 101,
+      "prompt_tokens": 3520
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 24,
+      "prompt_tokens": 2330
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 813,
+      "prompt_tokens": 3648
+    },
+    {
+      "role": "report",
+      "eval_tokens": 4661,
+      "prompt_tokens": 8364
+    }
+  ]
+}

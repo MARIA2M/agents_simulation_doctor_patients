@@ -1,0 +1,295 @@
+{
+  "patient_id": "HIV-001",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "HIV-001",
+    "clinical_summary": "The patient has HIV and is on Biktarvy. They report significant improvement since starting treatment - fatigue and headaches have become more manageable, and they have more energy. Their viral load has been undetectable for over a year. They experience occasional side effects (headaches, mild GI discomfort) but these don't disrupt their routine. They view their condition as lifelong but manageable, with good adherence and a healthy lifestyle giving them significant control. They have some emotional ups and downs (worry, frustration, occasional unease about future progression) but find comfort in understanding their illness.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "Before starting my treatment, it felt like every day was a struggle. I had little energy and couldn't keep up with my usual routine.",
+            "turn": 2
+          },
+          {
+            "quote": "Day-to-day tasks that used to feel overwhelming — like going to work or spending time with family — are much more manageable now.",
+            "turn": 2
+          },
+          {
+            "quote": "There are days where the occasional fatigue or headaches remind me of its presence, but for the most part, things have been stable.",
+            "turn": 3
+          },
+          {
+            "quote": "While there are still aspects of life I can't fully control due to my condition — like occasional symptoms or limitations when my energy level is low — I try not to let it affect my day-to-day too much.",
+            "turn": 3
+          }
+        ],
+        "reasoning": "Before treatment, they had significant functional impairment - couldn't keep up with routine, daily struggles, overwhelming tasks. Now they're much more stable, but still have occasional fatigue and limitations. They've adapted and don't let it dominate their day-to-day.",
+        "score": 5.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "It's a long-term, probably lifelong condition",
+            "turn": 3
+          },
+          {
+            "quote": "I understand that this illness might cause issues in the future",
+            "turn": 3
+          },
+          {
+            "quote": "When I think about how things might progress in the future, it's hard not to feel a sense of unease.",
+            "turn": 4
+          }
+        ],
+        "reasoning": "They clearly see this as a lifelong condition, not temporary. They acknowledge future progression concerns and plan on the assumption it stays.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "with good adherence to my medication and a healthy lifestyle, I feel like I have significant control over it.",
+            "turn": 3
+          },
+          {
+            "quote": "I find solace in knowing that I understand my illness well. That understanding gives me some sense of control — I'm able to recognize what's happening and make informed choices about how best to look after myself.",
+            "turn": 4
+          },
+          {
+            "quote": "I try not to let it affect my day-to-day too much.",
+            "turn": 3
+          }
+        ],
+        "reasoning": "They explicitly state they have significant control through adherence and healthy lifestyle. They credit their understanding with giving them control and actively manage their condition.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "The Biktarvy tablets have been a lifesaver for me in many ways. Not only have they helped to suppress the virus and keep my viral load undetectable, but they've also made an incredible difference to my day-to-day life.",
+            "turn": 5
+          },
+          {
+            "quote": "Before starting this treatment, I was struggling with fatigue and other symptoms that were really holding me back. But since beginning the Biktarvy tablets, those issues have improved significantly — it's like a switch has been flipped.",
+            "turn": 5
+          },
+          {
+            "quote": "I feel incredibly confident in how helpful this medication is for my condition.",
+            "turn": 5
+          },
+          {
+            "quote": "I find comfort in knowing that the Biktarvy tablets have been a reliable source of support so far.",
+            "turn": 6
+          }
+        ],
+        "reasoning": "They describe the treatment as a 'lifesaver,' 'incredible difference,' 'switch has been flipped,' and are 'incredibly confident' in its helpfulness. They attribute their improved state to the treatment.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "the occasional headaches still happen",
+            "turn": 2
+          },
+          {
+            "quote": "mild gastrointestinal discomfort in the mornings after taking the medication",
+            "turn": 2
+          },
+          {
+            "quote": "There are days where the occasional fatigue or headaches remind me of its presence",
+            "turn": 3
+          },
+          {
+            "quote": "While there are still aspects of life I can't fully control due to my condition — like occasional symptoms or limitations when my energy level is low",
+            "turn": 3
+          }
+        ],
+        "reasoning": "They experience occasional fatigue, headaches, and mild GI discomfort. These are intermittent but noticeable. They recognize these as symptoms of their condition.",
+        "score": 5.0,
+        "confidence": 0.8
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "There are times when my condition brings up feelings of worry or frustration.",
+            "turn": 4
+          },
+          {
+            "quote": "The fatigue, as I mentioned earlier, can be particularly draining sometimes, and it makes me wonder if there's something more significant going on — maybe something else I should be doing to help manage the situation better.",
+            "turn": 4
+          },
+          {
+            "quote": "When I think about how things might progress in the future, it's hard not to feel a sense of unease.",
+            "turn": 4
+          },
+          {
+            "quote": "There are times when it feels like I'm facing an uphill battle",
+            "turn": 4
+          },
+          {
+            "quote": "there are moments when taking medication every day feels daunting. It's hard not to think about the idea of being dependent on it long-term or whether doctors prescribe medications too readily at times.",
+            "turn": 6
+          }
+        ],
+        "reasoning": "They experience worry, frustration, unease about future progression, and find daily medication daunting. These concerns recur unprompted and shape some decisions.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "My illness is something I live with on a daily basis.",
+            "turn": 3
+          },
+          {
+            "quote": "I understand that this illness might cause issues in the future",
+            "turn": 3
+          },
+          {
+            "quote": "The fact that my viral load has been undetectable for over a year gives me some peace of mind about my overall health status.",
+            "turn": 3
+          },
+          {
+            "quote": "I find solace in knowing that I understand my illness well. That understanding gives me some sense of control — I'm able to recognize what's happening and make informed choices about how best to look after myself.",
+            "turn": 4
+          },
+          {
+            "quote": "I'm also aware that my understanding of this might be limited.",
+            "turn": 6
+          }
+        ],
+        "reasoning": "They understand their condition is lifelong, understand what it means for their health (viral load status), recognize what's happening, and make informed choices. They acknowledge some limitations in their understanding.",
+        "score": 7.0,
+        "confidence": 0.8
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "There are times when my condition brings up feelings of worry or frustration.",
+            "turn": 4
+          },
+          {
+            "quote": "When I think about how things might progress in the future, it's hard not to feel a sense of unease.",
+            "turn": 4
+          },
+          {
+            "quote": "There are times when it feels like I'm facing an uphill battle",
+            "turn": 4
+          },
+          {
+            "quote": "Ultimately, while there are moments where my emotions might start to get the better of me, I find solace in knowing that I understand my illness well.",
+            "turn": 4
+          },
+          {
+            "quote": "there are moments when taking medication every day feels daunting.",
+            "turn": 6
+          }
+        ],
+        "reasoning": "They experience worry, frustration, unease, and feeling like facing an uphill battle. These emotions recur and affect how they think about their condition and medication.",
+        "score": 6.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "The Biktarvy tablets have been a lifesaver for me in many ways.",
+            "turn": 5
+          },
+          {
+            "quote": "they've also made an incredible difference to my day-to-day life.",
+            "turn": 5
+          },
+          {
+            "quote": "I feel incredibly confident in how helpful this medication is for my condition.",
+            "turn": 5
+          },
+          {
+            "quote": "I'm incredibly grateful for the Biktarvy tablets and what they've done to improve my quality of life.",
+            "turn": 6
+          },
+          {
+            "quote": "the benefits clearly outweigh the risks.",
+            "turn": 6
+          }
+        ],
+        "reasoning": "They describe the medication as a 'lifesaver,' 'incredible difference,' and are 'incredibly confident' in its helpfulness. They're 'incredibly grateful' and state benefits clearly outweigh risks. They organize their life around it.",
+        "score": 5.0,
+        "confidence": 0.9
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "the occasional headaches still happen, and sometimes I experience some mild gastrointestinal discomfort in the mornings after taking the medication.",
+            "turn": 2
+          },
+          {
+            "quote": "there are still times when I experience side effects from the treatment, like occasional headaches and some gastrointestinal discomfort after taking it in the morning.",
+            "turn": 5
+          },
+          {
+            "quote": "there are moments when taking medication every day feels daunting. It's hard not to think about the idea of being dependent on it long-term or whether doctors prescribe medications too readily at times.",
+            "turn": 6
+          },
+          {
+            "quote": "Sometimes I wonder if there could be a better solution out there",
+            "turn": 6
+          }
+        ],
+        "reasoning": "They experience side effects and find daily medication 'daunting.' They worry about long-term dependence and wonder if there's a better solution. These concerns recur unprompted and have led them to think about alternatives.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "I continue to trust that the medication is helping me more than causing harm.",
+            "turn": 5
+          },
+          {
+            "quote": "the benefits clearly outweigh the risks.",
+            "turn": 6
+          }
+        ],
+        "reasoning": "They believe the medication helps more than causes harm. They trust it's helping more than causing harm. They don't express general distrust of medicines as a class.",
+        "score": 2.5,
+        "confidence": 0.7
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [
+          {
+            "quote": "whether doctors prescribe medications too readily at times.",
+            "turn": 6
+          },
+          {
+            "quote": "Sometimes I wonder if there could be a better solution out there",
+            "turn": 6
+          }
+        ],
+        "reasoning": "They occasionally wonder if doctors prescribe too readily. They think about whether there could be a better solution. This is occasional doubt about one particular prescription, not a general pattern.",
+        "score": 3.0,
+        "confidence": 0.7
+      }
+    },
+    "causes": [],
+    "causes_evidence": []
+  }
+}

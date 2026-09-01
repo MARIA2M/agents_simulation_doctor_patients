@@ -1,0 +1,275 @@
+{
+  "patient_id": "CLL-001",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "CLL-001",
+    "clinical_summary": "Patient diagnosed with Type 2 diabetes, experiencing increased thirst, frequent urination, fatigue, and blurred vision. Elevated blood sugar levels. Patient reports taking two daily medications (morning and bedtime) and has established a routine. Adherence is high, with no reported missed doses. Patient expresses significant emotional distress, feeling overwhelmed and worried about complications. Believes condition is lifelong and has changed their life substantially. Has mixed beliefs about personal control but trusts treatment and medical team.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "It's become such a big part of my life that sometimes it feels like there's no way out of this struggle.",
+            "turn": 1
+          },
+          {
+            "quote": "It's changed my life in so many ways.",
+            "turn": 8
+          },
+          {
+            "quote": "sometimes it feels like this constant battle that I can't escape from — like it's taken over my life completely.",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient describes significant life changes, feeling like diabetes has become a major part of their identity and daily existence. They feel it has 'changed my life in so many ways' and 'taken over my life completely.'",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "I'll have to deal with this diabetes thing for the rest of my life.",
+            "turn": 3
+          },
+          {
+            "quote": "just my new reality now.",
+            "turn": 3
+          }
+        ],
+        "reasoning": "Patient clearly expects this to be a lifelong condition, describing it as 'for the rest of my life' and 'just my new reality now.'",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "it makes me feel like I'm not in control of my own body anymore.",
+            "turn": 3
+          },
+          {
+            "quote": "making certain choices has made a real difference in how I feel or in my blood sugar levels.",
+            "turn": 13
+          },
+          {
+            "quote": "every little bit helps me feel like I'm doing something positive for my health.",
+            "turn": 13
+          }
+        ],
+        "reasoning": "Patient has mixed feelings - they sometimes feel not in control, but also believe their actions (eating well, staying active, managing stress) make a difference. They see themselves as doing something positive, but acknowledge limitations.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "these pills help my body use sugar in a better way.",
+            "turn": 4
+          },
+          {
+            "quote": "giving me this extra push so that my body can handle things better.",
+            "turn": 4
+          },
+          {
+            "quote": "I know how important they are in helping me stay healthy.",
+            "turn": 4
+          },
+          {
+            "quote": "these pills are the only way I can keep things under control.",
+            "turn": 12
+          }
+        ],
+        "reasoning": "Patient clearly sees the medication as helpful and essential. They understand how it works and believe it's necessary for control.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "I have diabetes",
+            "turn": 8
+          },
+          {
+            "quote": "it's just become part of who I am now.",
+            "turn": 8
+          },
+          {
+            "quote": "sometimes it feels like this constant battle that I can't escape from",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient identifies strongly with having diabetes, seeing it as part of who they are. They describe it as a 'constant battle' that they can't escape from.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "There's this constant worry in the back of my head",
+            "turn": 5
+          },
+          {
+            "quote": "always waiting for something to go wrong",
+            "turn": 5
+          },
+          {
+            "quote": "worries are always there",
+            "turn": 5
+          },
+          {
+            "quote": "hard not to feel helpless",
+            "turn": 6
+          }
+        ],
+        "reasoning": "Patient expresses frequent, ongoing worry about their condition and potential complications. They describe it as a 'constant worry' that affects them.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "diabetes... is a disease that affects how my body uses sugar",
+            "turn": 1
+          },
+          {
+            "quote": "my body doesn't produce enough insulin — this is a hormone that helps cells take in the glucose from the blood — or my body has developed resistance to the insulin it does produce",
+            "turn": 9
+          },
+          {
+            "quote": "when I can't use the sugar from my food properly, it stays in my blood and doesn't get where it needs to go",
+            "turn": 9
+          }
+        ],
+        "reasoning": "Patient demonstrates a good understanding of the mechanism of diabetes, explaining insulin resistance and how glucose stays in the bloodstream.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "constant struggle going on inside me",
+            "turn": 1
+          },
+          {
+            "quote": "trying to keep my head above water",
+            "turn": 2
+          },
+          {
+            "quote": "hard not to feel helpless",
+            "turn": 6
+          },
+          {
+            "quote": "hard not to feel like I'm missing out on life",
+            "turn": 5
+          }
+        ],
+        "reasoning": "Patient describes significant emotional distress - feeling like they're struggling, trying to keep their head above water, feeling helpless, and missing out on life due to the condition.",
+        "score": 8.0,
+        "confidence": 0.9
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "these pills help my body use sugar in a better way",
+            "turn": 4
+          },
+          {
+            "quote": "I know how important they are in helping me stay healthy",
+            "turn": 4
+          },
+          {
+            "quote": "these pills are the only way I can keep things under control",
+            "turn": 12
+          },
+          {
+            "quote": "they feel like my lifeline",
+            "turn": 12
+          }
+        ],
+        "reasoning": "Patient clearly sees their medication as essential and necessary for their health and control of the condition.",
+        "score": 5.0,
+        "confidence": 0.9
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "worry about possible side effects from my medications",
+            "turn": 11
+          },
+          {
+            "quote": "feels a bit weird to be taking these pills every day — like I'm somehow becoming more and more dependent on them",
+            "turn": 11
+          }
+        ],
+        "reasoning": "Patient does have some concerns about side effects and feeling dependent on the medication, though they ultimately believe the benefits outweigh the risks.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "wonder if there's such a thing as 'too many' medications",
+            "turn": 10
+          },
+          {
+            "quote": "everyone around me is always taking something for something these days",
+            "turn": 10
+          }
+        ],
+        "reasoning": "Patient expresses mild concern about the general use of medications, noting that many people around them are on medications and wondering if there's such a thing as 'too many.'",
+        "score": 3.0,
+        "confidence": 0.8
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [
+          {
+            "quote": "wonder if there's such a thing as 'too many' medications",
+            "turn": 10
+          },
+          {
+            "quote": "everyone around me is always taking something for something these days",
+            "turn": 10
+          },
+          {
+            "quote": "trust that you and the rest of my medical team are prescribing the right medications for me",
+            "turn": 10
+          }
+        ],
+        "reasoning": "Patient is aware of the general trend of medication use and wonders if it's excessive, but they trust their own medical team and believe they are prescribing appropriately.",
+        "score": 3.0,
+        "confidence": 0.8
+      }
+    },
+    "causes": [
+      "genetics (mother had diabetes)",
+      "stress at work"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "From what my doctors have told me, it seems like genetics could be a big part of it. My mom had it too",
+        "turn": 7
+      },
+      {
+        "quote": "wonder if maybe it was all the stress at work that did it",
+        "turn": 7
+      },
+      {
+        "quote": "sometimes it feels like it just happened out of nowhere",
+        "turn": 7
+      }
+    ]
+  }
+}

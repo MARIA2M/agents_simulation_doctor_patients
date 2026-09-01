@@ -1,0 +1,175 @@
+{
+  "patient_id": "CLL-002",
+  "mode": "ablate",
+  "removed_turns": 7,
+  "removed_words": 352,
+  "events": [],
+  "report": {
+    "patient_id": "CLL-002",
+    "clinical_summary": "An older woman presents with significant fatigue, weakness, sleep disturbance, and panic-like symptoms (suffocation, lightheadedness) following the death of her husband six months ago. She has attempted self-care (diet, exercise) without improvement. She is open to medical investigation and treatment. No current prescription medications. Doctor has ordered blood work and ECG.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "It feels like my body has just given up on me",
+            "turn": 11
+          },
+          {
+            "quote": "there are days when I wonder if I'll ever feel like myself again",
+            "turn": 16
+          }
+        ],
+        "reasoning": "The patient describes a profound loss of function and identity, feeling her body has 'given up' and questioning if she will ever return to her previous self, indicating a major impact on her life.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "it's also possible that this is something I'll just have to live with",
+            "turn": 12
+          }
+        ],
+        "reasoning": "The patient explicitly acknowledges the possibility of a long-term or permanent condition, accepting that she may have to manage it indefinitely.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I've been trying to take care of myself by eating well and getting some exercise",
+            "turn": 2
+          }
+        ],
+        "reasoning": "The patient is actively engaging in self-care behaviors, but attributes the lack of improvement to the illness itself ('body has just given up'), suggesting she doubts her actions are sufficient to change the course.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "No one has really looked into my exhaustion yet... things haven't been getting better",
+            "turn": 3
+          }
+        ],
+        "reasoning": "The patient has not yet received effective treatment and has not experienced any benefit from current interventions, indicating a lack of perceived efficacy.",
+        "score": 2.0,
+        "confidence": 0.9
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "swings between feeling hopeless and feeling angry at yourself",
+            "turn": 7
+          }
+        ],
+        "reasoning": "The patient describes intrusive emotional and physical symptoms that are central to her daily experience and self-perception.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "It's been really hard without him",
+            "turn": 2
+          },
+          {
+            "quote": "there are days when I wonder if I'll ever feel like myself again",
+            "turn": 16
+          }
+        ],
+        "reasoning": "The patient expresses significant distress and worry about her future and identity, indicating that the illness is a frequent source of concern.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I don't really know what's causing all this",
+            "turn": 11
+          }
+        ],
+        "reasoning": "The patient is uncertain about the mechanism or root cause of her symptoms, indicating a lack of clear understanding.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "swings between feeling hopeless and feeling angry at yourself",
+            "turn": 7
+          }
+        ],
+        "reasoning": "The patient reports prominent emotional swings, including hopelessness and anger, which significantly affect her state of mind.",
+        "score": 8.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [],
+        "reasoning": "The patient has no current prescription medication and has not yet established a routine with prescribed drugs.",
+        "score": null,
+        "confidence": 1.0
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [],
+        "reasoning": "The patient has no current prescription medication and has not raised specific concerns about her own medication.",
+        "score": null,
+        "confidence": 1.0
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "As far as feeling overwhelmed by too many pills goes, I've never really been in that situation before",
+            "turn": 13
+          }
+        ],
+        "reasoning": "The patient has not expressed a strong view on whether medicines are harmful, indicating a neutral stance.",
+        "score": 2.0,
+        "confidence": 0.5
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [
+          {
+            "quote": "As far as feeling overwhelmed by too many pills goes, I've never really been in that situation before",
+            "turn": 13
+          }
+        ],
+        "reasoning": "The patient has not expressed distrust in prescribing practices, indicating a neutral stance.",
+        "score": 2.0,
+        "confidence": 0.5
+      }
+    },
+    "causes": [
+      "grief from losing my husband",
+      "heart problems in the family"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "the tiredness started about six months ago, right around the time I lost my husband",
+        "turn": 2
+      },
+      {
+        "quote": "I've considered that maybe it's a combination of the grief from losing my husband and this chronic tiredness",
+        "turn": 11
+      },
+      {
+        "quote": "my mother had high blood pressure and my father passed away from a heart attack",
+        "turn": 10
+      }
+    ]
+  }
+}

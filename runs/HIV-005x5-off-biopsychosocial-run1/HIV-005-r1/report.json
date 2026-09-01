@@ -1,0 +1,302 @@
+{
+  "patient_id": "HIV-005",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "HIV-005",
+    "clinical_summary": "A 3-year HIV patient on Triumeq presents with worsening headaches and fatigue over the past couple of months. They report missing doses occasionally due to side effects and life stress. They describe HIV as a 'permanent reality' with ongoing uncertainty, and experience emotional toll including worry, fear, anxiety, and isolation. They have some control through self-care but feel limited by symptom unpredictability.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "my headaches have just not been going away and they're starting to affect my work and personal life",
+            "turn": 1
+          },
+          {
+            "quote": "I need some relief so I can start feeling like myself again and not worry about how much my condition is affecting my daily life",
+            "turn": 5
+          }
+        ],
+        "reasoning": "The patient explicitly states that headaches are affecting work and personal life, and they need relief because the condition is affecting their daily life. This shows significant impact on functioning.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "I often feel like my HIV is a permanent reality in my life. It's not something that goes away",
+            "turn": 4
+          },
+          {
+            "quote": "part of me believes the illness is stable right now, but another part worries about what might happen in the future",
+            "turn": 4
+          },
+          {
+            "quote": "it's like a constant background stress that never really goes away",
+            "turn": 4
+          },
+          {
+            "quote": "I know I have to be prepared for whatever comes next",
+            "turn": 12
+          }
+        ],
+        "reasoning": "The patient views HIV as a permanent reality that doesn't go away, but also expresses uncertainty about the future. They acknowledge both stability and potential worsening. They plan for the future but with uncertainty.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "It definitely feels like some things are in my control and others aren't",
+            "turn": 6
+          },
+          {
+            "quote": "I've learned that taking care of myself as best I can — getting enough rest when possible, eating well, and staying connected with friends and family — helps me cope better with everything",
+            "turn": 6
+          },
+          {
+            "quote": "there's a limit to what I can do for these symptoms, especially when they're so unpredictable",
+            "turn": 6
+          },
+          {
+            "quote": "There are days where it feels like no amount of self-care will be enough",
+            "turn": 6
+          },
+          {
+            "quote": "part of me feels that my body's response to the HIV and its treatment is just beyond my ability to change",
+            "turn": 6
+          }
+        ],
+        "reasoning": "The patient recognizes some control through self-care strategies but feels limited by symptom unpredictability and the body's response. They acknowledge both control and limitations.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "I'm currently taking a pill called Triumeq once daily, which helps keep my viral load under control",
+            "turn": 2
+          },
+          {
+            "quote": "the medication helping keep my viral load low, there still seems to be this underlying sense of unpredictability",
+            "turn": 4
+          },
+          {
+            "quote": "I know I need to take my medication consistently for it to work effectively",
+            "turn": 2
+          }
+        ],
+        "reasoning": "The patient believes Triumeq helps keep viral load under control and is necessary for effectiveness. However, they also express uncertainty about the medication's effectiveness and the unpredictability of their condition.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "I generally describe myself as living with a chronic HIV infection",
+            "turn": 10
+          },
+          {
+            "quote": "HIV definitely feels like a significant part of my life right now. It's not something I can just ignore or wish away",
+            "turn": 13
+          },
+          {
+            "quote": "there's no denying that the condition has an impact on some of those future plans",
+            "turn": 13
+          }
+        ],
+        "reasoning": "The patient identifies as living with HIV and acknowledges it as a significant part of their life that cannot be ignored. They recognize its impact on their identity and future plans.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "There's a constant worry and fear about what could happen in the future",
+            "turn": 11
+          },
+          {
+            "quote": "The worry around my HIV does ebb and flow throughout the day",
+            "turn": 12
+          },
+          {
+            "quote": "during moments when symptoms flare up or there's news about the virus in general, the concern comes back to the forefront",
+            "turn": 12
+          },
+          {
+            "quote": "I know I have to be prepared for whatever comes next while trying not to let worry and anxiety consume me day in and day out",
+            "turn": 12
+          }
+        ],
+        "reasoning": "The patient experiences ongoing worry and fear about the future, with concerns that recur unprompted and shape their thinking. They struggle to balance vigilance with resilience.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I do try to educate myself on new developments and treatments whenever possible so that I can better understand what's happening with my body",
+            "turn": 10
+          },
+          {
+            "quote": "there are times where I feel confused about the specifics of it all",
+            "turn": 10
+          },
+          {
+            "quote": "Overall, though, I think having a decent level of understanding about my condition helps me advocate for myself better",
+            "turn": 10
+          }
+        ],
+        "reasoning": "The patient makes an effort to educate themselves and has a decent understanding that helps them advocate for themselves. However, they also express confusion about specifics.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "Living with HIV definitely takes an emotional toll on me at times",
+            "turn": 11
+          },
+          {
+            "quote": "There's a constant worry and fear about what could happen in the future",
+            "turn": 11
+          },
+          {
+            "quote": "These concerns can sometimes lead to feelings of anxiety or depression",
+            "turn": 11
+          },
+          {
+            "quote": "it also makes me feel quite isolated at times",
+            "turn": 11
+          },
+          {
+            "quote": "HIV is always there in the background, influencing decisions and colorizing everything with its uncertainty",
+            "turn": 11
+          }
+        ],
+        "reasoning": "The patient describes significant emotional impact including worry, fear, anxiety, depression, and isolation. HIV is described as always in the background, influencing decisions and experiences.",
+        "score": 8.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "I know that taking my Triumeq consistently is very important in managing the HIV",
+            "turn": 7
+          },
+          {
+            "quote": "It helps keep my viral load low and hopefully prevents any potential complications from the illness",
+            "turn": 7
+          },
+          {
+            "quote": "I do think that the pill is essential for my overall health and well-being",
+            "turn": 7
+          },
+          {
+            "quote": "I know I need to take my medication consistently for it to work effectively",
+            "turn": 2
+          }
+        ],
+        "reasoning": "The patient clearly believes Triumeq is important and essential for managing HIV, keeping viral load low, and preventing complications. They understand the importance of consistency for effectiveness.",
+        "score": 4.5,
+        "confidence": 0.7
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "I've experienced some nausea and occasional stomach cramps since starting Triumeq",
+            "turn": 8
+          },
+          {
+            "quote": "The headaches have also been more frequent ever since I began taking it",
+            "turn": 8
+          },
+          {
+            "quote": "I've also had moments where I wonder if my body is becoming dependent on the medication or if there could be any long-term harm from taking it consistently",
+            "turn": 8
+          },
+          {
+            "quote": "These concerns occasionally make me question whether missing a few doses here and there might actually be better than dealing with potential risks down the line",
+            "turn": 8
+          },
+          {
+            "quote": "sometimes the side effects are just too much to handle",
+            "turn": 2
+          }
+        ],
+        "reasoning": "The patient experiences specific side effects (nausea, stomach cramps, headaches) and has concerns about dependence and long-term harm. These concerns have led to questioning whether missing doses might be better.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "I've also heard enough about potential side effects to make me cautious",
+            "turn": 9
+          },
+          {
+            "quote": "there's always a bit of unease in the back of my mind about what the medication might be doing to my body long-term",
+            "turn": 9
+          },
+          {
+            "quote": "I've also had experiences where I felt like a prescription could be more of a band-aid solution rather than addressing the root cause of an issue, so it makes me cautious about trusting prescriptions blindly",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient expresses general caution about medications, with unease about long-term effects and experiences of prescriptions being 'band-aid solutions.' They are wary of trusting prescriptions blindly.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [
+          {
+            "quote": "I think doctors do their best but there's definitely an aspect where it feels like they're often quick to prescribe without fully considering alternative options or discussing potential risks",
+            "turn": 9
+          },
+          {
+            "quote": "I've also had experiences where I felt like a prescription could be more of a band-aid solution rather than addressing the root cause of an issue",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient believes doctors are often quick to prescribe without considering alternatives or risks. They've had experiences where prescriptions felt like 'band-aid solutions' rather than addressing root causes.",
+        "score": 4.0,
+        "confidence": 0.7
+      }
+    },
+    "causes": [
+      "uncertain - combination of factors including viral load, medication side effects, and work stress"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "I can't say for sure if it's because my viral load has gone up or if it's just stress from work that's piling on top of everything else",
+        "turn": 3
+      },
+      {
+        "quote": "I wonder if it might have something to do with my medication, as sometimes they've been worse after taking Triumeq",
+        "turn": 5
+      },
+      {
+        "quote": "I know stress from work can exacerbate anything that's already going on",
+        "turn": 5
+      },
+      {
+        "quote": "It's hard to say for sure what might be causing these symptoms or whether it's a combination of factors",
+        "turn": 5
+      }
+    ]
+  }
+}

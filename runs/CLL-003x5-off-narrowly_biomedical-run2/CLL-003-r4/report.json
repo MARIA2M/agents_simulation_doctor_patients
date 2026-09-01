@@ -1,0 +1,144 @@
+{
+  "patient_id": "CLL-003",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "CLL-003",
+    "clinical_summary": "55-year-old male with CLL diagnosed several years ago, early stage, stable without treatment. Presents with new left-sided neck lymphadenopathy (pea-sized, firm, attached to skin, non-movable) and gradually increasing fatigue over the past few months. Takes a multivitamin but no CLL-specific medication. No other chronic conditions, no recent infections, no family history of lymph node issues. Trusts healthcare providers and is agreeable to follow-up testing.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "I've just been feeling a bit more drained lately. It's not like I'm completely exhausted or anything, but I definitely notice that I need a little extra rest after work. It doesn't really interfere with my activities during the day, but I find myself dozing off on the couch when I get home.",
+            "turn": 4
+          }
+        ],
+        "reasoning": "He keeps his roles but has changed how he does them - needs extra rest, dozes off on couch. This fits the 4 scale (keeps their roles but has changed how they do them: pacing, hours, help with the heavy parts).",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "I haven't needed any medication yet, just regular follow-up appointments every three months and occasional blood work to keep an eye on my counts.",
+            "turn": 6
+          }
+        ],
+        "reasoning": "Plans are built around ongoing monitoring rather than treatment. He accepts the current management approach (watchful waiting) as appropriate for early-stage CLL. This fits the 8 scale (plans on the assumption it stays. Arrangements are built around it continuing).",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I trust that we'll figure out what's going on. And if it is related to my CLL, then I know you'll take care of me and help manage the condition.",
+            "turn": 12
+          }
+        ],
+        "reasoning": "He trusts healthcare providers to manage the condition. No mention of self-management strategies or personal agency in influencing disease course. This fits the 2 scale (takes no action of their own; the outcome belongs to luck, fate or the doctors).",
+        "score": 2.0,
+        "confidence": 0.8
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "I haven't needed any medication yet, just regular follow-up appointments every three months and occasional blood work to keep an eye on my counts.",
+            "turn": 6
+          }
+        ],
+        "reasoning": "No active treatment yet, so limited exposure. He accepts the current management approach (watchful waiting) as appropriate. This fits the 2 scale (continues the treatment without expecting benefit from it - though there is no treatment).",
+        "score": 2.0,
+        "confidence": 0.8
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "I don't have any other chronic medical conditions, aside from the CLL that I mentioned earlier.",
+            "turn": 5
+          }
+        ],
+        "reasoning": "He explicitly identifies as having CLL. The neck lump is a new symptom he's concerned about. This fits the 4 scale (one or two symptoms, intermittent, not limiting).",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "I'm a bit worried, but I trust that we'll figure out what's going on.",
+            "turn": 12
+          }
+        ],
+        "reasoning": "Worried about the neck lump, which he acknowledges. No stated concern about CLL progression. Trusts healthcare providers. This fits the 4 scale (worry tied to specific moments: results, appointments, a new symptom).",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I was diagnosed with CLL a few years ago, but the hematologist said it's still in a very early stage... my blood counts were only mildly abnormal. He said that's pretty common at this stage of CLL and not to worry too much about it for now.",
+            "turn": 7
+          }
+        ],
+        "reasoning": "He demonstrates basic understanding of CLL being in early stage, stable, and that mild blood count abnormalities are common at this stage. This fits the 6 scale (gives a rough account of what is happening and why, with gaps).",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "I'm a bit worried, but I trust that we'll figure out what's going on.",
+            "turn": 12
+          }
+        ],
+        "reasoning": "He acknowledges worry but it's contained and not prominent. Otherwise 'feeling pretty much like myself.' This fits the 2 scale (discusses the illness without emotional content, and does not steer away from it).",
+        "score": 2.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "No, doctor, I'm not on any medications or supplements specifically for the CLL. I've been taking a multivitamin just to make sure I'm getting all the nutrients I need, but that's about it.",
+            "turn": 7
+          }
+        ],
+        "reasoning": "No CLL-specific medication prescribed. Multivitamin is for general health, not CLL-specific necessity.",
+        "score": null,
+        "confidence": 0.8
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [],
+        "reasoning": "No prescription means no specific concerns to hold.",
+        "score": null,
+        "confidence": 0.8
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [],
+        "reasoning": "Never asked about general beliefs about medicines.",
+        "score": null,
+        "confidence": 0.8
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "Never asked about general beliefs about prescribing.",
+        "score": null,
+        "confidence": 0.8
+      }
+    },
+    "causes": [],
+    "causes_evidence": []
+  }
+}

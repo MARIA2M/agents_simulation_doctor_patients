@@ -1,0 +1,308 @@
+{
+  "patient_id": "HIV-001",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "HIV-001",
+    "clinical_summary": "Patient has been on Biktarvy for 18 months with undetectable viral load for 6 months. They report persistent foot pain (burning sensation, doesn't improve with rest), fatigue, and morning GI symptoms (nausea, fullness, difficulty swallowing). They've had to cut back on work tasks and social activities, and their life has become centered around rest. They're uncertain about the cause of symptoms, worried about long-term effects, and experiencing irritability and sleep disturbances. They're actively trying self-care strategies (regular sleep, gentle stretching, smaller meals, meditation) but seeing limited relief.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "I've had to cut back on some tasks at work because I don't have as much energy as before",
+            "turn": 5
+          },
+          {
+            "quote": "It's also harder for me to socialize with friends after work or do any activities that require more physical effort",
+            "turn": 5
+          },
+          {
+            "quote": "I feel like my life has become more centered around rest and recuperation",
+            "turn": 5
+          }
+        ],
+        "reasoning": "The patient has had to cut back on work tasks, social activities, and physical activities. Their life is now centered around rest and recuperation. This is a significant impact on their daily life and functioning.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "I'm not sure if the foot pain and other symptoms will improve over time, but I try to stay optimistic",
+            "turn": 8
+          },
+          {
+            "quote": "It's hard not to worry that these might be long-term side effects, especially since they've persisted for a few months now",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient is uncertain about whether symptoms will improve. They're worried they might be long-term side effects. They've persisted for several months. They're trying to stay optimistic but acknowledge uncertainty.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "It makes me feel like I don't have control over my own body, like there's something happening under the surface that I can't do much about",
+            "turn": 6
+          },
+          {
+            "quote": "I've been making sure to get plenty of sleep, trying to maintain a regular sleep schedule",
+            "turn": 5
+          },
+          {
+            "quote": "I also started doing some gentle stretching exercises in the morning, hoping that would help with the foot pain",
+            "turn": 5
+          },
+          {
+            "quote": "When it comes to the GI discomfort, I've been drinking more water and focusing on eating smaller meals throughout the day",
+            "turn": 5
+          },
+          {
+            "quote": "I've been trying different strategies like meditation and deep breathing exercises to manage my anxiety and frustration",
+            "turn": 13
+          }
+        ],
+        "reasoning": "The patient feels they have lost control of their body and that there's something happening under the surface they can't do much about. However, they are actively trying self-management strategies (regular sleep, gentle stretching, smaller meals, meditation). They report these efforts have provided limited relief. They're trying to stay optimistic and manage their situation.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "I do believe my treatment is working overall, doctor. I'm grateful for the progress made since starting Biktarvy 18 months ago, and I appreciate that my viral load has been undetectable during this time",
+            "turn": 9
+          },
+          {
+            "quote": "However, with the persistence of these symptoms, there's a part of me that can't help but question if there might be other factors at play or if some adjustments to my treatment could be beneficial",
+            "turn": 9
+          },
+          {
+            "quote": "I understand that these symptoms may not necessarily be related to my medication, but it's hard not to consider the possibility when they've persisted for so long despite being on effective treatment",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient believes their treatment is working overall and is grateful for the progress. However, they're questioning whether adjustments to treatment might help with persistent symptoms. They acknowledge symptoms may not be medication-related but still consider the possibility.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "my feet, they've been hurting, not like normal soreness after a long day at work, but something different",
+            "turn": 1
+          },
+          {
+            "quote": "The pain feels like a constant burning sensation in my feet, especially the soles",
+            "turn": 2
+          },
+          {
+            "quote": "I do feel less hungry than usual",
+            "turn": 4
+          },
+          {
+            "quote": "I've had to cut back on some tasks at work because I don't have as much energy as before",
+            "turn": 5
+          },
+          {
+            "quote": "It's also harder for me to socialize with friends after work or do any activities that require more physical effort",
+            "turn": 5
+          },
+          {
+            "quote": "I feel like my life has become more centered around rest and recuperation",
+            "turn": 5
+          }
+        ],
+        "reasoning": "The patient has multiple symptoms (foot pain, fatigue, GI symptoms) that are affecting their daily life. They've had to cut back on work tasks, social activities, and physical activities. Their life is now centered around rest. These symptoms are daily and intrusive.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "I'm unsure about what's causing these symptoms, and that uncertainty can be quite distressing at times",
+            "turn": 6
+          },
+          {
+            "quote": "I'm worried about the possibility of having to make more significant lifestyle changes or needing adjustments to my medication",
+            "turn": 7
+          },
+          {
+            "quote": "It's hard not to worry that these might be long-term side effects, especially since they've persisted for a few months now",
+            "turn": 8
+          },
+          {
+            "quote": "I have some mild concerns about the potential side effects and long-term effects of taking medications",
+            "turn": 10
+          },
+          {
+            "quote": "At times, it feels like there's an unknown layer underlying everything, and that uncertainty is the most challenging part",
+            "turn": 11
+          },
+          {
+            "quote": "I've noticed some changes in my mood lately, especially when it comes to feeling more irritable than usual",
+            "turn": 13
+          },
+          {
+            "quote": "Sometimes I find myself waking up in the middle of the night and having trouble falling back asleep or staying asleep until morning",
+            "turn": 13
+          }
+        ],
+        "reasoning": "The patient is worried about the cause of symptoms, long-term side effects, lifestyle changes, and medication adjustments. They describe uncertainty as 'the most challenging part.' They're experiencing mood changes (irritability) and sleep disturbances. These concerns recur unprompted and affect their daily life.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "While I believe my understanding of the basics of HIV and its management has been mostly helpful in navigating my journey, there are aspects of my condition that remain unclear or confusing",
+            "turn": 11
+          },
+          {
+            "quote": "For instance, why do these particular symptoms persist despite being on effective treatment?",
+            "turn": 11
+          },
+          {
+            "quote": "And how can I regain a sense of control over my daily life?",
+            "turn": 11
+          },
+          {
+            "quote": "At times, it feels like there's an unknown layer underlying everything, and that uncertainty is the most challenging part",
+            "turn": 11
+          }
+        ],
+        "reasoning": "The patient understands the basics of HIV and its management, but there are aspects that remain unclear or confusing. They don't understand why symptoms persist despite effective treatment, and they don't know how to regain control. They describe feeling there's an 'unknown layer underneath everything.'",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "I've noticed some changes in my mood lately, especially when it comes to feeling more irritable than usual",
+            "turn": 13
+          },
+          {
+            "quote": "The persistent symptoms, combined with the uncertainty about their cause, have definitely been weighing on me",
+            "turn": 13
+          },
+          {
+            "quote": "Sometimes I find myself waking up in the middle of the night and having trouble falling back asleep or staying asleep until morning",
+            "turn": 13
+          },
+          {
+            "quote": "I've been trying different strategies like meditation and deep breathing exercises to manage my anxiety and frustration",
+            "turn": 13
+          }
+        ],
+        "reasoning": "The patient has noticed mood changes (irritability), sleep disturbances, and is experiencing anxiety and frustration. They're actively trying to manage these emotions with coping strategies. The emotional response is prominent and affects what they do.",
+        "score": 8.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "I started my treatment 18 months ago, and I've been taking Biktarvy as prescribed",
+            "turn": 3
+          },
+          {
+            "quote": "I do believe my treatment is working overall, doctor. I'm grateful for the progress made since starting Biktarvy 18 months ago",
+            "turn": 9
+          },
+          {
+            "quote": "I believe it's important to follow the prescribed regimen and adhere strictly to the schedule as advised by medical professionals",
+            "turn": 10
+          }
+        ],
+        "reasoning": "The patient has been taking Biktarvy as prescribed for 18 months. They believe their treatment is working overall and are grateful for the progress. They believe it's important to follow the prescribed regimen and adhere strictly to the schedule.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "I have some mild concerns about the potential side effects and long-term effects of taking medications",
+            "turn": 10
+          },
+          {
+            "quote": "It's hard not to worry that these might be long-term side effects, especially since they've persisted for a few months now",
+            "turn": 8
+          },
+          {
+            "quote": "I'm worried about the possibility of having to make more significant lifestyle changes or needing adjustments to my medication",
+            "turn": 7
+          }
+        ],
+        "reasoning": "The patient has mild concerns about potential side effects and long-term effects. They're worried about long-term side effects and lifestyle changes. They've raised these concerns unprompted.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "I have some mild concerns about the potential side effects and long-term effects of taking medications",
+            "turn": 10
+          },
+          {
+            "quote": "It's natural for me to wonder if there could be any unknown consequences down the line",
+            "turn": 10
+          }
+        ],
+        "reasoning": "The patient has mild concerns about potential side effects and long-term effects of medications. They wonder about 'unknown consequences down the line.' This is a mild generalised caution about taking things long-term.",
+        "score": 3.0,
+        "confidence": 0.7
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [
+          {
+            "quote": "As for feeling like I might be taking too much medication over time, I've never had that thought cross my mind",
+            "turn": 10
+          },
+          {
+            "quote": "I trust that my doctors have prescribed Biktarvy at an appropriate dose and that they will make any necessary adjustments if needed",
+            "turn": 10
+          }
+        ],
+        "reasoning": "The patient has never felt like they might be taking too much medication over time. They trust that their doctors have prescribed at an appropriate dose and will make adjustments as needed.",
+        "score": 2.0,
+        "confidence": 0.8
+      }
+    },
+    "causes": [
+      "uncertainty about what's causing the symptoms",
+      "potential long-term side effects of medication",
+      "other health issues common among people living with HIV"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "I assumed the medication should take care of most, if not all, of the side effects",
+        "turn": 6
+      },
+      {
+        "quote": "I've discussed this with my primary care physician, who suggested it might be a result of the treatment itself or possibly related to other health issues that are common among people living with HIV",
+        "turn": 6
+      },
+      {
+        "quote": "I'm unsure about what's causing these symptoms",
+        "turn": 6
+      },
+      {
+        "quote": "It's hard not to worry that these might be long-term side effects",
+        "turn": 8
+      }
+    ]
+  }
+}

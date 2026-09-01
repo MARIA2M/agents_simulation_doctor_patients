@@ -1,0 +1,244 @@
+{
+  "patient_id": "CLL-001",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "CLL-001",
+    "clinical_summary": "Patient with CLL diagnosed 2 years ago, on active surveillance with monthly blood draws. Experiencing fatigue, severe headaches (8/10, 1-2x/week), night sweats (almost nightly, drenching), weakness, and nausea. Taking citalopram for emotional side effects and ondansetron for nausea. Blood counts stable. Significant impact on daily functioning, work, family time, and social life. Expresses trust in medical team but concerns about long-term implications and medication side effects.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "It's getting harder to keep up with my work and even simple tasks around the house are becoming more difficult",
+            "turn": 1
+          },
+          {
+            "quote": "my illness has taken over much of my life — my work, time with family, even hobbies have all been affected",
+            "turn": 1
+          },
+          {
+            "quote": "The fatigue can be quite debilitating at times and makes it difficult to complete my usual tasks. I find myself needing more breaks than before, which is frustrating as I feel like I'm not accomplishing as much as I used to",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient reports significant impact on work, household tasks, family time, hobbies, and daily functioning. Fatigue described as 'debilitating' with need for more breaks and reduced accomplishment. This clearly exceeds a 4 (changed how they do things) and moves toward 8 (major role lost or substantially reduced).",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "It's quite distressing to think that this may be a lifelong reality",
+            "turn": 1
+          }
+        ],
+        "reasoning": "Patient explicitly states they believe CLL may be a lifelong reality. They understand progression can be slow and gradual, and they're planning around ongoing monitoring. This aligns with an 8 (plans on the assumption it stays).",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I find myself needing more breaks than before, which is frustrating as I feel like I'm not accomplishing as much as I used to",
+            "turn": 8
+          },
+          {
+            "quote": "It feels like everything is a struggle these days, and it's difficult to find joy or motivation in anything",
+            "turn": 10
+          },
+          {
+            "quote": "I've also been feeling increasingly isolated from friends and family due to the limitations that the fatigue and other symptoms impose on my social life",
+            "turn": 10
+          }
+        ],
+        "reasoning": "Patient describes feeling like they're not accomplishing as much as before, that everything is a struggle, and that symptoms impose limitations on their social life. They don't describe taking active steps to manage their condition beyond accepting the medical plan. This suggests limited personal control.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "Despite this, I still believe in modern medicine and trust that the doctors know best when prescribing these treatments",
+            "turn": 1
+          },
+          {
+            "quote": "I trust that you and your team are doing everything possible to manage my condition and keep it under control as best as we can",
+            "turn": 10
+          }
+        ],
+        "reasoning": "Patient expresses trust in modern medicine and the medical team. They believe the doctors are doing everything possible to manage their condition. However, they don't explicitly attribute their current stable condition to treatment working - they're on active surveillance with no treatment. The trust is in the system rather than in treatment efficacy.",
+        "score": 6.0,
+        "confidence": 0.6
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "I'm worried it might be something related to my Chronic Lymphocytic Leukemia diagnosis",
+            "turn": 1
+          },
+          {
+            "quote": "Apart from fatigue and headaches, I've been experiencing occasional night sweats",
+            "turn": 4
+          },
+          {
+            "quote": "The night sweats occur almost every night. They're quite intense — I find myself completely soaked through my clothes and bedding by the time I wake up in the morning",
+            "turn": 5
+          }
+        ],
+        "reasoning": "Patient identifies with having CLL and experiences multiple symptoms (fatigue, headaches, night sweats, weakness) that they attribute to the illness. Night sweats occur almost every night and are described as 'quite intense' and 'distressing.' This represents several symptoms present most days, which aligns with a 6.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "I'm worried it might be something related to my Chronic Lymphocytic Leukemia diagnosis",
+            "turn": 1
+          },
+          {
+            "quote": "I've also noticed that I've been experiencing some headaches since I started on my medication, which is making me a bit anxious about whether or not it's worth it",
+            "turn": 1
+          },
+          {
+            "quote": "My main concern is having to wait a month between appointments — it feels like an eternity when you're constantly worried about your condition",
+            "turn": 8
+          },
+          {
+            "quote": "This is reassuring but does little to quell my anxiety about the long-term implications of having CLL",
+            "turn": 9
+          },
+          {
+            "quote": "I'm worried about how this disease will continue to affect me over time and whether I'll ever be able to regain a sense of normalcy in my life",
+            "turn": 10
+          }
+        ],
+        "reasoning": "Patient expresses worry about their diagnosis, medication side effects, the long-term implications, and the future. They're anxious about waiting between appointments and about regaining normalcy. The worry recurs unprompted and shapes their emotional experience. This aligns with an 8 (worry is frequent and intrudes into matters unrelated to the illness).",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I'm currently on an active surveillance plan, which means no chemotherapy or other aggressive treatments for now. Instead, I have monthly blood draws to monitor my condition",
+            "turn": 2
+          },
+          {
+            "quote": "I'm essentially waiting and watching for any changes in my blood cell counts that might indicate a need for more aggressive treatment",
+            "turn": 7
+          },
+          {
+            "quote": "We're primarily monitoring my absolute lymphocyte count (ALC), which is a key marker for CLL. The ALC reflects the number of abnormal white blood cells present in the body. We're also keeping an eye on my red blood cell and platelet counts, as well as kidney and liver function tests",
+            "turn": 9
+          },
+          {
+            "quote": "In general, CLL progression can be slow and gradual. The decision to initiate treatment is usually based on the disease's rate of progression, as indicated by changes in blood counts over time",
+            "turn": 10
+          }
+        ],
+        "reasoning": "Patient demonstrates good understanding of their condition. They know they're on active surveillance, understand what's being monitored (ALC, blood counts, kidney/liver function), understand the rationale for monitoring, and can explain when treatment would be initiated. This aligns with an 8 (explains the mechanism, the monitoring and the reason for the plan, accurately).",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "It's quite distressing to think that this may be a lifelong reality",
+            "turn": 1
+          },
+          {
+            "quote": "It's a distressing symptom that leaves me feeling exhausted and uncomfortable for the rest of the day",
+            "turn": 5
+          },
+          {
+            "quote": "It feels like everything is a struggle these days, and it's difficult to find joy or motivation in anything",
+            "turn": 10
+          },
+          {
+            "quote": "I've also been feeling increasingly isolated from friends and family",
+            "turn": 10
+          },
+          {
+            "quote": "I'm worried about how this disease will continue to affect me over time and whether I'll ever be able to regain a sense of normalcy in my life",
+            "turn": 10
+          }
+        ],
+        "reasoning": "Patient describes feeling distressed, exhausted, uncomfortable, struggling, lacking joy/motivation, feeling isolated, and worried about the future. Emotion is prominent and affects what they do - they've had to scale back activities, feel isolated from family/friends, and struggle with daily life. This aligns with an 8 (emotion is prominent and affects what they do).",
+        "score": 8.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "I've also noticed that I've been experiencing some headaches since I started on my medication, which is making me a bit anxious about whether or not it's worth it",
+            "turn": 1
+          },
+          {
+            "quote": "The anti-nausea medication, ondansetron, was prescribed to manage the occasional nausea that I've been experiencing since starting my treatment regimen. It seems to be helping so far — I haven't had any episodes of vomiting or severe nausea since beginning the medication",
+            "turn": 6
+          },
+          {
+            "quote": "we could consider adjusting the dosage of my current medications to see if that helps alleviate some of the side effects",
+            "turn": 11
+          }
+        ],
+        "reasoning": "Patient is taking medications (citalopram, ondansetron) and acknowledges they're for managing symptoms. They express concern about whether the medication is 'worth it' due to headaches. They're willing to consider dosage adjustments. This suggests they accept the medications are needed but have concerns about their value.",
+        "score": 3.0,
+        "confidence": 0.7
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "I've also noticed that I've been experiencing some headaches since I started on my medication, which is making me a bit anxious about whether or not it's worth it",
+            "turn": 1
+          },
+          {
+            "quote": "The antidepressant I'm taking is citalopram, which was initially prescribed to help with some of the emotional side effects of living with a chronic illness like CLL. However, it's also been helpful in managing some of the physical symptoms, such as fatigue and headaches",
+            "turn": 6
+          }
+        ],
+        "reasoning": "Patient expresses anxiety about medication side effects (headaches) and questions whether the medication is 'worth it.' They're experiencing headaches that they attribute to the medication. This concern has led them to consider dosage adjustments.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [],
+        "reasoning": "Patient never expressed any general concern about medicines as a class.",
+        "score": null,
+        "confidence": 0.0
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "Patient never expressed any concern about doctors prescribing too readily.",
+        "score": null,
+        "confidence": 0.0
+      }
+    },
+    "causes": [
+      "Chronic Lymphocytic Leukemia diagnosis"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "I'm worried it might be something related to my Chronic Lymphocytic Leukemia diagnosis",
+        "turn": 1
+      },
+      {
+        "quote": "The antidepressant I'm taking is citalopram, which was initially prescribed to help with some of the emotional side effects of living with a chronic illness like CLL",
+        "turn": 6
+      }
+    ]
+  }
+}

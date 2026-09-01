@@ -1,0 +1,286 @@
+{
+  "patient_id": "CLL-005",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "CLL-005",
+    "clinical_summary": "Patient with CLL on monitoring-only treatment (blood tests every 4 months) experiencing new symptoms: persistent neck lumps, night sweats, fatigue, and headaches that started after beginning medication. Fatigue significantly impacts work and daily activities. Has supportive partner but keeps emotional aspects to self. Trying to stay positive and focused on what they can control, but expresses concern about progression and medication side effects.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "The fatigue has definitely made it harder for me to get through my workday. I used to be able to handle a full day's work with relative ease, but now I find myself needing more breaks and struggling to stay focused.",
+            "turn": 3
+          },
+          {
+            "quote": "In terms of looking after myself, I've been pushing myself less hard in my workouts, and sometimes I just don't have the energy for things like cooking dinner or doing household chores.",
+            "turn": 3
+          },
+          {
+            "quote": "Activities that used to be enjoyable are becoming more difficult to manage as well.",
+            "turn": 3
+          },
+          {
+            "quote": "some days I can barely get out of bed. It feels like this disease has taken over everything — my work, my time with the kids, everything.",
+            "turn": 7
+          }
+        ],
+        "reasoning": "Patient has had to significantly reduce work capacity, scale back self-care activities, and has lost the ability to do enjoyable activities. They describe the disease as having 'taken over everything' and mention 'barely get out of bed.' This aligns with an 8 on the scale - a major role is lost or substantially reduced.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "The lymph nodes in my neck have been present for a few weeks now.",
+            "turn": 2
+          },
+          {
+            "quote": "The night sweats are also relatively new, but they've become more frequent in recent days.",
+            "turn": 2
+          },
+          {
+            "quote": "Overall, I'd say things have remained fairly stable since I first noticed these symptoms.",
+            "turn": 2
+          },
+          {
+            "quote": "I worry about where things are headed.",
+            "turn": 10
+          },
+          {
+            "quote": "The fact that my symptoms seem to be getting worse lately is concerning.",
+            "turn": 10
+          }
+        ],
+        "reasoning": "Symptoms have been present for weeks, initially stable but now 'getting worse.' Patient expresses worry about where things are headed, suggesting uncertainty about the future course. They don't seem to have accepted a chronic trajectory yet - they're still trying to understand what's happening.",
+        "score": 5.0,
+        "confidence": 0.7
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I try to focus on what I can control—like taking care of myself as best I can and keeping up with my appointments and treatments.",
+            "turn": 10
+          },
+          {
+            "quote": "Sometimes I feel like I have no say in any of it.",
+            "turn": 7
+          }
+        ],
+        "reasoning": "Patient explicitly mentions focusing on what they can control (self-care, appointments, treatments) but also expresses feeling like they have 'no say in any of it.' This mixed experience suggests they're trying to exert control but feel limited.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "I trust modern medicine",
+            "turn": 11
+          },
+          {
+            "quote": "overall, I believe the plan is sound",
+            "turn": 11
+          },
+          {
+            "quote": "I'm doing my best to stay informed and manage my condition as effectively as possible.",
+            "turn": 11
+          }
+        ],
+        "reasoning": "Patient expresses trust in modern medicine and believes the monitoring plan is sound. They're trying to stay informed and manage effectively. However, they also question whether treatment is 'worth it' and worry about side effects. This suggests they see some benefit but are uncertain.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "I was diagnosed with Chronic Lymphocytic Leukemia (CLL). My understanding is that it's a type of cancer that affects the white blood cells in my body.",
+            "turn": 9
+          },
+          {
+            "quote": "It feels like this disease has taken over everything — my work, my time with the kids, everything.",
+            "turn": 7
+          }
+        ],
+        "reasoning": "Patient clearly identifies their condition as CLL and understands it affects white blood cells. They also describe how the disease has taken over their life. This is a clear identity of the illness - they know what it is and how it manifests in their life.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "I worry about where things are headed.",
+            "turn": 10
+          },
+          {
+            "quote": "The fact that my symptoms seem to be getting worse lately is concerning.",
+            "turn": 10
+          },
+          {
+            "quote": "I do have some worries about what might happen down the line.",
+            "turn": 11
+          },
+          {
+            "quote": "it's difficult not to feel anxious about the future.",
+            "turn": 11
+          }
+        ],
+        "reasoning": "Patient expresses worry about progression, future outcomes, and symptoms getting worse. They acknowledge anxiety about the future. This worry recurs unprompted and shapes some decisions (they're trying to find balance, stay positive).",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I was diagnosed with Chronic Lymphocytic Leukemia (CLL). My understanding is that it's a type of cancer that affects the white blood cells in my body.",
+            "turn": 9
+          },
+          {
+            "quote": "The specific cause isn't entirely clear to me, but I've been told that stress and genetics might play a role.",
+            "turn": 9
+          },
+          {
+            "quote": "As for how I feel about it—I guess I'm still trying to come to terms with what this means for my life going forward.",
+            "turn": 9
+          },
+          {
+            "quote": "I'm doing my best to stay informed and manage my condition as effectively as possible.",
+            "turn": 11
+          }
+        ],
+        "reasoning": "Patient knows their diagnosis and understands it affects white blood cells. They're trying to understand causes (stress, genetics) and are staying informed. However, they also say they're 'still trying to come to terms' and the cause isn't entirely clear. They're making an effort to understand but still processing.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "there are times when I feel overwhelmed by the whole situation.",
+            "turn": 9
+          },
+          {
+            "quote": "It can feel overwhelming at times",
+            "turn": 13
+          },
+          {
+            "quote": "I'm doing my best to stay positive and hopeful about the future.",
+            "turn": 10
+          },
+          {
+            "quote": "I'm doing my best to stay positive and hopeful about the future.",
+            "turn": 13
+          }
+        ],
+        "reasoning": "Patient expresses feeling overwhelmed at times and mentions emotional aspects of the journey. They're trying to stay positive and hopeful. The emotion is recurrent and affects how they speak about the future.",
+        "score": 6.0,
+        "confidence": 0.7
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "I know you said the medication should help",
+            "turn": 7
+          },
+          {
+            "quote": "I understand that without treatment, things might get worse",
+            "turn": 8
+          },
+          {
+            "quote": "I believe the plan is sound",
+            "turn": 11
+          },
+          {
+            "quote": "I'm doing my best to stay informed and manage my condition as effectively as possible.",
+            "turn": 11
+          }
+        ],
+        "reasoning": "Patient believes the monitoring plan is sound and understands that without treatment things might get worse. They're trying to stay informed and manage effectively. However, they also question whether the treatment is 'worth it' given side effects. This suggests they see some necessity but are uncertain.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "I've been getting these terrible headaches since I started",
+            "turn": 7
+          },
+          {
+            "quote": "I keep wondering if it's really worth it",
+            "turn": 7
+          },
+          {
+            "quote": "I worry about what the medication is doing to me",
+            "turn": 8
+          },
+          {
+            "quote": "The headaches started shortly after I began taking the medication.",
+            "turn": 8
+          },
+          {
+            "quote": "It's hard to say whether these headaches are directly related to my condition or if they're a side effect of the treatment.",
+            "turn": 8
+          },
+          {
+            "quote": "I worry about what the medication is doing to me and whether there are other options out there.",
+            "turn": 8
+          },
+          {
+            "quote": "They've been persistent and are starting to concern me.",
+            "turn": 13
+          }
+        ],
+        "reasoning": "Patient has specific concerns about headaches (side effects), questioning whether treatment is worth it, and worries about what the medication is doing to them. They've raised these concerns and they've become more concerning over time.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "I worry about what the medication is doing to me",
+            "turn": 8
+          },
+          {
+            "quote": "I worry about what the medication is doing to me and whether there are other options out there.",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient expresses concern about what the medication is doing to them, which suggests some general concern about medicines as a class. However, they also trust modern medicine and believe the plan is sound.",
+        "score": 3.0,
+        "confidence": 0.6
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "Patient never raised concerns about doctors prescribing too readily.",
+        "score": null,
+        "confidence": 0.0
+      }
+    },
+    "causes": [
+      "stress at work",
+      "stress and genetics"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "I've been doing some research and wondering if it might be related to my stress levels at work",
+        "turn": 4
+      },
+      {
+        "quote": "I've been told that stress and genetics might play a role.",
+        "turn": 9
+      }
+    ]
+  }
+}

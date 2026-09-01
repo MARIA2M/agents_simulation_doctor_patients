@@ -1,0 +1,203 @@
+{
+  "patient_id": "HIV-005",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "HIV-005",
+    "clinical_summary": "Patient has been living with HIV for 10 years, currently on Triumeq (abacavir/dolutegravir/lamivudine) daily. They report the illness affects every aspect of their life and causes significant emotional distress. They sometimes struggle with medication consistency, taking drug holidays when feeling well. They have mixed feelings about their current treatment approach and worry about long-term use, side effects, and resistance. They also experience isolation and worry about how others might perceive them due to their diagnosis.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "my chronic illness has been weighing on me lately. It's a constant struggle and seems to affect every aspect of my life. Even though the symptoms aren't always severe, they are enough to make things difficult.",
+            "turn": 1
+          }
+        ],
+        "reasoning": "Patient describes the illness as affecting every aspect of their life and being a constant struggle, with symptoms making things difficult despite not always being severe.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "I've been living with Human Immunodeficiency Virus (HIV) infection for the past 10 years or so now. It's something that I feel will always be a part of my life.",
+            "turn": 2
+          }
+        ],
+        "reasoning": "Patient has had HIV for 10 years and feels it will always be a part of their life, indicating they plan on it continuing.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "there are days when it feels like I'm definitely in the driver's seat, taking charge of my care and doing what needs to be done. But then there are other times when the illness seems to be driving things - I feel fatigued or have headaches that won't go away, and it's clear that my body is acting up regardless of my own efforts.",
+            "turn": 5
+          }
+        ],
+        "reasoning": "Patient describes mixed control - sometimes feeling in charge, other times the illness drives things. They take drug holidays when feeling well, showing some agency but also that they sometimes let the illness control their behavior.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "Sometimes I wonder if this treatment will change over time, but I trust your judgment as my doctor.",
+            "turn": 3
+          }
+        ],
+        "reasoning": "Patient trusts the doctor but has mixed feelings about the treatment approach, wondering if it will change and whether there might be better alternatives.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "I've been living with Human Immunodeficiency Virus (HIV) infection for the past 10 years or so now.",
+            "turn": 2
+          }
+        ],
+        "reasoning": "Patient clearly identifies their condition as HIV infection.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "I've been feeling very stressed about it all.",
+            "turn": 1
+          },
+          {
+            "quote": "It's quite distressing really.",
+            "turn": 2
+          },
+          {
+            "quote": "It's really the emotional toll - feeling like this illness is always present and something I'll need to deal with for the rest of my life can be quite overwhelming at times.",
+            "turn": 6
+          },
+          {
+            "quote": "There are also days when I worry about how others might perceive me or judge me because of my diagnosis",
+            "turn": 6
+          }
+        ],
+        "reasoning": "Patient expresses significant worry and distress about the illness, including emotional toll, fear of judgment, and feeling overwhelmed by the constant presence of the illness.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I understand it weakens my immune system and there's always a risk of developing opportunistic infections or diseases.",
+            "turn": 2
+          }
+        ],
+        "reasoning": "Patient has a good understanding of their condition - they know it weakens the immune system and carries a risk of opportunistic infections.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "It's quite distressing really.",
+            "turn": 2
+          },
+          {
+            "quote": "It's really the emotional toll - feeling like this illness is always present and something I'll need to deal with for the rest of my life can be quite overwhelming at times.",
+            "turn": 6
+          },
+          {
+            "quote": "There are also days when I worry about how others might perceive me or judge me because of my diagnosis, even though I know it shouldn't matter. It's a constant struggle but one that I'm trying my best to navigate.",
+            "turn": 6
+          }
+        ],
+        "reasoning": "Patient describes significant emotional distress, feeling overwhelmed by the constant presence of the illness, and worry about how others perceive them. They mention it's a 'constant struggle' and they're trying to navigate it.",
+        "score": 8.0,
+        "confidence": 0.9
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "I know how important it is to stay consistent with my medication, given what we talked about last time.",
+            "turn": 3
+          },
+          {
+            "quote": "I understand the importance of taking medications as prescribed by my doctor and that they can be life-saving at times.",
+            "turn": 7
+          },
+          {
+            "quote": "there are days when I wonder if this is really the best approach for me in the long run.",
+            "turn": 4
+          }
+        ],
+        "reasoning": "Patient recognizes the importance of their medication and understands it can be life-saving, but they also sometimes doubt whether it's the 'best approach' for them in the long term and wonder about other options.",
+        "score": 3.5,
+        "confidence": 0.7
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "I do have some concerns about the medication. I'm worried about potential side effects and whether my body could develop resistance over time.",
+            "turn": 4
+          },
+          {
+            "quote": "there are days when I wonder if this is really the best approach for me in the long run.",
+            "turn": 4
+          },
+          {
+            "quote": "I've also been thinking more about how long I'll need to keep taking it.",
+            "turn": 4
+          }
+        ],
+        "reasoning": "Patient has specific concerns about side effects, resistance, and how long they'll need to take the medication. They wonder if it's the best approach and have thought about reducing or stopping it.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "It's a mixed bag, really. I understand the importance of taking medications as prescribed by my doctor and that they can be life-saving at times. However, there are days when I wonder about potential side effects or whether there might be less invasive treatment options out there.",
+            "turn": 7
+          }
+        ],
+        "reasoning": "Patient holds a mixed view - understands medications can be life-saving but also worries about potential side effects and whether there might be less invasive options. This suggests mild generalised caution about taking things long-term.",
+        "score": 3.0,
+        "confidence": 0.7
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [
+          {
+            "quote": "As for doctors prescribing medication too readily, I do have some concerns about that. It's important to consider individual circumstances and preferences, as well as to ensure that patients fully understand the benefits and risks involved with any medications they're prescribed.",
+            "turn": 7
+          }
+        ],
+        "reasoning": "Patient has concerns about doctors prescribing medication too readily and believes it's important to consider individual circumstances and ensure patients understand benefits and risks.",
+        "score": 4.0,
+        "confidence": 0.8
+      }
+    },
+    "causes": [
+      "previous partner who didn't disclose his status",
+      "bad luck"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "I believe it may have been related to a previous partner who didn't disclose his status. But there's also a part of me that feels like bad luck was involved too.",
+        "turn": 4
+      }
+    ]
+  }
+}

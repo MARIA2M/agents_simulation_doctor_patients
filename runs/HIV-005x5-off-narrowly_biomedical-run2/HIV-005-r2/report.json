@@ -1,0 +1,216 @@
+{
+  "patient_id": "HIV-005",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "HIV-005",
+    "clinical_summary": "Patient with HIV diagnosed 5 years ago, on Triumeq for 3 years, with variable adherence. Viral load low but detectable at 340 copies/mL. Reports occasional tension-type headaches once every two weeks, worse with stress, and moderate fatigue. Expresses concern about viral load and future course of illness, requests resources for stress management.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "I've been feeling quite run down lately",
+            "turn": 1
+          },
+          {
+            "quote": "Just the usual fatigue that I attribute to work stress",
+            "turn": 6
+          },
+          {
+            "quote": "On a typical day, I'd say my energy levels are somewhere in the middle — not too high, but not too low either",
+            "turn": 7
+          }
+        ],
+        "reasoning": "Patient reports moderate fatigue and feeling run down, but these are described as manageable and attributed to work stress. No major roles have been lost or substantially reduced.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "I've been living with HIV since it was diagnosed about five years ago",
+            "turn": 2
+          },
+          {
+            "quote": "But I'm always worried about what might be coming down the line with this illness",
+            "turn": 6
+          }
+        ],
+        "reasoning": "Patient has had HIV for 5 years and expresses concern about future course, but does not explicitly state whether they expect it to end or continue indefinitely.",
+        "score": 6.0,
+        "confidence": 0.6
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "To be honest, though, I sometimes forget to take my pill when I get caught up in things or feel like I'm doing okay and don't need it. I've also taken short breaks from taking the medication when I felt particularly well.",
+            "turn": 4
+          },
+          {
+            "quote": "As for improving my adherence, it's definitely a challenge. I'm aware of how important it is to take my medication consistently, but it can be difficult to remember, especially when things are busy or stressful. I am willing to work on it though and would appreciate some guidance on how best to do that.",
+            "turn": 7
+          }
+        ],
+        "reasoning": "Patient acknowledges importance of adherence but describes it as challenging and dependent on external factors. Expresses willingness to improve but frames it as needing help rather than actively managing.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "My last viral load test was a few months ago, and I believe it showed that my viral load is low but detectable at around 340 copies/mL.",
+            "turn": 5
+          },
+          {
+            "quote": "I understand that having a detectable viral load is not ideal, and I'm definitely concerned about it.",
+            "turn": 6
+          }
+        ],
+        "reasoning": "Patient understands treatment affects viral load and is concerned about detectable viral load, recognizing treatment matters but doesn't attribute current state directly to treatment effectiveness.",
+        "score": 6.0,
+        "confidence": 0.6
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "I've been living with HIV since it was diagnosed about five years ago",
+            "turn": 2
+          },
+          {
+            "quote": "Just the usual fatigue that I attribute to work stress",
+            "turn": 6
+          },
+          {
+            "quote": "As for anything else, it's mostly just living with this illness and dealing with the uncertainty that comes along with it.",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient identifies as someone living with HIV, but symptoms are attributed to other causes. Illness is part of identity but not primary source of symptoms.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "I understand that having a detectable viral load is not ideal, and I'm definitely concerned about it.",
+            "turn": 6
+          },
+          {
+            "quote": "But I'm always worried about what might be coming down the line with this illness.",
+            "turn": 6
+          },
+          {
+            "quote": "It would be nice to have more resources or support for managing stress and anxiety related to that.",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient expresses worry about viral load and future course, requests resources for stress management, suggesting worry recurs and affects decisions.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "My last viral load test was a few months ago, and I believe it showed that my viral load is low but detectable at around 340 copies/mL.",
+            "turn": 5
+          },
+          {
+            "quote": "I understand that having a detectable viral load is not ideal, and I'm definitely concerned about it.",
+            "turn": 6
+          },
+          {
+            "quote": "I'm aware of how important it is to take my medication consistently",
+            "turn": 7
+          }
+        ],
+        "reasoning": "Patient understands detectable viral load is not ideal and can increase resistance risk. Knows their viral load status and importance of adherence.",
+        "score": 6.0,
+        "confidence": 0.6
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "But I'm always worried about what might be coming down the line with this illness.",
+            "turn": 6
+          },
+          {
+            "quote": "It would be nice to have more resources or support for managing stress and anxiety related to that.",
+            "turn": 8
+          },
+          {
+            "quote": "Thank you for all your help today. It's always reassuring to talk things over with a professional like yourself.",
+            "turn": 9
+          }
+        ],
+        "reasoning": "Patient expresses worry about future and requests resources for stress management, finds reassurance in professional support.",
+        "score": 6.0,
+        "confidence": 0.7
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "To be honest, though, I sometimes forget to take my pill when I get caught up in things or feel like I'm doing okay and don't need it. I've also taken short breaks from taking the medication when I felt particularly well.",
+            "turn": 4
+          },
+          {
+            "quote": "I'm aware of how important it is to take my medication consistently, but it can be difficult to remember, especially when things are busy or stressful. I am willing to work on it though and would appreciate some guidance on how best to do that.",
+            "turn": 7
+          }
+        ],
+        "reasoning": "Patient acknowledges importance of medication but has taken short breaks when feeling well, suggesting occasional doubt about necessity.",
+        "score": 3.0,
+        "confidence": 0.6
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "As for side effects from Triumeq, I haven't experienced any of the more severe ones like skin rash or fever, but I have noticed occasional gastrointestinal issues like mild nausea or diarrhea. Nothing too extreme though.",
+            "turn": 5
+          }
+        ],
+        "reasoning": "Patient reports mild GI side effects but doesn't express concern about them. No concerns raised unprompted.",
+        "score": 2.0,
+        "confidence": 0.7
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [],
+        "reasoning": "No evidence of general beliefs about medicines as a class.",
+        "score": null,
+        "confidence": 0.0
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "No evidence of general beliefs about prescribing practices.",
+        "score": null,
+        "confidence": 0.0
+      }
+    },
+    "causes": [
+      "stress from work"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "The headaches started about a year after my diagnosis, but I wasn't sure if they were related to that or just stress from work.",
+        "turn": 2
+      },
+      {
+        "quote": "Just the usual fatigue that I attribute to work stress",
+        "turn": 6
+      }
+    ]
+  }
+}

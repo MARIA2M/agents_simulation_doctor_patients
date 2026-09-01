@@ -1,0 +1,202 @@
+{
+  "patient_id": "CLL-001",
+  "turns": 9,
+  "stop_reason": "doctor",
+  "conversation": [
+    {
+      "role": "doctor",
+      "content": "How are you monitoring your blood pressure at home? Do you have a monitor and what are your typical readings?",
+      "turn": 1
+    },
+    {
+      "role": "patient",
+      "content": "Oh, I'm sorry, but my situation doesn't involve high blood pressure or monitoring it at home. My focus is on managing my chronic illness, which we've discussed previously. As far as my blood pressure goes, I don't typically check it since that's not a concern for me right now.",
+      "turn": 1
+    },
+    {
+      "role": "doctor",
+      "content": "I understand. What chronic condition are you managing today?",
+      "turn": 2
+    },
+    {
+      "role": "patient",
+      "content": "I'm managing Chronic Lymphocytic Leukemia (CLL) at the moment. It's been a slow-progressing situation, but it has definitely impacted my life in various ways. I've learned to adjust my lifestyle and routines accordingly while keeping up with regular check-ups and monitoring from my healthcare team.",
+      "turn": 2
+    },
+    {
+      "role": "doctor",
+      "content": "What symptoms or concerns are you having with your CLL right now? Have you noticed any changes since your last visit?",
+      "turn": 3
+    },
+    {
+      "role": "patient",
+      "content": "Currently, the main symptom I'm experiencing is mild fatigue that comes and goes throughout the day. I've also had occasional night sweats lately which can be quite uncomfortable. My lymph nodes in my neck have been palpable but not enlarged. Since my last visit, there haven't been any significant changes in these symptoms. However, I'll make sure to report anything new or concerning during my next appointment with the doctor.",
+      "turn": 3
+    },
+    {
+      "role": "doctor",
+      "content": "What CLL treatment are you currently receiving, and how often do you take your medication? Are you experiencing any side effects?",
+      "turn": 4
+    },
+    {
+      "role": "patient",
+      "content": "Currently, I am not on any specific CLL treatment as my physician has advised me to follow an active surveillance approach due to the slow progress of the disease. This means that I don't have any medication prescribed for it at the moment and no need for regular doses. However, I still attend monthly blood draws to monitor my condition. So far, there have been no significant side effects related to not taking medication specifically for CLL.",
+      "turn": 4
+    },
+    {
+      "role": "doctor",
+      "content": "What were your most recent blood test results? Specifically, what were your white blood cell count and lymphocyte levels?",
+      "turn": 5
+    },
+    {
+      "role": "patient",
+      "content": "In my most recent blood test results, my white blood cell count was within the normal range for a healthy individual, which is great to hear since CLL often affects this count. My lymphocyte levels have also remained stable, which is something that my doctor and I are keeping an eye on as part of the active surveillance process. Overall, these results show that things remain relatively stable at the moment, but we'll continue to closely monitor any changes over time.",
+      "turn": 5
+    },
+    {
+      "role": "doctor",
+      "content": "Is there anything else about your CLL or the active surveillance approach you'd like to discuss today?",
+      "turn": 6
+    },
+    {
+      "role": "patient",
+      "content": "One thing I've been struggling with is understanding how long I might need to follow this active surveillance approach. It can be quite challenging knowing that treatment might not be needed for years, if at all. At times, it feels like there's a sense of limbo or uncertainty around the whole situation. Despite these feelings, though, I try my best to stay informed and proactive in managing my condition while being mindful of the potential challenges ahead.",
+      "turn": 6
+    },
+    {
+      "role": "doctor",
+      "content": "Your doctor can provide specific guidance about your expected timeline, but in general, active surveillance for CLL means regular monitoring without treatment until there's evidence the disease is progressing or causing symptoms that require intervention. The goal is to avoid unnecessary treatment while watching for changes.",
+      "turn": 7
+    },
+    {
+      "role": "patient",
+      "content": "Thank you for clarifying that. It does help to know what to expect and how we'll be navigating this journey together. I understand there might be times when decisions about my care are complex, but your guidance and support certainly ease some of the anxiety and uncertainty. Let's continue to work together to manage this condition as best as possible while keeping my overall health and well-being in mind.",
+      "turn": 7
+    },
+    {
+      "role": "doctor",
+      "content": "To summarize, you have CLL managed with active surveillance. Your recent blood work shows stable white blood cell counts. You're experiencing mild fatigue and occasional night sweats, which you'll continue to monitor. Your next appointment would be for your monthly blood draw. Is there anything else you'd like to discuss?",
+      "turn": 8
+    },
+    {
+      "role": "patient",
+      "content": "That's a pretty accurate summary of my situation right now. I think we've covered most aspects related to my CLL and the monitoring process. If anything changes or new symptoms arise, I will definitely bring them up in our next conversation. Otherwise, it was good discussing this with you today, and I appreciate all your support and understanding about my condition.",
+      "turn": 8
+    },
+    {
+      "role": "doctor",
+      "content": "You're welcome. I'll be here for your next appointment. Take care, and don't hesitate to contact your healthcare team if you have any concerns between visits.",
+      "turn": 9
+    },
+    {
+      "role": "patient",
+      "content": "Thank you so much. I truly appreciate it. Have a great day!",
+      "turn": 9
+    }
+  ],
+  "coverage_hint": {},
+  "working_notes": [],
+  "events": [],
+  "usage": [
+    {
+      "role": "doctor",
+      "eval_tokens": 184,
+      "prompt_tokens": 1527
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 62,
+      "prompt_tokens": 1210
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 98,
+      "prompt_tokens": 1776
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 64,
+      "prompt_tokens": 1292
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 111,
+      "prompt_tokens": 1941
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 85,
+      "prompt_tokens": 1388
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 128,
+      "prompt_tokens": 2140
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 86,
+      "prompt_tokens": 1506
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 123,
+      "prompt_tokens": 2357
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 92,
+      "prompt_tokens": 1624
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 186,
+      "prompt_tokens": 2575
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 89,
+      "prompt_tokens": 1744
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 136,
+      "prompt_tokens": 2853
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 79,
+      "prompt_tokens": 1893
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 155,
+      "prompt_tokens": 3071
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 71,
+      "prompt_tokens": 2042
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 99,
+      "prompt_tokens": 3300
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 16,
+      "prompt_tokens": 2155
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 609,
+      "prompt_tokens": 3418
+    },
+    {
+      "role": "report",
+      "eval_tokens": 6373,
+      "prompt_tokens": 7743
+    }
+  ]
+}

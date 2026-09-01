@@ -1,0 +1,303 @@
+{
+  "patient_id": "HIV-003",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "HIV-003",
+    "clinical_summary": "Patient has been living with HIV for over 10 years and has been on Tivicay and Descovy once daily for about 2 years. They're experiencing persistent, intense headaches that started about 6 months after starting this regimen. The headaches are affecting their ability to concentrate at work and enjoy time with family. The illness has impacted their work (requiring time off), relationships (difficulty maintaining them), and daily functioning (some days they can barely get out of bed). They've educated themselves about HIV over the years and become an advocate for others, but still feel the illness dominates their life. They're balancing the necessity of the medication with concerns about side effects and are open to adjusting their treatment.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "some days I can barely get out of bed",
+            "turn": 1
+          },
+          {
+            "quote": "It feels like this disease has taken over everything — my work, my time with the kids, everything",
+            "turn": 1
+          },
+          {
+            "quote": "they've made it hard for me to concentrate at work or even enjoy time with family",
+            "turn": 2
+          },
+          {
+            "quote": "difficulty maintaining relationships because of the challenges and uncertainties surrounding my health",
+            "turn": 6
+          },
+          {
+            "quote": "It's also affected my work, as I often need to take time off for appointments or when I'm feeling particularly unwell",
+            "turn": 6
+          }
+        ],
+        "reasoning": "The patient describes significant impact across multiple domains - daily functioning (can barely get out of bed), work (concentration issues, time off needed), family (time with kids affected), and relationships (difficulty maintaining). This is substantial impact on their life.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "I've been living with HIV for quite some time now — over 10 years",
+            "turn": 2
+          },
+          {
+            "quote": "I feel like this illness is always going to be part of who I am",
+            "turn": 3
+          },
+          {
+            "quote": "this is a lifelong battle",
+            "turn": 4
+          },
+          {
+            "quote": "knowing that HIV is something you'll be managing for the rest of your life",
+            "turn": 6
+          }
+        ],
+        "reasoning": "The patient clearly views HIV as a lifelong, chronic condition that will be part of them forever. They talk about it as a 'lifelong battle' and 'always going to be part of who I am.'",
+        "score": 8.0,
+        "confidence": 0.95
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "Sometimes I feel like I have no say in any of it",
+            "turn": 1
+          },
+          {
+            "quote": "it's up to patients like me to stay informed and advocate for ourselves when necessary",
+            "turn": 5
+          },
+          {
+            "quote": "I try to stay informed as much as possible about my illness so I can make good decisions about how best to manage it",
+            "turn": 4
+          },
+          {
+            "quote": "I've become an advocate for others living with HIV as well",
+            "turn": 6
+          },
+          {
+            "quote": "I try not to dwell on those things too much; instead, I focus on staying positive and making the most out of each day",
+            "turn": 6
+          }
+        ],
+        "reasoning": "The patient has mixed feelings - they acknowledge feeling helpless at times ('no say in any of it') but also emphasize self-advocacy, staying informed, and making decisions. They've become an advocate for others, which shows active engagement. However, the feeling of having 'no say' suggests limited personal control.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "I know how important these drugs are for managing my HIV",
+            "turn": 4
+          },
+          {
+            "quote": "these medications have been keeping me healthy for years now",
+            "turn": 4
+          },
+          {
+            "quote": "I'm definitely feeling like these headaches are affecting my ability to function well day-to-day",
+            "turn": 7
+          },
+          {
+            "quote": "If there's any way we could adjust my medications or add something new to help alleviate them, that would be a step in the right direction",
+            "turn": 7
+          }
+        ],
+        "reasoning": "The patient clearly believes the medication is important and has been keeping them healthy. However, they're experiencing side effects that are affecting their functioning, and they're actively seeking treatment adjustments. This shows they recognize the treatment's role but are also concerned about its limitations.",
+        "score": 7.0,
+        "confidence": 0.85
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "I've been living with HIV for quite some time now — over 10 years",
+            "turn": 2
+          },
+          {
+            "quote": "I feel like this illness is always going to be part of who I am",
+            "turn": 3
+          },
+          {
+            "quote": "I've become an advocate for others living with HIV as well",
+            "turn": 6
+          },
+          {
+            "quote": "I wouldn't wish this kind of chronic illness on anyone",
+            "turn": 6
+          }
+        ],
+        "reasoning": "The patient has integrated HIV into their identity - it's 'always going to be part of who I am.' They've also developed a positive identity as an advocate for others. The illness is a significant part of their self-concept.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "I keep wondering if it's really worth it",
+            "turn": 1
+          },
+          {
+            "quote": "The worry for me is that the headaches might get worse or even become chronic if I continue taking the medications as they are",
+            "turn": 4
+          },
+          {
+            "quote": "I'm definitely feeling like these headaches are affecting my ability to function well day-to-day",
+            "turn": 7
+          },
+          {
+            "quote": "I wouldn't wish this kind of chronic illness on anyone",
+            "turn": 6
+          }
+        ],
+        "reasoning": "The patient expresses worry about the medication's worth, fears about headaches becoming chronic, and acknowledges the illness is affecting their functioning. They also express that they wouldn't wish this on anyone, suggesting significant concern.",
+        "score": 7.0,
+        "confidence": 0.85
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "Over the years, I've learned so much about living with HIV — how to manage symptoms, stay healthy, and keep up with my medications",
+            "turn": 3
+          },
+          {
+            "quote": "I try to stay informed as much as possible about my illness so I can make good decisions about how best to manage it",
+            "turn": 4
+          },
+          {
+            "quote": "I've learned so much about my condition and how to live with it",
+            "turn": 6
+          },
+          {
+            "quote": "I've become an advocate for others living with HIV as well",
+            "turn": 6
+          }
+        ],
+        "reasoning": "The patient has educated themselves extensively over 10 years, knows how to manage symptoms and stay healthy, and actively seeks information to make good decisions. They've also become an advocate, which requires understanding the condition well.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "some days I can barely get out of bed",
+            "turn": 1
+          },
+          {
+            "quote": "It feels like this disease has taken over everything",
+            "turn": 1
+          },
+          {
+            "quote": "I'm trying to stay positive and keep moving forward",
+            "turn": 3
+          },
+          {
+            "quote": "It's a mixed bag, doctor. On one hand, I'm proud of how far I've come",
+            "turn": 6
+          },
+          {
+            "quote": "there are days when I feel like this illness has taken over my life completely",
+            "turn": 6
+          },
+          {
+            "quote": "I try not to dwell on those things too much; instead, I focus on staying positive and making the most out of each day",
+            "turn": 6
+          },
+          {
+            "quote": "Overall, though, it's a difficult situation to be in — I wouldn't wish this kind of chronic illness on anyone",
+            "turn": 6
+          }
+        ],
+        "reasoning": "The patient describes emotional impact - feeling overwhelmed, pride in progress, days where the illness dominates their life, and trying to stay positive. They acknowledge the difficulty and wouldn't wish this on anyone, showing significant emotional response.",
+        "score": 7.0,
+        "confidence": 0.85
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "I know how important these drugs are for managing my HIV",
+            "turn": 4
+          },
+          {
+            "quote": "these medications have been keeping me healthy for years now",
+            "turn": 4
+          },
+          {
+            "quote": "I'm definitely feeling like these headaches are affecting my ability to function well day-to-day",
+            "turn": 7
+          },
+          {
+            "quote": "If there's any way we could adjust my medications or add something new to help alleviate them, that would be a step in the right direction",
+            "turn": 7
+          }
+        ],
+        "reasoning": "The patient clearly believes the medication is important and has been keeping them healthy. They're experiencing side effects but still recognize the necessity. They're open to adjustments but not to stopping.",
+        "score": 4.5,
+        "confidence": 0.85
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "I've been getting these terrible headaches since I started",
+            "turn": 1
+          },
+          {
+            "quote": "I keep wondering if it's really worth it",
+            "turn": 1
+          },
+          {
+            "quote": "The worry for me is that the headaches might get worse or even become chronic if I continue taking the medications as they are",
+            "turn": 4
+          },
+          {
+            "quote": "I can't help but wonder if there might be other options out there to alleviate these side effects without sacrificing my health",
+            "turn": 4
+          },
+          {
+            "quote": "I'm definitely feeling like these headaches are affecting my ability to function well day-to-day",
+            "turn": 7
+          }
+        ],
+        "reasoning": "The patient has significant concerns about the headaches, worries about them getting worse or becoming chronic, questions whether the medication is worth it, and is actively seeking alternatives. These concerns are affecting their functioning.",
+        "score": 4.5,
+        "confidence": 0.9
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "there have been times when I've felt like doctors were too quick to prescribe new medications without considering all of the potential side effects or alternatives",
+            "turn": 5
+          }
+        ],
+        "reasoning": "The patient has experienced situations where they felt doctors were too quick to prescribe without considering side effects. This suggests some general caution about medications, but it's not a strong anti-medication stance.",
+        "score": 3.0,
+        "confidence": 0.75
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [
+          {
+            "quote": "there have been times when I've felt like doctors were too quick to prescribe new medications without considering all of the potential side effects or alternatives",
+            "turn": 5
+          }
+        ],
+        "reasoning": "The patient has had experiences where they felt doctors were too quick to prescribe, but they also say 'most are genuinely committed to helping their patients' and 'Overall though, I do believe that doctors are genuinely trying their best.' This is a mild skepticism about overprescribing.",
+        "score": 3.0,
+        "confidence": 0.75
+      }
+    },
+    "causes": [],
+    "causes_evidence": []
+  }
+}

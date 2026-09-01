@@ -1,0 +1,249 @@
+{
+  "patient_id": "CLL-003",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "CLL-003",
+    "clinical_summary": "Living with early-stage CLL for about a year, detected during routine blood test and monitored every three months. Started first CLL-related medication a few weeks ago, which is causing morning headaches lasting all day and increased fatigue after work. Takes extra painkillers for headaches. Reports feeling overwhelmed, with illness affecting ability to get out of bed, work, and spend quality time with children. Wants to understand CLL progression and treatment options, and feels he should be more involved in decision-making rather than just reacting. Has strong support from wife and friends but has been hesitant to bring up concerns with hematologist due to not wanting to seem ungrateful or add to their workload.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "some days I can barely get out of bed",
+            "turn": 1
+          },
+          {
+            "quote": "It feels like this disease has taken over everything — my work, my time with the kids, everything",
+            "turn": 1
+          },
+          {
+            "quote": "everything is a struggle these days",
+            "turn": 2
+          },
+          {
+            "quote": "harder to spend quality time with my kids or do the things I used to enjoy",
+            "turn": 2
+          }
+        ],
+        "reasoning": "The patient describes being unable to get out of bed, having the disease take over work and family time, and everything being a struggle. This shows significant impact on daily functioning and major roles.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "not knowing exactly how this will play out",
+            "turn": 5
+          },
+          {
+            "quote": "what might happen down the line",
+            "turn": 5
+          },
+          {
+            "quote": "I guess I'll have to see how things go from here",
+            "turn": 10
+          }
+        ],
+        "reasoning": "The patient expresses uncertainty about the future course of the illness, doesn't know how it will play out, and is taking things one step at a time. He's aware CLL can be managed but uncertain about progression.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "Sometimes I feel like I have no say in any of it",
+            "turn": 1
+          },
+          {
+            "quote": "feeling like I'm an active participant rather than just reacting to what's happening",
+            "turn": 7
+          },
+          {
+            "quote": "I think it would be about having better information — understanding more about the science behind CLL, knowing what to expect from treatment, and being able to make informed decisions that align with my values and priorities",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient feels he has no say in the illness but wants to be an active participant and make informed decisions. He recognizes the need for information and partnership.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "I'm not sure if the medication has helped with the CLL symptoms yet",
+            "turn": 6
+          },
+          {
+            "quote": "It's hard for me to say at this point whether it's helping or adding to the burden",
+            "turn": 6
+          },
+          {
+            "quote": "I've been wondering if that might have been too much for my body all at once",
+            "turn": 5
+          }
+        ],
+        "reasoning": "The patient is uncertain whether the medication is helping or adding to the burden. He's questioning whether it's appropriate given the side effects.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "I've been living with CLL for about a year now",
+            "turn": 4
+          },
+          {
+            "quote": "this disease has taken over everything",
+            "turn": 1
+          }
+        ],
+        "reasoning": "The patient identifies as living with CLL and describes the disease as having taken over his life. He attributes symptoms to the illness.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "it can be scary not knowing exactly how this will play out",
+            "turn": 5
+          },
+          {
+            "quote": "I often worry about what might happen down the line",
+            "turn": 5
+          },
+          {
+            "quote": "it has definitely been an uphill battle at times — it's hard not to feel overwhelmed by everything",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient expresses worry about the future course of the illness and describes feeling overwhelmed. The worry recurs unprompted and affects his emotional state.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "My understanding of my illness is that it affects everyone differently and I know there can be side effects from treatment",
+            "turn": 3
+          },
+          {
+            "quote": "It was detected during a routine blood test and has been monitored since then",
+            "turn": 4
+          },
+          {
+            "quote": "my condition is very early stage and I'm not currently on any medication, but I need to have follow-up appointments every three months or so to keep an eye on the blood count",
+            "turn": 4
+          },
+          {
+            "quote": "many people with CLL can live normal lifespans and never need treatment",
+            "turn": 4
+          },
+          {
+            "quote": "understanding more about how the disease progresses and what factors might influence its course",
+            "turn": 10
+          }
+        ],
+        "reasoning": "The patient has a good understanding of his CLL diagnosis, knows it's early stage, understands the monitoring plan, and is aware of the general prognosis. He wants to learn more about progression and factors influencing course.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "it can be scary not knowing exactly how this will play out",
+            "turn": 5
+          },
+          {
+            "quote": "I often worry about what might happen down the line",
+            "turn": 5
+          },
+          {
+            "quote": "it has definitely been an uphill battle at times — it's hard not to feel overwhelmed by everything",
+            "turn": 8
+          },
+          {
+            "quote": "it feels good to have had this conversation and to know that there's a plan in place",
+            "turn": 10
+          }
+        ],
+        "reasoning": "The patient describes feeling scared, worried, and overwhelmed. The emotion is prominent and affects how he speaks about the future. He acknowledges the emotional burden.",
+        "score": 6.0,
+        "confidence": 0.7
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "The hematologist prescribed me something to help manage the symptoms and keep an eye on the blood count",
+            "turn": 5
+          },
+          {
+            "quote": "I think I just want to find a way to manage these symptoms so that day-to-day life feels more manageable again",
+            "turn": 6
+          },
+          {
+            "quote": "If the medication could help with those headaches and give me back some of the energy I used to have, that would be a good start",
+            "turn": 6
+          },
+          {
+            "quote": "understanding more about the science behind CLL, knowing what to expect from treatment",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient accepts the medication is prescribed for symptom management and blood count monitoring. He wants it to help manage symptoms and give him back energy. He's not questioning its necessity but is concerned about side effects.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "I've been getting these terrible headaches since I started",
+            "turn": 1
+          },
+          {
+            "quote": "I've been wondering if that might have been too much for my body all at once",
+            "turn": 5
+          },
+          {
+            "quote": "I'm not sure if the medication has helped with the CLL symptoms yet because my energy levels are still low and I've been dealing with these headaches",
+            "turn": 6
+          },
+          {
+            "quote": "I haven't talked specifically with the hematologist about the medication causing the headaches",
+            "turn": 7
+          }
+        ],
+        "reasoning": "The patient has specific concerns about headaches and whether the medication is appropriate. He hasn't brought these concerns to his hematologist yet. The concerns have led him to consider whether the medication is 'too much for my body.'",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [],
+        "reasoning": "The patient doesn't express general concerns about medicines being harmful. His concerns are specific to this medication and its side effects.",
+        "score": null,
+        "confidence": 0.0
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "The patient doesn't express concerns about overprescribing. His hesitation is about not wanting to burden his hematologist, not about the prescribing practice itself.",
+        "score": null,
+        "confidence": 0.0
+      }
+    },
+    "causes": [],
+    "causes_evidence": []
+  }
+}

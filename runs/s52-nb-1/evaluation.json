@@ -1,0 +1,2976 @@
+{
+  "batch": "s52-nb-1",
+  "reports": 20,
+  "patients": 10,
+  "unparsed": [],
+  "ground_truth_source": "patients/*.json",
+  "overall": {
+    "mae": 1.655,
+    "coverage_rate": 0.767,
+    "between_patient_r": 0.633
+  },
+  "by_dimension": {
+    "consequences": {
+      "dimension": "consequences",
+      "mae": 1.8,
+      "bias": -1.5,
+      "scored": 20,
+      "na": 0,
+      "between_patient_r": 0.438,
+      "coverage_rate": 1.0
+    },
+    "timeline": {
+      "dimension": "timeline",
+      "mae": 2.733,
+      "bias": -2.733,
+      "scored": 15,
+      "na": 5,
+      "between_patient_r": -0.038,
+      "coverage_rate": 0.75
+    },
+    "personal_control": {
+      "dimension": "personal_control",
+      "mae": 1.706,
+      "bias": -0.647,
+      "scored": 17,
+      "na": 3,
+      "between_patient_r": 0.376,
+      "coverage_rate": 0.85
+    },
+    "treatment_control": {
+      "dimension": "treatment_control",
+      "mae": 1.5,
+      "bias": -1.056,
+      "scored": 18,
+      "na": 2,
+      "between_patient_r": 0.484,
+      "coverage_rate": 0.9
+    },
+    "identity": {
+      "dimension": "identity",
+      "mae": 1.2,
+      "bias": 0.4,
+      "scored": 20,
+      "na": 0,
+      "between_patient_r": 0.807,
+      "coverage_rate": 1.0
+    },
+    "concern": {
+      "dimension": "concern",
+      "mae": 1.842,
+      "bias": -1.632,
+      "scored": 19,
+      "na": 1,
+      "between_patient_r": 0.216,
+      "coverage_rate": 0.95
+    },
+    "coherence": {
+      "dimension": "coherence",
+      "mae": 1.667,
+      "bias": -0.556,
+      "scored": 18,
+      "na": 2,
+      "between_patient_r": 0.24,
+      "coverage_rate": 0.9
+    },
+    "emotional_response": {
+      "dimension": "emotional_response",
+      "mae": 2.632,
+      "bias": -2.526,
+      "scored": 19,
+      "na": 1,
+      "between_patient_r": 0.537,
+      "coverage_rate": 0.95
+    },
+    "specific_necessity": {
+      "dimension": "specific_necessity",
+      "mae": 0.821,
+      "bias": -0.407,
+      "scored": 14,
+      "na": 6,
+      "between_patient_r": 0.238,
+      "coverage_rate": 0.7
+    },
+    "specific_concerns": {
+      "dimension": "specific_concerns",
+      "mae": 1.125,
+      "bias": -0.775,
+      "scored": 16,
+      "na": 4,
+      "between_patient_r": 0.097,
+      "coverage_rate": 0.8
+    },
+    "general_harm": {
+      "dimension": "general_harm",
+      "mae": 0.438,
+      "bias": -0.062,
+      "scored": 4,
+      "na": 16,
+      "between_patient_r": 0.293,
+      "coverage_rate": 0.2
+    },
+    "general_overuse": {
+      "dimension": "general_overuse",
+      "mae": 0.312,
+      "bias": 0.188,
+      "scored": 4,
+      "na": 16,
+      "between_patient_r": 0.921,
+      "coverage_rate": 0.2
+    }
+  },
+  "by_report": [
+    {
+      "patient_id": "CLL-001",
+      "dimensions": [
+        {
+          "dimension": "consequences",
+          "ground_truth": 7.0,
+          "inferred": 6.0,
+          "absolute_error": 1.0,
+          "bias": -1.0,
+          "bands": {
+            "within_1": true,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "timeline",
+          "ground_truth": 9.0,
+          "inferred": 6.0,
+          "absolute_error": 3.0,
+          "bias": -3.0,
+          "bands": {
+            "within_1": false,
+            "within_2": false
+          }
+        },
+        {
+          "dimension": "personal_control",
+          "ground_truth": 3.0,
+          "inferred": 4.0,
+          "absolute_error": 1.0,
+          "bias": 1.0,
+          "bands": {
+            "within_1": true,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "treatment_control",
+          "ground_truth": 4.0,
+          "inferred": 6.0,
+          "absolute_error": 2.0,
+          "bias": 2.0,
+          "bands": {
+            "within_1": false,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "identity",
+          "ground_truth": 5.0,
+          "inferred": 4.0,
+          "absolute_error": 1.0,
+          "bias": -1.0,
+          "bands": {
+            "within_1": true,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "concern",
+          "ground_truth": 9.0,
+          "inferred": 4.0,
+          "absolute_error": 5.0,
+          "bias": -5.0,
+          "bands": {
+            "within_1": false,
+            "within_2": false
+          }
+        },
+        {
+          "dimension": "coherence",
+          "ground_truth": 4.0,
+          "inferred": 4.0,
+          "absolute_error": 0.0,
+          "bias": 0.0,
+          "bands": {
+            "within_1": true,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "emotional_response",
+          "ground_truth": 8.0,
+          "inferred": 4.0,
+          "absolute_error": 4.0,
+          "bias": -4.0,
+          "bands": {
+            "within_1": false,
+            "within_2": false
+          }
+        },
+        {
+          "dimension": "specific_necessity",
+          "ground_truth": 4.2,
+          "inferred": 4.0,
+          "absolute_error": 0.2,
+          "bias": -0.2,
+          "bands": {
+            "within_half": true,
+            "within_one": true
+          }
+        },
+        {
+          "dimension": "specific_concerns",
+          "ground_truth": 2.6,
+          "inferred": 2.0,
+          "absolute_error": 0.6,
+          "bias": -0.6,
+          "bands": {
+            "within_half": false,
+            "within_one": true
+          }
+        },
+        {
+          "dimension": "general_harm",
+          "ground_truth": 1.75,
+          "inferred": null,
+          "absolute_error": null,
+          "bias": null,
+          "bands": {}
+        },
+        {
+          "dimension": "general_overuse",
+          "ground_truth": 1.5,
+          "inferred": null,
+          "absolute_error": null,
+          "bias": null,
+          "bands": {}
+        }
+      ],
+      "mae": 1.78,
+      "median_ae": 1.0,
+      "mean_bias": -1.18,
+      "exact_matches": 1,
+      "band_counts": {
+        "within_1": 4,
+        "within_2": 5,
+        "within_half": 1,
+        "within_one": 2
+      },
+      "scored": 10,
+      "na": 2,
+      "within_patient_r": 0.447,
+      "coverage_rate": 0.833
+    },
+    {
+      "patient_id": "CLL-001",
+      "dimensions": [
+        {
+          "dimension": "consequences",
+          "ground_truth": 7.0,
+          "inferred": 4.0,
+          "absolute_error": 3.0,
+          "bias": -3.0,
+          "bands": {
+            "within_1": false,
+            "within_2": false
+          }
+        },
+        {
+          "dimension": "timeline",
+          "ground_truth": 9.0,
+          "inferred": 6.0,
+          "absolute_error": 3.0,
+          "bias": -3.0,
+          "bands": {
+            "within_1": false,
+            "within_2": false
+          }
+        },
+        {
+          "dimension": "personal_control",
+          "ground_truth": 3.0,
+          "inferred": 5.0,
+          "absolute_error": 2.0,
+          "bias": 2.0,
+          "bands": {
+            "within_1": false,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "treatment_control",
+          "ground_truth": 4.0,
+          "inferred": 4.0,
+          "absolute_error": 0.0,
+          "bias": 0.0,
+          "bands": {
+            "within_1": true,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "identity",
+          "ground_truth": 5.0,
+          "inferred": 4.0,
+          "absolute_error": 1.0,
+          "bias": -1.0,
+          "bands": {
+            "within_1": true,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "concern",
+          "ground_truth": 9.0,
+          "inferred": 5.0,
+          "absolute_error": 4.0,
+          "bias": -4.0,
+          "bands": {
+            "within_1": false,
+            "within_2": false
+          }
+        },
+        {
+          "dimension": "coherence",
+          "ground_truth": 4.0,
+          "inferred": 7.0,
+          "absolute_error": 3.0,
+          "bias": 3.0,
+          "bands": {
+            "within_1": false,
+            "within_2": false
+          }
+        },
+        {
+          "dimension": "emotional_response",
+          "ground_truth": 8.0,
+          "inferred": 5.0,
+          "absolute_error": 3.0,
+          "bias": -3.0,
+          "bands": {
+            "within_1": false,
+            "within_2": false
+          }
+        },
+        {
+          "dimension": "specific_necessity",
+          "ground_truth": 4.2,
+          "inferred": null,
+          "absolute_error": null,
+          "bias": null,
+          "bands": {}
+        },
+        {
+          "dimension": "specific_concerns",
+          "ground_truth": 2.6,
+          "inferred": null,
+          "absolute_error": null,
+          "bias": null,
+          "bands": {}
+        },
+        {
+          "dimension": "general_harm",
+          "ground_truth": 1.75,
+          "inferred": null,
+          "absolute_error": null,
+          "bias": null,
+          "bands": {}
+        },
+        {
+          "dimension": "general_overuse",
+          "ground_truth": 1.5,
+          "inferred": null,
+          "absolute_error": null,
+          "bias": null,
+          "bands": {}
+        }
+      ],
+      "mae": 2.375,
+      "median_ae": 3.0,
+      "mean_bias": -1.125,
+      "exact_matches": 1,
+      "band_counts": {
+        "within_1": 2,
+        "within_2": 3,
+        "within_half": 0,
+        "within_one": 0
+      },
+      "scored": 8,
+      "na": 4,
+      "within_patient_r": 0.055,
+      "coverage_rate": 0.667
+    },
+    {
+      "patient_id": "CLL-002",
+      "dimensions": [
+        {
+          "dimension": "consequences",
+          "ground_truth": 8.0,
+          "inferred": 4.0,
+          "absolute_error": 4.0,
+          "bias": -4.0,
+          "bands": {
+            "within_1": false,
+            "within_2": false
+          }
+        },
+        {
+          "dimension": "timeline",
+          "ground_truth": 9,
+          "inferred": null,
+          "absolute_error": null,
+          "bias": null,
+          "bands": {}
+        },
+        {
+          "dimension": "personal_control",
+          "ground_truth": 5.0,
+          "inferred": 6.0,
+          "absolute_error": 1.0,
+          "bias": 1.0,
+          "bands": {
+            "within_1": true,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "treatment_control",
+          "ground_truth": 8.0,
+          "inferred": 8.0,
+          "absolute_error": 0.0,
+          "bias": 0.0,
+          "bands": {
+            "within_1": true,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "identity",
+          "ground_truth": 7.0,
+          "inferred": 6.0,
+          "absolute_error": 1.0,
+          "bias": -1.0,
+          "bands": {
+            "within_1": true,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "concern",
+          "ground_truth": 7.0,
+          "inferred": 6.0,
+          "absolute_error": 1.0,
+          "bias": -1.0,
+          "bands": {
+            "within_1": true,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "coherence",
+          "ground_truth": 6.0,
+          "inferred": 6.0,
+          "absolute_error": 0.0,
+          "bias": 0.0,
+          "bands": {
+            "within_1": true,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "emotional_response",
+          "ground_truth": 8.0,
+          "inferred": 4.0,
+          "absolute_error": 4.0,
+          "bias": -4.0,
+          "bands": {
+            "within_1": false,
+            "within_2": false
+          }
+        },
+        {
+          "dimension": "specific_necessity",
+          "ground_truth": 4.6,
+          "inferred": 4.0,
+          "absolute_error": 0.6,
+          "bias": -0.6,
+          "bands": {
+            "within_half": false,
+            "within_one": true
+          }
+        },
+        {
+          "dimension": "specific_concerns",
+          "ground_truth": 3.6,
+          "inferred": 2.0,
+          "absolute_error": 1.6,
+          "bias": -1.6,
+          "bands": {
+            "within_half": false,
+            "within_one": false
+          }
+        },
+        {
+          "dimension": "general_harm",
+          "ground_truth": 1.75,
+          "inferred": null,
+          "absolute_error": null,
+          "bias": null,
+          "bands": {}
+        },
+        {
+          "dimension": "general_overuse",
+          "ground_truth": 1.5,
+          "inferred": null,
+          "absolute_error": null,
+          "bias": null,
+          "bands": {}
+        }
+      ],
+      "mae": 1.467,
+      "median_ae": 1.0,
+      "mean_bias": -1.244,
+      "exact_matches": 2,
+      "band_counts": {
+        "within_1": 5,
+        "within_2": 5,
+        "within_half": 0,
+        "within_one": 1
+      },
+      "scored": 9,
+      "na": 3,
+      "within_patient_r": 0.485,
+      "coverage_rate": 0.75
+    },
+    {
+      "patient_id": "CLL-002",
+      "dimensions": [
+        {
+          "dimension": "consequences",
+          "ground_truth": 8.0,
+          "inferred": 8.0,
+          "absolute_error": 0.0,
+          "bias": 0.0,
+          "bands": {
+            "within_1": true,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "timeline",
+          "ground_truth": 9,
+          "inferred": null,
+          "absolute_error": null,
+          "bias": null,
+          "bands": {}
+        },
+        {
+          "dimension": "personal_control",
+          "ground_truth": 5,
+          "inferred": null,
+          "absolute_error": null,
+          "bias": null,
+          "bands": {}
+        },
+        {
+          "dimension": "treatment_control",
+          "ground_truth": 8,
+          "inferred": null,
+          "absolute_error": null,
+          "bias": null,
+          "bands": {}
+        },
+        {
+          "dimension": "identity",
+          "ground_truth": 7.0,
+          "inferred": 8.0,
+          "absolute_error": 1.0,
+          "bias": 1.0,
+          "bands": {
+            "within_1": true,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "concern",
+          "ground_truth": 7,
+          "inferred": null,
+          "absolute_error": null,
+          "bias": null,
+          "bands": {}
+        },
+        {
+          "dimension": "coherence",
+          "ground_truth": 6,
+          "inferred": null,
+          "absolute_error": null,
+          "bias": null,
+          "bands": {}
+        },
+        {
+          "dimension": "emotional_response",
+          "ground_truth": 8,
+          "inferred": null,
+          "absolute_error": null,
+          "bias": null,
+          "bands": {}
+        },
+        {
+          "dimension": "specific_necessity",
+          "ground_truth": 4.6,
+          "inferred": null,
+          "absolute_error": null,
+          "bias": null,
+          "bands": {}
+        },
+        {
+          "dimension": "specific_concerns",
+          "ground_truth": 3.6,
+          "inferred": null,
+          "absolute_error": null,
+          "bias": null,
+          "bands": {}
+        },
+        {
+          "dimension": "general_harm",
+          "ground_truth": 1.75,
+          "inferred": null,
+          "absolute_error": null,
+          "bias": null,
+          "bands": {}
+        },
+        {
+          "dimension": "general_overuse",
+          "ground_truth": 1.5,
+          "inferred": null,
+          "absolute_error": null,
+          "bias": null,
+          "bands": {}
+        }
+      ],
+      "mae": 0.5,
+      "median_ae": 0.5,
+      "mean_bias": 0.5,
+      "exact_matches": 1,
+      "band_counts": {
+        "within_1": 2,
+        "within_2": 2,
+        "within_half": 0,
+        "within_one": 0
+      },
+      "scored": 2,
+      "na": 10,
+      "within_patient_r": null,
+      "coverage_rate": 0.167
+    },
+    {
+      "patient_id": "CLL-003",
+      "dimensions": [
+        {
+          "dimension": "consequences",
+          "ground_truth": 5.0,
+          "inferred": 6.0,
+          "absolute_error": 1.0,
+          "bias": 1.0,
+          "bands": {
+            "within_1": true,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "timeline",
+          "ground_truth": 9.0,
+          "inferred": 8.0,
+          "absolute_error": 1.0,
+          "bias": -1.0,
+          "bands": {
+            "within_1": true,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "personal_control",
+          "ground_truth": 6.0,
+          "inferred": 6.0,
+          "absolute_error": 0.0,
+          "bias": 0.0,
+          "bands": {
+            "within_1": true,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "treatment_control",
+          "ground_truth": 7.0,
+          "inferred": 4.0,
+          "absolute_error": 3.0,
+          "bias": -3.0,
+          "bands": {
+            "within_1": false,
+            "within_2": false
+          }
+        },
+        {
+          "dimension": "identity",
+          "ground_truth": 3.0,
+          "inferred": 4.0,
+          "absolute_error": 1.0,
+          "bias": 1.0,
+          "bands": {
+            "within_1": true,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "concern",
+          "ground_truth": 6.0,
+          "inferred": 6.0,
+          "absolute_error": 0.0,
+          "bias": 0.0,
+          "bands": {
+            "within_1": true,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "coherence",
+          "ground_truth": 8.0,
+          "inferred": 8.0,
+          "absolute_error": 0.0,
+          "bias": 0.0,
+          "bands": {
+            "within_1": true,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "emotional_response",
+          "ground_truth": 6.0,
+          "inferred": 4.0,
+          "absolute_error": 2.0,
+          "bias": -2.0,
+          "bands": {
+            "within_1": false,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "specific_necessity",
+          "ground_truth": 3.6,
+          "inferred": null,
+          "absolute_error": null,
+          "bias": null,
+          "bands": {}
+        },
+        {
+          "dimension": "specific_concerns",
+          "ground_truth": 2.8,
+          "inferred": null,
+          "absolute_error": null,
+          "bias": null,
+          "bands": {}
+        },
+        {
+          "dimension": "general_harm",
+          "ground_truth": 1.75,
+          "inferred": null,
+          "absolute_error": null,
+          "bias": null,
+          "bands": {}
+        },
+        {
+          "dimension": "general_overuse",
+          "ground_truth": 1.75,
+          "inferred": null,
+          "absolute_error": null,
+          "bias": null,
+          "bands": {}
+        }
+      ],
+      "mae": 1.0,
+      "median_ae": 1.0,
+      "mean_bias": -0.5,
+      "exact_matches": 3,
+      "band_counts": {
+        "within_1": 6,
+        "within_2": 7,
+        "within_half": 0,
+        "within_one": 0
+      },
+      "scored": 8,
+      "na": 4,
+      "within_patient_r": 0.677,
+      "coverage_rate": 0.667
+    },
+    {
+      "patient_id": "CLL-003",
+      "dimensions": [
+        {
+          "dimension": "consequences",
+          "ground_truth": 5.0,
+          "inferred": 4.0,
+          "absolute_error": 1.0,
+          "bias": -1.0,
+          "bands": {
+            "within_1": true,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "timeline",
+          "ground_truth": 9.0,
+          "inferred": 6.0,
+          "absolute_error": 3.0,
+          "bias": -3.0,
+          "bands": {
+            "within_1": false,
+            "within_2": false
+          }
+        },
+        {
+          "dimension": "personal_control",
+          "ground_truth": 6.0,
+          "inferred": 4.0,
+          "absolute_error": 2.0,
+          "bias": -2.0,
+          "bands": {
+            "within_1": false,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "treatment_control",
+          "ground_truth": 7.0,
+          "inferred": 2.0,
+          "absolute_error": 5.0,
+          "bias": -5.0,
+          "bands": {
+            "within_1": false,
+            "within_2": false
+          }
+        },
+        {
+          "dimension": "identity",
+          "ground_truth": 3.0,
+          "inferred": 4.0,
+          "absolute_error": 1.0,
+          "bias": 1.0,
+          "bands": {
+            "within_1": true,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "concern",
+          "ground_truth": 6.0,
+          "inferred": 4.0,
+          "absolute_error": 2.0,
+          "bias": -2.0,
+          "bands": {
+            "within_1": false,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "coherence",
+          "ground_truth": 8.0,
+          "inferred": 6.0,
+          "absolute_error": 2.0,
+          "bias": -2.0,
+          "bands": {
+            "within_1": false,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "emotional_response",
+          "ground_truth": 6.0,
+          "inferred": 4.0,
+          "absolute_error": 2.0,
+          "bias": -2.0,
+          "bands": {
+            "within_1": false,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "specific_necessity",
+          "ground_truth": 3.6,
+          "inferred": null,
+          "absolute_error": null,
+          "bias": null,
+          "bands": {}
+        },
+        {
+          "dimension": "specific_concerns",
+          "ground_truth": 2.8,
+          "inferred": null,
+          "absolute_error": null,
+          "bias": null,
+          "bands": {}
+        },
+        {
+          "dimension": "general_harm",
+          "ground_truth": 1.75,
+          "inferred": null,
+          "absolute_error": null,
+          "bias": null,
+          "bands": {}
+        },
+        {
+          "dimension": "general_overuse",
+          "ground_truth": 1.75,
+          "inferred": null,
+          "absolute_error": null,
+          "bias": null,
+          "bands": {}
+        }
+      ],
+      "mae": 2.25,
+      "median_ae": 2.0,
+      "mean_bias": -2.0,
+      "exact_matches": 0,
+      "band_counts": {
+        "within_1": 2,
+        "within_2": 6,
+        "within_half": 0,
+        "within_one": 0
+      },
+      "scored": 8,
+      "na": 4,
+      "within_patient_r": 0.456,
+      "coverage_rate": 0.667
+    },
+    {
+      "patient_id": "CLL-004",
+      "dimensions": [
+        {
+          "dimension": "consequences",
+          "ground_truth": 9.0,
+          "inferred": 8.0,
+          "absolute_error": 1.0,
+          "bias": -1.0,
+          "bands": {
+            "within_1": true,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "timeline",
+          "ground_truth": 10.0,
+          "inferred": 8.0,
+          "absolute_error": 2.0,
+          "bias": -2.0,
+          "bands": {
+            "within_1": false,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "personal_control",
+          "ground_truth": 3,
+          "inferred": null,
+          "absolute_error": null,
+          "bias": null,
+          "bands": {}
+        },
+        {
+          "dimension": "treatment_control",
+          "ground_truth": 6.0,
+          "inferred": 4.0,
+          "absolute_error": 2.0,
+          "bias": -2.0,
+          "bands": {
+            "within_1": false,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "identity",
+          "ground_truth": 9.0,
+          "inferred": 8.0,
+          "absolute_error": 1.0,
+          "bias": -1.0,
+          "bands": {
+            "within_1": true,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "concern",
+          "ground_truth": 9.0,
+          "inferred": 8.0,
+          "absolute_error": 1.0,
+          "bias": -1.0,
+          "bands": {
+            "within_1": true,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "coherence",
+          "ground_truth": 7.0,
+          "inferred": 6.0,
+          "absolute_error": 1.0,
+          "bias": -1.0,
+          "bands": {
+            "within_1": true,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "emotional_response",
+          "ground_truth": 9.0,
+          "inferred": 8.0,
+          "absolute_error": 1.0,
+          "bias": -1.0,
+          "bands": {
+            "within_1": true,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "specific_necessity",
+          "ground_truth": 4.8,
+          "inferred": null,
+          "absolute_error": null,
+          "bias": null,
+          "bands": {}
+        },
+        {
+          "dimension": "specific_concerns",
+          "ground_truth": 4.2,
+          "inferred": 3.0,
+          "absolute_error": 1.2,
+          "bias": -1.2,
+          "bands": {
+            "within_half": false,
+            "within_one": false
+          }
+        },
+        {
+          "dimension": "general_harm",
+          "ground_truth": 2.5,
+          "inferred": null,
+          "absolute_error": null,
+          "bias": null,
+          "bands": {}
+        },
+        {
+          "dimension": "general_overuse",
+          "ground_truth": 1.75,
+          "inferred": null,
+          "absolute_error": null,
+          "bias": null,
+          "bands": {}
+        }
+      ],
+      "mae": 1.275,
+      "median_ae": 1.0,
+      "mean_bias": -1.275,
+      "exact_matches": 0,
+      "band_counts": {
+        "within_1": 5,
+        "within_2": 7,
+        "within_half": 0,
+        "within_one": 0
+      },
+      "scored": 8,
+      "na": 4,
+      "within_patient_r": 0.976,
+      "coverage_rate": 0.667
+    },
+    {
+      "patient_id": "CLL-004",
+      "dimensions": [
+        {
+          "dimension": "consequences",
+          "ground_truth": 9.0,
+          "inferred": 8.0,
+          "absolute_error": 1.0,
+          "bias": -1.0,
+          "bands": {
+            "within_1": true,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "timeline",
+          "ground_truth": 10.0,
+          "inferred": 8.0,
+          "absolute_error": 2.0,
+          "bias": -2.0,
+          "bands": {
+            "within_1": false,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "personal_control",
+          "ground_truth": 3.0,
+          "inferred": 4.0,
+          "absolute_error": 1.0,
+          "bias": 1.0,
+          "bands": {
+            "within_1": true,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "treatment_control",
+          "ground_truth": 6.0,
+          "inferred": 4.0,
+          "absolute_error": 2.0,
+          "bias": -2.0,
+          "bands": {
+            "within_1": false,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "identity",
+          "ground_truth": 9.0,
+          "inferred": 8.0,
+          "absolute_error": 1.0,
+          "bias": -1.0,
+          "bands": {
+            "within_1": true,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "concern",
+          "ground_truth": 9.0,
+          "inferred": 8.0,
+          "absolute_error": 1.0,
+          "bias": -1.0,
+          "bands": {
+            "within_1": true,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "coherence",
+          "ground_truth": 7.0,
+          "inferred": 6.0,
+          "absolute_error": 1.0,
+          "bias": -1.0,
+          "bands": {
+            "within_1": true,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "emotional_response",
+          "ground_truth": 9.0,
+          "inferred": 6.0,
+          "absolute_error": 3.0,
+          "bias": -3.0,
+          "bands": {
+            "within_1": false,
+            "within_2": false
+          }
+        },
+        {
+          "dimension": "specific_necessity",
+          "ground_truth": 4.8,
+          "inferred": 3.0,
+          "absolute_error": 1.8,
+          "bias": -1.8,
+          "bands": {
+            "within_half": false,
+            "within_one": false
+          }
+        },
+        {
+          "dimension": "specific_concerns",
+          "ground_truth": 4.2,
+          "inferred": 4.0,
+          "absolute_error": 0.2,
+          "bias": -0.2,
+          "bands": {
+            "within_half": true,
+            "within_one": true
+          }
+        },
+        {
+          "dimension": "general_harm",
+          "ground_truth": 2.5,
+          "inferred": null,
+          "absolute_error": null,
+          "bias": null,
+          "bands": {}
+        },
+        {
+          "dimension": "general_overuse",
+          "ground_truth": 1.75,
+          "inferred": null,
+          "absolute_error": null,
+          "bias": null,
+          "bands": {}
+        }
+      ],
+      "mae": 1.4,
+      "median_ae": 1.0,
+      "mean_bias": -1.2,
+      "exact_matches": 0,
+      "band_counts": {
+        "within_1": 5,
+        "within_2": 7,
+        "within_half": 1,
+        "within_one": 1
+      },
+      "scored": 10,
+      "na": 2,
+      "within_patient_r": 0.898,
+      "coverage_rate": 0.833
+    },
+    {
+      "patient_id": "CLL-005",
+      "dimensions": [
+        {
+          "dimension": "consequences",
+          "ground_truth": 6.0,
+          "inferred": 8.0,
+          "absolute_error": 2.0,
+          "bias": 2.0,
+          "bands": {
+            "within_1": false,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "timeline",
+          "ground_truth": 9.0,
+          "inferred": 6.0,
+          "absolute_error": 3.0,
+          "bias": -3.0,
+          "bands": {
+            "within_1": false,
+            "within_2": false
+          }
+        },
+        {
+          "dimension": "personal_control",
+          "ground_truth": 4.0,
+          "inferred": 2.0,
+          "absolute_error": 2.0,
+          "bias": -2.0,
+          "bands": {
+            "within_1": false,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "treatment_control",
+          "ground_truth": 6.0,
+          "inferred": 2.0,
+          "absolute_error": 4.0,
+          "bias": -4.0,
+          "bands": {
+            "within_1": false,
+            "within_2": false
+          }
+        },
+        {
+          "dimension": "identity",
+          "ground_truth": 5.0,
+          "inferred": 8.0,
+          "absolute_error": 3.0,
+          "bias": 3.0,
+          "bands": {
+            "within_1": false,
+            "within_2": false
+          }
+        },
+        {
+          "dimension": "concern",
+          "ground_truth": 8.0,
+          "inferred": 8.0,
+          "absolute_error": 0.0,
+          "bias": 0.0,
+          "bands": {
+            "within_1": true,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "coherence",
+          "ground_truth": 6.0,
+          "inferred": 4.0,
+          "absolute_error": 2.0,
+          "bias": -2.0,
+          "bands": {
+            "within_1": false,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "emotional_response",
+          "ground_truth": 7.0,
+          "inferred": 8.0,
+          "absolute_error": 1.0,
+          "bias": 1.0,
+          "bands": {
+            "within_1": true,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "specific_necessity",
+          "ground_truth": 4.0,
+          "inferred": 2.0,
+          "absolute_error": 2.0,
+          "bias": -2.0,
+          "bands": {
+            "within_half": false,
+            "within_one": false
+          }
+        },
+        {
+          "dimension": "specific_concerns",
+          "ground_truth": 3.2,
+          "inferred": 2.0,
+          "absolute_error": 1.2,
+          "bias": -1.2,
+          "bands": {
+            "within_half": false,
+            "within_one": false
+          }
+        },
+        {
+          "dimension": "general_harm",
+          "ground_truth": 2.0,
+          "inferred": null,
+          "absolute_error": null,
+          "bias": null,
+          "bands": {}
+        },
+        {
+          "dimension": "general_overuse",
+          "ground_truth": 2.0,
+          "inferred": null,
+          "absolute_error": null,
+          "bias": null,
+          "bands": {}
+        }
+      ],
+      "mae": 2.02,
+      "median_ae": 2.0,
+      "mean_bias": -0.82,
+      "exact_matches": 1,
+      "band_counts": {
+        "within_1": 2,
+        "within_2": 5,
+        "within_half": 0,
+        "within_one": 0
+      },
+      "scored": 10,
+      "na": 2,
+      "within_patient_r": 0.619,
+      "coverage_rate": 0.833
+    },
+    {
+      "patient_id": "CLL-005",
+      "dimensions": [
+        {
+          "dimension": "consequences",
+          "ground_truth": 6.0,
+          "inferred": 3.0,
+          "absolute_error": 3.0,
+          "bias": -3.0,
+          "bands": {
+            "within_1": false,
+            "within_2": false
+          }
+        },
+        {
+          "dimension": "timeline",
+          "ground_truth": 9,
+          "inferred": null,
+          "absolute_error": null,
+          "bias": null,
+          "bands": {}
+        },
+        {
+          "dimension": "personal_control",
+          "ground_truth": 4,
+          "inferred": null,
+          "absolute_error": null,
+          "bias": null,
+          "bands": {}
+        },
+        {
+          "dimension": "treatment_control",
+          "ground_truth": 6,
+          "inferred": null,
+          "absolute_error": null,
+          "bias": null,
+          "bands": {}
+        },
+        {
+          "dimension": "identity",
+          "ground_truth": 5.0,
+          "inferred": 4.0,
+          "absolute_error": 1.0,
+          "bias": -1.0,
+          "bands": {
+            "within_1": true,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "concern",
+          "ground_truth": 8.0,
+          "inferred": 3.0,
+          "absolute_error": 5.0,
+          "bias": -5.0,
+          "bands": {
+            "within_1": false,
+            "within_2": false
+          }
+        },
+        {
+          "dimension": "coherence",
+          "ground_truth": 6,
+          "inferred": null,
+          "absolute_error": null,
+          "bias": null,
+          "bands": {}
+        },
+        {
+          "dimension": "emotional_response",
+          "ground_truth": 7.0,
+          "inferred": 2.0,
+          "absolute_error": 5.0,
+          "bias": -5.0,
+          "bands": {
+            "within_1": false,
+            "within_2": false
+          }
+        },
+        {
+          "dimension": "specific_necessity",
+          "ground_truth": 4.0,
+          "inferred": null,
+          "absolute_error": null,
+          "bias": null,
+          "bands": {}
+        },
+        {
+          "dimension": "specific_concerns",
+          "ground_truth": 3.2,
+          "inferred": 2.0,
+          "absolute_error": 1.2,
+          "bias": -1.2,
+          "bands": {
+            "within_half": false,
+            "within_one": false
+          }
+        },
+        {
+          "dimension": "general_harm",
+          "ground_truth": 2.0,
+          "inferred": null,
+          "absolute_error": null,
+          "bias": null,
+          "bands": {}
+        },
+        {
+          "dimension": "general_overuse",
+          "ground_truth": 2.0,
+          "inferred": null,
+          "absolute_error": null,
+          "bias": null,
+          "bands": {}
+        }
+      ],
+      "mae": 3.04,
+      "median_ae": 3.0,
+      "mean_bias": -3.04,
+      "exact_matches": 0,
+      "band_counts": {
+        "within_1": 1,
+        "within_2": 1,
+        "within_half": 0,
+        "within_one": 0
+      },
+      "scored": 5,
+      "na": 7,
+      "within_patient_r": 0.103,
+      "coverage_rate": 0.417
+    },
+    {
+      "patient_id": "HIV-001",
+      "dimensions": [
+        {
+          "dimension": "consequences",
+          "ground_truth": 7.0,
+          "inferred": 6.0,
+          "absolute_error": 1.0,
+          "bias": -1.0,
+          "bands": {
+            "within_1": true,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "timeline",
+          "ground_truth": 10.0,
+          "inferred": 8.0,
+          "absolute_error": 2.0,
+          "bias": -2.0,
+          "bands": {
+            "within_1": false,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "personal_control",
+          "ground_truth": 8.0,
+          "inferred": 6.0,
+          "absolute_error": 2.0,
+          "bias": -2.0,
+          "bands": {
+            "within_1": false,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "treatment_control",
+          "ground_truth": 9.0,
+          "inferred": 8.0,
+          "absolute_error": 1.0,
+          "bias": -1.0,
+          "bands": {
+            "within_1": true,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "identity",
+          "ground_truth": 4.0,
+          "inferred": 4.0,
+          "absolute_error": 0.0,
+          "bias": 0.0,
+          "bands": {
+            "within_1": true,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "concern",
+          "ground_truth": 6.0,
+          "inferred": 6.0,
+          "absolute_error": 0.0,
+          "bias": 0.0,
+          "bands": {
+            "within_1": true,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "coherence",
+          "ground_truth": 9.0,
+          "inferred": 8.0,
+          "absolute_error": 1.0,
+          "bias": -1.0,
+          "bands": {
+            "within_1": true,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "emotional_response",
+          "ground_truth": 7.0,
+          "inferred": 6.0,
+          "absolute_error": 1.0,
+          "bias": -1.0,
+          "bands": {
+            "within_1": true,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "specific_necessity",
+          "ground_truth": 4.6,
+          "inferred": 4.0,
+          "absolute_error": 0.6,
+          "bias": -0.6,
+          "bands": {
+            "within_half": false,
+            "within_one": true
+          }
+        },
+        {
+          "dimension": "specific_concerns",
+          "ground_truth": 3.0,
+          "inferred": 4.0,
+          "absolute_error": 1.0,
+          "bias": 1.0,
+          "bands": {
+            "within_half": false,
+            "within_one": true
+          }
+        },
+        {
+          "dimension": "general_harm",
+          "ground_truth": 1.75,
+          "inferred": 2.0,
+          "absolute_error": 0.25,
+          "bias": 0.25,
+          "bands": {
+            "within_half": true,
+            "within_one": true
+          }
+        },
+        {
+          "dimension": "general_overuse",
+          "ground_truth": 1.25,
+          "inferred": 1.0,
+          "absolute_error": 0.25,
+          "bias": -0.25,
+          "bands": {
+            "within_half": true,
+            "within_one": true
+          }
+        }
+      ],
+      "mae": 0.842,
+      "median_ae": 1.0,
+      "mean_bias": -0.633,
+      "exact_matches": 2,
+      "band_counts": {
+        "within_1": 6,
+        "within_2": 8,
+        "within_half": 2,
+        "within_one": 4
+      },
+      "scored": 12,
+      "na": 0,
+      "within_patient_r": 0.972,
+      "coverage_rate": 1.0
+    },
+    {
+      "patient_id": "HIV-001",
+      "dimensions": [
+        {
+          "dimension": "consequences",
+          "ground_truth": 7.0,
+          "inferred": 6.0,
+          "absolute_error": 1.0,
+          "bias": -1.0,
+          "bands": {
+            "within_1": true,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "timeline",
+          "ground_truth": 10,
+          "inferred": null,
+          "absolute_error": null,
+          "bias": null,
+          "bands": {}
+        },
+        {
+          "dimension": "personal_control",
+          "ground_truth": 8.0,
+          "inferred": 4.0,
+          "absolute_error": 4.0,
+          "bias": -4.0,
+          "bands": {
+            "within_1": false,
+            "within_2": false
+          }
+        },
+        {
+          "dimension": "treatment_control",
+          "ground_truth": 9.0,
+          "inferred": 6.0,
+          "absolute_error": 3.0,
+          "bias": -3.0,
+          "bands": {
+            "within_1": false,
+            "within_2": false
+          }
+        },
+        {
+          "dimension": "identity",
+          "ground_truth": 4.0,
+          "inferred": 4.0,
+          "absolute_error": 0.0,
+          "bias": 0.0,
+          "bands": {
+            "within_1": true,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "concern",
+          "ground_truth": 6.0,
+          "inferred": 4.0,
+          "absolute_error": 2.0,
+          "bias": -2.0,
+          "bands": {
+            "within_1": false,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "coherence",
+          "ground_truth": 9.0,
+          "inferred": 6.0,
+          "absolute_error": 3.0,
+          "bias": -3.0,
+          "bands": {
+            "within_1": false,
+            "within_2": false
+          }
+        },
+        {
+          "dimension": "emotional_response",
+          "ground_truth": 7.0,
+          "inferred": 4.0,
+          "absolute_error": 3.0,
+          "bias": -3.0,
+          "bands": {
+            "within_1": false,
+            "within_2": false
+          }
+        },
+        {
+          "dimension": "specific_necessity",
+          "ground_truth": 4.6,
+          "inferred": 4.0,
+          "absolute_error": 0.6,
+          "bias": -0.6,
+          "bands": {
+            "within_half": false,
+            "within_one": true
+          }
+        },
+        {
+          "dimension": "specific_concerns",
+          "ground_truth": 3.0,
+          "inferred": 2.0,
+          "absolute_error": 1.0,
+          "bias": -1.0,
+          "bands": {
+            "within_half": false,
+            "within_one": true
+          }
+        },
+        {
+          "dimension": "general_harm",
+          "ground_truth": 1.75,
+          "inferred": null,
+          "absolute_error": null,
+          "bias": null,
+          "bands": {}
+        },
+        {
+          "dimension": "general_overuse",
+          "ground_truth": 1.25,
+          "inferred": null,
+          "absolute_error": null,
+          "bias": null,
+          "bands": {}
+        }
+      ],
+      "mae": 1.956,
+      "median_ae": 2.0,
+      "mean_bias": -1.956,
+      "exact_matches": 1,
+      "band_counts": {
+        "within_1": 2,
+        "within_2": 3,
+        "within_half": 0,
+        "within_one": 2
+      },
+      "scored": 9,
+      "na": 3,
+      "within_patient_r": 0.797,
+      "coverage_rate": 0.75
+    },
+    {
+      "patient_id": "HIV-002",
+      "dimensions": [
+        {
+          "dimension": "consequences",
+          "ground_truth": 7.0,
+          "inferred": 7.0,
+          "absolute_error": 0.0,
+          "bias": 0.0,
+          "bands": {
+            "within_1": true,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "timeline",
+          "ground_truth": 10.0,
+          "inferred": 4.0,
+          "absolute_error": 6.0,
+          "bias": -6.0,
+          "bands": {
+            "within_1": false,
+            "within_2": false
+          }
+        },
+        {
+          "dimension": "personal_control",
+          "ground_truth": 7.0,
+          "inferred": 8.0,
+          "absolute_error": 1.0,
+          "bias": 1.0,
+          "bands": {
+            "within_1": true,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "treatment_control",
+          "ground_truth": 8.0,
+          "inferred": 8.0,
+          "absolute_error": 0.0,
+          "bias": 0.0,
+          "bands": {
+            "within_1": true,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "identity",
+          "ground_truth": 2.0,
+          "inferred": 6.0,
+          "absolute_error": 4.0,
+          "bias": 4.0,
+          "bands": {
+            "within_1": false,
+            "within_2": false
+          }
+        },
+        {
+          "dimension": "concern",
+          "ground_truth": 8.0,
+          "inferred": 6.0,
+          "absolute_error": 2.0,
+          "bias": -2.0,
+          "bands": {
+            "within_1": false,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "coherence",
+          "ground_truth": 7.0,
+          "inferred": 8.0,
+          "absolute_error": 1.0,
+          "bias": 1.0,
+          "bands": {
+            "within_1": true,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "emotional_response",
+          "ground_truth": 9.0,
+          "inferred": 6.0,
+          "absolute_error": 3.0,
+          "bias": -3.0,
+          "bands": {
+            "within_1": false,
+            "within_2": false
+          }
+        },
+        {
+          "dimension": "specific_necessity",
+          "ground_truth": 4.4,
+          "inferred": 5.0,
+          "absolute_error": 0.6,
+          "bias": 0.6,
+          "bands": {
+            "within_half": false,
+            "within_one": true
+          }
+        },
+        {
+          "dimension": "specific_concerns",
+          "ground_truth": 3.4,
+          "inferred": 4.0,
+          "absolute_error": 0.6,
+          "bias": 0.6,
+          "bands": {
+            "within_half": false,
+            "within_one": true
+          }
+        },
+        {
+          "dimension": "general_harm",
+          "ground_truth": 2.0,
+          "inferred": null,
+          "absolute_error": null,
+          "bias": null,
+          "bands": {}
+        },
+        {
+          "dimension": "general_overuse",
+          "ground_truth": 1.5,
+          "inferred": null,
+          "absolute_error": null,
+          "bias": null,
+          "bands": {}
+        }
+      ],
+      "mae": 1.82,
+      "median_ae": 1.0,
+      "mean_bias": -0.38,
+      "exact_matches": 2,
+      "band_counts": {
+        "within_1": 4,
+        "within_2": 5,
+        "within_half": 0,
+        "within_one": 2
+      },
+      "scored": 10,
+      "na": 2,
+      "within_patient_r": 0.188,
+      "coverage_rate": 0.833
+    },
+    {
+      "patient_id": "HIV-002",
+      "dimensions": [
+        {
+          "dimension": "consequences",
+          "ground_truth": 7.0,
+          "inferred": 4.0,
+          "absolute_error": 3.0,
+          "bias": -3.0,
+          "bands": {
+            "within_1": false,
+            "within_2": false
+          }
+        },
+        {
+          "dimension": "timeline",
+          "ground_truth": 10.0,
+          "inferred": 4.0,
+          "absolute_error": 6.0,
+          "bias": -6.0,
+          "bands": {
+            "within_1": false,
+            "within_2": false
+          }
+        },
+        {
+          "dimension": "personal_control",
+          "ground_truth": 7.0,
+          "inferred": 6.0,
+          "absolute_error": 1.0,
+          "bias": -1.0,
+          "bands": {
+            "within_1": true,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "treatment_control",
+          "ground_truth": 8.0,
+          "inferred": 8.0,
+          "absolute_error": 0.0,
+          "bias": 0.0,
+          "bands": {
+            "within_1": true,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "identity",
+          "ground_truth": 2.0,
+          "inferred": 4.0,
+          "absolute_error": 2.0,
+          "bias": 2.0,
+          "bands": {
+            "within_1": false,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "concern",
+          "ground_truth": 8.0,
+          "inferred": 6.0,
+          "absolute_error": 2.0,
+          "bias": -2.0,
+          "bands": {
+            "within_1": false,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "coherence",
+          "ground_truth": 7.0,
+          "inferred": 8.0,
+          "absolute_error": 1.0,
+          "bias": 1.0,
+          "bands": {
+            "within_1": true,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "emotional_response",
+          "ground_truth": 9.0,
+          "inferred": 6.0,
+          "absolute_error": 3.0,
+          "bias": -3.0,
+          "bands": {
+            "within_1": false,
+            "within_2": false
+          }
+        },
+        {
+          "dimension": "specific_necessity",
+          "ground_truth": 4.4,
+          "inferred": 5.0,
+          "absolute_error": 0.6,
+          "bias": 0.6,
+          "bands": {
+            "within_half": false,
+            "within_one": true
+          }
+        },
+        {
+          "dimension": "specific_concerns",
+          "ground_truth": 3.4,
+          "inferred": 4.0,
+          "absolute_error": 0.6,
+          "bias": 0.6,
+          "bands": {
+            "within_half": false,
+            "within_one": true
+          }
+        },
+        {
+          "dimension": "general_harm",
+          "ground_truth": 2.0,
+          "inferred": null,
+          "absolute_error": null,
+          "bias": null,
+          "bands": {}
+        },
+        {
+          "dimension": "general_overuse",
+          "ground_truth": 1.5,
+          "inferred": null,
+          "absolute_error": null,
+          "bias": null,
+          "bands": {}
+        }
+      ],
+      "mae": 1.92,
+      "median_ae": 1.5,
+      "mean_bias": -1.08,
+      "exact_matches": 1,
+      "band_counts": {
+        "within_1": 3,
+        "within_2": 5,
+        "within_half": 0,
+        "within_one": 2
+      },
+      "scored": 10,
+      "na": 2,
+      "within_patient_r": 0.379,
+      "coverage_rate": 0.833
+    },
+    {
+      "patient_id": "HIV-003",
+      "dimensions": [
+        {
+          "dimension": "consequences",
+          "ground_truth": 9.0,
+          "inferred": 8.0,
+          "absolute_error": 1.0,
+          "bias": -1.0,
+          "bands": {
+            "within_1": true,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "timeline",
+          "ground_truth": 10.0,
+          "inferred": 6.0,
+          "absolute_error": 4.0,
+          "bias": -4.0,
+          "bands": {
+            "within_1": false,
+            "within_2": false
+          }
+        },
+        {
+          "dimension": "personal_control",
+          "ground_truth": 7.0,
+          "inferred": 4.0,
+          "absolute_error": 3.0,
+          "bias": -3.0,
+          "bands": {
+            "within_1": false,
+            "within_2": false
+          }
+        },
+        {
+          "dimension": "treatment_control",
+          "ground_truth": 8.0,
+          "inferred": 6.0,
+          "absolute_error": 2.0,
+          "bias": -2.0,
+          "bands": {
+            "within_1": false,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "identity",
+          "ground_truth": 9.0,
+          "inferred": 8.0,
+          "absolute_error": 1.0,
+          "bias": -1.0,
+          "bands": {
+            "within_1": true,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "concern",
+          "ground_truth": 8.0,
+          "inferred": 8.0,
+          "absolute_error": 0.0,
+          "bias": 0.0,
+          "bands": {
+            "within_1": true,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "coherence",
+          "ground_truth": 9.0,
+          "inferred": 4.0,
+          "absolute_error": 5.0,
+          "bias": -5.0,
+          "bands": {
+            "within_1": false,
+            "within_2": false
+          }
+        },
+        {
+          "dimension": "emotional_response",
+          "ground_truth": 9.0,
+          "inferred": 6.0,
+          "absolute_error": 3.0,
+          "bias": -3.0,
+          "bands": {
+            "within_1": false,
+            "within_2": false
+          }
+        },
+        {
+          "dimension": "specific_necessity",
+          "ground_truth": 4.8,
+          "inferred": 4.0,
+          "absolute_error": 0.8,
+          "bias": -0.8,
+          "bands": {
+            "within_half": false,
+            "within_one": true
+          }
+        },
+        {
+          "dimension": "specific_concerns",
+          "ground_truth": 4.6,
+          "inferred": 2.0,
+          "absolute_error": 2.6,
+          "bias": -2.6,
+          "bands": {
+            "within_half": false,
+            "within_one": false
+          }
+        },
+        {
+          "dimension": "general_harm",
+          "ground_truth": 2.75,
+          "inferred": null,
+          "absolute_error": null,
+          "bias": null,
+          "bands": {}
+        },
+        {
+          "dimension": "general_overuse",
+          "ground_truth": 2.0,
+          "inferred": null,
+          "absolute_error": null,
+          "bias": null,
+          "bands": {}
+        }
+      ],
+      "mae": 2.24,
+      "median_ae": 2.3,
+      "mean_bias": -2.24,
+      "exact_matches": 1,
+      "band_counts": {
+        "within_1": 3,
+        "within_2": 4,
+        "within_half": 0,
+        "within_one": 1
+      },
+      "scored": 10,
+      "na": 2,
+      "within_patient_r": 0.682,
+      "coverage_rate": 0.833
+    },
+    {
+      "patient_id": "HIV-003",
+      "dimensions": [
+        {
+          "dimension": "consequences",
+          "ground_truth": 9.0,
+          "inferred": 6.0,
+          "absolute_error": 3.0,
+          "bias": -3.0,
+          "bands": {
+            "within_1": false,
+            "within_2": false
+          }
+        },
+        {
+          "dimension": "timeline",
+          "ground_truth": 10.0,
+          "inferred": 8.0,
+          "absolute_error": 2.0,
+          "bias": -2.0,
+          "bands": {
+            "within_1": false,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "personal_control",
+          "ground_truth": 7.0,
+          "inferred": 8.0,
+          "absolute_error": 1.0,
+          "bias": 1.0,
+          "bands": {
+            "within_1": true,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "treatment_control",
+          "ground_truth": 8.0,
+          "inferred": 8.0,
+          "absolute_error": 0.0,
+          "bias": 0.0,
+          "bands": {
+            "within_1": true,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "identity",
+          "ground_truth": 9.0,
+          "inferred": 8.0,
+          "absolute_error": 1.0,
+          "bias": -1.0,
+          "bands": {
+            "within_1": true,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "concern",
+          "ground_truth": 8.0,
+          "inferred": 6.0,
+          "absolute_error": 2.0,
+          "bias": -2.0,
+          "bands": {
+            "within_1": false,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "coherence",
+          "ground_truth": 9.0,
+          "inferred": 8.0,
+          "absolute_error": 1.0,
+          "bias": -1.0,
+          "bands": {
+            "within_1": true,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "emotional_response",
+          "ground_truth": 9.0,
+          "inferred": 6.0,
+          "absolute_error": 3.0,
+          "bias": -3.0,
+          "bands": {
+            "within_1": false,
+            "within_2": false
+          }
+        },
+        {
+          "dimension": "specific_necessity",
+          "ground_truth": 4.8,
+          "inferred": 4.0,
+          "absolute_error": 0.8,
+          "bias": -0.8,
+          "bands": {
+            "within_half": false,
+            "within_one": true
+          }
+        },
+        {
+          "dimension": "specific_concerns",
+          "ground_truth": 4.6,
+          "inferred": 3.0,
+          "absolute_error": 1.6,
+          "bias": -1.6,
+          "bands": {
+            "within_half": false,
+            "within_one": false
+          }
+        },
+        {
+          "dimension": "general_harm",
+          "ground_truth": 2.75,
+          "inferred": 2.0,
+          "absolute_error": 0.75,
+          "bias": -0.75,
+          "bands": {
+            "within_half": false,
+            "within_one": true
+          }
+        },
+        {
+          "dimension": "general_overuse",
+          "ground_truth": 2.0,
+          "inferred": 2.0,
+          "absolute_error": 0.0,
+          "bias": 0.0,
+          "bands": {
+            "within_half": true,
+            "within_one": true
+          }
+        }
+      ],
+      "mae": 1.346,
+      "median_ae": 1.0,
+      "mean_bias": -1.179,
+      "exact_matches": 2,
+      "band_counts": {
+        "within_1": 4,
+        "within_2": 6,
+        "within_half": 1,
+        "within_one": 3
+      },
+      "scored": 12,
+      "na": 0,
+      "within_patient_r": 0.895,
+      "coverage_rate": 1.0
+    },
+    {
+      "patient_id": "HIV-004",
+      "dimensions": [
+        {
+          "dimension": "consequences",
+          "ground_truth": 8.0,
+          "inferred": 8.0,
+          "absolute_error": 0.0,
+          "bias": 0.0,
+          "bands": {
+            "within_1": true,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "timeline",
+          "ground_truth": 10,
+          "inferred": null,
+          "absolute_error": null,
+          "bias": null,
+          "bands": {}
+        },
+        {
+          "dimension": "personal_control",
+          "ground_truth": 6.0,
+          "inferred": 4.0,
+          "absolute_error": 2.0,
+          "bias": -2.0,
+          "bands": {
+            "within_1": false,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "treatment_control",
+          "ground_truth": 7.0,
+          "inferred": 6.0,
+          "absolute_error": 1.0,
+          "bias": -1.0,
+          "bands": {
+            "within_1": true,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "identity",
+          "ground_truth": 3.0,
+          "inferred": 4.0,
+          "absolute_error": 1.0,
+          "bias": 1.0,
+          "bands": {
+            "within_1": true,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "concern",
+          "ground_truth": 9.0,
+          "inferred": 6.0,
+          "absolute_error": 3.0,
+          "bias": -3.0,
+          "bands": {
+            "within_1": false,
+            "within_2": false
+          }
+        },
+        {
+          "dimension": "coherence",
+          "ground_truth": 6.0,
+          "inferred": 2.0,
+          "absolute_error": 4.0,
+          "bias": -4.0,
+          "bands": {
+            "within_1": false,
+            "within_2": false
+          }
+        },
+        {
+          "dimension": "emotional_response",
+          "ground_truth": 10.0,
+          "inferred": 8.0,
+          "absolute_error": 2.0,
+          "bias": -2.0,
+          "bands": {
+            "within_1": false,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "specific_necessity",
+          "ground_truth": 4.2,
+          "inferred": 3.0,
+          "absolute_error": 1.2,
+          "bias": -1.2,
+          "bands": {
+            "within_half": false,
+            "within_one": false
+          }
+        },
+        {
+          "dimension": "specific_concerns",
+          "ground_truth": 3.8,
+          "inferred": 2.0,
+          "absolute_error": 1.8,
+          "bias": -1.8,
+          "bands": {
+            "within_half": false,
+            "within_one": false
+          }
+        },
+        {
+          "dimension": "general_harm",
+          "ground_truth": 2.25,
+          "inferred": null,
+          "absolute_error": null,
+          "bias": null,
+          "bands": {}
+        },
+        {
+          "dimension": "general_overuse",
+          "ground_truth": 1.5,
+          "inferred": null,
+          "absolute_error": null,
+          "bias": null,
+          "bands": {}
+        }
+      ],
+      "mae": 1.778,
+      "median_ae": 1.8,
+      "mean_bias": -1.556,
+      "exact_matches": 1,
+      "band_counts": {
+        "within_1": 3,
+        "within_2": 5,
+        "within_half": 0,
+        "within_one": 0
+      },
+      "scored": 9,
+      "na": 3,
+      "within_patient_r": 0.801,
+      "coverage_rate": 0.75
+    },
+    {
+      "patient_id": "HIV-004",
+      "dimensions": [
+        {
+          "dimension": "consequences",
+          "ground_truth": 8.0,
+          "inferred": 4.0,
+          "absolute_error": 4.0,
+          "bias": -4.0,
+          "bands": {
+            "within_1": false,
+            "within_2": false
+          }
+        },
+        {
+          "dimension": "timeline",
+          "ground_truth": 10.0,
+          "inferred": 8.0,
+          "absolute_error": 2.0,
+          "bias": -2.0,
+          "bands": {
+            "within_1": false,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "personal_control",
+          "ground_truth": 6.0,
+          "inferred": 8.0,
+          "absolute_error": 2.0,
+          "bias": 2.0,
+          "bands": {
+            "within_1": false,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "treatment_control",
+          "ground_truth": 7.0,
+          "inferred": 8.0,
+          "absolute_error": 1.0,
+          "bias": 1.0,
+          "bands": {
+            "within_1": true,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "identity",
+          "ground_truth": 3.0,
+          "inferred": 4.0,
+          "absolute_error": 1.0,
+          "bias": 1.0,
+          "bands": {
+            "within_1": true,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "concern",
+          "ground_truth": 9.0,
+          "inferred": 6.0,
+          "absolute_error": 3.0,
+          "bias": -3.0,
+          "bands": {
+            "within_1": false,
+            "within_2": false
+          }
+        },
+        {
+          "dimension": "coherence",
+          "ground_truth": 6.0,
+          "inferred": 6.0,
+          "absolute_error": 0.0,
+          "bias": 0.0,
+          "bands": {
+            "within_1": true,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "emotional_response",
+          "ground_truth": 10.0,
+          "inferred": 6.0,
+          "absolute_error": 4.0,
+          "bias": -4.0,
+          "bands": {
+            "within_1": false,
+            "within_2": false
+          }
+        },
+        {
+          "dimension": "specific_necessity",
+          "ground_truth": 4.2,
+          "inferred": 4.5,
+          "absolute_error": 0.3,
+          "bias": 0.3,
+          "bands": {
+            "within_half": true,
+            "within_one": true
+          }
+        },
+        {
+          "dimension": "specific_concerns",
+          "ground_truth": 3.8,
+          "inferred": 3.0,
+          "absolute_error": 0.8,
+          "bias": -0.8,
+          "bands": {
+            "within_half": false,
+            "within_one": true
+          }
+        },
+        {
+          "dimension": "general_harm",
+          "ground_truth": 2.25,
+          "inferred": 2.0,
+          "absolute_error": 0.25,
+          "bias": -0.25,
+          "bands": {
+            "within_half": true,
+            "within_one": true
+          }
+        },
+        {
+          "dimension": "general_overuse",
+          "ground_truth": 1.5,
+          "inferred": 2.0,
+          "absolute_error": 0.5,
+          "bias": 0.5,
+          "bands": {
+            "within_half": true,
+            "within_one": true
+          }
+        }
+      ],
+      "mae": 1.571,
+      "median_ae": 1.0,
+      "mean_bias": -0.771,
+      "exact_matches": 1,
+      "band_counts": {
+        "within_1": 3,
+        "within_2": 5,
+        "within_half": 3,
+        "within_one": 4
+      },
+      "scored": 12,
+      "na": 0,
+      "within_patient_r": 0.734,
+      "coverage_rate": 1.0
+    },
+    {
+      "patient_id": "HIV-005",
+      "dimensions": [
+        {
+          "dimension": "consequences",
+          "ground_truth": 7.0,
+          "inferred": 4.0,
+          "absolute_error": 3.0,
+          "bias": -3.0,
+          "bands": {
+            "within_1": false,
+            "within_2": false
+          }
+        },
+        {
+          "dimension": "timeline",
+          "ground_truth": 9.0,
+          "inferred": 8.0,
+          "absolute_error": 1.0,
+          "bias": -1.0,
+          "bands": {
+            "within_1": true,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "personal_control",
+          "ground_truth": 7.0,
+          "inferred": 4.0,
+          "absolute_error": 3.0,
+          "bias": -3.0,
+          "bands": {
+            "within_1": false,
+            "within_2": false
+          }
+        },
+        {
+          "dimension": "treatment_control",
+          "ground_truth": 6.0,
+          "inferred": 6.0,
+          "absolute_error": 0.0,
+          "bias": 0.0,
+          "bands": {
+            "within_1": true,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "identity",
+          "ground_truth": 3.0,
+          "inferred": 4.0,
+          "absolute_error": 1.0,
+          "bias": 1.0,
+          "bands": {
+            "within_1": true,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "concern",
+          "ground_truth": 5.0,
+          "inferred": 6.0,
+          "absolute_error": 1.0,
+          "bias": 1.0,
+          "bands": {
+            "within_1": true,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "coherence",
+          "ground_truth": 4.0,
+          "inferred": 6.0,
+          "absolute_error": 2.0,
+          "bias": 2.0,
+          "bands": {
+            "within_1": false,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "emotional_response",
+          "ground_truth": 7.0,
+          "inferred": 6.0,
+          "absolute_error": 1.0,
+          "bias": -1.0,
+          "bands": {
+            "within_1": true,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "specific_necessity",
+          "ground_truth": 2.8,
+          "inferred": 3.0,
+          "absolute_error": 0.2,
+          "bias": 0.2,
+          "bands": {
+            "within_half": true,
+            "within_one": true
+          }
+        },
+        {
+          "dimension": "specific_concerns",
+          "ground_truth": 3.4,
+          "inferred": 4.0,
+          "absolute_error": 0.6,
+          "bias": 0.6,
+          "bands": {
+            "within_half": false,
+            "within_one": true
+          }
+        },
+        {
+          "dimension": "general_harm",
+          "ground_truth": 2.5,
+          "inferred": 3.0,
+          "absolute_error": 0.5,
+          "bias": 0.5,
+          "bands": {
+            "within_half": true,
+            "within_one": true
+          }
+        },
+        {
+          "dimension": "general_overuse",
+          "ground_truth": 2.5,
+          "inferred": 3.0,
+          "absolute_error": 0.5,
+          "bias": 0.5,
+          "bands": {
+            "within_half": true,
+            "within_one": true
+          }
+        }
+      ],
+      "mae": 1.15,
+      "median_ae": 1.0,
+      "mean_bias": -0.183,
+      "exact_matches": 1,
+      "band_counts": {
+        "within_1": 5,
+        "within_2": 6,
+        "within_half": 3,
+        "within_one": 4
+      },
+      "scored": 12,
+      "na": 0,
+      "within_patient_r": 0.713,
+      "coverage_rate": 1.0
+    },
+    {
+      "patient_id": "HIV-005",
+      "dimensions": [
+        {
+          "dimension": "consequences",
+          "ground_truth": 7.0,
+          "inferred": 4.0,
+          "absolute_error": 3.0,
+          "bias": -3.0,
+          "bands": {
+            "within_1": false,
+            "within_2": false
+          }
+        },
+        {
+          "dimension": "timeline",
+          "ground_truth": 9.0,
+          "inferred": 8.0,
+          "absolute_error": 1.0,
+          "bias": -1.0,
+          "bands": {
+            "within_1": true,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "personal_control",
+          "ground_truth": 7.0,
+          "inferred": 6.0,
+          "absolute_error": 1.0,
+          "bias": -1.0,
+          "bands": {
+            "within_1": true,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "treatment_control",
+          "ground_truth": 6.0,
+          "inferred": 7.0,
+          "absolute_error": 1.0,
+          "bias": 1.0,
+          "bands": {
+            "within_1": true,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "identity",
+          "ground_truth": 3.0,
+          "inferred": 4.0,
+          "absolute_error": 1.0,
+          "bias": 1.0,
+          "bands": {
+            "within_1": true,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "concern",
+          "ground_truth": 5.0,
+          "inferred": 6.0,
+          "absolute_error": 1.0,
+          "bias": 1.0,
+          "bands": {
+            "within_1": true,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "coherence",
+          "ground_truth": 4.0,
+          "inferred": 7.0,
+          "absolute_error": 3.0,
+          "bias": 3.0,
+          "bands": {
+            "within_1": false,
+            "within_2": false
+          }
+        },
+        {
+          "dimension": "emotional_response",
+          "ground_truth": 7.0,
+          "inferred": 5.0,
+          "absolute_error": 2.0,
+          "bias": -2.0,
+          "bands": {
+            "within_1": false,
+            "within_2": true
+          }
+        },
+        {
+          "dimension": "specific_necessity",
+          "ground_truth": 2.8,
+          "inferred": 4.0,
+          "absolute_error": 1.2,
+          "bias": 1.2,
+          "bands": {
+            "within_half": false,
+            "within_one": false
+          }
+        },
+        {
+          "dimension": "specific_concerns",
+          "ground_truth": 3.4,
+          "inferred": 2.0,
+          "absolute_error": 1.4,
+          "bias": -1.4,
+          "bands": {
+            "within_half": false,
+            "within_one": false
+          }
+        },
+        {
+          "dimension": "general_harm",
+          "ground_truth": 2.5,
+          "inferred": null,
+          "absolute_error": null,
+          "bias": null,
+          "bands": {}
+        },
+        {
+          "dimension": "general_overuse",
+          "ground_truth": 2.5,
+          "inferred": null,
+          "absolute_error": null,
+          "bias": null,
+          "bands": {}
+        }
+      ],
+      "mae": 1.56,
+      "median_ae": 1.1,
+      "mean_bias": -0.12,
+      "exact_matches": 0,
+      "band_counts": {
+        "within_1": 5,
+        "within_2": 6,
+        "within_half": 0,
+        "within_one": 0
+      },
+      "scored": 10,
+      "na": 2,
+      "within_patient_r": 0.572,
+      "coverage_rate": 0.833
+    }
+  ]
+}

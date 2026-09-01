@@ -1,0 +1,234 @@
+{
+  "patient_id": "HIV-005",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "HIV-005",
+    "clinical_summary": "The patient has HIV with fluctuating viral loads (340 copies/mL on last test) due to inconsistent medication adherence. They experience occasional headaches and low-grade fatigue, sometimes attributing these to work stress. They've learned that consistent medication is needed even when feeling well. The illness has impacted their work, relationships, and daily life, requiring them to balance symptoms and appointments with other responsibilities. They value collaborative care and want to maintain a sense of control over an uncertain condition.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "In terms of daily life, it's affected my work and relationships as I've had to balance my symptoms and appointments around other responsibilities.",
+            "turn": 3
+          },
+          {
+            "quote": "There are times when I have to take breaks or prioritize rest, which can be hard because the world keeps moving even when I feel like I'm struggling to keep up.",
+            "turn": 3
+          }
+        ],
+        "reasoning": "The patient explicitly states that HIV has affected their work and relationships, requiring them to balance symptoms and appointments. They have to take breaks and prioritize rest, which is challenging in a fast-paced world. This shows a significant impact on their daily functioning and roles.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "To me, having HIV means I'm living with a chronic illness that affects my overall health and well-being. It's not something that ever goes away",
+            "turn": 3
+          },
+          {
+            "quote": "But now that I know my viral load has been fluctuating even when I've been taking the medication consistently, I understand that these 'holidays' may not be helpful.",
+            "turn": 4
+          }
+        ],
+        "reasoning": "The patient clearly states HIV is a chronic illness that 'never goes away' and has learned that consistent attention is needed, not just when symptoms are present. However, they also express uncertainty about progression and life expectancy, which suggests they haven't fully accepted the permanence.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "There are times when I feel like I can manage things with lifestyle changes or adjustments to my treatment plan",
+            "turn": 4
+          },
+          {
+            "quote": "but then there are moments where I feel very helpless and uncertain about what the future holds.",
+            "turn": 4
+          },
+          {
+            "quote": "Overall, though, I believe that by staying informed and working closely with you and other healthcare professionals, I can make the best decisions for my health.",
+            "turn": 4
+          }
+        ],
+        "reasoning": "The patient has mixed feelings about personal control — sometimes they feel they can manage with lifestyle changes and treatment adjustments, other times they feel helpless and uncertain. Overall, they believe working with healthcare professionals helps them make good decisions. This is a moderate level of personal control with significant uncertainty.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "As for my viral load, it's gone from undetectable to low-level viremia a few times when I've missed medication doses or even taken drug holidays when I felt well.",
+            "turn": 2
+          },
+          {
+            "quote": "But now that I know my viral load has been fluctuating even when I've been taking the medication consistently, I understand that these 'holidays' may not be helpful.",
+            "turn": 4
+          },
+          {
+            "quote": "I definitely believe my medication is necessary for managing my illness and keeping my viral load as low as possible.",
+            "turn": 6
+          }
+        ],
+        "reasoning": "The patient initially thought they could take drug holidays when feeling well, but has learned that medication is more important than they initially thought. They now believe medication is necessary to keep viral load low. They're open to discussing different medications or dosages. This shows a moderate to high belief in treatment control.",
+        "score": 7.0,
+        "confidence": 0.7
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "To me, having HIV means I'm living with a chronic illness that affects my overall health and well-being.",
+            "turn": 3
+          },
+          {
+            "quote": "Living with it has definitely changed how I see myself.",
+            "turn": 3
+          },
+          {
+            "quote": "There are times when I feel like I can't fully let go of my worries about my health, even when everything else seems to be going well.",
+            "turn": 3
+          }
+        ],
+        "reasoning": "The patient clearly identifies HIV as a chronic illness that affects their overall health and well-being. They state it has 'definitely changed how I see myself' and they can't fully let go of health worries. They also mention being more cautious about safe sex. This shows a significant identity with the illness.",
+        "score": 7.0,
+        "confidence": 0.8
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "The inconsistency of these results has made me anxious and unsure about how well I'm managing my illness.",
+            "turn": 2
+          },
+          {
+            "quote": "The thing that worries me most is the potential for my health to decline significantly despite taking the necessary precautions and following your advice.",
+            "turn": 5
+          },
+          {
+            "quote": "I'm worried about developing opportunistic infections or cancers as a result of my compromised immune system.",
+            "turn": 5
+          },
+          {
+            "quote": "I guess what keeps me up at night is the uncertainty — not knowing exactly how this illness will progress, whether it will impact other parts of my body or cause new symptoms, and how it might affect my life expectancy.",
+            "turn": 5
+          }
+        ],
+        "reasoning": "The patient expresses significant worry about health decline, opportunistic infections, cancers, and uncertainty about progression and life expectancy. They specifically mention these worries keep them up at night. This shows high concern that intrudes into their daily life and sleep.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "To me, having HIV means I'm living with a chronic illness that affects my overall health and well-being. It's not something that ever goes away and, given its impact on the immune system, it puts me at risk for other infections and diseases.",
+            "turn": 3
+          },
+          {
+            "quote": "It's hard to tell what is due to HIV because those symptoms can be quite common in the general population too.",
+            "turn": 2
+          }
+        ],
+        "reasoning": "The patient has a good understanding of HIV as a chronic illness that affects the immune system and puts them at risk for other infections. However, they also express uncertainty about attributing symptoms to HIV vs general causes, which shows some gaps in their understanding.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "There are times when I feel like I can't fully let go of my worries about my health, even when everything else seems to be going well.",
+            "turn": 3
+          },
+          {
+            "quote": "I guess what keeps me up at night is the uncertainty",
+            "turn": 5
+          },
+          {
+            "quote": "It does feel good to have these discussions and know that I'm taking steps to manage my health as best I can.",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient expresses that they can't fully let go of health worries even when things are going well, and uncertainty keeps them up at night. They also express relief and satisfaction from having discussions and feeling they're managing well. This shows significant emotional impact.",
+        "score": 7.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "I definitely believe my medication is necessary for managing my illness and keeping my viral load as low as possible.",
+            "turn": 6
+          },
+          {
+            "quote": "I want to bring up with you during our next visit, and see if there might be a different medication or dosage that could help alleviate those symptoms without compromising on the rest of my treatment.",
+            "turn": 6
+          }
+        ],
+        "reasoning": "The patient strongly believes medication is necessary for managing their illness and keeping viral load low. They're actively seeking to optimize their treatment regimen. This shows a high level of belief in the necessity of their medication.",
+        "score": 4.5,
+        "confidence": 0.7
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "But at the same time, I do worry about taking it long-term — not just about potential side effects but also about dependence or other unknown risks.",
+            "turn": 6
+          },
+          {
+            "quote": "lately I've been experiencing some headaches more frequently since I started this new medication regimen. They're not unbearable, but they are noticeable and impact my daily life.",
+            "turn": 6
+          }
+        ],
+        "reasoning": "The patient has specific concerns about long-term medication use, including side effects, dependence, and unknown risks. They're experiencing headaches that impact daily life. These concerns have led them to want to discuss alternative medications or dosages. This shows moderate to high specific concerns.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "I do worry about taking it long-term — not just about potential side effects but also about dependence or other unknown risks.",
+            "turn": 6
+          }
+        ],
+        "reasoning": "The patient expresses concern about 'other unknown risks' associated with long-term medication use. This suggests some general concern about medicines as a class, though it's not strongly developed.",
+        "score": 3.0,
+        "confidence": 0.6
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [
+          {
+            "quote": "One thing I wonder sometimes is whether doctors are quick to prescribe without fully considering all the individual factors and potential risks involved.",
+            "turn": 7
+          },
+          {
+            "quote": "It's understandable that they're trying to provide a comprehensive treatment plan, but at times it feels like there could be more room for personalized discussions about medication options and their potential implications.",
+            "turn": 7
+          }
+        ],
+        "reasoning": "The patient questions whether doctors prescribe too quickly without fully considering individual factors and potential risks. They believe there could be more room for personalized discussions about medication options. This shows moderate concern about general overuse.",
+        "score": 3.0,
+        "confidence": 0.6
+      }
+    },
+    "causes": [
+      "HIV"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "To me, having HIV means I'm living with a chronic illness that affects my overall health and well-being.",
+        "turn": 3
+      }
+    ]
+  }
+}

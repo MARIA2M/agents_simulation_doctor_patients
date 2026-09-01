@@ -1,0 +1,262 @@
+{
+  "patient_id": "CLL-003",
+  "turns": 12,
+  "stop_reason": "doctor",
+  "conversation": [
+    {
+      "role": "doctor",
+      "content": "Hello. What brings you in to see me today?",
+      "turn": 1
+    },
+    {
+      "role": "patient",
+      "content": "Well, doctor, I've been feeling pretty tired lately, more than usual after work. And my wife also noticed a small lump in my neck. I'm worried about it because my father had Chronic Lymphocytic Leukemia (CLL), and I wonder if these symptoms might be related to that or something else entirely.",
+      "turn": 1
+    },
+    {
+      "role": "doctor",
+      "content": "Can you tell me more about the lump in your neck? Where exactly is it, and have you noticed any changes in its size or any pain associated with it?",
+      "turn": 2
+    },
+    {
+      "role": "patient",
+      "content": "The lump is just below my jawline on the left side of my neck. It's not very big, maybe the size of a walnut, but it feels firm when I run my finger over it. My wife first noticed it and pointed it out to me. It hasn't gotten any bigger that I've noticed, but sometimes it does feel slightly tender if I press on it.",
+      "turn": 2
+    },
+    {
+      "role": "doctor",
+      "content": "Have you noticed any other swollen lymph nodes elsewhere in your body, such as in your armpits or groin? Also, have you had any unexplained weight loss, night sweats, or fevers recently?",
+      "turn": 3
+    },
+    {
+      "role": "patient",
+      "content": "No, I haven't noticed any swollen lymph nodes anywhere else. As for the other symptoms, I can't say that I've experienced any unexplained weight loss, but I do get tired more easily now. I don't have frequent night sweats, and I'm not experiencing fevers either.",
+      "turn": 3
+    },
+    {
+      "role": "doctor",
+      "content": "Have you had any blood tests recently, or has anyone evaluated this lump for you? And do you have any other medical conditions or are you currently taking any medications?",
+      "turn": 4
+    },
+    {
+      "role": "patient",
+      "content": "No, I haven't had any blood tests done specifically related to this lump, but my hematologist did some routine blood work during my last check-up. My records and results should be available if needed. I don't have any other major medical conditions, just occasional high blood pressure that's well managed with medication.",
+      "turn": 4
+    },
+    {
+      "role": "doctor",
+      "content": "You mentioned seeing a hematologist. How long have you been under their care, and what was the reason for your last visit? Also, when did you first notice this lump in your neck?",
+      "turn": 5
+    },
+    {
+      "role": "patient",
+      "content": "I've been seeing my hematologist for about six months now, since I found out that my father had CLL. My last visit with them was a routine follow-up appointment where they took some blood work, and we discussed the results together. As for the lump in my neck, my wife first pointed it out to me about two weeks ago, so it's relatively new to us both.",
+      "turn": 5
+    },
+    {
+      "role": "doctor",
+      "content": "Since your father was diagnosed with CLL about six months ago, what were the hematologist's initial findings when they first saw you? And have you mentioned this new lump to your hematologist yet?",
+      "turn": 6
+    },
+    {
+      "role": "patient",
+      "content": "The hematologist initially found that my blood cell counts were just mildly elevated, which is consistent with early-stage CLL. They reassured me that many people with CLL live normal lifespans and never need treatment, so I've been monitoring the situation closely since then. And no, I haven't mentioned this new lump to them yet, as it's relatively new and hasn't caused any discomfort or concern.",
+      "turn": 6
+    },
+    {
+      "role": "doctor",
+      "content": "What monitoring have you been doing since your initial evaluation? And given that CLL can affect lymphocytes and sometimes cause lymphadenopathy, would you like me to help you arrange to have this lump examined?",
+      "turn": 7
+    },
+    {
+      "role": "patient",
+      "content": "Since my initial evaluation, I've been keeping track of any symptoms or changes in the way my body feels. Other than occasional tiredness after work, nothing significant has stood out to me. But as you mentioned, CLL can affect lymphocytes and cause lymphadenopathy, so it would be helpful for me to have this lump examined. If that's alright with you, I'd appreciate your assistance in setting up an appointment or referral.",
+      "turn": 7
+    },
+    {
+      "role": "doctor",
+      "content": "Given the family history and mild blood count changes consistent with early-stage CLL, this lump definitely warrants evaluation. It would be best to arrange for you to see the hematologist promptly, or I can refer you to a specialist if that would be more convenient. Before I do, can you tell me what you understand about CLL and how it typically presents?",
+      "turn": 8
+    },
+    {
+      "role": "patient",
+      "content": "From my understanding, CLL is a type of blood cancer that affects white blood cells called B lymphocytes. It's considered a chronic condition, meaning it may not go away entirely but can be managed with regular check-ups and sometimes treatment as needed. It often presents with symptoms like fatigue, swollen lymph nodes, and increased risk of infections due to weakened immune system. In my case, I've been living with the understanding that CLL is something I have to monitor throughout my life, which has prompted me to take care of myself and maintain a healthy lifestyle.",
+      "turn": 8
+    },
+    {
+      "role": "doctor",
+      "content": "It sounds like you have a good grasp of the condition. Given that you've been living with this for six months, how has the knowledge that your father had CLL affected you personally, and do you have any concerns about your own health given these new symptoms?",
+      "turn": 9
+    },
+    {
+      "role": "patient",
+      "content": "Of course. Having known that my father had CLL and now facing a potential diagnosis myself, it's naturally raised some concern in me. I worry about what the future holds for me and if this condition will impact my quality of life significantly as time goes on. But at the same time, I'm grateful to have access to medical care and support from loved ones during this time. And while these new symptoms are concerning, I'm trying not to jump to conclusions and instead focus on getting a proper evaluation and moving forward with treatment if needed.",
+      "turn": 9
+    },
+    {
+      "role": "doctor",
+      "content": "That's a reasonable approach. Given the new neck lump and your family history, we should arrange for it to be examined. Would you prefer to see your current hematologist, or would you like me to refer you to a specialist like an oncologist or hematologist-oncologist?",
+      "turn": 10
+    },
+    {
+      "role": "patient",
+      "content": "I trust my current hematologist, so if possible, I'd like to continue seeing them for any further evaluations and management. If that's not feasible, though, I'm open to being referred to another specialist who can provide the care I need. Ultimately, what's most important to me is getting a clear picture of what's going on with my health and making informed decisions about treatment moving forward.",
+      "turn": 10
+    },
+    {
+      "role": "doctor",
+      "content": "I'll arrange for you to see your hematologist as soon as possible to have this lump examined. Given your mild blood count changes and family history, they'll want to examine it and likely order some additional testing. In the meantime, continue monitoring for any changes in the lump's size, tenderness, or new symptoms like fevers or unexplained weight loss. Is there anything else you'd like me to address before we conclude today?",
+      "turn": 11
+    },
+    {
+      "role": "patient",
+      "content": "No, that covers everything for now. Thank you so much for your help and support. I'll be sure to keep you updated on my evaluation and any further steps in managing my health.",
+      "turn": 11
+    },
+    {
+      "role": "doctor",
+      "content": "You're welcome. I hope the evaluation goes smoothly and we can get some answers for you soon. Take care.",
+      "turn": 12
+    },
+    {
+      "role": "patient",
+      "content": "Thank you, doctor. I appreciate your concern and assistance. Have a great day.",
+      "turn": 12
+    }
+  ],
+  "coverage_hint": {},
+  "working_notes": [],
+  "events": [],
+  "usage": [
+    {
+      "role": "doctor",
+      "eval_tokens": 136,
+      "prompt_tokens": 1527
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 68,
+      "prompt_tokens": 1173
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 136,
+      "prompt_tokens": 1734
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 78,
+      "prompt_tokens": 1283
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 146,
+      "prompt_tokens": 1951
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 61,
+      "prompt_tokens": 1413
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 158,
+      "prompt_tokens": 2161
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 64,
+      "prompt_tokens": 1516
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 147,
+      "prompt_tokens": 2386
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 79,
+      "prompt_tokens": 1628
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 171,
+      "prompt_tokens": 2615
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 82,
+      "prompt_tokens": 1755
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 170,
+      "prompt_tokens": 2871
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 88,
+      "prompt_tokens": 1886
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 176,
+      "prompt_tokens": 3132
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 111,
+      "prompt_tokens": 2053
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 176,
+      "prompt_tokens": 3422
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 109,
+      "prompt_tokens": 2225
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 161,
+      "prompt_tokens": 3710
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 81,
+      "prompt_tokens": 2400
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 202,
+      "prompt_tokens": 3955
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 39,
+      "prompt_tokens": 2578
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 61,
+      "prompt_tokens": 4199
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 18,
+      "prompt_tokens": 2649
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 700,
+      "prompt_tokens": 4281
+    },
+    {
+      "role": "report",
+      "eval_tokens": 6448,
+      "prompt_tokens": 9231
+    }
+  ]
+}

@@ -1,0 +1,253 @@
+{
+  "patient_id": "HIV-005",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "HIV-005",
+    "clinical_summary": "The patient has been managing a chronic illness (likely HIV) with Triumeq for three years. They experience fatigue and headaches that worsen when they skip doses. They sometimes skip doses when feeling well or when life is hectic at work. They have a nagging worry about long-term effects of not being consistent, and they have occasional nausea and stomach discomfort as side effects. They feel isolated at times due to the illness and work-life balance challenges.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "When the illness gets the better of me though... it's like someone pulled my plug out of the wall. I just feel completely drained and unmotivated to do anything.",
+            "turn": 2
+          },
+          {
+            "quote": "There are days where I feel like I'm on top of everything, but then there are those days when the fatigue hits and even something as simple as sending emails feels like a monumental task.",
+            "turn": 5
+          },
+          {
+            "quote": "There are times when I feel like I'm missing out on life because of my illness and the way it affects me. It's hard not to feel a bit isolated at times",
+            "turn": 5
+          }
+        ],
+        "reasoning": "The illness significantly impacts their daily functioning, work capacity, social life, and sense of missing out on life. They experience periods of being completely drained and unable to do simple tasks.",
+        "score": 7.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "I think of this illness as a lifelong reality. It's something that doesn't go away completely — more like a constant presence in my life.",
+            "turn": 3
+          },
+          {
+            "quote": "And when I think about being on Triumeq for the foreseeable future... well, it can be daunting to imagine that as my reality.",
+            "turn": 6
+          }
+        ],
+        "reasoning": "They view the illness as permanent and lifelong, with no expectation of improvement or cure.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "It's like there's a constant ebb and flow in how I feel — depending on whether or not I'm staying on top of my treatment plan.",
+            "turn": 4
+          },
+          {
+            "quote": "I know you've told me that missing medication is likely the reason for these fluctuations in how I feel",
+            "turn": 2
+          },
+          {
+            "quote": "There's always this nagging worry at the back of my mind about whether or not I'm doing enough — if there's something more I could be doing to better manage things.",
+            "turn": 2
+          }
+        ],
+        "reasoning": "They recognize that their actions (staying on top of treatment) influence how they feel, but they also feel influenced by external factors (work stress, life chaos). They have some sense of control but it's not complete.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "When I'm taking Triumeq consistently, I feel like I have a bit more energy and can tackle tasks with greater focus. My overall mood seems to be a bit better, too",
+            "turn": 4
+          },
+          {
+            "quote": "But when I skip doses or take breaks from the medication, those headaches start to creep up more often, and that fatigue just lingers for longer periods of time.",
+            "turn": 4
+          },
+          {
+            "quote": "The fact that you can feel the difference in yourself when you're on track with the medication versus when you slip. That feedback loop — knowing that consistency makes you feel better — is really important.",
+            "turn": 7
+          }
+        ],
+        "reasoning": "They can clearly feel the benefit of the medication and notice negative effects when they skip doses. They have a strong feedback loop.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "Now, while there are still moments of worry, I've come to accept it as part of who I am — something that just is.",
+            "turn": 3
+          },
+          {
+            "quote": "I think of this illness as a lifelong reality. It's something that doesn't go away completely — more like a constant presence in my life.",
+            "turn": 3
+          }
+        ],
+        "reasoning": "They've integrated the illness into their self-identity, viewing it as 'part of who I am' and a 'constant presence.'",
+        "score": 7.0,
+        "confidence": 0.8
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "There's always that nagging worry in the back of my mind about what could happen if I don't stay consistent with my medication. It can be scary to think about what the long-term effects might be if things continue on this unpredictable path.",
+            "turn": 5
+          },
+          {
+            "quote": "There's always this nagging worry at the back of my mind about whether or not I'm doing enough — if there's something more I could be doing to better manage things.",
+            "turn": 2
+          },
+          {
+            "quote": "There's always that nagging thought in the back of my mind about potential long-term effects, even though you've reassured me numerous times that the risks are minimal.",
+            "turn": 6
+          }
+        ],
+        "reasoning": "They have frequent, recurring worries about long-term effects and whether they're doing enough. These worries shape their decisions about medication adherence.",
+        "score": 7.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I know you've told me that missing medication is likely the reason for these fluctuations in how I feel",
+            "turn": 2
+          },
+          {
+            "quote": "It's like there's a constant ebb and flow in how I feel — depending on whether or not I'm staying on top of my treatment plan.",
+            "turn": 4
+          },
+          {
+            "quote": "The fact that you can feel the difference in yourself when you're on track with the medication versus when you slip.",
+            "turn": 7
+          }
+        ],
+        "reasoning": "They understand the connection between medication adherence and their symptoms. They can explain how their feelings fluctuate based on treatment consistency.",
+        "score": 7.0,
+        "confidence": 0.8
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "When I was first diagnosed, I was hit hard by the fear and uncertainty. It felt like my whole life had changed in an instant.",
+            "turn": 3
+          },
+          {
+            "quote": "Now, while there are still moments of worry, I've come to accept it as part of who I am",
+            "turn": 3
+          },
+          {
+            "quote": "There are times when I feel like I'm missing out on life because of my illness and the way it affects me. It's hard not to feel a bit isolated at times",
+            "turn": 5
+          },
+          {
+            "quote": "There's always this nagging worry in the back of my mind",
+            "turn": 2
+          }
+        ],
+        "reasoning": "They experienced significant fear and uncertainty initially, and still have recurring worries. They also feel isolated and like they're missing out on life. Emotion is prominent and affects what they do.",
+        "score": 7.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "When I'm taking Triumeq consistently, I feel like I have a bit more energy and can tackle tasks with greater focus. My overall mood seems to be a bit better, too",
+            "turn": 4
+          },
+          {
+            "quote": "But when I skip doses or take breaks from the medication, those headaches start to creep up more often, and that fatigue just lingers for longer periods of time.",
+            "turn": 4
+          },
+          {
+            "quote": "The fact that you can feel the difference in yourself when you're on track with the medication versus when you slip. That feedback loop — knowing that consistency makes you feel better — is really important.",
+            "turn": 7
+          },
+          {
+            "quote": "I know you've told me that missing medication is likely the reason for these fluctuations in how I feel",
+            "turn": 2
+          },
+          {
+            "quote": "I'll make sure to keep in touch if anything changes or becomes too overwhelming.",
+            "turn": 7
+          }
+        ],
+        "reasoning": "They clearly recognize the benefit of the medication and can feel the difference when they take it consistently vs. skip doses. They organize around it (trying to stay on track, scheduling follow-up). They see it as important for managing their condition.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "There's always that nagging worry in the back of my mind about what could happen if I don't stay consistent with my medication. It can be scary to think about what the long-term effects might be if things continue on this unpredictable path.",
+            "turn": 5
+          },
+          {
+            "quote": "There's always this nagging worry at the back of my mind about whether or not I'm doing enough — if there's something more I could be doing to better manage things.",
+            "turn": 2
+          },
+          {
+            "quote": "There's always that nagging thought in the back of my mind about potential long-term effects, even though you've reassured me numerous times that the risks are minimal.",
+            "turn": 6
+          },
+          {
+            "quote": "Aside from that general worry, I do notice occasional side effects like a bit of nausea and some stomach discomfort. It's nothing too extreme, but it does make those moments where I consider skipping doses or taking breaks a bit more tempting.",
+            "turn": 6
+          }
+        ],
+        "reasoning": "They have recurring worries about long-term effects and whether they're doing enough. They experience side effects (nausea, stomach discomfort) that make them consider skipping doses. These concerns have influenced their behavior (considering skipping doses).",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "It's true that I've had some vague unease about medications as a category — not sure if this is something unique to Triumeq or just an overall concern. There's always that nagging thought in the back of my mind about potential long-term effects",
+            "turn": 6
+          },
+          {
+            "quote": "And when I think about being on Triumeq for the foreseeable future... well, it can be daunting to imagine that as my reality.",
+            "turn": 6
+          }
+        ],
+        "reasoning": "They have a vague unease about medications as a category and worry about potential long-term effects. They find the prospect of being on medication long-term daunting.",
+        "score": 3.0,
+        "confidence": 0.7
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "They never expressed any belief about doctors prescribing too readily. They trust their clinician (they're following their treatment plan and scheduling follow-ups).",
+        "score": null,
+        "confidence": 0.0
+      }
+    },
+    "causes": [
+      "previous partner who didn't disclose his status"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "I like to think that my illness was caused by a previous partner who didn't disclose his status. It's not something I can prove, of course, but it feels like the most likely explanation to me.",
+        "turn": 4
+      }
+    ]
+  }
+}

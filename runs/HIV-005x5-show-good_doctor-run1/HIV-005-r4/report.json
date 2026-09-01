@@ -1,0 +1,240 @@
+{
+  "patient_id": "HIV-005",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "HIV-005",
+    "clinical_summary": "The patient presents with persistent fatigue (several months) and recent constant headaches (last couple of weeks). They have an HIV diagnosis and are on Triumeq for 3 years. They've tried self-care strategies (breaks, exercise, eating well) but nothing has helped. They've noticed that when they miss doses or take 'drug holidays,' symptoms go away temporarily. They haven't discussed these symptoms with their HIV doctor yet. They feel emotionally affected - experiencing both anxiety and constant worry. They don't have a clear understanding of what's causing their symptoms and feel mostly out of control.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "I've been struggling to get through the workday without feeling exhausted the whole time",
+            "turn": 3
+          },
+          {
+            "quote": "I've been skipping social events with friends because I just don't have the strength to go out",
+            "turn": 3
+          },
+          {
+            "quote": "Simple tasks feel harder than they should be",
+            "turn": 3
+          }
+        ],
+        "reasoning": "The patient has lost major roles - struggling to get through workdays, skipping social events with friends, collapsing on the couch after dinner. They can barely manage their usual routine. This fits the 8 scale where a major role is lost or substantially reduced.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "I'm not sure if this will improve on its own. I know that these symptoms have been going on for a while and haven't gone away on their own yet",
+            "turn": 11
+          }
+        ],
+        "reasoning": "The patient doesn't expect this to improve on its own and plans on the assumption it stays. They've had symptoms for months without improvement.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I've tried taking breaks more often throughout the day, getting regular exercise, and making sure I eat well — but nothing seems to help much with the exhaustion",
+            "turn": 6
+          },
+          {
+            "quote": "As for what I could do differently... I'm not sure at this point",
+            "turn": 6
+          },
+          {
+            "quote": "I think it's mostly out of my hands at this point",
+            "turn": 11
+          }
+        ],
+        "reasoning": "They've tried self-care strategies (breaks, exercise, eating well) but feel they haven't worked. They feel mostly out of their hands.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "It's hard to say how much help the medication is overall — I feel like it's doing something, but these headaches and fatigue are still really getting in the way of my daily life",
+            "turn": 7
+          },
+          {
+            "quote": "sometimes, when I miss a dose or even take a 'drug holiday,' those symptoms tend to go away for a while",
+            "turn": 7
+          }
+        ],
+        "reasoning": "They believe the medication is doing something but not enough. They've noticed that when they miss doses, symptoms go away, suggesting they believe the medication might be contributing to their symptoms.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "I'm feeling really tired these days. It's like my energy just isn't there most of the time. I've also been getting these headaches recently that just won't go away",
+            "turn": 1
+          },
+          {
+            "quote": "The fatigue is more of a general feeling of weakness that's been lingering. It doesn't really come and go; it's just always there",
+            "turn": 2
+          },
+          {
+            "quote": "The only thing else that's been different is my sleep. Lately, I've been having trouble falling asleep at night",
+            "turn": 5
+          }
+        ],
+        "reasoning": "They have several symptoms (fatigue, headaches, sleep issues) that are daily and intrusive. They don't have a specific label but clearly identify these as symptoms they're experiencing.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "I'm worried about what all this might mean and if there's something more serious going on",
+            "turn": 1
+          },
+          {
+            "quote": "I'm really worried it might be something more serious",
+            "turn": 4
+          },
+          {
+            "quote": "It's frustrating not knowing and feeling like there might be multiple things going on at once",
+            "turn": 10
+          },
+          {
+            "quote": "some days I feel really anxious about it all, wondering if I'll ever find answers or get better",
+            "turn": 10
+          },
+          {
+            "quote": "Other times, it's more of a dull, constant worry that hangs over me",
+            "turn": 10
+          }
+        ],
+        "reasoning": "They're worried about what it could be, about finding answers, about getting better. The worry is frequent and intrudes into matters unrelated to the illness.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I don't really have a name for it in my mind. I know something isn't right, but I can't put a finger on what exactly it could be",
+            "turn": 10
+          },
+          {
+            "quote": "As for what could be causing it all, I'm not sure",
+            "turn": 4
+          },
+          {
+            "quote": "I've heard of other people dealing with similar fatigue and headaches, but I can't say for certain if it's the same thing for me",
+            "turn": 4
+          }
+        ],
+        "reasoning": "They cannot say what the condition is beyond knowing something isn't right. They don't understand what's happening.",
+        "score": 2.0,
+        "confidence": 0.8
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "I'm worried about what all this might mean and if there's something more serious going on",
+            "turn": 1
+          },
+          {
+            "quote": "It's definitely taken a toll on my emotional well-being as well as my physical health",
+            "turn": 10
+          },
+          {
+            "quote": "some days I feel really anxious about it all, wondering if I'll ever find answers or get better",
+            "turn": 10
+          },
+          {
+            "quote": "Other times, it's more of a dull, constant worry that hangs over me",
+            "turn": 10
+          }
+        ],
+        "reasoning": "Emotion is prominent and affects what they do. They're experiencing anxiety and constant worry, and it's taken a toll on their emotional well-being.",
+        "score": 8.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "sometimes, when I miss a dose or even take a 'drug holiday,' those symptoms tend to go away for a while, which makes me wonder if I should be more consistent with my medication routine",
+            "turn": 7
+          }
+        ],
+        "reasoning": "They treat the medication as important and have been thinking about being more consistent with it. They've noticed that when they miss doses, symptoms go away, which suggests they're considering the medication's necessity.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "I do have some concerns about long-term effects and whether or not missing doses could lead to resistance developing",
+            "turn": 8
+          },
+          {
+            "quote": "It's hard to balance everything, though — I don't want to feel like I'm constantly worrying about my medication all the time",
+            "turn": 8
+          }
+        ],
+        "reasoning": "They have concerns about long-term effects and resistance from missed doses. These concerns have led them to think about being more consistent with their medication routine.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "It's hard for me not to worry a little bit about potential side effects, though, especially since I've heard of some that can be pretty serious",
+            "turn": 9
+          }
+        ],
+        "reasoning": "They have mild generalised caution about taking things long-term, and worry about potential serious side effects.",
+        "score": 3.0,
+        "confidence": 0.7
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [
+          {
+            "quote": "Sometimes I wonder if doctors are too quick to prescribe medications without considering all the options or checking in enough with how someone is feeling on them",
+            "turn": 9
+          }
+        ],
+        "reasoning": "They sometimes wonder if doctors are too quick to prescribe medications without considering all the options.",
+        "score": 3.0,
+        "confidence": 0.7
+      }
+    },
+    "causes": [
+      "work stress",
+      "autoimmune",
+      "HIV-related"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "I've just been assuming it's because work has been so stressful lately",
+        "turn": 4
+      },
+      {
+        "quote": "I can't help but worry it might be something autoimmune or possibly related to my HIV diagnosis",
+        "turn": 6
+      }
+    ]
+  }
+}

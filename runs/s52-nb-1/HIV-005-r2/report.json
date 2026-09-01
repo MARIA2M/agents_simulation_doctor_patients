@@ -1,0 +1,252 @@
+{
+  "patient_id": "HIV-005",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "HIV-005",
+    "clinical_summary": "Patient living with HIV for several years, on Triumeq for 3 years. Recently developed headaches and low-grade fatigue. Admits to taking drug holidays when feeling well, which has led to viral load increase from undetectable to 340 copies/mL. CD4 count stable at 410 cells/uL. Patient understands importance of adherence and benefits of treatment, uses pill organizer and partner reminders, but still struggles with daily dosing when feeling well.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "I'm living with HIV. It's been a few years since my diagnosis and it's generally been under control.",
+            "turn": 2
+          },
+          {
+            "quote": "Overall, I'd say my health status is fairly stable despite having this chronic illness. There have been ups and downs, but I're always trying to maintain good habits to keep everything under control.",
+            "turn": 8
+          },
+          {
+            "quote": "Beyond these symptoms and concerns about medication adherence, I don't have any other major worries about my health at the moment.",
+            "turn": 11
+          }
+        ],
+        "reasoning": "Patient describes health as 'fairly stable' and reports only low-grade symptoms (headaches, fatigue) that don't severely limit daily functioning. They continue to manage their roles and activities while trying to maintain good habits.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "I have a chronic illness and sometimes it's hard for me to tell if something is related to that or not.",
+            "turn": 1
+          },
+          {
+            "quote": "It's been a few years since my diagnosis and it's generally been under control.",
+            "turn": 2
+          },
+          {
+            "quote": "Overall, I'd say my health status is fairly stable despite having this chronic illness. There have been ups and downs, but I're always trying to maintain good habits to keep everything under control.",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient describes HIV as a chronic condition they've had for several years, with ongoing management. They speak about managing it over time with 'ups and downs' but don't express a sense that it will end or that it's temporary.",
+        "score": 8.0,
+        "confidence": 0.7
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "It's not that I don't believe in adhering to my medication, but sometimes when I feel well, it's hard to remember to take my pill every day.",
+            "turn": 4
+          },
+          {
+            "quote": "I know HIV can be managed well with the right treatment and lifestyle choices, so that's what I try to focus on.",
+            "turn": 8
+          },
+          {
+            "quote": "To manage my HIV, I try to maintain a healthy and balanced diet, exercise regularly, get enough sleep, and avoid situations that could be stressful. I also make sure to attend regular medical appointments.",
+            "turn": 9
+          },
+          {
+            "quote": "I think setting up a reminder system that works for me could be helpful. Sometimes it can be easy to forget or delay taking my pill when I feel well enough, but I know how important it is to stay on track.",
+            "turn": 12
+          }
+        ],
+        "reasoning": "Patient actively tries to manage health through lifestyle choices (diet, exercise, sleep, stress avoidance) and medical appointments. They acknowledge occasional forgetfulness but are actively seeking strategies (reminder system, pill organizer, partner support) to improve adherence.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "I've been on my current treatment, Triumeq (abacavir/dolutegravir/lamivudine), for about three years now.",
+            "turn": 3
+          },
+          {
+            "quote": "I always resume my full treatment regimen immediately after a drug holiday. I know that stopping for even just a few days can potentially lead to resistance. My physician reassured me about restarting the medication without needing any adjustments.",
+            "turn": 5
+          },
+          {
+            "quote": "An undetectable viral load is typically associated with a better prognosis for people living with HIV. It means that the virus is at such low levels in the blood that it's unlikely to be transmitted sexually and might also reduce the risk of other health complications.",
+            "turn": 7
+          },
+          {
+            "quote": "The benefits of managing HIV far outweigh any minor inconveniences or discomfort.",
+            "turn": 10
+          }
+        ],
+        "reasoning": "Patient has been on treatment for 3 years and believes it has kept them stable. They understand that stopping treatment can lead to resistance and trust their physician's guidance about restarting medication.",
+        "score": 7.0,
+        "confidence": 0.8
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "I'm living with HIV. It's been a few years since my diagnosis and it's generally been under control.",
+            "turn": 2
+          },
+          {
+            "quote": "Overall, I'd say my health status is fairly stable despite having this chronic illness. There have been ups and downs, but I're always trying to maintain good habits to keep everything under control.",
+            "turn": 8
+          },
+          {
+            "quote": "Beyond these symptoms and concerns about medication adherence, I don't have any other major worries about my health at the moment.",
+            "turn": 11
+          }
+        ],
+        "reasoning": "Patient identifies as living with HIV and describes symptoms as headaches and low-grade fatigue, which they characterize as 'low-grade' and not severe. They don't report multiple severe symptoms that would be intrusive to daily life.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "As for my viral load, I had a check-up two months ago and it was at 340 copies/mL which is considered low but detectable. This is an increase from my previous undetectable levels, so I've been feeling worried about that.",
+            "turn": 5
+          },
+          {
+            "quote": "I think it's possible. I know that consistent treatment is important in managing HIV, and my inconsistent adherence could have contributed to the rise in viral load. However, since my last viral load was still within a low range of undetectable viremia, I'm hoping that it might be more related to some minor fluctuations than anything concerning.",
+            "turn": 6
+          },
+          {
+            "quote": "I'm a bit concerned about my recent viral load increase, but I'm also aware that fluctuations can happen. My doctor has reassured me that this might not be an immediate cause for concern since my CD4 count is still within the normal range.",
+            "turn": 11
+          },
+          {
+            "quote": "However, living with a chronic illness does create ongoing stress and uncertainty, so I try to stay informed and educated while also seeking support from loved ones and healthcare professionals.",
+            "turn": 11
+          }
+        ],
+        "reasoning": "Patient expresses concern about viral load increase and acknowledges ongoing stress and uncertainty about living with a chronic illness. They seek support from loved ones and healthcare professionals.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "An undetectable viral load is typically associated with a better prognosis for people living with HIV. It means that the virus is at such low levels in the blood that it's unlikely to be transmitted sexually and might also reduce the risk of other health complications.",
+            "turn": 7
+          },
+          {
+            "quote": "I'm a bit concerned about my recent viral load increase, but I'm also aware that fluctuations can happen. My doctor has reassured me that this might not be an immediate cause for concern since my CD4 count is still within the normal range.",
+            "turn": 11
+          },
+          {
+            "quote": "I've learned quite a bit about managing HIV since my diagnosis, but I still feel like there's much more to understand. There's always new information and developments in the field of HIV research, so staying informed is an ongoing process.",
+            "turn": 12
+          }
+        ],
+        "reasoning": "Patient demonstrates good understanding of HIV and treatment, including implications of undetectable viral load and connection between adherence and viral load. They acknowledge ongoing learning, showing engagement with understanding their condition.",
+        "score": 7.0,
+        "confidence": 0.8
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "As for my viral load, I had a check-up two months ago and it was at 340 copies/mL which is considered low but detectable. This is an increase from my previous undetectable levels, so I've been feeling worried about that.",
+            "turn": 5
+          },
+          {
+            "quote": "I'm a bit concerned about my recent viral load increase, but I'm also aware that fluctuations can happen. My doctor has reassured me that this might not be an immediate cause for concern since my CD4 count is still within the normal range.",
+            "turn": 11
+          },
+          {
+            "quote": "However, living with a chronic illness does create ongoing stress and uncertainty, so I try to stay informed and educated while also seeking support from loved ones and healthcare professionals.",
+            "turn": 11
+          }
+        ],
+        "reasoning": "Patient expresses worry about viral load increase and acknowledges ongoing stress and uncertainty about living with a chronic illness. They seek support from loved ones and healthcare professionals.",
+        "score": 5.0,
+        "confidence": 0.7
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "It's not that I don't believe in adhering to my medication, but sometimes when I feel well, it's hard to remember to take my pill every day.",
+            "turn": 4
+          },
+          {
+            "quote": "I always resume my full treatment regimen immediately after a drug holiday. I know that stopping for even just a few days can potentially lead to resistance.",
+            "turn": 5
+          },
+          {
+            "quote": "The benefits of managing HIV far outweigh any minor inconveniences or discomfort.",
+            "turn": 10
+          },
+          {
+            "quote": "I know how important it is to stay on track.",
+            "turn": 12
+          }
+        ],
+        "reasoning": "Patient believes in importance of medication, understands stopping can lead to resistance, always resumes full treatment after drug holidays, and believes benefits outweigh minor inconveniences.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "As for other medications, besides Triumeq, I take an over-the-counter pain reliever occasionally when my headaches get particularly bad.",
+            "turn": 7
+          },
+          {
+            "quote": "Regarding side effects from Triumeq, I've noticed some occasional headaches since starting the medication, but they're not severe enough to make me question its benefit overall. The benefits of managing HIV far outweigh any minor inconveniences or discomfort.",
+            "turn": 10
+          }
+        ],
+        "reasoning": "Patient reports occasional headaches as side effect but doesn't find them concerning enough to question medication benefit. No other specific concerns expressed.",
+        "score": 2.0,
+        "confidence": 0.8
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [],
+        "reasoning": "Patient never expressed general concerns about medicines as a class. Focus is on specific medication and its benefits.",
+        "score": null,
+        "confidence": 0.0
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "Patient never expressed concerns about doctors prescribing too readily. Trusts physician's guidance.",
+        "score": null,
+        "confidence": 0.0
+      }
+    },
+    "causes": [
+      "inconsistent medication adherence (drug holidays)"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "I think it's possible. I know that consistent treatment is important in managing HIV, and my inconsistent adherence could have contributed to the rise in viral load.",
+        "turn": 6
+      },
+      {
+        "quote": "I always resume my full treatment regimen immediately after a drug holiday. I know that stopping for even just a few days can potentially lead to resistance.",
+        "turn": 5
+      }
+    ]
+  }
+}

@@ -121,6 +121,67 @@ def test_transport_failures_are_retried_then_given_up_on(sent):
     assert len(events) == llm.MAX_ATTEMPTS
 
 
+def test_a_transport_failure_is_retried_with_the_identical_request(sent):
+    """The server never answered, so the same request is the one to repeat.
+    Moving the sampling here would change what is being retried."""
+    payloads, replies = sent
+    replies.extend([httpx.ConnectError("refused"), {"content": "recovered"}])
+
+    llm.chat(CONFIG, "report", [{"role": "user", "content": "write it"}])
+
+    assert payloads[0] == payloads[1]
+
+
+def test_an_empty_reply_at_temperature_zero_is_retried_with_a_different_draw(sent):
+    """N10: three identical bodies at T=0 give three identical nothings, which
+    is what cost two consultations of the demo matrix."""
+    payloads, replies = sent
+    replies.extend([{"content": ""}, {"content": ""}, {"content": "the report"}])
+    events = []
+
+    llm.chat(CONFIG, "report", [{"role": "user", "content": "write it"}], events=events)
+
+    temperatures = [p["options"]["temperature"] for p in payloads]
+    assert temperatures == [0.0, *llm.RESAMPLE_FLOOR]
+    assert events[0]["retry_temperature"] == llm.RESAMPLE_FLOOR[0]
+
+
+def test_a_role_already_sampling_above_the_floor_is_left_alone(sent):
+    """The floor only raises. The doctor at 0.7 already redraws by itself, and
+    lowering it to 0.3 would be an unrequested change of arm."""
+    payloads, replies = sent
+    replies.extend([{"content": ""}, {"content": "an actual answer"}])
+    events = []
+
+    llm.chat(CONFIG, "doctor", [], events=events)
+
+    assert [p["options"]["temperature"] for p in payloads] == [0.7, 0.7]
+    assert "retry_temperature" not in events[0]
+
+
+def test_a_pinned_seed_moves_too_when_the_reply_was_empty(sent):
+    """A fixed seed makes the draw identical whatever the temperature, so
+    raising it alone would leave the retry as useless as before."""
+    seeded = {**CONFIG, "sampling": {**CONFIG["sampling"], "seed": 42}}
+    payloads, replies = sent
+    replies.extend([{"content": ""}, {"content": "the report"}])
+
+    llm.chat(seeded, "report", [], events=[])
+
+    assert [p["options"]["seed"] for p in payloads] == [42, 43]
+
+
+def test_the_temperature_a_clean_call_sends_is_the_declared_one(sent):
+    """The resampling is a retry path only: a consultation that never came back
+    empty has to be the configuration metadata.json recorded."""
+    payloads, replies = sent
+    replies.append({"content": "the report"})
+
+    llm.chat(CONFIG, "report", [], events=[])
+
+    assert payloads[0]["options"] == llm.sampling_options(CONFIG, "report")
+
+
 def test_every_retry_is_recorded(sent):
     """A run with retries is not a clean run, so it has to leave a trace."""
     _, replies = sent

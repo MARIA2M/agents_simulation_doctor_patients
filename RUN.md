@@ -1,25 +1,25 @@
-# Cómo lanzar una consulta
+# How to launch a consultation
 
-Dos perfiles, mismo código (§6). `local` en el nodo de login para humo y tests;
-`hpc` en un nodo de cómputo para lo que se mide.
+Two profiles, the same code (§6). `local` on the login node for smoke tests and
+tests; `hpc` on a compute node for anything that gets measured.
 
-Cada paso está por una razón concreta. Saltarse uno no da error: da una corrida
-que parece buena y no lo es.
+Every step is there for a concrete reason. Skipping one does not give an error:
+it gives a run that looks fine and is not.
 
 ---
 
-## Copiar y pegar
+## Copy and paste
 
-El porqué de cada línea está más abajo. Aquí solo están, en orden.
+The why of each line is further down. Here they just are, in order.
 
-**Tests** (nodo de login, sin servidor):
+**Tests** (login node, no server):
 
 ```bash
 cd /gpfs/projects/bsc02/bsc064212/AHEAD/use_cases/patient_doctor_agents/agents_simulations
 ./venv-local/bin/python -m pytest tests/ -q
 ```
 
-**Consulta en local** (humo, `llama3.2`):
+**A consultation locally** (smoke, `llama3.2`):
 
 ```bash
 cd /gpfs/projects/bsc02/bsc064212/AHEAD/use_cases/patient_doctor_agents/agents_simulations
@@ -27,7 +27,7 @@ cd /gpfs/projects/bsc02/bsc064212/AHEAD/use_cases/patient_doctor_agents/agents_s
 ./venv-local/bin/python main.py --patient patients/CLL-003.json --profile local
 ```
 
-**Consulta en HPC** (`glm-4.7-flash:q8_0`). Primero, desde el login:
+**A consultation on HPC** (`glm-4.7-flash:q8_0`). First, from the login node:
 
 ```bash
 cd /gpfs/projects/bsc02/bsc064212/AHEAD/use_cases/patient_doctor_agents/agents_simulations
@@ -35,7 +35,7 @@ salloc -A bsc02 -q acc_debug -p acc --gres=gpu:1 -c 40 -t 1:00:00 \
   srun --export=ALL --pty bash
 ```
 
-Y ya dentro del nodo, de una vez:
+And once inside the node, all at once:
 
 ```bash
 cd /gpfs/projects/bsc02/bsc064212/AHEAD/use_cases/patient_doctor_agents/agents_simulations
@@ -53,102 +53,143 @@ time curl -s "$OLLAMA_URL/api/chat" -d '{
 ./venv-hpc/bin/python main.py --patient patients/CLL-003.json --profile hpc --run-id s3-1
 ```
 
-**Ver qué salió:**
+**Seeing what came out:**
 
 ```bash
 ls runs/s3-1/
 python3 -c "import json; t=json.load(open('runs/s3-1/transcript.json')); print(t['turns'], t['stop_reason'], len(t['events']))"
 ```
 
-**Tanda en HPC** (mismo nodo, mismos pasos 1–4, y en vez de `main.py`):
+**A batch on HPC** (same node, same steps 1–4, and instead of `main.py`):
 
 ```bash
-git status --short                          # tiene que estar vacío
+git status --short                          # has to be empty
 ./venv-hpc/bin/python run_batch.py --profile hpc --repeats 5 --run-id e4-1
 ```
 
 ---
 
-## El orden completo, de la reserva al número
+## The whole order, from reservation to number
 
-Cinco etapas. **La única que necesita el servidor después de las consultas es
-`rescore.py`**, así que va antes de soltar el nodo; las otras tres son
-post-proceso puro y corren donde sea.
+Nine stages. **The only thing that needs the server after the consultations is
+`rescore.py`**, so it goes before releasing the node; the rest is pure
+post-processing and runs anywhere.
 
-| | Etapa | Servidor | Por qué va aquí |
+| | Stage | Server | Why it goes here |
 |---|---|---|---|
-| 1 | `git commit` + `pytest` | no | `run_batch` aborta con el árbol sucio |
-| 2 | `run_batch.py` | **sí** | las consultas |
-| 3 | puerta: `batch.json` | no | `stop_reason: doctor` en todas, `events: 0`. Si falla, nada de abajo se lee |
-| 4 | `fidel.py` | no | ¿jugó el paciente su perfil? Si no, ni cobertura ni MAE de esa consulta dicen nada |
-| 5 | `cover.py` | no | 3.2 + 2.4. **3.4: no se analiza un corpus que no ha pasado por aquí** |
-| 6 | `rescore.py` | **sí** | 5.4, dos llamadas por consulta. **Última cosa que necesita el nodo** |
-| 7 | `evaluate.py` | no (salvo `--causes`) | el MAE, al final |
+| 0 | `pytest tests/` + `cover.py` smoke | no | The whole suite. The smoke test is the only thing exercising the CLI's formatting |
+| 1 | `git commit` | no | `run_batch` aborts on a dirty tree |
+| 2 | node, `serve_ollama.sh`, warm up | **yes** | §6.1 and §6.3 |
+| 3 | `rescore.py` smoke over an old batch | **yes** | 4 calls. **Before generating anything**: if the tool is broken, finding out here costs a minute and at stage 7 it costs the reservation |
+| 4 | time one consultation | **yes** | ×20 plus a fifth for the ablation: does it fit in the walltime? |
+| 5 | `run_batch.py --repeats 5` | **yes** | the consultations |
+| 6 | gate: `batch.json` | no | `stop_reason: doctor` on all of them, `events: 0`. If it fails, nothing below is read |
+| 7 | `fidel.py` → `cover.py` → `rescore.py` | only the third | see below |
+| 8 | `evaluate.py` | no (unless `--causes`) | the MAE, last |
 
 ```bash
-# 3 — la puerta
+# 0 — no server, on login
+./venv-local/bin/python -m pytest tests/ -q
+./venv-hpc/bin/python tools/make_dummy_batch.py
+./venv-hpc/bin/python cover.py /tmp/ahead-dummy-batch
+
+# 3 — ablation smoke over data that already exists, outside the repository
+cp -r runs/historic/e4-1 /gpfs/projects/bsc02/bsc064212/ahead-smoke
+./venv-hpc/bin/python rescore.py /gpfs/projects/bsc02/bsc064212/ahead-smoke --profile hpc --limit 2
+
+# 6 — the gate
 python3 -c "
-import json; b=json.load(open('runs/TANDA/batch.json'))
+import json; b=json.load(open('runs/BATCH/batch.json'))
 for c in b['consultations']:
     print(c['run'], c['status'], c.get('stop_reason'), 'events', c.get('events'))"
 
-# 4-7
-./venv-hpc/bin/python fidel.py    runs/TANDA --profile hpc --quotes
-./venv-hpc/bin/python cover.py    runs/TANDA
-./venv-hpc/bin/python rescore.py  runs/TANDA --profile hpc     # con servidor
-./venv-hpc/bin/python evaluate.py runs/TANDA --profile hpc
+# 7-8
+./venv-hpc/bin/python fidel.py    runs/BATCH --profile hpc --quotes
+./venv-hpc/bin/python cover.py    runs/BATCH
+./venv-hpc/bin/python rescore.py  runs/BATCH --profile hpc     # with server
+./venv-hpc/bin/python evaluate.py runs/BATCH --profile hpc
 ```
 
-Cada uno deja un fichero junto a la tanda: `fidelity.json`, `coverage.json`,
-`report-intact.json` / `report-ablate.json` por consulta, y `evaluation.json`.
-Ninguno modifica `report.json`.
+**The order of stage 7 is not decorative.** Fidelity first: if the patient did
+not play its profile, neither the coverage nor the MAE of that consultation says
+anything. Coverage next, because 3.4 forbids analysing a corpus that has not
+passed 3.2. Evaluation last.
 
-**`--repeats 5`, no 2 ni 3.** `coverage.py` fija `MIN_REPEATS = 5` y por debajo
-devuelve `sd: None`: una tanda de 3 sale entera en nulos. Se puede empezar por 2
-y subir después con el **mismo `--run-id`**, que reanuda y solo paga las vueltas
-que faltan.
+Each one leaves a file next to the batch: `fidelity.json`, `coverage.json`,
+`report-intact.json` / `report-ablate.json` per consultation, and
+`evaluation.json`. **None of them modifies `report.json`.**
+
+**`--repeats 5`, not 2 or 3.** `coverage.py` sets `MIN_REPEATS = 5` and below
+that returns `sd: None`: a batch of 3 comes out entirely null. You can start at 2
+and go up later with **the same `--run-id`**, which resumes and pays only for the
+missing rounds. `rescore.py` resumes the same way.
+
+**Smoke copies go outside the repository.** Inside they dirty the tree and
+`run_batch` refuses to start; inside `runs/historic/` they contaminate the
+archive with files that run never produced.
+
+---
+
+## Looking at a consultation afterwards
+
+```bash
+./venv-local/bin/python replay_server.py --patient CLL-003   # http://127.0.0.1:8000
+```
+
+Plays a consultation back turn by turn and then shows the report and the
+evaluation. Read-only post-processing — no model, no GPU, no graph — so it runs
+on the login node while a batch is still in the queue. Over SSH, forward the
+port: `ssh -L 8000:127.0.0.1:8000 <login>`.
+
+One patient at a time. Without `--patient` the browser picks a person first and
+then one of their consultations. Its first start is slow because it globs `runs/`
+off GPFS; `--runs` pointed at a directory holding only what will be shown makes
+it immediate.
 
 ---
 
 ## Tests
 
-Sin servidor: el LLM está sustituido por respuestas guionizadas.
+No server: the LLM is replaced by scripted replies.
 
 ```bash
 ./venv-local/bin/python -m pytest tests/ -q
 ```
 
-Dos quedan fuera por defecto, los de la consulta entera de punta a punta. Son los
-únicos que construyen el grafo, y construirlo importa `langgraph`:
+Two stay out by default, the end-to-end ones. They are the only tests that build
+the graph, and building it imports `langgraph`:
 
 ```bash
 AHEAD_GRAPH_TESTS=1 ./venv-local/bin/python -m pytest tests/ -q
 ```
 
-**`import langgraph` tarda ~3 minutos leyendo de GPFS**, medido dos veces con
-el mismo resultado, así que no es la caché fría: son miles de ficheros pequeños
-y el coste es de metadatos. `main.py` lo paga también, antes de la primera
-llamada al modelo. En el nodo de cómputo conviene copiar el venv al disco local
-antes de una tanda; leerlo de GPFS en cada tarea no escala, igual que pasa con
-los pesos (§6.1).
+The count lives in [TESTS.md](TESTS.md), and if that document and `grep`
+disagree, `grep` wins.
+
+**`import langgraph` takes ~3 minutes reading off GPFS**, measured twice with the
+same result, so it is not a cold cache: it is thousands of small files and the
+cost is metadata. `main.py` pays it too, before the first call to the model. On a
+compute node it is worth copying the venv to local disk before a batch; reading
+it off GPFS on every task does not scale, the same way it does not for the
+weights (§6.1).
 
 ---
 
-## Antes de nada: commitear
+## First of all: commit
 
-`metadata.code.dirty` marca si el árbol tenía cambios sin commitear. Si es
-`true`, el `git_commit` de la corrida no describe el código que la produjo y la
-corrida no es reproducible.
+`metadata.code.dirty` records whether the tree had uncommitted changes. If it is
+`true`, the run's `git_commit` does not describe the code that produced it and
+the run is not reproducible.
 
 ```bash
-git status --short          # vacío antes de una corrida que quieras guardar
+git status --short          # empty before a run you want to keep
 ```
 
-Para humo da igual. Para una línea base, no.
+For a smoke test it does not matter. For a baseline, it does.
 
 ---
 
-## Local (nodo de login)
+## Local (login node)
 
 ```bash
 cd /gpfs/projects/bsc02/bsc064212/AHEAD/use_cases/patient_doctor_agents/agents_simulations
@@ -159,14 +200,14 @@ export OLLAMA_NUM_PARALLEL=1
 ./venv-local/bin/python main.py --patient patients/CLL-003.json --profile local
 ```
 
-Nada de este perfil entra en métricas publicadas: dice que el código corre, no
-cuánto acierta el médico.
+Nothing from this profile goes into published metrics: it says the code runs, not
+how accurate the doctor is.
 
 ---
 
-## HPC (nodo de cómputo)
+## HPC (compute node)
 
-### 1. Reservar y aterrizar en el nodo
+### 1. Reserve a node and land on it
 
 ```bash
 cd /gpfs/projects/bsc02/bsc064212/AHEAD/use_cases/patient_doctor_agents/agents_simulations
@@ -175,50 +216,49 @@ salloc -A bsc02 -q acc_debug -p acc --gres=gpu:1 -c 40 -t 1:00:00 \
   srun --export=ALL --pty bash
 ```
 
-`acc_debug` con una hora es para humo. **Una tanda no cabe ahí**: cronometra una
-consulta primero (`--repeats 1` sobre un paciente), multiplica por el número de
-consultas, súmale la ablación de 5.4 y pide `-q acc` con ese tiempo más un
-margen. Quedarse corto no pierde el trabajo —relanzar con el mismo `--run-id`
-reanuda— pero sí pierde la reserva.
+`acc_debug` with one hour is for smoke tests. **A batch does not fit there**:
+time one consultation first (`--repeats 1` over one patient), multiply by the
+number of consultations, add the ablation of 5.4, and ask for `-q acc` with that
+time plus a margin. Falling short does not lose the work — relaunching with the
+same `--run-id` resumes — but it does lose the reservation.
 
-El `srun` de dentro **no es opcional** (§6.3). `salloc` reserva los recursos
-pero ejecuta el comando en la máquina desde la que se invoca, y los nodos de
-login de ACC también tienen H100: sin `srun` todo parece correcto mientras el
-nodo reservado no hace nada.
+The inner `srun` **is not optional** (§6.3). `salloc` reserves the resources but
+runs the command on the machine it was invoked from, and the ACC login nodes have
+H100s too: without `srun` everything looks right while the reserved node does
+nothing.
 
-`-c 40` es por memoria, no por CPU: ACC da 8 GB por core, y a ollama lo mataron
-cargando 31.8 GB de pesos más la caché KV. 40 cores = 320 GB.
+`-c 40` is about memory, not CPU: ACC gives 8 GB per core, and ollama was killed
+loading 31.8 GB of weights plus the KV cache. 40 cores = 320 GB.
 
-### 2. Comprobar dónde estás
+### 2. Check where you are
 
 ```bash
-hostname; echo "$SLURM_NODELIST"     # tienen que ser iguales
-nvidia-smi -L                        # 1 GPU, no 4
+hostname; echo "$SLURM_NODELIST"     # they have to match
+nvidia-smi -L                        # 1 GPU, not 4
 ```
 
-Las dos señales del §6.3. Si `hostname` dice `alogin*` o salen 4 GPUs, estás en
-el nodo de login: sal y repite el paso 1.
+The two signals from §6.3. If `hostname` says `alogin*` or four GPUs come back,
+you are on the login node: leave and repeat step 1.
 
-### 3. Levantar el servidor
+### 3. Start the server
 
 ```bash
 . serve_ollama.sh
 ```
 
-Exporta `OLLAMA_MODELS` (los modelos del proyecto no están en `~/.ollama`),
-`OLLAMA_HOST`, el `PATH` del binario, `OLLAMA_URL` —que lee `load_config` y
-acaba en `metadata.server.ollama_url`— y `OLLAMA_NUM_PARALLEL`.
+It exports `OLLAMA_MODELS` (the project's models are not in `~/.ollama`),
+`OLLAMA_HOST`, the binary's `PATH`, `OLLAMA_URL` — which `load_config` reads and
+which ends up in `metadata.server.ollama_url` — and `OLLAMA_NUM_PARALLEL`.
 
-Este último tiene que estar **antes** de que arranque el servidor: es una
-variable del servidor, no una opción de la petición, así que `llm.py` no puede
-enviarla. Sin ella el servidor usa su valor por defecto, reparte el contexto
-entre slots y trunca en silencio, mientras `metadata.sampling.num_parallel`
-sigue diciendo 1.
+That last one has to be set **before** the server starts: it is a server
+variable, not a request option, so `llm.py` cannot send it. Without it the server
+uses its default, splits the context between slots and truncates silently, while
+`metadata.sampling.num_parallel` goes on saying 1.
 
-Debería listar los cuatro modelos: `glm-4.7-flash:q8_0`, `dolphin-llama3`,
+It should list the four models: `glm-4.7-flash:q8_0`, `dolphin-llama3`,
 `llama3.2`, `nomic-embed-text`.
 
-### 4. Calentar el modelo
+### 4. Warm the model
 
 ```bash
 time curl -s "$OLLAMA_URL/api/chat" -d '{
@@ -227,98 +267,100 @@ time curl -s "$OLLAMA_URL/api/chat" -d '{
   "stream":false,"keep_alive":"4h"}' > /dev/null
 ```
 
-Carga los pesos en la GPU. Son ~30 s desde GPFS que, si no, los paga la primera
-llamada del médico contra un timeout de 300 s y contando como parte del primer
-turno (§6.1). Si tarda mucho más, algo va mal antes de medir nada.
+This pulls the weights onto the GPU. It is ~30 s from GPFS which, otherwise, is
+paid by the doctor's first call against a 300 s timeout and counted as part of
+the first turn (§6.1). If it takes much longer, something is wrong before
+anything has been measured.
 
-### 5. Correr
+### 5. Run
 
 ```bash
 ./venv-hpc/bin/python -c "import langgraph; print('venv ok')"
 ./venv-hpc/bin/python main.py --patient patients/CLL-003.json --profile hpc --run-id hpc-test-1
 ```
 
-`venv-hpc` **solo funciona en el nodo de cómputo**. Su `bin/python3` apunta a
-`/usr/bin/python3`, que allí es 3.9 y coincide con su `site-packages`; en el
-nodo de login es 3.10 y no importa nada. En login se usa `venv-local`.
+`venv-hpc` **only works on the compute node**. Its `bin/python3` points at
+`/usr/bin/python3`, which there is 3.9 and matches its `site-packages`; on the
+login node it is 3.10 and it imports nothing. On login, use `venv-local`.
 
 ---
 
-## Después
+## Afterwards
 
 ```bash
 ls runs/hpc-test-1/                  # metadata.json + transcript.json
 ```
 
-Tres cosas que mirar en `transcript.json`:
+Three things to look at in `transcript.json`:
 
-- `stop_reason` — `doctor` es lo que se busca. `turn_cap` significa que cortó el
-  tope, no el médico. `malformed_call` es un fallo de tool calling.
-- `events` — vacío es una corrida limpia. Cualquier cosa ahí (reintentos, turnos
-  vacíos) hay que leerla antes de creerse el resultado.
-- `turns` — 10–15 es una consulta de verdad. 1 turno es el médico cerrando
-  inmediatamente, que es lo que hace `llama3.2` con cualquier prompt.
+- `stop_reason` — `doctor` is what you want. `turn_cap` means the cap cut it off,
+  not the doctor. `malformed_call` is a tool-calling failure.
+- `events` — empty is a clean run. Anything there (retries, empty turns) has to
+  be read before believing the result.
+- `turns` — 10–15 is a real consultation. 1 turn is the doctor closing
+  immediately, which is what `llama3.2` does with any prompt.
 
-Y en `metadata.json`, `prompts.doctor`: el hash identifica qué versión del
-prompt produjo esto. Es lo que permite atribuir un cambio de resultado a un
-cambio de prompt y no a otra cosa.
+And in `metadata.json`, `prompts.doctor`: the hash identifies which version of
+the prompt produced this. It is what allows a change of result to be attributed
+to a change of prompt and not to something else.
 
 ---
 
-## Tandas: `run_batch.py`
+## Batches: `run_batch.py`
 
-`main.py` es una consulta. Una consulta no mide nada: la dispersión entre
-corridas idénticas es de 1.25 de MAE (N2), así que cualquier número de n=1 está
-por debajo del ruido. `run_batch.py` corre **N repeticiones × M pacientes** con
-una sola configuración, que es la unidad con la que se calculan la confianza
-empírica (2.4) y la discriminación entre pacientes (2.5).
+`main.py` is one consultation. One consultation measures nothing: the spread
+between identical runs is 1.25 of MAE (N2), so any n=1 number is below the noise.
+`run_batch.py` runs **N repeats × M patients** under a single configuration,
+which is the unit the empirical confidence (2.4) and the discrimination between
+patients (2.5) are computed on.
 
 ```bash
 ./venv-hpc/bin/python run_batch.py --profile hpc --repeats 2 --run-id e4-1
 ```
 
-| Opción | Qué hace |
+| Option | What it does |
 |---|---|
-| `--repeats N` | Consultas por paciente. Por defecto 1 |
-| `--patients ...` | Perfiles concretos. Por defecto los 10 de `paths.patients` |
-| `--profile` | `local` o `hpc`, igual que `main.py` |
-| `--run-id` | Nombre de la tanda. Por defecto, marca de tiempo |
-| `--allow-dirty` | Correr con cambios sin commitear. Sin esto, **se niega a arrancar** |
+| `--repeats N` | Consultations per patient. Default 1 |
+| `--patients ...` | Specific profiles. Default: the 10 in `paths.patients` |
+| `--profile` | `local` or `hpc`, same as `main.py` |
+| `--run-id` | The batch's name. Default: a timestamp |
+| `--allow-dirty` | Run with uncommitted changes. Without it, **it refuses to start** |
 
-Escalas de §8: la Etapa 4 son `--repeats 2` sobre los 10, la 6 son 5 y la línea
-base de la 7 son 10.
+The scales from §8: Stage 4 is `--repeats 2` over the 10, Stage 6 is 5, and the
+Stage 7 baseline is 10.
 
-### Qué hace, en orden
+### What it does, in order
 
-1. **Comprueba el árbol.** Si `git status` no está limpio, aborta. Es el fallo de
-   las cuatro corridas `s3-*`: salieron con `dirty: true` y no se pueden atribuir
-   a ningún commit. Para humo, `--allow-dirty`.
-2. **Avisa si las dos temperaturas son 0.** A T=0 las repeticiones son idénticas
-   y 2.4 no tiene nada que medir.
-3. **Escribe la metadata una vez**, en `runs/<tanda>/metadata.json`: es la misma
-   configuración para toda la tanda, y duplicarla por consulta solo daría 20
-   copias del mismo fichero.
-4. **Calienta los dos modelos** con una llamada trivial (§6.1), para que la carga
-   desde GPFS no la pague el primer turno.
-5. **Corre las consultas en serie**, un barrido completo del corpus y luego el
-   siguiente. Si la cola corta la tanda, quedan los 10 pacientes una vez en vez
-   de dos pacientes diez veces.
-6. **Una consulta que revienta no tumba la tanda**: se anota como `failed` y
-   sigue. El índice se reescribe después de cada consulta.
+1. **Checks the tree.** If `git status` is not clean, it aborts. That is the
+   failure of the four `s3-*` runs: they came out with `dirty: true` and cannot
+   be attributed to any commit. For smoke tests, `--allow-dirty`.
+2. **Warns if both temperatures are 0.** At T=0 the repeats are identical and 2.4
+   has nothing to measure.
+3. **Writes the metadata once**, in `runs/<batch>/metadata.json`: it is the same
+   configuration for the whole batch, and duplicating it per consultation would
+   only give 20 copies of the same file.
+4. **Warms both models** with a trivial call (§6.1), so the load from GPFS is not
+   paid by the first turn.
+5. **Runs the consultations in series**, one full sweep of the corpus and then
+   the next. If the queue cuts the batch short, what is left is the 10 patients
+   once rather than two patients ten times.
+6. **One consultation blowing up does not bring down the batch**: it is recorded
+   as `failed` and the run continues. The index is rewritten after each
+   consultation.
 
-### Qué deja
+### What it leaves
 
 ```
-runs/<tanda>/
-├── metadata.json         # la configuración de toda la tanda (0.4)
-├── batch.json            # el índice: una línea por consulta
+runs/<batch>/
+├── metadata.json         # the configuration of the whole batch (0.4)
+├── batch.json            # the index: one line per consultation
 ├── CLL-001-r1/           # transcript.json + report.json
 ├── CLL-002-r1/
 │   …
 └── HIV-005-r2/
 ```
 
-`batch.json` es lo que se lee antes de analizar nada:
+`batch.json` is what gets read before analysing anything:
 
 ```bash
 python3 -c "
@@ -327,20 +369,21 @@ for c in b['consultations']:
     print(c['run'], c['status'], c.get('stop_reason'), 'events', c.get('events'), 'NA', len(c.get('na',[])))"
 ```
 
-`status: failed`, `report_parsed: false` o `events` distinto de 0 en cualquier
-consulta significa que la tanda todavía no es un corpus analizable (3.4). Se
-arregla y se relanza: **relanzar con el mismo `--run-id` reanuda**, salta las
-consultas que ya tienen `transcript.json` y solo paga las que faltan.
+`status: failed`, `report_parsed: false` or `events` other than 0 in any
+consultation means the batch is not an analysable corpus yet (3.4). Fix it and
+relaunch: **relaunching with the same `--run-id` resumes**, skips the
+consultations that already have a `transcript.json` and pays only for the missing
+ones.
 
 ---
 
-## Variantes de prompt
+## Prompt variants
 
-No hay un perfil por prompt. Se cambia la línea `prompts.doctor` de
-`config/hpc.yaml` y el hash de `metadata.json` registra cuál se usó.
+There is no profile per prompt. You change the `prompts.doctor` line in
+`config/hpc.yaml` and the hash in `metadata.json` records which one was used.
 
-Hoy solo hay uno, `DOCTOR.md`. Las variantes de la Etapa 3 se retiraron al
-cerrarla; `prompts/reference/` conserva los prompts del brazo Ruby como
-referencia, pero no están cableados a ningún perfil.
+Today there is only one, `DOCTOR.md`. The Stage 3 variants were retired when it
+closed; `prompts/reference/` keeps the Ruby arm's prompts as a reference, but
+they are not wired to any profile.
 
-Una variable por corrida: cambia el prompt o cambia el modelo, no las dos cosas.
+One variable per run: change the prompt or change the model, not both.

@@ -1,0 +1,316 @@
+{
+  "patient_id": "HIV-005",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "HIV-005",
+    "clinical_summary": "Patient with HIV (diagnosed ~5 years ago) experiencing new headaches, fatigue, and dizziness for several months. Normal blood work and MRI. On HIV medication (Triumeq) but experiencing side effects (headaches, exhaustion) and not seeing relief for current symptoms. Adherence has been inconsistent ('drug holidays') with headaches returning when doses are missed. Patient feels things are 'slipping out of control' and describes a 'balancing act' between taking responsibility for health and accepting limitations. Expresses frustration about not understanding what's causing symptoms and wants more concrete answers.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "I've been having a lot of headaches and some fatigue that just won't go away. It's really getting in the way of my daily life — work is more stressful than usual, and even spending time with family feels like a chore most days.",
+            "turn": 1
+          },
+          {
+            "quote": "When I say 'normal,' I mean feeling like I'm not constantly battling these headaches and fatigue.",
+            "turn": 6
+          },
+          {
+            "quote": "It's the difference between feeling like I can actually tackle my day without feeling exhausted by lunchtime or getting easily winded after going up a flight of stairs.",
+            "turn": 6
+          },
+          {
+            "quote": "When things are good, it feels like my life is under control again — like I can be present for my family and work without feeling like I'm just going through the motions.",
+            "turn": 6
+          }
+        ],
+        "reasoning": "Patient describes substantial impact on daily life - work is more stressful, family time feels like a chore, they're battling headaches and fatigue, get exhausted by lunchtime, get winded easily, and feel like they're 'going through the motions' rather than being present. This is significant interference with their ability to function and be present in their roles.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "These headaches and fatigue have been going on for a few months now, though the intensity has varied.",
+            "turn": 2
+          },
+          {
+            "quote": "I was diagnosed with HIV about five years ago, I think.",
+            "turn": 4
+          },
+          {
+            "quote": "At first, the medication made things pretty manageable, but lately it feels like everything is slipping out of my control again.",
+            "turn": 4
+          },
+          {
+            "quote": "Sometimes it feels like a weight I can't shake off, especially when I miss doses or feel those headaches creeping back up. But at other times, it's more of an abstract thing — something I know exists but isn't dominating my thoughts or feelings.",
+            "turn": 7
+          }
+        ],
+        "reasoning": "Patient has had HIV for about 5 years, current symptoms for a few months. Describes illness as 'ongoing part of my life' and 'constant presence' but also sometimes as 'more of an abstract thing.' No clear expectation about when things will change or end.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "Lately, my adherence to the medication hasn't been great. I've been missing doses here and there when I feel good and don't think I need it — what I like to call 'drug holidays.'",
+            "turn": 5
+          },
+          {
+            "quote": "It's probably not wise, but sometimes it feels like I can almost taste normalcy again if I just skip a dose or two.",
+            "turn": 5
+          },
+          {
+            "quote": "I can take my medication as prescribed and try to manage my stress levels, but ultimately, I don't know what's causing them or how to fix them.",
+            "turn": 10
+          },
+          {
+            "quote": "It's a balancing act between taking responsibility for my health and accepting that there are some things I just can't control right now.",
+            "turn": 10
+          }
+        ],
+        "reasoning": "Patient takes some action (medication, stress management) but admits to inconsistent adherence and describes a 'balancing act' between responsibility and acceptance. Ultimately doesn't know what's causing symptoms or how to fix them.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "I'm taking Triumeq as prescribed by my doctor for my HIV medication, but it hasn't seemed to make a difference in these specific symptoms.",
+            "turn": 3
+          },
+          {
+            "quote": "I've been missing doses here and there when I feel good and don't think I need it — what I like to call 'drug holidays.'",
+            "turn": 5
+          },
+          {
+            "quote": "But then the headaches come back with a vengeance, and I'm reminded of how important this medication is.",
+            "turn": 5
+          },
+          {
+            "quote": "Sometimes when I take it, I get these terrible headaches that last all day, and other times, it feels like my whole body is just exhausted from taking it.",
+            "turn": 8
+          },
+          {
+            "quote": "And even though you said the medication should help with these symptoms I've been experiencing, it doesn't really seem like it's doing much at all right now.",
+            "turn": 8
+          },
+          {
+            "quote": "I've come across some information online about possible headaches and fatigue being side effects of the medication. It makes me question whether it's really worth it to keep taking it when I'm still experiencing these symptoms.",
+            "turn": 9
+          }
+        ],
+        "reasoning": "Patient takes HIV medication but doesn't see it helping with current symptoms. Experiences side effects and questions whether it's worth taking. Understands it's important for HIV but doesn't see it helping with new symptoms.",
+        "score": 2.0,
+        "confidence": 0.9
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "I've been having a lot of headaches and some fatigue that just won't go away.",
+            "turn": 1
+          },
+          {
+            "quote": "These headaches and fatigue have been going on for a few months now, though the intensity has varied.",
+            "turn": 2
+          },
+          {
+            "quote": "When I say 'normal,' I mean feeling like I'm not constantly battling these headaches and fatigue.",
+            "turn": 6
+          },
+          {
+            "quote": "It's the difference between feeling like I can actually tackle my day without feeling exhausted by lunchtime or getting easily winded after going up a flight of stairs.",
+            "turn": 6
+          },
+          {
+            "quote": "When things are good, it feels like my life is under control again — like I can be present for my family and work without feeling like I'm just going through the motions.",
+            "turn": 6
+          },
+          {
+            "quote": "Sometimes it feels like a weight I can't shake off, especially when I miss doses or feel those headaches creeping back up.",
+            "turn": 7
+          }
+        ],
+        "reasoning": "Patient describes multiple symptoms (headaches, fatigue, dizziness) present most days that affect daily functioning. Describes 'battling' these symptoms and feeling like they're 'going through the motions' rather than being present.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "It's really getting in the way of my daily life — work is more stressful than usual, and even spending time with family feels like a chore most days.",
+            "turn": 1
+          },
+          {
+            "quote": "I'm not entirely sure what could be causing these symptoms beyond my HIV. It's hard to say — maybe stress at work is playing a role, or perhaps I'm just dealing with the natural ups and downs of life.",
+            "turn": 10
+          },
+          {
+            "quote": "I think having more concrete answers about what's causing these symptoms would be a huge step forward. Right now, it feels like I'm just guessing at things and not really getting anywhere.",
+            "turn": 11
+          },
+          {
+            "quote": "It's also helpful to know that there are resources out there like this one to help me navigate these challenges, even if they can't take away all of the uncertainty and worry.",
+            "turn": 11
+          }
+        ],
+        "reasoning": "Patient expresses worry about not understanding what's causing symptoms, feeling like they're 'guessing at things,' and wanting more concrete answers. Acknowledges uncertainty and worry, but worry doesn't appear to be frequent or intrusive beyond seeking answers.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "As for the connection between my symptoms and HIV, I'm not entirely sure — maybe because the virus itself is causing inflammation or something? I don't really understand all the ins and outs of it yet.",
+            "turn": 4
+          },
+          {
+            "quote": "I'm not entirely sure what could be causing these symptoms beyond my HIV. It's hard to say — maybe stress at work is playing a role, or perhaps I'm just dealing with the natural ups and downs of life.",
+            "turn": 10
+          },
+          {
+            "quote": "I think having more concrete answers about what's causing these symptoms would be a huge step forward. Right now, it feels like I'm just guessing at things and not really getting anywhere.",
+            "turn": 11
+          }
+        ],
+        "reasoning": "Patient doesn't understand connection between HIV and current symptoms, doesn't know what's causing symptoms, and describes 'guessing at things.' Wants more concrete answers but lacks clear understanding of what's happening.",
+        "score": 2.0,
+        "confidence": 0.9
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "Well, it's been a bit of an uphill battle lately, to be honest.",
+            "turn": 1
+          },
+          {
+            "quote": "It's really getting in the way of my daily life — work is more stressful than usual, and even spending time with family feels like a chore most days.",
+            "turn": 1
+          },
+          {
+            "quote": "At first, the medication made things pretty manageable, but lately it feels like everything is slipping out of my control again.",
+            "turn": 4
+          },
+          {
+            "quote": "Sometimes it feels like a weight I can't shake off, especially when I miss doses or feel those headaches creeping back up.",
+            "turn": 7
+          },
+          {
+            "quote": "It's a balancing act between taking responsibility for my health and accepting that there are some things I just can't control right now.",
+            "turn": 10
+          },
+          {
+            "quote": "I think having more concrete answers about what's causing these symptoms would be a huge step forward. Right now, it feels like I'm just guessing at things and not really getting anywhere.",
+            "turn": 11
+          }
+        ],
+        "reasoning": "Patient describes feeling like they're in an 'uphill battle,' that things are 'slipping out of control,' that HIV is a 'weight I can't shake off,' and describes a 'balancing act' between responsibility and acceptance. Expresses frustration about not understanding symptoms.",
+        "score": 8.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "I've been missing doses here and there when I feel good and don't think I need it — what I like to call 'drug holidays.'",
+            "turn": 5
+          },
+          {
+            "quote": "But then the headaches come back with a vengeance, and I'm reminded of how important this medication is.",
+            "turn": 5
+          },
+          {
+            "quote": "I've come across some information online about possible headaches and fatigue being side effects of the medication. It makes me question whether it's really worth it to keep taking it when I'm still experiencing these symptoms.",
+            "turn": 9
+          }
+        ],
+        "reasoning": "Patient admits to inconsistent adherence and questions whether it's 'really worth it to keep taking it' when still experiencing symptoms. However, acknowledges that missing doses leads to headaches, suggesting understanding of necessity. Conflicted belief.",
+        "score": 3.0,
+        "confidence": 0.8
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "Sometimes when I take it, I get these terrible headaches that last all day, and other times, it feels like my whole body is just exhausted from taking it.",
+            "turn": 8
+          },
+          {
+            "quote": "I've also read up on some potential side effects, so there's always a part of me that wonders if I'm trading one problem for another.",
+            "turn": 8
+          },
+          {
+            "quote": "And even though you said the medication should help with these symptoms I've been experiencing, it doesn't really seem like it's doing much at all right now.",
+            "turn": 8
+          },
+          {
+            "quote": "I've come across some information online about possible headaches and fatigue being side effects of the medication. It makes me question whether it's really worth it to keep taking it when I'm still experiencing these symptoms.",
+            "turn": 9
+          }
+        ],
+        "reasoning": "Patient experiences side effects (headaches, exhaustion), has read about potential side effects, questions whether it's worth taking, and worries about 'trading one problem for another.' Active concerns that have led to questioning medication's value.",
+        "score": 4.0,
+        "confidence": 0.9
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "I've also read up on some potential side effects, so there's always a part of me that wonders if I'm trading one problem for another.",
+            "turn": 8
+          },
+          {
+            "quote": "I've come across some information online about possible headaches and fatigue being side effects of the medication. It makes me question whether it's really worth it to keep taking it when I'm still experiencing these symptoms.",
+            "turn": 9
+          }
+        ],
+        "reasoning": "Patient worries about 'trading one problem for another' and questions whether medication is worth taking. Suggests some concern that medicines might be harmful overall, though not strongly developed.",
+        "score": 3.0,
+        "confidence": 0.7
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [
+          {
+            "quote": "At times, I do wonder if my doctor is prescribing too much or if there might be something else going on that hasn't been identified yet — like other conditions that could be contributing to my headaches and fatigue.",
+            "turn": 9
+          },
+          {
+            "quote": "But ultimately, I trust my doctor's judgment, even as I struggle with the side effects of the medication.",
+            "turn": 9
+          }
+        ],
+        "reasoning": "Patient occasionally wonders if doctor is prescribing too much, but ultimately trusts doctor's judgment. Suggests mild concern about overuse tempered by trust.",
+        "score": 2.0,
+        "confidence": 0.8
+      }
+    },
+    "causes": [
+      "HIV causing inflammation",
+      "stress at work",
+      "natural ups and downs of life"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "As for the connection between my symptoms and HIV, I'm not entirely sure — maybe because the virus itself is causing inflammation or something?",
+        "turn": 4
+      },
+      {
+        "quote": "I'm not entirely sure what could be causing these symptoms beyond my HIV. It's hard to say — maybe stress at work is playing a role, or perhaps I'm just dealing with the natural ups and downs of life.",
+        "turn": 10
+      }
+    ]
+  }
+}

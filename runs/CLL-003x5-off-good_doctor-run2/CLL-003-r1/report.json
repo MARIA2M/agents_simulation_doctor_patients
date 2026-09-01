@@ -1,0 +1,205 @@
+{
+  "patient_id": "CLL-003",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "CLL-003",
+    "clinical_summary": "Patient with CLL on watch-and-wait approach reports fatigue after work (general low energy, takes longer to recover from daily tasks), wife-identified neck lump (2 months, feels harder), and intermittent headaches (2 weeks, mild, random). No other lumps or tenderness. Not on medication currently. Stays active, maintains healthy diet, social connections. Proactive about learning about CLL, worried about uncertainty and future progression. Has good coping strategies (talking to friends, meditation/mindfulness). Plans to discuss neck lump with hematologist.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "The fatigue I've been experiencing has been more of a general feeling of low energy, rather than a specific interference with my activities.",
+            "turn": 3
+          },
+          {
+            "quote": "it definitely makes me feel sluggish and takes longer to recover from daily tasks compared to how I used to feel before being diagnosed with CLL.",
+            "turn": 3
+          }
+        ],
+        "reasoning": "Fatigue affects recovery from daily tasks and makes them feel sluggish, requiring more time to recover than before diagnosis. They've adapted to this change but still experience impact on daily functioning.",
+        "score": 5.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "I understand that CLL is typically a slow-growing disease and many people don't require treatment right away.",
+            "turn": 1
+          },
+          {
+            "quote": "I've been trying my best to understand my CLL and appreciate that it's a slow-growing disease.",
+            "turn": 5
+          },
+          {
+            "quote": "I can't help but worry about what the future might hold - whether it'll progress more quickly than anticipated or if there will be any unexpected complications.",
+            "turn": 5
+          },
+          {
+            "quote": "While it's reassuring to know that many people with CLL live normal lifespans without needing treatment, at the same time, it's hard not to feel anxious when thinking about the uncertainty.",
+            "turn": 5
+          }
+        ],
+        "reasoning": "Patient understands CLL is slow-growing but worries about unexpected progression. They hold both possibilities open and are genuinely uncertain about the future course.",
+        "score": 6.0,
+        "confidence": 0.85
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "In terms of what I feel I can control, I try to maintain a healthy diet and exercise regularly. I find that staying active helps me feel more energized overall, despite any fatigue from the CLL. Additionally, I make sure to stay in touch with my family and friends, as maintaining social connections has been beneficial for my mental well-being.",
+            "turn": 6
+          },
+          {
+            "quote": "However, there are definitely things outside of my control - mainly, how the disease progresses and how it will ultimately affect me. It can be challenging not to feel helpless in those situations.",
+            "turn": 6
+          }
+        ],
+        "reasoning": "Patient actively manages diet, exercise, and social connections, crediting these actions with helping them feel more energized. They acknowledge limits around disease progression.",
+        "score": 7.0,
+        "confidence": 0.8
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [],
+        "reasoning": "Patient is not currently on any medication for CLL, following a watch-and-wait approach. No experience of treatment efficacy to inform beliefs about treatment control.",
+        "score": null,
+        "confidence": 1.0
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "If I were to describe CLL to someone, I'd say it's a type of blood cancer that affects the white blood cells - specifically, B lymphocytes.",
+            "turn": 8
+          },
+          {
+            "quote": "In my own words, it feels like an invisible enemy within me, gradually building up over time but staying mostly hidden beneath the surface.",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient can accurately describe CLL as affecting B lymphocytes and understands it as a slow-growing blood cancer. They have a clear identity of the illness.",
+        "score": 8.0,
+        "confidence": 0.85
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "I can't help but worry about what the future might hold - whether it'll progress more quickly than anticipated or if there will be any unexpected complications.",
+            "turn": 5
+          },
+          {
+            "quote": "While it's reassuring to know that many people with CLL live normal lifespans without needing treatment, at the same time, it's hard not to feel anxious when thinking about the uncertainty.",
+            "turn": 5
+          },
+          {
+            "quote": "My emotional response to having CLL is complex - there are times when I can push it to the back of my mind and focus on other aspects of my life, but there are also moments when it feels like a heavy weight. Anxieties about what the future might hold, whether treatment will be needed, or how the disease might affect me and my family - these thoughts do pop up from time to time.",
+            "turn": 10
+          }
+        ],
+        "reasoning": "Patient worries about future progression, treatment needs, and impact on family. Anxious thoughts pop up unprompted and affect their emotional state.",
+        "score": 7.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "If I were to describe CLL to someone, I'd say it's a type of blood cancer that affects the white blood cells - specifically, B lymphocytes. It typically grows slowly and can often be managed without immediate intervention.",
+            "turn": 8
+          },
+          {
+            "quote": "In my own words, it feels like an invisible enemy within me, gradually building up over time but staying mostly hidden beneath the surface.",
+            "turn": 8
+          },
+          {
+            "quote": "At times, I feel like there's still so much I don't understand about CLL. Even though I've done some research and talked to my hematologist, there are moments when the complexity of the disease can be overwhelming.",
+            "turn": 8
+          },
+          {
+            "quote": "But that's also why coming in for appointments and discussing any concerns or questions is important - to keep learning more about it and better managing this aspect of my life.",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient can accurately explain CLL (affects B lymphocytes, slow-growing, managed without immediate intervention) but acknowledges gaps in understanding and complexity.",
+        "score": 7.0,
+        "confidence": 0.8
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "My emotional response to having CLL is complex - there are times when I can push it to the back of my mind and focus on other aspects of my life, but there are also moments when it feels like a heavy weight.",
+            "turn": 10
+          },
+          {
+            "quote": "Anxieties about what the future might hold, whether treatment will be needed, or how the disease might affect me and my family - these thoughts do pop up from time to time.",
+            "turn": 10
+          },
+          {
+            "quote": "I find that talking to friends and loved ones who understand what I'm going through can be incredibly helpful. They provide support and perspective, which in turn helps me manage those anxious thoughts. Meditation and mindfulness practices also help ground me when those worries start to feel overwhelming.",
+            "turn": 10
+          }
+        ],
+        "reasoning": "Emotion is prominent and affects mood. Patient experiences anxiety about future and family impact, but has developed coping strategies.",
+        "score": 8.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [],
+        "reasoning": "Patient is not currently on any medication for CLL, following a watch-and-wait approach. No experience of prescribed medication to inform beliefs about necessity.",
+        "score": null,
+        "confidence": 1.0
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "The headaches I've been experiencing have been coming and going intermittently for the past couple of weeks. They're generally mild but can be somewhat bothersome at times. I haven't noticed any specific pattern as to when they occur - they seem random so far. Currently, I'm just managing them on my own with over-the-counter pain relievers, as I wasn't sure if they were related to the CLL medication or something else entirely.",
+            "turn": 4
+          },
+          {
+            "quote": "I occasionally experience headaches and wonder if those might be a side effect of my treatment.",
+            "turn": 1
+          }
+        ],
+        "reasoning": "Patient is concerned about headaches potentially being medication side effects and is managing them with OTC pain relievers. This shows some concern about medication effects.",
+        "score": 3.0,
+        "confidence": 0.75
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "I occasionally experience headaches and wonder if those might be a side effect of my treatment. I trust modern medicine and hope that the potential benefits outweigh any possible risks.",
+            "turn": 1
+          }
+        ],
+        "reasoning": "Patient trusts modern medicine and hopes benefits outweigh risks, indicating no general concern about medicines as a class being harmful.",
+        "score": 2.0,
+        "confidence": 0.8
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [
+          {
+            "quote": "I occasionally experience headaches and wonder if those might be a side effect of my treatment. I trust modern medicine and hope that the potential benefits outweigh any possible risks.",
+            "turn": 1
+          }
+        ],
+        "reasoning": "Patient trusts modern medicine, suggesting they do not believe doctors prescribe too readily.",
+        "score": 2.0,
+        "confidence": 0.8
+      }
+    },
+    "causes": [],
+    "causes_evidence": []
+  }
+}

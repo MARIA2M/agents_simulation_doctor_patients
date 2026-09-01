@@ -1,0 +1,188 @@
+{
+  "patient_id": "HIV-005",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "HIV-005",
+    "clinical_summary": "Patient with HIV Stage 2 reports significant impact on daily functioning across work, relationships, and leisure due to persistent fatigue. Views the condition as lifelong and never going away, with concerns about long-term outlook and resistance. Currently on Triumeq daily but reports inconsistent adherence, sometimes missing doses or taking drug holidays. Expresses worry about long-term side effects and questions whether medications are overprescribed. Seeks information about new treatments and research options.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "It really affects my daily life — work, relationships, and even leisure activities are all noticeably limited. The fatigue is something that never goes away",
+            "turn": 1
+          }
+        ],
+        "reasoning": "Patient explicitly states that daily life is affected across multiple domains (work, relationships, leisure) and that fatigue is persistent, indicating substantial impact on functioning.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "I've been diagnosed with Human Immunodeficiency Virus (HIV) infection — Stage 2, which means it's chronic. I understand this illness is lifelong and will never go away. It's a reality that I have to live with every day. Sometimes, the thought of living like this for years or even decades can be overwhelming",
+            "turn": 2
+          }
+        ],
+        "reasoning": "Patient clearly states the illness is lifelong, will never go away, and they have to live with it every day, with thoughts extending to decades ahead.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "However, there are times when it feels like the illness is in control, and all you can do is follow your doctor's advice and hope for the best",
+            "turn": 3
+          }
+        ],
+        "reasoning": "Patient acknowledges that sometimes they feel the illness is in control and they can only follow doctor's advice and hope for the best, indicating limited personal control.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "I think the treatment does have a say in how I'm doing, but sometimes it can be challenging",
+            "turn": 4
+          }
+        ],
+        "reasoning": "Patient believes treatment has an impact on how they're doing, though they acknowledge challenges, suggesting some belief in treatment efficacy.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "I've been diagnosed with Human Immunodeficiency Virus (HIV) infection — Stage 2, which means it's chronic. I understand this illness is lifelong and will never go away. It's a reality that I have to live with every day",
+            "turn": 2
+          }
+        ],
+        "reasoning": "Patient identifies specifically as having HIV infection, Stage 2, and describes it as a chronic condition they have to live with daily.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "Sometimes, the thought of living like this for years or even decades can be overwhelming",
+            "turn": 2
+          },
+          {
+            "quote": "The biggest worry for me right now is whether I'll develop resistance to this medication and if there will be other treatment options available in the future",
+            "turn": 7
+          }
+        ],
+        "reasoning": "Patient expresses being overwhelmed by the thought of living with this for decades and identifies resistance and treatment options as their biggest current worry, showing significant concern.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I try to stay informed about my situation and take care of myself as best as possible",
+            "turn": 3
+          },
+          {
+            "quote": "I understand this illness is lifelong and will never go away",
+            "turn": 2
+          }
+        ],
+        "reasoning": "Patient makes an effort to stay informed and has a clear understanding that it's lifelong and will never go away, demonstrating some understanding of their condition.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "Sometimes, the thought of living like this for years or even decades can be overwhelming",
+            "turn": 2
+          },
+          {
+            "quote": "It's been incredibly validating to have someone like you who understands and can provide guidance",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient expresses being overwhelmed by the long-term outlook and seeks validation and guidance, indicating emotional impact.",
+        "score": 6.0,
+        "confidence": 0.7
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "In some ways, it feels like a lifeline — something that keeps me functioning and feeling okay enough to get through each day",
+            "turn": 6
+          },
+          {
+            "quote": "However, there have been times when I've missed doses or even gone on drug holidays without too much consequence",
+            "turn": 6
+          }
+        ],
+        "reasoning": "Patient views the medication as a lifeline that helps them function, but also acknowledges they've missed doses without consequence, suggesting some uncertainty about necessity.",
+        "score": 3.5,
+        "confidence": 0.6
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "When it comes to taking this medication every day, I worry about developing resistance or experiencing long-term side effects",
+            "turn": 5
+          },
+          {
+            "quote": "It's hard to tell whether these symptoms are related to my illness or just regular stress from work and life in general",
+            "turn": 4
+          }
+        ],
+        "reasoning": "Patient explicitly expresses worry about resistance and long-term side effects, and questions whether symptoms are related to treatment, showing active concerns.",
+        "score": 4.5,
+        "confidence": 0.8
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "As for other concerns about medications in general, sometimes I wonder if they're all necessary and whether there might be a more natural or holistic approach to managing chronic illnesses like mine",
+            "turn": 6
+          }
+        ],
+        "reasoning": "Patient expresses general concern about whether medications are all necessary and wonders about natural/holistic approaches, suggesting some skepticism about medicines as a class.",
+        "score": 3.0,
+        "confidence": 0.6
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [
+          {
+            "quote": "And sometimes I wonder whether doctors are quick to prescribe and if there might be other options out there that could work better",
+            "turn": 5
+          }
+        ],
+        "reasoning": "Patient questions whether doctors are quick to prescribe and wonders about alternative options, suggesting some skepticism about prescribing practices.",
+        "score": 3.0,
+        "confidence": 0.6
+      }
+    },
+    "causes": [
+      "previous partner who didn't disclose his status",
+      "bad luck",
+      "not getting tested regularly enough"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "I believe my illness was caused by a previous partner who didn't disclose his status. It could also be just bad luck, or not getting tested regularly enough",
+        "turn": 3
+      }
+    ]
+  }
+}

@@ -1,0 +1,315 @@
+{
+  "patient_id": "HIV-005",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "HIV-005",
+    "clinical_summary": "The patient presents with fatigue and headaches for about a week, which they believe may be related to missing doses of their HIV medication (Triumeq) last week. They have a basic understanding of how HIV affects their immune system but are uncertain about what's happening in their body now. They feel they have limited control beyond medication adherence and appointments. They worry about the future, medication effectiveness, and potential side effects. They generally trust their doctors but have specific concerns about Triumeq and have not discussed these with their doctor yet.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "I've been struggling to maintain focus at work and even in conversations with friends",
+            "turn": 2
+          },
+          {
+            "quote": "It feels like my body is just dragging itself through the day",
+            "turn": 2
+          },
+          {
+            "quote": "Living with HIV has definitely made me more aware of my own mortality",
+            "turn": 10
+          },
+          {
+            "quote": "It's forced me to confront some things about myself and my life that I might not have otherwise",
+            "turn": 10
+          },
+          {
+            "quote": "I don't take anything for granted anymore because I know how quickly things can change",
+            "turn": 10
+          }
+        ],
+        "reasoning": "The patient reports significant impact on daily functioning - fatigue affecting work and social interactions, headaches, and broader existential impact including awareness of mortality and changes in relationships. They've had to adapt their approach to life and relationships.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "It's something that just won't go away",
+            "turn": 5
+          },
+          {
+            "quote": "one that might never really go away",
+            "turn": 9
+          },
+          {
+            "quote": "It's an ongoing process",
+            "turn": 11
+          }
+        ],
+        "reasoning": "The patient clearly views HIV as a chronic, ongoing condition with no expectation of it ending. They plan on the assumption it will continue.",
+        "score": 8.0,
+        "confidence": 0.85
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I definitely feel like I have some control over my medication routine and trying to stay on top of my appointments",
+            "turn": 9
+          },
+          {
+            "quote": "But beyond that... it's harder to say",
+            "turn": 9
+          },
+          {
+            "quote": "I think maybe it was bad luck, you know? Or maybe I didn't take care of myself as much as I should have in the past",
+            "turn": 6
+          },
+          {
+            "quote": "I'm not sure if I'll ever fully overcome",
+            "turn": 5
+          }
+        ],
+        "reasoning": "The patient recognizes they have some control over medication adherence and appointments, but beyond that they feel uncertain about what they can influence. They acknowledge some self-blame regarding past lifestyle choices, suggesting internal attribution that may affect perceived control.",
+        "score": 4.0,
+        "confidence": 0.75
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "I know the importance of consistent treatment",
+            "turn": 8
+          },
+          {
+            "quote": "whether my medication will continue to work effectively",
+            "turn": 11
+          },
+          {
+            "quote": "if there'll ever be new treatments that could make this easier to manage",
+            "turn": 11
+          },
+          {
+            "quote": "sometimes I wonder if there might be something better out there",
+            "turn": 7
+          },
+          {
+            "quote": "I've been a bit hesitant about taking Triumeq lately",
+            "turn": 7
+          }
+        ],
+        "reasoning": "The patient recognizes treatment importance but has doubts about current medication effectiveness and wonders about alternatives. They see some benefit but are uncertain if it's optimal.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "The headaches are probably the most noticeable thing right now, but I've also been feeling more tired than usual",
+            "turn": 6
+          },
+          {
+            "quote": "I've been getting these headaches too",
+            "turn": 3
+          },
+          {
+            "quote": "I'm still me, you know? It hasn't completely reshaped who I am or what I care about",
+            "turn": 10
+          },
+          {
+            "quote": "while it's a part of my life now, I don't want it to define everything that I do",
+            "turn": 10
+          }
+        ],
+        "reasoning": "The patient reports several symptoms (headaches, fatigue) that they attribute to their condition, but maintains a strong sense of self-identity separate from the illness. The symptoms are noticeable but they continue to work and maintain relationships.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "I'm worried because I know my HIV has been acting up recently",
+            "turn": 1
+          },
+          {
+            "quote": "It's always in the back of my mind, you know?",
+            "turn": 5
+          },
+          {
+            "quote": "there are times when the uncertainty gets to me; it's hard not to worry about what could happen down the line",
+            "turn": 9
+          },
+          {
+            "quote": "I do worry about what the future might hold",
+            "turn": 11
+          },
+          {
+            "quote": "whether my medication will continue to work effectively",
+            "turn": 11
+          },
+          {
+            "quote": "potential side effects or complications",
+            "turn": 11
+          }
+        ],
+        "reasoning": "The patient reports constant worry about their HIV, medication effectiveness, future complications, and mortality. These concerns recur unprompted and shape their thinking about the future.",
+        "score": 8.0,
+        "confidence": 0.85
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "when my viral load was high a while back, the doctor explained to me that my immune system would be more vulnerable if I didn't take my medication regularly",
+            "turn": 3
+          },
+          {
+            "quote": "I know the medication is supposed to help with that",
+            "turn": 3
+          },
+          {
+            "quote": "I think there might be a connection between missing doses and how I'm feeling now",
+            "turn": 5
+          },
+          {
+            "quote": "It's hard to say for sure",
+            "turn": 8
+          },
+          {
+            "quote": "I don't want to make any assumptions",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient has a basic understanding of how HIV affects their immune system and how medication works, but there is uncertainty about what is happening in their body at present. They are still trying to understand the connection between missed doses and current symptoms.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "I'm worried because I know my HIV has been acting up recently",
+            "turn": 1
+          },
+          {
+            "quote": "I can understand why that would feel overwhelming",
+            "turn": 2
+          },
+          {
+            "quote": "I knew I should have been taking better care of myself, so when I started feeling worse, I felt really guilty too",
+            "turn": 4
+          },
+          {
+            "quote": "It feels like such an ongoing battle",
+            "turn": 9
+          },
+          {
+            "quote": "there are times when the uncertainty gets to me",
+            "turn": 9
+          },
+          {
+            "quote": "It can feel a bit overwhelming sometimes",
+            "turn": 11
+          }
+        ],
+        "reasoning": "The patient experiences significant emotional impact including worry, guilt, feeling overwhelmed, and viewing their condition as an 'ongoing battle.' These emotions recur and affect their daily experience.",
+        "score": 8.0,
+        "confidence": 0.85
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "I know the importance of consistent treatment",
+            "turn": 8
+          },
+          {
+            "quote": "I think medication is an important part of managing something like this",
+            "turn": 12
+          }
+        ],
+        "reasoning": "The patient recognizes medication importance and has routines around it, but also questions whether it's doing enough and wonders about alternatives. They organize around treatment but have doubts about its necessity.",
+        "score": 4.0,
+        "confidence": 0.75
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "I've been worried for a while now that maybe my medication isn't doing enough to help me",
+            "turn": 7
+          },
+          {
+            "quote": "I've been a bit hesitant about taking Triumeq lately",
+            "turn": 7
+          },
+          {
+            "quote": "Maybe that's partly because of the headaches",
+            "turn": 7
+          },
+          {
+            "quote": "It just feels like maybe my body's reacting to it somehow",
+            "turn": 7
+          },
+          {
+            "quote": "whether my medication will continue to work effectively",
+            "turn": 11
+          },
+          {
+            "quote": "potential side effects or complications",
+            "turn": 11
+          }
+        ],
+        "reasoning": "The patient has multiple concerns about their medication including effectiveness, side effects, and whether it's the right treatment. These concerns have led to hesitation and questioning of the medication.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "I know it's not perfect — no medicine is —",
+            "turn": 7
+          }
+        ],
+        "reasoning": "The patient acknowledges that medicines aren't perfect but doesn't express strong general concerns about medicines as a class. They judge each medicine on its own terms.",
+        "score": 2.0,
+        "confidence": 0.7
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [
+          {
+            "quote": "there are times when I wonder if maybe doctors might be quick to prescribe — especially since my HIV diagnosis came pretty quickly after that same partner's diagnosis",
+            "turn": 12
+          },
+          {
+            "quote": "I generally trust the doctors I've been seeing and their judgment about what might work best for me",
+            "turn": 12
+          }
+        ],
+        "reasoning": "The patient has occasional doubt about prescribing practices but generally trusts their doctors. This is a mild, occasional concern rather than a strong belief.",
+        "score": 3.0,
+        "confidence": 0.7
+      }
+    },
+    "causes": [
+      "bad luck",
+      "not taking care of myself as much as I should have in the past"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "I think maybe it was bad luck, you know? Or maybe I didn't take care of myself as much as I should have in the past",
+        "turn": 6
+      }
+    ]
+  }
+}

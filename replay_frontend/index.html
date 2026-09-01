@@ -1,0 +1,620 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AHEAD — consultation viewer</title>
+<!--
+  No build step. The original is React + Vite; here the page is one file and
+  replay_server.py serves it. Not laziness: node_modules on GPFS is the same
+  metadata storm that makes `import langgraph` take three minutes (RUN.md,
+  §Tests), and a demo you have to compile before showing is a demo that one day
+  will not start.
+
+  Four things are done differently from the original frontend, each for a reason
+  that can be named:
+
+  1. NO ELICITATION LOOP. App.tsx walked BIPQ_QUESTIONS by index, re-asked when
+     the reply was short, and called the scorer question by question — the
+     frontend *was* the elicitation arm. Here the transcript already exists and
+     this only plays it back.
+  2. THE TWO SCALES ARE NOT MIXED. The original normalised BMQ from 1-5 onto
+     0-10 to reuse one bar. B-IPQ and BMQ are judged separately
+     (test_report.py::test_the_two_scales_are_judged_separately), so each is
+     drawn on its own scale with that scale written next to it.
+  3. NA IS A VALUE, NOT A HOLE. The original did `if (typeof value !== "number")
+     return null` and the dimension vanished. `general_overuse` comes back NA in
+     every consultation of this matrix: hiding it would erase from the screen the
+     very finding of 1.10. An NA is drawn, with its reasoning.
+  4. EVIDENCE COMES BEFORE THE NUMBER. That is the field order of DimensionScore
+     and the specification of 2.1, not a layout preference. And every quote is
+     clickable: it jumps to the turn it claims to come from, which is what makes
+     the trail auditable instead of decorative.
+-->
+<style>
+:root {
+  --bg: #0f1319;  --panel: #161c25;  --panel-2: #1d2531;  --line: #2a3441;
+  --ink: #e6edf6; --ink-dim: #93a2b5; --ink-faint: #63728a;
+  --doctor: #4b93d1; --patient: #46b39a;
+  --ok: #46b39a; --warn: #d9a441; --bad: #d9645f; --na: #7a6ba8;
+  --radius: 10px;
+  --font: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --mono: ui-monospace, "SF Mono", "Cascadia Code", Menlo, monospace;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font-family: var(--font); font-size: 15px; line-height: 1.55;
+}
+button { font: inherit; cursor: pointer; }
+h1, h2, h3 { line-height: 1.25; margin: 0; }
+
+.wrap { max-width: 1080px; margin: 0 auto; padding: 24px 20px 64px; }
+
+/* ── top bar ────────────────────────────────── */
+.top {
+  display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  padding: 14px 20px; background: var(--panel); border-bottom: 1px solid var(--line);
+  position: sticky; top: 0; z-index: 10;
+}
+.top h1 { font-size: 15px; font-weight: 600; letter-spacing: .01em; }
+.top .spacer { flex: 1; }
+
+.badge {
+  display: inline-block; padding: 2px 9px; border-radius: 999px;
+  font-size: 12px; font-weight: 500; border: 1px solid var(--line);
+  background: var(--panel-2); color: var(--ink-dim); white-space: nowrap;
+}
+.badge--ok   { color: var(--ok);   border-color: #2c5348; }
+.badge--warn { color: var(--warn); border-color: #5a4726; }
+.badge--bad  { color: var(--bad);  border-color: #5c3230; }
+.badge--na   { color: var(--na);   border-color: #423a5c; }
+
+.btn {
+  padding: 7px 15px; border-radius: 8px; border: 1px solid var(--line);
+  background: var(--panel-2); color: var(--ink); font-size: 14px;
+}
+.btn:hover { border-color: #3d4b5c; }
+.btn--primary { background: var(--doctor); border-color: var(--doctor); color: #06121c; font-weight: 600; }
+.btn:disabled { opacity: .4; cursor: not-allowed; }
+
+/* ── picking a consultation ─────────────────── */
+.batch {
+  border: 1px solid var(--line); border-radius: var(--radius);
+  background: var(--panel); margin-bottom: 14px; overflow: hidden;
+}
+.batch__head {
+  display: flex; gap: 10px; align-items: center; flex-wrap: wrap;
+  padding: 12px 16px; background: var(--panel-2); border-bottom: 1px solid var(--line);
+}
+.batch__name { font-family: var(--mono); font-size: 13px; font-weight: 600; }
+.batch__runs { display: flex; flex-wrap: wrap; gap: 8px; padding: 12px 16px; }
+.run {
+  display: flex; flex-direction: column; gap: 3px; align-items: flex-start;
+  padding: 8px 12px; border-radius: 8px; border: 1px solid var(--line);
+  background: var(--panel-2); color: var(--ink); min-width: 116px; text-align: left;
+}
+.run:hover { border-color: var(--doctor); }
+.run__id { font-family: var(--mono); font-size: 13px; }
+.run__meta { font-size: 11px; color: var(--ink-faint); }
+
+.note {
+  border-left: 3px solid var(--line); padding: 2px 0 2px 14px;
+  color: var(--ink-dim); font-size: 13.5px; margin: 14px 0;
+}
+
+/* ── playback ───────────────────────────────── */
+.controls {
+  display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+  padding: 12px 16px; background: var(--panel); border: 1px solid var(--line);
+  border-radius: var(--radius); margin-bottom: 18px;
+}
+.controls label { font-size: 13px; color: var(--ink-dim); }
+.progress { flex: 1; min-width: 140px; height: 4px; background: var(--panel-2); border-radius: 2px; }
+.progress__fill { height: 100%; background: var(--doctor); border-radius: 2px; transition: width .2s; }
+
+.turn { margin-bottom: 18px; }
+.turn__label {
+  font-family: var(--mono); font-size: 11px; color: var(--ink-faint);
+  text-transform: uppercase; letter-spacing: .08em; margin-bottom: 6px;
+}
+.bubble {
+  padding: 11px 15px; border-radius: var(--radius); border: 1px solid var(--line);
+  background: var(--panel); max-width: 82%; white-space: pre-wrap;
+  animation: rise .28s ease-out;
+}
+@keyframes rise { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+.bubble--doctor  { border-left: 3px solid var(--doctor); }
+.bubble--patient { border-left: 3px solid var(--patient); margin-left: auto; }
+.bubble__who { font-size: 11.5px; font-weight: 600; margin-bottom: 4px; letter-spacing: .04em; }
+.bubble--doctor  .bubble__who { color: var(--doctor); }
+.bubble--patient .bubble__who { color: var(--patient); }
+.bubble.is-cited { background: #1b2436; border-color: #3a5372; }
+mark { background: #4a3d16; color: #f2dfae; border-radius: 3px; padding: 0 2px; }
+
+/* ── the report ─────────────────────────────── */
+.section { margin: 30px 0 14px; }
+.section h2 { font-size: 16px; margin-bottom: 4px; }
+.section p  { color: var(--ink-dim); font-size: 13.5px; margin: 4px 0 0; }
+
+.dim {
+  border: 1px solid var(--line); border-radius: var(--radius);
+  background: var(--panel); padding: 14px 16px; margin-bottom: 10px;
+}
+.dim__head { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; margin-bottom: 9px; }
+.dim__name { font-family: var(--mono); font-size: 13.5px; font-weight: 600; }
+.dim__score { margin-left: auto; font-size: 20px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.dim__scale { font-size: 11.5px; color: var(--ink-faint); }
+.dim--na .dim__score { color: var(--na); font-size: 15px; }
+
+.bar { height: 6px; background: var(--panel-2); border-radius: 3px; overflow: hidden; margin: 9px 0; }
+.bar__fill { height: 100%; background: var(--doctor); border-radius: 3px; transition: width .5s; }
+.bar__truth { position: relative; height: 0; }
+.bar__truth i { position: absolute; top: -12px; width: 2px; height: 12px; background: var(--warn); }
+
+/* Evidence before the number: the field order of DimensionScore (2.1). */
+.quotes { margin: 0 0 8px; padding: 0; list-style: none; }
+.quote {
+  display: block; width: 100%; text-align: left; margin-bottom: 5px;
+  padding: 7px 11px; border-radius: 7px; border: 1px solid var(--line);
+  background: var(--panel-2); color: var(--ink-dim); font-size: 13.5px;
+}
+.quote:hover { border-color: var(--doctor); color: var(--ink); }
+.quote__turn { font-family: var(--mono); font-size: 11px; color: var(--ink-faint); margin-right: 7px; }
+.reasoning { font-size: 13.5px; color: var(--ink-dim); margin: 0; }
+.dim__conf { font-size: 11.5px; color: var(--ink-faint); margin-top: 7px; }
+
+/* ── evaluation table ───────────────────────── */
+table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+th, td { padding: 7px 9px; text-align: right; border-bottom: 1px solid var(--line); }
+th:first-child, td:first-child { text-align: left; font-family: var(--mono); font-size: 12.5px; }
+th { color: var(--ink-faint); font-weight: 500; font-size: 11.5px;
+     text-transform: uppercase; letter-spacing: .06em; }
+td { font-variant-numeric: tabular-nums; }
+tr.is-na td { color: var(--ink-faint); }
+.over  { color: var(--bad); }
+.under { color: var(--doctor); }
+
+.tiles { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+.tile {
+  flex: 1 1 130px; padding: 12px 14px; border-radius: var(--radius);
+  border: 1px solid var(--line); background: var(--panel);
+}
+.tile__label { font-size: 11px; color: var(--ink-faint); text-transform: uppercase; letter-spacing: .06em; }
+.tile__value { font-size: 21px; font-weight: 600; font-variant-numeric: tabular-nums; margin-top: 3px; }
+
+.hidden { display: none; }
+</style>
+</head>
+<body>
+
+<div class="top">
+  <h1>AHEAD · consultation viewer</h1>
+  <span id="crumb" class="badge hidden"></span>
+  <div class="spacer"></div>
+  <button id="btn-back" class="btn hidden">← another consultation</button>
+  <button id="btn-report" class="btn hidden">See the report →</button>
+</div>
+
+<div class="wrap">
+  <div id="screen-pick"></div>
+  <div id="screen-play" class="hidden"></div>
+  <div id="screen-report" class="hidden"></div>
+</div>
+
+<script>
+"use strict";
+
+// ── the two scales ────────────────────────────
+// Kept apart on purpose. The original frontend normalised BMQ onto 0-10 to reuse
+// one bar; not here, because they are different scales and conflating them
+// shifts every value.
+const BIPQ = ["consequences","timeline","personal_control","treatment_control",
+              "identity","concern","coherence","emotional_response"];
+const BMQ  = ["specific_necessity","specific_concerns","general_harm","general_overuse"];
+const SCALE = { bipq: [0, 10], bmq: [1, 5] };
+
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) =>
+  ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+let current = null;   // the consultation on screen
+let timer = null;
+
+// ── 1. pick, in two steps ─────────────────────
+// One person at a time. The original ran one interview and showed one report;
+// ten patients side by side is a corpus summary, and cover.py already does that
+// better than a wall of buttons could.
+
+let patient = null;   // whose consultations are on screen
+
+function resetChrome() {
+  clearInterval(timer);
+  current = null;
+  $("screen-play").classList.add("hidden");
+  $("screen-report").classList.add("hidden");
+  $("btn-report").classList.add("hidden");
+  $("crumb").classList.add("hidden");
+  $("screen-pick").classList.remove("hidden");
+}
+
+async function showPatients() {
+  resetChrome();
+  patient = null;
+  $("btn-back").classList.add("hidden");
+  const host = $("screen-pick");
+  host.innerHTML = "<p class='note'>loading…</p>";
+
+  const people = await (await fetch("/api/patients")).json();
+  if (!people.length) { host.innerHTML = "<p class='note'>Nothing in runs/ to show.</p>"; return; }
+
+  // Started with --patient: one person, so skip straight past the choice.
+  if (people.length === 1) { showRuns(people[0].patient_id); return; }
+
+  host.innerHTML = `
+    <p class="note">Pick a patient. You see one person's consultations at a time —
+      what the doctor inferred about <i>them</i>, against what their profile says.</p>
+    <div class="batch__runs" style="padding:0">
+      ${people.map((p) => `
+        <button class="run" data-patient="${esc(p.patient_id)}" style="min-width:210px">
+          <span class="run__id">${esc(p.patient_id)}</span>
+          <span class="run__meta">${esc(p.diagnosis || "—")}${p.age ? ` · ${p.age}` : ""}</span>
+          <span class="run__meta">${esc(p.treatment_regimen || "")}</span>
+          <span class="run__meta">${p.consultations} consultations · ${p.batches} arms</span>
+        </button>`).join("")}
+    </div>`;
+
+  host.querySelectorAll(".run").forEach((el) =>
+    el.addEventListener("click", () => showRuns(el.dataset.patient)));
+}
+
+async function showRuns(who) {
+  resetChrome();
+  patient = who;
+  $("btn-back").classList.remove("hidden");
+  backLabel();
+  const host = $("screen-pick");
+  host.innerHTML = "<p class='note'>loading consultations…</p>";
+
+  const batches = await (await fetch(`/api/runs?patient=${encodeURIComponent(who)}`)).json();
+  if (!batches.length) { host.innerHTML = `<p class='note'>Nothing for ${esc(who)}.</p>`; return; }
+
+  host.innerHTML = `
+    <h2 style="margin-bottom:6px">${esc(who)}</h2>
+    <p class="note">
+      One block per arm, one button per repeat. Each plays back exactly as it was
+      written: no model is called and nothing is generated.
+      <b>The stamp says how it ended</b> — <code>doctor</code> means the doctor
+      closed it, <code>turn_cap</code> means the turn limit did, and that is not
+      a fault to fix but a result to read. A repeat missing from a run of five is
+      a consultation that left nothing on disk.
+    </p>` +
+    batches.map((b) => `
+      <div class="batch">
+        <div class="batch__head">
+          <span class="batch__name">${esc(b.batch)}</span>
+          ${b.profile ? `<span class="badge">${esc(b.profile)}</span>` : ""}
+          ${b.features && b.features.coverage_hint
+              ? `<span class="badge">hint: ${esc(b.features.coverage_hint)}</span>` : ""}
+          <span class="badge">${b.consultations.length} consultations</span>
+          ${Object.entries(b.has || {}).filter(([, v]) => v)
+             .map(([k]) => `<span class="badge badge--ok">${esc(k)}</span>`).join("")}
+        </div>
+        <div class="batch__runs">
+          ${b.consultations.map((c) => `
+            <button class="run" data-batch="${esc(b.batch)}" data-run="${esc(c.run)}">
+              <span class="run__id">${esc(c.run)}</span>
+              <span class="run__meta">
+                ${stopLabel(c.stop_reason)}${c.turns != null ? ` · ${c.turns} turns` : ""}
+                ${c.events ? ` · ${c.events} ev` : ""}
+              </span>
+            </button>`).join("")}
+        </div>
+      </div>`).join("");
+
+  host.querySelectorAll(".run").forEach((el) =>
+    el.addEventListener("click", () => load(el.dataset.batch, el.dataset.run)));
+}
+
+const stopLabel = (r) =>
+  r === "doctor" ? "doctor closed" : r ? `⚠ ${esc(r)}` : "not in the index";
+
+// ── 2. play it back ───────────────────────────
+
+async function load(batch, run) {
+  const res = await fetch(`/api/runs/${encodeURIComponent(batch)}/${encodeURIComponent(run)}`);
+  if (!res.ok) { alert(`Could not read ${batch}/${run}`); return; }
+  current = await res.json();
+
+  $("screen-pick").classList.add("hidden");
+  $("btn-back").classList.remove("hidden");
+  backLabel();
+  $("btn-report").classList.remove("hidden");
+  const crumb = $("crumb");
+  crumb.textContent = `${current.batch} · ${current.run}`;
+  crumb.classList.remove("hidden");
+  playScreen();
+}
+
+function playScreen() {
+  clearInterval(timer);
+  $("screen-report").classList.add("hidden");
+  const host = $("screen-play");
+  host.classList.remove("hidden");
+
+  const t = current.transcript;
+  const lines = t.conversation;
+
+  host.innerHTML = `
+    <div class="controls">
+      <button id="c-play" class="btn btn--primary">▶ Play</button>
+      <button id="c-all" class="btn">Show all</button>
+      <label>speed
+        <select id="c-speed">
+          <option value="1400">normal</option>
+          <option value="600" selected>fast</option>
+          <option value="200">very fast</option>
+        </select>
+      </label>
+      <div class="progress"><div class="progress__fill" id="c-bar" style="width:0%"></div></div>
+      <span class="badge" id="c-count">0 / ${lines.length}</span>
+    </div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px">
+      <span class="badge">${esc(current.patient_id)}</span>
+      ${current.clinical.diagnosis ? `<span class="badge">${esc(current.clinical.diagnosis)}</span>` : ""}
+      ${current.clinical.treatment_regimen
+          ? `<span class="badge">${esc(current.clinical.treatment_regimen)}</span>` : ""}
+      <span class="badge ${t.stop_reason === "doctor" ? "badge--ok" : "badge--warn"}">
+        ${esc(t.stop_reason || "?")}</span>
+      ${t.events.length ? `<span class="badge badge--warn">${t.events.length} events</span>` : ""}
+      ${current.fidelity && !current.fidelity.passed
+          ? `<span class="badge badge--bad">fidelity: ${current.fidelity.contradictions} hard</span>` : ""}
+    </div>
+    <div id="stream"></div>`;
+
+  const stream = $("stream");
+  let shown = 0;
+
+  const step = () => {
+    if (shown >= lines.length) { clearInterval(timer); timer = null; $("c-play").textContent = "▶ Play"; return; }
+    stream.insertAdjacentHTML("beforeend", bubble(lines[shown]));
+    shown++;
+    $("c-count").textContent = `${shown} / ${lines.length}`;
+    $("c-bar").style.width = `${(shown / lines.length) * 100}%`;
+    window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+  };
+
+  $("c-play").addEventListener("click", () => {
+    if (timer) { clearInterval(timer); timer = null; $("c-play").textContent = "▶ Resume"; return; }
+    $("c-play").textContent = "⏸ Pause";
+    step();
+    timer = setInterval(step, Number($("c-speed").value));
+  });
+
+  $("c-all").addEventListener("click", () => {
+    clearInterval(timer); timer = null;
+    stream.innerHTML = lines.map(bubble).join("");
+    shown = lines.length;
+    $("c-count").textContent = `${shown} / ${lines.length}`;
+    $("c-bar").style.width = "100%";
+    $("c-play").textContent = "▶ Play";
+  });
+}
+
+// A turn is an exchange, not an intervention: nodes.py gives the doctor's
+// question and the patient's reply THE SAME number (D13). That is why the label
+// carries turn *and* role — the number alone identifies nobody.
+function bubble(line) {
+  const who = line.role === "doctor" ? "Doctor" : "Patient";
+  return `
+    <div class="turn">
+      <div class="turn__label">turn ${esc(line.turn)} · ${who.toLowerCase()}</div>
+      <div class="bubble bubble--${esc(line.role)}"
+           data-turn="${esc(line.turn)}" data-role="${esc(line.role)}">
+        <div class="bubble__who">${who}</div>${esc(line.content)}
+      </div>
+    </div>`;
+}
+
+// ── 3. the report ─────────────────────────────
+
+function reportScreen() {
+  clearInterval(timer); timer = null;
+  $("screen-play").classList.add("hidden");
+  const host = $("screen-report");
+  host.classList.remove("hidden");
+  window.scrollTo({ top: 0 });
+
+  const r = current.report;
+  if (!r) {
+    host.innerHTML = `<p class="note">This consultation left no readable report
+      (<code>parsed: ${esc(current.report_parsed)}</code>, ${esc(current.report_attempts)} attempts).</p>`;
+    return;
+  }
+
+  host.innerHTML = `
+    <div class="section">
+      <h2>Clinical impression</h2>
+      <p>${esc(r.clinical_summary) || "—"}</p>
+    </div>
+    ${block("B-IPQ", BIPQ, r.bipq, "bipq")}
+    ${block("BMQ", BMQ, r.bmq, "bmq")}
+    ${causesBlock(r)}
+    ${evalBlock()}`;
+
+  host.querySelectorAll(".quote").forEach((el) =>
+    el.addEventListener("click", () => jumpTo(Number(el.dataset.turn), el.dataset.quote)));
+}
+
+function block(title, names, scored, scale) {
+  const [lo, hi] = SCALE[scale];
+  return `
+    <div class="section">
+      <h2>${title} <span class="dim__scale">scale ${lo}–${hi}</span></h2>
+      <p>Evidence comes before the number, which is the order the report is
+         written in (2.1). Click a quote to jump to the turn it came from.</p>
+    </div>
+    ${names.map((n) => dimension(scored[n], n, scale)).join("")}`;
+}
+
+function dimension(d, name, scale) {
+  const [lo, hi] = SCALE[scale];
+  const na = !d || d.score === null || d.score === undefined;
+  const truth = current.truth ? (current.truth[scale === "bipq" ? "b_ipq" : "bmq"] || {})[name] : null;
+  const pct = (v) => ((v - lo) / (hi - lo)) * 100;
+
+  return `
+    <div class="dim ${na ? "dim--na" : ""}">
+      <div class="dim__head">
+        <span class="dim__name">${esc(name)}</span>
+        ${na ? `<span class="badge badge--na">NA</span>` : ""}
+        <span class="dim__score">${na ? "not scored" : d.score}</span>
+      </div>
+      ${na ? "" : `
+        <div class="bar"><div class="bar__fill" style="width:${pct(d.score)}%"></div></div>
+        ${typeof truth === "number"
+          ? `<div class="bar__truth"><i style="left:${pct(truth)}%"></i></div>
+             <div class="dim__scale">amber mark = ground truth ${truth}</div>` : ""}`}
+      ${(d && d.evidence && d.evidence.length) ? `
+        <ul class="quotes">${d.evidence.map((e) => `
+          <li><button class="quote" data-turn="${esc(e.turn)}" data-quote="${esc(e.quote)}">
+            <span class="quote__turn">turn ${esc(e.turn)}</span>“${esc(e.quote)}”
+          </button></li>`).join("")}</ul>` : ""}
+      <p class="reasoning">${esc(d && d.reasoning) || "&lt;no reasoning given&gt;"}</p>
+      ${d ? `<div class="dim__conf">declared confidence ${d.confidence}</div>` : ""}
+    </div>`;
+}
+
+function causesBlock(r) {
+  if (!r.causes || !r.causes.length) {
+    return `<div class="section"><h2>Causes</h2>
+      <p>The report attributed no cause it could back with a quote. A cause
+         without evidence is dropped at parse time (N3).</p></div>`;
+  }
+  return `
+    <div class="section"><h2>Causes</h2>
+      <p>Open text: it carries no number and stays out of the MAE (4.3).</p></div>
+    <div class="dim">
+      <ol>${r.causes.map((c) => `<li>${esc(c)}</li>`).join("")}</ol>
+      ${r.causes_evidence.length ? `<ul class="quotes">${r.causes_evidence.map((e) => `
+        <li><button class="quote" data-turn="${esc(e.turn)}" data-quote="${esc(e.quote)}">
+          <span class="quote__turn">turn ${esc(e.turn)}</span>“${esc(e.quote)}”
+        </button></li>`).join("")}</ul>` : ""}
+    </div>`;
+}
+
+function evalBlock() {
+  const ev = current.evaluation;
+  if (!ev) return `<div class="section"><h2>Evaluation</h2>
+    <p>No ground truth for this patient, so there is nothing to compare against.</p></div>`;
+
+  const rows = ev.dimensions.map((d) => {
+    const na = d.absolute_error === null;
+    const bias = d.bias;
+    return `<tr class="${na ? "is-na" : ""}">
+      <td>${esc(d.dimension)}</td>
+      <td>${d.ground_truth ?? "—"}</td>
+      <td>${d.inferred ?? "NA"}</td>
+      <td>${na ? "—" : d.absolute_error.toFixed(2)}</td>
+      <td class="${na ? "" : bias > 0 ? "over" : bias < 0 ? "under" : ""}">
+        ${na ? "—" : (bias > 0 ? "+" : "") + bias.toFixed(2)}</td>
+    </tr>`;
+  }).join("");
+
+  return `
+    <div class="section">
+      <h2>Evaluation against the patient's profile</h2>
+      <p>Ground truth from <code>patients/*.json</code> and nowhere else (4.1).
+         <b>An NA is not an error of zero</b>: it stays out of the MAE and is
+         counted separately, because counting it as a hit would give an empty
+         report a perfect score.</p>
+    </div>
+    <table>
+      <thead><tr><th>Dimension</th><th>Truth</th><th>Report</th><th>Error</th><th>Bias</th></tr></thead>
+      <tbody>${rows}</tbody>
+    </table>
+    <div class="tiles">
+      ${tile("MAE", ev.mae === null ? "—" : ev.mae.toFixed(2))}
+      ${tile("Mean bias", ev.mean_bias === null ? "—" :
+             (ev.mean_bias > 0 ? "+" : "") + ev.mean_bias.toFixed(2))}
+      ${tile("Coverage", `${ev.scored}/${ev.scored + ev.na}`)}
+      ${tile("Exact", ev.exact_matches)}
+      ${tile("Within-patient r", ev.within_patient_r === null ? "—" : ev.within_patient_r.toFixed(2))}
+    </div>
+    <p class="note">
+      <b>Bias</b> is report − truth: positive means it scored high.
+      <b>Within-patient r</b> asks whether the profile has the right shape, not
+      whether it hits the right level — it is this person against themselves, and
+      says nothing about telling people apart. That is
+      <code>between_patient_r</code>, which needs three distinct patients, so on a
+      single-patient batch it comes back empty by design and not by fault.
+    </p>`;
+}
+
+const tile = (label, value) =>
+  `<div class="tile"><div class="tile__label">${esc(label)}</div>
+     <div class="tile__value">${esc(value)}</div></div>`;
+
+// ── the bridge from quote to turn ─────────────
+// What makes the trail of 2.1 auditable instead of decorative: the quote leads
+// to the place it says it came from, and if it is not there you see it at once.
+
+function jumpTo(turn, quote) {
+  $("screen-report").classList.add("hidden");
+  const host = $("screen-play");
+  host.classList.remove("hidden");
+  if (!host.querySelector("#stream")) playScreen();
+
+  const stream = $("stream");
+  stream.innerHTML = current.transcript.conversation.map(bubble).join("");
+  const n = current.transcript.conversation.length;
+  $("c-count").textContent = `${n} / ${n}`;
+  $("c-bar").style.width = "100%";
+
+  // Turn AND role: the turn alone does not identify the speaker (D13), and
+  // taking the first line with that number lands on the doctor every time.
+  const target = [...stream.querySelectorAll(".bubble")].find(
+    (el) => Number(el.dataset.turn) === turn && el.dataset.role === "patient");
+
+  if (!target) { alert(`The report says turn ${turn}, and there is no patient line there.`); return; }
+
+  target.classList.add("is-cited");
+  if (!norm(target.textContent).includes(norm(quote))) {
+    target.insertAdjacentHTML("afterbegin",
+      `<div class="badge badge--bad" style="margin-bottom:6px">this quote is not in this turn</div>`);
+  } else {
+    highlight(target, quote);
+  }
+  target.scrollIntoView({ behavior: "smooth", block: "center" });
+}
+
+// The same normalisation coverage.py uses: whitespace collapsed, quotes and
+// dashes unified, case folded.
+const norm = (s) => String(s)
+  .replace(/[‘’]/g, "'").replace(/[“”]/g, '"')
+  .replace(/[–—]/g, "-").replace(/…/g, "...")
+  .replace(/\s+/g, " ").trim().toLowerCase();
+
+function highlight(el, quote) {
+  const text = el.textContent;
+  const at = norm(text).indexOf(norm(quote));
+  if (at < 0) return;
+  const raw = text.slice(at, at + quote.length);
+  el.innerHTML = el.innerHTML.replace(esc(raw), `<mark>${esc(raw)}</mark>`);
+}
+
+// ── start ─────────────────────────────────────
+// One step back, not all the way out: from a consultation to this patient's
+// other repeats, and only from there to the list of people.
+$("btn-back").addEventListener("click", () => {
+  if (current) { showRuns(patient); } else { showPatients(); }
+});
+// The label has to say which of the two it is, or the only way to find out is
+// to press it.
+const backLabel = () =>
+  $("btn-back").textContent = current ? "← other repeats" : "← another patient";
+$("btn-report").addEventListener("click", reportScreen);
+showPatients();
+</script>
+</body>
+</html>

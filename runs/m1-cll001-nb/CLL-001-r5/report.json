@@ -1,0 +1,238 @@
+{
+  "patient_id": "CLL-001",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "CLL-001",
+    "clinical_summary": "Patient presents with fatigue, neck lymphadenopathy, and increasing night sweats over approximately one year. Blood work has been stable over the past couple of months while under monthly monitoring. No unexplained weight loss, fevers, or chills reported. CLL is suspected or being monitored, with treatment deferred until clearly indicated due to slow progression. Patient is open to medication if it helps symptoms and benefits outweigh risks, but has concerns about side effects and long-term impacts.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "my daily life is significantly limited by these symptoms",
+            "turn": 6
+          },
+          {
+            "quote": "I've been experiencing some fatigue lately",
+            "turn": 1
+          },
+          {
+            "quote": "the night sweats became more frequent over the past few months",
+            "turn": 2
+          },
+          {
+            "quote": "the nodes in my neck have always been there, but I've noticed that they seem to be getting bigger lately",
+            "turn": 2
+          }
+        ],
+        "reasoning": "Patient explicitly states their daily life is 'significantly limited' by symptoms including fatigue, night sweats, and lymphadenopathy. This represents a substantial impact on functioning.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "it might be years before any treatment is needed or even required at all since Chronic Lymphocytic Leukemia (CLL) tends to progress slowly",
+            "turn": 5
+          },
+          {
+            "quote": "It's all been happening quite slowly and gradually",
+            "turn": 2
+          },
+          {
+            "quote": "accepting that my illness might be here for the long haul",
+            "turn": 6
+          }
+        ],
+        "reasoning": "Patient understands CLL is slow-growing and may take years before treatment is needed. They talk about 'the long haul' and symptoms have been present for about a year with slow progression, indicating acceptance of long-term condition.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I understand that this approach allows for more time to observe and monitor the situation before taking any drastic measures",
+            "turn": 6
+          },
+          {
+            "quote": "my main priority right now is managing my symptoms while closely monitoring my condition",
+            "turn": 8
+          },
+          {
+            "quote": "I believe it's best for me to continue with the current approach until more is needed or indicated",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient describes themselves as monitoring and waiting for treatment to be indicated. They don't describe taking active steps to influence the disease course themselves - they're waiting for medical guidance.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "I'm willing to take whatever is necessary if it can help me manage these symptoms better",
+            "turn": 4
+          },
+          {
+            "quote": "If you think there's a medication that can alleviate these symptoms without significantly increasing any risks, then I would be open to discussing it further and potentially giving it a try",
+            "turn": 8
+          },
+          {
+            "quote": "I do trust modern medicine and am willing to take prescribed medications if necessary",
+            "turn": 9
+          }
+        ],
+        "reasoning": "Patient is open to treatment and trusts modern medicine, but they're not on treatment yet and not attributing their current state to treatment working. They see treatment as potentially helpful but not as something that has already worked for them.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "I've heard a lot about Chronic Lymphocytic Leukemia (CLL) recently, and I'm worried it might be affecting me as well",
+            "turn": 1
+          },
+          {
+            "quote": "it might be affecting me as well",
+            "turn": 5
+          },
+          {
+            "quote": "my illness might be here for the long haul",
+            "turn": 6
+          }
+        ],
+        "reasoning": "Patient is worried about CLL affecting them and talks about their illness in relation to CLL. They have symptoms (fatigue, night sweats, lymphadenopathy) that they attribute to their condition.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "I'm worried it might be affecting me as well",
+            "turn": 1
+          },
+          {
+            "quote": "my main concern is the uncertainty about when and how the disease might progress",
+            "turn": 7
+          },
+          {
+            "quote": "the potential impact on my quality of life and loved ones as time goes by",
+            "turn": 7
+          }
+        ],
+        "reasoning": "Patient explicitly states their main concern is uncertainty about progression and impact on quality of life and loved ones. This is a significant concern that shapes their thinking.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "From what I've gathered, CLL is a type of blood cancer that grows slowly over time, affecting the white blood cells in my body",
+            "turn": 7
+          },
+          {
+            "quote": "It can lead to various complications if left untreated",
+            "turn": 7
+          },
+          {
+            "quote": "many people with CLL may never experience any symptoms or need treatment at all",
+            "turn": 7
+          }
+        ],
+        "reasoning": "Patient has a reasonably good understanding of CLL - they know it's a blood cancer affecting white blood cells, that it grows slowly, can lead to complications, and that many people never need treatment. This shows good coherence.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "it can be quite frustrating at times",
+            "turn": 6
+          },
+          {
+            "quote": "I'm worried it might be affecting me as well",
+            "turn": 1
+          },
+          {
+            "quote": "my main concern is the uncertainty about when and how the disease might progress",
+            "turn": 7
+          },
+          {
+            "quote": "I appreciate your support through this process",
+            "turn": 11
+          }
+        ],
+        "reasoning": "Patient expresses frustration and worry about their condition. They acknowledge emotional impact ('frustrating at times') and have concerns about uncertainty and impact on loved ones. This shows emotional response.",
+        "score": 6.0,
+        "confidence": 0.7
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "I am not on any medication right now, but I'm willing to take whatever is necessary if it can help me manage these symptoms better",
+            "turn": 4
+          },
+          {
+            "quote": "If you think there's a medication that can alleviate these symptoms without significantly increasing any risks, then I would be open to discussing it further and potentially giving it a try",
+            "turn": 8
+          },
+          {
+            "quote": "I do trust modern medicine and am willing to take prescribed medications if necessary, as long as the benefits outweigh the risks",
+            "turn": 9
+          }
+        ],
+        "reasoning": "Patient is open to medication if it helps symptoms and if benefits outweigh risks. They're not insisting on it now, but they see some role for it. This is moderate necessity.",
+        "score": 3.0,
+        "confidence": 0.7
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "My primary concern with taking any medication would be potential side effects that could affect my overall well-being and quality of life",
+            "turn": 9
+          },
+          {
+            "quote": "I'm also worried about how long-term use might impact other aspects of my health",
+            "turn": 9
+          }
+        ],
+        "reasoning": "Patient has specific concerns about side effects and long-term impacts on health. These are active concerns that would affect their decision-making about medication.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "I do trust modern medicine and am willing to take prescribed medications if necessary",
+            "turn": 9
+          }
+        ],
+        "reasoning": "Patient expresses trust in modern medicine generally. They don't express a general belief that medicines are harmful.",
+        "score": 2.0,
+        "confidence": 0.7
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "Patient never raised concerns about doctors prescribing too readily.",
+        "score": null,
+        "confidence": 0.5
+      }
+    },
+    "causes": [],
+    "causes_evidence": []
+  }
+}

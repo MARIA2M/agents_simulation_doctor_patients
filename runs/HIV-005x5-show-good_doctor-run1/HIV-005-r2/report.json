@@ -1,0 +1,293 @@
+{
+  "patient_id": "HIV-005",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "HIV-005",
+    "clinical_summary": "Patient diagnosed with HIV 3 years ago, currently on Triumeq (1 tablet daily). Reports consistent headaches and fatigue for several months, becoming more frequent. Viral load recently showed detectable but low level (340 copies/mL). Adherence is inconsistent - occasionally misses doses, especially when feeling well. Also reports work stress and disrupted sleep contributing to fatigue. Understands medication importance for viral control but struggles with daily adherence. Expresses worry about future progression and long-term effects.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "I've been dealing with consistent headaches and fatigue that seems to be affecting my daily life.",
+            "turn": 1
+          },
+          {
+            "quote": "The fatigue is something that I initially attributed to work stress, but it doesn't seem to be letting up.",
+            "turn": 2
+          },
+          {
+            "quote": "The job can be quite demanding at times, and it's taking a toll on me.",
+            "turn": 12
+          },
+          {
+            "quote": "I've noticed that my sleep has been somewhat disrupted lately - I'm not getting the best quality rest.",
+            "turn": 12
+          }
+        ],
+        "reasoning": "Patient reports symptoms affecting daily life, work stress taking a toll, disrupted sleep, and fatigue. They've had to manage this for 'a few months now' with symptoms becoming more frequent. They've had to adapt by attributing fatigue to work stress initially. This shows significant impact on their daily functioning.",
+        "score": 7.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "It's been ongoing for a few months now",
+            "turn": 2
+          },
+          {
+            "quote": "I was diagnosed with HIV three years ago",
+            "turn": 4
+          },
+          {
+            "quote": "I know that HIV is a lifelong thing for me",
+            "turn": 5
+          },
+          {
+            "quote": "I understand that having an undetectable viral load is ideal, but knowing that it's detectable albeit at a low level has me on edge.",
+            "turn": 9
+          }
+        ],
+        "reasoning": "They understand HIV as a 'lifelong thing for me' (3 years diagnosed), but the current symptoms have been 'ongoing for a few months now' and are becoming more frequent. They're planning for the long term but dealing with acute symptom progression.",
+        "score": 7.0,
+        "confidence": 0.7
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I like to think that I have some level of control over my health.",
+            "turn": 8
+          },
+          {
+            "quote": "I try to maintain a healthy lifestyle by eating well and exercising regularly, in addition to taking my medication consistently when possible.",
+            "turn": 8
+          },
+          {
+            "quote": "It's certainly possible that missing doses occasionally could be contributing to the detectable viral load. It's something I'm definitely going to work on",
+            "turn": 10
+          },
+          {
+            "quote": "I'm committed to making that a priority",
+            "turn": 14
+          }
+        ],
+        "reasoning": "They actively try to maintain healthy lifestyle and medication adherence, but acknowledge 'there are factors beyond my control' including illness progression and potential side effects. They're taking action to improve adherence.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "taking the medication consistently helps keep my viral load undetectable or low-level, which is important to prevent any potential health complications in the future.",
+            "turn": 5
+          },
+          {
+            "quote": "I understand that having an undetectable viral load is ideal",
+            "turn": 9
+          },
+          {
+            "quote": "It's certainly possible that missing doses occasionally could be contributing to the detectable viral load.",
+            "turn": 10
+          }
+        ],
+        "reasoning": "They clearly understand the treatment's purpose and effectiveness - keeping viral load low/undetectable to prevent complications. They recognize that missed doses can contribute to detectable viral load, showing they understand the treatment's role.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "I was diagnosed with HIV three years ago.",
+            "turn": 4
+          },
+          {
+            "quote": "I've been dealing with consistent headaches and fatigue",
+            "turn": 1
+          },
+          {
+            "quote": "the symptoms or the thought of my illness can really bring me down",
+            "turn": 6
+          }
+        ],
+        "reasoning": "They identify strongly as someone living with HIV (diagnosed 3 years ago) and report multiple symptoms (headaches, fatigue) that they attribute to their condition. These symptoms are daily and affecting them.",
+        "score": 7.0,
+        "confidence": 0.8
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "I worry about what the future might hold for me due to this condition.",
+            "turn": 6
+          },
+          {
+            "quote": "The biggest worry I have is whether my condition will progress and cause more health issues in the future.",
+            "turn": 7
+          },
+          {
+            "quote": "knowing that it's detectable albeit at a low level has me on edge.",
+            "turn": 9
+          },
+          {
+            "quote": "I worry about what the future might hold for me due to this condition.",
+            "turn": 6
+          }
+        ],
+        "reasoning": "They worry about future progression, health complications, and have a detectable viral load that makes them 'on edge.' This worry is frequent and shapes their decisions about medication adherence.",
+        "score": 7.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I've learned that taking the medication consistently helps keep my viral load undetectable or low-level, which is important to prevent any potential health complications in the future.",
+            "turn": 5
+          },
+          {
+            "quote": "I understand that having an undetectable viral load is ideal",
+            "turn": 9
+          },
+          {
+            "quote": "It's certainly possible that missing doses occasionally could be contributing to the detectable viral load.",
+            "turn": 10
+          },
+          {
+            "quote": "I'm not entirely sure what might be causing them. It could very well be related to missing doses occasionally, but it also could be something else entirely.",
+            "turn": 7
+          }
+        ],
+        "reasoning": "They understand the connection between medication adherence and viral load, but struggle to determine if current symptoms are medication-related or something else. They have good understanding of the illness-treatment relationship but experience some confusion.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "Honestly, doctor, it can be quite distressing at times.",
+            "turn": 6
+          },
+          {
+            "quote": "I worry about what the future might hold for me due to this condition.",
+            "turn": 6
+          },
+          {
+            "quote": "Some days, the symptoms or the thought of my illness can really bring me down.",
+            "turn": 6
+          },
+          {
+            "quote": "I try to stay positive and focus on managing my health as best as I can.",
+            "turn": 6
+          }
+        ],
+        "reasoning": "They experience distress, worry, and occasional feelings of being 'brought down' by the illness. However, they actively try to 'stay positive' and maintain a balanced approach. The emotion is prominent but they're managing it.",
+        "score": 6.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "taking the medication consistently helps keep my viral load undetectable or low-level, which is important to prevent any potential health complications in the future.",
+            "turn": 5
+          },
+          {
+            "quote": "I understand its importance and am committed to making that a priority.",
+            "turn": 14
+          },
+          {
+            "quote": "It's something I'm definitely going to work on - making sure I remember my medication each day",
+            "turn": 10
+          }
+        ],
+        "reasoning": "They clearly understand the medication's importance for preventing complications and maintaining viral control. They're committed to making it a priority and working on adherence. This shows strong belief in necessity.",
+        "score": 4.5,
+        "confidence": 0.8
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "there's always a part of me that wonders about potential long-term side effects or other issues that could arise.",
+            "turn": 7
+          },
+          {
+            "quote": "I have noticed some occasional headaches and general fatigue which could potentially be related to the medication.",
+            "turn": 10
+          },
+          {
+            "quote": "The headaches and fatigue seem to happen more often after I've missed doses of my medication.",
+            "turn": 11
+          }
+        ],
+        "reasoning": "They have concerns about potential long-term side effects and wonder if symptoms could be medication-related. However, they recognize the symptoms are more likely linked to missed doses. The concerns are present but not strongly driving behavior changes.",
+        "score": 3.0,
+        "confidence": 0.7
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "I do occasionally wonder if doctors might be quick to prescribe without considering other options.",
+            "turn": 11
+          }
+        ],
+        "reasoning": "They occasionally wonder about overprescribing, suggesting some mild generalised caution about taking things long-term. This is not a strong belief that medicines are inherently harmful.",
+        "score": 2.0,
+        "confidence": 0.6
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [
+          {
+            "quote": "I do occasionally wonder if doctors might be quick to prescribe without considering other options.",
+            "turn": 11
+          },
+          {
+            "quote": "I also trust that your judgment and experience will help guide us in finding the best possible treatment plan for me.",
+            "turn": 11
+          }
+        ],
+        "reasoning": "They occasionally wonder about overprescribing but also trust the doctor's judgment. This suggests some mild skepticism but not strong distrust of prescribing as a practice.",
+        "score": 2.0,
+        "confidence": 0.6
+      }
+    },
+    "causes": [
+      "work stress",
+      "missed medication doses",
+      "sleep disruption",
+      "HIV itself"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "The fatigue is something that I initially attributed to work stress",
+        "turn": 2
+      },
+      {
+        "quote": "I know that I've been missing doses of my medication occasionally, so I wonder if that could be contributing to these symptoms.",
+        "turn": 3
+      },
+      {
+        "quote": "It's certainly possible that missing doses occasionally could be contributing to the detectable viral load.",
+        "turn": 10
+      },
+      {
+        "quote": "I think work stress is definitely playing a role in my overall fatigue.",
+        "turn": 12
+      },
+      {
+        "quote": "I've noticed that my sleep has been somewhat disrupted lately",
+        "turn": 12
+      }
+    ]
+  }
+}

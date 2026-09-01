@@ -1,0 +1,269 @@
+{
+  "patient_id": "CLL-001",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "CLL-001",
+    "clinical_summary": "Patient presents with fatigue, night sweats, and swollen neck that have been worsening over several months. Work capacity has been substantially reduced - can no longer work full days, needs breaks and naps, and has given up hobbies and social activities. Patient has been diagnosed with CLL and is currently on active surveillance with regular blood tests. They are actively trying to manage stress, get more rest, maintain healthy lifestyle, and seek support from family/friends. Trusts medical team and believes treatment will be effective if needed.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "I used to be able to work a full day without any problem, but now even getting through the morning is a struggle",
+            "turn": 4
+          },
+          {
+            "quote": "Lately, I've been having to take more breaks than usual and sometimes even nap during lunchtime just to get some energy back",
+            "turn": 4
+          },
+          {
+            "quote": "As for hobbies or leisure activities, I find myself feeling too tired to do anything enjoyable after coming home from work. Even watching TV or reading a book is often too exhausting",
+            "turn": 4
+          },
+          {
+            "quote": "It's been really difficult to maintain my usual social life as well since meeting up with friends usually involves staying out late, which is just not feasible anymore",
+            "turn": 4
+          },
+          {
+            "quote": "Overall, the symptoms have really taken a toll on my energy level and quality of life",
+            "turn": 4
+          }
+        ],
+        "reasoning": "Patient has had to significantly reduce work capacity (can't get through mornings, needs breaks and naps), given up hobbies (too tired for TV, reading), and can't maintain social life. This is a major role reduction - work is substantially reduced.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "I definitely see my condition as a slow-moving disease, so I expect things to continue at their current pace",
+            "turn": 8
+          },
+          {
+            "quote": "The fact that my symptoms have been worsening over the past few months is concerning, but if treatment does end up being necessary, I trust it will be done in a timely and effective manner",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient explicitly states they see it as a slow-moving disease and expect things to continue at current pace. They acknowledge worsening symptoms but don't expect sudden changes.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I feel like my hands are somewhat tied since there doesn't seem to be any particular trigger or lifestyle choice that might have caused these symptoms in the first place",
+            "turn": 6
+          },
+          {
+            "quote": "However, I am trying to make some changes to better manage stress levels at work and maybe find ways to get more rest throughout the day",
+            "turn": 6
+          },
+          {
+            "quote": "I've also been thinking about reaching out to friends and family for support — not just for emotional reasons but also because they might be able to help me with errands or tasks that would otherwise exhaust me",
+            "turn": 6
+          },
+          {
+            "quote": "Overall, I feel like there's only so much I can do until we have a better grasp on what we're dealing with here",
+            "turn": 6
+          },
+          {
+            "quote": "I'm focused on doing everything in my power to maintain a healthy lifestyle — eating well, staying active, and continuing to prioritize self-care as much as possible",
+            "turn": 10
+          }
+        ],
+        "reasoning": "Patient feels limited in what they can do because they don't understand the cause, but they are actively trying to manage stress, get more rest, maintain healthy lifestyle, and seek support. They acknowledge some things are out of control.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "I trust you and your team of experts to figure this out and guide me in the right direction",
+            "turn": 5
+          },
+          {
+            "quote": "I trust your judgment and the expertise of the whole medical team in finding the right course of action",
+            "turn": 7
+          },
+          {
+            "quote": "if treatment does end up being necessary, I trust it will be done in a timely and effective manner",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient expresses strong trust in the medical team and believes treatment will be effective if needed. They don't have direct experience with treatment yet, but their trust is clear.",
+        "score": 8.0,
+        "confidence": 0.7
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "I don't really have any physical sensations or experiences associated with CLL specifically — just an overall sense of fatigue and discomfort that's hard to shake",
+            "turn": 8
+          },
+          {
+            "quote": "It's difficult for me to put into words how the disease is affecting my body since it doesn't manifest in a more tangible way",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient doesn't have specific CLL-related physical sensations. They only report fatigue and discomfort, which they describe as not being specifically tied to CLL.",
+        "score": 4.0,
+        "confidence": 0.6
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "I'm definitely worried about the implications of these symptoms on my long-term health",
+            "turn": 5
+          },
+          {
+            "quote": "The fact that I've been feeling this way for a few months now and there doesn't seem to be any improvement makes me really anxious about what could be happening in my body",
+            "turn": 5
+          },
+          {
+            "quote": "I can't help but feel some anxiety about what might happen if my condition does end up needing treatment",
+            "turn": 7
+          },
+          {
+            "quote": "It's hard not knowing exactly what to expect or how the body will respond to any potential medication",
+            "turn": 7
+          },
+          {
+            "quote": "Day-to-day, I'm feeling a mix of exhaustion and frustration",
+            "turn": 9
+          },
+          {
+            "quote": "Emotionally, there are moments where I feel overwhelmed by everything",
+            "turn": 9
+          },
+          {
+            "quote": "It's difficult to imagine what the future might hold for me with this disease",
+            "turn": 9
+          }
+        ],
+        "reasoning": "Patient expresses worry about long-term health, anxiety about lack of improvement, anxiety about future treatment, and feelings of being overwhelmed. These concerns recur unprompted and affect their emotional state.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "To be honest, I still have a lot of questions about CLL and how it affects the body",
+            "turn": 6
+          },
+          {
+            "quote": "I understand that it's a type of blood cancer that develops slowly over time",
+            "turn": 6
+          },
+          {
+            "quote": "I understand that it can cause fatigue and other symptoms that mimic what I'm going through now",
+            "turn": 6
+          },
+          {
+            "quote": "I don't really have any physical sensations or experiences associated with CLL specifically",
+            "turn": 8
+          },
+          {
+            "quote": "It's difficult for me to put into words how the disease is affecting my body since it doesn't manifest in a more tangible way",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient knows the label (CLL) and some basic facts (blood cancer, slow-moving, causes fatigue), but has many questions and doesn't understand how it specifically affects their body.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "Day-to-day, I'm feeling a mix of exhaustion and frustration",
+            "turn": 9
+          },
+          {
+            "quote": "Emotionally, there are moments where I feel overwhelmed by everything",
+            "turn": 9
+          },
+          {
+            "quote": "It's difficult to imagine what the future might hold for me with this disease, and at times it feels like my life is on pause until things change",
+            "turn": 9
+          },
+          {
+            "quote": "When I think about managing this over time, I feel a mix of uncertainty and determination",
+            "turn": 9
+          },
+          {
+            "quote": "It's hard not knowing what the future might hold, but at the same time, I'm determined to do whatever it takes to stay on top of things",
+            "turn": 9
+          }
+        ],
+        "reasoning": "Patient describes frequent emotional states - exhaustion, frustration, being overwhelmed, uncertainty. These emotions recur unprompted and affect how they think about the future.",
+        "score": 8.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [],
+        "reasoning": "Patient does not currently have a prescription for treatment (they are on active surveillance with regular blood tests). Since there is no specific medication to evaluate, this is null.",
+        "score": null,
+        "confidence": 0.9
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "I can't help but feel some anxiety about what might happen if my condition does end up needing treatment",
+            "turn": 7
+          },
+          {
+            "quote": "It's hard not knowing exactly what to expect or how the body will respond to any potential medication",
+            "turn": 7
+          }
+        ],
+        "reasoning": "Patient has concerns about potential future treatment, specifically about how the body will respond to medication. However, these concerns haven't changed any behavior yet since treatment hasn't been initiated.",
+        "score": 2.5,
+        "confidence": 0.6
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [],
+        "reasoning": "Patient never expressed views about medicines as a class.",
+        "score": null,
+        "confidence": 0.9
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "Patient never expressed views about doctors prescribing too readily.",
+        "score": null,
+        "confidence": 0.9
+      }
+    },
+    "causes": [
+      "work stress/lifting",
+      "environmental factors",
+      "genetics"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "Sometimes I wonder if it's because of my job — I work in construction, and maybe all the lifting and heavy work is getting to me",
+        "turn": 3
+      },
+      {
+        "quote": "Or maybe there's something environmental at play, since I live near an old industrial site",
+        "turn": 3
+      },
+      {
+        "quote": "The possibility of genetics playing a role has also crossed my mind since both my father and grandfather had some form of cancer",
+        "turn": 10
+      }
+    ]
+  }
+}

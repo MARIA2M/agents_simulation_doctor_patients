@@ -1,0 +1,259 @@
+{
+  "patient_id": "CLL-001",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "CLL-001",
+    "clinical_summary": "Patient with CLL diagnosed almost 4 years ago, on active surveillance with no treatment yet. Experiencing significant fatigue (rated 8/10) and new headaches (rated 9/10) that are stable but impacting daily functioning and concentration. Patient uses healthy lifestyle strategies, support networks, and distraction to manage concerns about disease progression. Trusts oncologist but has anxiety about uncertainty and potential future treatment needs.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "It's like a heavy weight that drags me down all day long, and even when I try to rest, it feels like I can't really sleep deeply. It makes everything harder - even simple tasks around the house feel like they take much more effort than they should.",
+            "turn": 2
+          },
+          {
+            "quote": "It's quite distressing because it makes it difficult to concentrate or do anything that requires focus.",
+            "turn": 2
+          },
+          {
+            "quote": "The fatigue would probably be around an 8 on that scale - it's definitely interfering with my ability to do things and keeping me from feeling like myself. The headaches are closer to a 9 in terms of their impact because they're so disruptive and difficult to manage.",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Major role is lost or substantially reduced: daily functioning is significantly impacted, simple tasks require much more effort, concentration is impaired, and they can't feel like themselves.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "I was diagnosed with CLL almost four years ago now, although it's been progressing fairly slowly.",
+            "turn": 3
+          },
+          {
+            "quote": "My blood test results seem stable enough, but I do notice little changes from month to month.",
+            "turn": 4
+          },
+          {
+            "quote": "I worry that the disease is quietly advancing in ways we can't detect yet.",
+            "turn": 4
+          },
+          {
+            "quote": "not being on any treatment has been both relieving and anxiety-inducing.",
+            "turn": 4
+          }
+        ],
+        "reasoning": "Plans on the assumption it stays. Arrangements are built around it continuing. They're planning for the long term despite slow progression.",
+        "score": 8.0,
+        "confidence": 0.85
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "staying as active and healthy as possible - eating well, trying to exercise regularly, and making sure I get enough rest.",
+            "turn": 5
+          },
+          {
+            "quote": "maintaining a support network of friends and family who understand my situation and can be there for me.",
+            "turn": 5
+          },
+          {
+            "quote": "keeping busy with hobbies and interests helps distract me from the worries.",
+            "turn": 5
+          },
+          {
+            "quote": "I don't really know what 'normal' feels like without this illness.",
+            "turn": 4
+          }
+        ],
+        "reasoning": "Acts, and credits their actions with some effect alongside the treatment. They actively manage their health through lifestyle choices, support networks, and distraction, but acknowledge limitations in what they can control.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "Overall, I feel well taken care of by my oncologist.",
+            "turn": 6
+          },
+          {
+            "quote": "They've explained the rationale behind active surveillance and the reasons why we're not starting treatment yet.",
+            "turn": 6
+          },
+          {
+            "quote": "I trust that they're making decisions based on what's best for me.",
+            "turn": 6
+          },
+          {
+            "quote": "While there are moments when I wonder if I might need more aggressive approaches, I trust that they're making decisions based on what's best for me.",
+            "turn": 6
+          }
+        ],
+        "reasoning": "Attributes their present condition to the treatment working (or not needing treatment). They trust the medical approach and understand the rationale.",
+        "score": 8.0,
+        "confidence": 0.85
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "My understanding of CLL is that it affects my immune system and can lead to other complications over time.",
+            "turn": 5
+          },
+          {
+            "quote": "keeping me from feeling like myself",
+            "turn": 8
+          },
+          {
+            "quote": "symptoms are really impacting my ability to function and feel like myself.",
+            "turn": 3
+          }
+        ],
+        "reasoning": "Symptoms daily and intrusive: they interrupt what the person is doing. The illness has become a significant part of their identity.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "I worry that the disease is quietly advancing in ways we can't detect yet.",
+            "turn": 4
+          },
+          {
+            "quote": "The uncertainty can be quite difficult to handle.",
+            "turn": 4
+          },
+          {
+            "quote": "not being on any treatment has been both relieving and anxiety-inducing.",
+            "turn": 4
+          },
+          {
+            "quote": "moments when I wonder if I might need more aggressive approaches",
+            "turn": 6
+          }
+        ],
+        "reasoning": "Worry is frequent and intrudes into matters unrelated to the illness. They're constantly thinking about disease progression and potential future treatment needs.",
+        "score": 8.0,
+        "confidence": 0.85
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "My understanding of CLL is that it affects my immune system and can lead to other complications over time.",
+            "turn": 5
+          },
+          {
+            "quote": "They've explained the rationale behind active surveillance and the reasons why we're not starting treatment yet.",
+            "turn": 6
+          },
+          {
+            "quote": "I don't really know what 'normal' feels like without this illness.",
+            "turn": 4
+          },
+          {
+            "quote": "little changes from month to month",
+            "turn": 4
+          }
+        ],
+        "reasoning": "Gives a rough account of what is happening and why, with gaps. They understand the basic mechanism and rationale but lack detailed understanding and a clear sense of normal.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "It's quite distressing because it makes it difficult to concentrate or do anything that requires focus.",
+            "turn": 2
+          },
+          {
+            "quote": "The uncertainty can be quite difficult to handle.",
+            "turn": 4
+          },
+          {
+            "quote": "worries about the disease start creeping up",
+            "turn": 5
+          },
+          {
+            "quote": "keeping busy with hobbies and interests helps distract me from the worries.",
+            "turn": 5
+          }
+        ],
+        "reasoning": "Emotion is prominent and affects what they do. They experience significant emotional distress and use distraction to manage it.",
+        "score": 8.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "I understand the importance of maintaining a consistent treatment plan and keeping up with regular blood tests to monitor my condition.",
+            "turn": 7
+          },
+          {
+            "quote": "When it comes to medication in general, I think it's an essential aspect of managing any health issue.",
+            "turn": 7
+          },
+          {
+            "quote": "I'd much rather not have any illness at all. But in the absence of other options, I understand the importance of keeping up with medications as prescribed.",
+            "turn": 7
+          }
+        ],
+        "reasoning": "Treats it as important and organises around it: routines, travel, supplies. They understand the importance of medication and would likely follow a treatment plan if prescribed.",
+        "score": 4.0,
+        "confidence": 0.75
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "It can be a bit worrisome to think about long-term side effects or potential drug interactions.",
+            "turn": 7
+          },
+          {
+            "quote": "it's not ideal - I'd much rather not have any illness at all.",
+            "turn": 7
+          }
+        ],
+        "reasoning": "Concerns only when asked, and nothing has been done about them. They have concerns but haven't taken specific action to address them.",
+        "score": 3.0,
+        "confidence": 0.7
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "trust that doctors are monitoring these things carefully and making decisions based on what they believe is best for my situation",
+            "turn": 7
+          }
+        ],
+        "reasoning": "No general view; judges each medicine on its own terms. They don't express strong beliefs about medicines as a class being harmful.",
+        "score": 2.0,
+        "confidence": 0.8
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [
+          {
+            "quote": "I trust that they're making decisions based on what's best for me",
+            "turn": 6
+          }
+        ],
+        "reasoning": "No view offered; takes prescribing decisions as given. They trust their oncologist's judgment.",
+        "score": 2.0,
+        "confidence": 0.8
+      }
+    },
+    "causes": [],
+    "causes_evidence": []
+  }
+}

@@ -1,0 +1,310 @@
+{
+  "patient_id": "CLL-004",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "CLL-004",
+    "clinical_summary": "Patient with Chronic Lymphocytic Leukemia reports severe fatigue, infections, fog, and headaches since starting medication. The illness has significantly impacted work, parenting, and daily functioning, with life feeling 'put on hold.' Patient experiences constant worry, anger, frustration, despair, and exhaustion. Medication is seen as essential to prevent progression, but severe headaches and side effects have raised concerns. Patient engages in small self-care activities (short walks, routines) and is open to professional support.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "some days I can barely get out of bed",
+            "turn": 1
+          },
+          {
+            "quote": "It feels like this disease has taken over everything — my work, my time with the kids, everything",
+            "turn": 1
+          },
+          {
+            "quote": "everything feels like it's through a fog. The fatigue is crushing at times",
+            "turn": 3
+          },
+          {
+            "quote": "even simple tasks feel like they take so much out of me",
+            "turn": 3
+          },
+          {
+            "quote": "my entire life has been put on hold because of it",
+            "turn": 3
+          }
+        ],
+        "reasoning": "Patient reports inability to get out of bed, loss of major roles (work, parenting), severe fatigue, and having to put life on hold. These align with an 8 on the scale where a major role is lost or substantially reduced.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "it doesn't sound like there might be a cure anytime soon",
+            "turn": 3
+          },
+          {
+            "quote": "It might just be managing symptoms and living with it indefinitely?",
+            "turn": 3
+          },
+          {
+            "quote": "it might never truly go away",
+            "turn": 6
+          }
+        ],
+        "reasoning": "Patient explicitly states no cure anytime soon, expects to manage indefinitely, and believes it might never go away. This aligns with an 8 where arrangements are built around it continuing.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "Sometimes I feel like I have no say in any of it",
+            "turn": 1
+          },
+          {
+            "quote": "it also feels like it's dictating so much of what I can and can't do",
+            "turn": 4
+          },
+          {
+            "quote": "Even when I try to push back against that, there's always this lingering fear of pushing too hard and triggering some adverse reaction",
+            "turn": 4
+          },
+          {
+            "quote": "I'll force myself to go for a short walk outside every now and then",
+            "turn": 7
+          },
+          {
+            "quote": "maintaining some routine — having set meal times and trying to stick to a regular sleep schedule",
+            "turn": 7
+          },
+          {
+            "quote": "these small victories help keep me grounded despite everything",
+            "turn": 7
+          }
+        ],
+        "reasoning": "Patient feels constrained by illness and limited control, but engages in self-directed activities (walks, routines) they see as small victories. This mix of low control with some agency aligns with a 6.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "I definitely think the medication is essential. It's the only thing keeping my CLL somewhat in check and slowing its progression",
+            "turn": 5
+          },
+          {
+            "quote": "If I were to stop taking it or switch to a different treatment, I'm afraid of what might happen — if I'd start experiencing more aggressive symptoms again or if the disease would progress faster than I can manage",
+            "turn": 5
+          },
+          {
+            "quote": "It's this balance between managing my condition while also not overloading my system with too much treatment that feels so tricky",
+            "turn": 5
+          }
+        ],
+        "reasoning": "Patient clearly believes medication is essential and controls disease progression, attributing their condition to it working. This aligns with an 8 where present condition is attributed to treatment working.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "my illness, Chronic Lymphocytic Leukemia",
+            "turn": 3
+          },
+          {
+            "quote": "having to deal with your illness every single day",
+            "turn": 4
+          },
+          {
+            "quote": "living with this disease",
+            "turn": 6
+          }
+        ],
+        "reasoning": "Patient has clear illness label and experiences it as ongoing identity dealt with daily. Symptoms are daily and intrusive, aligning with an 8.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "the constant worry about what might be around the next corner with this illness",
+            "turn": 3
+          },
+          {
+            "quote": "I worry about what might happen next, how my condition might change or worsen over time",
+            "turn": 6
+          },
+          {
+            "quote": "constant underlying tension that doesn't go away",
+            "turn": 4
+          },
+          {
+            "quote": "feeling like there's no escape from this",
+            "turn": 6
+          }
+        ],
+        "reasoning": "Patient experiences constant worry about progression, ongoing concerns about what's next, and persistent tension. This aligns with an 8 where worry is frequent and intrudes into matters unrelated to the illness.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I've been reading up and I understand that my illness, Chronic Lymphocytic Leukemia, is caused by some abnormal functioning in my immune system",
+            "turn": 3
+          },
+          {
+            "quote": "The specifics are a bit hazy for me, but it's something about the cells of my body not working quite right",
+            "turn": 3
+          },
+          {
+            "quote": "I've been reading up",
+            "turn": 3
+          },
+          {
+            "quote": "I've read up on side effects of this medication and see others have experienced similar issues",
+            "turn": 2
+          }
+        ],
+        "reasoning": "Patient has researched and has general understanding of illness (immune system/cells not working right), though specifics are 'a bit hazy.' They've also researched side effects. This moderate understanding aligns with a 6.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "It feels like this disease has taken over everything",
+            "turn": 1
+          },
+          {
+            "quote": "constant underlying tension that doesn't go away",
+            "turn": 4
+          },
+          {
+            "quote": "ever-present weight on my shoulders — it's always there in the back of my mind",
+            "turn": 6
+          },
+          {
+            "quote": "angry or frustrated at having to live with this disease",
+            "turn": 6
+          },
+          {
+            "quote": "despairing — feeling like there's no escape from this",
+            "turn": 6
+          },
+          {
+            "quote": "bone-tired of dealing with everything",
+            "turn": 6
+          },
+          {
+            "quote": "emotional toll... having to deal with your illness every single day takes a lot out of you, emotionally and mentally",
+            "turn": 4
+          }
+        ],
+        "reasoning": "Patient describes strong negative emotions (weight, tension, worry, anger, frustration, despair, exhaustion) that affect mood, sleep, and daily functioning. This aligns with an 8 where emotion is prominent and affects what they do.",
+        "score": 8.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "I definitely think the medication is essential. It's the only thing keeping my CLL somewhat in check and slowing its progression",
+            "turn": 5
+          },
+          {
+            "quote": "If I were to stop taking it or switch to a different treatment, I'm afraid of what might happen",
+            "turn": 5
+          },
+          {
+            "quote": "I will keep taking those walks and doing my best to manage everything as best I can",
+            "turn": 11
+          }
+        ],
+        "reasoning": "Patient clearly believes medication is essential and non-negotiable, organizes understanding around it being necessary to prevent progression. This aligns with a 5.0 where stopping is not considered.",
+        "score": 5.0,
+        "confidence": 0.8
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "I've been getting these terrible headaches since I started",
+            "turn": 1
+          },
+          {
+            "quote": "terrible headaches",
+            "turn": 2
+          },
+          {
+            "quote": "quite severe — sometimes it feels like my head is in a vise",
+            "turn": 2
+          },
+          {
+            "quote": "wondering if it's really worth it",
+            "turn": 1
+          },
+          {
+            "quote": "it can feel like I'm just taking one hit after another",
+            "turn": 2
+          },
+          {
+            "quote": "I've read up on side effects of this medication and see others have experienced similar issues",
+            "turn": 2
+          },
+          {
+            "quote": "wondering if there might be a better way or something else we could try",
+            "turn": 2
+          },
+          {
+            "quote": "I am aware that there are risks and potential side effects tied to the medication",
+            "turn": 5
+          }
+        ],
+        "reasoning": "Patient has specific concerns about severe headaches, has researched side effects, and questions whether treatment is worth it. These concerns have led to considering alternatives. This aligns with a 4.0 where concerns recur unprompted and have raised the issue.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "I've read up on side effects of this medication and see others have experienced similar issues",
+            "turn": 2
+          },
+          {
+            "quote": "I am aware that there are risks and potential side effects tied to the medication",
+            "turn": 5
+          }
+        ],
+        "reasoning": "Patient has researched side effects and is aware of risks, but this is focused on their specific medication rather than medicines as a class. No general belief that medicines are harmful expressed. This aligns with a 2.0 where no general view is held.",
+        "score": 2.0,
+        "confidence": 0.7
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "This dimension was never explored. Patient did not express any belief about whether doctors prescribe too readily.",
+        "score": null,
+        "confidence": 0.0
+      }
+    },
+    "causes": [
+      "abnormal functioning in my immune system",
+      "cells of my body not working quite right"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "my illness, Chronic Lymphocytic Leukemia, is caused by some abnormal functioning in my immune system. The specifics are a bit hazy for me, but it's something about the cells of my body not working quite right.",
+        "turn": 3
+      }
+    ]
+  }
+}

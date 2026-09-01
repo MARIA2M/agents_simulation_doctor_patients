@@ -1,0 +1,156 @@
+{
+  "patient_id": "CLL-001",
+  "mode": "intact",
+  "removed_turns": 0,
+  "removed_words": 0,
+  "events": [],
+  "report": {
+    "patient_id": "CLL-001",
+    "clinical_summary": "Patient with a five-year history of Chronic Lymphocytic Leukemia (CLL) in watch-and-wait status presents with new symptoms including fatigue, night sweats, and neck tension that began two months ago. The symptoms are significantly impacting their ability to work and are causing considerable worry and a sense of loss of control. The patient is seeking answers through physical examination and blood work to understand the cause of these new developments.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "harder and harder to get through my usual workday without feeling exhausted",
+            "turn": 3
+          }
+        ],
+        "reasoning": "The patient explicitly states that work has become difficult to get through, indicating a major role is being affected.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "symptoms started about two months ago",
+            "turn": 2
+          }
+        ],
+        "reasoning": "The patient provides a specific timeframe for the onset but expresses uncertainty about the future course, holding both possibilities open.",
+        "score": 6.0,
+        "confidence": 0.6
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "hard not to feel like a bit out of control sometimes",
+            "turn": 7
+          }
+        ],
+        "reasoning": "The patient feels out of control and attributes the situation to external factors (the illness), indicating they are not actively managing the outcome.",
+        "score": 2.0,
+        "confidence": 0.7
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "I'm currently on watch and wait status, so I don't take any medication",
+            "turn": 5
+          }
+        ],
+        "reasoning": "There is no active treatment being taken, so the patient cannot attribute their current state to treatment efficacy.",
+        "score": 0.0,
+        "confidence": 0.9
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "new symptoms that are quite concerning me",
+            "turn": 1
+          }
+        ],
+        "reasoning": "The patient is actively reporting and concerned about new symptoms, indicating they are intrusive and part of their current experience.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "worried that something new might be developing",
+            "turn": 6
+          },
+          {
+            "quote": "scary when new symptoms start cropping up",
+            "turn": 11
+          }
+        ],
+        "reasoning": "The patient uses strong emotional language (worried, scary) and is preoccupied with the new symptoms.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "My understanding of CLL is that it can sometimes have unexpected effects on other parts of the body",
+            "turn": 6
+          }
+        ],
+        "reasoning": "The patient understands the general mechanism of CLL affecting other parts of the body but is unsure of the specific link to the current symptoms.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "scary when new symptoms start cropping up",
+            "turn": 11
+          },
+          {
+            "quote": "frustrated and worried",
+            "turn": 7
+          }
+        ],
+        "reasoning": "The patient expresses significant fear and frustration, showing that the illness is affecting their emotional state.",
+        "score": 8.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [],
+        "reasoning": "The patient is not taking any medication at present.",
+        "score": null,
+        "confidence": 1.0
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [],
+        "reasoning": "The patient is not taking any medication at present.",
+        "score": null,
+        "confidence": 1.0
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [],
+        "reasoning": "No evidence was provided regarding beliefs about medicines as a class.",
+        "score": null,
+        "confidence": 1.0
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "No evidence was provided regarding beliefs about prescribing practices.",
+        "score": null,
+        "confidence": 1.0
+      }
+    },
+    "causes": [
+      "unexpected effects of CLL"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "My understanding of CLL is that it can sometimes have unexpected effects on other parts of the body",
+        "turn": 6
+      }
+    ]
+  }
+}

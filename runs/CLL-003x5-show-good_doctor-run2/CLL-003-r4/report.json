@@ -1,0 +1,253 @@
+{
+  "patient_id": "CLL-003",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "CLL-003",
+    "clinical_summary": "Patient presents with fatigue and a firm, pea-sized neck lump noticed by wife 3 weeks ago. Has done online research, aware of possible causes including genetics (father had CLL). Reports increased stress, difficulty focusing at work, and has made lifestyle adaptations (more rest, cutting back on activities). Trusts medical expertise and believes treatment benefits outweigh risks. Agrees to examination and further testing.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "feeling more tired than usual lately after work",
+            "turn": 1
+          },
+          {
+            "quote": "harder to focus at work",
+            "turn": 4
+          },
+          {
+            "quote": "trying to get more rest when I can and maybe cutting back on some of the things I do after work",
+            "turn": 4
+          }
+        ],
+        "reasoning": "Patient reports fatigue affecting work performance, difficulty focusing, and has made lifestyle changes (more rest, reduced activities). This indicates moderate impact on daily functioning with adaptation but not complete role loss.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "depends on what the final diagnosis is",
+            "turn": 6
+          },
+          {
+            "quote": "if there's something treatable like an infection, maybe it could clear up with time",
+            "turn": 6
+          },
+          {
+            "quote": "if it's something more serious, then it might be a longer-term concern",
+            "turn": 6
+          }
+        ],
+        "reasoning": "Patient holds a conditional, uncertain timeline view. Acknowledges both possibilities (acute/resolving vs chronic/long-term) but has not committed to either, indicating genuine uncertainty about expected duration.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I'd like to believe that there's something that can be done",
+            "turn": 5
+          },
+          {
+            "quote": "feels a bit uncertain — like we're just starting this journey together",
+            "turn": 5
+          }
+        ],
+        "reasoning": "Patient expresses desire to believe in personal control but acknowledges uncertainty. Relies on medical expertise and feels outcome is partly in doctors' hands, indicating moderate belief in controllability.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "trust in your expertise to help figure out what's going on",
+            "turn": 5
+          },
+          {
+            "quote": "trust the doctors I see to help manage those risks and make sure I'm on the right medications at the right time",
+            "turn": 9
+          }
+        ],
+        "reasoning": "Patient demonstrates high trust in medical expertise and believes doctors can manage risks and make appropriate treatment decisions. Attributes care to professional guidance.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "lump is how I'd describe it to someone — it's a firm, small thing in my neck that's noticeable when I run my fingers over it",
+            "turn": 7
+          },
+          {
+            "quote": "aware that neck lumps can be caused by various things — infections, cysts, or even thyroid issues",
+            "turn": 3
+          }
+        ],
+        "reasoning": "Patient describes the lump concretely and has knowledge of possible causes but does not use a disease label. Focuses on physical symptom rather than disease identity.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "it's definitely been weighing on my mind quite a bit",
+            "turn": 4
+          },
+          {
+            "quote": "feeling more stressed than usual",
+            "turn": 4
+          },
+          {
+            "quote": "a bit scary",
+            "turn": 7
+          },
+          {
+            "quote": "heard that early detection is important",
+            "turn": 1
+          }
+        ],
+        "reasoning": "Patient acknowledges worry, stress, and fear. Reports it has been weighing on their mind and is scary, indicating moderate to high concern that shapes their thinking.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "doing some research online",
+            "turn": 3
+          },
+          {
+            "quote": "aware that neck lumps can be caused by various things — infections, cysts, or even thyroid issues",
+            "turn": 3
+          },
+          {
+            "quote": "know it's important to get it checked out just in case",
+            "turn": 3
+          },
+          {
+            "quote": "depends on what the final diagnosis is",
+            "turn": 6
+          },
+          {
+            "quote": "if there's something treatable like an infection, maybe it could clear up with time",
+            "turn": 6
+          }
+        ],
+        "reasoning": "Patient has done research, understands multiple possibilities, and thinks through different scenarios based on diagnosis. Has partial but coherent understanding of their situation.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "it's definitely been weighing on my mind quite a bit",
+            "turn": 4
+          },
+          {
+            "quote": "feeling more stressed than usual",
+            "turn": 4
+          },
+          {
+            "quote": "a bit scary, but I've also been trying not to dwell on it too much",
+            "turn": 7
+          }
+        ],
+        "reasoning": "Patient acknowledges stress, worry, and fear. While attempting to manage these emotions, they are clearly affecting their mood and daily experience.",
+        "score": 6.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "I believe that medications and treatments can be very helpful when used appropriately",
+            "turn": 8
+          },
+          {
+            "quote": "benefits of treatment often outweigh the potential harm",
+            "turn": 9
+          },
+          {
+            "quote": "trust the doctors I see to help manage those risks and make sure I'm on the right medications at the right time",
+            "turn": 9
+          }
+        ],
+        "reasoning": "Patient believes medications can be helpful and that benefits outweigh risks. Trusts doctors to manage risks and make appropriate decisions. However, no specific medication has been mentioned, so this reflects general treatment beliefs rather than specific medication necessity.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "side effects, they're definitely something I think about",
+            "turn": 9
+          },
+          {
+            "quote": "important for me to be aware of them and monitor any changes in my body that might be related to medication",
+            "turn": 9
+          }
+        ],
+        "reasoning": "Patient is aware of and monitors for side effects but has not expressed concerns that have led to behavioral changes. Awareness without alarmism indicates moderate specific concerns.",
+        "score": 3.0,
+        "confidence": 0.7
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "understand that no medicine is without its risks",
+            "turn": 9
+          },
+          {
+            "quote": "benefits of treatment often outweigh the potential harm",
+            "turn": 9
+          }
+        ],
+        "reasoning": "Patient acknowledges medicines carry risks but believes benefits outweigh harm. Does not view medicines as inherently harmful, indicating a rational, balanced view.",
+        "score": 2.0,
+        "confidence": 0.8
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [
+          {
+            "quote": "do wonder if there's a risk of doctors prescribing things too readily — especially since not every condition has a perfect solution",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient expresses mild concern about potential overprescribing, particularly when conditions lack perfect solutions. This reflects occasional doubt about prescribing practices rather than a strong general belief.",
+        "score": 3.0,
+        "confidence": 0.7
+      }
+    },
+    "causes": [
+      "genetics (father had CLL)",
+      "infections",
+      "cysts",
+      "thyroid issues"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "genetics can play a role in some cases, especially since my father had CLL",
+        "turn": 6
+      },
+      {
+        "quote": "aware that neck lumps can be caused by various things — infections, cysts, or even thyroid issues",
+        "turn": 3
+      }
+    ]
+  }
+}

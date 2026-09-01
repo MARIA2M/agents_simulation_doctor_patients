@@ -1,0 +1,308 @@
+{
+  "patient_id": "HIV-002",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "HIV-002",
+    "clinical_summary": "Patient diagnosed with HIV, Chronic Stage 2, 5 months ago. Currently taking Dovato daily but experiencing significant headaches (almost every other day, starting after morning dose, lasting most of the day) that are impacting work concentration, energy levels, and social activities. Patient understands treatment benefits (viral load control, disease prevention) but is actively weighing these against side effects and long-term concerns like resistance. Emotionally, the patient feels overwhelmed, emotionally exhausted, and experiences isolation in relationships. They have a coherent understanding of their condition and treatment, and are actively managing their health while seeking to understand long-term implications.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "I've noticed it's harder to concentrate at work because of the constant discomfort, and I'm more tired than usual. It's a struggle to find the energy to do things outside of work, like spending time with friends or family.",
+            "turn": 3
+          },
+          {
+            "quote": "The constant awareness that I have this condition - and that it might never go away - is something that weighs on me daily.",
+            "turn": 4
+          },
+          {
+            "quote": "It's a part of my life now, and that reality can be emotionally exhausting.",
+            "turn": 4
+          },
+          {
+            "quote": "There are times when I feel angry or sad about it",
+            "turn": 4
+          },
+          {
+            "quote": "The impact on my relationships is something I've been grappling with lately... there have been moments of isolation and feelings of being separate from others.",
+            "turn": 8
+          },
+          {
+            "quote": "at times, it can feel like a weight on my shoulders",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient describes substantial impact across multiple domains: work (harder to concentrate), energy levels (more tired), social life (struggle to find energy for friends/family), emotional state (overwhelmed, angry, sad, emotionally exhausting), and relationships (isolation, feeling separate). This represents a major reduction in functioning.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "the constant awareness that I have this condition - and that it might never go away",
+            "turn": 4
+          },
+          {
+            "quote": "I know I need to accept this and focus on maintaining my health as best I can",
+            "turn": 4
+          },
+          {
+            "quote": "I'm not a medical professional, so my understanding is based on what I've read and discussed with others living with HIV.",
+            "turn": 7
+          },
+          {
+            "quote": "things like long-term effects or resistance are difficult to fully grasp",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient clearly understands HIV is chronic and will not go away. They talk about 'maintaining my health' and 'long-term effects' as ongoing concerns, indicating they are planning for the future with this understanding.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I've come to terms with the fact that there's only so much control I have over the disease itself, but I feel like I do have some control over how I respond to it emotionally and how well I manage my treatment.",
+            "turn": 5
+          },
+          {
+            "quote": "my focus is on managing these side effects while continuing to keep my viral load down",
+            "turn": 6
+          },
+          {
+            "quote": "I'm always open to learning more and continuing to manage this as best I can",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient acknowledges limited control over the disease itself but believes they have control over emotional response and treatment management. They're actively managing their condition and seeking to understand it better.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "I understand that Dovato is helping keep my viral load down and preventing progression of the disease.",
+            "turn": 3
+          },
+          {
+            "quote": "my focus is on managing these side effects while continuing to keep my viral load down",
+            "turn": 6
+          },
+          {
+            "quote": "the medication fighting against the virus to keep me healthy",
+            "turn": 5
+          },
+          {
+            "quote": "I understand that Dovato is helping keep my viral load down",
+            "turn": 3
+          }
+        ],
+        "reasoning": "The patient clearly believes the medication is effective and necessary for controlling the disease. They understand it helps keep viral load down and prevents progression.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "I've been feeling a bit off lately, with occasional headaches and just generally not feeling like my usual self.",
+            "turn": 1
+          },
+          {
+            "quote": "the constant awareness that I have this condition",
+            "turn": 4
+          },
+          {
+            "quote": "It's a part of my life now",
+            "turn": 4
+          },
+          {
+            "quote": "at times, it can feel like a weight on my shoulders",
+            "turn": 8
+          },
+          {
+            "quote": "feeling separate from others",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient experiences symptoms (headaches, feeling off) and has integrated HIV into their identity as 'a part of my life now.' They feel different from their usual self and experience emotional and social consequences.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "I'm worried about whether it's worth it and if there might be any alternatives to manage the side effects better.",
+            "turn": 1
+          },
+          {
+            "quote": "The biggest worry I have with continuing on Dovato is whether the potential benefits of keeping my viral load undetectable outweigh the side effects I'm experiencing.",
+            "turn": 6
+          },
+          {
+            "quote": "it makes me cautious about making any decisions without fully understanding all the options available",
+            "turn": 6
+          },
+          {
+            "quote": "heard about the possibility of developing resistance or resistance to certain medications over time, which is understandably concerning",
+            "turn": 6
+          },
+          {
+            "quote": "there are times when it can still feel overwhelming",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient expresses significant worry about treatment benefits vs side effects, is cautious about decisions, and has concerns about long-term resistance. They acknowledge feeling overwhelmed.",
+        "score": 8.0,
+        "confidence": 0.85
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I understand that Dovato is helping keep my viral load down and preventing progression of the disease.",
+            "turn": 3
+          },
+          {
+            "quote": "I've come to terms with the fact that there's only so much control I have over the disease itself",
+            "turn": 5
+          },
+          {
+            "quote": "I understand that Dovato is helping keep my viral load down",
+            "turn": 3
+          },
+          {
+            "quote": "I'm not a medical professional, so my understanding is based on what I've read and discussed with others living with HIV.",
+            "turn": 7
+          },
+          {
+            "quote": "I have a good understanding of what's happening with my health - but there are times when it can still feel overwhelming.",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient demonstrates good understanding of their condition, treatment, and how they fit into it. They can explain what's happening and why, though they acknowledge complexity and uncertainty about long-term effects.",
+        "score": 8.0,
+        "confidence": 0.85
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "it's been quite overwhelming",
+            "turn": 4
+          },
+          {
+            "quote": "the constant awareness that I have this condition - and that it might never go away - is something that weighs on me daily",
+            "turn": 4
+          },
+          {
+            "quote": "that reality can be emotionally exhausting",
+            "turn": 4
+          },
+          {
+            "quote": "There are times when I feel angry or sad about it, and other times when I'm more at peace.",
+            "turn": 4
+          },
+          {
+            "quote": "It's a part of my life now, and that reality can be emotionally exhausting",
+            "turn": 4
+          },
+          {
+            "quote": "The impact on my relationships is something I've been grappling with lately",
+            "turn": 8
+          },
+          {
+            "quote": "there have been moments of isolation and feelings of being separate from others",
+            "turn": 8
+          },
+          {
+            "quote": "at times, it can feel like a weight on my shoulders",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient experiences significant emotional impact - feeling overwhelmed, emotionally exhausted, angry, sad, and experiencing isolation. Emotion is prominent and affects what they do.",
+        "score": 8.0,
+        "confidence": 0.9
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "I understand that Dovato is helping keep my viral load down and preventing progression of the disease.",
+            "turn": 3
+          },
+          {
+            "quote": "my focus is on managing these side effects while continuing to keep my viral load down",
+            "turn": 6
+          },
+          {
+            "quote": "I'm always open to learning more and continuing to manage this as best I can",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient clearly believes the medication is necessary and important for their health. They're actively managing it and focusing on keeping their viral load down. They're not considering stopping.",
+        "score": 4.5,
+        "confidence": 0.8
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "I'm worried about whether it's worth it and if there might be any alternatives to manage the side effects better.",
+            "turn": 1
+          },
+          {
+            "quote": "The biggest worry I have with continuing on Dovato is whether the potential benefits of keeping my viral load undetectable outweigh the side effects I'm experiencing.",
+            "turn": 6
+          },
+          {
+            "quote": "it makes me cautious about making any decisions without fully understanding all the options available",
+            "turn": 6
+          },
+          {
+            "quote": "heard about the possibility of developing resistance or resistance to certain medications over time, which is understandably concerning",
+            "turn": 6
+          },
+          {
+            "quote": "there are times when it can still feel overwhelming",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient has significant concerns about side effects, benefits vs side effects, and long-term resistance. These concerns have led to caution about decisions and have affected their emotional state.",
+        "score": 4.5,
+        "confidence": 0.85
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [],
+        "reasoning": "The patient never expressed any belief about medicines as a class being harmful. Their concerns are specific to their medication (side effects, resistance) rather than medicines in general.",
+        "score": null,
+        "confidence": 1.0
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "The patient never expressed any belief about whether doctors prescribe too readily. They trust their clinician and are seeking information.",
+        "score": null,
+        "confidence": 1.0
+      }
+    },
+    "causes": [
+      "transmission of the virus through contact with certain bodily fluids - most commonly during sexual activity, but also through sharing needles or from mother to child during childbirth"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "HIV is caused by the transmission of the virus through contact with certain bodily fluids - most commonly during sexual activity, but also through sharing needles or from mother to child during childbirth.",
+        "turn": 7
+      }
+    ]
+  }
+}

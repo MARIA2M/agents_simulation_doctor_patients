@@ -1,0 +1,294 @@
+{
+  "patient_id": "HIV-004",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "HIV-004",
+    "clinical_summary": "Patient is a man living with HIV who began Biktarvy approximately 4 weeks ago. He reports daily headaches with severe intensity (pressure around head, light sensitivity, can't open eyes) and mild morning nausea, both appearing shortly after treatment initiation. Symptoms affect work concentration, social engagement, and daily tasks. He has not yet discussed symptoms with his doctor. The diagnosis is emotionally challenging; he describes ongoing worry about the future and difficulty imagining long-term management. He has good partner support, has disclosed to partner and close friends, and maintains a focus on health maintenance and 'doing everything in my power to stay healthy.' He shows reasonable understanding of HIV pathophysiology but finds detailed information overwhelming. His treatment beliefs balance perceived necessity with discomfort about side effects and a general preference for minimizing medication use.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "It's really affecting my daily life as I find it difficult to concentrate on anything else when the headache is there.",
+            "turn": 1
+          },
+          {
+            "quote": "It's really affecting my ability to work and spend time with my family.",
+            "turn": 2
+          },
+          {
+            "quote": "Even simple tasks like responding to emails or cooking dinner take longer than they should because I'm struggling to focus.",
+            "turn": 7
+          },
+          {
+            "quote": "It's also harder to engage with my friends and family when the headache is at its worst - I find myself having to excuse myself from conversations more often than I'd like.",
+            "turn": 7
+          },
+          {
+            "quote": "There are times when I feel like I just want to crawl under my desk and try to sleep through it.",
+            "turn": 7
+          },
+          {
+            "quote": "I just can't focus enough to do anything productive.",
+            "turn": 7
+          }
+        ],
+        "reasoning": "The patient describes significant impact on daily functioning - concentration, work, family engagement, and social activities. They're having to excuse themselves from conversations, work is particularly affected, and they feel unable to be productive. This shows substantial interference with their roles and activities.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "I sometimes struggle to imagine what it will be like living with this condition for the rest of my life.",
+            "turn": 5
+          },
+          {
+            "quote": "It's definitely difficult to imagine living with this condition long-term.",
+            "turn": 10
+          },
+          {
+            "quote": "My primary hope is just to be able to maintain some semblance of normalcy in my daily routine despite having to deal with these symptoms and medication side effects.",
+            "turn": 10
+          },
+          {
+            "quote": "So right now, my focus is just on managing things as best I can and doing everything in my power to stay healthy.",
+            "turn": 10
+          }
+        ],
+        "reasoning": "The patient explicitly states difficulty imagining living with HIV long-term. They're focused on managing day-to-day rather than planning for a future without the condition. They acknowledge hearing about potential remission/cure but don't hold hope for it until available.",
+        "score": 8.0,
+        "confidence": 0.85
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "Part of me wishes I knew more about this so I could feel even more in control over the situation.",
+            "turn": 9
+          },
+          {
+            "quote": "So for now, I'm focusing on understanding what I need to do to keep my condition under control and live a healthy life as best I can.",
+            "turn": 9
+          },
+          {
+            "quote": "doing everything in my power to stay healthy",
+            "turn": 10
+          }
+        ],
+        "reasoning": "The patient expresses desire for more control through understanding, and describes actively trying to manage their condition and stay healthy. They're taking action (taking medication, trying to understand) and attributing their efforts to maintaining control.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "I trust that it's helping keep the virus under control.",
+            "turn": 6
+          },
+          {
+            "quote": "this is what helps me feel more secure about my situation.",
+            "turn": 6
+          }
+        ],
+        "reasoning": "The patient explicitly trusts that Biktarvy is helping control the virus and makes them feel more secure. They see it as having a positive effect.",
+        "score": 8.0,
+        "confidence": 0.85
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "I've been taking this medicine called Biktarvy since the diagnosis of my HIV infection.",
+            "turn": 3
+          },
+          {
+            "quote": "I sometimes struggle to imagine what it will be like living with this condition for the rest of my life.",
+            "turn": 5
+          },
+          {
+            "quote": "I've only told my partner and a few close friends.",
+            "turn": 5
+          },
+          {
+            "quote": "It's difficult to talk about at times because it feels like such personal information.",
+            "turn": 5
+          },
+          {
+            "quote": "I understand that it attacks the immune system, which makes it harder for my body to fight off other infections.",
+            "turn": 9
+          },
+          {
+            "quote": "I know that taking Biktarvy helps suppress the virus so it doesn't progress as much.",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient identifies with having HIV and taking Biktarvy. They describe symptoms (headaches) as affecting them, and they're actively managing the condition. The headaches are a significant part of their experience.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "It still feels like a constant weight on my shoulders, and I worry about what the future holds.",
+            "turn": 5
+          },
+          {
+            "quote": "Overall, it has been affecting my mood more than anything else - there are moments when sadness or despair can feel almost overwhelming.",
+            "turn": 5
+          },
+          {
+            "quote": "I worry about what the future holds.",
+            "turn": 5
+          },
+          {
+            "quote": "It's definitely difficult to imagine living with this condition long-term.",
+            "turn": 10
+          },
+          {
+            "quote": "I've heard about new treatments being developed that could potentially help people achieve long-term remission or even a cure. But until those become available, it's hard to hold out much hope for significant changes in my situation.",
+            "turn": 10
+          }
+        ],
+        "reasoning": "The patient expresses ongoing worry about the future, describes feeling a constant weight, and experiences sadness/despair. The worry is about the long-term nature of the condition and future possibilities.",
+        "score": 8.0,
+        "confidence": 0.85
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I understand that it attacks the immune system, which makes it harder for my body to fight off other infections.",
+            "turn": 9
+          },
+          {
+            "quote": "And I know that taking Biktarvy helps suppress the virus so it doesn't progress as much.",
+            "turn": 9
+          },
+          {
+            "quote": "However, beyond that, there are still a lot of gaps in my understanding.",
+            "turn": 9
+          },
+          {
+            "quote": "For example, I'm not sure how exactly the virus got into my system - was it through sexual contact or some other exposure?",
+            "turn": 9
+          },
+          {
+            "quote": "I don't have a detailed sense of what's happening at a molecular level when Biktarvy is taken.",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient has some understanding of how HIV affects the immune system and how Biktarvy works, but acknowledges significant gaps in understanding. They want more information but find it overwhelming.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "Honestly, the diagnosis was quite overwhelming at first.",
+            "turn": 5
+          },
+          {
+            "quote": "It still feels like a constant weight on my shoulders, and I worry about what the future holds.",
+            "turn": 5
+          },
+          {
+            "quote": "Overall, it has been affecting my mood more than anything else - there are moments when sadness or despair can feel almost overwhelming.",
+            "turn": 5
+          },
+          {
+            "quote": "It's definitely difficult to imagine living with this condition long-term.",
+            "turn": 10
+          }
+        ],
+        "reasoning": "The patient describes being overwhelmed, feeling a constant weight, experiencing sadness and despair, and finding it difficult to imagine the future. The emotional impact is prominent.",
+        "score": 8.0,
+        "confidence": 0.9
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "it feels like a necessary part of managing my condition.",
+            "turn": 6
+          },
+          {
+            "quote": "this is what helps me feel more secure about my situation.",
+            "turn": 6
+          },
+          {
+            "quote": "I trust that it's helping keep the virus under control.",
+            "turn": 6
+          }
+        ],
+        "reasoning": "The patient views Biktarvy as necessary for managing their condition, trusts it helps control the virus, and feels more secure because of it. They see it as important for their health.",
+        "score": 4.5,
+        "confidence": 0.8
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "Even though it's not yet fully addressing my symptoms - like these headaches and nausea",
+            "turn": 6
+          },
+          {
+            "quote": "It's more of an annoyance than anything else",
+            "turn": 6
+          },
+          {
+            "quote": "it would be ideal if there was no need to take medication at all",
+            "turn": 6
+          },
+          {
+            "quote": "I have thought about whether it could be related to the medication since they started soon after I began taking Biktarvy.",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient acknowledges that the medication isn't fully addressing their symptoms, finds it an annoyance, and wishes there was no need for medication. They've considered whether it might be causing their headaches.",
+        "score": 3.5,
+        "confidence": 0.75
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "it would be ideal if there was no need to take medication at all",
+            "turn": 6
+          }
+        ],
+        "reasoning": "The patient expresses a preference for no medication, which suggests some concern about the general harm of medication use. However, this is not strongly developed.",
+        "score": 2.0,
+        "confidence": 0.7
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [
+          {
+            "quote": "it would be ideal if there was no need to take medication at all",
+            "turn": 6
+          }
+        ],
+        "reasoning": "Similar to general harm, this suggests some skepticism about medication use but not a strong belief about overuse.",
+        "score": 2.0,
+        "confidence": 0.7
+      }
+    },
+    "causes": [
+      "stress at work"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "It's possible that stress is playing a role; I've been under quite a bit of pressure at work lately.",
+        "turn": 8
+      }
+    ]
+  }
+}

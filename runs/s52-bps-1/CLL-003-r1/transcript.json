@@ -1,0 +1,202 @@
+{
+  "patient_id": "CLL-003",
+  "turns": 9,
+  "stop_reason": "doctor",
+  "conversation": [
+    {
+      "role": "doctor",
+      "content": "Hello, thanks for coming in today. What brings you along?",
+      "turn": 1
+    },
+    {
+      "role": "patient",
+      "content": "Hi there, doctor. I'm here because I've been feeling a bit more tired than usual after work lately, and I noticed a small lump in my neck that my wife pointed out to me. I'm not too worried, but I thought it would be best to check these things out.",
+      "turn": 1
+    },
+    {
+      "role": "doctor",
+      "content": "That sounds like a good idea to get things checked. Can you tell me a bit more about the lump in your neck? When did you first notice it, and how has it been changing?",
+      "turn": 2
+    },
+    {
+      "role": "patient",
+      "content": "Sure thing, doctor. I first noticed the lump a couple of months ago, when I was getting dressed one morning. At first, I thought it might just be swollen lymph nodes from stress or something like that. But then my wife started massaging my neck because she felt the lump under her fingers. It's still there and hasn't gone away, but it doesn't seem to be growing or causing any discomfort.",
+      "turn": 2
+    },
+    {
+      "role": "doctor",
+      "content": "Thanks for sharing that. Has this lump been causing any other symptoms like sore throat, difficulty swallowing, or unexplained weight loss? And how has the fatigue been \u2014 does it feel like you're struggling to get through the work week?",
+      "turn": 3
+    },
+    {
+      "role": "patient",
+      "content": "So far, no sore throat or difficulty swallowing related to the lump, but I'm not sure about everything else. The fatigue is definitely affecting me more than usual though. It's not as bad as feeling sick all the time, but it feels like a low-level exhaustion that doesn't seem to go away even when I get good rest at night. I've been putting it down to getting older and maybe just having a busy life in general.",
+      "turn": 3
+    },
+    {
+      "role": "doctor",
+      "content": "It's helpful to know that. Have you had any recent illnesses or infections, like a cold or flu, or have you been to a dentist recently? And what kind of work do you do \u2014 is it physically demanding or involves long hours?",
+      "turn": 4
+    },
+    {
+      "role": "patient",
+      "content": "No significant recent illnesses or dental appointments, doctor. I mostly sit at a desk for my job, but it can be quite stressful and demanding at times. It's not extremely physically demanding, but there are moments when I have to lift some boxes or carry heavy files around the office. Overall, though, my work is more mentally challenging than physically exhausting.",
+      "turn": 4
+    },
+    {
+      "role": "doctor",
+      "content": "Good to clarify. Have you ever had anything similar before \u2014 perhaps swollen glands that went away on their own \u2014 or does anyone in your family have conditions affecting the lymph nodes or neck? And when you think about what could be causing this lump, what comes to mind?",
+      "turn": 5
+    },
+    {
+      "role": "patient",
+      "content": "I've never experienced anything like this before, doctor. As for my family, my father had Chronic Lymphocytic Leukemia, which I believe can affect the lymph nodes, but he's been in remission for a while now. To be honest, I'm not sure what could be causing the lump or the fatigue. It could just be one of those things that come with getting older, like you mentioned earlier, or maybe there's something more going on that I'm not aware of yet.",
+      "turn": 5
+    },
+    {
+      "role": "doctor",
+      "content": "That's a significant detail to know. How has your father's CLL been treated and how has he been doing since going into remission? And knowing that history, has that made you think differently about your own health or about getting checked?",
+      "turn": 6
+    },
+    {
+      "role": "patient",
+      "content": "My father's CLL was initially monitored with the watch-and-wait approach, much like what I'm currently doing. His hematologist kept a close eye on his blood counts and symptoms over time, and he never ended up needing treatment. He's been in remission for almost five years now and is generally feeling pretty good. Knowing my father's experience has made me more proactive about taking care of myself and following through with appointments like this one, just to make sure I catch any potential issues early on.",
+      "turn": 6
+    },
+    {
+      "role": "doctor",
+      "content": "It's encouraging that your father is doing well. In the meantime, are you taking any medications or supplements regularly, and are there any concerns you have about the tests or procedures we might recommend?",
+      "turn": 7
+    },
+    {
+      "role": "patient",
+      "content": "I'm not currently taking any medications or supplements for this, but I am trying to maintain a healthy lifestyle overall by eating well and getting regular exercise. As far as tests go, I'm open to whatever you think would be most helpful in identifying what's going on with the lump and the fatigue. I understand that some tests might involve radiation exposure, but given my age and general health, I assume there are ways to minimize any potential risks.",
+      "turn": 7
+    },
+    {
+      "role": "doctor",
+      "content": "That's a good approach. Have you had any previous scans or procedures, like X-rays, CT scans, or blood tests, that gave you a sense of what to expect? And how do you picture the next steps \u2014 would you feel comfortable with a physical exam first, followed by blood work or imaging if needed?",
+      "turn": 8
+    },
+    {
+      "role": "patient",
+      "content": "I've been getting my blood tested every three months for as long as I can remember because of my father's history. Other than that, I don't recall any significant scans or procedures. If it makes sense, I would be comfortable starting with a physical exam to see if there are any other symptoms or areas of concern. Depending on what you find, blood work or imaging might make sense as the next step. Ultimately, I trust your judgment and will do whatever is necessary to get to the bottom of this.",
+      "turn": 8
+    },
+    {
+      "role": "doctor",
+      "content": "Thank you for sharing that \u2014 it really helps to understand your perspective. To recap, you've noticed a small, painless lump in your neck for a couple of months alongside some persistent fatigue. You're not in pain, but you're concerned enough to get it checked, especially given your father's CLL. You're healthy overall, not on any medications, and you're comfortable with a physical exam and further tests if needed. \n\nWe'll start with a thorough physical exam, and based on what we find, we can order blood work or imaging to take a closer look. I'll also keep an eye on your fatigue \u2014 we can address that alongside any findings. \n\nDo you have any other questions before we get started?",
+      "turn": 9
+    },
+    {
+      "role": "patient",
+      "content": "No, doctor, I think we've covered everything for now. Thank you so much for taking the time to listen and provide guidance. I'm looking forward to getting this sorted out, and I appreciate your help in navigating the process.",
+      "turn": 9
+    }
+  ],
+  "coverage_hint": {},
+  "working_notes": [],
+  "events": [],
+  "usage": [
+    {
+      "role": "doctor",
+      "eval_tokens": 58,
+      "prompt_tokens": 1531
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 60,
+      "prompt_tokens": 1175
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 113,
+      "prompt_tokens": 1652
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 85,
+      "prompt_tokens": 1283
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 145,
+      "prompt_tokens": 1853
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 90,
+      "prompt_tokens": 1424
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 125,
+      "prompt_tokens": 2091
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 72,
+      "prompt_tokens": 1572
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 133,
+      "prompt_tokens": 2291
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 103,
+      "prompt_tokens": 1707
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 135,
+      "prompt_tokens": 2530
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 102,
+      "prompt_tokens": 1867
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 119,
+      "prompt_tokens": 2770
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 90,
+      "prompt_tokens": 2017
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 136,
+      "prompt_tokens": 2982
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 104,
+      "prompt_tokens": 2180
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 213,
+      "prompt_tokens": 3225
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 48,
+      "prompt_tokens": 2439
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 515,
+      "prompt_tokens": 3489
+    },
+    {
+      "role": "report",
+      "eval_tokens": 4178,
+      "prompt_tokens": 8061
+    }
+  ]
+}

@@ -1,0 +1,187 @@
+{
+  "patient_id": "CLL-002",
+  "mode": "intact",
+  "removed_turns": 0,
+  "removed_words": 0,
+  "events": [],
+  "report": {
+    "patient_id": "CLL-002",
+    "clinical_summary": "The patient was diagnosed with Chronic Lymphocytic Leukemia (CLL) two years ago and is currently in partial remission on Ibrutinib. They report significant fatigue, frequent infections, swollen lymph nodes, and bruising, alongside side effects like diarrhea and joint aches. Their daily life has been disrupted, with work becoming harder and hobbies and social time cut back. They acknowledge the chronic nature of the illness but remain hopeful for a cure. They view the medication as necessary for management but have concerns about long-term side effects. They actively manage their health through diet, sleep, and exercise, and trust their medical team.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "Work has been harder because of the fatigue, and I've had to cut back on my hobbies and spending time with friends and family.",
+            "turn": 1
+          }
+        ],
+        "reasoning": "The patient reports scaling back specific activities (hobbies) and finding work more difficult, indicating a significant but not total loss of role.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "not easy accepting that this is likely a lifelong situation",
+            "turn": 1
+          },
+          {
+            "quote": "hope that one day we might find a full remission or even a cure for CLL",
+            "turn": 2
+          }
+        ],
+        "reasoning": "The patient acknowledges the likely chronic nature of the condition but expresses hope for a cure and treats the present remission as temporary.",
+        "score": 4.0,
+        "confidence": 0.9
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I believe they play a significant role. I try to maintain a healthy diet as best as I can, get enough sleep, and exercise when possible.",
+            "turn": 3
+          }
+        ],
+        "reasoning": "The patient actively engages in lifestyle management (diet, sleep, exercise) and attributes some benefit to these actions.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "It's been helping control the disease",
+            "turn": 1
+          },
+          {
+            "quote": "medication is helping me reach partial remission",
+            "turn": 2
+          }
+        ],
+        "reasoning": "The patient attributes their current state (partial remission) directly to the efficacy of the medication.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "The persistent fatigue is hard to deal with, and I've had frequent infections. My swollen lymph nodes in the neck and armpits are quite noticeable too. And occasionally, I get these bruises on my arms and legs.",
+            "turn": 1
+          },
+          {
+            "quote": "swollen lymph nodes... constant reminder of what is happening inside me",
+            "turn": 2
+          }
+        ],
+        "reasoning": "The patient reports multiple, daily symptoms (fatigue, infections, lymph nodes, bruises) that are intrusive and constant.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "I do worry about where it might be heading",
+            "turn": 1
+          },
+          {
+            "quote": "concerned about how my body will continue to respond to the treatment",
+            "turn": 4
+          },
+          {
+            "quote": "mental health... worry and fear can feel overwhelming",
+            "turn": 5
+          }
+        ],
+        "reasoning": "The patient expresses frequent worry about the future, complications, and the emotional toll, indicating intrusive concern.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I imagine my immune system is working overtime to fight off this disease, which leaves me feeling drained.",
+            "turn": 2
+          }
+        ],
+        "reasoning": "The patient provides a lay explanation connecting symptoms (fatigue) to a mechanism (immune system working overtime).",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "It's not just physical tiredness — there's an emotional and mental exhaustion that comes along with it too.",
+            "turn": 2
+          },
+          {
+            "quote": "emotional toll that comes with living with a chronic illness",
+            "turn": 4
+          }
+        ],
+        "reasoning": "The patient explicitly links the illness to emotional exhaustion and acknowledges the emotional toll as a significant factor.",
+        "score": 8.0,
+        "confidence": 0.9
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "important this medication is in helping manage my condition",
+            "turn": 3
+          }
+        ],
+        "reasoning": "The patient views the medication as essential for managing their condition.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "concerns about taking ibrutinib long-term... risk of other complications down the line",
+            "turn": 3
+          }
+        ],
+        "reasoning": "The patient has active, unprompted concerns about long-term side effects and complications.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "side effects are relatively mild compared to what would happen without treatment",
+            "turn": 3
+          }
+        ],
+        "reasoning": "The patient judges the medication on its own merits, viewing side effects as manageable compared to the disease itself, without expressing a general distrust of medicines.",
+        "score": 2.0,
+        "confidence": 0.9
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "The patient never expressed doubt about the prescribing practice or trust in their doctor's decisions.",
+        "score": 2.0,
+        "confidence": 0.9
+      }
+    },
+    "causes": [
+      "Chronic Lymphocytic Leukemia (CLL)"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "I was diagnosed with Chronic Lymphocytic Leukemia (CLL)",
+        "turn": 1
+      }
+    ]
+  }
+}

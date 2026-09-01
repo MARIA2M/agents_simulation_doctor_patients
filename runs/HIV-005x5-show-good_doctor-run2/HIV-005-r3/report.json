@@ -1,0 +1,300 @@
+{
+  "patient_id": "HIV-005",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "HIV-005",
+    "clinical_summary": "Patient has been living with HIV for over 10 years. Currently taking Triumeq (abacavir/dolutegravir/lamivudine) for about 3 years, which helps keep the virus in check but has caused headaches as a side effect. Experiences significant fatigue and headaches that affect daily functioning at work and home. Has a basic understanding of how HIV affects the immune system but lacks detailed understanding of how treatment works. Emotional experience has been a rollercoaster with grief, frustration, and sadness as common emotions, though also experiencing acceptance, gratitude, and resilience. Believes they have good control over their health through medication adherence, healthy lifestyle, and staying informed.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "My chronic illness has been making things really difficult at work and home. The fatigue is just so overwhelming sometimes that even getting through the day feels like a victory.",
+            "turn": 1
+          },
+          {
+            "quote": "It's a real struggle trying to balance everything in my life while dealing with this illness.",
+            "turn": 2
+          },
+          {
+            "quote": "When the fatigue is particularly bad, even something as simple as getting out of bed to start my day feels like an immense struggle. It's hard to focus on work, and I find myself taking more frequent breaks than usual just to rest. When it comes to things at home, sometimes I'll have to ask for help from family members with tasks that would normally be easy for me to do.",
+            "turn": 7
+          },
+          {
+            "quote": "As for the headaches, they can make concentrating on anything a real challenge - reading or even watching TV becomes difficult. It's tough because it feels like everything takes more effort than it should, which can be really discouraging at times.",
+            "turn": 7
+          }
+        ],
+        "reasoning": "Patient describes significant impact on daily functioning. They struggle to get out of bed, have to take frequent breaks at work, need help with home tasks, and have difficulty concentrating on even simple activities like reading or watching TV. They describe fatigue as overwhelming and everything taking more effort than it should. This clearly shows a major role is affected - work and home life are substantially reduced.",
+        "score": 8.0,
+        "confidence": 0.85
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "It's an HIV infection that I've been living with for over 10 years now.",
+            "turn": 2
+          },
+          {
+            "quote": "Based on what I've read and my understanding, living with HIV is generally considered a lifelong situation. While advancements in treatment have made it possible for people to live long, healthy lives despite the condition, it's still viewed as something that requires ongoing management.",
+            "turn": 13
+          },
+          {
+            "quote": "But as of now, I'm not expecting a point where it goes into remission or becomes completely unnoticeable in my life.",
+            "turn": 13
+          }
+        ],
+        "reasoning": "Patient has been living with HIV for over 10 years and explicitly states they view it as a lifelong situation requiring ongoing management. They do not expect remission or complete unnoticeability. They plan on the assumption it stays.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I think I have quite a bit of control over my health, even if the illness itself is not entirely within my control.",
+            "turn": 5
+          },
+          {
+            "quote": "I've learned that taking my medication as prescribed is crucial for keeping things in check. I try to eat healthy and get enough sleep when possible, which I believe also helps with managing the symptoms.",
+            "turn": 5
+          },
+          {
+            "quote": "And while there's only so much I can do, I like to think that staying informed about my condition and being proactive in seeking care when needed gives me a sense of control over the situation.",
+            "turn": 5
+          }
+        ],
+        "reasoning": "Patient believes they have quite a bit of control over their health. They actively manage their health through medication adherence, healthy lifestyle choices (eating well, getting sleep), staying informed, and being proactive in seeking care. They attribute their current state to their own doing to some extent.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "The treatment is helping keep the virus in check, as far as I understand",
+            "turn": 3
+          },
+          {
+            "quote": "It's a once-daily pill that helps keep the HIV virus in check. My doctor said it's an effective treatment and should help me maintain my immune system.",
+            "turn": 8
+          },
+          {
+            "quote": "I definitely believe that the medication is essential to managing my condition right now - it's the most effective way I have of keeping things under control.",
+            "turn": 17
+          }
+        ],
+        "reasoning": "Patient believes the treatment is effective and helps keep the virus in check. They trust it's working and see it as essential for managing their condition. They attribute their current state to the treatment working.",
+        "score": 8.0,
+        "confidence": 0.75
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "The fatigue is just so overwhelming sometimes that even getting through the day feels like a victory.",
+            "turn": 1
+          },
+          {
+            "quote": "there are times when the fatigue just hits me hard. The headaches too - they're not something I get regularly, but since starting my treatment, they've become more frequent.",
+            "turn": 2
+          },
+          {
+            "quote": "When the fatigue is particularly bad, even something as simple as getting out of bed to start my day feels like an immense struggle.",
+            "turn": 7
+          },
+          {
+            "quote": "As for the headaches, they can make concentrating on anything a real challenge - reading or even watching TV becomes difficult.",
+            "turn": 7
+          }
+        ],
+        "reasoning": "Patient experiences fatigue and headaches as significant symptoms that affect their daily functioning. Fatigue is described as overwhelming and making getting through the day feel like a victory. Headaches make concentrating difficult. These are daily symptoms that interrupt what they're doing.",
+        "score": 8.0,
+        "confidence": 0.85
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "There are days when I feel frustrated and upset - why did this happen to me? And then there are times where I'm just sad about how much my life has been affected by it all.",
+            "turn": 4
+          },
+          {
+            "quote": "I have to admit that I do worry about the future and what could happen with my condition. It's hard not to think about the possibility of developing resistance to the treatment or dealing with more opportunistic infections as time goes on.",
+            "turn": 12
+          },
+          {
+            "quote": "Grief, frustration, sadness - those tend to be the most common emotions that come up for me.",
+            "turn": 15
+          }
+        ],
+        "reasoning": "Patient expresses worry about the future, treatment resistance, and opportunistic infections. They experience grief, frustration, and sadness as common emotions. They try to balance these worries with focusing on the present, but the worry is frequent and shapes their thinking about the future.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "Well, I know that my HIV infection affects my immune system - I've done enough reading to understand that much. I guess I have a basic grasp on things, but there's still so much I don't fully comprehend.",
+            "turn": 3
+          },
+          {
+            "quote": "The treatment is helping keep the virus in check, as far as I understand, but I'm not always sure how it all works together. There are times when I feel like I'm just taking a bunch of pills without really knowing why or what they're doing inside me.",
+            "turn": 3
+          },
+          {
+            "quote": "Absolutely, having a clearer understanding of how everything works together and how the medication is affecting my body would be really helpful in boosting my confidence.",
+            "turn": 14
+          },
+          {
+            "quote": "It's hard to know exactly what to expect when taking any kind of treatment, but being more informed about it all would certainly ease some of that uncertainty.",
+            "turn": 14
+          }
+        ],
+        "reasoning": "Patient has a basic understanding of how HIV affects the immune system and what the treatment does (keeps virus in check). However, they acknowledge significant gaps in understanding how everything works together. They sometimes feel like they're taking pills without knowing why or what they're doing. They explicitly state they would benefit from more detailed explanations or resources to better understand the situation.",
+        "score": 6.0,
+        "confidence": 0.75
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "Honestly, it's been quite a rollercoaster ride emotionally. There are days when I feel frustrated and upset - why did this happen to me? And then there are times where I'm just sad about how much my life has been affected by it all.",
+            "turn": 4
+          },
+          {
+            "quote": "But the fact remains that living with HIV isn't easy and it does take a toll on me emotionally.",
+            "turn": 4
+          },
+          {
+            "quote": "I think the emotional rollercoaster has definitely played out over these 10 years. There have been times when I've felt really optimistic about managing my condition, and others where it's felt particularly heavy and difficult.",
+            "turn": 15
+          },
+          {
+            "quote": "Grief, frustration, sadness - those tend to be the most common emotions that come up for me.",
+            "turn": 15
+          },
+          {
+            "quote": "But there are also moments of acceptance, gratitude for the good days, and a sense of resilience in knowing that I've been able to keep going despite all the challenges.",
+            "turn": 15
+          }
+        ],
+        "reasoning": "Patient describes an emotional rollercoaster over 10 years, with common emotions including grief, frustration, and sadness. They acknowledge that living with HIV takes a toll on them emotionally. They experience both heavy/difficult periods and moments of acceptance, gratitude, and resilience. The emotion is prominent and affects what they do.",
+        "score": 8.0,
+        "confidence": 0.85
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "I've learned that taking my medication as prescribed is crucial for keeping things in check.",
+            "turn": 5
+          },
+          {
+            "quote": "It's a once-daily pill that helps keep the HIV virus in check. My doctor said it's an effective treatment and should help me maintain my immune system.",
+            "turn": 8
+          },
+          {
+            "quote": "I definitely believe that the medication is essential to managing my condition right now - it's the most effective way I have of keeping things under control.",
+            "turn": 17
+          },
+          {
+            "quote": "But there are times when I do wonder if I'm over-reliant on it, or if I'd be able to handle things differently without it.",
+            "turn": 17
+          },
+          {
+            "quote": "I guess part of me wonders what life would be like without this constant pill-taking and monitoring, but at the same time, I know that right now, it's a necessary part of my routine.",
+            "turn": 17
+          }
+        ],
+        "reasoning": "Patient believes the medication is essential and crucial for managing their condition. They see it as the most effective way of keeping things under control and a necessary part of their routine. However, they also express some doubt about being over-reliant and wonder what life would be like without it. This shows a strong belief in necessity but with some ambivalence.",
+        "score": 4.5,
+        "confidence": 0.7
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "The headaches started shortly after I began my current treatment regimen. They're not daily occurrences, but when they do happen, they can last for hours.",
+            "turn": 6
+          },
+          {
+            "quote": "My doctor did mention that headaches could be a possible side effect and that I should keep an eye on them, but they didn't seem too concerned about it at the moment.",
+            "turn": 6
+          },
+          {
+            "quote": "What bothers me most about the headaches is that they can last for hours and make it difficult to concentrate on anything. It's hard to get work done or even have a decent conversation with someone when I'm in the middle of one.",
+            "turn": 16
+          },
+          {
+            "quote": "And since they started after beginning my current medication, there's also this added layer of uncertainty - not knowing if it's something I should just live with as a side effect, or if I should be doing more to address them.",
+            "turn": 16
+          },
+          {
+            "quote": "It can be really draining both physically and mentally.",
+            "turn": 16
+          }
+        ],
+        "reasoning": "Patient has specific concerns about headaches as a side effect of their medication. The headaches can last for hours and affect their ability to work and have conversations. They express uncertainty about whether to live with them or do something about them. The concern has changed their behavior - they're thinking about whether to address them or just live with them. This shows active concerns that have produced behavior change.",
+        "score": 4.5,
+        "confidence": 0.75
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "But at the same time, I can't help but have some concerns about their potential side effects and long-term impact on my body.",
+            "turn": 9
+          },
+          {
+            "quote": "Before this, I was on a different medication regimen but had to switch due to some side effects that were causing more trouble than they were worth.",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient has concerns about potential side effects and long-term impact of medicines on their body. They had to switch from a previous medication regimen due to side effects that were causing more trouble than they were worth. This shows they hold that medicines generally do harm alongside good, and are wary of them as a group.",
+        "score": 4.0,
+        "confidence": 0.75
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [
+          {
+            "quote": "It's hard not to wonder if doctors sometimes prescribe medication too quickly or without fully considering other options.",
+            "turn": 9
+          },
+          {
+            "quote": "That being said, I trust my doctor's judgment when it comes to my treatment, but I do like to stay informed and ask questions whenever possible to ensure that I'm making the best decisions for myself.",
+            "turn": 9
+          }
+        ],
+        "reasoning": "Patient worries that doctors sometimes prescribe medication too quickly or without fully considering other options. However, they also trust their doctor's judgment and stay informed. This shows some general concern about prescribing practices, but it's not a strong belief that doctors routinely overprescribe.",
+        "score": 3.0,
+        "confidence": 0.65
+      }
+    },
+    "causes": [
+      "previous partner who did not disclose his status and we had unprotected sex",
+      "not regularly getting tested for HIV back then",
+      "bad luck"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "I believe that the primary cause was due to a previous partner who did not disclose his status and we had unprotected sex.",
+        "turn": 10
+      },
+      {
+        "quote": "Additionally, I wasn't regularly getting tested for HIV back then, which likely contributed to it going undetected for some time.",
+        "turn": 10
+      },
+      {
+        "quote": "And of course, bad luck plays a part in this as well - sometimes things just happen that are beyond our control.",
+        "turn": 10
+      }
+    ]
+  }
+}

@@ -1,0 +1,355 @@
+{
+  "patient_id": "HIV-005",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "HIV-005",
+    "clinical_summary": "The patient has been on medication for three years and reports severe functional impairment, with headaches since starting treatment. They feel the illness has 'taken over everything' and that they have 'no say in any of it.' They question whether the medication is worth it, skip doses occasionally, and find taking medication 'another full-time job.' They struggle to connect symptoms to viral load fluctuations and find the illness 'complicated and confusing.' They experience significant worry (described as a 'knot in my stomach') and feel their resilience is 'stretched to its limit.'",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "some days I can barely get out of bed",
+            "turn": 1
+          },
+          {
+            "quote": "It feels like this disease has taken over everything — my work, my time with the kids, everything",
+            "turn": 1
+          },
+          {
+            "quote": "can barely get out of bed",
+            "turn": 1
+          },
+          {
+            "quote": "I often feel like I'm barely keeping my head above water",
+            "turn": 7
+          },
+          {
+            "quote": "It's hard for me to imagine a life without this illness dictating so many things",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient describes significant functional impairment - unable to get out of bed, work and family time affected, feeling like the illness has 'taken over everything.' They feel 'barely keeping my head above water' and describe their life as being dictated by the illness.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "this illness feels like an unwelcome houseguest that's never going to leave",
+            "turn": 4
+          },
+          {
+            "quote": "I still feel like I'm fighting a battle that doesn't have an end",
+            "turn": 4
+          },
+          {
+            "quote": "I don't really know what to think about how long I'll be dealing with this",
+            "turn": 4
+          },
+          {
+            "quote": "all I can do is try to manage it as best I can and hope for the best",
+            "turn": 4
+          }
+        ],
+        "reasoning": "The patient describes the illness as something that 'never going to leave' and a 'battle that doesn't have an end.' They express uncertainty about duration but frame it as something they'll be dealing with indefinitely.",
+        "score": 8.0,
+        "confidence": 0.7
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "Sometimes I feel like I have no say in any of it",
+            "turn": 1
+          },
+          {
+            "quote": "all I can do is try to manage it as best I can and hope for the best",
+            "turn": 4
+          },
+          {
+            "quote": "I often feel like I'm barely keeping my head above water",
+            "turn": 7
+          },
+          {
+            "quote": "there are days when my resilience feels like it's stretched to its limit",
+            "turn": 8
+          },
+          {
+            "quote": "I try to remind myself that I'm doing the best I can — and that sometimes that's enough",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient explicitly states they feel they have 'no say in any of it' and describes their approach as 'managing as best I can and hoping for the best.' They feel overwhelmed and their resilience is 'stretched to its limit.'",
+        "score": 2.0,
+        "confidence": 0.8
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "I know you said the medication should help",
+            "turn": 1
+          },
+          {
+            "quote": "I've been getting these terrible headaches since I started",
+            "turn": 1
+          },
+          {
+            "quote": "I keep wondering if it's really worth it",
+            "turn": 1
+          },
+          {
+            "quote": "I've been skipping doses occasionally",
+            "turn": 2
+          },
+          {
+            "quote": "I'm worried that might mean the medication isn't working as it should",
+            "turn": 2
+          },
+          {
+            "quote": "sometimes I do wonder whether the medication is really necessary",
+            "turn": 3
+          },
+          {
+            "quote": "when I'm skipping doses, I worry that it's not doing its job properly",
+            "turn": 3
+          },
+          {
+            "quote": "I've never really thought about whether my symptoms are connected to the fluctuations in my viral load",
+            "turn": 5
+          },
+          {
+            "quote": "It's all so complicated and confusing",
+            "turn": 5
+          }
+        ],
+        "reasoning": "The patient is uncertain about treatment effectiveness - wondering if it's worth it, worried it's not working, and skipping doses. They don't connect symptoms to viral load and find the whole picture 'complicated and confusing.'",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "this illness feels like an unwelcome houseguest that's never going to leave",
+            "turn": 4
+          },
+          {
+            "quote": "It's always there in the background, affecting everything I do",
+            "turn": 4
+          },
+          {
+            "quote": "this disease has taken over everything",
+            "turn": 1
+          },
+          {
+            "quote": "It's hard for me to imagine a life without this illness dictating so many things",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient describes their illness as a constant, pervasive presence that affects everything they do. They can't imagine life without it dictating things.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "I keep wondering if it's really worth it",
+            "turn": 1
+          },
+          {
+            "quote": "I do feel a sense of unease when my viral load isn't undetectable",
+            "turn": 5
+          },
+          {
+            "quote": "That sense of unease feels like a knot in my stomach",
+            "turn": 6
+          },
+          {
+            "quote": "I worry about what the long-term effects might be of all these different treatments and medications",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient experiences 'unease' about viral load, describes it as a 'knot in my stomach' that lingers, and worries about long-term effects. This shows frequent, intrusive worry.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I know you've told me that my viral load has been fluctuating",
+            "turn": 4
+          },
+          {
+            "quote": "I've never really thought about whether my symptoms are connected to the fluctuations in my viral load",
+            "turn": 5
+          },
+          {
+            "quote": "there are days when I just can't keep up with all the different pieces and parts",
+            "turn": 5
+          },
+          {
+            "quote": "It's all so complicated and confusing",
+            "turn": 5
+          },
+          {
+            "quote": "It can be hard to keep all those different pieces straight",
+            "turn": 6
+          }
+        ],
+        "reasoning": "The patient has some medical knowledge (viral load) but struggles to connect symptoms to disease markers. They find it 'complicated and confusing' and can't keep up with 'all the different pieces and parts.'",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "It feels like this disease has taken over everything",
+            "turn": 1
+          },
+          {
+            "quote": "I can barely get out of bed",
+            "turn": 1
+          },
+          {
+            "quote": "I keep wondering if it's really worth it",
+            "turn": 1
+          },
+          {
+            "quote": "Sometimes I feel like I have no say in any of it",
+            "turn": 1
+          },
+          {
+            "quote": "That sense of unease feels like a knot in my stomach",
+            "turn": 6
+          },
+          {
+            "quote": "I often feel like I'm barely keeping my head above water",
+            "turn": 7
+          },
+          {
+            "quote": "there are days when my resilience feels like it's stretched to its limit",
+            "turn": 8
+          },
+          {
+            "quote": "It's been an incredibly difficult road",
+            "turn": 9
+          }
+        ],
+        "reasoning": "The patient describes feeling overwhelmed, exhausted, and at times hopeless. They experience somatic manifestations of anxiety ('knot in my stomach'), feel their resilience is 'stretched to its limit,' and describe the road as 'incredibly difficult.'",
+        "score": 8.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "I know you said the medication should help",
+            "turn": 1
+          },
+          {
+            "quote": "I've been getting these terrible headaches since I started",
+            "turn": 1
+          },
+          {
+            "quote": "I keep wondering if it's really worth it",
+            "turn": 1
+          },
+          {
+            "quote": "I've been skipping doses occasionally",
+            "turn": 2
+          },
+          {
+            "quote": "sometimes I do wonder whether the medication is really necessary",
+            "turn": 3
+          },
+          {
+            "quote": "when I'm skipping doses, I worry that it's not doing its job properly",
+            "turn": 3
+          },
+          {
+            "quote": "sometimes it feels like taking medicine all the time is another full-time job",
+            "turn": 2
+          }
+        ],
+        "reasoning": "The patient questions whether the medication is necessary, worries it's not working, and skips doses. They find taking it 'another full-time job' and question its value.",
+        "score": 2.0,
+        "confidence": 0.8
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "I've been getting these terrible headaches since I started",
+            "turn": 1
+          },
+          {
+            "quote": "I keep wondering if it's really worth it",
+            "turn": 1
+          },
+          {
+            "quote": "I'm worried that might mean the medication isn't working as it should",
+            "turn": 2
+          },
+          {
+            "quote": "sometimes I do wonder whether the medication is really necessary",
+            "turn": 3
+          },
+          {
+            "quote": "when I'm skipping doses, I worry that it's not doing its job properly",
+            "turn": 3
+          },
+          {
+            "quote": "sometimes it feels like taking medicine all the time is another full-time job",
+            "turn": 2
+          },
+          {
+            "quote": "I worry about what the long-term effects might be of all these different treatments and medications",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient has significant concerns about side effects (headaches), whether the medication is working, and long-term effects. These concerns have led to skipping doses and questioning the treatment's value.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "I worry about what the long-term effects might be of all these different treatments and medications",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient expresses concern about long-term effects of multiple treatments and medications, suggesting they believe medicines as a class may have cumulative harm.",
+        "score": 3.0,
+        "confidence": 0.7
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [
+          {
+            "quote": "sometimes it feels like taking medicine all the time is another full-time job",
+            "turn": 2
+          },
+          {
+            "quote": "I worry about what the long-term effects might be of all these different treatments and medications",
+            "turn": 8
+          }
+        ],
+        "reasoning": "The patient feels overwhelmed by 'all day long, every day' medication and worries about long-term effects of multiple treatments, suggesting they believe the treatment burden is excessive.",
+        "score": 3.0,
+        "confidence": 0.7
+      }
+    },
+    "causes": [],
+    "causes_evidence": []
+  }
+}

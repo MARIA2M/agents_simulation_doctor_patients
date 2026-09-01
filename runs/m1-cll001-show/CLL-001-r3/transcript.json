@@ -1,0 +1,412 @@
+{
+  "patient_id": "CLL-001",
+  "turns": 20,
+  "stop_reason": "turn_cap",
+  "conversation": [
+    {
+      "role": "doctor",
+      "content": "Hello, thank you for coming in today. I'm glad you could make it. What brings you to see me today?",
+      "turn": 1
+    },
+    {
+      "role": "patient",
+      "content": "Thank you for having me, doctor. To be honest, my energy levels have been really low lately. I've had this ongoing tiredness that just won't go away. It's like my batteries are drained all the time, and I can barely get through each day.\n\nI also noticed some lymph nodes in my neck that feel a bit enlarged. They're not causing any pain or discomfort, but I found them during a self-exam and thought it would be best to have them checked out.",
+      "turn": 1
+    },
+    {
+      "role": "doctor",
+      "content": "I understand. That fatigue sounds really draining, and it's good that you noticed those lymph nodes and came in to get them checked. Let me ask a bit more about the fatigue first \u2014 how long have you been experiencing this low energy? Is it something that comes and goes, or has it been pretty constant? And when you say you can barely get through each day, what does that look like for you?",
+      "turn": 2
+    },
+    {
+      "role": "patient",
+      "content": "The fatigue started about six months ago, I think. It's been pretty constant since then, though there are days when I feel a little more energized than others. On the really bad days, just getting out of bed and getting dressed feels like a monumental task.\n\nAs for what it looks like to barely get through each day \u2014 well, everything takes more effort than it should. Simple tasks like cooking dinner or doing laundry take much longer than they used to. I've been having to cut back on my work hours because I just don't have the energy to put in a full day's work anymore. It's been impacting my productivity and my ability to keep up with things, both at work and at home.",
+      "turn": 2
+    },
+    {
+      "role": "doctor",
+      "content": "Six months is a long time to feel this consistently drained. It sounds like it's really affecting your quality of life \u2014 both at work and at home. That's a lot to carry on your shoulders. \n\nI'm also wondering about the lymph nodes. Have you noticed any other changes in your body that you think might be related? And have you had any other symptoms alongside the fatigue \u2014 things like fevers, night sweats, weight changes, or difficulty swallowing? And how are you feeling emotionally about all of this? Is it frustrating, worrying, or maybe just exhausting to deal with?",
+      "turn": 3
+    },
+    {
+      "role": "patient",
+      "content": "Thank you for asking. The fatigue is definitely affecting my quality of life. It's hard to keep up with everything I need to do, and it's causing me a lot of stress.\n\nAs for the lymph nodes, besides feeling them during self-exams, I haven't noticed any other changes in my body that seem related. No fevers or chills, no significant weight changes, nothing out of the ordinary.\n\nEmotionally, it's been a rollercoaster. I've gone from being frustrated and angry about how much this illness is impacting my life, to feeling worried and uncertain about what the future holds. I'm also exhausted \u2014 mentally and physically \u2014 just dealing with all of this has taken so much out of me.",
+      "turn": 3
+    },
+    {
+      "role": "doctor",
+      "content": "It sounds like you're carrying a heavy emotional load \u2014 feeling frustrated, angry, and worried about what's ahead. That's completely understandable given how much this is affecting your life.\n\nI'm curious about what you think might be causing this. Have you had any thoughts about what's behind the fatigue? And have you seen anyone about this before \u2014 a primary care doctor, or had any tests or treatments? I'd also like to ask about the lymph nodes a bit more \u2014 do you know if they've grown since you first noticed them?",
+      "turn": 4
+    },
+    {
+      "role": "patient",
+      "content": "I'm not entirely sure what's causing my fatigue. I've been trying to eat well and get enough rest, but it just doesn't seem to be helping much.\n\nAs for seeing anyone about this before, I did see a primary care doctor when the fatigue first started. They didn't seem too concerned at the time \u2014 they said it could be due to stress or lack of sleep. But now that the lymph nodes have appeared and the fatigue is still so persistent, I'm definitely worried there might be something more going on.\n\nI haven't noticed any significant change in size or tenderness in the lymph nodes since I first felt them, but I also don't know if that's a good sign or not.",
+      "turn": 4
+    },
+    {
+      "role": "doctor",
+      "content": "It makes sense that you're worried when you've been managing your lifestyle the way you have and still feel this drained. And it's understandable that the lymph nodes have made you more concerned \u2014 they're something new and noticeable.\n\nI'm wondering, have you had any other tests done? Blood work, things like that? And when you saw the primary care doctor, did they suggest any treatments or follow-up, or was it more of a \"wait and see\" approach? I want to understand what's been offered so far and what you've tried.",
+      "turn": 5
+    },
+    {
+      "role": "patient",
+      "content": "So far, I've only had some routine blood work done, but the results came back normal \u2014 at least according to my primary care doctor. They didn't mention anything specific that could be causing the fatigue or the lymph nodes.\n\nWhen we talked about treatment options, they suggested an active surveillance approach for the lymph nodes, meaning regular check-ins and monitoring rather than any immediate intervention. And for the fatigue, they recommended lifestyle changes like more sleep, exercise, and stress reduction \u2014 which I've been working on but haven't seen much improvement yet.\n\nI know it's still early days in terms of figuring everything out, but I can't help feeling a bit frustrated that there hasn't been more of a concrete plan or specific recommendations for treatment.",
+      "turn": 5
+    },
+    {
+      "role": "doctor",
+      "content": "I can see why that's frustrating \u2014 having normal blood work but still feeling this drained and seeing these lymph nodes can feel unresolved. Lifestyle changes are important, but it sounds like you need more than that right now.\n\nYou mentioned the lymph nodes earlier. When you found them, did you notice anything else unusual \u2014 maybe a sore throat, changes in your skin, or anything else that might give us a clue about what's going on? And what are your own thoughts about what might be causing this? Have you wondered if it could be something like an infection or something else?",
+      "turn": 6
+    },
+    {
+      "role": "patient",
+      "content": "Thank you for asking. Besides the enlarged lymph nodes, I haven't noticed any other unusual symptoms like a sore throat or changes in my skin.\n\nAs for my own thoughts on what might be causing all of this, to be honest, I've been so confused and overwhelmed that I don't really know where to start. Part of me wonders if it could be an infection or something like that \u2014 maybe something I just haven't been able to shake despite trying to take care of myself.\n\nBut at the same time, there's a part of me that worries it might be something more serious \u2014 something I can't control or fix on my own. It's hard not knowing what's going on and feeling so out of control about everything.",
+      "turn": 6
+    },
+    {
+      "role": "doctor",
+      "content": "It's understandable that you feel out of control when you can't pinpoint what's going on. That uncertainty can be just as draining as the fatigue itself.\n\nYou've been working on lifestyle changes for the fatigue, but I'm wondering \u2014 have you given any thought to whether you'd be open to seeing a specialist or having further tests if that's what might help get to the bottom of this? Sometimes getting a second opinion or more specialized evaluation can help piece things together when the picture isn't clear.",
+      "turn": 7
+    },
+    {
+      "role": "patient",
+      "content": "I appreciate your concern and understanding, doctor. I have thought about seeing a specialist, but I'm not sure how receptive my insurance would be to that idea \u2014 it's been so difficult dealing with the financial aspects of all this.\n\nAt the same time, though, if you were to recommend seeing someone or doing more tests, I'd definitely consider it. I just want to get to the bottom of what's going on and start getting some answers, even if that means dealing with a bit more uncertainty along the way.\n\nI'm not sure if that gives you a better idea of where I stand right now \u2014 feeling lost, wanting answers, but also uncertain about what might be required.",
+      "turn": 7
+    },
+    {
+      "role": "doctor",
+      "content": "It sounds like you're in a tough spot \u2014 wanting answers but also worried about the practical side of getting them. That's a really common struggle.\n\nYou mentioned the lymph nodes earlier. What specifically worries you about them? Do you have any idea what could cause lymph nodes to stay enlarged like that? Have you heard anything before about what that might mean? And I'm curious \u2014 when you think about this whole situation, what does your gut tell you might be happening? Do you feel like there's a lot you can do to figure it out on your own, or do you feel like you need more help?",
+      "turn": 8
+    },
+    {
+      "role": "patient",
+      "content": "Thank you for asking. The thought of the lymph nodes staying enlarged like this worries me because I don't know what it could mean in the long term. I've read that there are many possible causes \u2014 infection, autoimmune disorders, cancer, and others. Not knowing is really taking a toll on me.\n\nI haven't heard anything specific about why they might be staying enlarged like this, but I'm hoping that getting more tests or seeing specialists could help us figure out what's going on.\n\nAs for my gut feeling on all of this \u2014 I feel like there's just so much I don't know, and I'm not sure how much I can do to figure it out on my own. I'm definitely open to more help if that's something that might be beneficial at this point.",
+      "turn": 8
+    },
+    {
+      "role": "doctor",
+      "content": "It's clear that the uncertainty is wearing on you \u2014 that's completely understandable. When you think about what might help you feel better, what does that look like for you? Are you thinking more about getting more tests to find an answer, or are you open to trying treatments if they come up? And have you had any experience with medications or treatments before that you felt helped you?",
+      "turn": 9
+    },
+    {
+      "role": "patient",
+      "content": "At this point, I think the most important thing would be to get a clear understanding of what's going on. So, I'm definitely open to more tests and getting more specialized evaluations.\n\nAs for treatments, if there are options that could help without causing too many side effects or complications, I'd be willing to try them out. But right now, I'm not sure how much faith I have in any specific treatment until we know what's causing all of this.\n\nI haven't had a lot of experience with medications or treatments before \u2014 at least not for anything related to my lymph nodes or fatigue. So it's hard to say if something would be helpful without knowing more about the root cause.",
+      "turn": 9
+    },
+    {
+      "role": "doctor",
+      "content": "It sounds like you're in a place where you're ready for answers and open to treatments if they make sense. That's a good position to be in.\n\nI'm curious \u2014 when you think about medications or treatments, do you have any concerns about them? Things like side effects, feeling dependent on them, or worries about long-term effects? And you mentioned earlier wondering about infections \u2014 do you feel like that's what's going on, or are you thinking about other possibilities?",
+      "turn": 10
+    },
+    {
+      "role": "patient",
+      "content": "Thank you for asking. I do have some concerns about medications and treatments, mostly around potential side effects. It can be hard to know how a medication will affect me until I've been taking it for a while, so there's always an element of uncertainty.\n\nI'm also worried about potentially becoming dependent on any medication or treatment \u2014 if that's something that might happen, I'd want to understand more about the long-term implications and how to manage them.\n\nAs for what might be causing all of this, I do wonder if it could be an infection. But at the same time, I'm not sure if that's the whole story or if there are other factors involved as well. So, I think it's important to keep exploring different possibilities until we get a clearer picture of what's going on.",
+      "turn": 10
+    },
+    {
+      "role": "doctor",
+      "content": "It's understandable that you'd have those concerns \u2014 uncertainty about how your body will react to something new is a big deal. And it sounds like you're being thoughtful about weighing the potential benefits against those risks.\n\nYou mentioned wondering about infections earlier. Have you had any recent illnesses or exposures that you think might be related? And what about the lymph nodes \u2014 you've read that there are many possible causes. Do you have any sense of which ones you're more worried about, or which ones you think might be more likely?",
+      "turn": 11
+    },
+    {
+      "role": "patient",
+      "content": "Thank you for asking. I haven't had any recent illnesses or exposures that stand out as potentially related to all of this.\n\nAs for the lymph nodes and their potential causes, I've read about a few different possibilities \u2014 infection, autoimmune disorders, cancer, and others. It's hard to say which ones are more likely at this point, but I'm definitely worried about any possibility that might have serious implications or require significant treatment.\n\nI think it's important for us to keep exploring all the possible causes until we can get a clearer understanding of what's going on.",
+      "turn": 11
+    },
+    {
+      "role": "doctor",
+      "content": "It sounds like you're taking a very methodical approach \u2014 wanting to explore all possibilities until you get a clearer picture. That's a good way to handle uncertainty.\n\nI'm wondering what you think about this whole situation overall. When you think about what's happening to you, how would you describe it? Is it something you feel like you understand, or does it feel like a mystery that's hard to piece together? And as we go through this process, what would make you feel like things are moving in the right direction?",
+      "turn": 12
+    },
+    {
+      "role": "patient",
+      "content": "Thank you for asking. This whole situation feels like an ongoing puzzle \u2014 I'm not sure if I'll ever have all the pieces figured out.\n\nIt's definitely something that's hard to piece together because it involves so many different factors, both physical and emotional. But at the same time, I feel like we're making progress by talking about everything and considering all the possibilities.\n\nI think for me, feeling like things are moving in the right direction would involve getting a clearer understanding of what's going on \u2014 that might include more tests or seeing specialists. And then, once we have a better idea of what we're dealing with, being able to develop a plan for treatment or management that feels personalized and comprehensive.\n\nMost importantly, I want to feel like I'm taking an active role in managing my health and well-being, even if that's just by understanding more about the root causes and how they might be impacting me.",
+      "turn": 12
+    },
+    {
+      "role": "doctor",
+      "content": "It's clear that you're thinking about this in a thoughtful, methodical way \u2014 wanting to understand the root causes and feel like you're taking an active role. That's really important.\n\nBefore we wrap up, I'd like to ask one more thing. When you think about the lymph nodes \u2014 the swollen ones in your neck \u2014 what specifically concerns you about them? Is it the fact that they're there at all, or something about their appearance, or what they might represent? And have you had anyone else look at them or give you more information about what you should be watching for?",
+      "turn": 13
+    },
+    {
+      "role": "patient",
+      "content": "Thank you for asking. What concerns me most about the swollen lymph nodes is not knowing what's causing them and what that might mean for my overall health.\n\nThey don't appear to be painful or uncomfortable, but just having them there feels like a constant reminder of something potentially serious going on in my body.\n\nI haven't had anyone else look at them specifically, since I've only seen you once so far. But I'm definitely open to getting a second opinion if that would be helpful \u2014 especially if it means we can get more information about what to watch out for or how best to manage everything moving forward.",
+      "turn": 13
+    },
+    {
+      "role": "doctor",
+      "content": "It's understandable that having something in your body that you can't explain would feel unsettling \u2014 especially when it's something you can see and feel. The uncertainty about what it means for your overall health is probably the hardest part.\n\nI want to make sure I understand where we are. You've been dealing with this fatigue for six months, the lymph nodes appeared, and you've been working on lifestyle changes but haven't seen improvement. You're worried about what's going on and want more answers. Is there anything else you'd like to share about your experience with this so far \u2014 anything I haven't asked about that feels important to mention?",
+      "turn": 14
+    },
+    {
+      "role": "patient",
+      "content": "Thank you for taking the time to listen, doctor. It means a lot to have someone who is willing to help me navigate all of this uncertainty.\n\nOne thing that hasn't come up yet is how difficult it's been for me to stay positive throughout everything. The fatigue and the lymph nodes have just sapped my energy in so many ways \u2014 emotionally, mentally, and physically. It can be hard to find hope when things feel so out of control.\n\nBut I'm also determined not to let this beat me down completely. I know that staying hopeful and optimistic is important for my well-being, even if it's sometimes hard to do. So, I try to focus on the little victories \u2014 like getting through a day without feeling too exhausted \u2014 and take things one step at a time.\n\nI hope that gives you a better understanding of how all this has been impacting me so far.",
+      "turn": 14
+    },
+    {
+      "role": "doctor",
+      "content": "Thank you for sharing all of that \u2014 it's clear how much you've been carrying, and I really appreciate your determination to stay hopeful despite everything. That resilience is really important.\n\nTo summarize what we've talked about: you've been dealing with persistent fatigue for about six months, which has significantly impacted your daily life and work. You've also noticed enlarged lymph nodes in your neck, which you're worried about but they're not painful. You've been working on lifestyle changes, but they haven't helped much, and you're frustrated that you haven't gotten more concrete answers or treatment options.\n\nGiven this, I think the best next step would be to do a physical examination, particularly focusing on the lymph nodes and any other signs that might give us more clues. After that, depending on what we find, we may consider further testing or referral to a specialist to help get to the bottom of what's going on.\n\nHow does that sound to you? Is there anything else you'd like to address before we move forward?",
+      "turn": 15
+    },
+    {
+      "role": "patient",
+      "content": "Thank you for summarizing everything and laying out the next steps. It sounds like a reasonable plan, and I'm willing to do whatever it takes to get more answers and find some relief from this fatigue.\n\nAs for addressing anything else right now \u2014 I think all the important topics have been covered. But please let me know if there's anything that comes up later on during our treatment or monitoring process.",
+      "turn": 15
+    },
+    {
+      "role": "doctor",
+      "content": "I'm glad we've been able to cover everything and that you're open to moving forward. I'll do a physical examination now and then we can discuss next steps. Thank you for your trust in me \u2014 I really appreciate you sharing your experience with me today.",
+      "turn": 16
+    },
+    {
+      "role": "patient",
+      "content": "Thank you, doctor. I appreciate your time and attention, and I look forward to working together on this journey towards better health.",
+      "turn": 16
+    },
+    {
+      "role": "doctor",
+      "content": "I'm glad we've been able to cover everything and that you're open to moving forward. I'll do a physical examination now and then we can discuss next steps. Thank you for your trust in me \u2014 I really appreciate you sharing your experience with me today.",
+      "turn": 17
+    },
+    {
+      "role": "patient",
+      "content": "Thank you, doctor. I appreciate your time and attention, and I look forward to working together on this journey towards better health.",
+      "turn": 17
+    },
+    {
+      "role": "doctor",
+      "content": "I'm glad we've been able to cover everything and that you're open to moving forward. I'll do a physical examination now and then we can discuss next steps. Thank you for your trust in me \u2014 I really appreciate you sharing your experience with me today.",
+      "turn": 18
+    },
+    {
+      "role": "patient",
+      "content": "Thank you, doctor. I appreciate your time and attention, and I look forward to working together on this journey towards better health.",
+      "turn": 18
+    },
+    {
+      "role": "doctor",
+      "content": "I'm glad we've been able to cover everything and that you're open to moving forward. I'll do a physical examination now and then we can discuss next steps. Thank you for your trust in me \u2014 I really appreciate you sharing your experience with me today.",
+      "turn": 19
+    },
+    {
+      "role": "patient",
+      "content": "Thank you, doctor. I appreciate your time and attention, and I look forward to working together on this journey towards better health.",
+      "turn": 19
+    },
+    {
+      "role": "doctor",
+      "content": "I'm glad we've been able to cover everything and that you're open to moving forward. I'll do a physical examination now and then we can discuss next steps. Thank you for your trust in me \u2014 I really appreciate you sharing your experience with me today.",
+      "turn": 20
+    }
+  ],
+  "coverage_hint": {},
+  "working_notes": [],
+  "events": [
+    {
+      "event": "turn_cap",
+      "turns": 20
+    }
+  ],
+  "usage": [
+    {
+      "role": "doctor",
+      "eval_tokens": 104,
+      "prompt_tokens": 1651
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 101,
+      "prompt_tokens": 1213
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 291,
+      "prompt_tokens": 1903
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 145,
+      "prompt_tokens": 1406
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 328,
+      "prompt_tokens": 2386
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 149,
+      "prompt_tokens": 1679
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 298,
+      "prompt_tokens": 2910
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 144,
+      "prompt_tokens": 1945
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 389,
+      "prompt_tokens": 3399
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 149,
+      "prompt_tokens": 2209
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 371,
+      "prompt_tokens": 3984
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 148,
+      "prompt_tokens": 2482
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 367,
+      "prompt_tokens": 4550
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 138,
+      "prompt_tokens": 2739
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 429,
+      "prompt_tokens": 5102
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 159,
+      "prompt_tokens": 3009
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 414,
+      "prompt_tokens": 5737
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 141,
+      "prompt_tokens": 3254
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 442,
+      "prompt_tokens": 6339
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 162,
+      "prompt_tokens": 3500
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 477,
+      "prompt_tokens": 6990
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 114,
+      "prompt_tokens": 3776
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 441,
+      "prompt_tokens": 7628
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 185,
+      "prompt_tokens": 4005
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 454,
+      "prompt_tokens": 8301
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 123,
+      "prompt_tokens": 4318
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 463,
+      "prompt_tokens": 8925
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 178,
+      "prompt_tokens": 4578
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 735,
+      "prompt_tokens": 9613
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 81,
+      "prompt_tokens": 4970
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 125,
+      "prompt_tokens": 10476
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 27,
+      "prompt_tokens": 5113
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 125,
+      "prompt_tokens": 10675
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 27,
+      "prompt_tokens": 5202
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 125,
+      "prompt_tokens": 10874
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 27,
+      "prompt_tokens": 5291
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 125,
+      "prompt_tokens": 11073
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 27,
+      "prompt_tokens": 5380
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 125,
+      "prompt_tokens": 11272
+    },
+    {
+      "role": "report",
+      "eval_tokens": 3939,
+      "prompt_tokens": 18381
+    }
+  ]
+}

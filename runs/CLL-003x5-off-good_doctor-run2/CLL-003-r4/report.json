@@ -1,0 +1,225 @@
+{
+  "patient_id": "CLL-003",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "CLL-003",
+    "clinical_summary": "Patient with CLL diagnosed 1 year ago, currently in watchful waiting phase with no medication. Reports intermittent debilitating fatigue ('even the smallest tasks feel like they're taking all my energy') and a neck lump noticed 2 months ago. Maintains healthy lifestyle (eating well, exercise, rest) and has done independent research about potential treatments. Trusts doctors but experiences emotional ups and downs with anxiety about future.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "even the smallest tasks feel like they're taking all my energy",
+            "turn": 3
+          },
+          {
+            "quote": "it does make things more challenging — especially at work where there's a lot going on",
+            "turn": 6
+          }
+        ],
+        "reasoning": "Fatigue significantly impacts ability to work and complete tasks, though they haven't lost their major role entirely. They describe it as 'challenging' and affecting work, indicating they've scaled back their role while still working.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "I see it as an ongoing part of my life",
+            "turn": 7
+          },
+          {
+            "quote": "because it's a chronic condition, I know it won't just disappear on its own",
+            "turn": 7
+          },
+          {
+            "quote": "CLL is a condition that will be with me for some time",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient clearly views CLL as a long-term condition that will be with them, not something that will end soon. They plan on the assumption it stays, with arrangements built around it continuing.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I think there's only so much I can do",
+            "turn": 8
+          },
+          {
+            "quote": "I'm doing what I can to stay healthy",
+            "turn": 8
+          },
+          {
+            "quote": "I try not to dwell on it too much",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient acknowledges they can do some things (lifestyle choices) but ultimately feel CLL is something they have to manage rather than control. They recognize many things are out of their control.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "I trust that doctors know what they're doing",
+            "turn": 5
+          },
+          {
+            "quote": "I trust that doctors would only prescribe treatment when it's absolutely necessary and appropriate",
+            "turn": 9
+          },
+          {
+            "quote": "I believe in modern medicine and its ability to help people",
+            "turn": 9
+          }
+        ],
+        "reasoning": "Patient has high trust in medical treatment and believes it can be effective. They trust doctors to make appropriate decisions and believe in modern medicine's ability to help.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "I was diagnosed with Chronic Lymphocytic Leukemia (CLL) about a year ago",
+            "turn": 4
+          },
+          {
+            "quote": "I see it as an ongoing part of my life",
+            "turn": 7
+          }
+        ],
+        "reasoning": "Patient clearly identifies as having CLL and sees it as part of their ongoing life. They have several symptoms (fatigue, neck lump) that they attribute to the illness.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "there's definitely some worry there, given my father's history",
+            "turn": 5
+          },
+          {
+            "quote": "it makes me worry about what might be going wrong in my body",
+            "turn": 6
+          },
+          {
+            "quote": "there's always that worry in the back of my mind about what might happen down the line",
+            "turn": 7
+          },
+          {
+            "quote": "I've had a lot of ups and downs... moments where I've felt anxious and overwhelmed about the future",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient has moderate to high concern that recurs unprompted and shapes some decisions (like mentioning the lump). They experience both anxiety and relief.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "From what I've understood, it's not necessarily an active condition — most people with CLL don't experience symptoms until later stages",
+            "turn": 4
+          },
+          {
+            "quote": "the doctor has asked me to just keep an eye on things for now and come back if anything changes or if my blood counts show any significant shifts",
+            "turn": 4
+          },
+          {
+            "quote": "many people with CLL can live perfectly normal lives without needing treatment in the early stages",
+            "turn": 5
+          },
+          {
+            "quote": "I've been doing some research on my own — not to the point where I'm overly worried, but enough so that I understand what might be involved should the need arise",
+            "turn": 9
+          }
+        ],
+        "reasoning": "Patient understands their condition reasonably well, knows what to watch for, and has done some research. They explain the mechanism, the monitoring and the reason for the plan accurately.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "I've had a lot of ups and downs",
+            "turn": 8
+          },
+          {
+            "quote": "moments where I've felt anxious and overwhelmed about the future",
+            "turn": 8
+          },
+          {
+            "quote": "there are also times when I feel relieved that we caught it early",
+            "turn": 8
+          },
+          {
+            "quote": "It's a delicate balance between concern and hopefulness",
+            "turn": 6
+          }
+        ],
+        "reasoning": "Emotion is recurrent and affects mood and outlook. Patient experiences both positive and negative emotions, with anxiety about the future and relief about early detection.",
+        "score": 6.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [],
+        "reasoning": "Patient is not currently on any medication, so specific beliefs about their own prescribed medication cannot be assessed.",
+        "score": null,
+        "confidence": 1.0
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "There are worries about side effects and other potential issues",
+            "turn": 9
+          }
+        ],
+        "reasoning": "Patient mentions some concerns about side effects, but these haven't changed their behavior (they're not on medication yet). When asked about concerns, they raised them, but they don't appear to be active concerns that affect their decisions.",
+        "score": 2.0,
+        "confidence": 0.7
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [],
+        "reasoning": "General beliefs about medicines as a class were not explored in this consultation.",
+        "score": null,
+        "confidence": 1.0
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [
+          {
+            "quote": "I trust that doctors would only prescribe treatment when it's absolutely necessary and appropriate",
+            "turn": 9
+          }
+        ],
+        "reasoning": "Patient trusts prescribing decisions and doesn't believe doctors overprescribe. They believe treatment will be prescribed only when absolutely necessary.",
+        "score": 1.0,
+        "confidence": 0.8
+      }
+    },
+    "causes": [
+      "family history",
+      "father had CLL"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "It's something my father had as well, so I guess it runs in the family",
+        "turn": 4
+      }
+    ]
+  }
+}

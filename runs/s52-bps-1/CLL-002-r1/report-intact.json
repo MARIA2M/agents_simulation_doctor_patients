@@ -1,0 +1,165 @@
+{
+  "patient_id": "CLL-002",
+  "mode": "intact",
+  "removed_turns": 0,
+  "removed_words": 0,
+  "events": [
+    {
+      "event": "llm_retry",
+      "role": "report",
+      "attempt": 1,
+      "failure": "HTTPStatusError: Server error '500 Internal Server Error' for url 'http://127.0.0.1:11500/api/chat'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500"
+    }
+  ],
+  "report": {
+    "patient_id": "CLL-002",
+    "clinical_summary": "A 66-year-old female presents with a six-month history of profound fatigue, weakness, sleep disturbance, and panic-like symptoms following the death of her husband. She reports significant functional impairment, including an inability to walk, perform household chores, or socialize, and describes emotional distress ranging from hopelessness to anger. She has no current prescription medications but is open to treatment. She attributes her symptoms to a combination of grief and potential physical causes, with a family history of heart problems. She is awaiting blood work and ECG.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "Even just going for a walk around the block leaves me feeling so exhausted. I used to be able to handle all my chores and social activities, but now it feels like such an effort to get through the day. Some days, I can't even muster the energy to do anything — I end up just sitting on the couch or in bed for hours.",
+            "turn": 6
+          }
+        ],
+        "reasoning": "The patient has given up social activities, household chores, and walking, and is often bedbound. This represents a substantial loss of major roles.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "hard not to feel a bit anxious about what might come next... wonder if I'll ever feel like myself again... deal with long-term.",
+            "turn": 16
+          }
+        ],
+        "reasoning": "The patient acknowledges the duration and uncertainty, expressing anxiety about the future and the possibility of managing the condition long-term without a clear end in sight.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I don't really know what's causing all this. It feels like my body has just given up on me.",
+            "turn": 11
+          }
+        ],
+        "reasoning": "The patient attributes the cause to her body 'giving up' and grief, indicating she feels she has no control over the outcome and that her own actions (eating well, exercise) have been insufficient.",
+        "score": 2.0,
+        "confidence": 0.8
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "I trust modern medicine, and if you were to recommend a medication or treatment plan, I would be willing to try it out.",
+            "turn": 13
+          }
+        ],
+        "reasoning": "The patient has not yet experienced any treatment and is willing to try it, but she does not attribute her current state to treatment efficacy. She is hopeful for the future but currently has no evidence of treatment benefit.",
+        "score": 2.0,
+        "confidence": 0.7
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "It's definitely both, doctor. I feel weak all over... trouble sleeping... suffocating...",
+            "turn": 4
+          }
+        ],
+        "reasoning": "The patient describes multiple severe and intrusive symptoms (weakness, sleep issues, suffocation) that define her current experience and disrupt her life.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "It's terrifying when it happens",
+            "turn": 4
+          }
+        ],
+        "reasoning": "The patient describes the symptoms as terrifying and frequent, and her emotional state (rollercoaster, anxiety) intrudes into her daily life and future outlook.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I don't really know what's causing all this. It feels like my body has just given up on me.",
+            "turn": 11
+          }
+        ],
+        "reasoning": "The patient is confused about the cause, oscillating between grief and physical illness, and has not been diagnosed or understands the mechanism of her condition.",
+        "score": 2.0,
+        "confidence": 0.8
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "Emotionally, doctor, it's been a rollercoaster. Some days, I feel like giving up... angry at myself",
+            "turn": 7
+          }
+        ],
+        "reasoning": "The patient reports prominent emotional effects, including hopelessness, anger, and anxiety, which significantly affect her mood and outlook.",
+        "score": 8.0,
+        "confidence": 0.9
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [],
+        "reasoning": "The patient has no current prescription medication and has not established a belief about the necessity of her own medication.",
+        "score": null,
+        "confidence": 1.0
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [],
+        "reasoning": "The patient has not raised specific concerns about her own medication as she is not currently taking any prescribed medication.",
+        "score": null,
+        "confidence": 1.0
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [],
+        "reasoning": "The patient has not expressed a general belief that medicines are harmful; she acknowledges risks but trusts modern medicine.",
+        "score": null,
+        "confidence": 1.0
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "The patient has no experience with being overwhelmed by pills and trusts the doctor's prescribing decisions.",
+        "score": null,
+        "confidence": 1.0
+      }
+    },
+    "causes": [
+      "grief from losing my husband",
+      "family history of heart problems",
+      "physical illness"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "the tiredness started about six months ago, right around the time I lost my husband",
+        "turn": 2
+      },
+      {
+        "quote": "my mother had high blood pressure and my father passed away from a heart attack",
+        "turn": 10
+      },
+      {
+        "quote": "I've considered that maybe it's a combination of the grief from losing my husband and this chronic tiredness",
+        "turn": 11
+      }
+    ]
+  }
+}

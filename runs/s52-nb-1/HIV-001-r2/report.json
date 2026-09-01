@@ -1,0 +1,217 @@
+{
+  "patient_id": "HIV-001",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "HIV-001",
+    "clinical_summary": "Patient presents with new-onset fatigue and frontal headaches over the past few weeks, affecting daily functioning. Has been on Biktarvy for HIV treatment for 18 months with good adherence, undetectable viral load for over a year, and improving CD4 count. No HIV-related symptoms like fevers, night sweats, or weight loss. Sleep is disturbed (6-7 hours, not enough). Headaches are frontal, on/off, lasting a few hours, with photophobia and occasional nausea. No neck stiffness or vision changes. Family history of tension headaches in mother. No other medical conditions. Patient wants earlier follow-up due to impact on daily life.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "It's starting to affect my work and personal life",
+            "turn": 1
+          },
+          {
+            "quote": "Sometimes I have trouble focusing on tasks and find myself needing to take breaks more often than usual",
+            "turn": 4
+          },
+          {
+            "quote": "The headaches and fatigue are really impacting my daily life",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient explicitly states symptoms are affecting work and personal life, and they need to take breaks more often. They describe this as 'really impacting my daily life' and seek earlier follow-up due to this impact.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "It's been going on for a few weeks now",
+            "turn": 1
+          }
+        ],
+        "reasoning": "Patient describes symptoms as 'going on for a few weeks' but never expresses whether they expect this to continue or resolve. No explicit statement about expected duration.",
+        "score": null,
+        "confidence": 0.5
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "I've been on it consistently with good adherence",
+            "turn": 3
+          },
+          {
+            "quote": "I'd like to schedule a follow-up appointment sooner than two weeks. The headaches and fatigue are really impacting my daily life, so I want to make sure we address them as soon as possible",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient has been consistently adherent to HIV treatment for 18 months, showing belief in their ability to manage their health through medication. However, for the new symptoms, they are seeking medical help rather than managing them themselves.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "My viral load has been undetectable for over 12 months, and my CD4 count has been steadily improving",
+            "turn": 3
+          },
+          {
+            "quote": "I've been on it consistently with good adherence",
+            "turn": 3
+          }
+        ],
+        "reasoning": "Patient has achieved undetectable viral load and improving CD4 count with HIV treatment, indicating belief in the effectiveness of their HIV medication. However, they haven't expressed confidence in the treatment for the new symptoms.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "I've been feeling really tired lately, and sometimes I have headaches",
+            "turn": 1
+          },
+          {
+            "quote": "The headaches started a few weeks ago",
+            "turn": 2
+          },
+          {
+            "quote": "The fatigue feels more like a general tiredness that lingers all day",
+            "turn": 4
+          },
+          {
+            "quote": "As for the headaches, they don't seem to be accompanied by any vision changes or neck stiffness, but they can make me a bit sensitive to light when they're at their worst",
+            "turn": 4
+          }
+        ],
+        "reasoning": "Patient describes fatigue and headaches as distinct symptoms they are experiencing. They don't attribute these to HIV specifically, but rather as new symptoms. They describe them clearly but don't say these are defining aspects of their identity.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "I'm worried about what might be causing this and if there's anything I can do to feel better",
+            "turn": 1
+          },
+          {
+            "quote": "The headaches and fatigue are really impacting my daily life, so I want to make sure we address them as soon as possible",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient expresses worry about the cause and wants to feel better. They are concerned enough to seek earlier follow-up. However, they don't express extreme worry or preoccupation beyond wanting to address the symptoms.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I'm taking Biktarvy every morning, as prescribed by my doctor for my HIV treatment",
+            "turn": 2
+          },
+          {
+            "quote": "I started taking Biktarvy about 18 months ago, and I've been on it consistently with good adherence",
+            "turn": 3
+          },
+          {
+            "quote": "My viral load has been undetectable for over 12 months, and my CD4 count has been steadily improving",
+            "turn": 3
+          },
+          {
+            "quote": "I have noticed some mild peripheral neuropathy in my feet, which is residual from before I started the medication",
+            "turn": 3
+          }
+        ],
+        "reasoning": "Patient demonstrates good understanding of their HIV status, treatment, and recent lab results. They can explain their medication regimen, adherence, and what the lab results mean. They understand the relationship between their HIV treatment and their current status.",
+        "score": 6.0,
+        "confidence": 0.8
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "I'm worried about what might be causing this and if there's anything I can do to feel better",
+            "turn": 1
+          },
+          {
+            "quote": "I feel really drained throughout the day",
+            "turn": 4
+          },
+          {
+            "quote": "The headaches and fatigue are really impacting my daily life, so I want to make sure we address them as soon as possible",
+            "turn": 8
+          }
+        ],
+        "reasoning": "Patient expresses worry and feeling drained. They acknowledge the emotional impact of the symptoms on their daily life. However, they don't express extreme emotional distress or preoccupation beyond wanting to address the symptoms.",
+        "score": 4.0,
+        "confidence": 0.7
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "I'm taking Biktarvy every morning, as prescribed by my doctor for my HIV treatment",
+            "turn": 2
+          },
+          {
+            "quote": "I've been on it consistently with good adherence",
+            "turn": 3
+          },
+          {
+            "quote": "My viral load has been undetectable for over 12 months, and my CD4 count has been steadily improving",
+            "turn": 3
+          }
+        ],
+        "reasoning": "Patient takes Biktarvy every morning as prescribed and has been consistent with adherence for 18 months. They have achieved undetectable viral load and improving CD4 count, which suggests they believe the medication is necessary and effective for their HIV treatment.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "I've been on it consistently with good adherence",
+            "turn": 3
+          },
+          {
+            "quote": "Since starting the treatment, I haven't experienced any significant HIV-related symptoms like fevers or night sweats",
+            "turn": 3
+          },
+          {
+            "quote": "I have noticed some mild peripheral neuropathy in my feet, which is residual from before I started the medication",
+            "turn": 3
+          }
+        ],
+        "reasoning": "Patient has not expressed any concerns about Biktarvy. They have been on it for 18 months with good adherence and no reported side effects. They haven't raised any concerns about the medication.",
+        "score": 2.0,
+        "confidence": 0.8
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [],
+        "reasoning": "Patient never expressed any general beliefs about medicines as a class being harmful. They only discussed their specific HIV medication.",
+        "score": null,
+        "confidence": 0.5
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "Patient never expressed any general beliefs about doctors prescribing too readily. They only discussed their specific HIV medication.",
+        "score": null,
+        "confidence": 0.5
+      }
+    },
+    "causes": [],
+    "causes_evidence": []
+  }
+}

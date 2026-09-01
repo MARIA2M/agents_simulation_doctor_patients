@@ -1,0 +1,256 @@
+{
+  "patient_id": "CLL-001",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "CLL-001",
+    "clinical_summary": "Patient with Chronic Lymphocytic Leukemia (CLL) diagnosed a few years ago, currently in watch-and-wait with monthly blood tests. Experiences fatigue, headaches, and feeling heavy and weak. Actively manages with rest and healthy eating but recognizes limits. Expresses emotional rollercoaster with frustration and anger, but also finds peace. Concerned about future treatment effectiveness and side effects. Believes medical community may over-rely on medication. Requests fatigue management strategies and non-medication options.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "It's like the illness is taking over everything in my life — work, family time, leisure activities, you name it.",
+            "turn": 1
+          },
+          {
+            "quote": "the illness has certainly been affecting my life quite significantly.",
+            "turn": 2
+          },
+          {
+            "quote": "my body just feels so heavy and weak no matter what I do.",
+            "turn": 4
+          }
+        ],
+        "reasoning": "Patient explicitly states the illness is 'taking over everything in my life' including work, family time, and leisure activities. They describe it as a 'constant battle' with 'little relief' and feel their body is 'heavy and weak.' This shows significant impact on multiple life domains.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "It's been a slow progression so far",
+            "turn": 2
+          },
+          {
+            "quote": "My doctor says that it might be years before any treatment is needed",
+            "turn": 2
+          },
+          {
+            "quote": "I'm in the watch-and-wait stage at the moment",
+            "turn": 3
+          }
+        ],
+        "reasoning": "Patient understands CLL is a slow-progressing condition and is in watch-and-wait. They expect treatment years away, which indicates a chronic timeframe but with an extended treatment-free period.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "making sure I get enough rest and trying to eat healthily helps a bit",
+            "turn": 4
+          },
+          {
+            "quote": "there are days where even those things feel like they're not enough",
+            "turn": 4
+          },
+          {
+            "quote": "I want to believe there's more I can do, but sometimes it feels like the illness is just something that happens to me, beyond my control",
+            "turn": 4
+          }
+        ],
+        "reasoning": "Patient actively engages in self-management (rest, healthy eating) but recognizes limits. They express a desire to believe they have more control, but acknowledge that sometimes the illness feels beyond their control. This is a nuanced position - they do take action but feel constrained.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "I'm currently not on any medication. I'm in the watch-and-wait stage at the moment",
+            "turn": 3
+          },
+          {
+            "quote": "there's a part of me that worries about how effective it will be, given how slow-moving CLL can be",
+            "turn": 5
+          },
+          {
+            "quote": "my main concern is whether it will actually make a significant difference to my condition",
+            "turn": 6
+          }
+        ],
+        "reasoning": "Patient is not currently on active treatment, just monitoring. They express concern about future treatment effectiveness, specifically noting that because CLL is 'slow-moving,' they worry treatment may not be as effective as hoped. They don't yet have experience with treatment, so this is a prospective concern.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "the illness is taking over everything in my life",
+            "turn": 1
+          },
+          {
+            "quote": "I was diagnosed with Chronic Lymphocytic Leukemia a few years back",
+            "turn": 2
+          },
+          {
+            "quote": "My understanding of CLL is that it's a cancer that affects your immune system, specifically the lymphocytes",
+            "turn": 3
+          }
+        ],
+        "reasoning": "Patient clearly identifies as having CLL and attributes their symptoms (fatigue, headaches) to this illness. They have a clear label and understand the nature of their condition.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "I've been worried about how this impacts me",
+            "turn": 1
+          },
+          {
+            "quote": "I worry about how this illness will continue to impact my life — both in terms of my daily functioning and also how it might change over time",
+            "turn": 5
+          },
+          {
+            "quote": "there's a part of me that worries about how effective it will be",
+            "turn": 5
+          },
+          {
+            "quote": "my main concern is whether it will actually make a significant difference to my condition",
+            "turn": 6
+          },
+          {
+            "quote": "there's always the risk of side effects",
+            "turn": 6
+          }
+        ],
+        "reasoning": "Patient expresses worry about multiple aspects: how the illness will continue to impact daily functioning, how it might change over time, whether future treatment will be effective, and the risk of side effects. These concerns recur unprompted and shape their thinking about the future.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "My understanding of CLL is that it's a cancer that affects your immune system, specifically the lymphocytes",
+            "turn": 3
+          },
+          {
+            "quote": "I've been told that genetics and family history may play a role in developing CLL, as well as exposure to certain chemicals or environmental factors",
+            "turn": 3
+          },
+          {
+            "quote": "It's an ongoing battle that I'm trying to learn more about every day",
+            "turn": 3
+          }
+        ],
+        "reasoning": "Patient has a good understanding of their condition - they know CLL is cancer affecting the immune system/lymphocytes, and they've been informed about potential causes involving genetics, family history, and environmental factors. They are actively trying to learn more.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "Emotionally, it's been quite a rollercoaster",
+            "turn": 4
+          },
+          {
+            "quote": "There are moments where I feel incredibly frustrated and angry about having this condition",
+            "turn": 4
+          },
+          {
+            "quote": "It feels like my life has become this constant battle, with little relief",
+            "turn": 4
+          },
+          {
+            "quote": "I'm able to find some peace in the fact that for now, I'm not experiencing any major complications from it",
+            "turn": 4
+          }
+        ],
+        "reasoning": "Patient describes an emotional rollercoaster with intense feelings - frustration and anger about having the condition. They describe it as a 'constant battle' with 'little relief' but also experience moments of peace. The emotion is prominent and affects how they speak about their situation.",
+        "score": 8.0,
+        "confidence": 0.9
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "I'm currently not on any medication. I'm in the watch-and-wait stage at the moment",
+            "turn": 3
+          }
+        ],
+        "reasoning": "Patient is not currently on any medication, so there is no specific belief about their own prescribed medication. They are in watch-and-wait with no active treatment.",
+        "score": null,
+        "confidence": 1.0
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "there's a part of me that worries about how effective it will be, given how slow-moving CLL can be",
+            "turn": 5
+          },
+          {
+            "quote": "my main concern is whether it will actually make a significant difference to my condition",
+            "turn": 6
+          },
+          {
+            "quote": "there's always the risk of side effects from any medication or therapy",
+            "turn": 6
+          }
+        ],
+        "reasoning": "Patient expresses specific concerns about future treatment: whether it will be effective and the risk of side effects. These are prospective concerns about medication they don't yet take.",
+        "score": 4.0,
+        "confidence": 0.8
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [
+          {
+            "quote": "there's always the risk of side effects from any medication or therapy",
+            "turn": 6
+          }
+        ],
+        "reasoning": "Patient expresses concern about the risk of side effects from medications. This indicates some wariness about medication as a class, though not a blanket belief that medications are inherently harmful.",
+        "score": 3.0,
+        "confidence": 0.7
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [
+          {
+            "quote": "there are times when it feels like the medical community might lean too much towards prescribing medications as a first resort, rather than exploring other potential options for managing symptoms",
+            "turn": 6
+          },
+          {
+            "quote": "there seems to be an ingrained expectation that medication will always be the answer",
+            "turn": 6
+          }
+        ],
+        "reasoning": "Patient believes the medical community may lean too much toward prescribing medications as a first resort rather than exploring other options. They don't think doctors are trying to push unnecessary treatments, but perceive an 'ingrained expectation that medication will always be the answer.'",
+        "score": 4.0,
+        "confidence": 0.8
+      }
+    },
+    "causes": [
+      "genetics",
+      "family history",
+      "exposure to certain chemicals or environmental factors"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "I've been told that genetics and family history may play a role in developing CLL, as well as exposure to certain chemicals or environmental factors",
+        "turn": 3
+      }
+    ]
+  }
+}

@@ -1,0 +1,318 @@
+{
+  "batch_id": "s52-nb-1",
+  "repeats": 2,
+  "consultations": [
+    {
+      "run": "CLL-001-r1",
+      "patient_id": "CLL-001",
+      "repeat": 1,
+      "status": "ok",
+      "turns": 10,
+      "stop_reason": "doctor",
+      "events": 0,
+      "report_parsed": true,
+      "report_attempts": 1,
+      "na": [
+        "general_harm",
+        "general_overuse"
+      ]
+    },
+    {
+      "run": "CLL-002-r1",
+      "patient_id": "CLL-002",
+      "repeat": 1,
+      "status": "ok",
+      "turns": 10,
+      "stop_reason": "doctor",
+      "events": 0,
+      "report_parsed": true,
+      "report_attempts": 1,
+      "na": [
+        "general_harm",
+        "general_overuse",
+        "timeline"
+      ]
+    },
+    {
+      "run": "CLL-003-r1",
+      "patient_id": "CLL-003",
+      "repeat": 1,
+      "status": "ok",
+      "turns": 12,
+      "stop_reason": "doctor",
+      "events": 0,
+      "report_parsed": true,
+      "report_attempts": 1,
+      "na": [
+        "general_harm",
+        "general_overuse",
+        "specific_concerns",
+        "specific_necessity"
+      ]
+    },
+    {
+      "run": "CLL-004-r1",
+      "patient_id": "CLL-004",
+      "repeat": 1,
+      "status": "ok",
+      "turns": 9,
+      "stop_reason": "doctor",
+      "events": 0,
+      "report_parsed": true,
+      "report_attempts": 1,
+      "na": [
+        "general_harm",
+        "general_overuse",
+        "personal_control",
+        "specific_necessity"
+      ]
+    },
+    {
+      "run": "CLL-005-r1",
+      "patient_id": "CLL-005",
+      "repeat": 1,
+      "status": "ok",
+      "turns": 20,
+      "stop_reason": "turn_cap",
+      "events": 1,
+      "report_parsed": true,
+      "report_attempts": 1,
+      "na": [
+        "general_harm",
+        "general_overuse"
+      ]
+    },
+    {
+      "run": "HIV-001-r1",
+      "patient_id": "HIV-001",
+      "repeat": 1,
+      "status": "ok",
+      "turns": 14,
+      "stop_reason": "doctor",
+      "events": 0,
+      "report_parsed": true,
+      "report_attempts": 1,
+      "na": []
+    },
+    {
+      "run": "HIV-002-r1",
+      "patient_id": "HIV-002",
+      "repeat": 1,
+      "status": "ok",
+      "turns": 12,
+      "stop_reason": "doctor",
+      "events": 0,
+      "report_parsed": true,
+      "report_attempts": 1,
+      "na": [
+        "general_harm",
+        "general_overuse"
+      ]
+    },
+    {
+      "run": "HIV-003-r1",
+      "patient_id": "HIV-003",
+      "repeat": 1,
+      "status": "ok",
+      "turns": 11,
+      "stop_reason": "doctor",
+      "events": 0,
+      "report_parsed": true,
+      "report_attempts": 1,
+      "na": [
+        "general_harm",
+        "general_overuse"
+      ]
+    },
+    {
+      "run": "HIV-004-r1",
+      "patient_id": "HIV-004",
+      "repeat": 1,
+      "status": "ok",
+      "turns": 11,
+      "stop_reason": "doctor",
+      "events": 0,
+      "report_parsed": true,
+      "report_attempts": 1,
+      "na": [
+        "general_harm",
+        "general_overuse",
+        "timeline"
+      ]
+    },
+    {
+      "run": "HIV-005-r1",
+      "patient_id": "HIV-005",
+      "repeat": 1,
+      "status": "ok",
+      "turns": 10,
+      "stop_reason": "doctor",
+      "events": 0,
+      "report_parsed": true,
+      "report_attempts": 1,
+      "na": []
+    },
+    {
+      "run": "CLL-001-r2",
+      "patient_id": "CLL-001",
+      "repeat": 2,
+      "status": "ok",
+      "turns": 9,
+      "stop_reason": "doctor",
+      "events": 0,
+      "report_parsed": true,
+      "report_attempts": 1,
+      "na": [
+        "general_harm",
+        "general_overuse",
+        "specific_concerns",
+        "specific_necessity"
+      ]
+    },
+    {
+      "run": "CLL-002-r2",
+      "patient_id": "CLL-002",
+      "repeat": 2,
+      "status": "ok",
+      "turns": 1,
+      "stop_reason": "doctor",
+      "events": 0,
+      "report_parsed": true,
+      "report_attempts": 1,
+      "na": [
+        "coherence",
+        "concern",
+        "emotional_response",
+        "general_harm",
+        "general_overuse",
+        "personal_control",
+        "specific_concerns",
+        "specific_necessity",
+        "timeline",
+        "treatment_control"
+      ]
+    },
+    {
+      "run": "CLL-003-r2",
+      "patient_id": "CLL-003",
+      "repeat": 2,
+      "status": "ok",
+      "turns": 11,
+      "stop_reason": "doctor",
+      "events": 1,
+      "report_parsed": true,
+      "report_attempts": 1,
+      "na": [
+        "general_harm",
+        "general_overuse",
+        "specific_concerns",
+        "specific_necessity"
+      ]
+    },
+    {
+      "run": "CLL-004-r2",
+      "patient_id": "CLL-004",
+      "repeat": 2,
+      "status": "ok",
+      "turns": 11,
+      "stop_reason": "doctor",
+      "events": 0,
+      "report_parsed": true,
+      "report_attempts": 1,
+      "na": [
+        "general_harm",
+        "general_overuse"
+      ]
+    },
+    {
+      "run": "CLL-005-r2",
+      "patient_id": "CLL-005",
+      "repeat": 2,
+      "status": "ok",
+      "turns": 9,
+      "stop_reason": "doctor",
+      "events": 1,
+      "report_parsed": true,
+      "report_attempts": 1,
+      "na": [
+        "coherence",
+        "general_harm",
+        "general_overuse",
+        "personal_control",
+        "specific_necessity",
+        "timeline",
+        "treatment_control"
+      ]
+    },
+    {
+      "run": "HIV-001-r2",
+      "patient_id": "HIV-001",
+      "repeat": 2,
+      "status": "ok",
+      "turns": 10,
+      "stop_reason": "doctor",
+      "events": 0,
+      "report_parsed": true,
+      "report_attempts": 1,
+      "na": [
+        "general_harm",
+        "general_overuse",
+        "timeline"
+      ]
+    },
+    {
+      "run": "HIV-002-r2",
+      "patient_id": "HIV-002",
+      "repeat": 2,
+      "status": "ok",
+      "turns": 16,
+      "stop_reason": "doctor",
+      "events": 0,
+      "report_parsed": true,
+      "report_attempts": 1,
+      "na": [
+        "general_harm",
+        "general_overuse"
+      ]
+    },
+    {
+      "run": "HIV-003-r2",
+      "patient_id": "HIV-003",
+      "repeat": 2,
+      "status": "ok",
+      "turns": 15,
+      "stop_reason": "doctor",
+      "events": 0,
+      "report_parsed": true,
+      "report_attempts": 1,
+      "na": []
+    },
+    {
+      "run": "HIV-004-r2",
+      "patient_id": "HIV-004",
+      "repeat": 2,
+      "status": "ok",
+      "turns": 11,
+      "stop_reason": "doctor",
+      "events": 0,
+      "report_parsed": true,
+      "report_attempts": 1,
+      "na": []
+    },
+    {
+      "run": "HIV-005-r2",
+      "patient_id": "HIV-005",
+      "repeat": 2,
+      "status": "ok",
+      "turns": 13,
+      "stop_reason": "doctor",
+      "events": 0,
+      "report_parsed": true,
+      "report_attempts": 1,
+      "na": [
+        "general_harm",
+        "general_overuse"
+      ]
+    }
+  ]
+}

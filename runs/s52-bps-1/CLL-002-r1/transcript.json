@@ -1,0 +1,402 @@
+{
+  "patient_id": "CLL-002",
+  "turns": 19,
+  "stop_reason": "doctor",
+  "conversation": [
+    {
+      "role": "doctor",
+      "content": "Hello there. I'm Dr. [your name]. Thanks for coming in today. What brings you to see me?",
+      "turn": 1
+    },
+    {
+      "role": "patient",
+      "content": "Hi, doctor. It's quite a relief to be here. I've been feeling so tired all the time, and my body just doesn't seem to be getting better despite taking care of myself. My friends have suggested that I should get checked out, and my daughter mentioned that you might be able to help me.",
+      "turn": 1
+    },
+    {
+      "role": "doctor",
+      "content": "I'm glad you're here. It sounds like you've been feeling quite drained, and it's understandable you'd be worried when you're not seeing improvement despite your efforts. Could you tell me a bit more about when this started, and what you've been doing to look after yourself?",
+      "turn": 2
+    },
+    {
+      "role": "patient",
+      "content": "Well, doctor, the tiredness started about six months ago, right around the time I lost my husband. It's been really hard without him \u2014 we were together for 40 years, you know. I've been trying to take care of myself by eating well and getting some exercise, but it just doesn't seem like enough. I feel so drained all the time, and sometimes even after a full night's sleep, I'm still exhausted.",
+      "turn": 2
+    },
+    {
+      "role": "doctor",
+      "content": "Six months is a long time to feel this way, especially after such a big life change. I'm sorry about your husband \u2014 it sounds like you two were together a long time. That kind of loss takes a real toll. Has anyone else looked into this? Have you had any blood work done or seen another doctor since this started?",
+      "turn": 3
+    },
+    {
+      "role": "patient",
+      "content": "Thank you for the empathy, doctor. No one has really looked into my exhaustion yet, aside from some general practitioner visits where they just told me to keep doing what I'm doing. But things haven't been getting better. That's why my daughter suggested that it might be something more serious and recommended I see a specialist like yourself.",
+      "turn": 3
+    },
+    {
+      "role": "doctor",
+      "content": "I hear you \u2014 it's frustrating when you're doing everything right and still not feeling better. You're right to ask for a second opinion. To help me understand what's going on, can you tell me more about the tiredness itself? Is it more physical, like weakness in your limbs, or more of a mental exhaustion where you just can't get going? Have you noticed any other changes \u2014 like trouble sleeping, feeling down, or changes in your appetite?",
+      "turn": 4
+    },
+    {
+      "role": "patient",
+      "content": "It's definitely both, doctor. I feel weak all over, especially my arms and legs. Even just standing up for short periods leaves me feeling drained. I've also been having trouble sleeping; it feels like the darkness is suffocating me and I can't escape, even when I'm finally able to doze off. As for appetite changes, I suppose I could say that I don't have much of an appetite anymore \u2014 I just don't feel hungry most of the time.",
+      "turn": 4
+    },
+    {
+      "role": "doctor",
+      "content": "Those are very real and significant symptoms \u2014 weakness in your limbs, trouble sleeping with those heavy feelings of suffocation, and loss of appetite. It sounds like this has really been wearing you down. Have you been taking anything for the sleep issues? And have you noticed any other physical signs, like weight loss or feeling dizzy when you stand up?",
+      "turn": 5
+    },
+    {
+      "role": "patient",
+      "content": "I've tried some herbal teas and over-the-counter sleep aids, but they don't seem to help much. I'm still waking up in the middle of the night with that same suffocating feeling. As for other physical signs, nothing comes to mind right away. But when you asked about dizziness, I did start to feel lightheaded when standing up just now \u2014 almost like my body can't find its balance.",
+      "turn": 5
+    },
+    {
+      "role": "doctor",
+      "content": "The lightheadedness when you stand up is something we definitely need to look into, and it's good you mentioned it. It could be related to a few things, and I want to understand how this is affecting your daily life. Are you still able to do things like getting groceries, seeing friends, or taking care of your home, or has that become more limited?",
+      "turn": 6
+    },
+    {
+      "role": "patient",
+      "content": "It's been harder to keep up with everything, doctor. Even just going for a walk around the block leaves me feeling so exhausted. I used to be able to handle all my chores and social activities, but now it feels like such an effort to get through the day. Some days, I can't even muster the energy to do anything \u2014 I end up just sitting on the couch or in bed for hours.",
+      "turn": 6
+    },
+    {
+      "role": "doctor",
+      "content": "It sounds like this has really changed your daily life, and it's completely understandable that you're feeling this way when you're trying so hard to keep going. How have you been feeling emotionally? Have you found yourself feeling down, hopeless, or like there's no point in trying sometimes? And have you had any surgeries or major health issues in the past that I should know about?",
+      "turn": 7
+    },
+    {
+      "role": "patient",
+      "content": "Emotionally, doctor, it's been a rollercoaster. Some days, I feel like giving up \u2014 like my energy is just gone and there's nothing left to hold onto. But other times, I feel angry at myself for not being able to shake this exhaustion. It's hard to describe. As far as surgeries or major health issues go, aside from losing my husband, everything has been relatively healthy in the past.",
+      "turn": 7
+    },
+    {
+      "role": "doctor",
+      "content": "It's a lot to carry \u2014 those swings between feeling hopeless and feeling angry at yourself are very understandable when you're struggling this much. You're not failing; this is a very difficult situation. I want to make sure I have a complete picture. Have you been taking any prescription medications for anything? And have you noticed if the tiredness is worse at certain times of day or after eating?",
+      "turn": 8
+    },
+    {
+      "role": "patient",
+      "content": "I haven't been on any prescription medications, aside from an occasional over-the-counter pain reliever. The tiredness doesn't seem to be worse at specific times of day, but I do notice that it's harder to push through when my meals are closer to bedtime. I don't have much appetite anyway, so eating even a small meal close to bed can make it harder to fall asleep.",
+      "turn": 8
+    },
+    {
+      "role": "doctor",
+      "content": "It's helpful to know that you haven't been on regular medication. The way you describe that suffocating feeling when it's dark is quite specific, and it's important I understand it better. Can you tell me more about what that feels like \u2014 is it like chest tightness, or more like you can't breathe properly? And have you had any other physical symptoms, like chest pain, palpitations, or shortness of breath when you're resting?",
+      "turn": 9
+    },
+    {
+      "role": "patient",
+      "content": "It's hard to describe, but the feeling is almost like my entire body is wrapped in a tight band. It starts in my chest and spreads out through my arms and legs. I can't really catch my breath, and it feels like there's not enough air getting into my lungs. It's terrifying when it happens because it's so sudden and intense. As for other physical symptoms, aside from the occasional lightheadedness you asked about earlier, I haven't noticed any chest pain or palpitations when resting.",
+      "turn": 9
+    },
+    {
+      "role": "doctor",
+      "content": "That sounds very frightening \u2014 sudden, intense episodes where you feel like you can't breathe and your whole body is tight, especially in the dark. It's understandable that would be terrifying, and I want to make sure we address that properly. Have you experienced these episodes before, or do they seem to come out of nowhere? And do you have any family history of anxiety, panic attacks, or heart problems?",
+      "turn": 10
+    },
+    {
+      "role": "patient",
+      "content": "The suffocating feeling has been happening more frequently since this exhaustion started, doctor. I used to get anxious sometimes, but I've never had anything like these episodes before. As far as family history goes, my mother had high blood pressure and my father passed away from a heart attack when he was in his early 50s, so there might be some heart problems in the family.",
+      "turn": 10
+    },
+    {
+      "role": "doctor",
+      "content": "Thank you for sharing that. It sounds like these episodes are quite new and frightening, especially when you didn't have anything like this before. Given what we've discussed \u2014 the fatigue, the weakness, the sudden breathing difficulties, and your family history \u2014 I want to make sure we look at this carefully. You've been trying to take care of yourself with eating well and exercise, but you're still not feeling better. Have you had any thoughts about what might be causing this? What do you think is going on with your body?",
+      "turn": 11
+    },
+    {
+      "role": "patient",
+      "content": "To be honest, doctor, I don't really know what's causing all of this. It feels like my body has just given up on me. I've considered that maybe it's a combination of the grief from losing my husband and this chronic tiredness. But at this point, I'm willing to explore any possibility to start feeling like myself again.",
+      "turn": 11
+    },
+    {
+      "role": "doctor",
+      "content": "It's brave of you to say that \u2014 to be willing to explore anything. The idea that your body has \"given up\" is a very common response, but I want to make sure we understand what's really happening. When you think about what might help you feel better, what would you expect from me or from some kind of treatment? Are you hopeful that there's something that can be done, or do you feel like it's just something you'll have to live with?",
+      "turn": 12
+    },
+    {
+      "role": "patient",
+      "content": "I'm definitely open to any suggestions and treatments you might have. I've been so tired for so long now that the idea of feeling better is almost hard to imagine at this point. But if there's a chance that some treatment or therapy could help me feel like myself again, then I am absolutely hopeful. Of course, it's also possible that this is something I'll just have to learn to live with, but I'm not ready to give up on the possibility of improvement just yet.",
+      "turn": 12
+    },
+    {
+      "role": "doctor",
+      "content": "I appreciate that balance \u2014 being hopeful but not unrealistic. That's a good place to start. When you think about treatment, have you had any concerns about medications or medical treatments in general? Have you ever been worried about side effects, or do you feel like doctors sometimes give you too many pills? And what does the idea of taking something for this feel like to you?",
+      "turn": 13
+    },
+    {
+      "role": "patient",
+      "content": "I understand that medications can have side effects and that there's always some risk involved. But at the same time, I trust modern medicine, and if you were to recommend a medication or treatment plan, I would be willing to try it out. As far as feeling overwhelmed by too many pills goes, I've never really been in that situation before \u2014 but then again, my entire life hasn't revolved around taking medications like this until now.",
+      "turn": 13
+    },
+    {
+      "role": "doctor",
+      "content": "It makes sense that you haven't had to deal with regular medications before, and I'm glad you're open to trying them. I want to understand your perspective on this illness a bit more. When you think about what might have caused all of this \u2014 the exhaustion, the breathing difficulties, everything \u2014 what do you think might be the root cause? Do you feel like it's something physical, something emotional, or a mix of both?",
+      "turn": 14
+    },
+    {
+      "role": "patient",
+      "content": "To be honest, doctor, I'm not sure. Losing my husband and dealing with grief has certainly been a big factor in all of this. But at the same time, I can't shake the feeling that there might be something physically wrong with me as well \u2014 some underlying health issue that just hasn't been diagnosed yet. It could very well be a mix of both, but it's hard to say for sure without more information or testing.",
+      "turn": 14
+    },
+    {
+      "role": "doctor",
+      "content": "That's a very honest answer \u2014 acknowledging both the emotional weight of losing your husband and the suspicion that there might be something physical going on. It's a good approach to not jump to conclusions. When you think about what happens next, what do you expect from me in this consultation? Are you hoping for tests, a diagnosis, or just some guidance on what to do next?",
+      "turn": 15
+    },
+    {
+      "role": "patient",
+      "content": "I would appreciate any recommendations or possibilities that you might have based on our conversation today. If it seems like more testing is needed, I'm willing to go through those processes. I hope we can get closer to understanding what's going on and maybe even find a way to improve my situation. At the very least, I'd appreciate some guidance on how best to manage this exhaustion in the meantime.",
+      "turn": 15
+    },
+    {
+      "role": "doctor",
+      "content": "I think that's a reasonable expectation \u2014 to get closer to understanding what's happening and to have some practical guidance. I want to understand your view on this a bit more. How do you picture your future with this? Do you think it's something that will get better with the right treatment, or do you feel like it might be something you'll have to manage long-term? And does having this illness change how you see yourself \u2014 does it feel like something that's just happening to you, or does it affect how you think of yourself as a person?",
+      "turn": 16
+    },
+    {
+      "role": "patient",
+      "content": "Honestly, doctor, I don't know what the future holds. On one hand, I'm hopeful that we can find some treatment or therapy that could help me get back to feeling like myself again. But on the other hand, given how much this illness has disrupted my life and the uncertainty surrounding it all, it's hard not to feel a bit anxious about what might come next. As for how it affects me as a person, I think it does change things \u2014 there are days when I wonder if I'll ever feel like myself again, or if this is just something I'm going to have to deal with long-term. But even in those moments of doubt and uncertainty, I still hold onto hope that things will eventually improve.",
+      "turn": 16
+    },
+    {
+      "role": "doctor",
+      "content": "Thank you for sharing that. I can hear the hope mixed with the anxiety, and I want to acknowledge that it's a lot to carry. Based on what you've told me, I think we have a good picture of what's going on. You've been dealing with significant fatigue, weakness, sleep issues, and some panic-like symptoms \u2014 all of which have really impacted your daily life and how you see yourself. Given your family history and the symptoms we've discussed, I think we should do some tests to rule out some things, and then we can talk about what might help. For now, let's start with some basic blood work and maybe a few other tests. Does that sound okay to you?",
+      "turn": 17
+    },
+    {
+      "role": "patient",
+      "content": "Yes, doctor, that sounds like a good plan. Anything that can help us understand this better and possibly find a way to improve my situation would be much appreciated. I'm willing to do what it takes to get some answers and start feeling better again. Thank you for your time and care today.",
+      "turn": 17
+    },
+    {
+      "role": "doctor",
+      "content": "You're very welcome. I think we've made good progress today, and I'm glad you're willing to work with us on this. Here's what I'm thinking for next steps: we'll start with some blood work to check things like your thyroid, iron levels, and some basic metabolic tests. I'd also like to consider an ECG to check your heart rhythm, especially given what you've told me about that lightheadedness and your family history. Once we have those results, we can talk about what's going on and decide on the best way to help you feel better. We'll take this step by step together. Thank you for trusting me with this, and I'll see you soon.",
+      "turn": 18
+    },
+    {
+      "role": "patient",
+      "content": "Thank you, doctor. It means a lot that you're willing to help and that we can work together on this. I appreciate your guidance and expertise very much. I look forward to our next meeting. Take care.",
+      "turn": 18
+    },
+    {
+      "role": "doctor",
+      "content": "I'm glad we could work together today. Take care, and I'll see you for those tests soon. Take all the time you need to get here, and don't hesitate to call if you have any questions in the meantime. Take care.",
+      "turn": 19
+    },
+    {
+      "role": "patient",
+      "content": "Thank you, doctor. I will reach out if anything comes up. Have a good day.",
+      "turn": 19
+    }
+  ],
+  "coverage_hint": {},
+  "working_notes": [],
+  "events": [],
+  "usage": [
+    {
+      "role": "doctor",
+      "eval_tokens": 158,
+      "prompt_tokens": 1531
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 65,
+      "prompt_tokens": 1223
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 138,
+      "prompt_tokens": 1757
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 91,
+      "prompt_tokens": 1355
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 160,
+      "prompt_tokens": 1989
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 68,
+      "prompt_tokens": 1523
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 167,
+      "prompt_tokens": 2220
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 99,
+      "prompt_tokens": 1694
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 166,
+      "prompt_tokens": 2489
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 88,
+      "prompt_tokens": 1871
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 157,
+      "prompt_tokens": 2746
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 84,
+      "prompt_tokens": 2045
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 159,
+      "prompt_tokens": 2990
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 88,
+      "prompt_tokens": 2215
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 168,
+      "prompt_tokens": 3240
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 80,
+      "prompt_tokens": 2391
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 323,
+      "prompt_tokens": 3491
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 106,
+      "prompt_tokens": 2573
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 191,
+      "prompt_tokens": 3923
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 79,
+      "prompt_tokens": 2770
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 291,
+      "prompt_tokens": 4196
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 72,
+      "prompt_tokens": 2965
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 275,
+      "prompt_tokens": 4562
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 100,
+      "prompt_tokens": 3143
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 149,
+      "prompt_tokens": 4940
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 90,
+      "prompt_tokens": 3327
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 187,
+      "prompt_tokens": 5182
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 90,
+      "prompt_tokens": 3514
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 199,
+      "prompt_tokens": 5462
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 80,
+      "prompt_tokens": 3689
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 244,
+      "prompt_tokens": 5744
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 148,
+      "prompt_tokens": 3890
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 458,
+      "prompt_tokens": 6139
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 61,
+      "prompt_tokens": 4190
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 186,
+      "prompt_tokens": 6661
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 45,
+      "prompt_tokens": 4405
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 93,
+      "prompt_tokens": 6895
+    },
+    {
+      "role": "patient",
+      "eval_tokens": 20,
+      "prompt_tokens": 4509
+    },
+    {
+      "role": "doctor",
+      "eval_tokens": 878,
+      "prompt_tokens": 7011
+    },
+    {
+      "role": "report",
+      "eval_tokens": 3609,
+      "prompt_tokens": 13992
+    }
+  ]
+}

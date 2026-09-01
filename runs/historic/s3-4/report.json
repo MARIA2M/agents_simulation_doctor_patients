@@ -1,0 +1,317 @@
+{
+  "patient_id": "HIV-002",
+  "attempts": 1,
+  "parsed": true,
+  "report": {
+    "patient_id": "HIV-002",
+    "clinical_summary": "Patient reports significant functional impairment, with days where they can barely get out of bed. They describe the illness as having taken over their work, family time, hobbies, career goals, and parts of their personality. They understand their condition as a chronic immune system issue with their body constantly battling infection. Treatment with medication has shown clear benefit (viral load dropped, CD4 count stable), but they experience side effects (headaches in afternoon/evening after food) that interfere with dinner and bedtime routines. They are actively managing side effects with gentle stretches and considering dietary changes. They feel isolated and believe their life has been put on hold, though they are thinking proactively about gradually rebuilding some routine activities.",
+    "bipq": {
+      "consequences": {
+        "dimension": "consequences",
+        "evidence": [
+          {
+            "quote": "some days I can barely get out of bed",
+            "turn": 1
+          },
+          {
+            "quote": "It feels like this disease has taken over everything — my work, my time with the kids, everything",
+            "turn": 1
+          },
+          {
+            "quote": "I've had to put aside a lot of aspects of my previous life — some hobbies, certain career goals, and even parts of my personality",
+            "turn": 5
+          },
+          {
+            "quote": "life has been put on hold",
+            "turn": 4
+          },
+          {
+            "quote": "life revolves around taking care of yourself all the time — monitoring symptoms, managing medications, and constantly assessing how you're feeling",
+            "turn": 3
+          }
+        ],
+        "reasoning": "The patient has had to give up major roles and activities. They can barely get out of bed, their work and family time are affected, they've had to put aside hobbies, career goals, and parts of their personality. This represents a major role loss or substantial reduction.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "timeline": {
+        "dimension": "timeline",
+        "evidence": [
+          {
+            "quote": "I expect I'll be dealing with it for years, maybe even decades",
+            "turn": 3
+          },
+          {
+            "quote": "that's a difficult thing to predict",
+            "turn": 3
+          }
+        ],
+        "reasoning": "They expect the condition to last years or decades and acknowledge uncertainty but plan on it continuing.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "personal_control": {
+        "dimension": "personal_control",
+        "evidence": [
+          {
+            "quote": "Sometimes I feel like I have no say in any of it",
+            "turn": 1
+          },
+          {
+            "quote": "I need to find a way to keep going despite everything",
+            "turn": 3
+          },
+          {
+            "quote": "I've been trying to manage them with some gentle stretches",
+            "turn": 3
+          },
+          {
+            "quote": "wondering if there might be ways to make this routine more manageable",
+            "turn": 5
+          },
+          {
+            "quote": "finding a new workout routine that plays well with the medication schedule",
+            "turn": 5
+          },
+          {
+            "quote": "trying to set aside time each week for the hobbies I've been neglecting",
+            "turn": 5
+          },
+          {
+            "quote": "I can't help but feel like those small things won't be enough",
+            "turn": 5
+          }
+        ],
+        "reasoning": "They want to make adjustments and are trying to manage things, but feel limited overall. They're actively thinking about ways to make their routine more manageable, though they doubt those small things will be enough.",
+        "score": 6.0,
+        "confidence": 0.7
+      },
+      "treatment_control": {
+        "dimension": "treatment_control",
+        "evidence": [
+          {
+            "quote": "I believe it's been significantly helping me so far",
+            "turn": 4
+          },
+          {
+            "quote": "My viral load has dropped quite a bit and my CD4 count is stable",
+            "turn": 4
+          },
+          {
+            "quote": "It feels reassuring to know that I'm doing what I can to keep the illness under control",
+            "turn": 4
+          }
+        ],
+        "reasoning": "They see clear benefit from treatment (viral load down, CD4 stable) and feel reassured by the progress.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "identity": {
+        "dimension": "identity",
+        "evidence": [
+          {
+            "quote": "this disease",
+            "turn": 1
+          },
+          {
+            "quote": "this illness",
+            "turn": 2
+          },
+          {
+            "quote": "chronic condition affecting my immune system",
+            "turn": 3
+          },
+          {
+            "quote": "body is always battling this infection",
+            "turn": 3
+          },
+          {
+            "quote": "vulnerable to other illnesses",
+            "turn": 3
+          }
+        ],
+        "reasoning": "They have a clear illness identity and attribute multiple symptoms to it.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "concern": {
+        "dimension": "concern",
+        "evidence": [
+          {
+            "quote": "I keep wondering if it's really worth it",
+            "turn": 1
+          },
+          {
+            "quote": "worried about becoming dependent on this treatment",
+            "turn": 4
+          },
+          {
+            "quote": "if there might be long-term effects or side effects from taking it every day for many years",
+            "turn": 4
+          },
+          {
+            "quote": "the idea of being trapped in this routine forever that feels daunting",
+            "turn": 4
+          },
+          {
+            "quote": "feeling quite isolated since all of this started",
+            "turn": 6
+          }
+        ],
+        "reasoning": "They have multiple concerns about dependence, long-term effects, being trapped in routine, and isolation. These concerns recur unprompted and affect their thinking.",
+        "score": 8.0,
+        "confidence": 0.8
+      },
+      "coherence": {
+        "dimension": "coherence",
+        "evidence": [
+          {
+            "quote": "I understand it's a chronic condition affecting my immune system",
+            "turn": 3
+          },
+          {
+            "quote": "It seems to me that my body is always battling this infection",
+            "turn": 3
+          },
+          {
+            "quote": "I expect I'll be dealing with it for years, maybe even decades",
+            "turn": 3
+          },
+          {
+            "quote": "life revolves around taking care of yourself all the time — monitoring symptoms, managing medications, and constantly assessing how you're feeling",
+            "turn": 3
+          }
+        ],
+        "reasoning": "They have a clear understanding of their condition, what's happening with their body, and how it affects them.",
+        "score": 8.0,
+        "confidence": 0.9
+      },
+      "emotional_response": {
+        "dimension": "emotional_response",
+        "evidence": [
+          {
+            "quote": "It feels like this disease has taken over everything",
+            "turn": 1
+          },
+          {
+            "quote": "I keep wondering if it's really worth it",
+            "turn": 1
+          },
+          {
+            "quote": "Sometimes I feel like I have no say in any of it",
+            "turn": 1
+          },
+          {
+            "quote": "It's hard to put into words exactly what it feels like when your life revolves around taking care of yourself all the time",
+            "turn": 3
+          },
+          {
+            "quote": "But somehow I need to find a way to keep going despite everything",
+            "turn": 3
+          },
+          {
+            "quote": "It's mostly the idea of being trapped in this routine forever that feels daunting",
+            "turn": 4
+          },
+          {
+            "quote": "It's hard not to feel like my life has been paused",
+            "turn": 5
+          },
+          {
+            "quote": "It's difficult because I know these things are important for my mental health",
+            "turn": 5
+          },
+          {
+            "quote": "I've been feeling quite isolated since all of this started",
+            "turn": 6
+          }
+        ],
+        "reasoning": "The illness affects them emotionally - they feel overwhelmed, trapped, isolated, and have to find ways to keep going despite everything. This is prominent and affects what they do.",
+        "score": 8.0,
+        "confidence": 0.8
+      }
+    },
+    "bmq": {
+      "specific_necessity": {
+        "dimension": "specific_necessity",
+        "evidence": [
+          {
+            "quote": "I believe it's been significantly helping me so far",
+            "turn": 4
+          },
+          {
+            "quote": "My viral load has dropped quite a bit and my CD4 count is stable",
+            "turn": 4
+          },
+          {
+            "quote": "It feels reassuring to know that I'm doing what I can to keep the illness under control",
+            "turn": 4
+          }
+        ],
+        "reasoning": "They see the medication as significantly helping and feel reassured by the progress. They are actively managing side effects and considering lifestyle adjustments, which suggests they treat it as important and organize around it.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "specific_concerns": {
+        "dimension": "specific_concerns",
+        "evidence": [
+          {
+            "quote": "I keep wondering if it's really worth it",
+            "turn": 1
+          },
+          {
+            "quote": "worried about becoming dependent on this treatment",
+            "turn": 4
+          },
+          {
+            "quote": "if there might be long-term effects or side effects from taking it every day for many years",
+            "turn": 4
+          },
+          {
+            "quote": "the idea of being trapped in this routine forever that feels daunting",
+            "turn": 4
+          },
+          {
+            "quote": "headaches",
+            "turn": 1
+          }
+        ],
+        "reasoning": "They have specific concerns about dependence, long-term effects, side effects, and being trapped in routine. They're experiencing side effects (headaches) that affect their daily life. These concerns have led them to think about whether it's worth it and to consider dietary changes.",
+        "score": 4.0,
+        "confidence": 0.7
+      },
+      "general_harm": {
+        "dimension": "general_harm",
+        "evidence": [],
+        "reasoning": "They never mentioned general concerns about medicines as a class. They only mentioned concerns specific to their own medication.",
+        "score": null,
+        "confidence": 0.0
+      },
+      "general_overuse": {
+        "dimension": "general_overuse",
+        "evidence": [],
+        "reasoning": "They never mentioned general distrust of prescribing practices.",
+        "score": null,
+        "confidence": 0.0
+      }
+    },
+    "causes": [
+      "chronic condition affecting my immune system",
+      "body is always battling this infection"
+    ],
+    "causes_evidence": [
+      {
+        "quote": "I understand it's a chronic condition affecting my immune system",
+        "turn": 3
+      },
+      {
+        "quote": "It seems to me that my body is always battling this infection",
+        "turn": 3
+      },
+      {
+        "quote": "vulnerable to other illnesses",
+        "turn": 3
+      }
+    ]
+  }
+}
